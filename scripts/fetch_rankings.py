@@ -138,6 +138,38 @@ def main():
 
     # ④ 算本月熱門：統計過去 30 天，每個商品出現在排行榜上幾天
     build_monthly(history)
+    # ⑤ 商品資料庫：所有上榜過的商品都留下來，下榜了也查得到
+    build_archive(history)
+
+
+def build_archive(history, keep_days=120):
+    """把每天的排行合併成一份商品資料庫：最後一次的商品資料＋上榜紀錄＋價格變化"""
+    files = sorted(history.glob("*.json"))[-keep_days:]
+    products = {}
+    for f in files:
+        day = f.stem[:10]
+        snapshot = json.loads(f.read_text(encoding="utf-8"))
+        for group, items in snapshot.get("groups", {}).items():
+            for item in items:
+                code = item.get("itemCode")
+                if not code:
+                    continue
+                p = products.setdefault(code, {"firstSeen": day, "groups": {}, "prices": {}})
+                p["item"] = {k: v for k, v in item.items() if k != "rank"}
+                p["lastSeen"] = day
+                g = p["groups"].setdefault(group, {"best": 99, "days": 0, "last": None})
+                g["best"] = min(g["best"], item.get("rank") or 99)
+                g["days"] += 1
+                g["last"] = item.get("rank")
+                g["lastDay"] = day
+                p["prices"][day] = item.get("price")
+    for p in products.values():
+        values = [v for v in p["prices"].values() if v]
+        p["priceMin"], p["priceMax"] = (min(values), max(values)) if values else (None, None)
+        p["prices"] = dict(list(p["prices"].items())[-30:])   # 只留最近 30 天的價格
+    out = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"), "days": len(files), "products": products}
+    (ROOT / "data" / "products.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
+    print(f"已更新商品資料庫（共 {len(products)} 個商品）")
 
 
 def build_monthly(history, days=30):
