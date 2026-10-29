@@ -2,7 +2,7 @@
  "_說明": "Olive Young 韓國人氣商品（你手動整理）。url 換成你在 Olive Young 聯盟後台產生的商品連結；code 填你的獎勵代碼。sample 改成 false 代表是真的資料。",
  "sample": true,
  "code": "",
- "codeNote": "結帳時輸入代碼享優惠",
+ "codeNote": "透過本站商品連結購買會自動套用，或結帳時輸入代碼，享 5% 折扣（需登入 Olive Young Global 會員）",
  "items": [
   { "brand": "Anua", "name": "魚腥草 77% 舒緩化妝水", "cat": "保養", "price": "", "tags": ["敏感肌", "痘痘"], "why": "韓國長年熱賣的舒緩化妝水", "url": "https://global.oliveyoung.com/" },
   { "brand": "Torriden", "name": "DIVE-IN 玻尿酸精華", "cat": "保養", "price": "", "tags": ["保濕"], "why": "清爽型保濕精華，油肌也好用", "url": "https://global.oliveyoung.com/" },

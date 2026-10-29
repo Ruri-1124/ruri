@@ -127,6 +127,7 @@
   .code { background: #fff; color: #1A7A63; font-weight: 900; font-size: 18px; letter-spacing: .1em; padding: 6px 14px; border-radius: 10px; font-family: ui-monospace, monospace; }
   .copy { border: 2px solid #fff; background: transparent; color: #fff; border-radius: 10px; padding: 6px 14px; cursor: pointer; font-weight: 700; }
 
+  .sub { font-family: var(--font-display); font-weight: 900; font-size: 22px; margin: 26px 0 12px; }
   .empty { margin-top: 16px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
   footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
   .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 10px; font-size: 14px; z-index: 30; max-width: calc(100% - 32px); }
@@ -152,7 +153,7 @@
 <header>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#today" aria-label="ruri 首頁">
+      <a class="logo" href="#all" aria-label="ruri 首頁">
         <svg viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg>
         <b>ruri</b><small>日韓熱賣情報站</small>
       </a>
@@ -167,12 +168,7 @@
 </header>
 
 <main class="wrap">
-  <div class="region" role="group" aria-label="選擇國家">
-    <button type="button" data-region="all" aria-pressed="true">全部</button>
-    <button type="button" data-region="日本" aria-pressed="false">🇯🇵 日本</button>
-    <button type="button" data-region="韓國" class="kr" aria-pressed="false">🇰🇷 韓國</button>
-    <span class="updated" id="updated"></span>
-  </div>
+  <div class="region"><span class="updated" id="updated"></span></div>
   <section id="view" aria-live="polite"></section>
 </main>
 
@@ -193,9 +189,9 @@
 
   // 分頁：source 決定資料從哪裡來
   const PAGES = [
+    { key: "all",      label: "🛍️ 全部商品",  title: "日本熱賣全部商品",       desc: "彩妝、保養、髮品、日用品、美容家電，一次看完", source: "rank", groups: ["makeup", "skincare", "hair", "device", "laundry", "bath"], catFilter: true },
     { key: "today",    label: "🔥 今日熱門",   title: "今天日本人都在買什麼？", desc: "樂天美容類綜合排行", source: "rank", groups: ["beauty"], podium: true },
     { key: "month",    label: "📅 本月熱門",   title: "這個月大家都在買什麼",   desc: "過去 30 天最常出現在排行榜上的商品", source: "month", groups: ["beauty"] },
-    { key: "all",      label: "🛍️ 全部商品",  title: "全部商品",               desc: "所有分類的熱賣商品，一次看完", source: "rank", groups: ["makeup", "skincare", "hair", "device", "laundry", "bath"], catFilter: true },
     { key: "makeup",   label: "💄 彩妝",       title: "彩妝排行",   desc: "樂天「底妝・彩妝」分類", source: "rank", groups: ["makeup"] },
     { key: "skincare", label: "🧴 保養",       title: "保養排行",   desc: "樂天「保養」分類", source: "rank", groups: ["skincare"] },
     { key: "hair",     label: "💇‍♀️ 髮品",   title: "髮品排行",   desc: "樂天「護髮・造型」分類", source: "rank", groups: ["hair"] },
@@ -230,7 +226,7 @@
   // =========================================================
   let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, CREATORS = { items: [] }, OY = { items: [] };
   let BY_CODE = {};   // 商品代號 → 商品（給創作者推薦查圖片用）
-  const state = { filtersOpen: window.innerWidth > 640, tab: "today", region: "all", needs: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "" };
+  const state = { filtersOpen: window.innerWidth > 640, tab: "all", needs: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "" };
 
   // 收藏存在瀏覽器裡（只有這台裝置看得到）
   let FAVS = {};
@@ -261,7 +257,7 @@
     const text = raw.itemName + " " + (raw.shopName || "");
     return {
       id: raw.itemCode, group, cat: CAT[group], rank: raw.rank,
-      brand: L.brand || raw.shopName, name: L.name || cleanName(raw.itemName), jp: raw.itemName,
+      brand: L.brand || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || raw.shopName.replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName, name: L.name || cleanName(raw.itemName), jp: raw.itemName,
       country: L.country || detectCountry(text), tags: needTags(raw.itemName),
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
       img: raw.image, url: raw.url, exclude: raw.exclude,
@@ -290,7 +286,7 @@
   // =========================================================
   function applyFilters(list, opts = {}) {
     let out = list;
-    if (state.region !== "all") out = out.filter(p => p.country === state.region);
+    if (opts.japanOnly) out = out.filter(p => p.country !== "韓國");   // 韓國商品統一放在 Olive Young 分頁
     if (state.q) { const q = state.q.toLowerCase(); out = out.filter(p => (p.brand + p.name + (p.jp || "")).toLowerCase().includes(q)); }
     if (opts.catFilter && state.cat !== "all") out = out.filter(p => p.cat === state.cat);
     if (state.needs.size) out = out.filter(p => [...state.needs].every(t => (p.tags || []).includes(t)));
@@ -377,7 +373,7 @@
       const pool = page.source === "month" ? MONTH.groups : RANK;
       const base = page.groups.flatMap(g => pool[g] || []);
       const unique = page.catFilter ? base.filter((p, i, arr) => arr.findIndex(x => x.id === p.id) === i) : base;
-      const list = applyFilters(unique, { catFilter: page.catFilter });
+      const list = applyFilters(unique, { catFilter: page.catFilter, japanOnly: true });
       const badge = page.source === "month"
         ? `<span class="src">已累積 ${MONTH.days} 天資料${MONTH.days < 30 ? "・每天增加" : ""}</span>`
         : `<span class="src">樂天真實排行</span>`;
@@ -402,7 +398,16 @@
         ? `<div class="oybanner"><b>ruri 專屬優惠代碼</b><span class="code" id="oycode">${esc(OY.code)}</span><button class="copy" type="button" id="copycode">複製代碼</button><span>${esc(OY.codeNote)}</span></div>`
         : `<div class="oybanner"><b>Olive Young Global</b><span>韓國最大美妝通路，可直接寄送台灣。專屬優惠代碼即將公布！</span></div>`;
       html += filterBar(items, { noPrice: true, noSort: true });
-      html += list.length ? `<p class="count">共 ${list.length} 件商品</p><div class="grid">${list.map(p => card(p)).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
+      html += `<h2 class="sub">🇰🇷 Olive Young 人氣推薦</h2>`;
+      html += list.length ? `<div class="grid">${list.map(p => card(p)).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
+      // 日本樂天排行裡的韓國品牌，也集中放在這裡
+      const seen = new Set();
+      const krRakuten = applyFilters(Object.values(RANK).flat().filter(p => p.country === "韓國" && !seen.has(p.id) && seen.add(p.id)), { noPrice: true });
+      if (krRakuten.length) {
+        html += `<h2 class="sub">🇯🇵 在日本也爆紅的韓系商品</h2><p style="color:var(--muted);margin:-4px 0 12px">這些韓國品牌正在日本樂天排行榜上，連結會到日本樂天</p>`;
+        html += `<div class="grid">${krRakuten.map(p => card(p, { meta: `<div class="meta">樂天${esc(p.cat)}第 ${p.rank} 名</div>` })).join("")}</div>`;
+      }
+      html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">ruri 是 Olive Young Global 的聯盟夥伴，並非 Olive Young 官方網站。</p>`;
     }
 
     if (page.source === "creators") {
@@ -413,7 +418,7 @@
       const list = applyFilters(items, { noPrice: true });
       html += head(page, CREATORS.sample ? `<span class="src sample">示範資料・帳號皆為範例</span>` : `<span class="src">${esc(CREATORS.week || "")}</span>`);
       html += list.length ? `<div class="grid" style="margin-top:16px">${list.map(p => card(p, {
-        showRank: state.region === "all" && !state.q ? p.rank : null,
+        showRank: !state.q ? p.rank : null,
         meta: `<div class="meta">${p.creator.count} 位創作者推薦・IG ${p.creator.ig}・小紅書 ${p.creator.xhs}</div>`,
         extra: `<div class="voices">${(p.creator.voices || []).map(v => `<div class="voice"><b>${esc(v.pf)} ${esc(v.who)}</b>：${esc(v.say)}</div>`).join("")}</div>`
       })).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
@@ -443,7 +448,7 @@
 
   function fromHash() {
     const key = location.hash.slice(1);
-    state.tab = PAGES.some(p => p.key === key) ? key : "today";
+    state.tab = PAGES.some(p => p.key === key) ? key : "all";
     state.needs.clear(); state.cat = "all"; state.price = "all";
     render();
   }
@@ -469,11 +474,6 @@
       if (FAVS[id]) { delete FAVS[id]; toast("已從我的最愛移除"); }
       else { const p = findItem(id); if (p) { const { creator, ...snap } = p; FAVS[id] = snap; toast("已加入我的最愛 ♥"); } }
       saveFavs(); render(); return;
-    }
-    if (t.dataset.region) {
-      state.region = t.dataset.region;
-      document.querySelectorAll("[data-region]").forEach(b => b.setAttribute("aria-pressed", b === t));
-      render(); return;
     }
     if (t.dataset.need) { state.needs.has(t.dataset.need) ? state.needs.delete(t.dataset.need) : state.needs.add(t.dataset.need); render(); return; }
     if (t.dataset.price) { state.price = t.dataset.price; render(); return; }
