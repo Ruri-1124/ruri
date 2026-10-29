@@ -393,7 +393,7 @@
     if (page.source === "oy") {
       const items = OY.items.map((o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, priceText: o.price || "價格以官網為準", rank: i + 1, rating: 0, reviews: 0, price: 0 }));
       const list = applyFilters(items, { noPrice: true });
-      html += head(page, OY.sample ? `<span class="src sample">示範資料</span>` : "");
+      html += head(page, OY.sample ? `<span class="src sample">示範資料</span>` : `<span class="src" style="background:var(--kr-soft);color:#1A7A63">Olive Young 暢銷・${esc(OY.updated || "")} 更新</span>`);
       html += OY.code
         ? `<div class="oybanner"><b>ruri 專屬優惠代碼</b><span class="code" id="oycode">${esc(OY.code)}</span><button class="copy" type="button" id="copycode">複製代碼</button><span>${esc(OY.codeNote)}</span></div>`
         : `<div class="oybanner"><b>Olive Young Global</b><span>韓國最大美妝通路，可直接寄送台灣。專屬優惠代碼即將公布！</span></div>`;
