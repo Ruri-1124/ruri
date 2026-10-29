@@ -1,0 +1,38 @@
+# 排程：每天自動執行一次 scripts/fetch_rankings.py，把新資料存回網站
+name: 每天更新樂天排行
+
+on:
+  schedule:
+    - cron: "17 22 * * *"   # 每天 UTC 22:17 ＝ 台灣時間早上 6:17
+  workflow_dispatch:         # 也可以在 GitHub 上按按鈕手動執行
+
+permissions:
+  contents: write            # 允許把新資料存回這個專案
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 下載網站檔案
+        uses: actions/checkout@v4
+
+      - name: 準備 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 去樂天抓排行
+        run: python scripts/fetch_rankings.py
+        env:
+          RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
+          RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
+          RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+
+      - name: 存回網站
+        run: |
+          git config user.name "ruri-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "更新樂天排行 $(TZ=Asia/Taipei date +%F)"
+          git push
