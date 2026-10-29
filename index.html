@@ -3,452 +3,510 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="每天自動更新的日韓美妝熱賣排行：彩妝、保養、髮品、日用品、美容家電。">
 <title>ruri 日韓熱賣情報站</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="每天自動更新的日韓美妝熱賣排行：彩妝、保養、髮品、日用品、美容家電，可依膚質篩選、收藏我的最愛。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+TC:wght@400;500;700&display=swap">
-
-<!-- =========================================================
-  【第一部分：CSS】決定網站「長什麼樣子」：顏色、字體、排版
-  ========================================================= -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
-  /* 版面概念：日本藥妝店的排行榜 POP 牌，一欄式清單，點開看商品詳情 */
+  /* 版面概念：日本藥妝店的貨架。每個商品是一張有大圖的卡片，前三名像店頭 POP 一樣特別放大 */
   :root {
-    /* 明亮版配色：只要改這裡的色碼，整個網站就會一起換色 */
-    --bg: #F8F5FF;        /* 背景：帶一點紫的白 */
-    --surface: #FFFFFF;   /* 卡片底色：純白 */
-    --ink: #2F2A3D;       /* 主要文字：帶紫調的深灰，不用純黑 */
-    --muted: #7E7792;     /* 次要文字 */
-    --line: #E8E0FA;      /* 分隔線：淡紫 */
-    --accent: #8B6CF0;    /* 主色：薰衣草紫 */
-    --accent-soft: #EFE9FF;
-    --star: #FFAA1D;      /* 評分星星：亮橘黃 */
-    --gold: #F5A800; --silver: #9FAAB6; --bronze: #E8894A;
-    --up: #10B583; --down: #A99FA4;
-    color-scheme: light;
-    --font-display: "Dela Gothic One", "Noto Sans TC", sans-serif;
+    --bg: #F6F4FF;          /* 背景：極淡的瑠璃紫 */
+    --surface: #FFFFFF;
+    --ink: #221E3A;         /* 文字：深紫墨色 */
+    --muted: #6E6888;
+    --line: #E6E1F7;
+    --ruri: #3F5BD8;        /* 主色：瑠璃藍 */
+    --ruri-soft: #E8ECFF;
+    --pink: #FF5C93;        /* 收藏、POP 重點色 */
+    --pink-soft: #FFE6EF;
+    --gold: #F2A900; --silver: #9AA3B5; --bronze: #D98146;
+    --star: #F5A623;
+    --kr: #2BA98C; --kr-soft: #DDF5EE;   /* 韓國區的薄荷綠 */
+    --font-display: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
     --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color-scheme: light;
   }
-  /* 不跟著手機的「深色模式」變暗，永遠保持明亮版 */
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  button, input, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--ruri); outline-offset: 2px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 
-  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
-  .wrap { max-width: 860px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-
-  /* 頂部標題列 */
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
-  header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
-  .brand { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-block: 16px 10px; flex-wrap: wrap; }
-  .logo { font-family: var(--font-display); font-weight: 400; font-size: 22px; letter-spacing: .02em; margin: 0; }
-  header { background: linear-gradient(180deg, #FFFFFF 0%, #F3EEFF 100%); }
-  .logo { display: flex; align-items: center; gap: 8px; color: #3F5BD8; }
-  .logo .bird { width: 40px; height: 40px; flex: none; }
-  .logo .word { font-size: 26px; letter-spacing: 0; }
-  .logo .tagline { font-family: var(--font-body); font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: .08em; margin-left: 4px; }
-  .sub { margin: 20px 0 6px; font-size: 18px; display: flex; align-items: baseline; gap: 8px; }
-  .sub small { font-size: 12px; font-weight: 400; color: var(--muted); }
-  .rules { margin: -4px 0 12px; font-size: 12px; color: var(--muted); }
-  .updated { color: var(--muted); font-size: 13px; }
-
-  /* 分頁按鈕（可左右滑動） */
-  .tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; }
+  /* ── 頂部 ── */
+  header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top { display: flex; align-items: center; gap: 14px; padding-block: 10px; }
+  .logo { display: flex; align-items: center; gap: 8px; color: var(--ruri); text-decoration: none; flex: none; }
+  .logo svg { width: 40px; height: 40px; }
+  .logo b { font-family: var(--font-display); font-weight: 900; font-size: 26px; letter-spacing: .02em; }
+  .logo small { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: .08em; }
+  .search { flex: 1; min-width: 0; position: relative; }
+  .search input { width: 100%; border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 9px 16px 9px 38px; }
+  .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--muted); }
+  .favbtn { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 14px; cursor: pointer; display: flex; gap: 6px; align-items: center; font-weight: 700; }
+  .favbtn span { color: var(--pink); }
+  .favbtn em { font-style: normal; }
+  .filters summary { cursor: pointer; font-weight: 700; font-size: 14px; list-style: none; display: flex; justify-content: space-between; }
+  .filters summary::-webkit-details-marker { display: none; }
+  .filters summary::after { content: "▾"; color: var(--muted); }
+  .filters[open] summary::after { content: "▴"; }
+  .filters[open] summary { margin-bottom: 4px; }
+  .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; padding-bottom: 8px; }
   .tabs::-webkit-scrollbar { display: none; }
-  .tab { flex: none; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; font-size: 14px;
-         padding: 7px 14px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
-  .tab:hover { border-color: var(--accent); }
-  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
-  .tab:focus-visible, .buy:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tab { flex: none; border: 0; background: transparent; padding: 7px 13px; border-radius: 999px; cursor: pointer; white-space: nowrap; color: var(--muted); font-weight: 500; }
+  .tab:hover { background: var(--bg); color: var(--ink); }
+  .tab[aria-selected="true"] { background: var(--ink); color: #fff; font-weight: 700; }
 
-  /* 示範資料提示 */
-  .notice { margin-block: 16px 4px; padding: 10px 14px; border-radius: 8px; background: var(--accent-soft); color: var(--ink); font-size: 13px; }
-  .notice b { color: var(--accent); }
+  /* ── 日韓分區切換 ── */
+  .region { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; align-items: center; }
+  .region button { border: 2px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 16px; cursor: pointer; font-weight: 700; }
+  .region button[aria-pressed="true"] { border-color: var(--ruri); background: var(--ruri-soft); color: var(--ruri); }
+  .region button.kr[aria-pressed="true"] { border-color: var(--kr); background: var(--kr-soft); color: #1A7A63; }
+  .updated { margin-left: auto; font-size: 13px; color: var(--muted); }
 
-  /* 每個分類的標題 */
-  .section-head { padding-block: 20px 8px; }
-  .section-head h2 { font-family: var(--font-display); font-weight: 400; font-size: 26px; margin: 0; text-wrap: balance; }
-  .section-head p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+  /* ── 頁面標題 ── */
+  .head { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: end; gap: 6px 16px; }
+  .head h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; margin: 0; text-wrap: balance; }
+  .head p { margin: 0; color: var(--muted); }
+  .src { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--ruri-soft); color: var(--ruri); }
+  .src.sample { background: #FFF3D6; color: #9A6A00; }
 
-  /* 排行清單 */
-  ol.rank { list-style: none; margin: 0 0 40px; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
-  ol.rank > li { border-top: 1px solid var(--line); }
-  ol.rank > li:first-child { border-top: 0; }
+  /* ── 篩選列 ── */
+  .filters { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 10px; }
+  .frow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .frow > span { font-size: 12px; font-weight: 700; color: var(--muted); width: 64px; flex: none; letter-spacing: .06em; }
+  .chip { border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+  .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .frow select { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; padding: 4px 8px; font-size: 13px; }
+  .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+  .count { font-size: 13px; color: var(--muted); margin: 14px 2px 10px; }
 
-  /* 每一列是一個可點開的 <details> */
-  summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 48px 64px 1fr auto 18px; gap: 14px; align-items: center; padding: 14px 16px; }
-  summary::-webkit-details-marker { display: none; }
-  summary:hover { background: var(--bg); }
-  .caret { color: var(--muted); font-size: 12px; transition: transform .2s; }
-  details[open] .caret { transform: rotate(180deg); }
+  /* ── 前三名 ── */
+  .podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+  .podium .card { border-width: 2px; }
+  .podium .card:nth-child(1) { border-color: var(--gold); }
+  .podium .card:nth-child(2) { border-color: var(--silver); }
+  .podium .card:nth-child(3) { border-color: var(--bronze); }
 
-  .no { font-family: var(--font-display); font-size: 24px; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
-  li:nth-child(1) .no { color: var(--gold); font-size: 30px; }
-  li:nth-child(2) .no { color: var(--silver); font-size: 28px; }
-  li:nth-child(3) .no { color: var(--bronze); font-size: 26px; }
+  /* ── 商品卡片 ── */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; transition: transform .15s, box-shadow .15s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(63, 91, 216, .12); }
+  .pic { position: relative; aspect-ratio: 1; max-width: 100%; background: #fff; display: grid; place-items: center; border-bottom: 1px solid var(--line); }
+  .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 8px; background: #fff; }
+  .pic .tile { font-family: var(--font-display); font-weight: 900; font-size: 22px; color: var(--ruri); text-align: center; padding: 16px; }
+  .rank { position: absolute; left: 10px; top: 10px; min-width: 34px; height: 34px; padding: 0 8px; border-radius: 999px; display: grid; place-items: center; font-family: var(--font-display); font-weight: 900; font-size: 16px; color: #fff; background: var(--ink); font-variant-numeric: tabular-nums; z-index: 1; }
+  .rank.r1 { background: var(--gold); } .rank.r2 { background: var(--silver); } .rank.r3 { background: var(--bronze); }
+  .heart { position: absolute; right: 8px; top: 8px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); box-shadow: 0 1px 4px rgba(0,0,0,.12); cursor: pointer; display: grid; place-items: center; z-index: 1; }
+  .heart svg { width: 20px; height: 20px; fill: none; stroke: var(--pink); stroke-width: 2; }
+  .heart[aria-pressed="true"] svg { fill: var(--pink); }
+  .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 5px; flex: 1; }
+  .brand { font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: .04em; display: flex; justify-content: space-between; gap: 6px; }
+  .flag { flex: none; font-weight: 500; }
+  .nm { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .rate { font-size: 12px; color: var(--muted); }
+  .rate b { color: var(--star); }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--pink-soft); color: #B62D61; }
+  .meta { font-size: 12px; color: var(--ruri); font-weight: 700; }
+  .why { font-size: 13px; color: var(--muted); }
+  .bottom { margin-top: auto; padding-top: 8px; display: flex; align-items: end; justify-content: space-between; gap: 8px; }
+  .price { font-weight: 700; font-size: 17px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .price small { display: block; font-size: 12px; font-weight: 400; color: var(--muted); margin-top: 2px; }
+  .buy { flex: none; text-decoration: none; background: var(--ruri); color: #fff; font-weight: 700; font-size: 13px; padding: 7px 12px; border-radius: 10px; }
+  .buy.oy { background: var(--kr); }
+  .buy:hover { filter: brightness(1.1); }
+  .voices { display: grid; gap: 4px; margin-top: 4px; }
+  .voice { font-size: 12px; background: var(--bg); border-radius: 8px; padding: 6px 8px; }
+  .voice b { color: var(--ruri); }
 
-  /* 商品圖片佔位（之後會換成樂天提供的真實商品圖） */
-  .thumb { width: 64px; height: 64px; border-radius: 10px; display: grid; place-items: center; font-weight: 700; font-size: 12px;
-           color: var(--accent); background: var(--accent-soft); text-align: center; line-height: 1.1; padding: 4px; overflow: hidden; }
+  /* ── Olive Young 代碼橫幅 ── */
+  .oybanner { margin-top: 16px; border-radius: 16px; background: var(--kr); color: #fff; padding: 16px 20px; display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; }
+  .oybanner b { font-family: var(--font-display); font-size: 20px; }
+  .code { background: #fff; color: #1A7A63; font-weight: 900; font-size: 18px; letter-spacing: .1em; padding: 6px 14px; border-radius: 10px; font-family: ui-monospace, monospace; }
+  .copy { border: 2px solid #fff; background: transparent; color: #fff; border-radius: 10px; padding: 6px 14px; cursor: pointer; font-weight: 700; }
 
-  .info { min-width: 0; }
-  .maker { font-size: 12px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
-  .name { font-weight: 700; margin: 1px 0 4px; }
-  .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12px; color: var(--muted); align-items: center; }
-  .chip { border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; }
-  .stars { color: var(--star); font-weight: 700; font-variant-numeric: tabular-nums; }
-  .chg-up { color: var(--up); font-weight: 700; }
-  .chg-down { color: var(--down); }
-  .chg-new { color: #fff; background: var(--accent); border-radius: 4px; padding: 0 6px; font-weight: 700; }
+  .empty { margin-top: 16px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
+  footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 10px; font-size: 14px; z-index: 30; max-width: calc(100% - 32px); }
 
-  .price { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
-  .twd { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
-
-  /* 月榜：上榜天數條 */
-  .days { display: inline-flex; align-items: center; gap: 8px; }
-  .bar { width: 80px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
-  .bar i { display: block; height: 100%; background: var(--accent); }
-
-  /* 點開後的商品詳情 */
-  .detail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; padding: 4px 16px 18px calc(16px + 48px + 14px); }
-  .field h3 { margin: 0 0 6px; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: .08em; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
-  .tag.skin { background: var(--accent-soft); border-color: transparent; }
-  .review { grid-column: 1 / -1; margin: 0; padding: 12px 14px; border-radius: 8px; background: var(--bg); font-size: 14px; }
-  .review small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
-  .voices { grid-column: 1 / -1; display: grid; gap: 8px; }
-  .voices h3 { margin: 0; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: .08em; }
-  .voice { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: 14px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; }
-  .voice b { font-weight: 700; }
-  .pf { font-size: 11px; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 5px; }
-  .actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; }
-  .buy { font: inherit; font-size: 14px; padding: 7px 16px; border-radius: 6px; border: 0; color: #fff; background: var(--accent); cursor: pointer; }
-  .buy:hover { filter: brightness(1.08); }
-
-  /* 真實商品圖：圖片蓋在品牌名上面，圖片載入失敗就露出品牌名 */
-  .thumb { position: relative; }
-  .thumb .pic { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #fff; }
-
-  /* 資料來源標籤 */
-  .src { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 4px; margin-bottom: 6px; color: var(--muted); border: 1px dashed var(--muted); }
-  .src.real { color: #fff; background: var(--up); border: 1px solid var(--up); }
-
-  /* 國家篩選 */
-  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .filter { font: inherit; font-size: 13px; padding: 4px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
-  .filter[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 700; }
-  .filter:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .tag.todo { border-style: dashed; color: var(--muted); background: transparent; }
-  .jp { font-size: 13px; color: var(--muted); }
-  a.buy { text-decoration: none; display: inline-block; }
-  .empty { margin: 0 0 40px; padding: 28px 20px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; }
-
-  footer { color: var(--muted); font-size: 13px; padding-block: 0 40px; }
-
-  /* 提示小視窗 */
-  .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px);
-           background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 8px; font-size: 14px; z-index: 20; }
-
-  /* 手機版：價格移到下面、詳情改成一欄 */
-  @media (max-width: 560px) {
-    summary { grid-template-columns: 30px 52px 1fr 14px; gap: 10px; padding: 12px; }
-    .thumb { width: 52px; height: 52px; font-size: 11px; }
-    .price { grid-column: 3; grid-row: 2; text-align: left; }
-    .twd { display: inline; margin-left: 4px; }
-    .caret { grid-column: 4; grid-row: 1; }
-    .detail { grid-template-columns: 1fr; padding: 4px 12px 16px; }
+  @media (max-width: 640px) {
+    .logo small { display: none; }
+    .favbtn em { display: none; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .podium { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .podium .card:nth-child(1) { grid-column: 1 / -1; }
+    .body { padding: 10px; }
+    .nm { font-size: 14px; }
+    .bottom { flex-direction: column; align-items: stretch; }
+    .buy { text-align: center; }
+    .frow > span { width: 100%; }
+    .updated { width: 100%; margin-left: 0; }
   }
-  @media (prefers-reduced-motion: reduce) { .caret { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
 </style>
-<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
 </head>
 <body>
-<!-- =========================================================
-  【第二部分：HTML】網站的「骨架」：有哪些區塊、放在哪裡
-  ========================================================= -->
+
 <header>
   <div class="wrap">
-    <div class="brand">
-      <h1 class="logo"><svg class="bird" viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg><span class="word">ruri</span><span class="tagline">日韓熱賣情報站</span></h1>
-      <span class="updated" id="updated"></span>
+    <div class="top">
+      <a class="logo" href="#today" aria-label="ruri 首頁">
+        <svg viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg>
+        <b>ruri</b><small>日韓熱賣情報站</small>
+      </a>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="搜尋品牌或商品，例如 ReFa、卸妝油" aria-label="搜尋商品">
+      </label>
+      <button class="favbtn" type="button" id="favjump"><span>♥</span><em>我的最愛</em> <b id="favcount">0</b></button>
     </div>
-    <nav class="tabs" id="tabs" role="tablist" aria-label="排行分類"></nav>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="分類"></nav>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="notice"><b>每天早上自動更新</b>：排行來自樂天，每天台灣時間早上 6 點左右更新；本月熱門、創作者推薦目前還是示範資料。點商品可以看詳情。</p>
-  <section id="content" aria-live="polite"></section>
+  <div class="region" role="group" aria-label="選擇國家">
+    <button type="button" data-region="all" aria-pressed="true">全部</button>
+    <button type="button" data-region="日本" aria-pressed="false">🇯🇵 日本</button>
+    <button type="button" data-region="韓國" class="kr" aria-pressed="false">🇰🇷 韓國</button>
+    <span class="updated" id="updated"></span>
+  </div>
+  <section id="view" aria-live="polite"></section>
 </main>
 
-<footer class="wrap">價格為樂天當日標示的日圓價格，台幣以 1 日圓 ≈ 0.21 台幣估算。本站含樂天聯盟連結，透過連結購買，本站可能獲得分潤。</footer>
+<footer>
+  <div class="wrap">
+    排行資料來自樂天市場，每天台灣時間早上 6 點左右自動更新。價格為日圓標示價，台幣以 1 日圓 ≈ 0.21 台幣估算。
+    膚質與需求標籤由商品說明的關鍵字自動判斷，僅供參考。本站含樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。
+  </div>
+</footer>
 <div class="toast" id="toast" hidden></div>
 
-<!-- =========================================================
-  【第三部分：JavaScript】網站的「動作」與「資料」
-  ========================================================= -->
 <script>
   // =========================================================
-  // ① 真實資料：每天由「廚房」(scripts/fetch_rankings.py) 自動更新
-  //    data/latest.json → 樂天排行（自動）
-  //    data/labels.json → 中文名稱、品牌、國家（你手動整理，用 itemCode 對應商品）
+  // ① 設定
   // =========================================================
-  let RAKUTEN_BY_CAT = {}, RAKUTEN_TODAY = [], RAKUTEN_DATE = "", LABELS = {};
-  const GROUP_CAT = { beauty: "美容", makeup: "彩妝", skincare: "保養", hair: "髮品", device: "美容家電", laundry: "日用品", bath: "日用品" };
+  const JPY_TO_TWD = 0.21;
+  const CAT = { beauty: "美容", makeup: "彩妝", skincare: "保養", hair: "髮品", device: "美容家電", laundry: "日用品", bath: "日用品" };
 
-  // 樂天的商品名稱很長，還沒整理中文名稱的商品，先把廣告字拿掉、縮短顯示
+  // 分頁：source 決定資料從哪裡來
+  const PAGES = [
+    { key: "today",    label: "🔥 今日熱門",   title: "今天日本人都在買什麼？", desc: "樂天美容類綜合排行", source: "rank", groups: ["beauty"], podium: true },
+    { key: "month",    label: "📅 本月熱門",   title: "這個月大家都在買什麼",   desc: "過去 30 天最常出現在排行榜上的商品", source: "month", groups: ["beauty"] },
+    { key: "all",      label: "🛍️ 全部商品",  title: "全部商品",               desc: "所有分類的熱賣商品，一次看完", source: "rank", groups: ["makeup", "skincare", "hair", "device", "laundry", "bath"], catFilter: true },
+    { key: "makeup",   label: "💄 彩妝",       title: "彩妝排行",   desc: "樂天「底妝・彩妝」分類", source: "rank", groups: ["makeup"] },
+    { key: "skincare", label: "🧴 保養",       title: "保養排行",   desc: "樂天「保養」分類", source: "rank", groups: ["skincare"] },
+    { key: "hair",     label: "💇‍♀️ 髮品",   title: "髮品排行",   desc: "樂天「護髮・造型」分類", source: "rank", groups: ["hair"] },
+    { key: "daily",    label: "🛁 日用品",     title: "日用品排行", desc: "洗衣精・柔軟精，以及泡澡・沐浴用品", source: "rank", groups: ["laundry", "bath"] },
+    { key: "device",   label: "✨ 美容家電",   title: "美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"] },
+    { key: "oy",       label: "🇰🇷 Olive Young", title: "Olive Young 韓國人氣", desc: "韓國人自己在買的美妝，直接寄台灣", source: "oy" },
+    { key: "creators", label: "👀 創作者推薦", title: "本週創作者都在推什麼", desc: "整理 IG 與小紅書美妝創作者的推薦", source: "creators" },
+    { key: "fav",      label: "♥ 我的最愛",    title: "我的最愛", desc: "你收藏的商品會存在這台裝置的瀏覽器裡", source: "fav" }
+  ];
+
+  // 膚質・需求標籤：商品名稱裡出現這些日文關鍵字，就貼上對應的中文標籤
+  const NEEDS = {
+    "保濕":   ["保湿", "うるおい", "乾燥", "セラミド", "ヒアルロン"],
+    "敏感肌": ["敏感肌", "低刺激", "無添加"],
+    "痘痘":   ["ニキビ", "にきび", "肌荒れ"],
+    "毛孔":   ["毛穴", "角栓", "黒ずみ"],
+    "美白":   ["美白", "くすみ", "シミ", "透明感", "トーンアップ", "ビタミンC"],
+    "抗老":   ["エイジング", "シワ", "しわ", "ハリ", "レチノール", "リンクル", "年齢肌"],
+    "控油":   ["皮脂", "テカリ", "崩れない"],
+    "防曬":   ["日焼け止め", "SPF", "UVカット"],
+    "受損髮": ["ダメージ", "補修"],
+    "白髮":   ["白髪"],
+    "頭皮":   ["頭皮", "スカルプ"]
+  };
+
+  // 品牌國家：沒有手動整理過的商品，用名稱裡的品牌關鍵字自動判斷
+  const KR_WORDS = ["韓国", "Anua", "アヌア", "AESTURA", "TIRTIR", "ティルティル", "BIOHEAL", "SPICARE", "MEDIHEAL", "メディヒール", "rom&nd", "ロムアンド", "CLIO", "クリオ", "COSRX", "innisfree", "イニスフリー", "Dr.Jart", "numbuzin", "ナンバーズイン", "ma:nyo", "魔女工場", "d'Alba", "ダルバ", "Torriden", "トリデン", "SKIN1004", "ROUND LAB", "ラウンドラボ", "KAHI", "BANILA", "MISSHA", "ミシャ", "ETUDE", "エチュード", "LANEIGE", "ラネージュ", "Sulwhasoo", "雪花秀", "AMUSE", "fwee", "peripera", "ペリペラ", "3CE", "hince", "dasique", "UNOVE", "Abib", "VT CICA", "VTcosmetic", "BY UR"];
+  const OTHER_WORDS = ["ラロッシュポゼ", "La Roche", "Cetaphil", "セタフィル", "M・A・C", "ケラスターゼ", "KERASTASE", "Ulike", "ブラウン", "BRAUN", "Oral-B", "エスティ ローダー", "ESTEE", "クナイプ", "Kneipp", "アリエール", "レノア", "ランコム", "ディオール", "シャネル"];
+
+  // =========================================================
+  // ② 資料
+  // =========================================================
+  let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, CREATORS = { items: [] }, OY = { items: [] };
+  let BY_CODE = {};   // 商品代號 → 商品（給創作者推薦查圖片用）
+  const state = { filtersOpen: window.innerWidth > 640, tab: "today", region: "all", needs: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "" };
+
+  // 收藏存在瀏覽器裡（只有這台裝置看得到）
+  let FAVS = {};
+  try { FAVS = JSON.parse(localStorage.getItem("ruri-favs") || "{}"); } catch (e) { FAVS = {}; }
+  function saveFavs() { try { localStorage.setItem("ruri-favs", JSON.stringify(FAVS)); } catch (e) {} updateFavCount(); }
+
+  // 小工具
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
+  const twd = n => "約 NT$" + Math.round(n * JPY_TO_TWD).toLocaleString("zh-TW");
+  const flag = c => ({ "日本": "🇯🇵", "韓國": "🇰🇷" }[c] || "🌏");
+
   function cleanName(name) {
-    return name.replace(/[【［\[≪《＼★◆].*?[】］\]≫》／★◆]/g, " ").replace(/\s+/g, " ").trim().slice(0, 36) || name.slice(0, 36);
+    return name.replace(/[【［\[≪《＼★◆<＜].*?[】］\]≫》／★◆>＞]/g, " ").replace(/\s+/g, " ").trim().slice(0, 40) || name.slice(0, 40);
+  }
+  function detectCountry(text) {
+    if (KR_WORDS.some(w => text.includes(w))) return "韓國";
+    if (OTHER_WORDS.some(w => text.includes(w))) return "其他";
+    return "日本";
+  }
+  function needTags(text) {
+    return Object.entries(NEEDS).filter(([, words]) => words.some(w => text.includes(w))).map(([tag]) => tag);
   }
 
-  // 把樂天的原始資料，和你整理的標籤合在一起
+  // 樂天原始資料 + 你整理的標籤 → 網站用的商品
   function toItem(raw, group) {
     const L = LABELS[raw.itemCode] || {};
+    const text = raw.itemName + " " + (raw.shopName || "");
     return {
-      rank: raw.rank, cat: GROUP_CAT[group],
-      brand: L.brand || raw.shopName,           // 沒整理過的商品，先用店名當品牌
-      name: L.name || cleanName(raw.itemName),
-      country: L.country || "未確認",
+      id: raw.itemCode, group, cat: CAT[group], rank: raw.rank,
+      brand: L.brand || raw.shopName, name: L.name || cleanName(raw.itemName), jp: raw.itemName,
+      country: L.country || detectCountry(text), tags: needTags(raw.itemName),
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
-      shop: raw.shopName, jp: raw.itemName.slice(0, 80),
-      img: raw.image, url: raw.url, exclude: raw.exclude
+      img: raw.image, url: raw.url, exclude: raw.exclude,
+      daysOn: raw.daysOn, bestRank: raw.bestRank
     };
   }
 
   async function loadData() {
-    const [latest, labels] = await Promise.all([
-      fetch("data/latest.json", { cache: "no-store" }).then(r => r.json()),
-      fetch("data/labels.json", { cache: "no-store" }).then(r => r.json())
+    const get = p => fetch(p, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null);
+    const [latest, month, labels, creators, oy] = await Promise.all([
+      get("data/latest.json"), get("data/month.json"), get("data/labels.json"), get("data/creators.json"), get("data/oliveyoung.json")
     ]);
-    LABELS = labels;
-    for (const [group, items] of Object.entries(latest.groups)) {
-      RAKUTEN_BY_CAT[group] = items.map(raw => toItem(raw, group));
-    }
-    RAKUTEN_TODAY = RAKUTEN_BY_CAT.beauty || [];
+    if (!latest) throw new Error("no data");
+    LABELS = labels || {};
+    for (const [g, items] of Object.entries(latest.groups)) RANK[g] = items.map(r => toItem(r, g)).filter(p => !p.exclude);
+    if (month) { MONTH.days = month.days; for (const [g, items] of Object.entries(month.groups)) MONTH.groups[g] = items.map(r => toItem(r, g)).filter(p => !p.exclude); }
+    Object.values(RANK).flat().forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
+    CREATORS = creators || CREATORS;
+    OY = oy || OY;
     const d = new Date(latest.updated);
-    RAKUTEN_DATE = `${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+    document.getElementById("updated").textContent = `樂天資料更新：${d.getMonth() + 1} 月 ${d.getDate()} 日`;
   }
 
-  // ② 示範資料：「本月熱門」需要累積 30 天、「創作者推薦」需要你人工整理，所以暫時還是假資料
-  const SAMPLE = {
-    "melano":     { brand: "Melano CC", name: "維他命 C 美容液", cat: "保養", country: "日本", price: 1320, rating: 4.4, reviews: 5020 },
-    "canmake-mo": { brand: "CANMAKE", name: "棉花糖蜜粉餅", cat: "彩妝", country: "日本", price: 1034, rating: 4.6, reviews: 2140 },
-    "biore-uv":   { brand: "Biore", name: "UV 水凝防曬乳", cat: "保養", country: "日本", price: 1078, rating: 4.6, reviews: 4210 },
-    "fino":       { brand: "fino", name: "高效滲透護髮膜", cat: "髮品", country: "日本", price: 1078, rating: 4.6, reviews: 3350 },
-    "hadalabo":   { brand: "肌研 Hada Labo", name: "極潤玻尿酸化妝水", cat: "保養", country: "日本", price: 990, rating: 4.5, reviews: 3820 },
-    "andhoney":   { brand: "&honey", name: "深層保濕洗髮精", cat: "髮品", country: "日本", price: 1540, rating: 4.3, reviews: 1560 },
-    "refa-dryer": { brand: "ReFa", name: "BEAUTECH 美容吹風機", cat: "美容家電", country: "日本", price: 36300, rating: 4.7, reviews: 890 },
-    "kate-brow":  { brand: "KATE", name: "造型眉彩餅", cat: "彩妝", country: "日本", price: 1210, rating: 4.4, reviews: 1980 },
-    "cezanne":    { brand: "CEZANNE", name: "皮脂吸收飾底乳", cat: "彩妝", country: "日本", price: 660, rating: 4.3, reviews: 1870 },
-    "nonio":      { brand: "LION", name: "NONIO 漱口水", cat: "日用品", country: "日本", price: 550, rating: 4.2, reviews: 960 },
-    "megrhythm":  { brand: "花王 めぐりズム", name: "蒸氣溫熱眼罩 12 片", cat: "日用品", country: "日本", price: 1078, rating: 4.7, reviews: 3110 }
-  };
-
-  // ③ 每個分頁的設定
-  //    source: "real" → 用樂天真實資料；"sample" → 用示範資料
-  //    cat: 只顯示這個分類的商品（不填＝全部）
-  const PAGES = {
-    today:    { label: "🔥 今日熱門", title: "今日日本熱門 TOP 10", desc: "樂天「美容・彩妝・香水」綜合排行（genreId 100939）", source: "real", limit: 10 },
-    month:    { label: "📅 本月熱門", title: "這一個月大家都在買什麼", desc: "過去 30 天裡，最常出現在排行榜上的商品", source: "sample",
-                list: [["melano", 28], ["canmake-mo", 27], ["biore-uv", 25], ["fino", 24], ["hadalabo", 22], ["andhoney", 21], ["refa-dryer", 19], ["kate-brow", 18], ["cezanne", 16], ["nonio", 14]] },
-    creators: { label: "👀 創作者推薦", title: "本週創作者都在推什麼", desc: "整理 IG 與小紅書美妝創作者本週推薦最多的商品", source: "sample",
-                list: [
-                  ["fino", { count: 9, ig: 5, xhs: 4, voices: [
-                    { who: "@miki.hairlog", pf: "IG", say: "燙染後髮尾很乾，敷 5 分鐘差很多" },
-                    { who: "小鹿愛日妝", pf: "小紅書", say: "開架價格做出沙龍感，已經回購第三罐" } ] }],
-                  ["melano", { count: 8, ig: 3, xhs: 5, voices: [
-                    { who: "@hana_skin.tw", pf: "IG", say: "痘疤用一個月有變淡，白天記得防曬" },
-                    { who: "一顆檸檬的護膚筆記", pf: "小紅書", say: "新手先隔天用一次，避免刺激" } ] }],
-                  ["canmake-mo", { count: 7, ig: 4, xhs: 3, voices: [
-                    { who: "@yuri.makeup", pf: "IG", say: "油肌補妝救星，小盒子好攜帶" },
-                    { who: "桃子不吃桃", pf: "小紅書", say: "粉質很細，拍照時毛孔很淡" } ] }],
-                  ["refa-dryer", { count: 5, ig: 4, xhs: 1, voices: [
-                    { who: "@kaito_hairdesign", pf: "IG", say: "風量大，長髮吹乾時間少一半" },
-                    { who: "奶茶色的貓", pf: "小紅書", say: "價格高，但頭髮光澤真的不一樣" } ] }],
-                  ["megrhythm", { count: 4, ig: 2, xhs: 2, voices: [
-                    { who: "@office.selfcare", pf: "IG", say: "下班必用，長時間看螢幕的救星" },
-                    { who: "睡不著的阿綿", pf: "小紅書", say: "睡前敷一片，很快就有睡意" } ] }]
-                ] },
-    makeup:   { label: "💄 彩妝", title: "彩妝排行 TOP 10", desc: "樂天「底妝・彩妝」分類今天的排行（genreId 204233）", source: "real", group: "makeup", limit: 10 },
-    skincare: { label: "🧴 保養", title: "保養排行 TOP 10", desc: "樂天「保養」分類今天的排行（genreId 100944）", source: "real", group: "skincare", limit: 10 },
-    hair:     { label: "💇‍♀️ 髮品", title: "髮品排行 TOP 10", desc: "樂天「護髮・造型」分類今天的排行（genreId 100940）", source: "real", group: "hair", limit: 10 },
-    daily:    { label: "🛁 日用品", title: "日用品排行", desc: "洗衣和泡澡兩個小分類，各取前 5 名", source: "real",
-                sections: [
-                  { title: "🧺 洗衣精・柔軟精", note: "genreId 216011", group: "laundry", limit: 5 },
-                  { title: "🛁 泡澡・沐浴", note: "genreId 111475", group: "bath", limit: 5 }
-                ] },
-    device:   { label: "✨ 美容家電", title: "美容家電排行 TOP 10", desc: "樂天「美容・健康家電」分類今天的排行（genreId 100191）", source: "real", group: "device", limit: 10 }
-  };
-
-  // 國家篩選按鈕
-  const COUNTRIES = [
-    { key: "all", label: "全部" },
-    { key: "日本", label: "🇯🇵 日本品牌" },
-    { key: "韓國", label: "🇰🇷 韓國品牌" },
-    { key: "其他", label: "🌏 其他" }
-  ];
-  let country = "all";
-
-  const JPY_TO_TWD = 0.21;
-
-  // ④ 小工具
-  const yen = n => "¥" + n.toLocaleString("ja-JP");
-  const twd = n => "約 NT$" + Math.round(n * JPY_TO_TWD).toLocaleString("zh-TW");
-  const flag = c => ({ "日本": "🇯🇵 日本", "韓國": "🇰🇷 韓國", "未確認": "❔ 待整理" }[c] || "🌏 其他");
-  const todo = '<div class="tags"><span class="tag todo">待你整理</span></div>';
-
-  // ⑤ 畫出一個商品
-  function itemHtml(p, i, extraMeta = "", voices = "") {
-    const pic = p.img
-      ? `<img class="pic" src="${p.img}" alt="" loading="lazy">`   // 真的商品圖；載入失敗時會顯示品牌名
-      : "";
-    const buy = p.url
-      ? `<a class="buy" href="${p.url}" target="_blank" rel="sponsored noopener">到樂天看看 ↗</a>`
-      : `<button class="buy sample" type="button">去日本官方通路看看</button>`;
-
-    return `
-      <li><details>
-        <summary>
-          <div class="no">${i + 1}</div>
-          <div class="thumb">${pic}<span>${p.brand.split(" ")[0]}</span></div>
-          <div class="info">
-            <div class="maker">${p.brand}</div>
-            <div class="name">${p.name}</div>
-            <div class="meta">
-              <span class="stars">★ ${p.rating.toFixed(1)}</span><span>${p.reviews.toLocaleString()} 則評價</span>
-              <span class="chip">${p.cat}</span><span class="chip">${flag(p.country)}</span>${extraMeta}
-            </div>
-          </div>
-          <div class="price">${yen(p.price)}<span class="twd">${twd(p.price)}</span></div>
-          <span class="caret" aria-hidden="true">▼</span>
-        </summary>
-        <div class="detail">
-          <div class="field"><h3>重點成分／特色</h3>${todo}</div>
-          <div class="field"><h3>適合膚質／髮質</h3>${todo}</div>
-          <div class="field"><h3>台灣哪裡買</h3>${todo}</div>
-          <div class="field"><h3>賣家</h3><div>${p.shop || "（示範資料）"}</div></div>
-          ${voices}
-          ${p.jp ? `<p class="review"><span class="jp">${p.jp}…</span><small>樂天原始商品名稱</small></p>` : ""}
-          <div class="actions">${buy}</div>
-        </div>
-      </details></li>`;
-  }
-
-  // ⑥-1 把一份排行整理成要顯示的清單
-  function buildList(base, limit) {
-    // 規則一：排除不屬於美容的商品（例如健康家電、洗碗精）
-    const kept = base.filter(p => !p.exclude);
-    // 規則二：同一個品牌只留名次最高的那一個
-    const seen = new Set();
-    const unique = kept.filter(p => { if (seen.has(p.brand)) return false; seen.add(p.brand); return true; });
-    // 規則三：國家篩選，最後取前 N 名
-    let list = unique.filter(p => country === "all" || p.country === country);
-    if (limit) list = list.slice(0, limit);
-    const dropped = base.length - kept.length, dup = kept.length - unique.length;
-    return {
-      count: list.length,
-      rows: list.map((p, i) => itemHtml(p, i, `<span>樂天第 ${p.rank} 名</span>`)).join(""),
-      rules: `<p class="rules">已自動排除：同品牌重複 ${dup} 個${dropped ? `、非美容商品 ${dropped} 個` : ""}</p>`
+  // =========================================================
+  // ③ 篩選：國家 → 搜尋 → 分類 → 膚質 → 價格 → 合併品牌 → 排序
+  // =========================================================
+  function applyFilters(list, opts = {}) {
+    let out = list;
+    if (state.region !== "all") out = out.filter(p => p.country === state.region);
+    if (state.q) { const q = state.q.toLowerCase(); out = out.filter(p => (p.brand + p.name + (p.jp || "")).toLowerCase().includes(q)); }
+    if (opts.catFilter && state.cat !== "all") out = out.filter(p => p.cat === state.cat);
+    if (state.needs.size) out = out.filter(p => [...state.needs].every(t => (p.tags || []).includes(t)));
+    if (state.price !== "all" && !opts.noPrice) {
+      const [lo, hi] = state.price.split("-").map(Number);
+      out = out.filter(p => p.price >= lo && p.price < hi);
+    }
+    if (state.merge) { const seen = new Set(); out = out.filter(p => !seen.has(p.brand) && seen.add(p.brand)); }
+    const sorters = {
+      rank: (a, b) => (a.rank || 99) - (b.rank || 99),
+      rating: (a, b) => b.rating - a.rating,
+      reviews: (a, b) => b.reviews - a.reviews,
+      cheap: (a, b) => a.price - b.price,
+      pricey: (a, b) => b.price - a.price
     };
+    return [...out].sort(sorters[state.sort]);
   }
 
-  // ⑥ 畫出一個分頁
-  function render(key) {
-    const page = PAGES[key];
-    let rows = "", count = 0, rules = "";
+  // =========================================================
+  // ④ 畫面
+  // =========================================================
+  const heartSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"></path></svg>';
 
-    if (page.source === "real") {
-      // 用分類、國家篩選真實資料
-      if (page.sections) {
-        // 一個分頁裡有好幾個小排行（例如日用品＝洗衣＋泡澡）
-        rows = page.sections.map(sec => {
-          const r = buildList(RAKUTEN_BY_CAT[sec.group], sec.limit);
-          count += r.count;
-          return `<h3 class="sub">${sec.title}<small>${sec.note}</small></h3>${r.rules}${r.count ? `<ol class="rank">${r.rows}</ol>` : ""}`;
-        }).join("");
+  function card(p, opts = {}) {
+    const fav = !!FAVS[p.id];
+    const rankNo = opts.showRank ? opts.showRank : null;
+    const pic = p.img
+      ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">`
+      : "";
+    const meta = opts.meta || "";
+    const price = p.price ? `<div class="price">${yen(p.price)}<small>${twd(p.price)}</small></div>` : `<div class="price"><small>${esc(p.priceText || "價格以官網為準")}</small></div>`;
+    const buyLabel = p.isOY ? "去 Olive Young" : "去樂天看看";
+    return `
+      <article class="card">
+        <div class="pic">
+          <span class="tile">${esc(p.brand)}</span>${pic}
+          ${rankNo ? `<span class="rank r${rankNo}">${rankNo}</span>` : ""}
+          <button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="${fav ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button>
+        </div>
+        <div class="body">
+          <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)} ${esc(p.cat || "")}</span></div>
+          <h3 class="nm" title="${esc(p.jp || p.name)}">${esc(p.name)}</h3>
+          ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（${p.reviews.toLocaleString()} 則評價）</div>` : ""}
+          ${meta}
+          ${p.why ? `<div class="why">${esc(p.why)}</div>` : ""}
+          ${(p.tags || []).length ? `<div class="tags">${p.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>` : ""}
+          ${opts.extra || ""}
+          <div class="bottom">${price}<a class="buy ${p.isOY ? "oy" : ""}" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">${buyLabel}</a></div>
+        </div>
+      </article>`;
+  }
+
+  function filterBar(list, opts = {}) {
+    const tagsHere = [...new Set(list.flatMap(p => p.tags || []))];
+    const needChips = Object.keys(NEEDS).filter(t => tagsHere.includes(t) || state.needs.has(t))
+      .map(t => `<button class="chip" type="button" data-need="${t}" aria-pressed="${state.needs.has(t)}">${t}</button>`).join("");
+    const cats = ["all", "彩妝", "保養", "髮品", "日用品", "美容家電"];
+    const prices = [["all", "不限"], ["0-2000", "¥2,000 以下"], ["2000-5000", "¥2,000–5,000"], ["5000-10000", "¥5,000–10,000"], ["10000-9999999", "¥10,000 以上"]];
+    return `
+      <details class="filters" id="filters" ${state.filtersOpen ? "open" : ""}>
+        <summary>篩選與排序${state.needs.size || state.price !== "all" || state.cat !== "all" ? `（已選 ${state.needs.size + (state.price !== "all") + (state.cat !== "all")} 項）` : ""}</summary>
+        ${opts.catFilter ? `<div class="frow"><span>分類</span>${cats.map(c => `<button class="chip" type="button" data-cat="${c}" aria-pressed="${state.cat === c}">${c === "all" ? "全部" : c}</button>`).join("")}</div>` : ""}
+        ${needChips ? `<div class="frow"><span>膚質需求</span>${needChips}</div>` : ""}
+        ${opts.noPrice ? "" : `<div class="frow"><span>價格</span>${prices.map(([v, l]) => `<button class="chip" type="button" data-price="${v}" aria-pressed="${state.price === v}">${l}</button>`).join("")}</div>`}
+        ${opts.noSort ? "" : `<div class="frow"><span>排序</span>
+          <select id="sort" aria-label="排序方式">
+            ${[["rank", "依排名"], ["rating", "評分最高"], ["reviews", "評價最多"], ["cheap", "價格低到高"], ["pricey", "價格高到低"]].map(([v, l]) => `<option value="${v}" ${state.sort === v ? "selected" : ""}>${l}</option>`).join("")}
+          </select>
+          <label class="toggle"><input type="checkbox" id="merge" ${state.merge ? "checked" : ""}> 同品牌只看一個</label>
+        </div>`}
+      </details>`;
+  }
+
+  function head(page, badge) {
+    return `<div class="head"><h1>${page.title}</h1>${badge || ""}</div><p style="color:var(--muted);margin:4px 0 0">${page.desc}</p>`;
+  }
+
+  function render() {
+    const page = PAGES.find(p => p.key === state.tab) || PAGES[0];
+    document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.key === page.key));
+    let html = "";
+
+    if (page.source === "rank" || page.source === "month") {
+      const pool = page.source === "month" ? MONTH.groups : RANK;
+      const base = page.groups.flatMap(g => pool[g] || []);
+      const unique = page.catFilter ? base.filter((p, i, arr) => arr.findIndex(x => x.id === p.id) === i) : base;
+      const list = applyFilters(unique, { catFilter: page.catFilter });
+      const badge = page.source === "month"
+        ? `<span class="src">已累積 ${MONTH.days} 天資料${MONTH.days < 30 ? "・每天增加" : ""}</span>`
+        : `<span class="src">樂天真實排行</span>`;
+      html += head(page, badge) + filterBar(unique, { catFilter: page.catFilter });
+      const meta = p => page.source === "month" ? `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天・最高第 ${p.bestRank} 名</div>` : `<div class="meta">樂天第 ${p.rank} 名</div>`;
+      const showRank = state.sort === "rank" && !page.catFilter && page.groups.length === 1;
+      if (!list.length) {
+        html += `<div class="empty">沒有符合條件的商品，試試看取消一些篩選。</div>`;
+      } else if (page.podium && showRank && list.length > 3) {
+        html += `<div class="podium">${list.slice(0, 3).map((p, i) => card(p, { showRank: i + 1, meta: meta(p) })).join("")}</div>`;
+        html += `<p class="count">第 4 名以後・共 ${list.length} 件商品</p><div class="grid">${list.slice(3).map((p, i) => card(p, { showRank: i + 4, meta: meta(p) })).join("")}</div>`;
       } else {
-        // 今日熱門用美容綜合榜，其他分頁用各自分類的排行
-        const r = buildList(page.group ? RAKUTEN_BY_CAT[page.group] : RAKUTEN_TODAY, page.limit);
-        rows = `<ol class="rank">${r.rows}</ol>`; count = r.count; rules = r.rules;
+        html += `<p class="count">共 ${list.length} 件商品</p><div class="grid">${list.map((p, i) => card(p, { showRank: showRank ? i + 1 : null, meta: meta(p) })).join("")}</div>`;
       }
-    } else {
-      rows = page.list.map(([id, extra], i) => {
-        const p = SAMPLE[id];
-        if (key === "month") {
-          return itemHtml(p, i, `<span class="days"><span class="bar"><i style="width:${extra / 30 * 100}%"></i></span>上榜 ${extra}/30 天</span>`);
-        }
-        const voices = `<div class="voices"><h3>創作者怎麼說（範例帳號）</h3>
-          ${extra.voices.map(v => `<div class="voice"><span class="pf">${v.pf}</span><b>${v.who}</b><span>${v.say}</span></div>`).join("")}</div>`;
-        return itemHtml(p, i, `<span class="chg-up">${extra.count} 位創作者推薦</span>`, voices);
-      }).join("");
-      count = page.list.length;
     }
 
-    const badge = page.source === "real"
-      ? `<span class="src real">樂天真實資料・${RAKUTEN_DATE}</span>`
-      : `<span class="src">示範資料</span>`;
+    if (page.source === "oy") {
+      const items = OY.items.map((o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, priceText: o.price || "價格以官網為準", rank: i + 1, rating: 0, reviews: 0, price: 0 }));
+      const list = applyFilters(items, { noPrice: true });
+      html += head(page, OY.sample ? `<span class="src sample">示範資料</span>` : "");
+      html += OY.code
+        ? `<div class="oybanner"><b>ruri 專屬優惠代碼</b><span class="code" id="oycode">${esc(OY.code)}</span><button class="copy" type="button" id="copycode">複製代碼</button><span>${esc(OY.codeNote)}</span></div>`
+        : `<div class="oybanner"><b>Olive Young Global</b><span>韓國最大美妝通路，可直接寄送台灣。專屬優惠代碼即將公布！</span></div>`;
+      html += filterBar(items, { noPrice: true, noSort: true });
+      html += list.length ? `<p class="count">共 ${list.length} 件商品</p><div class="grid">${list.map(p => card(p)).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
+    }
 
-    const filters = page.source === "real"
-      ? `<div class="filters" role="group" aria-label="品牌國家">${COUNTRIES.map(c =>
-          `<button type="button" class="filter" data-country="${c.key}" aria-pressed="${c.key === country}">${c.label}</button>`).join("")}</div>`
-      : "";
+    if (page.source === "creators") {
+      const items = CREATORS.items.map((c, i) => {
+        const p = BY_CODE[c.itemCode];
+        return p ? { ...p, creator: c, rank: i + 1 } : null;
+      }).filter(Boolean);
+      const list = applyFilters(items, { noPrice: true });
+      html += head(page, CREATORS.sample ? `<span class="src sample">示範資料・帳號皆為範例</span>` : `<span class="src">${esc(CREATORS.week || "")}</span>`);
+      html += list.length ? `<div class="grid" style="margin-top:16px">${list.map(p => card(p, {
+        showRank: state.region === "all" && !state.q ? p.rank : null,
+        meta: `<div class="meta">${p.creator.count} 位創作者推薦・IG ${p.creator.ig}・小紅書 ${p.creator.xhs}</div>`,
+        extra: `<div class="voices">${(p.creator.voices || []).map(v => `<div class="voice"><b>${esc(v.pf)} ${esc(v.who)}</b>：${esc(v.say)}</div>`).join("")}</div>`
+      })).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
+    }
 
-    const empty = `<div class="empty">這個分類今天沒有符合篩選條件的商品，換個國家看看。</div>`;
+    if (page.source === "fav") {
+      const list = applyFilters(Object.values(FAVS), { noPrice: true });
+      html += head(page);
+      html += list.length
+        ? `<p class="count">共 ${list.length} 件收藏</p><div class="grid">${list.map(p => card(p)).join("")}</div>`
+        : `<div class="empty">還沒有收藏的商品。<br>在任何商品圖片右上角點 ♥，就會出現在這裡。</div>`;
+    }
 
-    document.getElementById("content").innerHTML = `
-      <div class="section-head">${badge}<h2>${page.title}</h2><p>${page.desc}</p></div>
-      ${filters}
-      ${rules}
-      ${count ? (page.source === "real" ? rows : `<ol class="rank">${rows}</ol>`) : empty}`;
-
-    document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.key === key));
-    currentKey = key;
+    document.getElementById("view").innerHTML = html;
   }
 
-  // ⑦ 分頁按鈕
-  let currentKey = "today";
+  // =========================================================
+  // ⑤ 互動
+  // =========================================================
   const tabsEl = document.getElementById("tabs");
-  Object.entries(PAGES).forEach(([key, page]) => {
+  PAGES.forEach(p => {
     const b = document.createElement("button");
-    b.className = "tab"; b.type = "button"; b.role = "tab"; b.id = "tab-" + key;
-    b.dataset.key = key; b.textContent = page.label;
-    b.addEventListener("click", () => { location.hash = key; });
+    b.type = "button"; b.className = "tab"; b.role = "tab"; b.dataset.key = p.key; b.textContent = p.label;
+    b.addEventListener("click", () => { location.hash = p.key; });
     tabsEl.appendChild(b);
   });
 
   function fromHash() {
     const key = location.hash.slice(1);
-    render(PAGES[key] ? key : "today");
+    state.tab = PAGES.some(p => p.key === key) ? key : "today";
+    state.needs.clear(); state.cat = "all"; state.price = "all";
+    render();
   }
-  window.addEventListener("hashchange", fromHash);
+  window.addEventListener("hashchange", () => { fromHash(); window.scrollTo({ top: 0 }); });
 
-  // ⑧ 圖片載入失敗（例如在預覽環境裡）就拿掉圖片，改顯示品牌名
-  document.addEventListener("error", e => {
-    if (e.target.classList && e.target.classList.contains("pic")) e.target.remove();
-  }, true);
+  function findItem(id) {
+    return BY_CODE[id] || Object.values(MONTH.groups).flat().find(p => p.id === id) || FAVS[id] ||
+      OY.items.map(o => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, priceText: o.price, price: 0, rating: 0, reviews: 0 })).find(p => p.id === id);
+  }
 
-  // ⑨ 點擊事件：國家篩選、示範資料的按鈕
-  let timer;
+  let toastTimer;
+  function toast(msg) {
+    const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false;
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => t.hidden = true, 2200);
+  }
+  function updateFavCount() { document.getElementById("favcount").textContent = Object.keys(FAVS).length; }
+
   document.addEventListener("click", e => {
-    const f = e.target.closest(".filter");
-    if (f) { country = f.dataset.country; render(currentKey); return; }
-    if (e.target.closest(".buy.sample")) {
-      const t = document.getElementById("toast");
-      t.textContent = "這是示範商品，等換成真實資料後就會有聯盟連結";
-      t.hidden = false; clearTimeout(timer);
-      timer = setTimeout(() => t.hidden = true, 3200);
+    const t = e.target.closest("button");
+    if (!t) return;
+    if (t.dataset.fav) {
+      const id = t.dataset.fav;
+      if (FAVS[id]) { delete FAVS[id]; toast("已從我的最愛移除"); }
+      else { const p = findItem(id); if (p) { const { creator, ...snap } = p; FAVS[id] = snap; toast("已加入我的最愛 ♥"); } }
+      saveFavs(); render(); return;
+    }
+    if (t.dataset.region) {
+      state.region = t.dataset.region;
+      document.querySelectorAll("[data-region]").forEach(b => b.setAttribute("aria-pressed", b === t));
+      render(); return;
+    }
+    if (t.dataset.need) { state.needs.has(t.dataset.need) ? state.needs.delete(t.dataset.need) : state.needs.add(t.dataset.need); render(); return; }
+    if (t.dataset.price) { state.price = t.dataset.price; render(); return; }
+    if (t.dataset.cat) { state.cat = t.dataset.cat; render(); return; }
+    if (t.id === "favjump") { location.hash = "fav"; return; }
+    if (t.id === "copycode") {
+      const code = OY.code;
+      navigator.clipboard.writeText(code).then(() => toast("已複製代碼：" + code)).catch(() => {
+        const r = document.createRange(); r.selectNodeContents(document.getElementById("oycode"));
+        getSelection().removeAllRanges(); getSelection().addRange(r); toast("請按 Ctrl+C 複製");
+      });
     }
   });
+  document.addEventListener("toggle", e => { if (e.target.id === "filters") state.filtersOpen = e.target.open; }, true);
+  document.addEventListener("change", e => {
+    if (e.target.id === "sort") { state.sort = e.target.value; render(); }
+    if (e.target.id === "merge") { state.merge = e.target.checked; render(); }
+  });
+  let qTimer;
+  document.getElementById("q").addEventListener("input", e => {
+    clearTimeout(qTimer);
+    qTimer = setTimeout(() => {
+      state.q = e.target.value.trim();
+      if (state.q && ["oy", "creators", "fav"].includes(state.tab) === false && state.tab !== "all") { location.hash = "all"; return; }
+      render();
+    }, 200);
+  });
 
-  // ⑩ 網站打開時：先載入資料，再畫出畫面
-  loadData()
-    .then(() => {
-      document.getElementById("updated").textContent = "樂天資料更新：" + RAKUTEN_DATE;
-      fromHash();
-    })
-    .catch(() => {
-      document.getElementById("content").innerHTML = '<div class="empty">資料載入失敗，請稍後重新整理頁面。</div>';
-    });
+  // ⑥ 開始：載入資料 → 畫出畫面
+  updateFavCount();
+  loadData().then(fromHash).catch(() => {
+    document.getElementById("view").innerHTML = '<div class="empty">資料載入失敗，請稍後重新整理頁面。</div>';
+  });
 </script>
-
 </body>
 </html>

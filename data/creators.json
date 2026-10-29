@@ -1,0 +1,23 @@
+{
+ "_說明": "創作者推薦（你每週手動整理）。itemCode 填樂天商品代號，網站會自動找到圖片、價格和購買連結。sample 改成 false 代表是真的資料。",
+ "sample": true,
+ "week": "示範資料",
+ "items": [
+  { "itemCode": "attenir:10000252", "count": 9, "ig": 5, "xhs": 4,
+    "voices": [
+      { "who": "@範例帳號A", "pf": "IG", "say": "卸妝很快，毛孔粗糙感變少" },
+      { "who": "範例帳號B", "pf": "小紅書", "say": "大容量很划算，可以用很久" } ] },
+  { "itemCode": "kobe-beauty-labo:10002363", "count": 7, "ig": 4, "xhs": 3,
+    "voices": [
+      { "who": "@範例帳號C", "pf": "IG", "say": "香味很好聞，洗完頭髮很柔順" } ] },
+  { "itemCode": "biolucia:10000004", "count": 6, "ig": 2, "xhs": 4,
+    "voices": [
+      { "who": "範例帳號D", "pf": "小紅書", "say": "用了一個月睫毛變得比較濃密" } ] },
+  { "itemCode": "mtgec-beauty:10002142", "count": 5, "ig": 4, "xhs": 1,
+    "voices": [
+      { "who": "@範例帳號E", "pf": "IG", "say": "夾完很有光澤，不太傷髮" } ] },
+  { "itemCode": "anuajapan:10000450", "count": 4, "ig": 2, "xhs": 2,
+    "voices": [
+      { "who": "@範例帳號F", "pf": "IG", "say": "入門組很適合第一次試用" } ] }
+ ]
+}

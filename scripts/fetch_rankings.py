@@ -136,6 +136,35 @@ def main():
     (history / f"{today}.json").write_text(text, encoding="utf-8")
     print(f"已儲存 data/latest.json 和 data/history/{today}.json")
 
+    # ④ 算本月熱門：統計過去 30 天，每個商品出現在排行榜上幾天
+    build_monthly(history)
+
+
+def build_monthly(history, days=30):
+    files = sorted(history.glob("*.json"))[-days:]
+    stats = {}  # 分類 → 商品代號 → 統計
+    for f in files:
+        snapshot = json.loads(f.read_text(encoding="utf-8"))
+        for group, items in snapshot.get("groups", {}).items():
+            bucket = stats.setdefault(group, {})
+            for item in items:
+                s = bucket.setdefault(item["itemCode"], {"days": 0, "rankSum": 0, "best": 99})
+                s["days"] += 1
+                s["rankSum"] += item["rank"] or 30
+                s["best"] = min(s["best"], item["rank"] or 99)
+                s["item"] = item  # 留下最新一天的商品資料（價格、圖片、連結）
+    monthly = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"),
+               "days": len(files), "groups": {}}
+    for group, bucket in stats.items():
+        ranked = sorted(bucket.values(), key=lambda s: (-s["days"], s["rankSum"] / s["days"]))
+        monthly["groups"][group] = [
+            {**s["item"], "rank": i + 1, "daysOn": s["days"], "bestRank": s["best"],
+             "avgRank": round(s["rankSum"] / s["days"], 1)}
+            for i, s in enumerate(ranked[:30])
+        ]
+    (ROOT / "data" / "month.json").write_text(json.dumps(monthly, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"已更新本月熱門（統計 {len(files)} 天）")
+
 
 if __name__ == "__main__":
     main()
