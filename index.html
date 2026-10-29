@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="每天自動更新的日韓美妝熱賣排行：彩妝、保養、髮品、日用品、美容家電。">
+<title>ruri 日韓熱賣情報站</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+
+<!-- =========================================================
+  【第一部分：CSS】決定網站「長什麼樣子」：顏色、字體、排版
+  ========================================================= -->
+<style>
+  /* 版面概念：日本藥妝店的排行榜 POP 牌，一欄式清單，點開看商品詳情 */
+  :root {
+    /* 明亮版配色：只要改這裡的色碼，整個網站就會一起換色 */
+    --bg: #F8F5FF;        /* 背景：帶一點紫的白 */
+    --surface: #FFFFFF;   /* 卡片底色：純白 */
+    --ink: #2F2A3D;       /* 主要文字：帶紫調的深灰，不用純黑 */
+    --muted: #7E7792;     /* 次要文字 */
+    --line: #E8E0FA;      /* 分隔線：淡紫 */
+    --accent: #8B6CF0;    /* 主色：薰衣草紫 */
+    --accent-soft: #EFE9FF;
+    --star: #FFAA1D;      /* 評分星星：亮橘黃 */
+    --gold: #F5A800; --silver: #9FAAB6; --bronze: #E8894A;
+    --up: #10B583; --down: #A99FA4;
+    color-scheme: light;
+    --font-display: "Dela Gothic One", "Noto Sans TC", sans-serif;
+    --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  }
+  /* 不跟著手機的「深色模式」變暗，永遠保持明亮版 */
+
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+  .wrap { max-width: 860px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+  /* 頂部標題列 */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+  header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-block: 16px 10px; flex-wrap: wrap; }
+  .logo { font-family: var(--font-display); font-weight: 400; font-size: 22px; letter-spacing: .02em; margin: 0; }
+  header { background: linear-gradient(180deg, #FFFFFF 0%, #F3EEFF 100%); }
+  .logo { display: flex; align-items: center; gap: 8px; color: #3F5BD8; }
+  .logo .bird { width: 40px; height: 40px; flex: none; }
+  .logo .word { font-size: 26px; letter-spacing: 0; }
+  .logo .tagline { font-family: var(--font-body); font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: .08em; margin-left: 4px; }
+  .sub { margin: 20px 0 6px; font-size: 18px; display: flex; align-items: baseline; gap: 8px; }
+  .sub small { font-size: 12px; font-weight: 400; color: var(--muted); }
+  .rules { margin: -4px 0 12px; font-size: 12px; color: var(--muted); }
+  .updated { color: var(--muted); font-size: 13px; }
+
+  /* 分頁按鈕（可左右滑動） */
+  .tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex: none; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; font-size: 14px;
+         padding: 7px 14px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+  .tab:hover { border-color: var(--accent); }
+  .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+  .tab:focus-visible, .buy:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* 示範資料提示 */
+  .notice { margin-block: 16px 4px; padding: 10px 14px; border-radius: 8px; background: var(--accent-soft); color: var(--ink); font-size: 13px; }
+  .notice b { color: var(--accent); }
+
+  /* 每個分類的標題 */
+  .section-head { padding-block: 20px 8px; }
+  .section-head h2 { font-family: var(--font-display); font-weight: 400; font-size: 26px; margin: 0; text-wrap: balance; }
+  .section-head p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+
+  /* 排行清單 */
+  ol.rank { list-style: none; margin: 0 0 40px; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+  ol.rank > li { border-top: 1px solid var(--line); }
+  ol.rank > li:first-child { border-top: 0; }
+
+  /* 每一列是一個可點開的 <details> */
+  summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 48px 64px 1fr auto 18px; gap: 14px; align-items: center; padding: 14px 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: var(--bg); }
+  .caret { color: var(--muted); font-size: 12px; transition: transform .2s; }
+  details[open] .caret { transform: rotate(180deg); }
+
+  .no { font-family: var(--font-display); font-size: 24px; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+  li:nth-child(1) .no { color: var(--gold); font-size: 30px; }
+  li:nth-child(2) .no { color: var(--silver); font-size: 28px; }
+  li:nth-child(3) .no { color: var(--bronze); font-size: 26px; }
+
+  /* 商品圖片佔位（之後會換成樂天提供的真實商品圖） */
+  .thumb { width: 64px; height: 64px; border-radius: 10px; display: grid; place-items: center; font-weight: 700; font-size: 12px;
+           color: var(--accent); background: var(--accent-soft); text-align: center; line-height: 1.1; padding: 4px; overflow: hidden; }
+
+  .info { min-width: 0; }
+  .maker { font-size: 12px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+  .name { font-weight: 700; margin: 1px 0 4px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12px; color: var(--muted); align-items: center; }
+  .chip { border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; }
+  .stars { color: var(--star); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .chg-up { color: var(--up); font-weight: 700; }
+  .chg-down { color: var(--down); }
+  .chg-new { color: #fff; background: var(--accent); border-radius: 4px; padding: 0 6px; font-weight: 700; }
+
+  .price { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+  .twd { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+
+  /* 月榜：上榜天數條 */
+  .days { display: inline-flex; align-items: center; gap: 8px; }
+  .bar { width: 80px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--accent); }
+
+  /* 點開後的商品詳情 */
+  .detail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; padding: 4px 16px 18px calc(16px + 48px + 14px); }
+  .field h3 { margin: 0 0 6px; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: .08em; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
+  .tag.skin { background: var(--accent-soft); border-color: transparent; }
+  .review { grid-column: 1 / -1; margin: 0; padding: 12px 14px; border-radius: 8px; background: var(--bg); font-size: 14px; }
+  .review small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .voices { grid-column: 1 / -1; display: grid; gap: 8px; }
+  .voices h3 { margin: 0; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: .08em; }
+  .voice { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: 14px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; }
+  .voice b { font-weight: 700; }
+  .pf { font-size: 11px; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 5px; }
+  .actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; }
+  .buy { font: inherit; font-size: 14px; padding: 7px 16px; border-radius: 6px; border: 0; color: #fff; background: var(--accent); cursor: pointer; }
+  .buy:hover { filter: brightness(1.08); }
+
+  /* 真實商品圖：圖片蓋在品牌名上面，圖片載入失敗就露出品牌名 */
+  .thumb { position: relative; }
+  .thumb .pic { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #fff; }
+
+  /* 資料來源標籤 */
+  .src { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 4px; margin-bottom: 6px; color: var(--muted); border: 1px dashed var(--muted); }
+  .src.real { color: #fff; background: var(--up); border: 1px solid var(--up); }
+
+  /* 國家篩選 */
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .filter { font: inherit; font-size: 13px; padding: 4px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+  .filter[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+  .filter:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tag.todo { border-style: dashed; color: var(--muted); background: transparent; }
+  .jp { font-size: 13px; color: var(--muted); }
+  a.buy { text-decoration: none; display: inline-block; }
+  .empty { margin: 0 0 40px; padding: 28px 20px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; }
+
+  footer { color: var(--muted); font-size: 13px; padding-block: 0 40px; }
+
+  /* 提示小視窗 */
+  .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px);
+           background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 8px; font-size: 14px; z-index: 20; }
+
+  /* 手機版：價格移到下面、詳情改成一欄 */
+  @media (max-width: 560px) {
+    summary { grid-template-columns: 30px 52px 1fr 14px; gap: 10px; padding: 12px; }
+    .thumb { width: 52px; height: 52px; font-size: 11px; }
+    .price { grid-column: 3; grid-row: 2; text-align: left; }
+    .twd { display: inline; margin-left: 4px; }
+    .caret { grid-column: 4; grid-row: 1; }
+    .detail { grid-template-columns: 1fr; padding: 4px 12px 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .caret { transition: none; } }
+</style>
+<style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<!-- =========================================================
+  【第二部分：HTML】網站的「骨架」：有哪些區塊、放在哪裡
+  ========================================================= -->
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1 class="logo"><svg class="bird" viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg><span class="word">ruri</span><span class="tagline">日韓熱賣情報站</span></h1>
+      <span class="updated" id="updated"></span>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="排行分類"></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="notice"><b>每天早上自動更新</b>：排行來自樂天，每天台灣時間早上 6 點左右更新；本月熱門、創作者推薦目前還是示範資料。點商品可以看詳情。</p>
+  <section id="content" aria-live="polite"></section>
+</main>
+
+<footer class="wrap">價格為樂天當日標示的日圓價格，台幣以 1 日圓 ≈ 0.21 台幣估算。本站含樂天聯盟連結，透過連結購買，本站可能獲得分潤。</footer>
+<div class="toast" id="toast" hidden></div>
+
+<!-- =========================================================
+  【第三部分：JavaScript】網站的「動作」與「資料」
+  ========================================================= -->
+<script>
+  // =========================================================
+  // ① 真實資料：每天由「廚房」(scripts/fetch_rankings.py) 自動更新
+  //    data/latest.json → 樂天排行（自動）
+  //    data/labels.json → 中文名稱、品牌、國家（你手動整理，用 itemCode 對應商品）
+  // =========================================================
+  let RAKUTEN_BY_CAT = {}, RAKUTEN_TODAY = [], RAKUTEN_DATE = "", LABELS = {};
+  const GROUP_CAT = { beauty: "美容", makeup: "彩妝", skincare: "保養", hair: "髮品", device: "美容家電", laundry: "日用品", bath: "日用品" };
+
+  // 樂天的商品名稱很長，還沒整理中文名稱的商品，先把廣告字拿掉、縮短顯示
+  function cleanName(name) {
+    return name.replace(/[【［\[≪《＼★◆].*?[】］\]≫》／★◆]/g, " ").replace(/\s+/g, " ").trim().slice(0, 36) || name.slice(0, 36);
+  }
+
+  // 把樂天的原始資料，和你整理的標籤合在一起
+  function toItem(raw, group) {
+    const L = LABELS[raw.itemCode] || {};
+    return {
+      rank: raw.rank, cat: GROUP_CAT[group],
+      brand: L.brand || raw.shopName,           // 沒整理過的商品，先用店名當品牌
+      name: L.name || cleanName(raw.itemName),
+      country: L.country || "未確認",
+      price: raw.price, rating: raw.rating, reviews: raw.reviews,
+      shop: raw.shopName, jp: raw.itemName.slice(0, 80),
+      img: raw.image, url: raw.url, exclude: raw.exclude
+    };
+  }
+
+  async function loadData() {
+    const [latest, labels] = await Promise.all([
+      fetch("data/latest.json", { cache: "no-store" }).then(r => r.json()),
+      fetch("data/labels.json", { cache: "no-store" }).then(r => r.json())
+    ]);
+    LABELS = labels;
+    for (const [group, items] of Object.entries(latest.groups)) {
+      RAKUTEN_BY_CAT[group] = items.map(raw => toItem(raw, group));
+    }
+    RAKUTEN_TODAY = RAKUTEN_BY_CAT.beauty || [];
+    const d = new Date(latest.updated);
+    RAKUTEN_DATE = `${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+  }
+
+  // ② 示範資料：「本月熱門」需要累積 30 天、「創作者推薦」需要你人工整理，所以暫時還是假資料
+  const SAMPLE = {
+    "melano":     { brand: "Melano CC", name: "維他命 C 美容液", cat: "保養", country: "日本", price: 1320, rating: 4.4, reviews: 5020 },
+    "canmake-mo": { brand: "CANMAKE", name: "棉花糖蜜粉餅", cat: "彩妝", country: "日本", price: 1034, rating: 4.6, reviews: 2140 },
+    "biore-uv":   { brand: "Biore", name: "UV 水凝防曬乳", cat: "保養", country: "日本", price: 1078, rating: 4.6, reviews: 4210 },
+    "fino":       { brand: "fino", name: "高效滲透護髮膜", cat: "髮品", country: "日本", price: 1078, rating: 4.6, reviews: 3350 },
+    "hadalabo":   { brand: "肌研 Hada Labo", name: "極潤玻尿酸化妝水", cat: "保養", country: "日本", price: 990, rating: 4.5, reviews: 3820 },
+    "andhoney":   { brand: "&honey", name: "深層保濕洗髮精", cat: "髮品", country: "日本", price: 1540, rating: 4.3, reviews: 1560 },
+    "refa-dryer": { brand: "ReFa", name: "BEAUTECH 美容吹風機", cat: "美容家電", country: "日本", price: 36300, rating: 4.7, reviews: 890 },
+    "kate-brow":  { brand: "KATE", name: "造型眉彩餅", cat: "彩妝", country: "日本", price: 1210, rating: 4.4, reviews: 1980 },
+    "cezanne":    { brand: "CEZANNE", name: "皮脂吸收飾底乳", cat: "彩妝", country: "日本", price: 660, rating: 4.3, reviews: 1870 },
+    "nonio":      { brand: "LION", name: "NONIO 漱口水", cat: "日用品", country: "日本", price: 550, rating: 4.2, reviews: 960 },
+    "megrhythm":  { brand: "花王 めぐりズム", name: "蒸氣溫熱眼罩 12 片", cat: "日用品", country: "日本", price: 1078, rating: 4.7, reviews: 3110 }
+  };
+
+  // ③ 每個分頁的設定
+  //    source: "real" → 用樂天真實資料；"sample" → 用示範資料
+  //    cat: 只顯示這個分類的商品（不填＝全部）
+  const PAGES = {
+    today:    { label: "🔥 今日熱門", title: "今日日本熱門 TOP 10", desc: "樂天「美容・彩妝・香水」綜合排行（genreId 100939）", source: "real", limit: 10 },
+    month:    { label: "📅 本月熱門", title: "這一個月大家都在買什麼", desc: "過去 30 天裡，最常出現在排行榜上的商品", source: "sample",
+                list: [["melano", 28], ["canmake-mo", 27], ["biore-uv", 25], ["fino", 24], ["hadalabo", 22], ["andhoney", 21], ["refa-dryer", 19], ["kate-brow", 18], ["cezanne", 16], ["nonio", 14]] },
+    creators: { label: "👀 創作者推薦", title: "本週創作者都在推什麼", desc: "整理 IG 與小紅書美妝創作者本週推薦最多的商品", source: "sample",
+                list: [
+                  ["fino", { count: 9, ig: 5, xhs: 4, voices: [
+                    { who: "@miki.hairlog", pf: "IG", say: "燙染後髮尾很乾，敷 5 分鐘差很多" },
+                    { who: "小鹿愛日妝", pf: "小紅書", say: "開架價格做出沙龍感，已經回購第三罐" } ] }],
+                  ["melano", { count: 8, ig: 3, xhs: 5, voices: [
+                    { who: "@hana_skin.tw", pf: "IG", say: "痘疤用一個月有變淡，白天記得防曬" },
+                    { who: "一顆檸檬的護膚筆記", pf: "小紅書", say: "新手先隔天用一次，避免刺激" } ] }],
+                  ["canmake-mo", { count: 7, ig: 4, xhs: 3, voices: [
+                    { who: "@yuri.makeup", pf: "IG", say: "油肌補妝救星，小盒子好攜帶" },
+                    { who: "桃子不吃桃", pf: "小紅書", say: "粉質很細，拍照時毛孔很淡" } ] }],
+                  ["refa-dryer", { count: 5, ig: 4, xhs: 1, voices: [
+                    { who: "@kaito_hairdesign", pf: "IG", say: "風量大，長髮吹乾時間少一半" },
+                    { who: "奶茶色的貓", pf: "小紅書", say: "價格高，但頭髮光澤真的不一樣" } ] }],
+                  ["megrhythm", { count: 4, ig: 2, xhs: 2, voices: [
+                    { who: "@office.selfcare", pf: "IG", say: "下班必用，長時間看螢幕的救星" },
+                    { who: "睡不著的阿綿", pf: "小紅書", say: "睡前敷一片，很快就有睡意" } ] }]
+                ] },
+    makeup:   { label: "💄 彩妝", title: "彩妝排行 TOP 10", desc: "樂天「底妝・彩妝」分類今天的排行（genreId 204233）", source: "real", group: "makeup", limit: 10 },
+    skincare: { label: "🧴 保養", title: "保養排行 TOP 10", desc: "樂天「保養」分類今天的排行（genreId 100944）", source: "real", group: "skincare", limit: 10 },
+    hair:     { label: "💇‍♀️ 髮品", title: "髮品排行 TOP 10", desc: "樂天「護髮・造型」分類今天的排行（genreId 100940）", source: "real", group: "hair", limit: 10 },
+    daily:    { label: "🛁 日用品", title: "日用品排行", desc: "洗衣和泡澡兩個小分類，各取前 5 名", source: "real",
+                sections: [
+                  { title: "🧺 洗衣精・柔軟精", note: "genreId 216011", group: "laundry", limit: 5 },
+                  { title: "🛁 泡澡・沐浴", note: "genreId 111475", group: "bath", limit: 5 }
+                ] },
+    device:   { label: "✨ 美容家電", title: "美容家電排行 TOP 10", desc: "樂天「美容・健康家電」分類今天的排行（genreId 100191）", source: "real", group: "device", limit: 10 }
+  };
+
+  // 國家篩選按鈕
+  const COUNTRIES = [
+    { key: "all", label: "全部" },
+    { key: "日本", label: "🇯🇵 日本品牌" },
+    { key: "韓國", label: "🇰🇷 韓國品牌" },
+    { key: "其他", label: "🌏 其他" }
+  ];
+  let country = "all";
+
+  const JPY_TO_TWD = 0.21;
+
+  // ④ 小工具
+  const yen = n => "¥" + n.toLocaleString("ja-JP");
+  const twd = n => "約 NT$" + Math.round(n * JPY_TO_TWD).toLocaleString("zh-TW");
+  const flag = c => ({ "日本": "🇯🇵 日本", "韓國": "🇰🇷 韓國", "未確認": "❔ 待整理" }[c] || "🌏 其他");
+  const todo = '<div class="tags"><span class="tag todo">待你整理</span></div>';
+
+  // ⑤ 畫出一個商品
+  function itemHtml(p, i, extraMeta = "", voices = "") {
+    const pic = p.img
+      ? `<img class="pic" src="${p.img}" alt="" loading="lazy">`   // 真的商品圖；載入失敗時會顯示品牌名
+      : "";
+    const buy = p.url
+      ? `<a class="buy" href="${p.url}" target="_blank" rel="sponsored noopener">到樂天看看 ↗</a>`
+      : `<button class="buy sample" type="button">去日本官方通路看看</button>`;
+
+    return `
+      <li><details>
+        <summary>
+          <div class="no">${i + 1}</div>
+          <div class="thumb">${pic}<span>${p.brand.split(" ")[0]}</span></div>
+          <div class="info">
+            <div class="maker">${p.brand}</div>
+            <div class="name">${p.name}</div>
+            <div class="meta">
+              <span class="stars">★ ${p.rating.toFixed(1)}</span><span>${p.reviews.toLocaleString()} 則評價</span>
+              <span class="chip">${p.cat}</span><span class="chip">${flag(p.country)}</span>${extraMeta}
+            </div>
+          </div>
+          <div class="price">${yen(p.price)}<span class="twd">${twd(p.price)}</span></div>
+          <span class="caret" aria-hidden="true">▼</span>
+        </summary>
+        <div class="detail">
+          <div class="field"><h3>重點成分／特色</h3>${todo}</div>
+          <div class="field"><h3>適合膚質／髮質</h3>${todo}</div>
+          <div class="field"><h3>台灣哪裡買</h3>${todo}</div>
+          <div class="field"><h3>賣家</h3><div>${p.shop || "（示範資料）"}</div></div>
+          ${voices}
+          ${p.jp ? `<p class="review"><span class="jp">${p.jp}…</span><small>樂天原始商品名稱</small></p>` : ""}
+          <div class="actions">${buy}</div>
+        </div>
+      </details></li>`;
+  }
+
+  // ⑥-1 把一份排行整理成要顯示的清單
+  function buildList(base, limit) {
+    // 規則一：排除不屬於美容的商品（例如健康家電、洗碗精）
+    const kept = base.filter(p => !p.exclude);
+    // 規則二：同一個品牌只留名次最高的那一個
+    const seen = new Set();
+    const unique = kept.filter(p => { if (seen.has(p.brand)) return false; seen.add(p.brand); return true; });
+    // 規則三：國家篩選，最後取前 N 名
+    let list = unique.filter(p => country === "all" || p.country === country);
+    if (limit) list = list.slice(0, limit);
+    const dropped = base.length - kept.length, dup = kept.length - unique.length;
+    return {
+      count: list.length,
+      rows: list.map((p, i) => itemHtml(p, i, `<span>樂天第 ${p.rank} 名</span>`)).join(""),
+      rules: `<p class="rules">已自動排除：同品牌重複 ${dup} 個${dropped ? `、非美容商品 ${dropped} 個` : ""}</p>`
+    };
+  }
+
+  // ⑥ 畫出一個分頁
+  function render(key) {
+    const page = PAGES[key];
+    let rows = "", count = 0, rules = "";
+
+    if (page.source === "real") {
+      // 用分類、國家篩選真實資料
+      if (page.sections) {
+        // 一個分頁裡有好幾個小排行（例如日用品＝洗衣＋泡澡）
+        rows = page.sections.map(sec => {
+          const r = buildList(RAKUTEN_BY_CAT[sec.group], sec.limit);
+          count += r.count;
+          return `<h3 class="sub">${sec.title}<small>${sec.note}</small></h3>${r.rules}${r.count ? `<ol class="rank">${r.rows}</ol>` : ""}`;
+        }).join("");
+      } else {
+        // 今日熱門用美容綜合榜，其他分頁用各自分類的排行
+        const r = buildList(page.group ? RAKUTEN_BY_CAT[page.group] : RAKUTEN_TODAY, page.limit);
+        rows = `<ol class="rank">${r.rows}</ol>`; count = r.count; rules = r.rules;
+      }
+    } else {
+      rows = page.list.map(([id, extra], i) => {
+        const p = SAMPLE[id];
+        if (key === "month") {
+          return itemHtml(p, i, `<span class="days"><span class="bar"><i style="width:${extra / 30 * 100}%"></i></span>上榜 ${extra}/30 天</span>`);
+        }
+        const voices = `<div class="voices"><h3>創作者怎麼說（範例帳號）</h3>
+          ${extra.voices.map(v => `<div class="voice"><span class="pf">${v.pf}</span><b>${v.who}</b><span>${v.say}</span></div>`).join("")}</div>`;
+        return itemHtml(p, i, `<span class="chg-up">${extra.count} 位創作者推薦</span>`, voices);
+      }).join("");
+      count = page.list.length;
+    }
+
+    const badge = page.source === "real"
+      ? `<span class="src real">樂天真實資料・${RAKUTEN_DATE}</span>`
+      : `<span class="src">示範資料</span>`;
+
+    const filters = page.source === "real"
+      ? `<div class="filters" role="group" aria-label="品牌國家">${COUNTRIES.map(c =>
+          `<button type="button" class="filter" data-country="${c.key}" aria-pressed="${c.key === country}">${c.label}</button>`).join("")}</div>`
+      : "";
+
+    const empty = `<div class="empty">這個分類今天沒有符合篩選條件的商品，換個國家看看。</div>`;
+
+    document.getElementById("content").innerHTML = `
+      <div class="section-head">${badge}<h2>${page.title}</h2><p>${page.desc}</p></div>
+      ${filters}
+      ${rules}
+      ${count ? (page.source === "real" ? rows : `<ol class="rank">${rows}</ol>`) : empty}`;
+
+    document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.key === key));
+    currentKey = key;
+  }
+
+  // ⑦ 分頁按鈕
+  let currentKey = "today";
+  const tabsEl = document.getElementById("tabs");
+  Object.entries(PAGES).forEach(([key, page]) => {
+    const b = document.createElement("button");
+    b.className = "tab"; b.type = "button"; b.role = "tab"; b.id = "tab-" + key;
+    b.dataset.key = key; b.textContent = page.label;
+    b.addEventListener("click", () => { location.hash = key; });
+    tabsEl.appendChild(b);
+  });
+
+  function fromHash() {
+    const key = location.hash.slice(1);
+    render(PAGES[key] ? key : "today");
+  }
+  window.addEventListener("hashchange", fromHash);
+
+  // ⑧ 圖片載入失敗（例如在預覽環境裡）就拿掉圖片，改顯示品牌名
+  document.addEventListener("error", e => {
+    if (e.target.classList && e.target.classList.contains("pic")) e.target.remove();
+  }, true);
+
+  // ⑨ 點擊事件：國家篩選、示範資料的按鈕
+  let timer;
+  document.addEventListener("click", e => {
+    const f = e.target.closest(".filter");
+    if (f) { country = f.dataset.country; render(currentKey); return; }
+    if (e.target.closest(".buy.sample")) {
+      const t = document.getElementById("toast");
+      t.textContent = "這是示範商品，等換成真實資料後就會有聯盟連結";
+      t.hidden = false; clearTimeout(timer);
+      timer = setTimeout(() => t.hidden = true, 3200);
+    }
+  });
+
+  // ⑩ 網站打開時：先載入資料，再畫出畫面
+  loadData()
+    .then(() => {
+      document.getElementById("updated").textContent = "樂天資料更新：" + RAKUTEN_DATE;
+      fromHash();
+    })
+    .catch(() => {
+      document.getElementById("content").innerHTML = '<div class="empty">資料載入失敗，請稍後重新整理頁面。</div>';
+    });
+</script>
+
+</body>
+</html>

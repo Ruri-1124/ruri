@@ -1,0 +1,18 @@
+{
+  "_說明": "要抓哪些樂天分類，以及每個分類的排除規則。exclude：商品名稱含有這些字就排除；keepOnly：商品名稱要含有這些字之一才保留。",
+  "groups": {
+    "beauty":   { "name": "美容綜合", "genreId": 100939, "exclude": [] },
+    "makeup":   { "name": "彩妝",     "genreId": 204233, "exclude": [] },
+    "skincare": { "name": "保養",     "genreId": 100944, "exclude": [] },
+    "hair":     { "name": "髮品",     "genreId": 100940, "exclude": [] },
+    "device":   { "name": "美容家電", "genreId": 100191,
+                  "exclude": ["ふくらはぎ", "ゴリラ", "歯ブラシ", "シェーバー", "髭剃り", "洗浄液", "フットケア", "フット"],
+                  "excludeReason": "健康家電" },
+    "laundry":  { "name": "洗衣精・柔軟精", "genreId": 216011,
+                  "exclude": ["食器", "食洗機", "クレンザー", "マルチクリーナー", "キッチン", "フィニッシュ", "finish"],
+                  "excludeReason": "洗碗精・清潔劑" },
+    "bath":     { "name": "泡澡・沐浴", "genreId": 111475,
+                  "keepOnly": ["入浴剤", "バスソルト", "エプソムソルト", "入浴", "シャワーヘッド", "バブ", "クナイプ"],
+                  "excludeReason": "浴室五金・收納" }
+  }
+}
