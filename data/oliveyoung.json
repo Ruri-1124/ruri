@@ -15,20 +15,21 @@
    ],
    "why": "Olive Young 暢銷第 1 名的水凝膠面膜",
    "url": "https://global.oliveyoung.com/if/rd?su=BU09YPDH",
-   "img": "https://cdn-image.oliveyoung.com/catalog/product/GA230518544/thumbnail/6548ea5afa914b9bba4265dfca10097f.jpg?RS=810x810&AR=0"
+   "img": "https://cdn-image.oliveyoung.com/catalog/product/GA230518544/thumbnail/6548ea5afa914b9bba4265dfca10097f.jpg?RS=810x810&AR=0",
+   "skin": []
   },
   {
    "brand": "Dr.Althea",
    "name": "345 舒緩霜 50ml 套裝（+10ml×2＋軟管擠壓器）",
    "cat": "保養",
    "price": "NT$744（原價 NT$881）",
-   "tags": [
-    "敏感肌",
-    "痘痘"
-   ],
-   "why": "主打舒緩泛紅、痘痘肌的人氣面霜",
+   "tags": [],
+   "why": "主打溫和配方的人氣面霜，適合容易泛紅的肌膚",
    "url": "https://global.oliveyoung.com/if/rd?su=2VVJS0DN",
-   "img": "https://cdn-image.oliveyoung.com/prdtImg/1976/e17ecc0c-14f3-44b2-a57c-02b825426fff.jpg?RS=810x810&AR=0"
+   "img": "https://cdn-image.oliveyoung.com/prdtImg/1976/e17ecc0c-14f3-44b2-a57c-02b825426fff.jpg?RS=810x810&AR=0",
+   "skin": [
+    "敏感肌"
+   ]
   },
   {
    "brand": "SKIN1004",
@@ -36,12 +37,14 @@
    "cat": "保養",
    "price": "NT$776（原價 NT$1,011）",
    "tags": [
-    "防曬",
-    "敏感肌"
+    "防曬"
    ],
    "why": "精華質地的防曬，大容量套裝",
    "url": "https://global.oliveyoung.com/if/rd?su=3NO6M83H",
-   "img": "https://cdn-image.oliveyoung.com/prdtImg/1373/bc314e4c-ada1-4ca4-81a3-4568721f9c14.png?RS=810x810&AR=0"
+   "img": "https://cdn-image.oliveyoung.com/prdtImg/1373/bc314e4c-ada1-4ca4-81a3-4568721f9c14.png?RS=810x810&AR=0",
+   "skin": [
+    "敏感肌"
+   ]
   },
   {
    "brand": "BIOHEAL BOH",
@@ -49,11 +52,12 @@
    "cat": "保養",
    "price": "NT$757（原價 NT$1,011）",
    "tags": [
-    "抗老"
+    "熟齡肌"
    ],
    "why": "附刮痧板的緊緻霜，也在日本樂天熱賣中",
    "url": "https://global.oliveyoung.com/if/rd?su=QX3IYXLT",
-   "img": "https://cdn-image.oliveyoung.com/catalog/product/GA260338983/thumbnail/1e07e2cf13b544c09fe7038c9cac46a7.jpg?RS=810x810&AR=0"
+   "img": "https://cdn-image.oliveyoung.com/catalog/product/GA260338983/thumbnail/1e07e2cf13b544c09fe7038c9cac46a7.jpg?RS=810x810&AR=0",
+   "skin": []
   },
   {
    "brand": "MEDIHEAL",
@@ -65,7 +69,8 @@
    ],
    "why": "連續 15 年銷售第一的片狀面膜，現在半價",
    "url": "https://global.oliveyoung.com/if/rd?su=G1H2LJM8",
-   "img": "https://cdn-image.oliveyoung.com/prdtImg/1219/4d15e768-500a-4a02-a1a4-ddd8bab694e7.png?RS=810x810&AR=0"
+   "img": "https://cdn-image.oliveyoung.com/prdtImg/1219/4d15e768-500a-4a02-a1a4-ddd8bab694e7.png?RS=810x810&AR=0",
+   "skin": []
   }
  ],
  "codeUrl": "https://global.oliveyoung.com/if/rd?su=HXU9F3VU"

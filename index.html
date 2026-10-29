@@ -131,6 +131,32 @@
   .copy { border: 2px solid #fff; background: transparent; color: #fff; border-radius: 10px; padding: 6px 14px; cursor: pointer; font-weight: 700; }
 
   .sub { font-family: var(--font-display); font-weight: 900; font-size: 22px; margin: 26px 0 12px; }
+  .picbtn { position: absolute; inset: 0; border: 0; padding: 0; background: #fff; cursor: pointer; display: grid; place-items: center; }
+  .nmbtn { all: unset; cursor: pointer; }
+  .nmbtn:hover { color: var(--ruri); }
+  .nmbtn:focus-visible { outline: 2px solid var(--ruri); }
+  .skin { font-size: 12px; font-weight: 700; color: #1A7A63; }
+  .more { border: 0; background: none; padding: 0; color: var(--ruri); font-size: 12px; font-weight: 700; cursor: pointer; text-align: left; margin-top: 2px; }
+
+  /* ── 商品詳細介紹視窗 ── */
+  dialog#detail { border: 0; border-radius: 20px; padding: 0; width: min(720px, calc(100% - 24px)); max-height: calc(100% - 32px); box-shadow: 0 20px 60px rgba(34, 30, 58, .3); color: var(--ink); }
+  dialog#detail::backdrop { background: rgba(34, 30, 58, .45); }
+  .dwrap { display: grid; grid-template-columns: 240px minmax(0, 1fr); }
+  .dpic { background: #fff; border-right: 1px solid var(--line); position: relative; aspect-ratio: 1; display: grid; place-items: center; }
+  .dpic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 12px; background: #fff; }
+  .dbody { padding: 22px 24px 24px; display: grid; gap: 14px; min-width: 0; }
+  .dbody h2 { margin: 0; font-family: var(--font-display); font-weight: 900; font-size: 22px; line-height: 1.35; }
+  .dsec h3 { margin: 0 0 6px; font-size: 13px; color: var(--muted); letter-spacing: .06em; }
+  .dsec ul, .dsec ol { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+  .dsec p { margin: 0; }
+  .pending { color: var(--muted); font-size: 14px; background: var(--bg); border-radius: 10px; padding: 10px 12px; }
+  .award { display: inline-block; background: #FFF3D6; color: #8A5A00; font-weight: 700; font-size: 13px; padding: 3px 10px; border-radius: 8px; }
+  .legal { font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
+  .src a { color: var(--muted); }
+  .dclose { position: absolute; right: 12px; top: 12px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--bg); font-size: 20px; cursor: pointer; z-index: 2; }
+  .dbuys { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  @media (max-width: 640px) { .dwrap { grid-template-columns: 1fr; } .dpic { border-right: 0; border-bottom: 1px solid var(--line); max-height: 260px; aspect-ratio: auto; height: 260px; } .dbody { padding: 18px; } }
+
   .empty { margin-top: 16px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
   footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
   .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 10px; font-size: 14px; z-index: 30; max-width: calc(100% - 32px); }
@@ -181,6 +207,7 @@
     膚質與需求標籤由商品說明的關鍵字自動判斷，僅供參考。「在台灣蝦皮買」會帶你到蝦皮上這個商品的搜尋結果，請確認賣家與商品內容後再購買。本站含蝦皮、樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。
   </div>
 </footer>
+<dialog id="detail" aria-label="商品詳細介紹"><div id="detailBody"></div></dialog>
 <div class="toast" id="toast" hidden></div>
 
 <script>
@@ -192,14 +219,32 @@
 
   // 蝦皮分潤連結：照蝦皮官方「短連結製作說明」的格式，把「蝦皮搜尋頁」包成分潤連結
   const STOP = ["OFF", "SPF", "PA", "UV", "ml", "mL", "ML", "LOT", "TV", "NEW", "SALE", "SET", "PRO", "EX", "CICA", "PDRN", "LED", "EMS", "RF", "WEB", "BOX"];
+  // 日文片假名品牌名 → 在蝦皮搜尋得到的名稱
+  const BRAND_KANA = {
+    "ボビイ ブラウン": "Bobbi Brown", "ボビイブラウン": "Bobbi Brown", "マキアージュ": "心機 MAQuillAGE", "キャンメイク": "CANMAKE", "セザンヌ": "CEZANNE",
+    "コスメデコルテ": "黛珂 DECORTE", "シュウ ウエムラ": "植村秀", "シュウウエムラ": "植村秀", "アテニア": "Attenir", "ファンケル": "FANCL", "オルビス": "ORBIS",
+    "エリクシール": "怡麗絲爾 ELIXIR", "ハダラボ": "肌研", "肌ラボ": "肌研", "メラノCC": "Melano CC", "キュレル": "Curel 珂潤", "ミノン": "MINON",
+    "ビオレ": "Biore", "アネッサ": "ANESSA 安耐曬", "スキンアクア": "Skin Aqua", "ラロッシュポゼ": "理膚寶水", "ラ ロッシュ ポゼ": "理膚寶水", "セタフィル": "Cetaphil 舒特膚",
+    "ルルルン": "LuLuLun", "クオリティファースト": "Quality 1st", "タカミ": "TAKAMI", "ヤーマン": "YA-MAN", "リファ": "ReFa", "サロニア": "SALONIA",
+    "パナソニック": "Panasonic 吹風機", "ケノン": "ke-non 除毛", "キヌージョ": "KINUJO", "クレイツ": "CREATE ION", "テスコム": "TESCOM", "フィーノ": "fino",
+    "ボタニスト": "BOTANIST", "ヨル ": "YOLU", "ミルボン": "MILBON", "ケラスターゼ": "卡詩 KERASTASE", "ツバキ": "TSUBAKI", "アンドハニー": "&honey",
+    "ロアザオイル": "LOA THE OIL", "アタック": "Attack 洗衣精", "アリエール": "Ariel 洗衣", "ボールド": "Bold 洗衣球", "レノア": "Lenor 柔軟精",
+    "フレアフレグランス": "Flair 柔軟精", "ハミング": "Hamming 柔軟精", "バブ": "Bub 泡澡錠", "クナイプ": "Kneipp 克奈圃", "エスティ ローダー": "雅詩蘭黛",
+    "ランコム": "蘭蔻", "ディオール": "Dior", "ジルスチュアート": "JILL STUART", "アディクション": "ADDICTION", "スック": "SUQQU", "ルナソル": "LUNASOL",
+    "ローラ メルシエ": "Laura Mercier", "ナーズ": "NARS", "クリニーク": "倩碧", "イプサ": "IPSA", "ドクターシーラボ": "城野醫生", "ティルティル": "TIRTIR",
+    "アヌア": "Anua", "ケイト": "KATE", "エクセル": "excel 眼影", "ヒロインメイク": "Heroine Make", "デジャヴュ": "dejavu", "メディヒール": "MEDIHEAL"
+  };
   function shopeeKeyword(p) {
     const L = LABELS[p.id];
     const brandWord = s => (s || "").split(" ")[0];
     if (L && L.brand) return (brandWord(L.brand) + " " + L.name.replace(/[（(].*?[)）]/g, "").replace(/\d+\s?(mL|ml|g|片|入|包|錠).*$/i, "")).trim();
     if (p.isOY) return p.brand + " " + p.name.replace(/[（(].*?[)）]/g, "").replace(/\d+\s?(mL|ml|g|片|入).*$/i, "").trim();
-    const latin = (p.jp || "").match(/[A-Za-z][A-Za-z0-9&'.\-]{1,}(?: [A-Za-z][A-Za-z0-9&'.\-]{2,})?/g) || [];
+    const jp = p.jp || "";
+    const known = Object.keys(BRAND_KANA).find(k => jp.includes(k));   // 片假名品牌 → 台灣常用的品牌名
+    if (known) return BRAND_KANA[known];
+    const latin = jp.match(/[A-Za-z][A-Za-z0-9&'.\-]{1,}(?: [A-Za-z][A-Za-z0-9&'.\-]{2,})?/g) || [];
     const brand = latin.filter(w => !STOP.includes(w.split(" ")[0]) && w.length > 2).sort((a, b) => b.length - a.length)[0];   // 取最長的英文字，通常是品牌名
-    return brand || (p.name || "").slice(0, 16);
+    return brand || "";   // 找不到品牌就不放蝦皮按鈕，避免搜尋不到東西
   }
   function shopeeLink(p) {
     const kw = shopeeKeyword(p);
@@ -225,18 +270,26 @@
   ];
 
   // 膚質・需求標籤：商品名稱裡出現這些日文關鍵字，就貼上對應的中文標籤
+  // 適合膚質：商品名稱有寫才標，沒寫就不猜
+  const SKIN = {
+    "乾肌":     ["乾燥肌", "超乾燥肌"],
+    "油肌":     ["脂性肌", "オイリー肌"],
+    "混合肌":   ["混合肌"],
+    "敏感肌":   ["敏感肌"],
+    "所有膚質": ["すべての肌", "全肌質", "肌質を問わず"]
+  };
+  // 在意的問題：用「肌膚狀況」命名，不用「治療、消除」這類療效字眼
   const NEEDS = {
-    "保濕":   ["保湿", "うるおい", "乾燥", "セラミド", "ヒアルロン"],
-    "敏感肌": ["敏感肌", "低刺激", "無添加"],
-    "痘痘":   ["ニキビ", "にきび", "肌荒れ"],
-    "毛孔":   ["毛穴", "角栓", "黒ずみ"],
-    "美白":   ["美白", "くすみ", "シミ", "透明感", "トーンアップ", "ビタミンC"],
-    "抗老":   ["エイジング", "シワ", "しわ", "ハリ", "レチノール", "リンクル", "年齢肌"],
-    "控油":   ["皮脂", "テカリ", "崩れない"],
-    "防曬":   ["日焼け止め", "SPF", "UVカット"],
-    "受損髮": ["ダメージ", "補修"],
-    "白髮":   ["白髪"],
-    "頭皮":   ["頭皮", "スカルプ"]
+    "保濕":       ["保湿", "うるおい", "乾燥", "セラミド", "ヒアルロン"],
+    "毛孔":       ["毛穴", "角栓", "黒ずみ"],
+    "暗沉":       ["美白", "くすみ", "シミ", "透明感", "トーンアップ", "ビタミンC"],
+    "熟齡肌":     ["エイジング", "シワ", "しわ", "ハリ", "レチノール", "リンクル", "年齢肌"],
+    "油痘肌":     ["ニキビ", "にきび", "肌荒れ"],
+    "容易脫妝":   ["テカリ", "崩れない", "崩れにくい"],
+    "防曬":       ["日焼け止め", "SPF", "UVカット"],
+    "乾燥受損髮": ["ダメージ", "補修", "パサつき"],
+    "白髮":       ["白髪"],
+    "頭皮":       ["頭皮", "スカルプ"]
   };
 
   // 品牌國家：沒有手動整理過的商品，用名稱裡的品牌關鍵字自動判斷
@@ -246,9 +299,9 @@
   // =========================================================
   // ② 資料
   // =========================================================
-  let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, CREATORS = { items: [] }, OY = { items: [] };
+  let DETAILS = {}, RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, CREATORS = { items: [] }, OY = { items: [] };
   let BY_CODE = {};   // 商品代號 → 商品（給創作者推薦查圖片用）
-  const state = { filtersOpen: window.innerWidth > 640, tab: "all", needs: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "" };
+  const state = { filtersOpen: window.innerWidth > 640, tab: "all", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "" };
 
   // 收藏存在瀏覽器裡（只有這台裝置看得到）
   let FAVS = {};
@@ -272,6 +325,9 @@
   function needTags(text) {
     return Object.entries(NEEDS).filter(([, words]) => words.some(w => text.includes(w))).map(([tag]) => tag);
   }
+  function skinTags(text) {
+    return Object.entries(SKIN).filter(([, words]) => words.some(w => text.includes(w))).map(([tag]) => tag);
+  }
 
   // 樂天原始資料 + 你整理的標籤 → 網站用的商品
   function toItem(raw, group) {
@@ -281,6 +337,7 @@
       id: raw.itemCode, group, cat: CAT[group], rank: raw.rank,
       brand: L.brand || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || raw.shopName.replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName, name: L.name || cleanName(raw.itemName), jp: raw.itemName,
       country: L.country || detectCountry(text), tags: needTags(raw.itemName),
+      skin: DETAILS[raw.itemCode] ? (DETAILS[raw.itemCode].skin || []) : (L.skin || skinTags(raw.itemName)),   // 有人工整理就以整理的為準
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
       img: raw.image, url: raw.url, exclude: raw.exclude,
       daysOn: raw.daysOn, bestRank: raw.bestRank
@@ -289,11 +346,12 @@
 
   async function loadData() {
     const get = p => fetch(p, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null);
-    const [latest, month, labels, creators, oy] = await Promise.all([
-      get("data/latest.json"), get("data/month.json"), get("data/labels.json"), get("data/creators.json"), get("data/oliveyoung.json")
+    const [latest, month, labels, creators, oy, details] = await Promise.all([
+      get("data/latest.json"), get("data/month.json"), get("data/labels.json"), get("data/creators.json"), get("data/oliveyoung.json"), get("data/details.json"), get("data/details.json")
     ]);
     if (!latest) throw new Error("no data");
     LABELS = labels || {};
+    DETAILS = details || {};
     for (const [g, items] of Object.entries(latest.groups)) RANK[g] = items.map(r => toItem(r, g)).filter(p => !p.exclude);
     if (month) { MONTH.days = month.days; for (const [g, items] of Object.entries(month.groups)) MONTH.groups[g] = items.map(r => toItem(r, g)).filter(p => !p.exclude); }
     Object.values(RANK).flat().forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
@@ -311,6 +369,7 @@
     if (opts.japanOnly) out = out.filter(p => p.country !== "韓國");   // 韓國商品統一放在 Olive Young 分頁
     if (state.q) { const q = state.q.toLowerCase(); out = out.filter(p => (p.brand + p.name + (p.jp || "")).toLowerCase().includes(q)); }
     if (opts.catFilter && state.cat !== "all") out = out.filter(p => p.cat === state.cat);
+    if (state.skins.size) out = out.filter(p => [...state.skins].some(t => (p.skin || []).includes(t) || (p.skin || []).includes("所有膚質")));
     if (state.needs.size) out = out.filter(p => [...state.needs].every(t => (p.tags || []).includes(t)));
     if (state.price !== "all" && !opts.noPrice) {
       const [lo, hi] = state.price.split("-").map(Number);
@@ -347,22 +406,24 @@
     const shopee = shopeeLink(p);
     const buys = p.isOY
       ? `<a class="buy oy" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">去 Olive Young</a>${shopee ? `<a class="alt" href="${esc(shopee)}" target="_blank" rel="sponsored noopener">在蝦皮找找</a>` : ""}`
-      : `${shopee ? `<a class="buy shopee" href="${esc(shopee)}" target="_blank" rel="sponsored noopener">在台灣蝦皮買</a>` : ""}<a class="${shopee ? "alt" : "buy"}" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">${shopee ? "日本樂天看原價" : "去樂天看看"}</a>`;
+      : `${shopee ? `<a class="buy shopee" href="${esc(shopee)}" target="_blank" rel="sponsored noopener">在蝦皮搜尋</a>` : ""}<a class="${shopee ? "alt" : "buy"}" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">${shopee ? "日本樂天看原價" : "去樂天看看"}</a>`;
     return `
       <article class="card">
         <div class="pic">
-          <span class="tile">${esc(p.brand)}</span>${pic}
+          <button class="picbtn" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹"><span class="tile">${esc(p.brand)}</span>${pic}</button>
           ${rankNo ? `<span class="rank r${rankNo}">${rankNo}</span>` : ""}
           <button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="${fav ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button>
         </div>
         <div class="body">
           <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)} ${esc(p.cat || "")}</span></div>
-          <h3 class="nm" title="${esc(p.jp || p.name)}">${esc(p.name)}</h3>
+          <h3 class="nm"><button class="nmbtn" type="button" data-detail="${esc(p.id)}" title="${esc(p.jp || p.name)}">${esc(p.name)}</button></h3>
+          ${(p.skin || []).length ? `<div class="skin">適合：${p.skin.map(esc).join("、")}</div>` : ""}
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（${p.reviews.toLocaleString()} 則評價）</div>` : ""}
           ${meta}
           ${p.why ? `<div class="why">${esc(p.why)}</div>` : ""}
           ${(p.tags || []).length ? `<div class="tags">${p.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>` : ""}
           ${opts.extra || ""}
+          <button class="more" type="button" data-detail="${esc(p.id)}">看成分・用法・心得 ›</button>
           <div class="bottom">${price}<div class="buys">${buys}</div></div>
         </div>
       </article>`;
@@ -372,13 +433,17 @@
     const tagsHere = [...new Set(list.flatMap(p => p.tags || []))];
     const needChips = Object.keys(NEEDS).filter(t => tagsHere.includes(t) || state.needs.has(t))
       .map(t => `<button class="chip" type="button" data-need="${t}" aria-pressed="${state.needs.has(t)}">${t}</button>`).join("");
+    const skinsHere = [...new Set(list.flatMap(p => p.skin || []))];
+    const skinChips = Object.keys(SKIN).filter(t => t !== "所有膚質" && (skinsHere.includes(t) || skinsHere.includes("所有膚質") || state.skins.has(t)))
+      .map(t => `<button class="chip" type="button" data-skin="${t}" aria-pressed="${state.skins.has(t)}">${t}</button>`).join("");
     const cats = ["all", "彩妝", "保養", "髮品", "日用品", "美容家電"];
     const prices = [["all", "不限"], ["0-2000", "¥2,000 以下"], ["2000-5000", "¥2,000–5,000"], ["5000-10000", "¥5,000–10,000"], ["10000-9999999", "¥10,000 以上"]];
     return `
       <details class="filters" id="filters" ${state.filtersOpen ? "open" : ""}>
-        <summary>篩選與排序${state.needs.size || state.price !== "all" || state.cat !== "all" ? `（已選 ${state.needs.size + (state.price !== "all") + (state.cat !== "all")} 項）` : ""}</summary>
+        <summary>篩選與排序${state.skins.size || state.needs.size || state.price !== "all" || state.cat !== "all" ? `（已選 ${state.skins.size + state.needs.size + (state.price !== "all") + (state.cat !== "all")} 項）` : ""}</summary>
         ${opts.catFilter ? `<div class="frow"><span>分類</span>${cats.map(c => `<button class="chip" type="button" data-cat="${c}" aria-pressed="${state.cat === c}">${c === "all" ? "全部" : c}</button>`).join("")}</div>` : ""}
-        ${needChips ? `<div class="frow"><span>膚質需求</span>${needChips}</div>` : ""}
+        ${skinChips ? `<div class="frow"><span>適合膚質</span>${skinChips}</div>` : ""}
+        ${needChips ? `<div class="frow"><span>在意的問題</span>${needChips}</div>` : ""}
         ${opts.noPrice ? "" : `<div class="frow"><span>價格</span>${prices.map(([v, l]) => `<button class="chip" type="button" data-price="${v}" aria-pressed="${state.price === v}">${l}</button>`).join("")}</div>`}
         ${opts.noSort ? "" : `<div class="frow"><span>排序</span>
           <select id="sort" aria-label="排序方式">
@@ -420,7 +485,7 @@
     }
 
     if (page.source === "oy") {
-      const items = OY.items.map((o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 }));
+      const items = OY.items.map((o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 }));
       const list = applyFilters(items, { noPrice: true });
       html += head(page, OY.sample ? `<span class="src sample">示範資料</span>` : `<span class="src" style="background:var(--kr-soft);color:#1A7A63">Olive Young 暢銷・${esc(OY.updated || "")} 更新</span>`);
       html += OY.code
@@ -464,6 +529,48 @@
     document.getElementById("view").innerHTML = html;
   }
 
+  // ⑤-1 商品詳細介紹：成分、用法、心得都是人工整理（data/details.json），沒有整理的商品只顯示基本資料
+  function detailHtml(p) {
+    const d = DETAILS[p.id] || (p.isOY ? DETAILS[p.id] : null) || {};
+    const list = (arr, tag = "ul") => `<${tag}>${arr.map(x => `<li>${esc(x)}</li>`).join("")}</${tag}>`;
+    const sec = (title, body) => `<div class="dsec"><h3>${title}</h3>${body}</div>`;
+    const pending = text => `<p class="pending">${text}</p>`;
+    const shopee = shopeeLink(p);
+    const skin = DETAILS[p.id] ? (d.skin || []) : (p.skin || []);
+    return `
+      <button class="dclose" type="button" id="detailClose" aria-label="關閉">×</button>
+      <div class="dwrap">
+        <div class="dpic"><span class="tile">${esc(p.brand)}</span>${p.img ? `<img src="${esc(p.img)}" alt="${esc(p.name)}" onerror="this.remove()">` : ""}</div>
+        <div class="dbody">
+          <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)} ${esc(p.cat || "")}</span></div>
+          <h2>${esc(d.name || p.name)}</h2>
+          ${(d.awards || []).map(a => `<span class="award">🏆 ${esc(a)}</span>`).join(" ")}
+          ${d.ratingNote ? `<div class="rate">${esc(d.ratingNote)}</div>` : ""}
+          ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（樂天 ${p.reviews.toLocaleString()} 則評價）</div>` : ""}
+          ${sec("適合膚質", skin.length ? `<p>${skin.map(esc).join("、")}</p>${d.skinNote ? `<p style="color:var(--muted);font-size:13px">${esc(d.skinNote)}</p>` : ""}` : (d.skinNote ? `<p>${esc(d.skinNote)}</p>` : pending("品牌沒有特別標示適合的膚質。")))}
+          ${sec("商品特色", d.features ? list(d.features) : pending("詳細介紹整理中。"))}
+          ${sec("主要成分", d.ingredients ? list(d.ingredients) + `<p style="color:var(--muted);font-size:12px;margin-top:4px">只列出部分主要成分，完整成分以商品包裝標示為準。</p>` : pending("成分整理中，購買前請以商品包裝標示為準。"))}
+          ${sec("使用方法", d.howto ? list(d.howto, "ol") : pending("使用方法整理中，請依商品包裝說明使用。"))}
+          ${sec("大家怎麼說", d.reviews ? list(d.reviews) + `<p style="color:var(--muted);font-size:12px;margin-top:4px">${esc(d.reviewSource || "整理自網路上的使用心得")}，使用感受因人而異。</p>` : pending("心得整理中。"))}
+          <div class="dbuys">
+            ${p.isOY ? `<a class="buy oy" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">去 Olive Young</a>` : ""}
+            ${shopee ? `<a class="buy shopee" href="${esc(shopee)}" target="_blank" rel="sponsored noopener">在蝦皮搜尋</a>` : ""}
+            ${p.isOY ? "" : `<a class="buy" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">日本樂天看原價</a>`}
+            ${p.price ? `<span class="rate">${yen(p.price)}（${twd(p.price)}）</span>` : ""}
+          </div>
+          ${(d.sources || []).length ? `<p class="src" style="font-size:12px;margin:0">資料來源：${d.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、")}</p>` : ""}
+          <p class="legal">本站內容為商品資訊整理，不代表療效，也不能取代專業醫療建議。使用感受因人而異；使用後如有肌膚不適，請停止使用並諮詢醫師。成分、用法以商品包裝標示為準。</p>
+        </div>
+      </div>`;
+  }
+  function openDetail(id) {
+    const p = findItem(id);
+    if (!p) return;
+    document.getElementById("detailBody").innerHTML = detailHtml(p);
+    const dlg = document.getElementById("detail");
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+  }
+
   // =========================================================
   // ⑤ 互動
   // =========================================================
@@ -478,14 +585,14 @@
   function fromHash() {
     const key = location.hash.slice(1);
     state.tab = PAGES.some(p => p.key === key) ? key : "all";
-    state.needs.clear(); state.cat = "all"; state.price = "all";
+    state.needs.clear(); state.skins.clear(); state.cat = "all"; state.price = "all";
     render();
   }
   window.addEventListener("hashchange", () => { fromHash(); window.scrollTo({ top: 0 }); });
 
   function findItem(id) {
     return BY_CODE[id] || Object.values(MONTH.groups).flat().find(p => p.id === id) || FAVS[id] ||
-      OY.items.map(o => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, img: o.img, priceText: o.price, price: 0, rating: 0, reviews: 0 })).find(p => p.id === id);
+      OY.items.map(o => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price, price: 0, rating: 0, reviews: 0 })).find(p => p.id === id);
   }
 
   let toastTimer;
@@ -498,12 +605,15 @@
   document.addEventListener("click", e => {
     const t = e.target.closest("button");
     if (!t) return;
+    if (t.dataset.detail) { openDetail(t.dataset.detail); return; }
+    if (t.id === "detailClose") { document.getElementById("detail").close(); return; }
     if (t.dataset.fav) {
       const id = t.dataset.fav;
       if (FAVS[id]) { delete FAVS[id]; toast("已從我的最愛移除"); }
       else { const p = findItem(id); if (p) { const { creator, ...snap } = p; FAVS[id] = snap; toast("已加入我的最愛 ♥"); } }
       saveFavs(); render(); return;
     }
+    if (t.dataset.skin) { state.skins.has(t.dataset.skin) ? state.skins.delete(t.dataset.skin) : state.skins.add(t.dataset.skin); render(); return; }
     if (t.dataset.need) { state.needs.has(t.dataset.need) ? state.needs.delete(t.dataset.need) : state.needs.add(t.dataset.need); render(); return; }
     if (t.dataset.price) { state.price = t.dataset.price; render(); return; }
     if (t.dataset.cat) { state.cat = t.dataset.cat; render(); return; }
@@ -517,6 +627,7 @@
     }
   });
   document.addEventListener("toggle", e => { if (e.target.id === "filters") state.filtersOpen = e.target.open; }, true);
+  document.getElementById("detail").addEventListener("click", e => { if (e.target.id === "detail") e.target.close(); });
   document.addEventListener("change", e => {
     if (e.target.id === "sort") { state.sort = e.target.value; render(); }
     if (e.target.id === "merge") { state.merge = e.target.checked; render(); }
