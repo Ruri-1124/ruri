@@ -197,7 +197,7 @@
     { key: "hair",     label: "💇‍♀️ 髮品",   title: "髮品排行",   desc: "樂天「護髮・造型」分類", source: "rank", groups: ["hair"] },
     { key: "daily",    label: "🛁 日用品",     title: "日用品排行", desc: "洗衣精・柔軟精，以及泡澡・沐浴用品", source: "rank", groups: ["laundry", "bath"] },
     { key: "device",   label: "✨ 美容家電",   title: "美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"] },
-    { key: "oy",       label: "🇰🇷 Olive Young", title: "Olive Young 韓國人氣", desc: "韓國人自己在買的美妝，直接寄台灣", source: "oy" },
+    { key: "oy",       label: "🇰🇷 韓國", title: "韓國人氣美妝", desc: "韓國人自己在買的美妝，透過 Olive Young Global 直接寄台灣", source: "oy" },
     { key: "creators", label: "👀 創作者推薦", title: "本週創作者都在推什麼", desc: "整理 IG 與小紅書美妝創作者的推薦", source: "creators" },
     { key: "fav",      label: "♥ 我的最愛",    title: "我的最愛", desc: "你收藏的商品會存在這台裝置的瀏覽器裡", source: "fav" }
   ];
@@ -237,7 +237,7 @@
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
   const twd = n => "約 NT$" + Math.round(n * JPY_TO_TWD).toLocaleString("zh-TW");
-  const flag = c => ({ "日本": "🇯🇵", "韓國": "🇰🇷" }[c] || "🌏");
+  const flag = c => ({ "日本": "日本", "韓國": "韓國" }[c] || "其他");
 
   function cleanName(name) {
     return name.replace(/[【［\[≪《＼★◆<＜].*?[】］\]≫》／★◆>＞]/g, " ").replace(/\s+/g, " ").trim().slice(0, 40) || name.slice(0, 40);
@@ -317,7 +317,10 @@
       ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">`
       : "";
     const meta = opts.meta || "";
-    const price = p.price ? `<div class="price">${yen(p.price)}<small>${twd(p.price)}</small></div>` : `<div class="price"><small>${esc(p.priceText || "價格以官網為準")}</small></div>`;
+    const [mainPrice, ...rest] = String(p.priceText || "").split("（");
+    const price = p.price ? `<div class="price">${yen(p.price)}<small>${twd(p.price)}</small></div>`
+      : p.priceText ? `<div class="price">${esc(mainPrice)}<small>${rest.length ? esc("（" + rest.join("（")) : "價格以官網為準"}</small></div>`
+      : `<div class="price"><small>價格以官網為準</small></div>`;
     const buyLabel = p.isOY ? "去 Olive Young" : "去樂天看看";
     return `
       <article class="card">
@@ -391,20 +394,20 @@
     }
 
     if (page.source === "oy") {
-      const items = OY.items.map((o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, priceText: o.price || "價格以官網為準", rank: i + 1, rating: 0, reviews: 0, price: 0 }));
+      const items = OY.items.map((o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 }));
       const list = applyFilters(items, { noPrice: true });
       html += head(page, OY.sample ? `<span class="src sample">示範資料</span>` : `<span class="src" style="background:var(--kr-soft);color:#1A7A63">Olive Young 暢銷・${esc(OY.updated || "")} 更新</span>`);
       html += OY.code
         ? `<div class="oybanner"><b>ruri 專屬優惠代碼</b><span class="code" id="oycode">${esc(OY.code)}</span><button class="copy" type="button" id="copycode">複製代碼</button>${OY.codeUrl ? `<a class="copy" style="text-decoration:none;background:#fff;color:#1A7A63" href="${esc(OY.codeUrl)}" target="_blank" rel="sponsored noopener">逛 Olive Young ↗</a>` : ""}<span>${esc(OY.codeNote)}</span></div>`
         : `<div class="oybanner"><b>Olive Young Global</b><span>韓國最大美妝通路，可直接寄送台灣。專屬優惠代碼即將公布！</span></div>`;
       html += filterBar(items, { noPrice: true, noSort: true });
-      html += `<h2 class="sub">🇰🇷 Olive Young 人氣推薦</h2>`;
+      html += `<h2 class="sub">韓國人氣推薦</h2><p style="color:var(--muted);margin:-4px 0 12px">Olive Young Global 本週暢銷商品</p>`;
       html += list.length ? `<div class="grid">${list.map(p => card(p)).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
       // 日本樂天排行裡的韓國品牌，也集中放在這裡
       const seen = new Set();
       const krRakuten = applyFilters(Object.values(RANK).flat().filter(p => p.country === "韓國" && !seen.has(p.id) && seen.add(p.id)), { noPrice: true });
       if (krRakuten.length) {
-        html += `<h2 class="sub">🇯🇵 在日本也爆紅的韓系商品</h2><p style="color:var(--muted);margin:-4px 0 12px">這些韓國品牌正在日本樂天排行榜上，連結會到日本樂天</p>`;
+        html += `<h2 class="sub">在日本也爆紅的韓系商品</h2><p style="color:var(--muted);margin:-4px 0 12px">這些韓國品牌正在日本樂天排行榜上，連結會到日本樂天</p>`;
         html += `<div class="grid">${krRakuten.map(p => card(p, { meta: `<div class="meta">樂天${esc(p.cat)}第 ${p.rank} 名</div>` })).join("")}</div>`;
       }
       html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">ruri 是 Olive Young Global 的聯盟夥伴，並非 Olive Young 官方網站。</p>`;
@@ -456,7 +459,7 @@
 
   function findItem(id) {
     return BY_CODE[id] || Object.values(MONTH.groups).flat().find(p => p.id === id) || FAVS[id] ||
-      OY.items.map(o => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, priceText: o.price, price: 0, rating: 0, reviews: 0 })).find(p => p.id === id);
+      OY.items.map(o => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, cat: o.cat, country: "韓國", tags: o.tags, why: o.why, url: o.url, img: o.img, priceText: o.price, price: 0, rating: 0, reviews: 0 })).find(p => p.id === id);
   }
 
   let toastTimer;

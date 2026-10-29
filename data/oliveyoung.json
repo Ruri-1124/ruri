@@ -1,5 +1,5 @@
 {
- "_說明": "Olive Young 韓國人氣商品（每週從聯盟後台 Creating Content 的暢銷書區整理）。url 是聯盟後台「獲取連結」產生的專屬連結；code 填你的獎勵代碼。",
+ "_說明": "Olive Young 韓國人氣商品（每週從聯盟後台 Creating Content 的暢銷書區整理）。url 是聯盟後台「獲取連結」產生的專屬連結；code 填你的獎勵代碼。 img 是商品圖片網址（在圖片上按右鍵→複製圖片網址）。",
  "sample": false,
  "updated": "2026-10-29",
  "code": "RURI112424",
@@ -14,7 +14,8 @@
     "保濕"
    ],
    "why": "Olive Young 暢銷第 1 名的水凝膠面膜",
-   "url": "https://global.oliveyoung.com/if/rd?su=BU09YPDH"
+   "url": "https://global.oliveyoung.com/if/rd?su=BU09YPDH",
+   "img": "https://cdn-image.oliveyoung.com/catalog/product/GA230518544/thumbnail/6548ea5afa914b9bba4265dfca10097f.jpg?RS=810x810&AR=0"
   },
   {
    "brand": "Dr.Althea",
@@ -26,7 +27,8 @@
     "痘痘"
    ],
    "why": "主打舒緩泛紅、痘痘肌的人氣面霜",
-   "url": "https://global.oliveyoung.com/if/rd?su=2VVJS0DN"
+   "url": "https://global.oliveyoung.com/if/rd?su=2VVJS0DN",
+   "img": "https://cdn-image.oliveyoung.com/prdtImg/1976/e17ecc0c-14f3-44b2-a57c-02b825426fff.jpg?RS=810x810&AR=0"
   },
   {
    "brand": "SKIN1004",
@@ -38,7 +40,8 @@
     "敏感肌"
    ],
    "why": "精華質地的防曬，大容量套裝",
-   "url": "https://global.oliveyoung.com/if/rd?su=3NO6M83H"
+   "url": "https://global.oliveyoung.com/if/rd?su=3NO6M83H",
+   "img": "https://cdn-image.oliveyoung.com/prdtImg/1373/bc314e4c-ada1-4ca4-81a3-4568721f9c14.png?RS=810x810&AR=0"
   },
   {
    "brand": "BIOHEAL BOH",
@@ -49,7 +52,8 @@
     "抗老"
    ],
    "why": "附刮痧板的緊緻霜，也在日本樂天熱賣中",
-   "url": "https://global.oliveyoung.com/if/rd?su=QX3IYXLT"
+   "url": "https://global.oliveyoung.com/if/rd?su=QX3IYXLT",
+   "img": "https://cdn-image.oliveyoung.com/catalog/product/GA260338983/thumbnail/1e07e2cf13b544c09fe7038c9cac46a7.jpg?RS=810x810&AR=0"
   },
   {
    "brand": "MEDIHEAL",
@@ -60,7 +64,8 @@
     "保濕"
    ],
    "why": "連續 15 年銷售第一的片狀面膜，現在半價",
-   "url": "https://global.oliveyoung.com/if/rd?su=G1H2LJM8"
+   "url": "https://global.oliveyoung.com/if/rd?su=G1H2LJM8",
+   "img": "https://cdn-image.oliveyoung.com/prdtImg/1219/4d15e768-500a-4a02-a1a4-ddd8bab694e7.png?RS=810x810&AR=0"
   }
  ],
  "codeUrl": "https://global.oliveyoung.com/if/rd?su=HXU9F3VU"
