@@ -2,13 +2,66 @@
  "_說明": "Olive Young 韓國人氣商品（每週從聯盟後台 Creating Content 的暢銷書區整理）。url 是聯盟後台「獲取連結」產生的專屬連結；code 填你的獎勵代碼。",
  "sample": false,
  "updated": "2026-10-29",
- "code": "",
+ "code": "RURI112424",
  "codeNote": "透過本站商品連結購買會自動套用，或結帳時輸入代碼，享 5% 折扣（需登入 Olive Young Global 會員）",
  "items": [
-  { "brand": "BIODANCE", "name": "深層滋養面膜 16 片（3 種選擇）", "cat": "保養", "price": "NT$1,880（原價 NT$2,315）", "tags": ["保濕"], "why": "Olive Young 暢銷第 1 名的水凝膠面膜", "url": "https://global.oliveyoung.com/if/rd?su=BU09YPDH" },
-  { "brand": "Dr.Althea", "name": "345 舒緩霜 50ml 套裝（+10ml×2＋軟管擠壓器）", "cat": "保養", "price": "NT$744（原價 NT$881）", "tags": ["敏感肌", "痘痘"], "why": "主打舒緩泛紅、痘痘肌的人氣面霜", "url": "https://global.oliveyoung.com/if/rd?su=2VVJS0DN" },
-  { "brand": "SKIN1004", "name": "馬達加斯加積雪草玻尿酸防曬精華 50ml 套裝", "cat": "保養", "price": "NT$776（原價 NT$1,011）", "tags": ["防曬", "敏感肌"], "why": "精華質地的防曬，大容量套裝", "url": "https://global.oliveyoung.com/if/rd?su=3NO6M83H" },
-  { "brand": "BIOHEAL BOH", "name": "Probioderm 3D 拉提緊緻霜 50ml（4 種選擇）", "cat": "保養", "price": "NT$757（原價 NT$1,011）", "tags": ["抗老"], "why": "附刮痧板的緊緻霜，也在日本樂天熱賣中", "url": "https://global.oliveyoung.com/if/rd?su=QX3IYXLT" },
-  { "brand": "MEDIHEAL", "name": "基礎面膜 10 片裝（+1 片）（OY 獨家）", "cat": "保養", "price": "NT$326（原價 NT$652）", "tags": ["保濕"], "why": "連續 15 年銷售第一的片狀面膜，現在半價", "url": "https://global.oliveyoung.com/if/rd?su=G1H2LJM8" }
- ]
+  {
+   "brand": "BIODANCE",
+   "name": "深層滋養面膜 16 片（3 種選擇）",
+   "cat": "保養",
+   "price": "NT$1,880（原價 NT$2,315）",
+   "tags": [
+    "保濕"
+   ],
+   "why": "Olive Young 暢銷第 1 名的水凝膠面膜",
+   "url": "https://global.oliveyoung.com/if/rd?su=BU09YPDH"
+  },
+  {
+   "brand": "Dr.Althea",
+   "name": "345 舒緩霜 50ml 套裝（+10ml×2＋軟管擠壓器）",
+   "cat": "保養",
+   "price": "NT$744（原價 NT$881）",
+   "tags": [
+    "敏感肌",
+    "痘痘"
+   ],
+   "why": "主打舒緩泛紅、痘痘肌的人氣面霜",
+   "url": "https://global.oliveyoung.com/if/rd?su=2VVJS0DN"
+  },
+  {
+   "brand": "SKIN1004",
+   "name": "馬達加斯加積雪草玻尿酸防曬精華 50ml 套裝",
+   "cat": "保養",
+   "price": "NT$776（原價 NT$1,011）",
+   "tags": [
+    "防曬",
+    "敏感肌"
+   ],
+   "why": "精華質地的防曬，大容量套裝",
+   "url": "https://global.oliveyoung.com/if/rd?su=3NO6M83H"
+  },
+  {
+   "brand": "BIOHEAL BOH",
+   "name": "Probioderm 3D 拉提緊緻霜 50ml（4 種選擇）",
+   "cat": "保養",
+   "price": "NT$757（原價 NT$1,011）",
+   "tags": [
+    "抗老"
+   ],
+   "why": "附刮痧板的緊緻霜，也在日本樂天熱賣中",
+   "url": "https://global.oliveyoung.com/if/rd?su=QX3IYXLT"
+  },
+  {
+   "brand": "MEDIHEAL",
+   "name": "基礎面膜 10 片裝（+1 片）（OY 獨家）",
+   "cat": "保養",
+   "price": "NT$326（原價 NT$652）",
+   "tags": [
+    "保濕"
+   ],
+   "why": "連續 15 年銷售第一的片狀面膜，現在半價",
+   "url": "https://global.oliveyoung.com/if/rd?su=G1H2LJM8"
+  }
+ ],
+ "codeUrl": "https://global.oliveyoung.com/if/rd?su=HXU9F3VU"
 }
