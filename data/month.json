@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T18:27+08:00",
+ "updated": "2026-10-30T18:58+08:00",
  "days": 3,
  "groups": {
   "beauty": [
@@ -2215,6 +2215,7 @@
     "shopCode": "shopjapan",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/shopjapan/cabinet/rah/main_2606.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ppmmo.nrqgi1d1.g00ppmmo.nrqgjfda/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshopjapan%2Frah20set13860%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "健康家電",
     "daysOn": 2,
     "bestRank": 22,
     "avgRank": 24.5
