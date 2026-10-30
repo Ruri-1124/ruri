@@ -1,0 +1,26 @@
+{
+ "_說明": "台灣樂天「樂分紅」品牌連結。每個連結都是在樂分紅後台用「自訂推廣連結」官方產生的（追蹤標籤 ruri-web），不可以自己修改網址。match 是用來判斷商品品牌的字，商品的品牌名稱包含其中一個字，就會用這條連結。",
+ "updated": "2026-10-30",
+ "brands": [
+  { "name": "ReFa", "link": "https://r10.to/hYOsmi", "match": ["ReFa", "リファ"] },
+  { "name": "LOA", "link": "https://r10.to/h5R6oq", "match": ["LOA", "ロアザオイル"] },
+  { "name": "艾天然 Attenir", "link": "https://r10.to/hP9Zhe", "match": ["Attenir", "アテニア"] },
+  { "name": "SK-II", "link": "https://r10.to/h57FXq", "match": ["SK-II", "SK-2"] },
+  { "name": "SALONIA", "link": "https://r10.to/h5Qp6v", "match": ["SALONIA", "サロニア"] },
+  { "name": "KINUJO", "link": "https://r10.to/h8c1is", "match": ["KINUJO", "絹女", "キヌージョ"] },
+  { "name": "資生堂", "link": "https://r10.to/h5tk4Q", "match": ["SHISEIDO"] },
+  { "name": "黛珂", "link": "https://r10.to/h5vSXT", "match": ["DECORTE", "デコルテ"] },
+  { "name": "植村秀", "link": "https://r10.to/hYuZaD", "match": ["shu uemura", "シュウ ウエムラ", "シュウウエムラ"] },
+  { "name": "怡麗絲爾", "link": "https://r10.to/hP7e8k", "match": ["ELIXIR", "エリクシール"] },
+  { "name": "TAKAMI", "link": "https://r10.to/hPAmyh", "match": ["TAKAMI", "タカミ"] },
+  { "name": "心機", "link": "https://r10.to/hg4cjm", "match": ["MAQuillAGE", "マキアージュ"] },
+  { "name": "卡詩", "link": "https://r10.to/h5Tksn", "match": ["KÉRASTASE", "KERASTASE", "ケラスターゼ"] },
+  { "name": "一匙靈", "link": "https://r10.to/hkmety", "match": ["Attack", "アタック"] },
+  { "name": "Ariel", "link": "https://r10.to/hRSWvq", "match": ["Ariel", "アリエール"] },
+  { "name": "CANMAKE", "link": "https://r10.to/he2W6w", "match": ["CANMAKE", "キャンメイク"] },
+  { "name": "倩碧", "link": "https://r10.to/hgwzvU", "match": ["CLINIQUE", "クリニーク"] },
+  { "name": "理膚寶水", "link": "https://r10.to/hPb2uB", "match": ["ROCHE-POSAY", "ラ ロッシュ ポゼ", "ラロッシュポゼ"] },
+  { "name": "Anua", "link": "https://r10.to/hkbq56", "match": ["Anua", "アヌア"] },
+  { "name": "CREATE ION", "link": "https://r10.to/hg8mGz", "match": ["CREATE ION", "クレイツ"] }
+ ]
+}

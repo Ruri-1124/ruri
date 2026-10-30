@@ -360,7 +360,7 @@
   const oyItem = (o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, desc: "", cat: o.cat, country: "韓國", tags: o.tags || [], skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 });
 
   // 達人推薦的商品：圖片、價格、連結來自自動更新程式在樂天搜尋到的結果（找不到就沒有圖片）
-  let EXPERTS = [], YT = { videos: [] };
+  let EXPERTS = [], YT = { videos: [] }, TWR = { brands: [] };
   const exItem = (e, found) => ({
     id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
     tags: [], skin: [], expert: e, img: found ? found.image : "", url: found ? found.url : "",
@@ -375,6 +375,7 @@
       get("data/experts.json"), get("data/experts_items.json")
     ]);
     YT = await get("data/youtube.json") || YT;
+    TWR = await get("data/tw_rakuten.json") || TWR;
     const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
@@ -436,7 +437,15 @@
     const origin = "https://shopee.tw/search?keyword=" + encodeURIComponent(kw);
     return "https://s.shopee.tw/an_redir?origin_link=" + encodeURIComponent(origin) + "&affiliate_id=" + SHOPEE_AFFILIATE_ID + "&sub_id=ruri-web";
   }
+  // 台灣樂天：有樂分紅官方品牌連結就用它（有分紅），沒有就用一般搜尋
+  function twBrand(p) {
+    const b = ((LABELS[p.id] || {}).brand || p.brand || "").toLowerCase();
+    return TWR.brands.find(x => x.match.some(m => b.includes(m.toLowerCase())));
+  }
   function twRakutenLink(p) {
+    if ((LABELS[p.id] || {}).noTW) return "";
+    const tb = twBrand(p);
+    if (tb) return tb.link;
     const kw = searchKeyword(p);
     return kw ? "https://www.rakuten.com.tw/search/" + encodeURIComponent(kw) + "/" : "";
   }
@@ -513,7 +522,7 @@
     const main = p.isOY ? a("buy oy", p.url, "去 Olive Young") : (shopee ? a("buy shopee", shopee, "在蝦皮搜尋") : (p.url ? a("buy", p.url, "去日本樂天看看") : ""));
     const alts = [
       p.isOY && shopee ? ["在蝦皮找找", shopee] : null,
-      tw ? ["台灣樂天找找", tw] : null,
+      tw ? [twBrand(p) ? "台灣樂天找 " + twBrand(p).name : "台灣樂天找找", tw] : null,
       !p.isOY && shopee && p.url ? ["日本樂天看原價", p.url] : null
     ].filter(Boolean);
     if (inline) return main + alts.map(([t, h]) => a("buy ghost", h, t)).join("");
