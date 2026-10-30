@@ -1,0 +1,26 @@
+{
+ "_說明": "通路王 DOKODEMO（日本直送）品牌連結。每個連結都是在通路王後台「自訂推廣頁」官方產生的（成效標籤 ruriweb），不可以自己修改網址。match 是用來判斷商品品牌的字。電器、韓國商品、已擋掉的商品、台灣不能賣的商品不會顯示這個按鈕。",
+ "updated": "2026-10-31",
+ "brands": [
+  { "name": "CANMAKE", "link": "https://pinkrose.info/3Vq73?uid1=ruriweb", "match": ["CANMAKE", "キャンメイク"] },
+  { "name": "CEZANNE", "link": "https://buyforfun.biz/3Vq78?uid1=ruriweb", "match": ["CEZANNE", "セザンヌ"] },
+  { "name": "心機", "link": "https://product.mchannles.com/3Vq7E?uid1=ruriweb", "match": ["MAQuillAGE", "マキアージュ"] },
+  { "name": "MAJOLICA MAJORCA", "link": "https://www1.oeya.com.tw/3Vq7G?uid1=ruriweb", "match": ["MAJOLICA", "マジョリカ"] },
+  { "name": "LUNASOL", "link": "https://iorange.biz/3Vq7L?uid1=ruriweb", "match": ["LUNASOL", "ルナソル"] },
+  { "name": "SUQQU", "link": "https://buyforfun.biz/3VqJt?uid1=ruriweb", "match": ["SUQQU", "スック"] },
+  { "name": "RMK", "link": "https://igrape.net/3VqJz?uid1=ruriweb", "match": ["RMK"] },
+  { "name": "SK-II", "link": "https://igrape.net/3VqK1?uid1=ruriweb", "match": ["SK-II", "SK-2"] },
+  { "name": "資生堂", "link": "https://iorange.biz/3VqK6?uid1=ruriweb", "match": ["SHISEIDO"] },
+  { "name": "怡麗絲爾", "link": "https://ibanana.biz/3VqK9?uid1=ruriweb", "match": ["ELIXIR", "エリクシール"] },
+  { "name": "黛珂", "link": "https://iorange.biz/3VqKI?uid1=ruriweb", "match": ["DECORTE", "デコルテ"] },
+  { "name": "艾天然", "link": "https://dreamstore.info/3VqKP?uid1=ruriweb", "match": ["Attenir", "アテニア"] },
+  { "name": "FANCL", "link": "https://www1.gamepark.com.tw/3VqKR?uid1=ruriweb", "match": ["FANCL", "ファンケル"] },
+  { "name": "ORBIS", "link": "https://easymall.co/3VqLI?uid1=ruriweb", "match": ["ORBIS", "オルビス"] },
+  { "name": "珂潤", "link": "https://shopsquare.co/3VqR2?uid1=ruriweb", "match": ["Curel", "キュレル"] },
+  { "name": "TAKAMI", "link": "https://easyfun.biz/3VqR4?uid1=ruriweb", "match": ["TAKAMI", "タカミ"] },
+  { "name": "IPSA", "link": "https://greenmall.info/3VqR8?uid1=ruriweb", "match": ["IPSA", "イプサ"] },
+  { "name": "YOLU", "link": "https://greenmall.info/3VqRA?uid1=ruriweb", "match": ["YOLU"] },
+  { "name": "BOTANIST", "link": "https://greenmall.info/3VqRF?uid1=ruriweb", "match": ["BOTANIST", "ボタニスト"] },
+  { "name": "一匙靈", "link": "https://easyfun.biz/3VqRI?uid1=ruriweb", "match": ["Attack", "アタック"] }
+ ]
+}

@@ -238,7 +238,7 @@
     排行資料來自日本樂天市場，每天台灣時間早上 6 點左右自動更新；上榜過的商品會保留在資料庫裡。價格為日本售價，台幣以 1 日圓 ≈ 0.21 台幣估算。
     膚質與需求標籤由商品說明的關鍵字自動判斷，僅供參考。「在蝦皮搜尋」、「台灣樂天找找」會帶你到該平台的搜尋結果，台灣不一定有販售，請確認賣家與商品內容後再購買。
     本站含蝦皮、樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。本站內容為商品資訊整理，不代表療效。
-    <br><br><b>免責聲明</b>：本站只整理公開的排行與商品資訊，不販售任何商品，也不是任何品牌或購物平台的官方網站。商品的販售、運送、退換貨與售後服務由各購物平台與賣家負責。購買前請確認商品的規格、電壓、成分與適用對象，使用時請依包裝標示與說明書；有疾病、懷孕、過敏體質或其他疑慮時，請先諮詢醫師或專業人員。因購買或使用第三方商品所生的問題，請洽販售平台、賣家或品牌處理。
+    <br><br><b>免責聲明</b>：本站只整理公開的排行與商品資訊，不販售任何商品，也不是任何品牌或購物平台的官方網站。商品的販售、運送、退換貨與售後服務由各購物平台與賣家負責。DOKODEMO 等日本直送商品屬於海外購物，需依台灣進口與關稅相關規定，也可能無法在台灣退換貨。購買前請確認商品的規格、電壓、成分與適用對象，使用時請依包裝標示與說明書；有疾病、懷孕、過敏體質或其他疑慮時，請先諮詢醫師或專業人員。因購買或使用第三方商品所生的問題，請洽販售平台、賣家或品牌處理。
   </div>
 </footer>
 <div class="shade" id="shade" hidden></div>
@@ -361,7 +361,7 @@
   const oyItem = (o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, desc: "", cat: o.cat, country: "韓國", tags: o.tags || [], skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 });
 
   // 達人推薦的商品：圖片、價格、連結來自自動更新程式在樂天搜尋到的結果（找不到就沒有圖片）
-  let EXPERTS = [], YT = { videos: [] }, TWR = { brands: [] };
+  let EXPERTS = [], YT = { videos: [] }, TWR = { brands: [] }, DKD = { brands: [] };
   const exItem = (e, found) => ({
     id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
     tags: [], skin: [], expert: e, img: found ? found.image : "", url: found ? found.url : "",
@@ -377,6 +377,7 @@
     ]);
     YT = await get("data/youtube.json") || YT;
     TWR = await get("data/tw_rakuten.json") || TWR;
+    DKD = await get("data/dokodemo.json") || DKD;
     const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
@@ -449,6 +450,16 @@
     if (tb) return tb.link;
     const kw = searchKeyword(p);
     return kw ? "https://www.rakuten.com.tw/search/" + encodeURIComponent(kw) + "/" : "";
+  }
+
+  // DOKODEMO 日本直送（通路王官方連結）：只給日本商品；電器（日本版 100V）不放
+  function dkdBrand(p) {
+    const L = LABELS[p.id] || {};
+    if (L.noTW || L.hide || p.exclude || p.isOY || p.country === "韓國") return null;
+    const d = getDetail(p.id) || {};
+    if (p.group === "device" || d.type === "device") return null;
+    const b = (L.brand || p.brand || "").toLowerCase();
+    return DKD.brands.find(x => x.match.some(m => b.includes(m.toLowerCase()))) || null;
   }
 
   // =========================================================
@@ -524,6 +535,7 @@
     const alts = [
       p.isOY && shopee ? ["在蝦皮找找", shopee] : null,
       tw ? [twBrand(p) ? "台灣樂天找 " + twBrand(p).name : "台灣樂天找找", tw] : null,
+      dkdBrand(p) ? ["DOKODEMO 日本直送", dkdBrand(p).link] : null,
       !p.isOY && shopee && p.url ? ["日本樂天看原價", p.url] : null
     ].filter(Boolean);
     if (inline) return main + alts.map(([t, h]) => a("buy ghost", h, t)).join("");
