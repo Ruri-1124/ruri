@@ -360,7 +360,7 @@
   const oyItem = (o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, desc: "", cat: o.cat, country: "韓國", tags: o.tags || [], skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 });
 
   // 達人推薦的商品：圖片、價格、連結來自自動更新程式在樂天搜尋到的結果（找不到就沒有圖片）
-  let EXPERTS = [];
+  let EXPERTS = [], YT = { videos: [] };
   const exItem = (e, found) => ({
     id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
     tags: [], skin: [], expert: e, img: found ? found.image : "", url: found ? found.url : "",
@@ -374,6 +374,7 @@
       get("data/oliveyoung.json"), get("data/details.json"), get("data/products.json"),
       get("data/experts.json"), get("data/experts_items.json")
     ]);
+    YT = await get("data/youtube.json") || YT;
     EXPERTS = ((experts && experts.items) || []).map(e => exItem(e, (exFound || {})[e.id]));
     EXPERTS.updated = experts ? experts.updated : "";
     if (!latest) throw new Error("no data");
@@ -697,6 +698,18 @@
         extra: `<div class="voices"><div class="voice"><b>${esc(p.expert.role)} ${esc(p.expert.who)}</b>：${esc(p.expert.say)}</div></div>
                 <div class="rate">出處：${p.expert.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" style="color:var(--muted)">${esc(s.name)}</a>`).join("、")}</div>`
       })).join("")}</div>` : `<div class="empty" style="margin-top:12px">沒有符合條件的推薦，換個條件看看。</div>`;
+      if (ex.role === "all" || ex.role === "YouTuber") {
+        const vids = YT.videos.filter(v => (ex.cat === "all" || v.cat === ex.cat) && (ex.country === "all" || (ex.country === "韓國" ? v.country === "韓國" : v.country !== "韓國")));
+        if (vids.length) {
+          html += `<h2 class="sub">▶ YouTube 最近 30 天熱門美妝影片</h2><p style="color:var(--muted);margin:-4px 0 12px">每天自動整理，列出影片說明欄提到的商品</p>`;
+          html += `<div class="grid">${vids.map(v => `<article class="card"><a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener" style="display:block;aspect-ratio:16/9;background:#000"><img src="${esc(v.thumb)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></a>
+            <div class="body"><div class="brand"><span>${esc(v.channel)}</span><span class="flag">${esc(v.country)}・${esc(v.cat)}</span></div>
+            <h3 class="nm"><a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${esc(v.title)}</a></h3>
+            <div class="rate">${esc(v.date)}・${Number(v.views).toLocaleString()} 次觀看</div>
+            <div class="voices">${v.mentions.slice(0, 6).map(m => `<div class="voice">${esc(m)}</div>`).join("")}</div></div></article>`).join("")}</div>`;
+          html += `<p style="color:var(--muted);font-size:12px;margin-top:8px">影片清單由 YouTube 自動搜尋產生，說明欄內容可能包含業配或分潤商品，僅供參考。</p>`;
+        }
+      }
       html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">推薦內容整理自公開的雜誌、網站文章，用本站自己的話摘要，並附上原文連結；商品圖片與價格來自日本樂天，可能與推薦的色號不同。</p>`;
     }
 

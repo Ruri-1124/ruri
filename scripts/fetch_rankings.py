@@ -29,6 +29,7 @@ APP_ID = os.environ.get("RAKUTEN_APP_ID", "")
 ACCESS_KEY = os.environ.get("RAKUTEN_ACCESS_KEY", "")
 AFFILIATE_ID = os.environ.get("RAKUTEN_AFFILIATE_ID", "")
 SITE_URL = os.environ.get("SITE_URL", "")  # 你的網站網址，要跟樂天「允許的網站」一致
+YOUTUBE_KEY = os.environ.get("YOUTUBE_API_KEY", "")  # YouTube Data API 金鑰（沒有設定就跳過 YouTube）
 
 
 def call_api(endpoint, params):
@@ -142,6 +143,62 @@ def main():
     build_archive(history)
     # ⑥ 達人推薦的商品：去樂天搜尋，抓圖片、價格和分潤連結
     build_experts()
+    # ⑦ YouTube：最近 30 天的熱門美妝影片，以及說明欄提到的商品
+    build_youtube()
+
+
+def youtube_get(path, params):
+    url = "https://www.googleapis.com/youtube/v3/" + path + "?" + urllib.parse.urlencode({**params, "key": YOUTUBE_KEY})
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "ruri-bot"}), timeout=30) as r:
+        return json.load(r)
+
+
+def build_youtube():
+    """用 config/youtube.json 的關鍵字搜尋影片，從說明欄找出提到品牌的那幾行，存成 data/youtube.json"""
+    cfg_path = ROOT / "config" / "youtube.json"
+    if not YOUTUBE_KEY or not cfg_path.exists():
+        print("（沒有設定 YOUTUBE_API_KEY，略過 YouTube）")
+        return
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    brands = sorted(cfg.get("brands", []), key=len, reverse=True)
+    since = (datetime.now(timezone.utc) - timedelta(days=cfg.get("days", 30))).strftime("%Y-%m-%dT%H:%M:%SZ")
+    videos = {}
+    try:
+        for q in cfg["queries"]:
+            res = youtube_get("search", {"part": "snippet", "q": q["q"], "type": "video", "order": "relevance",
+                                         "publishedAfter": since, "maxResults": cfg.get("perQuery", 15),
+                                         "relevanceLanguage": q.get("lang", "ja"), "regionCode": q.get("region", "JP")})
+            for it in res.get("items", []):
+                vid = it["id"]["videoId"]
+                videos.setdefault(vid, {"country": q["country"], "cat": q["cat"]})
+        ids = list(videos)
+        out = []
+        for i in range(0, len(ids), 50):
+            res = youtube_get("videos", {"part": "snippet,statistics", "id": ",".join(ids[i:i + 50])})
+            for v in res.get("items", []):
+                sn, st = v["snippet"], v.get("statistics", {})
+                views = int(st.get("viewCount", 0))
+                if views < cfg.get("minViews", 0):
+                    continue
+                mentions = []
+                for line in sn.get("description", "").splitlines():
+                    line = line.strip(" ・-•*▶︎▷►✔︎✅☑︎◎○●□■◆◇☆★♡♥")
+                    if 4 <= len(line) <= 90 and "http" not in line and any(b.lower() in line.lower() for b in brands):
+                        if line not in mentions:
+                            mentions.append(line)
+                if not mentions:
+                    continue
+                thumbs = sn.get("thumbnails", {})
+                out.append({"id": v["id"], "title": sn["title"], "channel": sn["channelTitle"],
+                            "date": sn["publishedAt"][:10], "views": views,
+                            "thumb": (thumbs.get("medium") or thumbs.get("default") or {}).get("url", ""),
+                            "mentions": mentions[:12], **videos[v["id"]]})
+        out.sort(key=lambda x: -x["views"])
+        data = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"), "videos": out[:40]}
+        (ROOT / "data" / "youtube.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"已更新 YouTube（{len(out)} 支影片有提到商品）")
+    except Exception as e:  # YouTube 出錯不影響其他資料
+        print(f"✗ YouTube 更新失敗：{e}")
 
 
 def build_experts():

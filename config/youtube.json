@@ -1,0 +1,27 @@
+{
+ "_說明": "YouTube 自動搜尋設定。每天用這些關鍵字找最近 30 天的美妝影片，只留觀看數超過 minViews 的影片，再從影片說明欄找出提到的商品。brands 是用來判斷說明欄哪一行是商品的品牌清單，可以自己加。",
+ "days": 30,
+ "minViews": 20000,
+ "perQuery": 15,
+ "queries": [
+  { "q": "購入品 コスメ", "country": "日本", "cat": "彩妝", "lang": "ja", "region": "JP" },
+  { "q": "ベストコスメ 2026", "country": "日本", "cat": "彩妝", "lang": "ja", "region": "JP" },
+  { "q": "スキンケア 愛用品", "country": "日本", "cat": "保養", "lang": "ja", "region": "JP" },
+  { "q": "올리브영 추천템", "country": "韓國", "cat": "彩妝", "lang": "ko", "region": "KR" },
+  { "q": "스킨케어 추천", "country": "韓國", "cat": "保養", "lang": "ko", "region": "KR" },
+  { "q": "메이크업 아티스트 추천 화장품", "country": "韓國", "cat": "彩妝", "lang": "ko", "region": "KR" }
+ ],
+ "brands": [
+  "CANMAKE", "キャンメイク", "CEZANNE", "セザンヌ", "KATE", "ケイト", "excel", "エクセル", "MAQuillAGE", "マキアージュ", "LUNASOL", "ルナソル",
+  "SUQQU", "スック", "ADDICTION", "アディクション", "RMK", "THREE", "コスメデコルテ", "DECORTE", "CLE DE PEAU", "クレ・ド・ポー", "SHISEIDO", "資生堂",
+  "SK-II", "IPSA", "イプサ", "ELIXIR", "エリクシール", "Obagi", "オバジ", "TAKAMI", "タカミ", "ORBIS", "オルビス", "FANCL", "ファンケル", "Curel", "キュレル",
+  "ETVOS", "エトヴォス", "Elégance", "エレガンス", "Clue&be", "dejavu", "デジャヴュ", "Fujiko", "フジコ", "MAJOLICA", "マジョリカ", "b idol", "Dolly Wink",
+  "NARS", "ナーズ", "Dior", "ディオール", "CHANEL", "シャネル", "YSL", "イヴ・サンローラン", "LANCOME", "ランコム", "M・A・C", "MAC", "Bobbi Brown", "ボビイ ブラウン",
+  "Laura Mercier", "ローラ メルシエ", "PRADA", "プラダ", "Guerlain", "ゲラン", "Estée Lauder", "エスティ ローダー", "CLINIQUE", "クリニーク", "La Roche-Posay", "ラ ロッシュ ポゼ",
+  "rom&nd", "ロムアンド", "CLIO", "クリオ", "peripera", "ペリペラ", "hince", "ヒンス", "3CE", "dasique", "デイジーク", "AMUSE", "アミューズ", "fwee", "TIRTIR", "ティルティル",
+  "espoir", "エスポア", "colorgram", "too cool for school", "LANEIGE", "ラネージュ", "Sulwhasoo", "雪花秀", "innisfree", "イニスフリー", "COSRX", "Anua", "アヌア",
+  "Torriden", "トリデン", "numbuzin", "ナンバーズイン", "ma:nyo", "魔女工場", "MEDIHEAL", "メディヒール", "d'Alba", "ダルバ", "SKIN1004", "ROUND LAB", "ラウンドラボ",
+  "AESTURA", "エストラ", "Dr.Jart", "BIODANCE", "バイオダンス", "VT", "medicube", "メディキューブ", "Dr.Althea", "BIOHEAL BOH", "Abib", "アビブ", "mixsoon",
+  "롬앤", "클리오", "페리페라", "힌스", "에스쁘아", "컬러그램", "라네즈", "설화수", "이니스프리", "코스알엑스", "아누아", "토리든", "넘버즈인", "마녀공장", "메디힐", "달바", "라운드랩", "에스트라", "바이오던스", "메디큐브", "닥터지", "아비브", "웨이크메이크", "데이지크", "어뮤즈"
+ ]
+}
