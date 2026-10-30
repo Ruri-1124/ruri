@@ -223,10 +223,15 @@ def build_experts():
                 if all(m.lower() in item["itemName"].lower() for m in must):
                     hit = item
                     break
+            print(f"  {it['id']}：樂天搜尋到 {len(data.get('Items', []))} 筆，{'有' if hit else '沒有'}符合的商品")
             if hit:
                 found[it["id"]] = {k: hit[k] for k in ("itemCode", "itemName", "price", "rating", "reviews", "shopName", "image", "url")}
             elif it["id"] in old:
                 found[it["id"]] = old[it["id"]]   # 這次找不到就沿用上次的
+        except urllib.error.HTTPError as e:
+            print(f"✗ 達人推薦搜尋失敗（{it['id']}）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:300]}")
+            if it["id"] in old:
+                found[it["id"]] = old[it["id"]]
         except Exception as e:
             print(f"✗ 達人推薦搜尋失敗（{it['id']}）：{e}")
             if it["id"] in old:

@@ -375,8 +375,7 @@
       get("data/experts.json"), get("data/experts_items.json")
     ]);
     YT = await get("data/youtube.json") || YT;
-    EXPERTS = ((experts && experts.items) || []).map(e => exItem(e, (exFound || {})[e.id]));
-    EXPERTS.updated = experts ? experts.updated : "";
+    const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
     for (const [g, items] of Object.entries(latest.groups)) RANK[g] = items.map(r => toItem(r, g)).filter(p => !p.exclude);
@@ -394,6 +393,17 @@
     for (const id of Object.keys(FAVS)) { const now = BY_CODE[id] || ARCHIVE[id]; if (now) FAVS[id] = stripFav(now); }
     saveFavs();
     CREATORS = creators || CREATORS; OY = oy || OY;
+    // 達人推薦：先用每天樂天搜尋的結果；沒有的話，看看這個商品是不是曾經上過排行（就能用排行的圖片和連結）
+    const pool = Object.values(ARCHIVE).concat(Object.values(BY_CODE));
+    EXPERTS = ((EXRAW.experts && EXRAW.experts.items) || []).map(e => {
+      let found = (EXRAW.exFound || {})[e.id];
+      if (!found && (e.mustHave || []).length) {
+        const m = pool.find(p => p.jp && e.mustHave.every(w => p.jp.toLowerCase().includes(w.toLowerCase())));
+        if (m) found = { image: m.img, url: m.url, price: m.price, itemName: m.jp };
+      }
+      return exItem(e, found);
+    });
+    EXPERTS.updated = EXRAW.experts ? EXRAW.experts.updated : "";
   }
   function stripFav(p) { const { history, creator, ...rest } = p; return rest; }
   const isGone = p => !p.isOY && !p.isEx && !BY_CODE[p.id];
@@ -668,7 +678,14 @@
         ? `<div class="oybanner"><b>ruri 專屬優惠代碼</b><span class="code" id="oycode">${esc(OY.code)}</span><button class="copy" type="button" id="copycode">複製代碼</button>${OY.codeUrl ? `<a class="copy" style="background:#fff;color:#1A7A63" href="${esc(OY.codeUrl)}" target="_blank" rel="sponsored noopener">逛 Olive Young ↗</a>` : ""}<span>${esc(OY.codeNote || "")}</span></div>`
         : "";
       html += page.injp ? `<h2 class="sub">韓國人氣推薦</h2><p style="color:var(--muted);margin:-4px 0 12px">Olive Young Global 暢銷商品</p>` : `<div style="height:18px"></div>`;
-      html += list.length ? `<div class="grid">${list.map(p => card(p)).join("")}</div>` : `<div class="empty">這個分類的商品整理中，先看看其他分類吧。</div>`;
+      html += list.length ? `${page.ocat ? `<h2 class="sub">Olive Young 暢銷</h2>` : ""}<div class="grid">${list.map(p => card(p)).join("")}</div>` : `<div class="empty">Olive Young 這個分類的商品整理中。</div>`;
+      if (page.ocat) {
+        const ids = new Set();
+        const rk = applyFilters(Object.values(RANK).flat().filter(p => p.country === "韓國" && page.ocat.includes(p.cat) && !ids.has(p.id) && ids.add(p.id)), { noPrice: true });
+        if (rk.length) html += `<h2 class="sub">日本樂天排行上的韓國${esc(page.label.replace(/^\S+\s/, ""))}</h2><div class="grid">${rk.map(p => card(p, { meta: `<div class="meta">樂天${esc(p.cat)}第 ${p.rank} 名</div>` })).join("")}</div>`;
+        const ek = applyFilters(EXPERTS.filter(p => p.country === "韓國" && page.ocat.includes(p.cat)), { noPrice: true });
+        if (ek.length) html += `<h2 class="sub">達人推薦的韓國${esc(page.label.replace(/^\S+\s/, ""))}</h2><div class="grid">${ek.map(p => card(p, { extra: `<div class="voices"><div class="voice"><b>${esc(p.expert.role)} ${esc(p.expert.who)}</b>：${esc(p.expert.say)}</div></div>` })).join("")}</div>`;
+      }
       const seen = new Set();
       const kr = page.injp ? applyFilters(Object.values(RANK).flat().filter(p => p.country === "韓國" && !seen.has(p.id) && seen.add(p.id)), { noPrice: true }) : [];
       if (kr.length) {
