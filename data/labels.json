@@ -16,7 +16,8 @@
   "brand": "Lashaddict",
   "country": "其他",
   "desc": "睫毛美容液 5mL",
-  "jpName": "アイラッシュ コンディショニング セラム アドバンス"
+  "jpName": "アイラッシュ コンディショニング セラム アドバンス",
+  "hide": true
  },
  "byurjapan:10000005": {
   "brand": "ByUR",
@@ -187,7 +188,8 @@
   "country": "日本",
   "desc": "對苯二酚霜（台灣禁止添加於化粧品）",
   "jpName": "ルシフェル ハイドロキノンクリーム",
-  "noTW": true
+  "noTW": true,
+  "hide": true
  },
  "aurelie-tokyo:10000061": {
   "brand": "Aurelie.",
@@ -267,7 +269,8 @@
   "brand": "VALANROSE",
   "country": "日本",
   "desc": "白髮用染色洗髮霜",
-  "jpName": "KURO クリームシャンプー"
+  "jpName": "KURO クリームシャンプー",
+  "hide": true
  },
  "kobe-beauty-labo:10002363": {
   "brand": "YOLU",
@@ -322,7 +325,8 @@
   "brand": "b.ris",
   "country": "日本",
   "desc": "頭皮養護液",
-  "jpName": "ラリッチスカルプ"
+  "jpName": "ラリッチスカルプ",
+  "hide": true
  },
  "ukaofficial:10000000": {
   "brand": "uka",
@@ -553,7 +557,8 @@
   "brand": "ke-non",
   "country": "日本",
   "desc": "家用光學除毛儀",
-  "jpName": "ケノン（最新バージョン）"
+  "jpName": "ケノン（最新バージョン）",
+  "hide": true
  },
  "doshisha-marche:10000266": {
   "brand": "ゴリラのひとつかみ",
@@ -963,7 +968,8 @@
   "brand": "ルプルプ",
   "country": "日本",
   "jpName": "ルプルプ ヘアカラートリートメント",
-  "desc": "白髮用染色護髮霜"
+  "desc": "白髮用染色護髮霜",
+  "hide": true
  },
  "angfa:10000025": {
   "brand": "SCALP D",
@@ -975,19 +981,22 @@
   "brand": "ニューモ",
   "country": "日本",
   "jpName": "ニューモV",
-  "desc": "頭皮用養護液"
+  "desc": "頭皮用養護液",
+  "hide": true
  },
  "f-netclub:10000296": {
   "brand": "リリィジュ",
   "country": "日本",
   "jpName": "薬用リリィジュ",
-  "desc": "女性用頭皮養護液"
+  "desc": "女性用頭皮養護液",
+  "hide": true
  },
  "cscjp:10000130": {
   "brand": "POLYPURE",
   "country": "日本",
   "jpName": "ポリピュアEX",
-  "desc": "頭皮養護液"
+  "desc": "頭皮養護液",
+  "hide": true
  },
  "cleosbeaute:10000010": {
   "brand": "Cleo's Beaute",
@@ -1047,7 +1056,8 @@
   "brand": "Lashaddict",
   "country": "其他",
   "jpName": "アイラッシュ コンディショニング セラム アドバンス",
-  "desc": "睫毛美容液 5mL"
+  "desc": "睫毛美容液 5mL",
+  "hide": true
  },
  "onemakem:10001126": {
   "brand": "COSME DECORTE 黛珂",

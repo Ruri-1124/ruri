@@ -353,7 +353,7 @@
       country: L.country || detectCountry(text), tags: tagHits(NEEDS, raw.itemName),
       skin: D ? (D.skin || []) : (L.skin || tagHits(SKIN, raw.itemName)),
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
-      img: raw.image, url: raw.url, exclude: raw.exclude,
+      img: raw.image, url: raw.url, exclude: raw.exclude || (L.hide ? "法規或安全疑慮" : ""),   // hide：有法規或安全疑慮，不放上網站
       daysOn: raw.daysOn, bestRank: raw.bestRank
     };
   }

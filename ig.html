@@ -93,7 +93,7 @@
     const seen = new Set(), out = [];
     for (const g of s.groups) for (const r of (pool[g] || []).slice().sort((a, b) => a.rank - b.rank)) {
       const L = LABELS[r.itemCode] || {};
-      if (r.exclude || L.noTW || seen.has(r.itemCode)) continue;
+      if (r.exclude || L.noTW || L.hide || seen.has(r.itemCode)) continue;
       const country = L.country || (KR.some(w => r.itemName.includes(w)) ? "韓國" : "日本");
       if (country === "韓國") continue;
       // 同一個商品不同賣家只留一個

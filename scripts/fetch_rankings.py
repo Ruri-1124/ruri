@@ -79,9 +79,15 @@ def simplify(item):
     }
 
 
+RISK_WORDS = []   # main() 會從 config/genres.json 的 riskExclude 讀進來
+
+
 def apply_rules(item, rule):
-    """排除規則：名稱含有 exclude 的字就排除；有 keepOnly 時，名稱要含有其中一個字才保留"""
+    """排除規則：名稱含有 exclude 的字就排除；有 keepOnly 時，名稱要含有其中一個字才保留；含有 riskExclude 的字一律排除"""
     name = item["itemName"]
+    if any(word in name for word in RISK_WORDS):
+        item["exclude"] = "法規或安全疑慮"
+        return item
     reason = rule.get("excludeReason", "非美容相關")
     if any(word in name for word in rule.get("exclude", [])):
         item["exclude"] = reason
@@ -97,6 +103,7 @@ def main():
         sys.exit("缺少設定：" + "、".join(missing) + "。請到 GitHub 的 Settings → Secrets 新增。")
 
     config = json.loads((ROOT / "config" / "genres.json").read_text(encoding="utf-8"))
+    RISK_WORDS.extend(config.get("riskExclude", []))
     result = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"), "groups": {}}
     failed = []
 
