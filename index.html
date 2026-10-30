@@ -499,7 +499,7 @@
           ${p.why ? `<div class="why">${esc(p.why)}</div>` : ""}
           ${(p.tags || []).length ? `<div class="tags">${p.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>` : ""}
           ${opts.extra || ""}
-          <button class="more" type="button" data-detail="${esc(p.id)}">看成分・用法・心得 ›</button>
+          <button class="more" type="button" data-detail="${esc(p.id)}">${p.group === "device" ? "看規格・用法" : "看成分・用法・心得"} ›</button>
           <div class="bottom">${price}${buyButtons(p)}</div>
         </div>
       </article>`;
@@ -531,6 +531,26 @@
     const sec = (title, body) => `<div class="dsec"><h3>${title}</h3>${body}</div>`;
     const pending = text => `<p class="pending">${text}</p>`;
     const skin = p.skin || [];
+    const has = Object.keys(d).length > 0;
+    // 商品類型：家電、工具（梳子、蓮蓬頭）、組合、清潔用品、一般保養彩妝
+    const type = d.type || (p.group === "device" ? "device" : "item");
+    const noIngr = type === "device" || type === "tool";
+    const muted = t => `<p style="color:var(--muted);font-size:12px;margin-top:4px">${t}</p>`;
+    const skinTitle = type === "device" || type === "tool" ? "注意事項" : (p.group === "hair" ? "適合髮質" : "適合膚質");
+    const skinBody = skin.length ? `<p>${skin.map(esc).join("、")}</p>${d.skinNote ? muted(esc(d.skinNote)) : ""}`
+      : d.skinNote ? `<p>${esc(d.skinNote)}</p>` : (noIngr ? "" : `<p>品牌沒有特別標示。</p>`);
+    const ingrBody = d.ingredients ? list(d.ingredients) + muted("只列出部分主要成分，完整成分以商品包裝標示為準。")
+      : noIngr ? "" : type === "set" ? `<p>組合內容依你選的商品而定，成分請看各商品的包裝標示。</p>`
+      : `<p>品牌沒有公開完整成分，購買前請以商品包裝標示為準。</p>`;
+    const howBody = d.howto ? list(d.howto, "ol")
+      : noIngr ? `<p>請依商品說明書使用。</p>` : `<p>品牌沒有公開詳細用法，請依商品包裝說明使用。</p>`;
+    const revBody = d.reviews ? list(d.reviews) + muted(`${esc(d.reviewSource || "整理自網路上的使用心得")}，使用感受因人而異。`) : "";
+    const body = !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>` : `
+          ${skinBody ? sec(skinTitle, skinBody) : ""}
+          ${d.features ? sec(type === "device" ? "規格與特色" : "商品特色", list(d.features)) : ""}
+          ${ingrBody ? sec("主要成分", ingrBody) : ""}
+          ${sec("使用方法", howBody)}
+          ${revBody ? sec("大家怎麼說", revBody) : ""}`;
     return `
       <button class="dclose" type="button" id="detailClose" aria-label="關閉">×</button>
       <div class="dwrap">
@@ -543,11 +563,7 @@
           ${d.ratingNote ? `<div class="rate">${esc(d.ratingNote)}</div>` : ""}
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）</div>` : ""}
           ${d.useNote ? `<div class="note">${esc(d.useNote)}</div>` : ""}
-          ${sec("適合膚質", skin.length ? `<p>${skin.map(esc).join("、")}</p>${d.skinNote ? `<p style="color:var(--muted);font-size:13px">${esc(d.skinNote)}</p>` : ""}` : (d.skinNote ? `<p>${esc(d.skinNote)}</p>` : pending("品牌沒有特別標示適合的膚質。")))}
-          ${sec("商品特色", d.features ? list(d.features) : pending("詳細介紹整理中。"))}
-          ${sec("主要成分", d.ingredients ? list(d.ingredients) + `<p style="color:var(--muted);font-size:12px;margin-top:4px">只列出部分主要成分，完整成分以商品包裝標示為準。</p>` : pending("成分整理中，購買前請以商品包裝標示為準。"))}
-          ${sec("使用方法", d.howto ? list(d.howto, "ol") : pending("使用方法整理中，請依商品包裝說明使用。"))}
-          ${sec("大家怎麼說", d.reviews ? list(d.reviews) + `<p style="color:var(--muted);font-size:12px;margin-top:4px">${esc(d.reviewSource || "整理自網路上的使用心得")}，使用感受因人而異。</p>` : pending("心得整理中。"))}
+          ${body}
           ${historyFacts(p)}
           ${p.jp && !p.isOY ? sec("日本樂天商品名稱", `<p style="font-size:12px;color:var(--muted)">${esc(p.jp)}</p>`) : ""}
           <div class="dbuys">${buyButtons(p, true)}${p.price ? `<span class="rate">${yen(p.price)}（${twd(p.price)}）</span>` : ""}</div>

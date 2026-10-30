@@ -617,9 +617,9 @@
  },
  "kobe-beauty-labo:10002820": {
   "brand": "SALONIA",
-  "name": "筆型美顏器",
   "country": "日本",
-  "desc": "筆型美顏器"
+  "desc": "筆型美容儀（不用充電）",
+  "jpName": "SALONIA フェイスカレントポインター（ペン型美顔器）"
  },
  "abemashopping:10000126": {
   "brand": "BORDER FREE",
@@ -646,10 +646,10 @@
   "desc": "室內擴香 200mL"
  },
  "larocheposay:10000039": {
-  "brand": "La Roche-Posay 理膚寶水",
-  "name": "全日防曬隔離乳",
+  "brand": "LA ROCHE-POSAY 理膚寶水",
   "country": "其他",
-  "desc": "全日防曬隔離乳"
+  "desc": "飾底防曬乳 30mL＋試用組",
+  "jpName": "UVイデア XL プロテクショントーンアップ（サンプルセット）"
  },
  "cetaphil-official-gkk:10000169": {
   "brand": "Cetaphil 舒特膚",
@@ -1261,5 +1261,23 @@
   "country": "日本",
   "jpName": "2026 クリスマス アドベントカレンダー L（24 個入り）",
   "desc": "聖誕倒數月曆（24 件）"
+ },
+ "ntvshop:10008706": {
+  "brand": "CREAGE",
+  "country": "日本",
+  "jpName": "クリアージュ アイリフト Neo",
+  "desc": "眼周 EMS 美容儀"
+ },
+ "veramoreofficial:10000146": {
+  "brand": "VERAMORE",
+  "country": "韓國",
+  "jpName": "3STEP ナイトスペシャルケアセット（スピキュール 300 セラム ほか）",
+  "desc": "微針精華夜間保養組"
+ },
+ "hugkumi:10000426": {
+  "brand": "ESIENCE",
+  "country": "日本",
+  "jpName": "C×AZ ダーマインショット",
+  "desc": "微針維生素 C 精華（單次包）"
  }
 }

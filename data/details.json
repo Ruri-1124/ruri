@@ -33,7 +33,13 @@
     "name": "@cosme 商品頁",
     "url": "https://www.cosme.net/variations/1250984/"
    }
-  ]
+  ],
+  "reviews": [
+   "卸妝力好，睫毛膏和眼妝一次就卸掉",
+   "不用再洗臉很方便",
+   "乾肌的人提到洗完不緊繃，濕手也能用"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "attenir:10000250": {
   "_同": "attenir:10000252"
@@ -68,7 +74,13 @@
     "name": "@cosme 商品頁（BLANCHE 100mL）",
     "url": "https://www.cosme.net/variations/1162337/"
    }
-  ]
+  ],
+  "reviews": [
+   "很多人喜歡像香水一樣、持久又不會太濃的香味",
+   "質地好推、不厚重，也有人拿來當指緣油",
+   "香味比較濃（特別是 BLANCHE），不喜歡香味停留的人要注意"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "bobbibrown:10001609": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
@@ -115,7 +127,8 @@
     "name": "mileda 精華新品發表（PR TIMES）",
     "url": "https://netshop.impress.co.jp/r/prtimes/items/000000006.000164627"
    }
-  ]
+  ],
+  "type": "set"
  },
  "tvert:10000064": {
   "skinNote": "品牌主打「外油內乾（インナードライ）」的肌膚；@cosme 上混合肌、乾肌的使用者評價不錯。",
@@ -247,7 +260,8 @@
     "name": "@cosme 商品頁（ブライト クレンジング オイル）",
     "url": "https://www.cosme.net/products/10284906/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "rakuten24-cosmetics:10055320": {
   "skinNote": "品牌沒有特別標示適合的膚質；@cosme 上混合肌、敏感肌、乾肌的使用者都有分享心得。",
@@ -428,7 +442,8 @@
     "name": "SK-II 官方直營（momo，台灣名稱「青春露」）",
     "url": "https://www.momoshop.com.tw/product/10297328"
    }
-  ]
+  ],
+  "type": "set"
  },
  "cepolab:10000000": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
@@ -541,7 +556,8 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/anuajapan/anua00180/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "the-beautopia:10000111": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
@@ -552,17 +568,32 @@
    "2026 年 10 月 30 日開始陸續出貨，限量"
   ],
   "ingredients": [
-   "神經醯胺（樂天商品名稱標示「高濃度神經醯胺 15%」）"
+   "神經醯胺 EOP、AG、NG、AP、NP 等 9 種（品牌標示濃度 15%）",
+   "水解玻尿酸鈉（HA4）",
+   "依克多因"
   ],
   "howto": [
-   "依商品包裝說明使用"
+   "早晚擦完化妝水後使用",
+   "先輕輕搖一搖，取適量抹在整臉",
+   "眼周也可以用，但不要進到眼睛"
   ],
   "sources": [
    {
     "name": "Lov me Touch 2026 聖誕組合新聞",
     "url": "https://bestcalendar.jp/press/159231"
+   },
+   {
+    "name": "@cosme 商品頁（Nano Milk Rich 50mL）",
+    "url": "https://www.cosme.net/variations/1165823/"
    }
-  ]
+  ],
+  "type": "set",
+  "reviews": [
+   "不黏、吸收快，但保濕感足夠",
+   "CP 值不錯，有人回購",
+   "冬天可能覺得不夠滋潤，質地很水"
+  ],
+  "reviewSource": "整理自 @cosme 心得（Nano Milk Rich）"
  },
  "takami-labo:10000519": {
   "skinNote": "品牌說明不分年齡、性別、膚質都可以使用，敏感肌也可以（不代表每個人都不會不適）。",
@@ -596,6 +627,11 @@
     "name": "@cosme 商品頁（30mL）",
     "url": "https://www.cosme.net/variations/1159005/"
    }
+  ],
+  "ingredients": [
+   "含 AHA（果酸）",
+   "無色素、無香料、無礦物油、無界面活性劑、無酒精、無 Paraben（@cosme 標示）",
+   "完整成分品牌官網有公開，以包裝標示為準"
   ]
  },
  "manara:10000214": {
@@ -926,7 +962,8 @@
     "name": "@cosme 商品頁（Balancing Lotion）",
     "url": "https://www.cosme.net/products/10258796/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "sk-ii:10003779": {
   "skinNote": "@cosme 標示適合一般肌、乾肌、油肌、混合肌。",
@@ -1100,7 +1137,8 @@
    "日本「醫藥部外品」化妝水",
    "無酒精、無油分",
    "台灣網路上常被稱為「流金水」（非官方名稱）",
-   "有 200mL 和 100mL"
+   "有 200mL 和 100mL",
+   "2026 年 4 月推出新版「e」，200mL 日本售價 ¥5,500"
   ],
   "ingredients": [
    "傳明酸（有效成分）",
@@ -1109,14 +1147,27 @@
    "香蜂草葉、溫州蜜柑、馬鬱蘭葉萃取"
   ],
   "howto": [
-   "品牌頁面沒有提供使用方法；一般化妝水是洗臉後用化妝棉或手擦"
+   "洗臉後，取比 500 日圓硬幣大一點的量",
+   "用化妝棉或手心抹在整臉",
+   "保養順序中任何一步都可以使用"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（200mL）",
+    "url": "https://www.cosme.net/variations/1241183/"
+   },
    {
     "name": "IPSA 官網商品頁",
     "url": "https://www.ipsa.co.jp/products/skincare/toner/43827.html?lang=en-US"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.2（3,588 則心得）・@cosme 化妝水排行第 1 名",
+  "reviews": [
+   "質地輕、吸收快，香味好聞",
+   "隔天早上肌膚還是滋潤、比較平滑",
+   "價格比一般化妝水高"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "thebodyshop:10014376": {
   "skinNote": "禮盒商品，內容包含多種身體、臉部保養品。",
@@ -1130,10 +1181,10 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/thebodyshop/101629/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "kobe-beauty-labo:10000074": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 支援 AC100–240V，在台灣（110V）可以直接用，插頭形狀也和台灣相同。",
   "features": [
    "板寬可選 15mm、24mm、35mm",
@@ -1149,13 +1200,23 @@
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁（24mm）",
+    "url": "https://www.cosme.net/variations/1077599/"
+   },
+   {
     "name": "K's電器 規格頁（SL-004S 24mm）",
     "url": "https://www.ksdenki.com/shop/g/g4580383620058/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 4.6（744 則心得，24mm）",
+  "reviews": [
+   "加熱很快，一下就熱",
+   "夾板好滑、不卡頭髮，短髮也好用",
+   "以價格來說表現不錯，但有人長期使用後覺得頭髮受損"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "mycosmeticbox:10000390": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 電壓請先確認：官網規格寫 AC100V，但官網常見問答寫支援 100–240V。購買前請向賣家確認，或選明確標示「海外電壓對應」的款式。",
   "features": [
    "絲綢塗層夾板（シルクプレート），品牌說明 200°C 以下不容易產生蒸氣爆",
@@ -1172,16 +1233,26 @@
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10275971/"
+   },
+   {
     "name": "KINUJO 官網（LM-225）",
     "url": "https://kinujo.jp/en/products_kinujo"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.5（37 則心得）",
+  "reviews": [
+   "加熱很快，早上趕時間很方便",
+   "頭髮變得滑順有光澤、比較不毛躁",
+   "價格偏高；有人覺得拉的時候有卡卡的感覺"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "kinujo:10000000": {
   "_同": "mycosmeticbox:10000390"
  },
  "marble-inc:10000649": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "KINUJO 的美髮沙龍專用系列",
@@ -1212,14 +1283,15 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/leapgrow/mt-vd22b/"
    }
-  ]
+  ],
+  "type": "device"
  },
  "mtgec-beauty:10002142": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ ReFa 官方店的商品名稱標示「海外対応」。帶回台灣用前，仍建議看一下商品頁的電壓標示。",
   "features": [
    "ReFa 的直髮夾",
-   "樂天官方店標示可以在海外使用"
+   "樂天官方店標示可以在海外使用",
+   "重量約 325g，2023 年 10 月發售"
   ],
   "howto": [
    "頭髮完全吹乾後再使用",
@@ -1227,31 +1299,55 @@
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁（白色）",
+    "url": "https://www.cosme.net/variations/1161621/"
+   },
+   {
     "name": "高島屋 ReFa 商品一覽",
     "url": "https://www.takashimaya.co.jp/beauty/item/refa/830084/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 美容家電類第 2 名"
+  ],
+  "ratingNote": "@cosme 評價 5.6（327 則心得）",
+  "reviews": [
+   "直髮、捲髮都好用，頭髮不容易受損",
+   "自然捲也能變得滑順有光澤",
+   "也有人覺得拉直的效果比預期弱"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "mtgec-beauty:10002330": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "ReFa（MTG）的美髮家電",
    "日本官方售價 ¥39,600",
-   "ReFa 另有「SMART W」等支援 100–240V 的國際電壓款（不是這一款）"
+   "ReFa 另有「SMART W」等支援 100–240V 的國際電壓款（不是這一款）",
+   "重量約 495g（含電線、不含噴嘴），2024 年 10 月發售"
   ],
   "howto": [
    "使用時保持吹風口與頭髮距離，避免長時間吹同一處"
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁（白色）",
+    "url": "https://www.cosme.net/variations/1192682/"
+   },
+   {
     "name": "高島屋 ReFa 商品一覽",
     "url": "https://www.takashimaya.co.jp/beauty/item/refa/830084/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.3（105 則心得）",
+  "reviews": [
+   "風量大，很快就吹乾",
+   "輕巧好收納、方便帶出門",
+   "頭髮滑順有光澤，但價格約 4 萬日圓偏高"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "mtgec-beauty:10002451": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "ReFa（MTG）的美髮家電",
@@ -1269,7 +1365,6 @@
   ]
  },
  "mtgec-beauty:10002143": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "ReFa（MTG）的美髮家電",
@@ -1286,7 +1381,6 @@
   ]
  },
  "mtgec-beauty:10002453": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "ReFa（MTG）的美髮家電",
@@ -1303,7 +1397,6 @@
   ]
  },
  "mtgec-beauty:10002632": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "ReFa（MTG）的美髮家電"
@@ -1319,7 +1412,6 @@
   ]
  },
  "angelique:10016960": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 電壓 AC100V（日本國內規格），台灣是 110V，長時間使用可能讓機器過熱；台灣有販售台灣電壓版本的話，建議優先買台灣版。",
   "features": [
    "鈦離子塗層捲棒，品牌說明頭髮比較好滑動、不容易卡",
@@ -1334,10 +1426,21 @@
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁（26mm）",
+    "url": "https://www.cosme.net/products/10019932/"
+   },
+   {
     "name": "rank-king 規格（SR-26）",
     "url": "https://rank-king.jp/product/16853"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 6.0（39 則心得，26mm）",
+  "reviews": [
+   "加熱快，按鍵調溫度不容易誤觸",
+   "捲棒好滑、捲度持久有光澤",
+   "每天用的人提到 2～3 年會壞；26mm 捲出來的捲度偏細"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "createsstore:10000002": {
   "_同": "angelique:10016960"
@@ -1346,7 +1449,6 @@
   "_同": "angelique:10016960"
  },
  "salonmoon:10000013": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 支援 AC100–240V，在台灣（110V）可以直接用，插頭形狀也和台灣相同。",
   "features": [
    "鏡面鈦金屬夾板",
@@ -1368,7 +1470,6 @@
   ]
  },
  "panasonic-store:10000005": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本國內版，電壓 AC100V。台灣是 110V，長時間使用可能讓機器過熱、縮短壽命；台灣有販售台灣電壓版本的話，建議優先買台灣版。 消耗功率 1200W，日本建議使用 15A 以上的專用插座。",
   "features": [
    "高浸透 nanoe（奈米水離子）",
@@ -1383,13 +1484,23 @@
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁（さくらピンク）",
+    "url": "https://www.cosme.net/variations/1221640/"
+   },
+   {
     "name": "K's電器 規格頁",
     "url": "https://www.ksdenki.com/shop/g/g4549980975039/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 6.0（107 則心得）・@cosme 美髮家電排行第 1 名",
+  "reviews": [
+   "吹完的髮質讓人很滿意",
+   "長髮也比較快乾，機身輕、手不容易痠",
+   "有人提到奈米水離子系列用 4～5 年左右會壞"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "beautyeveryday:10000627": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "大風量、速乾",
@@ -1401,7 +1512,6 @@
   ]
  },
  "tescom-japan:10000036": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "負離子",
@@ -1413,7 +1523,6 @@
   ]
  },
  "mycosmeticbox:10000138": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "KINUJO 的高階吹風機"
@@ -1423,7 +1532,6 @@
   ]
  },
  "kobe-beauty-labo:10002791": {
-  "skinNote": "美髮家電。",
   "useNote": "🔋 無線款，用 USB 充電，在台灣可以直接充電。",
   "features": [
    "無線、小型，適合帶出門",
@@ -1434,7 +1542,6 @@
   ]
  },
  "azusa:10000180": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "1400W 大風量",
@@ -1445,7 +1552,6 @@
   ]
  },
  "marble-inc:10000554": {
-  "skinNote": "美髮家電。",
   "useNote": "⚡ 日本的吹風機、離子夾很多只支援 AC100V，台灣是 110V。購買前請先看商品頁的「電壓／電源」標示，有寫 100–240V 或「海外対応」才適合帶回台灣用。",
   "features": [
    "絲綢塗層夾板",
@@ -1521,7 +1627,6 @@
   ]
  },
  "mtgec-beauty:10002091": {
-  "skinNote": "美髮梳。",
   "ratingNote": "@cosme 評價 5.4（984 則心得）",
   "features": [
    "品牌說明梳一下就能讓頭髮看起來更有光澤",
@@ -1541,10 +1646,13 @@
     "name": "@cosme 商品頁",
     "url": "https://www.cosme.net/products/10242000/"
    }
+  ],
+  "type": "tool",
+  "howto": [
+   "從髮尾開始梳，再一次從頭頂梳到髮尾"
   ]
  },
  "mtgec-beauty:10002261": {
-  "skinNote": "美髮梳。",
   "features": [
    "愛心造型的小梳子",
    "樂天商品名稱提到適合整理瀏海、輕量好攜帶"
@@ -1554,10 +1662,13 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/mtgec-beauty/1186210101/"
    }
+  ],
+  "type": "tool",
+  "howto": [
+   "乾髮、濕髮都可以從髮尾開始慢慢往上梳"
   ]
  },
  "mtgec-beauty:10002009": {
-  "skinNote": "美髮梳。",
   "features": [
    "ReFa 的愛心造型梳，小巧好攜帶",
    "樂天商品名稱提到不易打結"
@@ -1567,10 +1678,13 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/mtgec-beauty/5385720101/"
    }
+  ],
+  "type": "tool",
+  "howto": [
+   "乾髮、濕髮都可以從髮尾開始慢慢往上梳"
   ]
  },
  "mtgec-beauty:10002313": {
-  "skinNote": "美髮梳。",
   "features": [
    "洗頭時用的頭皮刷",
    "日本售價 ¥8,800"
@@ -1580,6 +1694,10 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/mtgec-beauty/1200620101/"
    }
+  ],
+  "type": "tool",
+  "howto": [
+   "洗頭時用來按摩頭皮"
   ]
  },
  "mtgec-beauty:10001958": {
@@ -1591,22 +1709,49 @@
   ],
   "sources": [
    {
+    "name": "@cosme 商品頁（100mL）",
+    "url": "https://www.cosme.net/variations/1161559/"
+   },
+   {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/mtgec-beauty/5144020101/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 名人堂"
+  ],
+  "ratingNote": "@cosme 評價 5.3（4,883 則心得）・@cosme 造型前置排行第 1 名",
+  "howto": [
+   "吹乾頭髮後、用離子夾或電捲棒之前使用",
+   "依髮量取 1～2 壓，抹在頭髮上再整理造型",
+   "造型效果維持到下次洗頭"
+  ],
+  "reviews": [
+   "有光澤、造型維持得久",
+   "輕盈不黏、好推開，有蘋果般的香味",
+   "髮量多或細軟髮的人可能覺得太重、會塌"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "kerastase-varie:10000005": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "卡詩「黑鑽極萃逆時」系列的護髮油，台灣名稱「黑鑽極萃逆時玫瑰香氛露」",
    "香味是木質花香調",
-   "這個商品頁可選 2026 聖誕組（30mL 迷你瓶＋75mL）、75mL、補充瓶等"
+   "這個商品頁可選 2026 聖誕組（30mL 迷你瓶＋75mL）、75mL、補充瓶等",
+   "品牌說明有吹整熱防護、防曬功能",
+   "香味由調香師 Alberto Morillas 調製（玫瑰、牡丹調）"
   ],
   "howto": [
-   "一般護髮油用法：毛巾擦乾後抹在髮尾，再吹乾"
+   "取 1～2 壓在手心搓開，從髮尾往上抹在毛巾擦乾的頭髮",
+   "先吹髮根，再吹中段和髮尾",
+   "吹乾後再取 1 壓抹在髮尾和表面"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（CH ユイル クロノロジスト N）",
+    "url": "https://www.cosme.net/products/10270341/"
+   },
    {
     "name": "卡詩 momo 品牌旗艦（台灣名稱）",
     "url": "https://www.momoshop.com.tw/product/14968215"
@@ -1615,7 +1760,19 @@
     "name": "KÉRASTASE 官網",
     "url": "https://www.kerastase.com/products/chronologiste/parfum-en-huile"
    }
-  ]
+  ],
+  "ingredients": [
+   "摩洛哥堅果油",
+   "沒藥樹脂萃取",
+   "二甲基矽油、聚二甲基矽氧烷醇（矽靈類，讓頭髮滑順）"
+  ],
+  "reviews": [
+   "頭髮變得好整理、有光澤",
+   "不黏膩，不喜歡髮油的人也能接受",
+   "麝香系的香味比較濃，喜好兩極"
+  ],
+  "reviewSource": "整理自 @cosme 心得（N 版）",
+  "ratingNote": "@cosme 評價 5.8（343 則心得）"
  },
  "sakurap:10005223": {
   "skinNote": "頭皮有傷口或發炎時不要使用。",
@@ -1642,17 +1799,31 @@
    "白髮用的染色護髮霜，5 色可選",
    "樂天商品名稱標示「不含 Diamine（ノンジアミン）」",
    "附手套、浴帽",
-   "樂天商品名稱提到短髮約可用 5 次"
+   "樂天商品名稱提到短髮約可用 5 次",
+   "屬於「護髮染（hair manicure）」類型，使用紅花、梔子、藍草等植物染料（LPLP 原版說明）",
+   "顏色可能沾到皮膚、指甲、浴室、衣服，不容易清掉"
   ],
   "howto": [
-   "依包裝說明使用，樂天商品名稱提到最短 3 分鐘"
+   "（以 LPLP 原版為例）大量塗在整頭，以白髮為主",
+   "停留 20～30 分鐘，可以戴浴帽",
+   "用溫水沖到水變清，再洗頭、潤髮"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（LPLP オリジナル）",
+    "url": "https://www.cosme.net/products/10163486/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/bijinlabo/r198900/"
    }
-  ]
+  ],
+  "reviews": [
+   "沖完頭髮滋潤、味道不刺鼻",
+   "第一次不明顯，要用幾次才慢慢上色",
+   "有人覺得自然黑色看起來不自然"
+  ],
+  "reviewSource": "整理自 @cosme 心得（LPLP 原版）"
  },
  "angfa:10000025": {
   "skinNote": "依頭皮類型分成油性、乾性等款式，另有針對氣味、癢、頭皮屑的款式，共 5 種可選。",
@@ -1660,13 +1831,27 @@
   "features": [
    "日本 ANGFA 的男性頭皮洗髮精",
    "350mL",
-   "樂天商品名稱標示為日本男性洗髮精市占第 1"
+   "樂天商品名稱標示為日本男性洗髮精市占第 1",
+   "無矽靈、無 Paraben、無石油系界面活性劑、無合成色素、無合成香料（オイリー款 @cosme 標示）"
   ],
   "sources": [
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/angfa/648226/"
+   },
+   {
+    "name": "@cosme 商品頁（オイリー）",
+    "url": "https://www.cosme.net/products/10062338/"
    }
+  ],
+  "reviews": [
+   "洗起來有薄荷的清涼感，泡沫多",
+   "洗完頭皮清爽，有人覺得氣味改善",
+   "洗完頭髮比較澀，建議搭配潤髮乳；價格偏高"
+  ],
+  "reviewSource": "整理自 @cosme 心得（オイリー舊版）",
+  "howto": [
+   "依包裝說明，在頭皮上搓揉起泡後沖乾淨"
   ]
  },
  "angfa:10009301": {
@@ -1674,19 +1859,27 @@
  },
  "tamago-kichi:10000533": {
   "skinNote": "頭皮有傷口、發炎時不要使用。",
-  "useNote": "📌 在台灣，化粧品不能宣稱生髮、防止落髮等功效，這類宣稱屬於藥品範圍。本站只整理商品資料，不代表效果。",
+  "useNote": "📌 在台灣，化粧品不能宣稱生髮、防止落髮等功效，這類宣稱屬於藥品範圍。本站只整理商品資料，不代表效果。 含雞蛋來源成分，對蛋過敏的人不要使用。",
   "features": [
    "日本「醫藥部外品」頭皮用品",
    "男女都可以使用（樂天商品名稱標示）"
   ],
   "howto": [
-   "依包裝說明使用"
+   "取適量直接噴在頭皮上，用指腹充分按摩"
   ],
   "sources": [
    {
-    "name": "日本樂天商品頁",
-    "url": "https://item.rakuten.co.jp/tamago-kichi/newmo_v01/"
+    "name": "松本清線上商店（ニューモβ 75mL）",
+    "url": "https://www.matsukiyococokara-online.com/store/catalog/product/view/id/4541082003658"
    }
+  ],
+  "ingredients": [
+   "當藥（センブリ）萃取（有效成分）",
+   "甘草酸二鉀（有效成分）",
+   "D-泛醇（有效成分）",
+   "千金藤素（有效成分）",
+   "人參萃取（有效成分）",
+   "蛋黃來源成分「HGP」"
   ]
  },
  "f-netclub:10000296": {
@@ -1696,30 +1889,54 @@
    "日本「醫藥部外品」女性用頭皮用品"
   ],
   "howto": [
-   "依包裝說明使用"
+   "早晚各一次直接塗在頭皮",
+   "塑膠瓶款：瓶口輕點頭皮 10～15 下，再用指腹推開"
   ],
   "sources": [
    {
-    "name": "日本樂天商品頁",
-    "url": "https://item.rakuten.co.jp/f-netclub/10000296/"
+    "name": "@cosme 商品頁（舊版）",
+    "url": "https://www.cosme.net/products/304100/"
    }
-  ]
+  ],
+  "ingredients": [
+   "桐葉萃取、桑白皮萃取（保濕）",
+   "玻尿酸",
+   "無香料、無色素、無礦物油、無界面活性劑、無 Paraben"
+  ],
+  "reviews": [
+   "頭皮感覺滋潤，擦起來涼涼的",
+   "剛擦完有藥味，過一陣子會散"
+  ],
+  "reviewSource": "整理自 @cosme 心得（舊版）"
  },
  "b-ris-shop:10000035": {
   "skinNote": "頭皮有傷口、發炎時不要使用。",
   "useNote": "📌 在台灣，化粧品不能宣稱生髮、防止落髮等功效，這類宣稱屬於藥品範圍。本站只整理商品資料，不代表效果。",
   "features": [
-   "日本頭皮用品，男女都可以使用（樂天商品名稱標示）"
+   "日本頭皮用品，男女都可以使用（樂天商品名稱標示）",
+   "日本「醫藥部外品」，含 7 種有效成分（品牌說明）",
+   "60mL 日本售價 ¥6,649"
   ],
   "howto": [
-   "依包裝說明使用"
+   "使用前搖約 10 下",
+   "沿著髮線用尖嘴瓶口塗在頭皮上，再用指腹按摩"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（60mL）",
+    "url": "https://www.cosme.net/variations/1151784/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/b-ris-shop/r_larich_001/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 4.5（22 則心得）",
+  "reviews": [
+   "不黏、每天用很方便，頭皮清爽",
+   "有人用了沒感覺，或在解約、退貨上遇到麻煩"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "cscjp:10000130": {
   "skinNote": "頭皮有傷口、發炎時不要使用。",
@@ -1727,97 +1944,201 @@
   "features": [
    "日本「醫藥部外品」頭皮用品",
    "男女都可以使用（樂天商品名稱標示）",
-   "賣家提供首次購買全額退款保證（以樂天頁面為準）"
+   "賣家提供首次購買全額退款保證（以樂天頁面為準）",
+   "120mL"
   ],
   "howto": [
-   "依包裝說明使用"
+   "早晚直接噴在乾淨的頭皮上",
+   "一天約 20～30 壓，慢慢推開"
   ],
   "sources": [
    {
-    "name": "日本樂天商品頁",
-    "url": "https://item.rakuten.co.jp/cscjp/p501/"
+    "name": "POLYPURE EX 商品頁（wowma）",
+    "url": "https://wowma.jp/item/351873821"
    }
+  ],
+  "ingredients": [
+   "人參萃取（有效成分）",
+   "當藥萃取（有效成分）",
+   "泛醯乙基醚（有效成分）",
+   "甘草酸二鉀（有效成分）",
+   "鹽酸苯海拉明（有效成分）",
+   "酵母萃取、薄荷醇、檜木醇"
   ]
  },
  "cleosbeaute:10000010": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "樂天商品名稱提到是「寶石洗髮精」",
-   "買就送 3 種香味試用包（賣家活動）"
+   "買就送 3 種香味試用包（賣家活動）",
+   "品牌說明吹風機的熱會讓護髮成分形成保護膜",
+   "木質調香味"
   ],
   "howto": [
-   "依包裝說明使用"
+   "先用溫水把頭髮和頭皮沖濕",
+   "洗髮精起泡後用指腹按摩頭皮，再沖乾淨",
+   "擰乾水分，護髮乳抹在中段到髮尾，避開頭皮，再沖乾淨",
+   "用量：短髮 2～3 壓、中長髮 3～4 壓、長髮 4～5 壓"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10233963/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/cleosbeaute/10000007/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 4.8（317 則心得）",
+  "ingredients": [
+   "23 種胺基酸",
+   "水解角蛋白",
+   "無色素、無礦物油、無酒精、無 Paraben"
+  ],
+  "reviews": [
+   "泡沫綿密、好沖洗",
+   "吹乾後頭髮滑順，毛躁和打結變少",
+   "也有人覺得滋潤度不夠"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "kaminidoramawo:10000010": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "2026 年新推出",
-   "樂天商品名稱提到針對自然捲、毛躁、燙染後的頭髮"
+   "樂天商品名稱提到針對自然捲、毛躁、燙染後的頭髮",
+   "品牌說明針對離子夾、縮毛矯正等「熱」造成的受損開發"
   ],
   "howto": [
-   "依包裝說明使用"
+   "洗髮精：頭髮弄濕，取適量起泡洗淨後沖乾淨",
+   "護髮乳：洗完稍微擰乾，抹在髮尾為主，再沖乾淨"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（舊版）",
+    "url": "https://www.cosme.net/products/10246930/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/kaminidoramawo/kdrs001/"
    }
-  ]
+  ],
+  "ingredients": [
+   "椰油醯水解角蛋白鉀（清潔成分）",
+   "角蛋白",
+   "乙醯丙酸（讓頭髮柔軟有光澤）"
+  ],
+  "reviews": [
+   "受損髮也覺得有光澤、滑順",
+   "價格偏高，剛開始用有人覺得有點澀"
+  ],
+  "reviewSource": "整理自 @cosme 心得（舊版 熱處理用）"
  },
  "kaminidoramawo:10000031": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "2026 年新推出",
-   "「つるりんちょ。」的修護款"
+   "「つるりんちょ。」的修護款",
+   "品牌說明針對離子夾、縮毛矯正等「熱」造成的受損開發"
   ],
   "howto": [
-   "依包裝說明使用"
+   "洗髮精：頭髮弄濕，取適量起泡洗淨後沖乾淨",
+   "護髮乳：洗完稍微擰乾，抹在髮尾為主，再沖乾淨"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（舊版）",
+    "url": "https://www.cosme.net/products/10246930/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/kaminidoramawo/tr_shtr_rep_ver1_b_set/"
    }
-  ]
+  ],
+  "ingredients": [
+   "椰油醯水解角蛋白鉀（清潔成分）",
+   "角蛋白",
+   "乙醯丙酸（讓頭髮柔軟有光澤）"
+  ],
+  "reviews": [
+   "受損髮也覺得有光澤、滑順",
+   "價格偏高，剛開始用有人覺得有點澀"
+  ],
+  "reviewSource": "整理自 @cosme 心得（舊版 熱處理用）"
  },
  "emikuru:10000560": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "有 Mellow、Melty、Ripore、新系列 Riporme 可選",
-   "各 450mL"
+   "各 450mL",
+   "精華型洗髮精，主打染燙、吹整造成的乾燥毛躁",
+   "Mellow 是白花與西洋梨香",
+   "450mL 日本售價約 ¥1,650"
   ],
   "howto": [
-   "依包裝說明使用"
+   "一般洗潤用法：洗髮精起泡洗淨後沖乾淨，護髮乳抹在髮尾再沖掉"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（Mellow）",
+    "url": "https://www.cosme.net/products/10225824/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/emikuru/4582300063658_set/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2024 洗潤類第 2 名（Mellow）"
+  ],
+  "ratingNote": "@cosme 評價 4.9（4,482 則心得，Mellow）",
+  "ingredients": [
+   "喀什米爾來源角蛋白",
+   "蠶絲 PPT、膠原蛋白 PPT",
+   "神經醯胺",
+   "玻尿酸",
+   "有機油",
+   "無色素、無礦物油"
+  ],
+  "reviews": [
+   "染燙、漂過的頭髮也變得好梳",
+   "很多人喜歡持久的香味，洗起來清爽滋潤"
+  ],
+  "reviewSource": "整理自 @cosme 心得（Mellow）"
  },
  "kundal-japan:10000000": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "KUNDAL 是韓國品牌",
-   "各 500mL"
+   "各 500mL",
+   "弱酸性配方",
+   "香味由專業調香師調製"
   ],
   "howto": [
-   "依包裝說明使用"
+   "一般洗潤用法：洗髮精起泡洗淨後沖乾淨，護髮乳抹在髮尾再沖掉"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/variations/1134073/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/kundal-japan/shamtreat_set/"
    }
-  ]
+  ],
+  "ingredients": [
+   "蜂蜜萃取",
+   "夏威夷果籽萃取",
+   "49 種植物來源保濕成分"
+  ],
+  "reviews": [
+   "滋潤、香味持久",
+   "洗髮精泡沫柔軟，護髮乳好推開",
+   "有人覺得香味偏甜"
+  ],
+  "reviewSource": "整理自 @cosme 心得（H&M Wedding Bouquet）"
  },
  "kobe-beauty-labo:10002520": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
@@ -1834,23 +2155,38 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/kobe-beauty-labo/yol110/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "mycosmeticbox:10000939": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
   "features": [
    "日本美髮沙龍專賣的免沖洗護髮乳",
-   "同系列另有噴霧、髮油"
+   "同系列另有噴霧、髮油",
+   "品牌說明補充乾燥細軟髮缺少的膽固醇",
+   "可以沖洗也可以免沖洗"
   ],
   "howto": [
-   "一般用法：毛巾擦乾後抹在頭髮上，再吹乾"
+   "沖洗型：洗髮後擠掉水分，從中段到髮尾抹上，停留 3～5 分鐘再沖乾淨",
+   "免沖洗：毛巾擦乾後，取適量在手心搓開，抹在髮尾再吹乾"
   ],
   "sources": [
    {
-    "name": "日本樂天商品頁",
-    "url": "https://item.rakuten.co.jp/mycosmeticbox/rekera/"
+    "name": "@cosme 商品頁（200mL）",
+    "url": "https://www.cosme.net/variations/1222458/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.8（728 則心得）・@cosme 髮膜護髮排行第 5 名",
+  "ingredients": [
+   "液晶膽固醇",
+   "4 種植物脂"
+  ],
+  "reviews": [
+   "頭髮變軟、好梳，比較滋潤",
+   "潮濕天氣也比較不毛躁",
+   "一次容易擠出太多，有人覺得質地偏重"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "stylife:15348833": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
@@ -1899,7 +2235,8 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/onemakem/jm000000000653/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "onemakem:10000085": {
   "skinNote": "品牌沒有特別標示適合的髮質。",
@@ -1909,14 +2246,33 @@
    "150mL"
   ],
   "howto": [
-   "一般用法：取適量抹在頭髮上，可以當造型或護髮用"
+   "造型：用電捲棒捲完後，取少量抹在髮尾（短髮 1～2 滴、中長髮 2～3 滴、長髮 3～4 滴）",
+   "免沖洗護髮：毛巾擦乾後抹在髮尾再吹乾（短髮 1 滴、中長髮 2 滴、長髮 3 滴）",
+   "手和身體也可以用"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（30mL）",
+    "url": "https://www.cosme.net/variations/968849/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/onemakem/10000085/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2020 名人堂"
+  ],
+  "ratingNote": "@cosme 評價 4.9（3,005 則心得）",
+  "ingredients": [
+   "天然來源成分，含乳油木果脂"
+  ],
+  "reviews": [
+   "頭髮有光澤、滋潤滑順",
+   "柑橘香很清爽",
+   "用太多會不好吹乾；都會玫瑰香偏草本味"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "clinique:10001547": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
@@ -1929,6 +2285,10 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/clinique/130394/"
    }
+  ],
+  "type": "set",
+  "howto": [
+   "睫毛膏：從睫毛根部往上刷"
   ]
  },
  "clinique:10001529": {
@@ -1942,24 +2302,49 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/clinique/vcl_lip/"
    }
+  ],
+  "type": "set",
+  "howto": [
+   "腮紅：用手指或刷子點在臉頰上推開"
   ]
  },
  "bjc-onlinestore:10000020": {
   "skinNote": "睫毛用的保養液，使用時避免進入眼睛，如有不適請停止使用。",
-  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
+  "useNote": "⚠️ 全成分中含有「isopropyl cloprostenate」（前列腺素類似物）。歐盟消費者安全科學委員會（SCCS）2025 年的初步意見認為，這類成分用在睫毛產品上不能視為安全。懷孕或可能懷孕、眼周有傷口或發炎時避免使用。在台灣，化粧品也不能宣稱讓睫毛增長。",
   "features": [
-   "5mL",
-   "日本正規代理店販售（樂天商品名稱標示正規品）"
+   "5mL，日本售價 ¥11,000",
+   "2024 年 5 月推出的 Advance 版",
+   "嫁接睫毛、睫毛燙也可以用（品牌說明）"
   ],
   "howto": [
-   "依包裝說明，塗在睫毛根部"
+   "每天一次，晚上洗臉後、擦保養品前",
+   "取極少量，像畫眼線一樣塗在睫毛根部",
+   "沾到睫毛根部以外的皮膚要擦掉",
+   "敏感肌或容易過敏的人，品牌建議每 2～3 天用一次"
   ],
   "sources": [
    {
-    "name": "日本樂天商品頁",
-    "url": "https://item.rakuten.co.jp/bjc-onlinestore/lashaddict01a/"
+    "name": "@cosme 商品頁（全成分）",
+    "url": "https://www.cosme.net/variations/1178570"
+   },
+   {
+    "name": "SCCS 對前列腺素類似物的意見（CIRS 整理）",
+    "url": "https://www.cirs-group.com/en/cosmetics/sccs-issued-scientific-opinion-on-prostaglandin-analogues"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.5（約 2,280 則心得）・@cosme 睫毛美容液排行第 3 名",
+  "ingredients": [
+   "保濕成分、蘋果果實細胞培養物等植物萃取",
+   "20 種胺基酸",
+   "肉豆蔻醯五胜肽-17、乙醯四胜肽-3",
+   "isopropyl cloprostenate（前列腺素類似物，列在全成分後段）"
+  ],
+  "reviews": [
+   "很多人提到用一個月左右就有感",
+   "細刷頭好控制用量",
+   "也有人說停用後慢慢回到原來的樣子"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "beautyforest2018:10000125": {
   "_同": "bjc-onlinestore:10000020"
@@ -2032,20 +2417,50 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/cosmecomonline/1000240843/"
    }
-  ]
+  ],
+  "howto": [
+   "保養、妝前乳、粉底之後使用（建議搭配粉底液或粉底霜）",
+   "第一次用先把粉撲在粉餅上揉一揉，再輕拍上臉",
+   "也可以用手指沾單一顏色局部使用"
+  ],
+  "reviews": [
+   "膚色看起來比較明亮",
+   "限定包裝可愛、價格便宜",
+   "遮瑕力偏弱，也有敏感肌的人覺得刺激"
+  ],
+  "reviewSource": "整理自 @cosme 心得（マシュマロフィニッシュパウダー Abloom）"
  },
  "cosmecomonline:10183127": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
   "features": [
    "CANMAKE 人氣「棉花糖蜜粉餅」的限定貝殼造型款",
-   "4.0g，日本售價約 ¥1,034"
+   "4.0g，日本售價約 ¥1,034",
+   "品牌說明不容易因汗水、皮脂脫妝",
+   "5 色混合，修飾暗沉",
+   "2025 年 10 月推出的 Abloom 系列"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/variations/1225869/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/cosmecomonline/1000240842/"
    }
-  ]
+  ],
+  "howto": [
+   "保養、妝前乳、粉底之後使用（建議搭配粉底液或粉底霜）",
+   "第一次用先把粉撲在粉餅上揉一揉，再輕拍上臉",
+   "也可以用手指沾單一顏色局部使用"
+  ],
+  "reviews": [
+   "膚色看起來比較明亮",
+   "限定包裝可愛、價格便宜",
+   "遮瑕力偏弱，也有敏感肌的人覺得刺激"
+  ],
+  "reviewSource": "整理自 @cosme 心得（マシュマロフィニッシュパウダー Abloom）",
+  "ratingNote": "@cosme 評價 4.8（3,203 則心得）"
  },
  "arianakosume:10001906": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
@@ -2084,6 +2499,10 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/esteelauder/25holiday_07/"
    }
+  ],
+  "type": "set",
+  "howto": [
+   "直接塗在嘴唇上"
   ]
  },
  "brain-service:10000078": {
@@ -2092,13 +2511,34 @@
   "features": [
    "日本製",
    "可選「アイラッシュサポートジェル」9mL 或「ザ ブラック」8mL",
-   "樂天商品名稱提到嫁接睫毛也可以用"
+   "樂天商品名稱提到嫁接睫毛也可以用",
+   "嫁接睫毛也可以用，主要塗在睫毛上不是皮膚",
+   "開封後建議 2～3 個月內用完",
+   "賣家說明不含醫藥部外品的生髮成分"
   ],
   "sources": [
+   {
+    "name": "Beauty Garage 商品頁（Eyelash Support Gel 全成分）",
+    "url": "https://www.beautygarage.jp/p/110932"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/brain-service/10000078/"
    }
+  ],
+  "ingredients": [
+   "生物素三胜肽-1",
+   "乙醯四胜肽-3",
+   "十胜肽-4",
+   "神經醯胺",
+   "水解蠶絲",
+   "泛醇"
+  ],
+  "howto": [
+   "卸妝洗臉後、第一步使用",
+   "從睫毛根部往上刷，再轉一下刷頭刷睫毛上方",
+   "只刷一次，不要重複；避開眼尾",
+   "乾之前不要揉眼睛"
   ]
  },
  "brain-service:10000144": {
@@ -2112,61 +2552,160 @@
     "url": "https://item.rakuten.co.jp/brain-service/brain01/"
    }
   ],
-  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。"
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
+  "howto": [
+   "卸妝洗臉後使用，從睫毛根部往上刷",
+   "乾之前不要揉眼睛"
+  ]
  },
  "yayoi-cosme:10007685": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
   "features": [
    "資生堂 MAQuillAGE 的粉餅補充蕊",
    "全 8 色",
-   "賣家是資生堂認定店（樂天商品名稱標示）"
+   "賣家是資生堂認定店（樂天商品名稱標示）",
+   "SPF25／PA+++",
+   "慕斯做成的粉餅，自然光澤妝感",
+   "可以乾用也可以濕用",
+   "品牌標示（自家測試）持妝 13 小時"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/variations/1080825"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/yayoi-cosme/10369/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2023 名人堂"
+  ],
+  "ratingNote": "@cosme 評價 5.1（4,882 則心得）・@cosme 粉餅排行第 2 名",
+  "howto": [
+   "保養後使用，建議先擦有防曬的妝前乳",
+   "海綿按壓粉餅，從臉中央往外推",
+   "剩下的粉用在額頭、眼周、鼻子、嘴邊",
+   "也可以濕用：海綿沾濕擰乾後輕輕帶過粉餅表面"
+  ],
+  "reviews": [
+   "修飾毛孔，粉質滑順不乾",
+   "擦起來舒服、不太會乾",
+   "遮瑕力偏輕，天氣很熱時容易脫妝"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "maccosmetics:10001118": {
-  "skinNote": "彩妝商品。",
   "features": [
    "M·A·C「Lustreglass」系列",
-   "透明感、水光感的唇膏"
+   "透明感、水光感的唇膏",
+   "品牌說明玻璃般的光澤約維持 6 小時、顏色約 8 小時",
+   "輕盈的潤唇膏質地",
+   "共 35 色，3.5g 日本售價 ¥4,400"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（Syrup）",
+    "url": "https://www.cosme.net/variations/1252976/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/maccosmetics/88565-1/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.4（515 則心得）・@cosme 口紅排行第 4 名",
+  "ingredients": [
+   "荷荷芭籽油",
+   "覆盆子籽油",
+   "椰子油",
+   "橄欖油",
+   "乳油木果脂",
+   "玻尿酸鈉"
+  ],
+  "howto": [
+   "直接塗在嘴唇上，想要更顯色可以多疊幾層"
+  ],
+  "reviews": [
+   "顏色自然，有健康的光澤",
+   "塗一次就很顯色",
+   "藍調粉色可能讓膚色看起來暗沉，也有人覺得會沾杯"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "egawakikaku:10000078": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
   "features": [
    "SPF35／PA+++",
-   "有 FR、FN 等多個色號"
+   "有 FR、FN 等多個色號",
+   "粉霜質地，接觸皮膚會變成液狀",
+   "共 13 色",
+   "補充蕊日本售價約 ¥5,500，粉盒另售"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10027299/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/egawakikaku/493505903/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2020 粉霜類第 3 名"
+  ],
+  "ratingNote": "@cosme 評價 5.2（4,522 則心得）",
+  "ingredients": [
+   "膠原蛋白",
+   "無香料、無礦物油、無界面活性劑"
+  ],
+  "howto": [
+   "品牌頁面沒有提供詳細步驟；使用者建議用海綿上妝比較不厚重"
+  ],
+  "reviews": [
+   "遮斑點、暗沉的效果好",
+   "少量就能推很開，持妝度不錯",
+   "用手指或刷子容易厚重，也有人覺得偏乾、色號偏深"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "beautyforest2018:10000703": {
   "skinNote": "睫毛用的保養液，使用時避免進入眼睛，如有不適請停止使用。",
   "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
   "features": [
-   "2mL",
-   "有一般款和 Premium 2 種"
+   "日本 Almada Style 的睫毛美容液，2011 年推出、2024 年換包裝",
+   "2mL 日本售價 ¥6,050",
+   "@cosme 頁面沒有列出前列腺素類成分"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10041422/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/beautyforest2018/201218-001/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 5.2（884 則心得）",
+  "ingredients": [
+   "玻尿酸",
+   "銀杏葉萃取",
+   "葡萄籽萃取",
+   "無色素、無香料、無礦物油、無酒精"
+  ],
+  "howto": [
+   "使用者多是保養第一步，像畫眼線一樣塗在睫毛根部",
+   "一天一次",
+   "眉毛也可以使用"
+  ],
+  "reviews": [
+   "睫毛看起來比較有彈性、光澤",
+   "敏感肌也沒有癢或泛紅",
+   "價格偏高，塗太靠近眼睛會刺"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "brandshiseido:10000016": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
@@ -2207,81 +2746,221 @@
  "brandshiseido:10000172": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
   "features": [
-   "資生堂「Essence」系列的另一款粉底",
-   "樂天商品名稱提到主打毛孔等「雜訊」修飾"
+   "資生堂「Essence」系列的新粉底，2026 年 7 月發售",
+   "SPF30／PA+++",
+   "主打毛孔、出油不明顯的平滑妝感",
+   "30mL 日本售價 ¥7,590，玻璃瓶壓頭"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（220 Linen）",
+    "url": "https://www.cosme.net/variations/1251699/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/brandshiseido/smu0056/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 4.8（534 則心得）・@cosme 粉底液排行第 8 名",
+  "ingredients": [
+   "菸鹼醯胺",
+   "甲氧基肉桂酸乙基己酯（防曬成分）",
+   "維生素 E 醋酸酯",
+   "茶葉萃取"
+  ],
+  "howto": [
+   "使用前先搖勻",
+   "第一次使用要多壓幾次才會出來",
+   "用量太少防曬效果會不足，建議搭配防曬品"
+  ],
+  "reviews": [
+   "很快定妝，少量就能自然遮瑕",
+   "一整天不太脫妝，流汗也還好",
+   "色號比同系列淺，要注意選色"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "brandshiseido:10000151": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
   "features": [
-   "資生堂「Essence」系列的蜜粉",
-   "樂天商品名稱提到幫助維持妝容"
+   "超細緻的蜜粉，附粉撲",
+   "色號：01 光澤、02 霧面、03 粉色光澤",
+   "品牌標示（自家測試）控油最長 12 小時",
+   "7g 日本售價 ¥5,500"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10276467/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/brandshiseido/smu0053/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 下半年 最佳新品蜜粉第 1 名"
+  ],
+  "ratingNote": "@cosme 評價 5.3（2,449 則心得）・@cosme 蜜粉排行第 3 名",
+  "howto": [
+   "用附的粉撲輕壓網層取粉",
+   "輕拍在臉上",
+   "用完把內層托盤推回原位"
+  ],
+  "reviews": [
+   "服貼，越到後面毛孔越不明顯",
+   "粉撲蓬鬆、包裝有質感",
+   "剛上完有點粉感，霧面款光澤感比較少"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "sk-ii:10003757": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
   "features": [
-   "SK-II 的 CC 妝前乳，有防曬係數（SPF50+／PA++++）",
-   "30g／50g"
+   "SK-II 的 CC 妝前乳，一步完成妝前、自然遮瑕、保濕、提亮、防曬",
+   "SPF50+／PA++++",
+   "色號：自然膚色、玫瑰粉、薄荷綠（修飾泛紅）",
+   "30g 日本售價 ¥9,900，另有 50g"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（Natural Beige）",
+    "url": "https://www.cosme.net/variations/1200493/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/sk-ii/gccr/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 BB／CC 霜類"
+  ],
+  "ratingNote": "@cosme 評價 5.6（4,281 則心得）・@cosme CC 霜排行第 1 名",
+  "ingredients": [
+   "PITERA™",
+   "菸鹼醯胺",
+   "紅沒藥醇"
+  ],
+  "howto": [
+   "取珍珠大小，點在額頭、兩頰、下巴",
+   "用無名指和中指從中央往外推開，再用手掌按壓",
+   "想要打亮可以在太陽穴、眉間、鼻頭少量疊擦"
+  ],
+  "reviews": [
+   "好推開、流汗也不太脫妝",
+   "修飾毛孔和膚色不均，輕薄到可以不用蜜粉",
+   "味道比較明顯，天氣熱時容易顯得油亮"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "kobe-beauty-labo:10002511": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
   "useNote": "📌 日本「醫藥部外品」粉底。本站只整理商品資料，不代表效果。",
   "features": [
    "日本「醫藥部外品」的高遮瑕粉底",
-   "樂天週間排行第 1 名（賣家標示）"
+   "樂天週間排行第 1 名（賣家標示）",
+   "日本 I-ne 的品牌，2023 年 9 月發售",
+   "含吸油粉體，戴口罩也比較不容易脫妝（品牌說明）",
+   "20g 日本售價 ¥5,979"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10245581/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/kobe-beauty-labo/wrf007/"
    }
-  ]
+  ],
+  "ratingNote": "@cosme 評價 4.2（15 則心得）",
+  "ingredients": [
+   "菸鹼醯胺（有效成分）",
+   "植物萃取",
+   "矽靈類"
+  ],
+  "howto": [
+   "保養後使用",
+   "取 2.5～3 顆珍珠大小，點在額頭、兩頰、鼻子、下巴",
+   "從臉中央往外推開，需要遮的地方少量疊擦"
+  ],
+  "reviews": [
+   "遮斑點、痘疤效果好，少量就夠",
+   "妝感自然不厚重",
+   "有人覺得色號偏暗；價格偏高"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "masayosiryouhin:10004070": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
   "features": [
    "佳麗寶每年推出的「米蘭系列」限定蜜粉",
-   "這是 2026 年版的補充蕊，24g"
+   "這是 2026 年版的補充蕊，24g",
+   "2025 年 11 月 22 日發售的限量版本（24g）"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁（2026 24g）",
+    "url": "https://www.cosme.net/variations/1208953/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/masayosiryouhin/milano-rf/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2026 上半年 最佳新品蜜粉第 2 名"
+  ],
+  "ratingNote": "@cosme 評價 5.8（67 則心得）",
+  "ingredients": [
+   "玻尿酸鈉",
+   "蜂王漿萃取",
+   "染井吉野櫻葉萃取",
+   "香料"
+  ],
+  "howto": [
+   "用附的粉撲沾粉，輕壓在臉上；補妝時也可以使用"
+  ],
+  "reviews": [
+   "粉很細、不厚重但有遮瑕力",
+   "補妝時能壓住出油",
+   "粉壓得很緊，皮膚薄的人可能覺得有妝感"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "yslbeauty:10000427": {
   "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
   "features": [
    "YSL「Loveshine」系列的唇蜜",
-   "樂天商品名稱提到能修飾唇紋、讓嘴唇看起來豐潤"
+   "樂天商品名稱提到能修飾唇紋、讓嘴唇看起來豐潤",
+   "6mL，共 19 款（含亮片、限定色）"
   ],
   "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10274050/"
+   },
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/yslbeauty/ww-51430ysl/"
    }
-  ]
+  ],
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 豐唇彩妝第 3 名"
+  ],
+  "ratingNote": "@cosme 評價 5.5（1,175 則心得）",
+  "ingredients": [
+   "薑根油（帶來溫熱、刺刺的感覺）"
+  ],
+  "howto": [
+   "可以單擦，也可以疊在口紅上或當打底"
+  ],
+  "reviews": [
+   "嘴唇看起來豐潤、滋潤",
+   "包裝和亮片很漂亮",
+   "刺刺的感覺明顯，敏感的人可能受不了；有人覺得亮片有點顆粒感"
+  ],
+  "reviewSource": "整理自 @cosme 心得"
  },
  "4843-64:10000499": {
   "skinNote": "睫毛用的保養液，使用時避免進入眼睛，如有不適請停止使用。",
@@ -2321,10 +3000,13 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/tirtir/444-468_ad/"
    }
-  ]
+  ],
+  "howto": [
+   "用附的氣墊粉撲沾粉，從臉中央往外輕拍"
+  ],
+  "type": "set"
  },
  "rakuten24:11128644": {
-  "skinNote": "衣物用洗衣精。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。",
   "features": [
    "花王 Attack 抗菌EX 系列，台灣的名稱是「一匙靈 抗菌EX」（台灣版配方可能和日本版不同）",
@@ -2356,7 +3038,6 @@
   "_同": "rakuten24:11128644"
  },
  "rakuten24:11348605": {
-  "skinNote": "衣物用洗衣精。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。",
   "features": [
    "Attack 抗菌EX 的室內晾衣款，台灣名稱「一匙靈 抗菌EX 室內晾衣」（台灣版配方可能不同）",
@@ -2376,7 +3057,6 @@
   "_同": "rakuten24:11348605"
  },
  "rakutensokuhaimart:10042602": {
-  "skinNote": "衣物用洗衣精。",
   "features": [
    "花王 Attack ZERO 系列",
    "2300g 大容量補充包"
@@ -2392,7 +3072,6 @@
   ]
  },
  "rakutensokuhaimart:10042757": {
-  "skinNote": "衣物用洗衣精。",
   "features": [
    "花王 Attack ZERO 系列",
    "2300g 大容量補充包"
@@ -2408,7 +3087,6 @@
   ]
  },
  "rakuten24:11228829": {
-  "skinNote": "衣物用洗衣產品。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。 ⚠️ 洗衣球請放在小孩、寵物拿不到的地方，避免誤食。",
   "features": [
    "P&G Ariel 洗衣球 PRO",
@@ -2428,7 +3106,6 @@
   ]
  },
  "rakuten24:11319035": {
-  "skinNote": "衣物用洗衣產品。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。 ⚠️ 洗衣球請放在小孩、寵物拿不到的地方，避免誤食。",
   "features": [
    "P&G Ariel 洗衣球 PRO 的室內晾衣、運動衣物款",
@@ -2447,7 +3124,6 @@
   ]
  },
  "rakuten24:11279561": {
-  "skinNote": "衣物用洗衣產品。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。",
   "features": [
    "P&G Ariel 液體洗衣精",
@@ -2464,7 +3140,6 @@
   ]
  },
  "rakuten24:11163653": {
-  "skinNote": "衣物用洗衣產品。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。",
   "features": [
    "P&G Ariel 液體洗衣精",
@@ -2482,7 +3157,6 @@
   ]
  },
  "rakuten24:11279568": {
-  "skinNote": "衣物用洗衣產品。",
   "useNote": "⚠️ 洗衣球請放在小孩、寵物拿不到的地方，避免誤食。",
   "features": [
    "P&G Bold 洗衣球，洗衣和柔軟一次完成",
@@ -2523,7 +3197,6 @@
   "_同": "rakuten24:11342601"
  },
  "rakuten24:11223013": {
-  "skinNote": "衣物用柔軟精。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。",
   "features": [
    "P&G「さらさ」系列的柔軟精",
@@ -2540,7 +3213,6 @@
   ]
  },
  "rakuten24:11224272": {
-  "skinNote": "衣物用柔軟精。",
   "features": [
    "P&G Lenor 超消臭系列",
    "這個商品頁可以選 1 種香味"
@@ -2557,7 +3229,6 @@
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。"
  },
  "rakutensokuhaimart:10025930": {
-  "skinNote": "衣物用柔軟精。",
   "features": [
    "花王 Flair Fragrance「IROKA」系列",
    "「Naked Lily」香味",
@@ -2574,7 +3245,6 @@
   ]
  },
  "rakuten24:11148574": {
-  "skinNote": "衣物用柔軟精。",
   "features": [
    "花王 Flair Fragrance「IROKA」系列",
    "這個商品頁可以選 1 種香味",
@@ -2592,7 +3262,6 @@
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。"
  },
  "matinozakka:10022764": {
-  "skinNote": "衣物用柔軟精。",
   "features": [
    "FaFa「Fine Fragrance」的 HOMME（男性香調）款"
   ],
@@ -2607,7 +3276,6 @@
   ]
  },
  "cosmebox:10054192": {
-  "skinNote": "衣物用柔軟精。",
   "features": [
    "FaFa「Fine Fragrance」的 HOMME（男性香調）款",
    "特大 1400mL",
@@ -2624,7 +3292,6 @@
   ]
  },
  "naturelab:10006909": {
-  "skinNote": "衣物用柔軟精。",
   "features": [
    "Laundrin 的經典花香「Classic Floral」",
    "4 倍大小的補充包（1920mL）3 袋"
@@ -2660,7 +3327,6 @@
   ]
  },
  "k-relight:10001303": {
-  "skinNote": "居家清潔用品。",
   "useNote": "🔥 酒精濃度高，使用時遠離火源。",
   "features": [
    "酒精濃度 77%（體積比），以釀造用酒精和純水製成",
@@ -2685,7 +3351,6 @@
   ]
  },
  "tv-ya:10002730": {
-  "skinNote": "居家清潔用品。",
   "useNote": "⚠️ 不要和含氯的清潔劑混用；使用時戴手套。",
   "features": [
    "弱鹼性的氧系漂白清潔劑",
@@ -2703,7 +3368,6 @@
   ]
  },
  "rakutensokuhaimart:10040432": {
-  "skinNote": "居家清潔用品。",
   "useNote": "⚠️ 含氯產品：不要和酸性或氧系清潔劑混用，使用時保持通風。",
   "features": [
    "日立原廠的含氯洗衣槽清潔劑",
@@ -2724,7 +3388,6 @@
   ]
  },
  "livingut:10238878": {
-  "skinNote": "居家清潔用品。",
   "features": [
    "泡沫噴霧型的洗衣槽清潔劑，220mL",
    "樂天商品名稱標示只適用直立式洗衣機"
@@ -2740,7 +3403,6 @@
   ]
  },
  "rakuten24:11338331": {
-  "skinNote": "衣物用洗衣精。",
   "useNote": "📦 這是大容量多件組，重量很重。日本樂天大多不寄台灣，需要用代購或轉運；台灣也有販售的話，在台灣買通常比較划算。",
   "features": [
    "日本シャボン玉石けん的皂基洗衣精",
@@ -2780,7 +3442,10 @@
     "url": "https://item.rakuten.co.jp/auc-epsomsalt/esc-10kg/"
    }
   ],
-  "useNote": "📦 很重（約 9～10 公斤），日本樂天大多不寄台灣，需要用代購或轉運。"
+  "useNote": "📦 很重（約 9～10 公斤），日本樂天大多不寄台灣，需要用代購或轉運。",
+  "ingredients": [
+   "硫酸鎂"
+  ]
  },
  "auc-epsomsalt:10000212": {
   "skinNote": "泡澡用品。皮膚有傷口或不適時避免使用。",
@@ -2806,7 +3471,10 @@
     "url": "https://item.rakuten.co.jp/auc-epsomsalt/10000212/"
    }
   ],
-  "useNote": "📦 很重（約 9～10 公斤），日本樂天大多不寄台灣，需要用代購或轉運。"
+  "useNote": "📦 很重（約 9～10 公斤），日本樂天大多不寄台灣，需要用代購或轉運。",
+  "ingredients": [
+   "硫酸鎂"
+  ]
  },
  "libertylife:10000488": {
   "skinNote": "泡澡用品。皮膚有傷口或不適時避免使用。",
@@ -2831,6 +3499,10 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/libertylife/201019-2/"
    }
+  ],
+  "ingredients": [
+   "硫酸鎂",
+   "香料（有香味的款式）"
   ]
  },
  "ganentonya:10000161": {
@@ -2857,6 +3529,9 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/ganentonya/bathsalt-pink-wakeari-0302/"
    }
+  ],
+  "ingredients": [
+   "硫酸鎂"
   ]
  },
  "ganentonya:10000166": {
@@ -2883,7 +3558,10 @@
     "url": "https://item.rakuten.co.jp/ganentonya/sl-370/"
    }
   ],
-  "useNote": "📦 很重（約 9～10 公斤），日本樂天大多不寄台灣，需要用代購或轉運。"
+  "useNote": "📦 很重（約 9～10 公斤），日本樂天大多不寄台灣，需要用代購或轉運。",
+  "ingredients": [
+   "硫酸鎂"
+  ]
  },
  "sleepdays:10000013": {
   "skinNote": "泡澡用品，無色素、無香料。",
@@ -2919,7 +3597,6 @@
   ]
  },
  "miraiblue:10000056": {
-  "skinNote": "泡澡・沐浴用品。",
   "features": [
    "Mirable（ミラブル）系列的蓮蓬頭，日本正規品"
   ],
@@ -2929,10 +3606,10 @@
     "url": "https://item.rakuten.co.jp/miraiblue/j00000235/"
    }
   ],
-  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。"
+  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。",
+  "type": "tool"
  },
  "mtgec-beauty:10002177": {
-  "skinNote": "泡澡・沐浴用品。",
   "features": [
    "ReFa（MTG）的微細氣泡蓮蓬頭",
    "樂天商品名稱提到節水、寵物洗澡也能用"
@@ -2943,10 +3620,10 @@
     "url": "https://item.rakuten.co.jp/mtgec-beauty/1579320101/"
    }
   ],
-  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。"
+  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。",
+  "type": "tool"
  },
  "mikirona:10000092": {
-  "skinNote": "泡澡・沐浴用品。",
   "features": [
    "6 種出水模式、手邊止水",
    "樂天商品名稱提到節水、除氯"
@@ -2957,10 +3634,10 @@
     "url": "https://item.rakuten.co.jp/mikirona/s-hs-11/"
    }
   ],
-  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。"
+  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。",
+  "type": "tool"
  },
  "ennshopstore:10000072": {
-  "skinNote": "泡澡・沐浴用品。",
   "features": [
    "樂天商品名稱提到美髮師監修、除氯、節水"
   ],
@@ -2970,10 +3647,10 @@
     "url": "https://item.rakuten.co.jp/ennshopstore/b1hs13/"
    }
   ],
-  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。"
+  "useNote": "🔧 蓮蓬頭接頭規格請先確認和台灣家裡的水管是否相容。",
+  "type": "tool"
  },
  "stylife:15932151": {
-  "skinNote": "泡澡・沐浴用品。",
   "features": [
    "Francfranc 2026 年聖誕倒數月曆，數量限定",
    "24 件身體保養、口腔保養、入浴劑小物"
@@ -2983,10 +3660,10 @@
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/stylife/tb1750/"
    }
-  ]
+  ],
+  "type": "set"
  },
  "koyama-p:10012324": {
-  "skinNote": "泡澡・沐浴用品。",
   "features": [
    "德國 Kneipp 的浴鹽",
    "850g 3 罐，香味任選"
@@ -2999,6 +3676,150 @@
   ],
   "howto": [
    "在放好熱水的浴缸加入適量，攪拌溶解（用量請看包裝）"
+  ]
+ },
+ "kobe-beauty-labo:10002820": {
+  "type": "device",
+  "skinNote": "美容按摩器。皮膚有傷口或發炎時避免使用。",
+  "useNote": "🔋 不需要充電，在台灣可以直接用。",
+  "features": [
+   "筆型臉部按摩器，日本售價 ¥13,200",
+   "一端是彈簧按壓頭，一端是像拇指形狀的刮痧頭",
+   "品牌說明含微電流（幾乎沒有感覺）",
+   "不需要充電，也不用把臉弄濕",
+   "重量約 55g，按壓頭和刮痧頭是醫療級不鏽鋼",
+   "獲日經 Trendy「2026 上半年熱門商品大賞」雜貨部門"
+  ],
+  "howto": [
+   "依說明書用「按壓、推、提拉」的方式在臉上使用"
+  ],
+  "sources": [
+   {
+    "name": "SALONIA 新聞稿（PR TIMES）",
+    "url": "https://prtimes.jp/main/html/rd/p/000000954.000012002.html"
+   }
+  ]
+ },
+ "ntvshop:10008706": {
+  "type": "device",
+  "skinNote": "EMS 美容儀。裝心律調整器等醫療電子儀器的人不能使用；正在接受治療的人請先問醫師。",
+  "useNote": "🔋 USB Type-C 充電（5V），在台灣用一般 USB 充電頭就能充電。",
+  "features": [
+   "眼周用的 EMS 美容儀，另有約 39°C 溫熱和紅光 LED（只在大電極）",
+   "3 種模式：Eye、Spa、Lift",
+   "大電極用在眼下，小電極用在提拉",
+   "充電約 2.5 小時，可用約 1 小時",
+   "約 75g，日本售價 ¥18,700（這個是日本電視購物的特別組）"
+  ],
+  "howto": [
+   "在素顏、沒有戴飾品的狀態下使用",
+   "Eye、Spa 模式一次約 6 分鐘，Lift 模式約 10 分鐘，會自動關機",
+   "Lift 模式也可以用在嘴邊、額頭、下顎線、脖子"
+  ],
+  "sources": [
+   {
+    "name": "ANA Mall 商品頁（規格）",
+    "url": "https://anamall.ana.co.jp/shop/g/g0002-AR2859/"
+   }
+  ]
+ },
+ "veramoreofficial:10000146": {
+  "type": "set",
+  "skinNote": "含微針（海綿骨針）成分，擦的時候會刺刺的；敏感肌、異位性皮膚的人要特別注意。",
+  "features": [
+   "VERAMORE 的 3 件夜間保養組，主角是「スピキュール 300 セラム」",
+   "精華含微針（水解海綿）",
+   "另含 AHA、PHA、LHA"
+  ],
+  "ingredients": [
+   "水解海綿（微針）",
+   "菸鹼醯胺",
+   "腺苷",
+   "膠原蛋白",
+   "AHA、PHA、LHA"
+  ],
+  "howto": [
+   "取適量輕輕抹在肌膚上，不要用力搓"
+  ],
+  "reviews": [
+   "質地吸收快，持續用肌膚比較滑",
+   "擦的時候刺刺感明顯，有異位性皮膚的人覺得受不了"
+  ],
+  "reviewSource": "整理自 @cosme 心得（スピキュール300セラム）",
+  "sources": [
+   {
+    "name": "@cosme 商品頁（スピキュール300セラム）",
+    "url": "https://www.cosme.net/products/10288693/"
+   }
+  ]
+ },
+ "larocheposay:10000039": {
+  "skinNote": "品牌說明經過敏感肌測試（不代表每個人都不會不適）。",
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 妝前乳類第 1 名（Rose+）"
+  ],
+  "ratingNote": "@cosme 評價 5.4（4,759 則心得，Rose+）",
+  "features": [
+   "樂天限定組，可以選 Rose+、White、Clear、Tint 等款",
+   "SPF50+／PA++++",
+   "30mL 本體，加人氣試用品",
+   "無香料、無 Paraben"
+  ],
+  "ingredients": [
+   "抗壞血酸葡糖苷（維生素 C 衍生物）",
+   "生育酚（維生素 E）",
+   "辛醯水楊酸（LHA）",
+   "二氧化鈦等防曬成分"
+  ],
+  "howto": [
+   "取珍珠大小，點在額頭、鼻子、兩頰、下巴",
+   "由中間往外推開，眼周和嘴邊也要擦到",
+   "兩頰和 T 字部位可以再疊一層",
+   "用肥皂或洗面乳就能卸掉"
+  ],
+  "reviews": [
+   "提亮、有光澤，很適合當妝前",
+   "不會乾"
+  ],
+  "reviewSource": "整理自 @cosme 心得（Rose+）",
+  "sources": [
+   {
+    "name": "@cosme 商品頁（Rose+ 30mL）",
+    "url": "https://www.cosme.net/variations/1194668/"
+   }
+  ]
+ },
+ "hugkumi:10000426": {
+  "skinNote": "含微針，擦的時候可能會刺刺的；敏感肌請先在小範圍測試。",
+  "ratingNote": "@cosme 評價 5.7（549 則心得）",
+  "features": [
+   "微針精華，結合維生素 C 和壬二酸",
+   "單次使用的小包裝",
+   "品牌說明微針約 72 小時會隨老廢角質代謝掉",
+   "2025 年 8 月發售，日本售價 ¥4,980"
+  ],
+  "ingredients": [
+   "抗壞血酸（維生素 C）",
+   "壬二酸",
+   "積雪草葉萃取",
+   "薏仁來源成分"
+  ],
+  "howto": [
+   "洗臉、擦完化妝水後使用",
+   "把小包壓一壓，取適量輕輕推開，避開眼睛和嘴巴",
+   "不要用力搓，剩下的不要留著下次用"
+  ],
+  "reviews": [
+   "單次包裝方便帶出門",
+   "質地清爽不黏",
+   "有人覺得刺痛感明顯"
+  ],
+  "reviewSource": "整理自 @cosme 心得",
+  "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10280628/"
+   }
   ]
  }
 }
