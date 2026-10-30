@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ruri IG 貼文製作</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+  :root { --bg:#F6F4FF; --ink:#221E3A; --muted:#6E6888; --line:#E6E1F7; --ruri:#3F5BD8; --pink:#FF5C93; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif; }
+  .wrap { max-width:1100px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-family:"Zen Maru Gothic",sans-serif; font-weight:900; margin:0 0 4px; font-size:28px; }
+  .sub { color:var(--muted); margin:0 0 18px; font-size:14px; }
+  .panel { background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; display:grid; gap:14px; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .row > b { width:72px; font-size:14px; flex:none; }
+  .chip { border:1px solid var(--line); background:var(--bg); border-radius:999px; padding:6px 14px; cursor:pointer; font:inherit; font-size:14px; }
+  .chip[aria-pressed="true"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .btn { border:0; background:var(--ruri); color:#fff; font:inherit; font-weight:700; padding:10px 16px; border-radius:12px; cursor:pointer; }
+  .btn.ghost { background:#fff; color:var(--ink); border:1px solid var(--line); }
+  .btn.pink { background:var(--pink); }
+  .slides { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; margin-top:18px; }
+  .slide { background:#fff; border:1px solid var(--line); border-radius:12px; padding:8px; display:grid; gap:6px; }
+  .slide canvas { width:100%; height:auto; border-radius:8px; display:block; background:#eee; }
+  .slide button { font-size:13px; padding:6px; }
+  textarea { width:100%; min-height:260px; border:1px solid var(--line); border-radius:12px; padding:12px; font:inherit; font-size:14px; line-height:1.6; }
+  .actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .note { font-size:13px; color:var(--muted); background:#fff; border:1px dashed var(--line); border-radius:12px; padding:10px 12px; margin-top:14px; line-height:1.7; }
+  h2 { font-size:18px; margin:26px 0 8px; }
+  .toast { position:fixed; left:50%; bottom:20px; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:10px; font-size:14px; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>IG 貼文製作</h1>
+  <p class="sub">選好排行和張數，就會自動做出輪播圖和貼文文字。圖片可以一張張下載，手機可以直接分享到 IG。</p>
+
+  <div class="panel">
+    <div class="row"><b>排行</b><span id="src"></span></div>
+    <div class="row"><b>幾個商品</b><span id="cnt"></span></div>
+    <div class="row"><b>尺寸</b><span id="fmt"></span></div>
+    <div class="row"><b>標題</b><input id="title" style="flex:1;min-width:200px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:inherit"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn pink" id="share" hidden>📱 分享到 IG（手機）</button>
+    <button class="btn" id="dlall">⬇ 全部下載（zip）</button>
+  </div>
+
+  <div class="slides" id="slides"></div>
+
+  <h2>貼文文字</h2>
+  <textarea id="caption"></textarea>
+  <div class="actions"><button class="btn" id="copy">複製貼文文字</button></div>
+
+  <div class="note">
+    ・圖片沒有放商品照片：商品照片的著作權屬於品牌和賣家，發在 IG 上可能有侵權風險，所以只用文字排版。<br>
+    ・商品特色取自網站的「商品特色」，已經避開療效字眼；如果自己修改文字，記得不要寫「治療、消除、生髮、美白淡斑」這類宣稱。<br>
+    ・貼文含分潤連結時，台灣規定要讓讀者知道是業配或分潤，文字最後已經附上說明，請不要刪掉。
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+  const SITE = "ruri-1124.github.io/ruri";
+  const IG = "@ruri_112424";
+  const JPY_TO_TWD = 0.21;
+  const SOURCES = [
+    { key: "beauty",   label: "今日熱門", head: "今天日本人都在買", tag: "日本熱賣", groups: ["beauty"] },
+    { key: "skincare", label: "保養",     head: "日本保養排行",     tag: "日本保養", groups: ["skincare"] },
+    { key: "makeup",   label: "彩妝",     head: "日本彩妝排行",     tag: "日本彩妝", groups: ["makeup"] },
+    { key: "hair",     label: "髮品",     head: "日本髮品排行",     tag: "日本髮品", groups: ["hair"] },
+    { key: "device",   label: "美容家電", head: "日本美容家電排行", tag: "日本美容家電", groups: ["device"] },
+    { key: "daily",    label: "日用品",   head: "日本日用品排行",   tag: "日本日用品", groups: ["laundry", "bath"] },
+    { key: "month",    label: "本月熱門", head: "這個月日本人都在買", tag: "日本熱賣", groups: ["beauty"], month: true }
+  ];
+  const KR = ["韓国", "mileda", "Anua", "AESTURA", "TIRTIR", "BIOHEAL", "MEDIHEAL", "rom&nd", "CLIO", "COSRX", "innisfree", "numbuzin", "Torriden", "SKIN1004", "KUNDAL", "cepoLAB"];
+  const state = { src: "beauty", n: 5, fmt: "post" };
+  let LATEST, MONTH, LABELS = {}, DETAILS = {};
+
+  const esc = s => String(s ?? "");
+  const detail = id => { const d = DETAILS[id]; return d && d._同 ? DETAILS[d._同] : d; };
+  const cleanName = s => s.replace(/[【［\[≪《＼★◆<＜].*?[】］\]≫》／★◆>＞]/g, " ").replace(/\s+/g, " ").trim().slice(0, 30);
+
+  function items() {
+    const s = SOURCES.find(x => x.key === state.src);
+    const pool = s.month ? MONTH.groups : LATEST.groups;
+    const seen = new Set(), out = [];
+    for (const g of s.groups) for (const r of (pool[g] || []).slice().sort((a, b) => a.rank - b.rank)) {
+      const L = LABELS[r.itemCode] || {};
+      if (r.exclude || L.noTW || seen.has(r.itemCode)) continue;
+      const country = L.country || (KR.some(w => r.itemName.includes(w)) ? "韓國" : "日本");
+      if (country === "韓國") continue;
+      // 同一個商品不同賣家只留一個
+      const d = DETAILS[r.itemCode]; const root = d && d._同 ? d._同 : r.itemCode;
+      if (seen.has(root)) continue;
+      seen.add(r.itemCode); seen.add(root);
+      const D = detail(r.itemCode) || {};
+      out.push({
+        id: r.itemCode, rank: out.length + 1,
+        brand: (L.brand || r.shopName || "").replace(/【.*?】|楽天市場店|公式/g, "").trim(),
+        name: L.twName || L.jpName || cleanName(r.itemName), desc: L.desc || "",
+        price: r.price, rating: r.rating, reviews: r.reviews,
+        feats: (D.features || []).filter(f => f.length <= 34).slice(0, 2), skin: D.skin || []
+      });
+      if (out.length >= state.n) break;
+    }
+    return out;
+  }
+
+  // ===== 畫圖 =====
+  const W = 1080;
+  const H = () => state.fmt === "post" ? 1350 : 1920;
+  const FONT = '"Noto Sans TC", sans-serif', ROUND = '"Zen Maru Gothic", "Noto Sans TC", sans-serif';
+
+  function wrap(ctx, text, x, y, maxW, lh, maxLines) {
+    let line = "", lines = [];
+    for (const ch of text) {
+      if (ctx.measureText(line + ch).width > maxW && line) { lines.push(line); line = ch; } else line += ch;
+    }
+    if (line) lines.push(line);
+    if (lines.length > maxLines) { lines = lines.slice(0, maxLines); lines[maxLines - 1] = lines[maxLines - 1].slice(0, -1) + "…"; }
+    lines.forEach((l, i) => ctx.fillText(l, x, y + i * lh));
+    return lines.length * lh;
+  }
+  function rr(ctx, x, y, w, h, r, fill) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); ctx.fillStyle = fill; ctx.fill(); }
+  function bird(ctx, x, y, s) {   // 小鳥 logo
+    ctx.save(); ctx.translate(x, y); ctx.scale(s / 400, s / 400);
+    ctx.strokeStyle = "#3F5BD8"; ctx.lineWidth = 16; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.beginPath(); ctx.ellipse(190, 205, 112, 100, 0, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(80, 200); ctx.lineTo(36, 172); ctx.moveTo(80, 216); ctx.lineTo(32, 222); ctx.moveTo(164, 306); ctx.lineTo(160, 330); ctx.moveTo(206, 306); ctx.lineTo(210, 330); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(248, 120); ctx.quadraticCurveTo(262, 92, 288, 100); ctx.stroke();
+    ctx.fillStyle = "#FFB020"; ctx.beginPath(); ctx.moveTo(298, 168); ctx.lineTo(330, 180); ctx.lineTo(298, 192); ctx.closePath(); ctx.fill(); ctx.lineWidth = 10; ctx.stroke();
+    ctx.fillStyle = "#3F5BD8"; ctx.beginPath(); ctx.arc(256, 168, 12, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#FF8FB8"; ctx.beginPath(); ctx.ellipse(268, 198, 13, 8, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#3F5BD8"; ctx.font = `700 100px ${FONT}`; ctx.textAlign = "center"; ctx.fillText("瑠", 182, 248);
+    ctx.restore();
+  }
+  function frame(ctx, h) {
+    ctx.fillStyle = "#F6F4FF"; ctx.fillRect(0, 0, W, h);
+    ctx.fillStyle = "#E8ECFF"; ctx.beginPath(); ctx.arc(W - 60, 80, 220, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#FFE6EF"; ctx.beginPath(); ctx.arc(40, h - 60, 200, 0, Math.PI * 2); ctx.fill();
+    bird(ctx, 56, h - 140, 96);
+    ctx.textAlign = "left"; ctx.fillStyle = "#3F5BD8"; ctx.font = `900 40px ${ROUND}`; ctx.fillText("ruri", 160, h - 78);
+    ctx.fillStyle = "#6E6888"; ctx.font = `500 26px ${FONT}`; ctx.fillText("日韓熱賣情報站  " + IG, 250, h - 80);
+  }
+  function dateText() { const d = (LATEST.updated || "").slice(0, 10); return d ? `${+d.slice(5, 7)}/${+d.slice(8, 10)}` : ""; }
+
+  function cover(ctx, list, h) {
+    frame(ctx, h);
+    const s = SOURCES.find(x => x.key === state.src);
+    ctx.textAlign = "left";
+    ctx.fillStyle = "#FF5C93"; ctx.font = `700 38px ${FONT}`; ctx.fillText(`日本樂天排行・${dateText()} 更新`, 90, h * 0.24);
+    ctx.fillStyle = "#221E3A"; ctx.font = `900 104px ${ROUND}`;
+    const used = wrap(ctx, document.getElementById("title").value || s.head, 90, h * 0.24 + 130, W - 180, 128, 3);
+    ctx.fillStyle = "#3F5BD8"; ctx.font = `900 150px ${ROUND}`; ctx.fillText(`TOP ${list.length}`, 86, h * 0.24 + 130 + used + 50);
+    let y = h * 0.24 + used + 300;
+    ctx.font = `700 34px ${FONT}`;
+    list.slice(0, 5).forEach((p, i) => { ctx.fillStyle = "#6E6888"; ctx.fillText(`${i + 1}. ${p.brand}`.slice(0, 28), 96, y + i * 54); });
+    ctx.fillStyle = "#221E3A"; ctx.font = `700 34px ${FONT}`; ctx.textAlign = "right"; ctx.fillText("往左滑 →", W - 80, h - 80);
+  }
+
+  function product(ctx, p, h) {
+    frame(ctx, h);
+    const top = state.fmt === "post" ? 110 : 260;
+    ctx.textAlign = "left";
+    const color = ["#F2A900", "#9AA3B5", "#D98146"][p.rank - 1] || "#221E3A";
+    ctx.fillStyle = color; ctx.font = `900 220px ${ROUND}`; ctx.fillText(String(p.rank), 80, top + 190);
+    const rw = ctx.measureText(String(p.rank)).width;
+    ctx.font = `700 48px ${FONT}`; ctx.fillStyle = "#6E6888"; ctx.fillText("名", 80 + rw + 14, top + 190);
+    rr(ctx, 70, top + 240, W - 140, h - top - 440, 36, "#FFFFFF");
+    let y = top + 320; const x = 120, mw = W - 240;
+    ctx.fillStyle = "#3F5BD8"; ctx.font = `700 36px ${FONT}`; y += wrap(ctx, p.brand, x, y, mw, 46, 1) + 20;
+    ctx.fillStyle = "#221E3A"; ctx.font = `900 60px ${FONT}`; y += wrap(ctx, p.name, x, y, mw, 76, 3) + 6;
+    if (p.desc) { ctx.fillStyle = "#6E6888"; ctx.font = `500 36px ${FONT}`; y += wrap(ctx, p.desc, x, y, mw, 48, 2) + 18; }
+    if (p.skin.length) { ctx.fillStyle = "#1A7A63"; ctx.font = `700 32px ${FONT}`; y += wrap(ctx, "適合：" + p.skin.join("、"), x, y, mw, 44, 1) + 14; }
+    ctx.font = `500 34px ${FONT}`;
+    for (const f of p.feats) { ctx.fillStyle = "#FF5C93"; ctx.fillText("●", x, y); ctx.fillStyle = "#221E3A"; y += wrap(ctx, f, x + 44, y, mw - 44, 46, 2) + 12; }
+    const by = h - top - 260 + (state.fmt === "post" ? 0 : -60);
+    ctx.strokeStyle = "#E6E1F7"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x, by - 60); ctx.lineTo(x + mw, by - 60); ctx.stroke();
+    ctx.fillStyle = "#221E3A"; ctx.font = `900 64px ${FONT}`; ctx.fillText("¥" + p.price.toLocaleString("ja-JP"), x, by + 10);
+    ctx.fillStyle = "#6E6888"; ctx.font = `500 32px ${FONT}`; ctx.fillText("約台幣 NT$" + Math.round(p.price * JPY_TO_TWD).toLocaleString("zh-TW"), x, by + 60);
+    if (p.rating) { ctx.textAlign = "right"; ctx.fillStyle = "#F5A623"; ctx.font = `900 48px ${FONT}`; ctx.fillText("★ " + p.rating.toFixed(1), x + mw, by + 10);
+      ctx.fillStyle = "#6E6888"; ctx.font = `500 28px ${FONT}`; ctx.fillText(p.reviews.toLocaleString() + " 則評價", x + mw, by + 56); }
+  }
+
+  function ending(ctx, h) {
+    frame(ctx, h);
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#221E3A"; ctx.font = `900 84px ${ROUND}`; ctx.fillText("想看成分、用法", W / 2, h * 0.32); ctx.fillText("和哪裡買？", W / 2, h * 0.32 + 110);
+    rr(ctx, 140, h * 0.32 + 190, W - 280, 150, 75, "#3F5BD8");
+    ctx.fillStyle = "#fff"; ctx.font = `900 52px ${FONT}`; ctx.fillText("點主頁連結 → ruri", W / 2, h * 0.32 + 285);
+    ctx.fillStyle = "#6E6888"; ctx.font = `500 36px ${FONT}`; ctx.fillText(SITE, W / 2, h * 0.32 + 420);
+    ctx.fillStyle = "#FF5C93"; ctx.font = `700 42px ${FONT}`; ctx.fillText("♥ 收藏這篇，去日本前再看一次", W / 2, h * 0.32 + 540);
+  }
+
+  const canvases = [];
+  async function render() {
+    await document.fonts.ready;
+    const list = items(), h = H();
+    const box = document.getElementById("slides"); box.innerHTML = ""; canvases.length = 0;
+    const jobs = [ctx => cover(ctx, list, h), ...list.map(p => ctx => product(ctx, p, h)), ctx => ending(ctx, h)];
+    jobs.forEach((job, i) => {
+      const c = document.createElement("canvas"); c.width = W; c.height = h; job(c.getContext("2d")); canvases.push(c);
+      const card = document.createElement("div"); card.className = "slide";
+      const b = document.createElement("button"); b.className = "btn ghost"; b.textContent = `下載第 ${i + 1} 張`;
+      b.onclick = () => download(c, i); card.append(c, b); box.append(card);
+    });
+    caption(list);
+  }
+
+  function caption(list) {
+    const s = SOURCES.find(x => x.key === state.src);
+    const t = document.getElementById("title").value || s.head;
+    const lines = list.map(p => `${p.rank}. ${p.brand}｜${p.name}${p.desc ? "（" + p.desc + "）" : ""}\n　¥${p.price.toLocaleString("ja-JP")}（約台幣 NT$${Math.round(p.price * JPY_TO_TWD).toLocaleString("zh-TW")}）${p.rating ? "・★" + p.rating.toFixed(1) : ""}`);
+    document.getElementById("caption").value =
+`🇯🇵 ${t} TOP ${list.length}（${dateText()} 日本樂天排行）
+
+${lines.join("\n")}
+
+📌 每個商品的成分、用法、大家怎麼說，還有台灣哪裡買得到，都整理在主頁連結的網站 👉 ${IG}
+
+💾 先收藏起來，去日本或代購前再看一次！
+💬 你用過哪一個？留言告訴我～
+
+—
+排行資料來自日本樂天市場，價格為日本售價，台幣為匯率換算，不是台灣售價。內容為商品資訊整理，不代表效果，使用感受因人而異。網站內含分潤連結。
+
+#${s.tag} #日本必買 #日本藥妝 #日本美妝 #日本樂天 #日本代購 #美妝推薦 #ruri日韓熱賣`;
+  }
+
+  const blobOf = c => new Promise(r => c.toBlob(r, "image/png"));
+  const fname = i => `ruri-${state.src}-${dateText().replace("/", "")}-${String(i + 1).padStart(2, "0")}.png`;
+  async function download(c, i) { const a = document.createElement("a"); a.href = URL.createObjectURL(await blobOf(c)); a.download = fname(i); a.click(); }
+  function toast(m) { const t = document.getElementById("toast"); t.textContent = m; t.hidden = false; setTimeout(() => t.hidden = true, 2200); }
+
+  document.getElementById("dlall").onclick = async () => {
+    const zip = new JSZip(); for (let i = 0; i < canvases.length; i++) zip.file(fname(i), await blobOf(canvases[i]));
+    const a = document.createElement("a"); a.href = URL.createObjectURL(await zip.generateAsync({ type: "blob" })); a.download = `ruri-${state.src}-ig.zip`; a.click();
+  };
+  document.getElementById("copy").onclick = () => navigator.clipboard.writeText(document.getElementById("caption").value).then(() => toast("已複製貼文文字")).catch(() => { document.getElementById("caption").select(); toast("請按 Ctrl+C 複製"); });
+  const shareBtn = document.getElementById("share");
+  if (navigator.canShare && navigator.canShare({ files: [new File([""], "a.png", { type: "image/png" })] })) shareBtn.hidden = false;
+  shareBtn.onclick = async () => {
+    const files = []; for (let i = 0; i < canvases.length; i++) files.push(new File([await blobOf(canvases[i])], fname(i), { type: "image/png" }));
+    try { await navigator.clipboard.writeText(document.getElementById("caption").value); } catch (e) {}
+    try { await navigator.share({ files }); toast("貼文文字已先複製，在 IG 貼上就好"); } catch (e) {}
+  };
+
+  function chips(el, opts, key) {
+    el.innerHTML = opts.map(([v, l]) => `<button class="chip" data-v="${v}" aria-pressed="${state[key] == v}">${l}</button>`).join(" ");
+    el.onclick = e => { const b = e.target.closest("button"); if (!b) return; state[key] = isNaN(b.dataset.v) ? b.dataset.v : +b.dataset.v;
+      if (key === "src") document.getElementById("title").value = SOURCES.find(x => x.key === state.src).head;
+      chips(el, opts, key); render(); };
+  }
+
+  (async () => {
+    const get = p => fetch(p, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null);
+    [LATEST, MONTH, LABELS, DETAILS] = await Promise.all([get("data/latest.json"), get("data/month.json"), get("data/labels.json"), get("data/details.json")]);
+    LABELS = LABELS || {}; DETAILS = DETAILS || {}; MONTH = MONTH || { groups: {} };
+    if (!LATEST) { document.getElementById("slides").textContent = "資料載入失敗"; return; }
+    chips(document.getElementById("src"), SOURCES.map(s => [s.key, s.label]), "src");
+    chips(document.getElementById("cnt"), [[3, "3 個"], [5, "5 個"], [8, "8 個"]], "n");
+    chips(document.getElementById("fmt"), [["post", "貼文 4:5"], ["story", "限時動態 9:16"]], "fmt");
+    const t = document.getElementById("title"); t.value = SOURCES[0].head;
+    t.addEventListener("input", () => { clearTimeout(t._t); t._t = setTimeout(render, 300); });
+    render();
+  })();
+</script>
+</body>
+</html>

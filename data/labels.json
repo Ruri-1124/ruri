@@ -350,9 +350,10 @@
  },
  "rakuten24:11348602": {
   "brand": "Attack 花王",
-  "name": "抗菌 EX 洗衣精 補充包",
   "country": "日本",
-  "desc": "抗菌 EX 洗衣精 補充包"
+  "desc": "洗衣精 補充包 6 袋",
+  "twName": "一匙靈 抗菌EX",
+  "jpName": "アタック抗菌EX（つめかえ用 1590g）"
  },
  "rakuten24:11128650": {
   "brand": "Attack 花王",
@@ -362,9 +363,10 @@
  },
  "rakuten24:11128644": {
   "brand": "Attack 花王",
-  "name": "抗菌 EX 超特大補充包",
   "country": "日本",
-  "desc": "抗菌 EX 超特大補充包"
+  "desc": "洗衣精 補充包 6 袋",
+  "twName": "一匙靈 抗菌EX",
+  "jpName": "アタック抗菌EX（つめかえ用 超特大）"
  },
  "rakuten24:11148573": {
   "brand": "Flair Fragrance 花王",
@@ -374,9 +376,9 @@
  },
  "rakuten24:11148574": {
   "brand": "Flair Fragrance 花王",
-  "name": "IROKA 香氛柔軟精",
   "country": "日本",
-  "desc": "IROKA 香氛柔軟精"
+  "desc": "香氛柔軟精 補充包",
+  "jpName": "フレア フレグランス IROKA（つめかえ用 650mL×5）"
  },
  "rakuten24:11200559": {
   "brand": "Wide Haiter 花王",
@@ -385,40 +387,41 @@
   "desc": "EX 衣物漂白劑"
  },
  "rakuten24:11342601": {
-  "brand": "sarasa",
-  "name": "溫和洗衣精",
+  "brand": "さらさ（P&G）",
   "country": "日本",
-  "desc": "溫和洗衣精"
+  "desc": "溫和型洗衣精 補充包",
+  "jpName": "さらさ 洗濯洗剤 液体（つめかえ用 1490g×6）"
  },
  "rakuten24:11228829": {
   "brand": "Ariel",
-  "name": "洗衣球 PRO",
-  "country": "其他",
-  "desc": "洗衣球 PRO"
+  "country": "日本",
+  "desc": "洗衣球 補充包",
+  "jpName": "アリエール ジェルボール プロ（つめかえ用 2 袋）"
  },
  "rakuten24:11348605": {
   "brand": "Attack 花王",
-  "name": "室內晾衣洗衣精",
   "country": "日本",
-  "desc": "室內晾衣洗衣精"
+  "desc": "室內晾衣用洗衣精 補充包",
+  "twName": "一匙靈 抗菌EX 室內晾衣",
+  "jpName": "アタック抗菌EX 部屋干し用（つめかえ用 1520g）"
  },
  "rakuten24:11163653": {
   "brand": "Ariel",
-  "name": "液體洗衣精",
-  "country": "其他",
-  "desc": "液體洗衣精"
+  "country": "日本",
+  "desc": "洗衣精 補充包",
+  "jpName": "アリエール 液体（つめかえ用 1950g×6）"
  },
  "rakuten24:11279568": {
   "brand": "Bold",
-  "name": "4 合 1 洗衣球",
   "country": "日本",
-  "desc": "4 合 1 洗衣球"
+  "desc": "含柔軟劑的洗衣球",
+  "jpName": "ボールド ジェルボール 4in1（つめかえ用 2 袋）"
  },
  "rakuten24:11224272": {
   "brand": "Lenor",
-  "name": "超消臭柔軟精",
-  "country": "其他",
-  "desc": "超消臭柔軟精"
+  "country": "日本",
+  "desc": "消臭柔軟精 補充包",
+  "jpName": "レノア 超消臭 柔軟剤（つめかえ用 特大 745mL×6）"
  },
  "rakuten24:11163655": {
   "brand": "Lenor",
@@ -452,27 +455,27 @@
  },
  "auc-epsomsalt:10000222": {
   "brand": "國產瀉鹽",
-  "name": "泡澡用瀉鹽 10kg",
   "country": "日本",
-  "desc": "泡澡用瀉鹽 10kg"
+  "desc": "泡澡用瀉鹽 10kg",
+  "jpName": "国産 エプソムソルト 10kg"
  },
  "mtgec-beauty:10002177": {
   "brand": "ReFa",
-  "name": "FINE BUBBLE U 蓮蓬頭",
   "country": "日本",
-  "desc": "FINE BUBBLE U 蓮蓬頭"
+  "desc": "微細氣泡蓮蓬頭",
+  "jpName": "ReFa FINE BUBBLE U"
  },
  "auc-epsomsalt:10000212": {
   "brand": "國產瀉鹽",
-  "name": "泡澡用瀉鹽 8.8kg",
   "country": "日本",
-  "desc": "泡澡用瀉鹽 8.8kg"
+  "desc": "泡澡用瀉鹽 8.8kg",
+  "jpName": "国産 エプソムソルト 8.8kg（2.2kg×4 袋）"
  },
  "libertylife:10000488": {
   "brand": "SAIJIRUSHI",
-  "name": "瀉鹽入浴劑 8 種香味",
   "country": "日本",
-  "desc": "瀉鹽入浴劑 8 種香味"
+  "desc": "有香味的泡澡瀉鹽 3kg",
+  "jpName": "SAIJIRUSHI エプソムソルト 3kg（8 種の香り）"
  },
  "suisosum-shop:10000062": {
   "brand": "H&",
@@ -482,9 +485,9 @@
  },
  "sleepdays:10000013": {
   "brand": "BARTH",
-  "name": "中性重碳酸入浴錠",
   "country": "日本",
-  "desc": "中性重碳酸入浴錠"
+  "desc": "重碳酸泡澡錠",
+  "jpName": "薬用BARTH 中性重炭酸入浴剤（90／120 錠）"
  },
  "happymag:10000208": {
   "brand": "EPSOPIA",
@@ -494,9 +497,9 @@
  },
  "ennshopstore:10000072": {
   "brand": "Rakuhome",
-  "name": "微奈米氣泡蓮蓬頭",
   "country": "日本",
-  "desc": "微奈米氣泡蓮蓬頭"
+  "desc": "微奈米氣泡蓮蓬頭",
+  "jpName": "マイクロナノバブル シャワーヘッド"
  },
  "rakuten24:11365861": {
   "brand": "Bub 花王",
@@ -506,9 +509,9 @@
  },
  "koyama-p:10012324": {
   "brand": "Kneipp 克奈圃",
-  "name": "浴鹽 3 入",
   "country": "其他",
-  "desc": "浴鹽 3 入"
+  "desc": "浴鹽 3 入",
+  "jpName": "クナイプ バスソルト 850g（3 個）"
  },
  "kobe-beauty-labo:10000074": {
   "brand": "SALONIA",
@@ -1129,5 +1132,134 @@
   "country": "日本",
   "jpName": "エマーキット",
   "desc": "睫毛美容液 2mL"
+ },
+ "tsuruha:10118117": {
+  "brand": "Attack 花王",
+  "country": "日本",
+  "twName": "一匙靈 抗菌EX 室內晾衣",
+  "jpName": "アタック抗菌EX 部屋干し用（つめかえ用 2.13kg・舊包裝）",
+  "desc": "室內晾衣用洗衣精 補充包"
+ },
+ "rakutensokuhaimart:10042602": {
+  "brand": "Attack 花王",
+  "country": "日本",
+  "jpName": "アタックZERO（つめかえ用 2300g）",
+  "desc": "洗衣精 補充包"
+ },
+ "rakutensokuhaimart:10042757": {
+  "brand": "Attack 花王",
+  "country": "日本",
+  "jpName": "アタックZERO 部屋干し（つめかえ用 2300g）",
+  "desc": "室內晾衣用洗衣精 補充包"
+ },
+ "rakuten24:11319035": {
+  "brand": "Ariel",
+  "country": "日本",
+  "jpName": "アリエール ジェルボール プロ 部屋干し＆スポーツ（つめかえ用 89 個）",
+  "desc": "室內晾衣・運動衣物用洗衣球"
+ },
+ "rakuten24:11279561": {
+  "brand": "Ariel",
+  "country": "日本",
+  "jpName": "アリエール 液体（つめかえ用 1000g×4）",
+  "desc": "洗衣精 補充包"
+ },
+ "hikaritv:10251702": {
+  "brand": "さらさ（P&G）",
+  "country": "日本",
+  "jpName": "さらさ 洗濯洗剤 液体（つめかえ用 ウルトラジャンボ×6）",
+  "desc": "溫和型洗衣精 補充包"
+ },
+ "rakuten24:11223013": {
+  "brand": "さらさ（P&G）",
+  "country": "日本",
+  "jpName": "さらさ 柔軟剤（つめかえ用 超特大 1350mL×6）",
+  "desc": "溫和型柔軟精 補充包"
+ },
+ "rakutensokuhaimart:10025930": {
+  "brand": "Flair Fragrance 花王",
+  "country": "日本",
+  "jpName": "フレア フレグランス IROKA（ネイキッドリリー 1200mL）",
+  "desc": "香氛柔軟精 補充包"
+ },
+ "matinozakka:10022764": {
+  "brand": "FaFa",
+  "country": "日本",
+  "jpName": "ファーファ ファインフレグランス オム（つめかえ用 780mL）",
+  "desc": "男性香氛柔軟精 補充包"
+ },
+ "cosmebox:10054192": {
+  "brand": "FaFa",
+  "country": "日本",
+  "jpName": "ファーファ ファインフレグランス オム（つめかえ用 1400mL）",
+  "desc": "男性香氛柔軟精 補充包"
+ },
+ "naturelab:10006909": {
+  "brand": "Laundrin",
+  "country": "日本",
+  "jpName": "ランドリン 柔軟剤（クラシックフローラル 1920mL×3）",
+  "desc": "香氛柔軟精 補充包"
+ },
+ "hoconico:10000005": {
+  "brand": "Mol clear Pro",
+  "country": "日本",
+  "jpName": "モルクリアプロ",
+  "desc": "除霉噴霧"
+ },
+ "k-relight:10001303": {
+  "brand": "Dover",
+  "country": "日本",
+  "jpName": "ドーバー パストリーゼ77（詰め替え用 5L）",
+  "desc": "酒精清潔噴霧 補充桶"
+ },
+ "tv-ya:10002730": {
+  "brand": "シュワッ！とパンチ",
+  "country": "日本",
+  "jpName": "シュワッ！とパンチ",
+  "desc": "氧系漂白清潔劑"
+ },
+ "rakutensokuhaimart:10040432": {
+  "brand": "HITACHI 日立",
+  "country": "日本",
+  "jpName": "日立 洗濯槽クリーナー SK-1500",
+  "desc": "洗衣槽清潔劑（含氯）"
+ },
+ "livingut:10238878": {
+  "country": "日本",
+  "jpName": "らくらく洗濯槽まるごと泡スプレー",
+  "desc": "洗衣槽泡沫清潔噴霧"
+ },
+ "rakuten24:11338331": {
+  "brand": "シャボン玉石けん",
+  "country": "日本",
+  "jpName": "シャボン玉 スノール 液体タイプ（5L×3）",
+  "desc": "無添加皂基洗衣精"
+ },
+ "ganentonya:10000161": {
+  "country": "日本",
+  "jpName": "国産 エプソムソルト 3kg",
+  "desc": "泡澡用瀉鹽 3kg"
+ },
+ "ganentonya:10000166": {
+  "country": "日本",
+  "jpName": "国産 エプソムソルト 10kg",
+  "desc": "泡澡用瀉鹽 10kg"
+ },
+ "miraiblue:10000056": {
+  "brand": "Mirable 美容蓮蓬頭",
+  "country": "日本",
+  "jpName": "ミラブル Ex シャワーヘッド",
+  "desc": "微細氣泡蓮蓬頭"
+ },
+ "mikirona:10000092": {
+  "country": "日本",
+  "jpName": "マイクロナノバブル シャワーヘッド（6 段階モード）",
+  "desc": "微奈米氣泡蓮蓬頭"
+ },
+ "stylife:15932151": {
+  "brand": "Francfranc",
+  "country": "日本",
+  "jpName": "2026 クリスマス アドベントカレンダー L（24 個入り）",
+  "desc": "聖誕倒數月曆（24 件）"
  }
 }

@@ -301,7 +301,7 @@
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
-  const twd = n => "日本價 約 NT$" + Math.round(n * JPY_TO_TWD).toLocaleString("zh-TW");
+  const twd = n => "約台幣 NT$" + Math.round(n * JPY_TO_TWD).toLocaleString("zh-TW");   // 日圓換算，不是台灣售價
   const flag = c => ({ "日本": "日本", "韓國": "韓國" }[c] || "其他");
   const tagHits = (dict, text) => Object.entries(dict).filter(([, words]) => words.some(w => text.includes(w))).map(([tag]) => tag);
 
