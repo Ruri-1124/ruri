@@ -512,21 +512,21 @@
  },
  "kobe-beauty-labo:10000074": {
   "brand": "SALONIA",
-  "name": "直髮夾",
   "country": "日本",
-  "desc": "直髮夾"
+  "desc": "直髮夾（15／24／35mm）",
+  "jpName": "SALONIA ストレートヘアアイロン"
  },
  "mtgec-beauty:10002142": {
   "brand": "ReFa",
-  "name": "直髮夾 PRO",
   "country": "日本",
-  "desc": "直髮夾 PRO"
+  "desc": "直髮夾",
+  "jpName": "ReFa STRAIGHT IRON PRO"
  },
  "mycosmeticbox:10000390": {
   "brand": "KINUJO 絹女",
-  "name": "直髮夾",
   "country": "日本",
-  "desc": "直髮夾"
+  "desc": "直髮夾",
+  "jpName": "KINUJO ストレートアイロン（LM-225）"
  },
  "braun:10001087": {
   "brand": "BRAUN 百靈",
@@ -542,15 +542,15 @@
  },
  "leapgrow:10000648": {
   "brand": "MYTREX",
-  "name": "頭皮按摩儀",
   "country": "日本",
-  "desc": "頭皮按摩儀"
+  "desc": "頭皮按摩梳（充電式）",
+  "jpName": "MYTREX VIDO（ビドー）ヘッドマッサージャー"
  },
  "mrock:10012094": {
   "brand": "ke-non",
-  "name": "家用脫毛儀",
   "country": "日本",
-  "desc": "家用脫毛儀"
+  "desc": "家用光學除毛儀",
+  "jpName": "ケノン（最新バージョン）"
  },
  "doshisha-marche:10000266": {
   "brand": "ゴリラのひとつかみ",
@@ -560,15 +560,15 @@
  },
  "salonmoon:10000013": {
   "brand": "SALON MOON",
-  "name": "直髮夾",
   "country": "日本",
-  "desc": "直髮夾"
+  "desc": "直髮夾（15／24mm）",
+  "jpName": "SALONMOON ミラーダブルイオン ストレートヘアアイロン"
  },
  "createsstore:10000002": {
-  "brand": "CREATE ION 克雷艾",
-  "name": "電捲棒",
+  "brand": "CREATE ION",
   "country": "日本",
-  "desc": "電捲棒"
+  "desc": "電捲棒（26／32／38／45mm）",
+  "jpName": "クレイツ イオンカールプロ SR"
  },
  "panasonic-store:10002135": {
   "brand": "Panasonic 國際牌",
@@ -806,5 +806,100 @@
   "country": "其他",
   "jpName": "アドベントカレンダー コア",
   "desc": "聖誕倒數月曆禮盒"
+ },
+ "kinujo:10000000": {
+  "brand": "KINUJO 絹女",
+  "country": "日本",
+  "jpName": "KINUJO ストレートアイロン（LM-225）",
+  "desc": "直髮夾"
+ },
+ "marble-inc:10000649": {
+  "brand": "KINUJO 絹女",
+  "country": "日本",
+  "jpName": "KINUJO PRO ストレートアイロン（選べる 3 機種）",
+  "desc": "直髮夾（專業款）"
+ },
+ "mtgec-beauty:10002330": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa BEAUTECH DRYER S+",
+  "desc": "吹風機"
+ },
+ "mtgec-beauty:10002451": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa BEAUTECH DRYER SE",
+  "desc": "小型吹風機"
+ },
+ "mtgec-beauty:10002143": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa CURL IRON PRO",
+  "desc": "電捲棒（19／26／32／38mm）"
+ },
+ "mtgec-beauty:10002453": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa STRAIGHT IRON PRO+",
+  "desc": "直髮夾"
+ },
+ "mtgec-beauty:10002632": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa STRAIGHT BLOW IRON",
+  "desc": "梳子型直髮梳"
+ },
+ "angelique:10016960": {
+  "brand": "CREATE ION",
+  "country": "日本",
+  "jpName": "クレイツ イオンカールプロ SR",
+  "desc": "電捲棒（26／32／38／45mm）"
+ },
+ "chouchou-store:10001143": {
+  "brand": "CREATE ION",
+  "country": "日本",
+  "jpName": "クレイツ イオンカールプロ SR",
+  "desc": "電捲棒（26／32／38／45mm）"
+ },
+ "panasonic-store:10000005": {
+  "brand": "Panasonic 國際牌",
+  "country": "日本",
+  "jpName": "ヘアードライヤー ナノケア EH-NA0K",
+  "desc": "吹風機"
+ },
+ "beautyeveryday:10000627": {
+  "brand": "SALONIA",
+  "country": "日本",
+  "jpName": "SALONIA スピーディーイオンドライヤー",
+  "desc": "吹風機"
+ },
+ "tescom-japan:10000036": {
+  "brand": "TESCOM",
+  "country": "日本",
+  "jpName": "TESCOM プロテクトイオン ヘアードライヤー",
+  "desc": "吹風機"
+ },
+ "mycosmeticbox:10000138": {
+  "brand": "KINUJO 絹女",
+  "country": "日本",
+  "jpName": "KINUJO Silk Premium Dryer（KH301）",
+  "desc": "吹風機"
+ },
+ "kobe-beauty-labo:10002791": {
+  "brand": "SALONIA",
+  "country": "日本",
+  "jpName": "SALONIA コードレス ストレートヘアアイロン",
+  "desc": "無線直髮夾（隨身）"
+ },
+ "azusa:10000180": {
+  "country": "日本",
+  "jpName": "AI温度制御 ヘアドライヤー 1400W",
+  "desc": "吹風機"
+ },
+ "marble-inc:10000554": {
+  "brand": "radiant",
+  "country": "日本",
+  "jpName": "ラディアント シルクプロアイロン",
+  "desc": "直髮夾（28／35mm）"
  }
 }
