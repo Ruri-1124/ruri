@@ -1,0 +1,801 @@
+{
+ "_說明": "達人推薦（人工整理）。每個商品：推薦人 who、身分 role（化妝師／YouTuber／美容家／醫師／雜誌編輯）、推薦重點 say（用自己的話整理，不照抄）、原文 source。kw 是給自動更新程式去日本樂天搜尋圖片、價格用的關鍵字；mustHave 是搜尋結果商品名稱一定要包含的字，用來避免抓錯商品。",
+ "updated": "2026-10-30",
+ "items": [
+  {
+   "id": "igari-ysl-gloss",
+   "brand": "YSL",
+   "name": "ラブシャイン グロスプランパー 2",
+   "desc": "豐唇唇蜜",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "帶細緻珠光的粉色，擦上去嘴唇看起來氣色好又豐潤。",
+   "kw": "ラブシャイン グロスプランパー",
+   "mustHave": [
+    "ラブシャイン"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-canmake-plump",
+   "brand": "CANMAKE",
+   "name": "プランプコーデアイズ 03",
+   "desc": "臥蠶眼影",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "畫臥蠶很簡單，低調的顏色也適合熟齡的眼周。",
+   "kw": "キャンメイク プランプコーデアイズ",
+   "mustHave": [
+    "プランプコーデアイズ"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-kate-concealer",
+   "brand": "KATE",
+   "name": "ジェリーリープコンシーラー BU",
+   "desc": "藍色修色遮瑕",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "藍色可以修飾偏黃的暗沉。",
+   "kw": "ケイト ジェリーリープコンシーラー",
+   "mustHave": [
+    "ジェリーリープ"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-cezanne-cheek",
+   "brand": "CEZANNE",
+   "name": "ブレンドカラーチーク 03",
+   "desc": "腮紅",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "柔和的光澤和顏色，也可以當打亮用。",
+   "kw": "セザンヌ ブレンドカラーチーク",
+   "mustHave": [
+    "ブレンドカラーチーク"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-lunasol-breeze",
+   "brand": "LUNASOL",
+   "name": "カラーリングブリーズ 01",
+   "desc": "臉部修容・腮紅",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "輕盈、有流行感的紅暈，和熟齡肌也很融合。",
+   "kw": "ルナソル カラーリングブリーズ",
+   "mustHave": [
+    "カラーリングブリーズ"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-shu-kinu",
+   "brand": "shu uemura 植村秀",
+   "name": "キヌケア CC オイル ピンクアイシング",
+   "desc": "唇部保養油",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "一支可以同時當護唇、唇妝打底和增加氣色。",
+   "kw": "シュウウエムラ キヌケア CCオイル",
+   "mustHave": [
+    "キヌケア"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-suqqu-complexion",
+   "brand": "SUQQU",
+   "name": "コンプレックション フェイス カラー 02",
+   "desc": "腮紅・修色",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "棉花般的粉色，也可以當修色妝前使用。",
+   "kw": "SUQQU コンプレックション フェイス カラー",
+   "mustHave": [
+    "コンプレックション"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "igari-cezanne-liner",
+   "brand": "CEZANNE",
+   "name": "極細アイライナーEX プラス 10",
+   "desc": "眼線液",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "イガリシノブ",
+   "role": "化妝師",
+   "say": "乾得快、不容易暈開，適合填補睫毛間的空隙。",
+   "kw": "セザンヌ 極細アイライナーEX",
+   "mustHave": [
+    "極細アイライナー"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "kawakita-bobbi-stick",
+   "brand": "Bobbi Brown 芭比波朗",
+   "name": "クリスタル アイシャドウ スティック 01",
+   "desc": "眼影筆",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "河北裕介",
+   "role": "化妝師",
+   "say": "像氣泡水般閃亮的眼皮，夏天約會妝的重點。",
+   "kw": "ボビイ ブラウン クリスタル アイシャドウ スティック",
+   "mustHave": [
+    "クリスタル"
+   ],
+   "sources": [
+    {
+     "name": "美的：河北裕介 夏日約會妝",
+     "url": "https://www.biteki.com/3041227/",
+     "date": "2026-07-25"
+    }
+   ]
+  },
+  {
+   "id": "kawakita-rmk-palette",
+   "brand": "RMK",
+   "name": "シンクロマティック アイシャドウパレット 14",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "河北裕介",
+   "role": "化妝師",
+   "say": "霧粉和帶濕潤感的灰米色，讓眼神更有魅力。",
+   "kw": "RMK シンクロマティック アイシャドウパレット",
+   "mustHave": [
+    "シンクロマティック"
+   ],
+   "sources": [
+    {
+     "name": "美的：河北裕介 夏日約會妝",
+     "url": "https://www.biteki.com/3041227/",
+     "date": "2026-07-25"
+    }
+   ]
+  },
+  {
+   "id": "kawakita-nars-stick",
+   "brand": "NARS",
+   "name": "ライトリフレクティング ルミナイジングスティック",
+   "desc": "打亮棒",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "河北裕介、大野真理子、友利新",
+   "role": "化妝師・美容家・醫師",
+   "say": "三位專家都選了它：一擦就有自然光澤，細緻珠光能柔焦毛孔，不怕汗水。",
+   "kw": "NARS ライトリフレクティング ルミナイジングスティック",
+   "mustHave": [
+    "ルミナイジング"
+   ],
+   "sources": [
+    {
+     "name": "美的：河北裕介 夏日約會妝",
+     "url": "https://www.biteki.com/3041227/",
+     "date": "2026-07-25"
+    },
+    {
+     "name": "VoCE：大野真理子 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/4999974/",
+     "date": "2026-06-30"
+    },
+    {
+     "name": "VoCE：友利新 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/5007548/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "kawakita-mufe-liquid",
+   "brand": "MAKE UP FOR EVER",
+   "name": "アーティスト リキッド カラー マット 206",
+   "desc": "唇頰兩用霧面唇彩",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "河北裕介",
+   "role": "化妝師",
+   "say": "霧面粉膚色，嘴唇、臉頰都能用，而且不容易掉。",
+   "kw": "メイクアップフォーエバー アーティスト リキッド カラー マット",
+   "mustHave": [
+    "リキッド"
+   ],
+   "sources": [
+    {
+     "name": "美的：河北裕介 夏日約會妝",
+     "url": "https://www.biteki.com/3041227/",
+     "date": "2026-07-25"
+    }
+   ]
+  },
+  {
+   "id": "kawakita-suqqu-blur",
+   "brand": "SUQQU",
+   "name": "ブラー リクイド リップ 01",
+   "desc": "霧感唇釉",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "河北裕介",
+   "role": "化妝師",
+   "say": "溫暖的米色，柔霧又有豐潤感。",
+   "kw": "SUQQU ブラー リクイド リップ",
+   "mustHave": [
+    "ブラー"
+   ],
+   "sources": [
+    {
+     "name": "美的：河北裕介 夏日約會妝",
+     "url": "https://www.biteki.com/3041227/",
+     "date": "2026-07-25"
+    }
+   ]
+  },
+  {
+   "id": "kawakita-clue-liner",
+   "brand": "Clue &be",
+   "name": "ボリュームアップライナー 01",
+   "desc": "唇線筆",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "河北裕介",
+   "role": "化妝師",
+   "say": "透明感的粉米色，讓嘴唇看起來更豐潤。",
+   "kw": "Clue&be ボリュームアップライナー",
+   "mustHave": [
+    "ボリュームアップ"
+   ],
+   "sources": [
+    {
+     "name": "美的：河北裕介 夏日約會妝",
+     "url": "https://www.biteki.com/3041227/",
+     "date": "2026-07-25"
+    }
+   ]
+  },
+  {
+   "id": "nagai-hince-tint",
+   "brand": "hince",
+   "name": "ニューブラーティント 03",
+   "desc": "霧感唇釉",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "像打發鮮奶油的質地，顯色又持久。",
+   "kw": "hince ニューブラーティント",
+   "mustHave": [
+    "ブラーティント"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半年最佳妝容",
+     "url": "https://www.biteki.com/2159086/",
+     "date": "2026-07-02"
+    }
+   ]
+  },
+  {
+   "id": "nagai-ysl-blush",
+   "brand": "YSL",
+   "name": "メイクミーブラッシュ パウダー 10",
+   "desc": "粉狀腮紅",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "柔和的糖果粉，在臉頰內側刷出愛心形狀。",
+   "kw": "イヴサンローラン メイクミーブラッシュ",
+   "mustHave": [
+    "メイクミーブラッシュ"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半年最佳妝容",
+     "url": "https://www.biteki.com/2159086/",
+     "date": "2026-07-02"
+    }
+   ]
+  },
+  {
+   "id": "nagai-lunasol-palette",
+   "brand": "LUNASOL",
+   "name": "アイカラーレーション N 22",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "帶藍調的棕色，眼皮、下眼尾、鼻影都能用。",
+   "kw": "ルナソル アイカラーレーションN",
+   "mustHave": [
+    "アイカラーレーション"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半年最佳妝容",
+     "url": "https://www.biteki.com/2159086/",
+     "date": "2026-07-02"
+    }
+   ]
+  },
+  {
+   "id": "oono-shiseido-enhancer",
+   "brand": "SHISEIDO 資生堂",
+   "name": "カラー＋グロウ エンハンサー 04",
+   "desc": "腮紅",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "大野真理子",
+   "role": "美容家",
+   "say": "粉體疊上保養液的雙層設計，珊瑚米色的紅暈，也能當眼影或修容。",
+   "kw": "SHISEIDO カラー＋グロウ エンハンサー",
+   "mustHave": [
+    "エンハンサー"
+   ],
+   "sources": [
+    {
+     "name": "VoCE：大野真理子 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/4999974/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "oono-lunasol-mono",
+   "brand": "LUNASOL",
+   "name": "モノアイカラーレーション 12",
+   "desc": "單色眼影",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "大野真理子",
+   "role": "美容家",
+   "say": "煙燻米色加細緻亮片，一刷就有光影和立體感。",
+   "kw": "ルナソル モノアイカラーレーション",
+   "mustHave": [
+    "モノアイカラーレーション"
+   ],
+   "sources": [
+    {
+     "name": "VoCE：大野真理子 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/4999974/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "oono-bidol-brow",
+   "brand": "b idol",
+   "name": "マジックアイブロウパウダー 02",
+   "desc": "眉粉",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "大野真理子",
+   "role": "美容家",
+   "say": "三色粉棕色，眉毛自然有立體感，定妝粉能吸油讓眉毛不易掉。",
+   "kw": "b idol マジックアイブロウパウダー",
+   "mustHave": [
+    "アイブロウ"
+   ],
+   "sources": [
+    {
+     "name": "VoCE：大野真理子 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/4999974/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "tomori-decorte-palette",
+   "brand": "COSME DECORTE 黛珂",
+   "name": "スキンシャドウ デザイニングパレット 10",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "友利新",
+   "role": "醫師・YouTuber",
+   "say": "和膚色很融合、做出立體感，霧粉色看起來很有質感。",
+   "kw": "コスメデコルテ スキンシャドウ デザイニングパレット",
+   "mustHave": [
+    "スキンシャドウ"
+   ],
+   "sources": [
+    {
+     "name": "VoCE：友利新 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/5007548/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "tomori-suqqu-mono",
+   "brand": "SUQQU",
+   "name": "モノ ルック アイズ e MS-03",
+   "desc": "單色眼影",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "友利新",
+   "role": "醫師・YouTuber",
+   "say": "果凍質地好推勻，蜜桃米色帶粉色珠光，有水潤光澤。",
+   "kw": "SUQQU モノ ルック アイズ",
+   "mustHave": [
+    "モノ ルック"
+   ],
+   "sources": [
+    {
+     "name": "VoCE：友利新 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/5007548/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "tomori-majomajo-mascara",
+   "brand": "MAJOLICA MAJORCA",
+   "name": "ラッシュエキスパンダー ネオラッシュ BK909",
+   "desc": "睫毛膏",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "友利新",
+   "role": "醫師・YouTuber",
+   "say": "捲翹持久又防水，但用溫水就能卸掉，刷頭讓睫毛根根分明。",
+   "kw": "マジョリカマジョルカ ラッシュエキスパンダー ネオラッシュ",
+   "mustHave": [
+    "ラッシュエキスパンダー"
+   ],
+   "sources": [
+    {
+     "name": "VoCE：友利新 2026 上半年滿分彩妝",
+     "url": "https://i-voce.jp/feed/5007548/",
+     "date": "2026-06-30"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-decorte-uv",
+   "brand": "COSME DECORTE 黛珂",
+   "name": "サンシェルター UV コンフォート エアリー トランスペアレント",
+   "desc": "防曬乳",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "YouTuber",
+   "say": "透明的妝感，不容易沾到衣服，還能讓毛孔看起來比較平滑。",
+   "kw": "コスメデコルテ UV コンフォート エアリー",
+   "mustHave": [
+    "コンフォート"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-obagi-c10",
+   "brand": "Obagi",
+   "name": "オバジ C10 セラム",
+   "desc": "維生素 C 精華",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "YouTuber",
+   "say": "升級版的維生素 C 精華，她提到對毛孔、粗糙和乾燥也有照顧到。",
+   "kw": "オバジ C10 セラム",
+   "mustHave": [
+    "C10"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-takami-b3",
+   "brand": "TAKAMI",
+   "name": "タカミ ブライトスポット B3+",
+   "desc": "菸鹼醯胺精華（醫藥部外品）",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "YouTuber",
+   "say": "以菸鹼醯胺為主的日本醫藥部外品精華，她用來做日常的預防保養。",
+   "kw": "タカミ ブライトスポット",
+   "mustHave": [
+    "ブライトスポット"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-orbis-uv",
+   "brand": "ORBIS",
+   "name": "リンクルブライトUVプロテクター N",
+   "desc": "防曬乳",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "YouTuber",
+   "say": "防曬膜照到紫外線會變厚，而且耐摩擦、耐汗、耐水。",
+   "kw": "オルビス リンクルブライトUVプロテクター",
+   "mustHave": [
+    "UVプロテクター"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-curel-uv",
+   "brand": "Curel 珂潤",
+   "name": "潤浸保湿 スキンリペア UVセラム",
+   "desc": "敏感肌防曬精華",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "YouTuber",
+   "say": "水感、保濕，對肌膚不穩定的時候也溫和，可以當妝前。",
+   "kw": "キュレル スキンリペア UVセラム",
+   "mustHave": [
+    "UV"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-etvos-uv",
+   "brand": "ETVOS",
+   "name": "ミネラルUVアクアセラム 50+",
+   "desc": "礦物防曬精華",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "YouTuber",
+   "say": "用肥皂就能卸，精華感高，還有柔焦讓毛孔不明顯。",
+   "kw": "エトヴォス ミネラルUVアクアセラム",
+   "mustHave": [
+    "アクアセラム"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi-elegance-base",
+   "brand": "Elégance",
+   "name": "モデリング カラーベース UV",
+   "desc": "修色妝前乳",
+   "cat": "保養",
+   "country": "日本",
+   "who": "水越みさと、イガリシノブ",
+   "role": "YouTuber・化妝師",
+   "say": "兩位都推薦：修飾膚色又保濕持久，有 7 色，黃色最受歡迎。",
+   "kw": "エレガンス モデリング カラーベース UV",
+   "mustHave": [
+    "モデリング"
+   ],
+   "sources": [
+    {
+     "name": "美的：水越みさと 2026 防曬與亮白保養",
+     "url": "https://www.biteki.com/2127548/",
+     "date": "2026-05-16"
+    },
+    {
+     "name": "MAQUIA：イガリシノブ推薦 37 選",
+     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
+     "date": "2026-05-16"
+    }
+   ]
+  },
+  {
+   "id": "allure-mac-tint",
+   "brand": "M·A·C",
+   "name": "러스터글래스 스테인글래스 립 틴트 #씨 쉬어",
+   "desc": "水光唇釉",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳光澤唇彩」：顯色飽滿、有豐唇感。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 彩妝",
+     "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-colorgram",
+   "brand": "colorgram",
+   "name": "누디 블러 스틱 #02 너드샌드",
+   "desc": "霧面唇膏",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳霧面唇彩」：柔霧質地、持色久。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 彩妝",
+     "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-tcfs-frottage",
+   "brand": "too cool for school",
+   "name": "프로타주 펜슬 #22 허밍글로우",
+   "desc": "眼影・腮紅筆",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳眼妝」：好暈染、顯色，可以當眼影也可以當腮紅。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 彩妝",
+     "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-espoir-primer",
+   "brand": "espoir",
+   "name": "메이크업 본딩 프라이머",
+   "desc": "妝前乳",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳妝前」：讓膚況看起來平滑、修飾不均，妝容更持久。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 彩妝",
+     "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-hince-cheek",
+   "brand": "hince",
+   "name": "하프 문 치크 #05 로지 문",
+   "desc": "腮紅",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳腮紅」：霜狀加粉狀的雙質地，柔霧服貼。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 彩妝",
+     "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-talitha-cushion",
+   "brand": "TALITHA KOUM WHITE",
+   "name": "단델리온 심리스 쿠션 #21N 누드글로우",
+   "desc": "氣墊粉底",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳氣墊」：清透，疊擦也不厚重。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 彩妝",
+     "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  }
+ ]
+}

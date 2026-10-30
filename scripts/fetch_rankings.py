@@ -21,6 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ENDPOINT = "https://openapi.rakuten.co.jp/ichibaranking/api/IchibaItem/Ranking/20220601"
+SEARCH_ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20220601"
 TAIWAN = timezone(timedelta(hours=8))
 
 # ① 讀取金鑰（在 GitHub 上設定成 Secrets）
@@ -30,16 +31,10 @@ AFFILIATE_ID = os.environ.get("RAKUTEN_AFFILIATE_ID", "")
 SITE_URL = os.environ.get("SITE_URL", "")  # 你的網站網址，要跟樂天「允許的網站」一致
 
 
-def fetch_ranking(genre_id):
-    """問樂天：這個分類今天賣最好的是哪些？"""
-    params = {
-        "applicationId": APP_ID,
-        "affiliateId": AFFILIATE_ID,
-        "genreId": genre_id,
-        "format": "json",
-        "formatVersion": 2,
-    }
-    url = ENDPOINT + "?" + urllib.parse.urlencode(params)
+def call_api(endpoint, params):
+    """呼叫樂天 API（排行和商品搜尋共用）"""
+    params = {"applicationId": APP_ID, "affiliateId": AFFILIATE_ID, "format": "json", "formatVersion": 2, **params}
+    url = endpoint + "?" + urllib.parse.urlencode(params)
     origin = SITE_URL.rstrip("/")
     request = urllib.request.Request(url, headers={
         "accessKey": ACCESS_KEY,        # 存取密鑰放在標頭，不會出現在網址裡
@@ -49,6 +44,11 @@ def fetch_ranking(genre_id):
     })
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.load(response)
+
+
+def fetch_ranking(genre_id):
+    """問樂天：這個分類今天賣最好的是哪些？"""
+    return call_api(ENDPOINT, {"genreId": genre_id})
 
 
 def first_image(item):
@@ -140,6 +140,43 @@ def main():
     build_monthly(history)
     # ⑤ 商品資料庫：所有上榜過的商品都留下來，下榜了也查得到
     build_archive(history)
+    # ⑥ 達人推薦的商品：去樂天搜尋，抓圖片、價格和分潤連結
+    build_experts()
+
+
+def build_experts():
+    """讀 data/experts.json，每個有 kw 的商品去樂天搜尋一次，結果存到 data/experts_items.json"""
+    path = ROOT / "data" / "experts.json"
+    if not path.exists():
+        return
+    experts = json.loads(path.read_text(encoding="utf-8"))
+    out_path = ROOT / "data" / "experts_items.json"
+    old = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {}
+    found = {}
+    for it in experts.get("items", []):
+        kw = it.get("kw")
+        if not kw:
+            continue
+        try:
+            data = call_api(SEARCH_ENDPOINT, {"keyword": kw, "hits": 10, "sort": "-reviewCount", "availability": 1})
+            must = it.get("mustHave") or []
+            hit = None
+            for raw in data.get("Items", []):
+                item = simplify(raw)
+                if all(m.lower() in item["itemName"].lower() for m in must):
+                    hit = item
+                    break
+            if hit:
+                found[it["id"]] = {k: hit[k] for k in ("itemCode", "itemName", "price", "rating", "reviews", "shopName", "image", "url")}
+            elif it["id"] in old:
+                found[it["id"]] = old[it["id"]]   # 這次找不到就沿用上次的
+        except Exception as e:
+            print(f"✗ 達人推薦搜尋失敗（{it['id']}）：{e}")
+            if it["id"] in old:
+                found[it["id"]] = old[it["id"]]
+        time.sleep(1.5)
+    out_path.write_text(json.dumps(found, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"已更新達人推薦商品（找到 {len(found)} 個）")
 
 
 def build_archive(history, keep_days=120):

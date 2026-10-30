@@ -315,7 +315,7 @@
   // =========================================================
   let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, DETAILS = {}, ARCHIVE = {}, CREATORS = { items: [] }, OY = { items: [] };
   let BY_CODE = {}, LATEST_DAY = "";
-  const state = { tab: "all", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
+  const state = { ex: { role: "all", cat: "all", country: "all" }, tab: "all", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
 
   let FAVS = {};
   try { FAVS = JSON.parse(localStorage.getItem("ruri-favs") || "{}"); } catch (e) { FAVS = {}; }
@@ -359,12 +359,23 @@
   }
   const oyItem = (o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, desc: "", cat: o.cat, country: "韓國", tags: o.tags || [], skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 });
 
+  // 達人推薦的商品：圖片、價格、連結來自自動更新程式在樂天搜尋到的結果（找不到就沒有圖片）
+  let EXPERTS = [];
+  const exItem = (e, found) => ({
+    id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
+    tags: [], skin: [], expert: e, img: found ? found.image : "", url: found ? found.url : "",
+    price: found ? found.price : 0, rating: 0, reviews: 0, priceText: "", jp: found ? found.itemName : ""
+  });
+
   async function loadData() {
     const get = p => fetch(p, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null);
-    const [latest, month, labels, creators, oy, details, archive] = await Promise.all([
+    const [latest, month, labels, creators, oy, details, archive, experts, exFound] = await Promise.all([
       get("data/latest.json"), get("data/month.json"), get("data/labels.json"), get("data/creators.json"),
-      get("data/oliveyoung.json"), get("data/details.json"), get("data/products.json")
+      get("data/oliveyoung.json"), get("data/details.json"), get("data/products.json"),
+      get("data/experts.json"), get("data/experts_items.json")
     ]);
+    EXPERTS = ((experts && experts.items) || []).map(e => exItem(e, (exFound || {})[e.id]));
+    EXPERTS.updated = experts ? experts.updated : "";
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
     for (const [g, items] of Object.entries(latest.groups)) RANK[g] = items.map(r => toItem(r, g)).filter(p => !p.exclude);
@@ -384,7 +395,7 @@
     CREATORS = creators || CREATORS; OY = oy || OY;
   }
   function stripFav(p) { const { history, creator, ...rest } = p; return rest; }
-  const isGone = p => !p.isOY && !BY_CODE[p.id];
+  const isGone = p => !p.isOY && !p.isEx && !BY_CODE[p.id];
 
   // =========================================================
   // ③ 連結
@@ -400,6 +411,7 @@
       if (jpn && /^[A-Za-z0-9 .'&-]+$/.test(jpn)) return jpn.toLowerCase().includes(b.toLowerCase()) ? jpn : b + " " + jpn;   // 英文商品名直接搜
       return (b + " " + noParen(L.desc)).trim();
     }
+    if (p.isEx) return (brandWord(p.brand) + " " + p.desc.replace(/[（(].*?[)）]/g, "")).trim();
     if (p.isOY) return p.brand + " " + p.name.replace(/[（(].*?[)）]/g, "").replace(/\d+\s?(mL|ml|g|片|入).*$/i, "").trim();
     const jp = p.jp || "";
     const known = Object.keys(BRAND_KANA).find(k => jp.includes(k));
@@ -487,11 +499,11 @@
     if ((LABELS[p.id] || {}).noTW) return `<div class="rate">台灣不能當化粧品販售，本站不提供購買連結</div>`;
     const shopee = shopeeLink(p), tw = twRakutenLink(p);
     const a = (cls, href, text) => `<a class="${cls}" href="${esc(href)}" target="_blank" rel="sponsored noopener">${text}</a>`;
-    const main = p.isOY ? a("buy oy", p.url, "去 Olive Young") : (shopee ? a("buy shopee", shopee, "在蝦皮搜尋") : a("buy", p.url, "去日本樂天看看"));
+    const main = p.isOY ? a("buy oy", p.url, "去 Olive Young") : (shopee ? a("buy shopee", shopee, "在蝦皮搜尋") : (p.url ? a("buy", p.url, "去日本樂天看看") : ""));
     const alts = [
       p.isOY && shopee ? ["在蝦皮找找", shopee] : null,
       tw ? ["台灣樂天找找", tw] : null,
-      !p.isOY && shopee ? ["日本樂天看原價", p.url] : null
+      !p.isOY && shopee && p.url ? ["日本樂天看原價", p.url] : null
     ].filter(Boolean);
     if (inline) return main + alts.map(([t, h]) => a("buy ghost", h, t)).join("");
     return main + (alts.length ? `<div class="alts">${alts.map(([t, h]) => a("alt", h, t)).join("")}</div>` : "");
@@ -502,7 +514,7 @@
     const [mainPrice, ...rest] = String(p.priceText || "").split("（");
     const price = p.price ? `<div class="price">${yen(p.price)}<small>${twd(p.price)}</small></div>`
       : p.priceText ? `<div class="price">${esc(mainPrice)}<small>${rest.length ? esc("（" + rest.join("（")) : "價格以官網為準"}</small></div>`
-      : `<div class="price"><small>價格以官網為準</small></div>`;
+      : `<div class="price"><small>價格以各通路為準</small></div>`;
     return `
       <article class="card">
         <div class="pic">
@@ -521,7 +533,7 @@
           ${p.why ? `<div class="why">${esc(p.why)}</div>` : ""}
           ${(p.tags || []).length ? `<div class="tags">${p.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>` : ""}
           ${opts.extra || ""}
-          <button class="more" type="button" data-detail="${esc(p.id)}">${p.group === "device" ? "看規格・用法" : "看成分・用法・心得"} ›</button>
+          <button class="more" type="button" data-detail="${esc(p.id)}">${p.isEx ? "看推薦重點" : p.group === "device" ? "看規格・用法" : "看成分・用法・心得"} ›</button>
           <div class="bottom">${price}${buyButtons(p)}</div>
         </div>
       </article>`;
@@ -567,7 +579,8 @@
     const howBody = d.howto ? list(d.howto, "ol")
       : noIngr ? `<p>請依商品說明書使用。</p>` : `<p>品牌沒有公開詳細用法，請依商品包裝說明使用。</p>`;
     const revBody = d.reviews ? list(d.reviews) + muted(`${esc(d.reviewSource || "整理自網路上的使用心得")}，使用感受因人而異。`) : "";
-    const body = !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>` : `
+    const exSec = p.isEx ? sec("達人怎麼說", `<p><b>${esc(p.expert.role)} ${esc(p.expert.who)}</b>：${esc(p.expert.say)}</p>${muted("出處：" + p.expert.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>（${esc(s.date)}）`).join("、"))}`) : "";
+    const body = p.isEx ? exSec : !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>` : `
           ${skinBody ? sec(skinTitle, skinBody) : ""}
           ${d.features ? sec(type === "device" ? "規格與特色" : "商品特色", list(d.features)) : ""}
           ${ingrBody ? sec("主要成分", ingrBody) : ""}
@@ -580,14 +593,14 @@
         <div class="dbody">
           <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)}・${esc(p.cat || "")}</span></div>
           <h2>${esc(p.name)}</h2>
-          ${p.twName ? `<div class="twname">台灣名稱：${esc(p.twName)}</div>` : (p.isOY ? "" : `<div class="desc">${p.desc ? "類型：" + esc(p.desc) + "・" : ""}${p.jpName ? "台灣查不到正式中文名稱，標示日本官方名稱" : "標示日本樂天上的商品名稱"}</div>`)}
+          ${p.twName ? `<div class="twname">台灣名稱：${esc(p.twName)}</div>` : (p.isOY ? "" : p.isEx ? `<div class="desc">類型：${esc(p.desc)}</div>` : `<div class="desc">${p.desc ? "類型：" + esc(p.desc) + "・" : ""}${p.jpName ? "台灣查不到正式中文名稱，標示日本官方名稱" : "標示日本樂天上的商品名稱"}</div>`)}
           ${(d.awards || []).map(a => `<span class="award">🏆 ${esc(a)}</span>`).join(" ")}
           ${d.ratingNote ? `<div class="rate">${esc(d.ratingNote)}</div>` : ""}
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）</div>` : ""}
           ${d.useNote ? `<div class="note">${esc(d.useNote)}</div>` : ""}
           ${body}
           ${historyFacts(p)}
-          ${p.jp && !p.isOY ? sec("日本樂天商品名稱", `<p style="font-size:12px;color:var(--muted)">${esc(p.jp)}</p>`) : ""}
+          ${p.jp && !p.isOY && !p.isEx ? sec("日本樂天商品名稱", `<p style="font-size:12px;color:var(--muted)">${esc(p.jp)}</p>`) : ""}
           <div class="dbuys">${buyButtons(p, true)}${p.price ? `<span class="rate">${yen(p.price)}（${twd(p.price)}）</span>` : ""}</div>
           ${(d.sources || []).length ? `<p class="srcs" style="font-size:12px;margin:0">資料來源：${d.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、")}</p>` : ""}
           <p class="legal">本站內容為商品資訊整理，不代表療效，也不能取代專業醫療建議。使用感受因人而異；使用後如有肌膚不適，請停止使用並諮詢醫師。成分、用法以商品包裝標示為準。</p>
@@ -595,6 +608,7 @@
       </div>`;
   }
   function findItem(id) {
+    if (id.startsWith("ex:")) return EXPERTS.find(p => p.id === id);
     return BY_CODE[id] || ARCHIVE[id] || Object.values(MONTH.groups).flat().find(p => p.id === id) || OY.items.map(oyItem).find(p => p.id === id) || FAVS[id];
   }
   function openDetail(id) {
@@ -671,12 +685,19 @@
     }
 
     if (page.source === "creators") {
-      const items = CREATORS.items.map((c, i) => { const p = BY_CODE[c.itemCode] || ARCHIVE[c.itemCode]; return p ? { ...p, creator: c, crank: i + 1 } : null; }).filter(Boolean);
-      html += pagehead(page, CREATORS.sample ? `<span class="src sample">示範資料・帳號皆為範例</span>` : `<span class="src">${esc(CREATORS.week || "")}</span>`);
-      html += items.length ? `<div class="grid" style="margin-top:18px">${items.map(p => card(p, {
-        showRank: p.crank, meta: `<div class="meta">${p.creator.count} 位創作者推薦・IG ${p.creator.ig}・小紅書 ${p.creator.xhs}</div>`,
-        extra: `<div class="voices">${(p.creator.voices || []).map(v => `<div class="voice"><b>${esc(v.pf)} ${esc(v.who)}</b>：${esc(v.say)}</div>`).join("")}</div>`
-      })).join("")}</div>` : `<div class="empty">還沒有資料。</div>`;
+      const roleOf = p => p.expert.role.includes("化妝師") ? "化妝師" : p.expert.role.includes("YouTuber") ? "YouTuber" : p.expert.role.includes("雜誌") ? "雜誌編輯" : "美容家・醫師";
+      const ex = state.ex;
+      let list = EXPERTS.filter(p => (ex.role === "all" || roleOf(p) === ex.role || p.expert.role.includes(ex.role)) && (ex.cat === "all" || p.cat === ex.cat) && (ex.country === "all" || (ex.country === "韓國" ? p.country === "韓國" : p.country !== "韓國")));
+      list = applyFilters(list, { noPrice: true });
+      const chips = (key, opts) => `<div class="opts" style="margin-bottom:8px">${opts.map(([v, l]) => `<button class="chip" type="button" data-ex="${key}" data-v="${v}" aria-pressed="${ex[key] === v}">${l}</button>`).join("")}</div>`;
+      html += pagehead(page, `<span class="src">${EXPERTS.length} 個推薦・${esc(EXPERTS.updated || "")} 整理</span>`);
+      html += `<div style="margin-top:16px">${chips("role", [["all", "全部達人"], ["化妝師", "💄 化妝師"], ["YouTuber", "▶ YouTuber"], ["美容家・醫師", "🩺 美容家・醫師"], ["雜誌編輯", "📖 雜誌編輯"]])}
+        ${chips("cat", [["all", "全部"], ["彩妝", "彩妝"], ["保養", "保養"]])}${chips("country", [["all", "日韓都看"], ["日本", "日本・歐美品牌"], ["韓國", "韓國品牌"]])}</div>`;
+      html += list.length ? `<div class="grid" style="margin-top:12px">${list.map(p => card(p, {
+        extra: `<div class="voices"><div class="voice"><b>${esc(p.expert.role)} ${esc(p.expert.who)}</b>：${esc(p.expert.say)}</div></div>
+                <div class="rate">出處：${p.expert.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" style="color:var(--muted)">${esc(s.name)}</a>`).join("、")}</div>`
+      })).join("")}</div>` : `<div class="empty" style="margin-top:12px">沒有符合條件的推薦，換個條件看看。</div>`;
+      html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">推薦內容整理自公開的雜誌、網站文章，用本站自己的話摘要，並附上原文連結；商品圖片與價格來自日本樂天，可能與推薦的色號不同。</p>`;
     }
 
     if (page.source === "fav") {
@@ -727,6 +748,7 @@
     const t = e.target.closest("button");
     if (!t) return;
     if (t.dataset.page) { location.hash = t.dataset.page; return; }
+    if (t.dataset.ex) { state.ex[t.dataset.ex] = t.dataset.v; render(); return; }
     if (t.dataset.detail) { openDetail(t.dataset.detail); return; }
     if (t.id === "detailClose") { document.getElementById("detail").close(); return; }
     if (t.dataset.fav) {
