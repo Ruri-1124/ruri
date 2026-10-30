@@ -266,9 +266,9 @@
  },
  "sakurap:10005223": {
   "brand": "VALANROSE",
-  "name": "KURO 白髮染色洗髮霜",
   "country": "日本",
-  "desc": "KURO 白髮染色洗髮霜"
+  "desc": "白髮用染色洗髮霜",
+  "jpName": "KURO クリームシャンプー"
  },
  "kobe-beauty-labo:10002363": {
   "brand": "YOLU",
@@ -284,45 +284,46 @@
  },
  "mycosmeticbox:10000939": {
   "brand": "ReKERA",
-  "name": "沙龍護髮乳",
   "country": "日本",
-  "desc": "沙龍護髮乳"
+  "desc": "免沖洗護髮乳",
+  "jpName": "リケラエマルジョン"
  },
  "angfa:10009301": {
   "brand": "SCALP D",
-  "name": "藥用頭皮洗潤組",
   "country": "日本",
-  "desc": "藥用頭皮洗潤組"
+  "desc": "頭皮洗髮精＋潤髮乳 補充包",
+  "jpName": "スカルプD 薬用スカルプシャンプー＆ボリュームパックコンディショナー（つめかえ用）"
  },
  "kerastase-varie:10000005": {
-  "brand": "KÉRASTASE 卡詩",
-  "name": "黑鑽逆時玫瑰香氛露",
+  "brand": "KÉRASTASE 巴黎卡詩",
   "country": "其他",
-  "desc": "黑鑽逆時玫瑰香氛露"
+  "desc": "護髮油",
+  "twName": "黑鑽極萃逆時玫瑰香氛露",
+  "jpName": "ユイル クロノロジスト"
  },
  "stylife:15348833": {
   "brand": "track",
-  "name": "護髮造型油",
   "country": "日本",
-  "desc": "護髮造型油"
+  "desc": "護髮・造型油",
+  "jpName": "track Oil No.3"
  },
  "mtgec-beauty:10002091": {
   "brand": "ReFa",
-  "name": "AILE 美髮梳",
   "country": "日本",
-  "desc": "AILE 美髮梳"
+  "desc": "美髮梳",
+  "jpName": "ReFa AILE BRUSH（リファエールブラシ）"
  },
  "onemakem:10000306": {
   "brand": "MILBON",
-  "name": "ELUJUDA 護髮油",
   "country": "日本",
-  "desc": "ELUJUDA 護髮油"
+  "desc": "免沖洗護髮（可選款式）",
+  "jpName": "エルジューダ（FO／MO／エマルジョン＋／サントリートセラム／グレイスオン ほか）"
  },
  "b-ris-shop:10000035": {
   "brand": "b.ris",
-  "name": "頭皮養護液",
   "country": "日本",
-  "desc": "頭皮養護液"
+  "desc": "頭皮養護液",
+  "jpName": "ラリッチスカルプ"
  },
  "ukaofficial:10000000": {
   "brand": "uka",
@@ -901,5 +902,131 @@
   "country": "日本",
   "jpName": "ラディアント シルクプロアイロン",
   "desc": "直髮夾（28／35mm）"
+ },
+ "loa-official:10000000": {
+  "brand": "LOA",
+  "country": "日本",
+  "jpName": "LOA THE OIL",
+  "desc": "頭髮、身體都能用的香氛油"
+ },
+ "chouchou-store:10001788": {
+  "brand": "LOA",
+  "country": "日本",
+  "jpName": "LOA THE OIL",
+  "desc": "頭髮、身體都能用的香氛油"
+ },
+ "beautifultoybox:10002296": {
+  "brand": "LOA",
+  "country": "日本",
+  "jpName": "LOA THE OIL",
+  "desc": "頭髮、身體都能用的香氛油"
+ },
+ "lond:10001362": {
+  "brand": "LOA",
+  "country": "日本",
+  "jpName": "LOA THE OIL",
+  "desc": "頭髮、身體都能用的香氛油"
+ },
+ "beautypark2017:10003023": {
+  "brand": "LOA",
+  "country": "日本",
+  "jpName": "LOA THE OIL \"CARE\"",
+  "desc": "護髮油（CARE 系列）"
+ },
+ "mtgec-beauty:10002261": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa HEART COMB Aira",
+  "desc": "愛心造型梳（瀏海用）"
+ },
+ "mtgec-beauty:10002009": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa HEART BRUSH",
+  "desc": "愛心造型梳"
+ },
+ "mtgec-beauty:10002313": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa ION CARE BRUSH PREMIUM",
+  "desc": "洗頭用頭皮刷"
+ },
+ "mtgec-beauty:10001958": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "ReFa LOCK OIL（ロックオイル）",
+  "desc": "造型護髮油"
+ },
+ "bijinlabo:10000710": {
+  "brand": "ルプルプ",
+  "country": "日本",
+  "jpName": "ルプルプ ヘアカラートリートメント",
+  "desc": "白髮用染色護髮霜"
+ },
+ "angfa:10000025": {
+  "brand": "SCALP D",
+  "country": "日本",
+  "jpName": "スカルプD 薬用スカルプシャンプー",
+  "desc": "男性用頭皮洗髮精"
+ },
+ "tamago-kichi:10000533": {
+  "brand": "ニューモ",
+  "country": "日本",
+  "jpName": "ニューモV",
+  "desc": "頭皮用養護液"
+ },
+ "f-netclub:10000296": {
+  "brand": "リリィジュ",
+  "country": "日本",
+  "jpName": "薬用リリィジュ",
+  "desc": "女性用頭皮養護液"
+ },
+ "cscjp:10000130": {
+  "brand": "POLYPURE",
+  "country": "日本",
+  "jpName": "ポリピュアEX",
+  "desc": "頭皮養護液"
+ },
+ "cleosbeaute:10000010": {
+  "brand": "Cleo's Beaute",
+  "country": "日本",
+  "jpName": "エクストラモイスト シャンプー・リペア トリートメント",
+  "desc": "洗髮精・護髮乳"
+ },
+ "kaminidoramawo:10000010": {
+  "brand": "髪にドラマを",
+  "country": "日本",
+  "jpName": "つるりんちょ。シャンプー＆トリートメント（レギュラー）",
+  "desc": "洗髮精＋護髮乳組"
+ },
+ "kaminidoramawo:10000031": {
+  "brand": "髪にドラマを",
+  "country": "日本",
+  "jpName": "つるりんちょ。シャンプー＆トリートメント（リペア）",
+  "desc": "洗髮精＋護髮乳組（修護款）"
+ },
+ "emikuru:10000560": {
+  "brand": "plus eau",
+  "country": "日本",
+  "jpName": "プリュスオー シャンプー＆トリートメント",
+  "desc": "洗髮精＋護髮乳組（壓瓶）"
+ },
+ "kundal-japan:10000000": {
+  "brand": "KUNDAL",
+  "country": "韓國",
+  "jpName": "ハニー＆マカデミア ネイチャーシャンプー＆プロテイントリートメント",
+  "desc": "洗髮精＋護髮乳組"
+ },
+ "kobe-beauty-labo:10002520": {
+  "brand": "YOLU",
+  "country": "日本",
+  "jpName": "YOLU 2027 福袋（6 点セット）",
+  "desc": "洗護 6 件福袋"
+ },
+ "onemakem:10000085": {
+  "brand": "napla",
+  "country": "日本",
+  "jpName": "N. ポリッシュオイル",
+  "desc": "護髮・造型油（150mL）"
  }
 }
