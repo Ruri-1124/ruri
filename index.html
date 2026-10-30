@@ -238,6 +238,7 @@
     排行資料來自日本樂天市場，每天台灣時間早上 6 點左右自動更新；上榜過的商品會保留在資料庫裡。價格為日本售價，台幣以 1 日圓 ≈ 0.21 台幣估算。
     膚質與需求標籤由商品說明的關鍵字自動判斷，僅供參考。「在蝦皮搜尋」、「台灣樂天找找」會帶你到該平台的搜尋結果，台灣不一定有販售，請確認賣家與商品內容後再購買。
     本站含蝦皮、樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。本站內容為商品資訊整理，不代表療效。
+    <br><br><b>免責聲明</b>：本站只整理公開的排行與商品資訊，不販售任何商品，也不是任何品牌或購物平台的官方網站。商品的販售、運送、退換貨與售後服務由各購物平台與賣家負責。購買前請確認商品的規格、電壓、成分與適用對象，使用時請依包裝標示與說明書；有疾病、懷孕、過敏體質或其他疑慮時，請先諮詢醫師或專業人員。因購買或使用第三方商品所生的問題，請洽販售平台、賣家或品牌處理。
   </div>
 </footer>
 <div class="shade" id="shade" hidden></div>
@@ -732,7 +733,7 @@
             <div class="body"><div class="brand"><span>${esc(v.channel)}</span><span class="flag">${esc(v.country)}・${esc(v.cat)}</span></div>
             <h3 class="nm"><a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${esc(v.title)}</a></h3>
             <div class="rate">${esc(v.date)}・${Number(v.views).toLocaleString()} 次觀看</div>
-            <div class="voices">${v.mentions.slice(0, 6).map(m => `<div class="voice">${esc(m)}</div>`).join("")}</div></div></article>`).join("")}</div>`;
+            <div class="voices">${v.mentions.filter(m => !/まつ毛|まつげ|育毛|発毛|白髪染め|脱毛器|美顔器|EMS|ニードル|スピキュール|ハイドロキノン|속눈썹|탈모|염색|제모|니들|스피큘/.test(m)).slice(0, 6).map(m => `<div class="voice">${esc(m)}</div>`).join("")}</div></div></article>`).join("")}</div>`;
           html += `<p style="color:var(--muted);font-size:12px;margin-top:8px">影片清單由 YouTube 自動搜尋產生，說明欄內容可能包含業配或分潤商品，僅供參考。</p>`;
         }
       }

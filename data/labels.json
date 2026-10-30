@@ -4,7 +4,8 @@
   "name": "睫毛美容液",
   "country": "日本",
   "jpName": "ビオルチア アイラッシュセラム",
-  "desc": "睫毛美容液"
+  "desc": "睫毛美容液",
+  "hide": true
  },
  "supernice-store:10000012": {
   "brand": "SPICARE",
@@ -76,7 +77,8 @@
  "beautyforest2018:10000703": {
   "brand": "EGUTAM",
   "desc": "睫毛美容液 2mL",
-  "jpName": "エグータム アイラッシュセラム（プレミアム）"
+  "jpName": "エグータム アイラッシュセラム（プレミアム）",
+  "hide": true
  },
  "origotou:10000454": {
   "brand": "HACKTICK",
@@ -88,7 +90,8 @@
   "brand": "PHOENIX",
   "country": "日本",
   "desc": "睫毛保養凝膠",
-  "jpName": "フェニックス アイラッシュサポートジェル／ザ ブラック"
+  "jpName": "フェニックス アイラッシュサポートジェル／ザ ブラック",
+  "hide": true
  },
  "etvos:10000818": {
   "brand": "ETVOS",
@@ -551,7 +554,8 @@
   "brand": "MYTREX",
   "country": "日本",
   "desc": "頭皮按摩梳（充電式）",
-  "jpName": "MYTREX VIDO（ビドー）ヘッドマッサージャー"
+  "jpName": "MYTREX VIDO（ビドー）ヘッドマッサージャー",
+  "hide": true
  },
  "mrock:10012094": {
   "brand": "ke-non",
@@ -624,7 +628,8 @@
   "brand": "SALONIA",
   "country": "日本",
   "desc": "筆型美容儀（不用充電）",
-  "jpName": "SALONIA フェイスカレントポインター（ペン型美顔器）"
+  "jpName": "SALONIA フェイスカレントポインター（ペン型美顔器）",
+  "hide": true
  },
  "abemashopping:10000126": {
   "brand": "BORDER FREE",
@@ -674,7 +679,8 @@
   "name": "ELEKI LIFT EMS 美顏器",
   "country": "日本",
   "jpName": "ELEKI LIFT（エレキリフト）",
-  "desc": "臉部美容儀"
+  "desc": "臉部美容儀",
+  "hide": true
  },
  "rakuten24:11421132": {
   "brand": "ELIXIR 怡麗絲爾",
@@ -1105,7 +1111,8 @@
   "brand": "PHOENIX",
   "country": "日本",
   "jpName": "フェニックス アイ カールアップ コーティング／ザ ブラック",
-  "desc": "睫毛定型保養液"
+  "desc": "睫毛定型保養液",
+  "hide": true
  },
  "egawakikaku:10000078": {
   "brand": "COVERMARK",
@@ -1141,7 +1148,8 @@
   "brand": "EMAKED",
   "country": "日本",
   "jpName": "エマーキット",
-  "desc": "睫毛美容液 2mL"
+  "desc": "睫毛美容液 2mL",
+  "hide": true
  },
  "tsuruha:10118117": {
   "brand": "Attack 花王",
@@ -1214,7 +1222,8 @@
   "brand": "Mol clear Pro",
   "country": "日本",
   "jpName": "モルクリアプロ",
-  "desc": "除霉噴霧"
+  "desc": "除霉噴霧",
+  "hide": true
  },
  "k-relight:10001303": {
   "brand": "Dover",
@@ -1226,18 +1235,21 @@
   "brand": "シュワッ！とパンチ",
   "country": "日本",
   "jpName": "シュワッ！とパンチ",
-  "desc": "氧系漂白清潔劑"
+  "desc": "氧系漂白清潔劑",
+  "hide": true
  },
  "rakutensokuhaimart:10040432": {
   "brand": "HITACHI 日立",
   "country": "日本",
   "jpName": "日立 洗濯槽クリーナー SK-1500",
-  "desc": "洗衣槽清潔劑（含氯）"
+  "desc": "洗衣槽清潔劑（含氯）",
+  "hide": true
  },
  "livingut:10238878": {
   "country": "日本",
   "jpName": "らくらく洗濯槽まるごと泡スプレー",
-  "desc": "洗衣槽泡沫清潔噴霧"
+  "desc": "洗衣槽泡沫清潔噴霧",
+  "hide": true
  },
  "rakuten24:11338331": {
   "brand": "シャボン玉石けん",
@@ -1276,18 +1288,27 @@
   "brand": "CREAGE",
   "country": "日本",
   "jpName": "クリアージュ アイリフト Neo",
-  "desc": "眼周 EMS 美容儀"
+  "desc": "眼周 EMS 美容儀",
+  "hide": true
  },
  "veramoreofficial:10000146": {
   "brand": "VERAMORE",
   "country": "韓國",
   "jpName": "3STEP ナイトスペシャルケアセット（スピキュール 300 セラム ほか）",
-  "desc": "微針精華夜間保養組"
+  "desc": "微針精華夜間保養組",
+  "hide": true
  },
  "hugkumi:10000426": {
   "brand": "ESIENCE",
   "country": "日本",
   "jpName": "C×AZ ダーマインショット",
-  "desc": "微針維生素 C 精華（單次包）"
+  "desc": "微針維生素 C 精華（單次包）",
+  "hide": true
+ },
+ "link5520889:10000001": {
+  "hide": true
+ },
+ "beinfinity:10000039": {
+  "hide": true
  }
 }

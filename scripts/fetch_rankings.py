@@ -168,6 +168,8 @@ def build_youtube():
         return
     cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
     brands = sorted(cfg.get("brands", []), key=len, reverse=True)
+    genres = json.loads((ROOT / "config" / "genres.json").read_text(encoding="utf-8"))
+    risk = genres.get("riskExclude", []) + ["まつ毛", "まつげ", "속눈썹", "탈모", "염색", "제모기", "니들", "스피큘"]
     since = (datetime.now(timezone.utc) - timedelta(days=cfg.get("days", 30))).strftime("%Y-%m-%dT%H:%M:%SZ")
     videos = {}
     try:
@@ -190,6 +192,8 @@ def build_youtube():
                 mentions = []
                 for line in sn.get("description", "").splitlines():
                     line = line.strip(" ・-•*▶︎▷►✔︎✅☑︎◎○●□■◆◇☆★♡♥")
+                    if any(w in line for w in risk):
+                        continue   # 有法規或安全疑慮的商品不列出
                     if 4 <= len(line) <= 90 and "http" not in line and any(b.lower() in line.lower() for b in brands):
                         if line not in mentions:
                             mentions.append(line)
