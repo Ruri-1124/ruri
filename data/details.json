@@ -308,7 +308,8 @@
     "name": "@cosme 商品頁（6mL）",
     "url": "https://www.cosme.net/variations/1174988/"
    }
-  ]
+  ],
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。"
  },
  "sk-ii:10003011": {
   "skinNote": "品牌沒有特別標示適合的膚質。",
@@ -1914,6 +1915,411 @@
    {
     "name": "日本樂天商品頁",
     "url": "https://item.rakuten.co.jp/onemakem/10000085/"
+   }
+  ]
+ },
+ "clinique:10001547": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "倩碧 2026 年聖誕限定組，數量限定",
+   "主角是長效型睫毛膏「Lash Power」"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/clinique/130394/"
+   }
+  ]
+ },
+ "clinique:10001529": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "倩碧 2026 年聖誕限定組，數量限定",
+   "2 色「Cheek Pop」腮紅"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/clinique/vcl_lip/"
+   }
+  ]
+ },
+ "bjc-onlinestore:10000020": {
+  "skinNote": "睫毛用的保養液，使用時避免進入眼睛，如有不適請停止使用。",
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
+  "features": [
+   "5mL",
+   "日本正規代理店販售（樂天商品名稱標示正規品）"
+  ],
+  "howto": [
+   "依包裝說明，塗在睫毛根部"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/bjc-onlinestore/lashaddict01a/"
+   }
+  ]
+ },
+ "beautyforest2018:10000125": {
+  "_同": "bjc-onlinestore:10000020"
+ },
+ "arianakosume:10000637": {
+  "skinNote": "品牌沒有特別標示適合的膚質；乾肌全臉使用可能覺得緊繃，油肌有人覺得時間久了會出油。",
+  "awards": [
+   "@cosme 最佳美妝大賞 蜜粉類第 1 名（2019、2020），2021 年進入名人堂"
+  ],
+  "ratingNote": "@cosme 評價 5.3（15,060 則心得，舊版）",
+  "features": [
+   "使用高級有機絲粉，粉末細緻，並包覆胺基酸（保濕成分）",
+   "含 4 種植物萃取",
+   "修飾毛孔和凹凸，妝感滑順",
+   "清新綠花香",
+   "有 #00 透明、#80 粉紅光等多色可選，20g",
+   "2025 年改版為「ルース パウダー」"
+  ],
+  "howto": [
+   "底妝最後一步使用",
+   "用粉撲沾粉，先在手背調整用量",
+   "以畫螺旋的方式輕輕推在臉上"
+  ],
+  "reviews": [
+   "粉末細、服貼，不容易厚重",
+   "控油又有透明感",
+   "乾肌全臉用可能緊繃，油肌有人覺得持妝普通"
+  ],
+  "reviewSource": "整理自 @cosme 心得",
+  "sources": [
+   {
+    "name": "@cosme 商品頁",
+    "url": "https://www.cosme.net/products/10163124/"
+   }
+  ]
+ },
+ "onemakem:10001126": {
+  "_同": "arianakosume:10000637"
+ },
+ "origotou:10000454": {
+  "skinNote": "品牌沒有特別標示適合的膚質；乾肌如果覺得不服貼，可以用沾濕擰乾的海綿。",
+  "features": [
+   "日本「北の快適工房」推出",
+   "一支包含防曬、妝前、粉底、遮瑕、蜜粉 5 種功能",
+   "接觸皮膚會變成液狀，推開後變成粉霧妝感",
+   "3 色：ライト、ナチュラル、オークル",
+   "5.6g，附專用海綿"
+  ],
+  "howto": [
+   "轉出約 3mm，在額頭、鼻子、臉頰、下巴畫線",
+   "用手或海綿輕拍推開",
+   "需要遮瑕的地方再疊一層",
+   "用肥皂或洗面乳就能卸掉"
+  ],
+  "sources": [
+   {
+    "name": "GIZMODO 試用報導",
+    "url": "https://www.gizmodo.jp/article/hacktick/"
+   }
+  ]
+ },
+ "cosmecomonline:10183134": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "CANMAKE 限定貝殼造型款",
+   "6.5g，日本售價約 ¥1,034"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/cosmecomonline/1000240843/"
+   }
+  ]
+ },
+ "cosmecomonline:10183127": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "CANMAKE 人氣「棉花糖蜜粉餅」的限定貝殼造型款",
+   "4.0g，日本售價約 ¥1,034"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/cosmecomonline/1000240842/"
+   }
+  ]
+ },
+ "arianakosume:10001906": {
+  "skinNote": "品牌沒有特別標示適合的膚質。",
+  "features": [
+   "日本 CHARIS&Co. 的商品，主要在美容沙龍和授權店販售",
+   "含約 3,000 根 0.2mm 的天然二氧化矽微針（イノスピキュール）",
+   "SPF37／PA++",
+   "只有一個色號，品牌說明約 10 分鐘會融合膚色",
+   "無滑石粉、礦物油、Paraben、酒精等 6 種成分",
+   "15g 日本售價 ¥8,800，有補充蕊"
+  ],
+  "howto": [
+   "不用妝前乳，直接上",
+   "用專用海綿以按壓的方式上妝，不要來回推"
+  ],
+  "sources": [
+   {
+    "name": "onecosme 商品資訊",
+    "url": "https://onecosme.jp/92180"
+   }
+  ]
+ },
+ "bjc-onlinestore:10000036": {
+  "_同": "arianakosume:10001906"
+ },
+ "beautyforest2018:10001768": {
+  "_同": "arianakosume:10001906"
+ },
+ "esteelauder:10001234": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "雅詩蘭黛 2026 年聖誕限定唇膏組"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/esteelauder/25holiday_07/"
+   }
+  ]
+ },
+ "brain-service:10000078": {
+  "skinNote": "睫毛用的保養凝膠，使用時避免進入眼睛。",
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
+  "features": [
+   "日本製",
+   "可選「アイラッシュサポートジェル」9mL 或「ザ ブラック」8mL",
+   "樂天商品名稱提到嫁接睫毛也可以用"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/brain-service/10000078/"
+   }
+  ]
+ },
+ "brain-service:10000144": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "可選「アイ カールアップ コーティング」8mL 或「ザ ブラック」8mL"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/brain-service/brain01/"
+   }
+  ],
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。"
+ },
+ "yayoi-cosme:10007685": {
+  "skinNote": "品牌沒有特別標示適合的膚質。",
+  "features": [
+   "資生堂 MAQuillAGE 的粉餅補充蕊",
+   "全 8 色",
+   "賣家是資生堂認定店（樂天商品名稱標示）"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/yayoi-cosme/10369/"
+   }
+  ]
+ },
+ "maccosmetics:10001118": {
+  "skinNote": "彩妝商品。",
+  "features": [
+   "M·A·C「Lustreglass」系列",
+   "透明感、水光感的唇膏"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/maccosmetics/88565-1/"
+   }
+  ]
+ },
+ "egawakikaku:10000078": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "SPF35／PA+++",
+   "有 FR、FN 等多個色號"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/egawakikaku/493505903/"
+   }
+  ]
+ },
+ "beautyforest2018:10000703": {
+  "skinNote": "睫毛用的保養液，使用時避免進入眼睛，如有不適請停止使用。",
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
+  "features": [
+   "2mL",
+   "有一般款和 Premium 2 種"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/beautyforest2018/201218-001/"
+   }
+  ]
+ },
+ "brandshiseido:10000016": {
+  "skinNote": "品牌沒有特別標示適合的膚質。",
+  "awards": [
+   "@cosme 最佳美妝大賞 2025 粉底液類第 1 名"
+  ],
+  "ratingNote": "@cosme 評價 5.5（7,539 則心得）",
+  "features": [
+   "精華液配方的粉底液",
+   "SPF30／PA+++",
+   "全 12 色，玻璃瓶裝，有補充瓶",
+   "30mL 日本售價 ¥7,590"
+  ],
+  "ingredients": [
+   "克菲爾發酵萃取",
+   "菸鹼醯胺",
+   "乳酸桿菌／米發酵物",
+   "甘油"
+  ],
+  "howto": [
+   "使用前先搖勻",
+   "第一次使用要多壓幾次才會出來",
+   "用量太少防曬效果會不足，建議搭配防曬品"
+  ],
+  "reviews": [
+   "不容易乾、光澤感持久",
+   "流汗也不太容易脫妝",
+   "色號偏亮，建議到櫃上試色"
+  ],
+  "reviewSource": "整理自 @cosme 心得",
+  "sources": [
+   {
+    "name": "@cosme 商品頁（220 Linen）",
+    "url": "https://www.cosme.net/variations/1149911/"
+   }
+  ]
+ },
+ "brandshiseido:10000172": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "資生堂「Essence」系列的另一款粉底",
+   "樂天商品名稱提到主打毛孔等「雜訊」修飾"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/brandshiseido/smu0056/"
+   }
+  ]
+ },
+ "brandshiseido:10000151": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "資生堂「Essence」系列的蜜粉",
+   "樂天商品名稱提到幫助維持妝容"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/brandshiseido/smu0053/"
+   }
+  ]
+ },
+ "sk-ii:10003757": {
+  "skinNote": "品牌沒有特別標示適合的膚質。",
+  "features": [
+   "SK-II 的 CC 妝前乳，有防曬係數（SPF50+／PA++++）",
+   "30g／50g"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/sk-ii/gccr/"
+   }
+  ]
+ },
+ "kobe-beauty-labo:10002511": {
+  "skinNote": "品牌沒有特別標示適合的膚質。",
+  "useNote": "📌 日本「醫藥部外品」粉底。本站只整理商品資料，不代表效果。",
+  "features": [
+   "日本「醫藥部外品」的高遮瑕粉底",
+   "樂天週間排行第 1 名（賣家標示）"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/kobe-beauty-labo/wrf007/"
+   }
+  ]
+ },
+ "masayosiryouhin:10004070": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "佳麗寶每年推出的「米蘭系列」限定蜜粉",
+   "這是 2026 年版的補充蕊，24g"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/masayosiryouhin/milano-rf/"
+   }
+  ]
+ },
+ "yslbeauty:10000427": {
+  "skinNote": "彩妝商品，品牌沒有特別標示適合的膚質。",
+  "features": [
+   "YSL「Loveshine」系列的唇蜜",
+   "樂天商品名稱提到能修飾唇紋、讓嘴唇看起來豐潤"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/yslbeauty/ww-51430ysl/"
+   }
+  ]
+ },
+ "4843-64:10000499": {
+  "skinNote": "睫毛用的保養液，使用時避免進入眼睛，如有不適請停止使用。",
+  "useNote": "📌 在台灣，化粧品不能宣稱讓睫毛增長、變濃密。本站只整理商品資料，不代表效果。使用時避免進入眼睛。",
+  "features": [
+   "日本水橋保壽堂製藥的商品",
+   "2mL，日本售價 ¥6,600"
+  ],
+  "ingredients": [
+   "水解黏多醣",
+   "玻尿酸鈉",
+   "六胜肽-2",
+   "棕櫚醯五胜肽-4",
+   "生物素",
+   "茶葉萃取",
+   "人蔘根萃取",
+   "泛醇"
+  ],
+  "howto": [
+   "請依包裝上的使用方法使用"
+  ],
+  "sources": [
+   {
+    "name": "TSURUHA 線上商店（全成分）",
+    "url": "https://shop.tsuruha.co.jp/10128221.html"
+   }
+  ]
+ },
+ "tirtir:10000184": {
+  "skinNote": "依款式不同，妝感（霧面、光澤）也不同。",
+  "features": [
+   "TIRTIR 是韓國品牌",
+   "這個商品頁可以選 5 款氣墊：Tinted、Red、Ruby Mesh、Crystal Mesh、AI"
+  ],
+  "sources": [
+   {
+    "name": "日本樂天商品頁",
+    "url": "https://item.rakuten.co.jp/tirtir/444-468_ad/"
    }
   ]
  }

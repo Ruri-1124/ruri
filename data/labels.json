@@ -9,14 +9,14 @@
  "supernice-store:10000012": {
   "brand": "SPICARE",
   "name": "V3 光感粉底",
-  "country": "韓國",
+  "country": "日本",
   "desc": "V3 光感粉底"
  },
  "bjc-onlinestore:10000020": {
   "brand": "Lashaddict",
-  "name": "睫毛美容液 5ml",
-  "country": "日本",
-  "desc": "睫毛美容液 5ml"
+  "country": "其他",
+  "desc": "睫毛美容液 5mL",
+  "jpName": "アイラッシュ コンディショニング セラム アドバンス"
  },
  "byurjapan:10000005": {
   "brand": "ByUR",
@@ -32,9 +32,9 @@
  },
  "arianakosume:10000637": {
   "brand": "COSME DECORTE 黛珂",
-  "name": "蜜粉 20g",
   "country": "日本",
-  "desc": "蜜粉 20g"
+  "desc": "蜜粉 20g",
+  "jpName": "コスメデコルテ フェイスパウダー（ルース パウダー）"
  },
  "gb:10005000": {
   "brand": "KOTONA",
@@ -44,9 +44,9 @@
  },
  "yayoi-cosme:10007685": {
   "brand": "MAQuillAGE 心機",
-  "name": "粉餅 補充蕊",
   "country": "日本",
-  "desc": "粉餅 補充蕊"
+  "desc": "粉餅 補充蕊",
+  "jpName": "ドラマティックパウダリー EX（レフィル）"
  },
  "rakuten24:11285302": {
   "brand": "MAQuillAGE 心機",
@@ -56,39 +56,38 @@
  },
  "brandshiseido:10000016": {
   "brand": "SHISEIDO 資生堂",
-  "name": "精華光感粉底",
   "country": "日本",
-  "desc": "精華光感粉底"
+  "desc": "精華粉底液",
+  "jpName": "エッセンス スキングロウ ファンデーション"
  },
  "maccosmetics:10001118": {
   "brand": "M·A·C",
-  "name": "光澤唇膏",
   "country": "其他",
-  "desc": "光澤唇膏"
+  "desc": "水光唇膏",
+  "jpName": "ラスター ガラス シアーシャイン リップスティック"
  },
  "sk-ii:10003757": {
   "brand": "SK-II",
-  "name": "CC 妝前乳",
   "country": "日本",
-  "desc": "CC 妝前乳"
+  "desc": "CC 妝前乳",
+  "jpName": "ジェノプティクス CC プライマー"
  },
  "beautyforest2018:10000703": {
   "brand": "EGUTAM",
-  "name": "睫毛美容液",
-  "country": "日本",
-  "desc": "睫毛美容液"
+  "desc": "睫毛美容液 2mL",
+  "jpName": "エグータム アイラッシュセラム（プレミアム）"
  },
  "origotou:10000454": {
   "brand": "HACKTICK",
-  "name": "粉底棒",
   "country": "日本",
-  "desc": "粉底棒"
+  "desc": "粉底棒（一支完成底妝）",
+  "jpName": "HACKTICK スティックファンデーション"
  },
  "brain-service:10000078": {
   "brand": "PHOENIX",
-  "name": "睫毛修護凝膠",
   "country": "日本",
-  "desc": "睫毛修護凝膠"
+  "desc": "睫毛保養凝膠",
+  "jpName": "フェニックス アイラッシュサポートジェル／ザ ブラック"
  },
  "etvos:10000818": {
   "brand": "ETVOS",
@@ -98,15 +97,15 @@
  },
  "kobe-beauty-labo:10002511": {
   "brand": "WrinkFade",
-  "name": "抗皺遮瑕粉底",
   "country": "日本",
-  "desc": "抗皺遮瑕粉底"
+  "desc": "高遮瑕粉底（醫藥部外品）",
+  "jpName": "WrinkFade 薬用リンクルファンデーション ハイカバー"
  },
  "tirtir:10000184": {
   "brand": "TIRTIR",
-  "name": "氣墊粉底",
   "country": "韓國",
-  "desc": "氣墊粉底"
+  "desc": "氣墊粉底（5 款可選）",
+  "jpName": "TIRTIR クッション（ティンティッド／レッド／ルビーメッシュ／クリスタルメッシュ／AI）"
  },
  "formalklein:10001456": {
   "brand": "HARIAS",
@@ -1028,5 +1027,107 @@
   "country": "日本",
   "jpName": "N. ポリッシュオイル",
   "desc": "護髮・造型油（150mL）"
+ },
+ "clinique:10001547": {
+  "brand": "CLINIQUE 倩碧",
+  "country": "其他",
+  "jpName": "ラッシュ パワー マスカラ セット 27",
+  "desc": "睫毛膏 聖誕限定組"
+ },
+ "clinique:10001529": {
+  "brand": "CLINIQUE 倩碧",
+  "country": "其他",
+  "jpName": "チーク ポップ デュオ セット 27",
+  "desc": "腮紅雙色 聖誕限定組"
+ },
+ "beautyforest2018:10000125": {
+  "brand": "Lashaddict",
+  "country": "其他",
+  "jpName": "アイラッシュ コンディショニング セラム アドバンス",
+  "desc": "睫毛美容液 5mL"
+ },
+ "onemakem:10001126": {
+  "brand": "COSME DECORTE 黛珂",
+  "country": "日本",
+  "jpName": "コスメデコルテ ルース パウダー",
+  "desc": "蜜粉"
+ },
+ "cosmecomonline:10183134": {
+  "brand": "CANMAKE",
+  "country": "日本",
+  "jpName": "イルミネイティングフィニッシュパウダー Abloom 01（限定シェル）",
+  "desc": "蜜粉餅（限定款）"
+ },
+ "cosmecomonline:10183127": {
+  "brand": "CANMAKE",
+  "country": "日本",
+  "jpName": "マシュマロフィニッシュパウダー Abloom 01（限定シェル）",
+  "desc": "蜜粉餅（限定款）"
+ },
+ "arianakosume:10001906": {
+  "brand": "SPICARE",
+  "country": "日本",
+  "jpName": "V3 エキサイティングファンデーション",
+  "desc": "氣墊粉餅（含微針）"
+ },
+ "bjc-onlinestore:10000036": {
+  "brand": "SPICARE",
+  "country": "日本",
+  "jpName": "V3 エキサイティングファンデーション",
+  "desc": "氣墊粉餅（含微針）"
+ },
+ "beautyforest2018:10001768": {
+  "brand": "SPICARE",
+  "country": "日本",
+  "jpName": "V3 エキサイティングファンデーション",
+  "desc": "氣墊粉餅（含微針）"
+ },
+ "esteelauder:10001234": {
+  "brand": "ESTÉE LAUDER 雅詩蘭黛",
+  "country": "其他",
+  "jpName": "リップスティック セット（ホリデー 2026）",
+  "desc": "唇膏 聖誕限定組"
+ },
+ "brain-service:10000144": {
+  "brand": "PHOENIX",
+  "country": "日本",
+  "jpName": "フェニックス アイ カールアップ コーティング／ザ ブラック",
+  "desc": "睫毛定型保養液"
+ },
+ "egawakikaku:10000078": {
+  "brand": "COVERMARK",
+  "country": "日本",
+  "jpName": "フローレス フィット（リフィル）",
+  "desc": "粉餅 補充蕊"
+ },
+ "brandshiseido:10000172": {
+  "brand": "SHISEIDO 資生堂",
+  "country": "日本",
+  "jpName": "エッセンス スキンスムース ファンデーション",
+  "desc": "精華粉底"
+ },
+ "brandshiseido:10000151": {
+  "brand": "SHISEIDO 資生堂",
+  "country": "日本",
+  "jpName": "エッセンス スキンセッティング パウダー",
+  "desc": "定妝蜜粉"
+ },
+ "masayosiryouhin:10004070": {
+  "brand": "Kanebo 佳麗寶",
+  "country": "日本",
+  "jpName": "ミラノコレクション フェースアップパウダー 2026（レフィル）",
+  "desc": "蜜粉 補充蕊（2026 限定）"
+ },
+ "yslbeauty:10000427": {
+  "brand": "YSL",
+  "country": "其他",
+  "jpName": "ラブシャイン グロスプランパー",
+  "desc": "豐唇唇蜜"
+ },
+ "4843-64:10000499": {
+  "brand": "EMAKED",
+  "country": "日本",
+  "jpName": "エマーキット",
+  "desc": "睫毛美容液 2mL"
  }
 }
