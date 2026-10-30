@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ENDPOINT = "https://openapi.rakuten.co.jp/ichibaranking/api/IchibaItem/Ranking/20220601"
-SEARCH_ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20220601"
+SEARCH_ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701"
 TAIWAN = timezone(timedelta(hours=8))
 
 # ① 讀取金鑰（在 GitHub 上設定成 Secrets）
@@ -215,15 +215,16 @@ def build_experts():
         if not kw:
             continue
         try:
-            data = call_api(SEARCH_ENDPOINT, {"keyword": kw, "hits": 10, "sort": "-reviewCount", "availability": 1})
+            data = call_api(SEARCH_ENDPOINT, {"keyword": kw, "hits": 10, "sort": "standard", "availability": 1})
             must = it.get("mustHave") or []
             hit = None
-            for raw in data.get("Items", []):
+            results = data.get("Items") or data.get("items") or []   # 新版 API 可能用小寫 items
+            for raw in results:
                 item = simplify(raw)
                 if all(m.lower() in item["itemName"].lower() for m in must):
                     hit = item
                     break
-            print(f"  {it['id']}：樂天搜尋到 {len(data.get('Items', []))} 筆，{'有' if hit else '沒有'}符合的商品")
+            print(f"  {it['id']}：樂天搜尋到 {len(results)} 筆，{'有' if hit else '沒有'}符合的商品")
             if hit:
                 found[it["id"]] = {k: hit[k] for k in ("itemCode", "itemName", "price", "rating", "reviews", "shopName", "image", "url")}
             elif it["id"] in old:
