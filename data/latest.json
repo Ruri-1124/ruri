@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T21:16+08:00",
+ "updated": "2026-10-31T06:49+08:00",
  "groups": {
   "beauty": [
    {
@@ -24,7 +24,8 @@
     "shopName": "はぐくみプラス",
     "shopCode": "hugkumi",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hugkumi/cabinet/06099131/12388517/12388522/ds_kami_c10.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1hno.nrqgi400.g00t1hno.nrqgje01/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhugkumi%2Fr_esience_ds200%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1hno.nrqgi400.g00t1hno.nrqgje01/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhugkumi%2Fr_esience_ds200%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 28,
@@ -132,7 +133,8 @@
     "shopName": "VALANROSE 公式ショップ",
     "shopCode": "sakurap",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sakurap/cabinet/slide/09073883/imgrc0114819933.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pvono.nrqgi3ca.g00pvono.nrqgjf1b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakurap%2F10008554%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pvono.nrqgi3ca.g00pvono.nrqgjf1b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakurap%2F10008554%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 19,
@@ -228,7 +230,8 @@
     "shopName": "【公式】Lashaddict 楽天市場店",
     "shopCode": "bjc-onlinestore",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bjc-onlinestore/cabinet/item/lashaddict01a/lashaddict0810.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Flashaddict01a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Flashaddict01a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 11,
@@ -240,7 +243,8 @@
     "shopName": "VERAMORE",
     "shopCode": "veramoreofficial",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/veramoreofficial/cabinet/veraset020/800-73-1-1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uwfoo.nrqgidcc.g00uwfoo.nrqgj125/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fveramoreofficial%2Fveraset020%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uwfoo.nrqgidcc.g00uwfoo.nrqgj125/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fveramoreofficial%2Fveraset020%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 10,
@@ -264,7 +268,8 @@
     "shopName": "ビオルチア　楽天市場店",
     "shopCode": "biolucia",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/biolucia/cabinet/thumb/thumb_tsudo/thumb_tsu/lca-eye1-pic_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj6uo.nrqgif9c.g00uj6uo.nrqgj09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiolucia%2Fbiolucia-eyelashserum_1-r%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj6uo.nrqgif9c.g00uj6uo.nrqgj09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiolucia%2Fbiolucia-eyelashserum_1-r%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 8,
@@ -276,7 +281,8 @@
     "shopName": "【公式】Brighte Store 楽天市場店",
     "shopCode": "brighte-onlineshop",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brighte-onlineshop/cabinet/10566429/10575588/10661392/brt-fl170_261030.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj5xo.nrqgie72.g00uj5xo.nrqgj5cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-fl170%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj5xo.nrqgie72.g00uj5xo.nrqgj5cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-fl170%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 7,
@@ -288,7 +294,8 @@
     "shopName": "日テレポシュレ",
     "shopCode": "ntvshop",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ntvshop/cabinet/main19/8006a2030004_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r8seo.nrqgi6bf.g00r8seo.nrqgj748/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fntvshop%2F8006a2030004%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r8seo.nrqgi6bf.g00r8seo.nrqgj748/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fntvshop%2F8006a2030004%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 6,
@@ -300,7 +307,8 @@
     "shopName": "アンド ハビット",
     "shopCode": "kobe-beauty-labo",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/sal060.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fsal060%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fsal060%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 5,
@@ -410,7 +418,8 @@
     "shopName": "水橋保寿堂公式店",
     "shopCode": "4843-64",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/4843-64/cabinet/emaked/640x640_emaked.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rd1vo.nrqgi354.g00rd1vo.nrqgjcc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2F4843-64%2Femaked2ml_teiki_n%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rd1vo.nrqgi354.g00rd1vo.nrqgjcc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2F4843-64%2Femaked2ml_teiki_n%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 26,
@@ -446,7 +455,8 @@
     "shopName": "くらし安心　楽天市場店",
     "shopCode": "brain-service",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brain-service/cabinet/product/brain01/imgrc0102780445.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugq8o.nrqgie7c.g00ugq8o.nrqgj177/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrain-service%2Fbrain01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugq8o.nrqgie7c.g00ugq8o.nrqgj177/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrain-service%2Fbrain01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 23,
@@ -506,7 +516,8 @@
     "shopName": "美容の森",
     "shopCode": "beautyforest2018",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyforest2018/cabinet/11547088/13666642/imgrc0187657508.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F10000125%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F10000125%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 18,
@@ -542,7 +553,8 @@
     "shopName": "美容の森",
     "shopCode": "beautyforest2018",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyforest2018/cabinet/11547088/egutam3.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F201218-001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F201218-001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 15,
@@ -590,7 +602,8 @@
     "shopName": "くらし安心　楽天市場店",
     "shopCode": "brain-service",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brain-service/cabinet/product/10000078a/imgrc0102780446.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugq8o.nrqgie7c.g00ugq8o.nrqgj177/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrain-service%2F10000078%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugq8o.nrqgie7c.g00ugq8o.nrqgj177/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrain-service%2F10000078%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 11,
@@ -686,7 +699,8 @@
     "shopName": "【公式】Lashaddict 楽天市場店",
     "shopCode": "bjc-onlinestore",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bjc-onlinestore/cabinet/item/lashaddict01a/lashaddict0810.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Flashaddict01a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Flashaddict01a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 3,
@@ -698,7 +712,8 @@
     "shopName": "ビオルチア　楽天市場店",
     "shopCode": "biolucia",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/biolucia/cabinet/thumb/thumb_tsudo/thumb_tsu/lca-eye1-pic_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj6uo.nrqgif9c.g00uj6uo.nrqgj09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiolucia%2Fbiolucia-eyelashserum_1-r%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj6uo.nrqgif9c.g00uj6uo.nrqgj09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiolucia%2Fbiolucia-eyelashserum_1-r%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 2,
@@ -808,7 +823,8 @@
     "shopName": "シーアール・ラボ 楽天市場店",
     "shopCode": "cr-lab",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cr-lab/cabinet/lucifer-hq/007_main2.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tnpwo.nrqgi610.g00tnpwo.nrqgj657/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcr-lab%2Fhq-cream-copy%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tnpwo.nrqgi610.g00tnpwo.nrqgj657/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcr-lab%2Fhq-cream-copy%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 23,
@@ -1110,7 +1126,8 @@
     "shopName": "シーエスシー楽天市場店",
     "shopCode": "cscjp",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cscjp/cabinet/polypure/polypure/p501.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r0a5o.nrqgi556.g00r0a5o.nrqgjced/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcscjp%2Fp501%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r0a5o.nrqgi556.g00r0a5o.nrqgjced/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcscjp%2Fp501%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 28,
@@ -1182,7 +1199,8 @@
     "shopName": "b.ris 楽天市場店",
     "shopCode": "b-ris-shop",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/b-ris-shop/cabinet/09891584/09891585/imgrc0121084687.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ucqco.nrqgi51f.g00ucqco.nrqgjc05/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fb-ris-shop%2Fr_larich_001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ucqco.nrqgi51f.g00ucqco.nrqgjc05/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fb-ris-shop%2Fr_larich_001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 22,
@@ -1266,7 +1284,8 @@
     "shopName": "WELLBESTショッピング楽天市場店",
     "shopCode": "f-netclub",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f-netclub/cabinet/rere-img/imgrc0142787619.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00px2fo.nrqgi988.g00px2fo.nrqgj5bd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff-netclub%2F10000296%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00px2fo.nrqgi988.g00px2fo.nrqgj5bd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff-netclub%2F10000296%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 15,
@@ -1290,7 +1309,8 @@
     "shopName": "STELLA SENSE　楽天市場店",
     "shopCode": "bijinlabo",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bijinlabo/cabinet/slides/sale_p5/thum_essence_5c.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ryd9o.nrqgidb5.g00ryd9o.nrqgj9d5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbijinlabo%2Fr198900%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ryd9o.nrqgidb5.g00ryd9o.nrqgj9d5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbijinlabo%2Fr198900%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 13,
@@ -1338,7 +1358,8 @@
     "shopName": "タマゴ基地　楽天市場支店",
     "shopCode": "tamago-kichi",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tamago-kichi/cabinet/thumb/newmo_v01.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u11lo.nrqgi810.g00u11lo.nrqgjc92/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftamago-kichi%2Fnewmo_v01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u11lo.nrqgi810.g00u11lo.nrqgjc92/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftamago-kichi%2Fnewmo_v01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 9,
@@ -1398,7 +1419,8 @@
     "shopName": "VALANROSE 公式ショップ",
     "shopCode": "sakurap",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sakurap/cabinet/slide/09073883/imgrc0114819933.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pvono.nrqgi3ca.g00pvono.nrqgjf1b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakurap%2F10008554%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pvono.nrqgi3ca.g00pvono.nrqgjf1b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakurap%2F10008554%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 4,
@@ -1598,7 +1620,7 @@
     "shopCode": "link5520889",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/link5520889/cabinet/11905574/mb-19700.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tprno.nrqgi38d.g00tprno.nrqgj78d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flink5520889%2Fbt01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "健康家電"
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 18,
@@ -1646,7 +1668,8 @@
     "shopName": "エムロック楽天市場店",
     "shopCode": "mrock",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mrock/cabinet/k/20260825kenon.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00prkpo.nrqgifd1.g00prkpo.nrqgjfbd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmrock%2Fke-non%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00prkpo.nrqgifd1.g00prkpo.nrqgjfbd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmrock%2Fke-non%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 14,
@@ -1791,7 +1814,8 @@
     "shopName": "MYTREX 公式ストア 楽天市場店",
     "shopCode": "leapgrow",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/leapgrow/cabinet/mytrex/p0/p00_vd_01b.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ssj2o.nrqgi0f3.g00ssj2o.nrqgje4c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fleapgrow%2Fmt-vd22b%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ssj2o.nrqgi0f3.g00ssj2o.nrqgje4c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fleapgrow%2Fmt-vd22b%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 2,
@@ -1841,7 +1865,8 @@
     "shopName": "リビングート　楽天市場店",
     "shopCode": "livingut",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/livingut/cabinet/maker_top_s1/548882.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q728o.nrqgi7da.g00q728o.nrqgj7d3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flivingut%2F548882%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q728o.nrqgi7da.g00q728o.nrqgj7d3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flivingut%2F548882%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 28,
@@ -1937,7 +1962,8 @@
     "shopName": "楽天24エクスプレス",
     "shopCode": "rakutensokuhaimart",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/kaden/4549873133850-0.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F100000000100582%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F100000000100582%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 20,
@@ -1949,7 +1975,8 @@
     "shopName": "ダイレクトテレショップ",
     "shopCode": "tv-ya",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tv-ya/cabinet/item/shuwattopunc-a-1/thum/shuwattopunc-a-1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pqoro.nrqgibf7.g00pqoro.nrqgj9c6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftv-ya%2Fshuwattopunc-a-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pqoro.nrqgibf7.g00pqoro.nrqgj9c6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftv-ya%2Fshuwattopunc-a-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 19,
@@ -1998,7 +2025,7 @@
     "shopCode": "beinfinity",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beinfinity/cabinet/10619789/11645225/imgrc0129869852.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ule0o.nrqgi0dc.g00ule0o.nrqgjfc2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeinfinity%2Fultrabuster01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "洗碗精・清潔劑"
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 15,
@@ -2095,7 +2122,8 @@
     "shopName": "ホコニコ楽天市場店",
     "shopCode": "hoconico",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hoconico/cabinet/09740258/mol/molclear_sm03.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ueqho.nrqgicf9.g00ueqho.nrqgjbc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhoconico%2Fmolclearpro%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ueqho.nrqgicf9.g00ueqho.nrqgjbc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhoconico%2Fmolclearpro%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 7,
