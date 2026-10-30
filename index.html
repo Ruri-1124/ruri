@@ -371,6 +371,7 @@
     const L = LABELS[p.id];
     const brandWord = s => (s || "").replace(/[一-鿿]+/g, "").replace(/\s+/g, " ").trim() || (s || "");   // 「Attenir 艾天然」→「Attenir」
     const noParen = s => (s || "").replace(/[（(].*?[)）]/g, "").trim();
+    if (L && L.noTW) return "";   // 台灣不能當化粧品販售的商品，不放台灣購買連結
     if (L && L.twName) return (brandWord(L.brand) + " " + L.twName).trim();
     if (L && L.brand) {
       const b = brandWord(L.brand), jpn = noParen(L.jpName);
@@ -461,6 +462,7 @@
   const heartSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"></path></svg>';
 
   function buyButtons(p, inline) {
+    if ((LABELS[p.id] || {}).noTW) return `<div class="rate">台灣不能當化粧品販售，本站不提供購買連結</div>`;
     const shopee = shopeeLink(p), tw = twRakutenLink(p);
     const a = (cls, href, text) => `<a class="${cls}" href="${esc(href)}" target="_blank" rel="sponsored noopener">${text}</a>`;
     const main = p.isOY ? a("buy oy", p.url, "去 Olive Young") : (shopee ? a("buy shopee", shopee, "在蝦皮搜尋") : a("buy", p.url, "去日本樂天看看"));
@@ -540,7 +542,7 @@
           ${(d.awards || []).map(a => `<span class="award">🏆 ${esc(a)}</span>`).join(" ")}
           ${d.ratingNote ? `<div class="rate">${esc(d.ratingNote)}</div>` : ""}
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）</div>` : ""}
-          ${d.useNote ? `<div class="note">🔌 ${esc(d.useNote)}</div>` : ""}
+          ${d.useNote ? `<div class="note">${esc(d.useNote)}</div>` : ""}
           ${sec("適合膚質", skin.length ? `<p>${skin.map(esc).join("、")}</p>${d.skinNote ? `<p style="color:var(--muted);font-size:13px">${esc(d.skinNote)}</p>` : ""}` : (d.skinNote ? `<p>${esc(d.skinNote)}</p>` : pending("品牌沒有特別標示適合的膚質。")))}
           ${sec("商品特色", d.features ? list(d.features) : pending("詳細介紹整理中。"))}
           ${sec("主要成分", d.ingredients ? list(d.ingredients) + `<p style="color:var(--muted);font-size:12px;margin-top:4px">只列出部分主要成分，完整成分以商品包裝標示為準。</p>` : pending("成分整理中，購買前請以商品包裝標示為準。"))}

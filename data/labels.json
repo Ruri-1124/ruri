@@ -143,9 +143,9 @@
  },
  "takami-labo:10000519": {
   "brand": "TAKAMI",
-  "name": "角質美容水 30mL",
   "country": "日本",
-  "desc": "角質美容水 30mL"
+  "desc": "角質保養液（洗臉後第一步）",
+  "jpName": "タカミスキンピール"
  },
  "vtcosmetic-official:10000773": {
   "brand": "VT",
@@ -161,9 +161,9 @@
  },
  "anuajapan:10000450": {
   "brand": "Anua",
-  "name": "入門保養三件組",
   "country": "韓國",
-  "desc": "入門保養三件組"
+  "desc": "保養品任選 3 件組",
+  "jpName": "Anua 入門 3 点セット（選べる）"
  },
  "riceforce:10000204": {
   "brand": "RICE FORCE",
@@ -179,27 +179,28 @@
  },
  "aestura-japan:10000007": {
   "brand": "AESTURA",
-  "name": "神經醯胺保濕霜",
   "country": "韓國",
-  "desc": "神經醯胺保濕霜"
+  "desc": "神經醯胺保濕霜",
+  "jpName": "アトバリア365 クリーム"
  },
  "cr-lab:10000105": {
   "brand": "LUCIFEL",
-  "name": "對苯二酚霜 15g",
   "country": "日本",
-  "desc": "對苯二酚霜 15g"
+  "desc": "對苯二酚霜（台灣禁止添加於化粧品）",
+  "jpName": "ルシフェル ハイドロキノンクリーム",
+  "noTW": true
  },
  "aurelie-tokyo:10000061": {
-  "brand": "Aurelie",
-  "name": "保濕精華卸妝油",
+  "brand": "Aurelie.",
   "country": "日本",
-  "desc": "保濕精華卸妝油"
+  "desc": "卸妝凝膠（推開後變成油狀）",
+  "jpName": "モイスチャーセラムクレンジング"
  },
  "sk-ii:10003857": {
   "brand": "SK-II",
-  "name": "青春露 節日限定組",
   "country": "日本",
-  "desc": "青春露 節日限定組"
+  "desc": "青春露 230mL 聖誕限定組",
+  "jpName": "フェイシャル トリートメント エッセンス コフレ（2026 ホリデー限定）"
  },
  "kiso:10000153": {
   "brand": "KISO CARE",
@@ -209,15 +210,16 @@
  },
  "renngekesyousui:10000002": {
   "brand": "蓮花研究所",
-  "name": "檸檬化妝水",
   "country": "日本",
-  "desc": "檸檬化妝水"
+  "desc": "檸檬化妝水",
+  "jpName": "れんげ化粧水"
  },
  "fancl-shop:10009046": {
   "brand": "FANCL 芳珂",
-  "name": "溫和卸妝油",
   "country": "日本",
-  "desc": "溫和卸妝油"
+  "desc": "卸妝油",
+  "twName": "MCO速淨卸粧油",
+  "jpName": "マイルドクレンジング オイル"
  },
  "orbis-shop:10000763": {
   "brand": "ORBIS",
@@ -695,5 +697,114 @@
   "jpName": "スキンケアトーンアップクリーム（50g）",
   "desc": "素顏霜・妝前乳",
   "country": "日本"
+ },
+ "cepolab:10000000": {
+  "brand": "cepoLAB",
+  "country": "韓國",
+  "jpName": "バイオジェニックエッセンス 90%",
+  "desc": "洗臉後第一步用的精華"
+ },
+ "sk-ii:10003011": {
+  "brand": "SK-II",
+  "country": "日本",
+  "twName": "青春露",
+  "jpName": "フェイシャル トリートメント エッセンス",
+  "desc": "精華（75／160／230mL）"
+ },
+ "sk-ii:10003015": {
+  "brand": "SK-II",
+  "country": "日本",
+  "jpName": "ピテラ パワー デュオ／ピテラ ベスト コレクション ほか（選べる）",
+  "desc": "青春露體驗組（可選）"
+ },
+ "almado01:10000465": {
+  "brand": "ALMADO",
+  "country": "日本",
+  "jpName": "チェルラー ファルコ パーフェクトクリーム",
+  "desc": "男性用多合一保養霜"
+ },
+ "the-beautopia:10000111": {
+  "brand": "Lov me Touch",
+  "country": "日本",
+  "jpName": "コフレ特別セット（スキンバリアナノミルク リッチ 200mL＋スキンバリアナノミルク 50mL）",
+  "desc": "保濕乳液 聖誕限定組"
+ },
+ "manara:10000214": {
+  "brand": "MANARA",
+  "country": "日本",
+  "jpName": "ホットクレンジングゲル マッサージプラス",
+  "desc": "溫感卸妝凝膠"
+ },
+ "hugkumi:10000404": {
+  "brand": "ESIENCE",
+  "country": "日本",
+  "jpName": "エシエンス ナノシープセラム",
+  "desc": "碳酸導入精華"
+ },
+ "mediplus:10000000": {
+  "brand": "mediplus",
+  "country": "日本",
+  "jpName": "メディプラスゲル",
+  "desc": "多合一保濕凝膠"
+ },
+ "tvert:10000307": {
+  "brand": "Tuvert",
+  "country": "日本",
+  "jpName": "バランシングGAローション",
+  "desc": "毛孔保養前導化妝水"
+ },
+ "decencia:10000014": {
+  "brand": "DECENCIA",
+  "country": "日本",
+  "jpName": "ディセンシア リンクルO／L コンセントレート",
+  "desc": "油狀精華"
+ },
+ "tvert:10000308": {
+  "brand": "Tuvert",
+  "country": "日本",
+  "jpName": "レチノショット 0.1",
+  "desc": "A 醇晚霜"
+ },
+ "norganic:10000018": {
+  "brand": "N organic",
+  "country": "日本",
+  "jpName": "N organic Basic（バランシング ローション／ミルク／VCエッセンス）",
+  "desc": "化妝水・乳液・精華（可單買或成組）"
+ },
+ "sk-ii:10003779": {
+  "brand": "SK-II",
+  "country": "日本",
+  "jpName": "スキンパワー リニュー クリーム／リニュー エアリー クリーム",
+  "desc": "乳霜（50g／80g，2 種質地）"
+ },
+ "kinui:10000024": {
+  "brand": "KINUI",
+  "country": "日本",
+  "jpName": "カームセブンスージングセラム",
+  "desc": "舒緩精華"
+ },
+ "doctork-official:10000013": {
+  "brand": "Dr.K",
+  "country": "日本",
+  "jpName": "ABC-Gピールウォッシュ",
+  "desc": "角質保養洗面乳（泡沫）"
+ },
+ "brandshiseido:10000124": {
+  "brand": "SHISEIDO 資生堂",
+  "country": "日本",
+  "jpName": "アルティミューン パワライジング セラム",
+  "desc": "精華"
+ },
+ "arianakosume:10000332": {
+  "brand": "IPSA",
+  "country": "日本",
+  "jpName": "ザ・タイムR アクア e",
+  "desc": "化妝水（台灣常被稱為「流金水」）"
+ },
+ "thebodyshop:10014376": {
+  "brand": "THE BODY SHOP",
+  "country": "其他",
+  "jpName": "アドベントカレンダー コア",
+  "desc": "聖誕倒數月曆禮盒"
  }
 }
