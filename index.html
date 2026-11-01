@@ -983,14 +983,19 @@
         const ids = new Set(ti.map(p => p.id));
         listBase = ti.concat(base.filter(p => !ids.has(p.id) && p.itype === state.itype).map(p => ({ ...p, catRank: p.rank, rank: 100 + (p.rank || 0) })));
       } else if (byType) listBase = union;
+      else if (tItems.length) {
+        // 「全部」：分類排行的商品排前面，再接各品項排行的商品（依各自名次穿插），所以件數＝所有品項加起來（去掉重複）
+        const ids = new Set(base.map(p => p.id));
+        listBase = base.concat(dedupe(tItems.filter(p => !ids.has(p.id))).map(p => ({ ...p, rank: 100 + (p.typeRank || 30) })));
+      }
       const list = applyFilters(listBase, { catFilter: page.catFilter, japanOnly: true, itype: true });
       const badge = page.source === "month" ? `<span class="src">已累積 ${MONTH.days} 天資料</span>` : `<span class="src">日本樂天真實排行</span>`;
       const meta = p => page.source === "month" ? `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天・最高第 ${p.bestRank} 名</div>`
-        : p.typeRank && byType ? `<div class="meta">樂天${esc(typeLabel(p.itype))}排行第 ${p.typeRank} 名</div>`
+        : p.typeRank && (byType || p.rank >= 100) ? `<div class="meta">樂天${esc(typeLabel(p.itype))}排行第 ${p.typeRank} 名</div>`
         : (p.rank && (page.catFilter || byType) ? `<div class="meta">樂天${esc(p.cat)}第 ${p.catRank || p.rank} 名</div>` : "");
       // 有選品項時，名次改成「這個品項裡的第幾名」
       const showRank = state.sort === "rank" && !page.catFilter && !state.merge && (page.groups.length === 1 || byType);
-      const rankOf = (p, i) => showRank ? (byType || page.source === "month" ? i + 1 : p.rank) : null;
+      const rankOf = (p, i) => showRank ? (byType || page.source === "month" ? i + 1 : (p.rank < 100 ? p.rank : null)) : null;
       const shown = byType ? { ...page, title: (page.source === "month" ? "本月熱門・" : "日本") + typeLabel(state.itype) + "排行", desc: `${page.title.replace(/排行$/, "")}裡的「${typeLabel(state.itype)}」，依日本樂天名次排序` } : page;
       if (page.itypes || page.catFilter) html += crumbs([["首頁", "home"], ...(page.parent === "jp" ? [] : [["全部商品", "all"]]), ...(page.key === "all" ? [] : [[page.label.replace(/^\S+\s/, ""), byType ? page.key : ""]]), ...(byType ? [[typeLabel(state.itype), ""]] : [])]);
       html += pagehead(shown, badge, updatedText());
@@ -998,8 +1003,8 @@
       const pcat = CAT[page.groups[0]];
       if (page.source === "rank" && page.itypes && !byType && CAT_PAGE[pcat] === page.key) {
         const idx = typeIndex(pcat);
-        if (idx.length > 1) html += `<div class="circles catcircles">${idx.map(({ t, ps }) => { const im = ps.find(p => p.img); return `<a class="circ" href="#${page.key}/${t.key}"><span class="ring">${im ? `<img src="${esc(im.img)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(t.label.slice(0, 2))}</em>`}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`; }).join("")}</div><h2 class="sub">${esc(pcat)}綜合排行</h2>`;
-      } else if (page.itypes) html += typeRow(page.key, union, base.length);
+        if (idx.length > 1) html += `<div class="circles catcircles">${idx.map(({ t, ps }) => { const im = ps.find(p => p.img); return `<a class="circ" href="#${page.key}/${t.key}"><span class="ring">${im ? `<img src="${esc(im.img)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(t.label.slice(0, 2))}</em>`}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`; }).join("")}</div><h2 class="sub">${esc(pcat)}全部商品<span class="subnote">有名次標籤的是今天日本樂天「${esc(pcat)}」分類排行，後面接著各品項排行的商品</span></h2>`;
+      } else if (page.itypes) html += typeRow(page.key, union, union.length);
       let grid;
       const plain = !state.q && !state.skins.size && !state.needs.size && state.price === "all";
       if (!list.length) grid = `<div class="empty">沒有符合條件的商品，試試看取消一些篩選。</div>`;
