@@ -277,7 +277,15 @@
   .circ small { font-size: 11px; color: var(--muted); margin-top: -4px; }
 
   /* 橫向商品列 */
-  .rail { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 12px; overflow-x: auto; scroll-snap-type: x proximity; padding: 2px 2px 12px; scrollbar-width: thin; }
+  .railwrap { position: relative; }
+  .rail { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 12px; scrollbar-width: none; scroll-behavior: smooth; }
+  .rail::-webkit-scrollbar { display: none; }
+  /* 左右圓形箭頭：點一下移動一頁；另外每 4 秒自動往右（滑鼠移上去或手指碰到時暫停，到最後會回到第一個） */
+  .rarrow { position: absolute; top: 34%; transform: translateY(-50%); z-index: 3; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.96); box-shadow: 0 4px 14px rgba(34,30,58,.18); cursor: pointer; display: grid; place-items: center; padding: 0; transition: transform .15s, background .15s; }
+  .rarrow svg { width: 20px; height: 20px; fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .rarrow:hover { background: var(--ruri); border-color: var(--ruri); }
+  .rarrow:hover svg { stroke: #fff; }
+  .rarrow.prev { left: -18px; } .rarrow.next { right: -18px; }
   .rail > * { scroll-snap-align: start; }
   .rail .card:hover { transform: none; }
   .mini .minibody { border: 0; background: none; text-align: left; cursor: pointer; font: inherit; color: inherit; gap: 3px; }
@@ -313,6 +321,8 @@
     .circles::-webkit-scrollbar { display: none; }
     .circ .ring { width: 68px; height: 68px; }
     .rail { grid-auto-columns: 160px; gap: 10px; }
+    .rarrow { width: 36px; height: 36px; top: 30%; } .rarrow svg { width: 16px; height: 16px; }
+    .rarrow.prev { left: 4px; } .rarrow.next { right: 4px; }
     .entries { grid-template-columns: 1fr; } .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .sechead h2 { font-size: 20px; }
   }
@@ -1123,7 +1133,7 @@
       const hcs = [["all", "綜合", "beauty", "awards"], ["彩妝", "彩妝", "makeup", "makeup"], ["保養", "保養", "skincare", "skincare"], ["髮品", "髮品", "hair", "hair"], ["日用品", "日用品", "laundry", "daily"], ["美容家電", "美容家電", "device", "device"]];
       const hc = hcs.find(x => x[0] === state.hc) || hcs[0];
       const top = (RANK[hc[2]] || []).filter(p => p.country !== "韓國").slice(0, 10);
-      const rail = (arr, opts = {}) => `<div class="rail">${arr.map((p, i) => card(p, { compact: true, crown: opts.rank ? i + 1 : null, eager: i < 4, meta: opts.meta ? opts.meta(p) : "" })).join("")}${opts.more ? `<a class="morecard" href="${opts.more[0]}"><span>›</span>${esc(opts.more[1])}</a>` : ""}</div>`;
+      const rail = (arr, opts = {}) => `<div class="railwrap"><button class="rarrow prev" type="button" data-rail="-1" aria-label="往左看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rarrow next" type="button" data-rail="1" aria-label="往右看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button><div class="rail">${arr.map((p, i) => card(p, { compact: true, crown: opts.rank ? i + 1 : null, eager: i < 4, meta: opts.meta ? opts.meta(p) : "" })).join("")}${opts.more ? `<a class="morecard" href="${opts.more[0]}"><span>›</span>${esc(opts.more[1])}</a>` : ""}</div></div>`;
       html += `<section class="sec"><div class="sechead"><h2><small>DAILY RANKING</small>今日日本樂天排行</h2><span class="src">${esc(updatedText())}</span></div>
         <div class="seg">${hcs.map(([k, l]) => `<button class="segb" type="button" data-hc="${k}" aria-pressed="${hc[0] === k}">${l}</button>`).join("")}</div>
         ${top.length ? rail(top, { rank: true, more: [`#${hc[0] === "all" ? "all" : hc[3]}`, `看${hc[1]}完整排行`] }) : `<div class="empty">這個分類今天沒有資料。</div>`}
@@ -1233,7 +1243,34 @@
     const keep = page.source === "home" ? heroIndex() : 0;
     document.getElementById("view").innerHTML = html;
     document.getElementById("shade").hidden = !state.sideOpen;
-    if (page.source === "home") { heroGo(keep, true); heroWatch(); }
+    if (page.source === "home") { heroGo(keep, true); heroWatch(); railWatch(); }
+  }
+
+  // 橫向商品列：點箭頭移動一頁；每 4 秒自動往右一格，到最後回到開頭；滑鼠移上去或手指碰到就暫停
+  function railStep(rail, dir, page) {
+    const card = rail.querySelector(".card, .morecard");
+    const step = page ? rail.clientWidth * 0.9 : (card ? card.getBoundingClientRect().width + 12 : 200);
+    const max = rail.scrollWidth - rail.clientWidth - 4;
+    if (dir > 0 && rail.scrollLeft >= max) rail.scrollTo({ left: 0 });
+    else if (dir < 0 && rail.scrollLeft <= 4) rail.scrollTo({ left: rail.scrollWidth });
+    else rail.scrollBy({ left: dir * step });
+  }
+  function railWatch() {
+    document.querySelectorAll(".railwrap").forEach(w => {
+      w.addEventListener("pointerenter", () => w.dataset.hold = "1");
+      w.addEventListener("pointerleave", () => delete w.dataset.hold);
+      w.addEventListener("touchstart", () => { w.dataset.hold = "1"; clearTimeout(w._t); w._t = setTimeout(() => delete w.dataset.hold, 8000); }, { passive: true });
+    });
+  }
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    setInterval(() => {
+      if (state.tab !== "home" || document.hidden || document.getElementById("detail").open) return;
+      document.querySelectorAll(".railwrap").forEach(w => {
+        const r = w.getBoundingClientRect();
+        if (w.dataset.hold || r.bottom < 0 || r.top > innerHeight) return;   // 只動畫面上看得到的那幾列
+        railStep(w.querySelector(".rail"), 1);
+      });
+    }, 4000);
   }
 
   // 首頁輪播：滑動、點圓點、每 6 秒自動換下一個（滑鼠移上去或手指碰到時暫停）
@@ -1354,6 +1391,7 @@
     if (t.dataset.hc) { state.hc = t.dataset.hc; render(); return; }
     if (t.dataset.ht) { state.ht = t.dataset.ht; render(); return; }
     if (t.dataset.shop) { state.shop = t.dataset.shop; render(); return; }
+    if (t.dataset.rail) { railStep(t.closest(".railwrap").querySelector(".rail"), +t.dataset.rail, true); return; }
     if (t.dataset.slide || t.dataset.dot) { heroGo(t.dataset.dot !== undefined ? +t.dataset.dot : heroIndex() + +t.dataset.slide); return; }
     if (t.dataset.remove) {
       const k = t.dataset.remove, v = t.dataset.value;
