@@ -1,0 +1,306 @@
+{
+ "updated": "2026-11-01",
+ "types": {
+  "primer": [
+   {
+    "genreId": 405258,
+    "name": "化粧下地",
+    "root": "makeup"
+   }
+  ],
+  "foundation": [
+   {
+    "genreId": 210457,
+    "name": "ファンデーション",
+    "root": "makeup"
+   },
+   {
+    "genreId": 565119,
+    "name": "クッションマッサージャー",
+    "root": "device"
+   }
+  ],
+  "emulsion": [
+   {
+    "genreId": 567445,
+    "name": "BBクリーム",
+    "root": "makeup"
+   },
+   {
+    "genreId": 567446,
+    "name": "CCクリーム",
+    "root": "makeup"
+   },
+   {
+    "genreId": 216387,
+    "name": "乳液・ミルク",
+    "root": "skincare"
+   },
+   {
+    "genreId": 216424,
+    "name": "フェイスクリーム",
+    "root": "skincare"
+   },
+   {
+    "genreId": 563728,
+    "name": "オールインワン化粧品",
+    "root": "skincare"
+   },
+   {
+    "genreId": 509843,
+    "name": "アイクリーム・ジェル",
+    "root": "skincare"
+   },
+   {
+    "genreId": 405206,
+    "name": "リップクリーム",
+    "root": "skincare"
+   }
+  ],
+  "concealer": [
+   {
+    "genreId": 405348,
+    "name": "コンシーラー",
+    "root": "makeup"
+   }
+  ],
+  "powder": [
+   {
+    "genreId": 216499,
+    "name": "フェイスカラー・パウダー",
+    "root": "makeup"
+   }
+  ],
+  "mascara": [
+   {
+    "genreId": 216519,
+    "name": "アイブロウ・眉マスカラ",
+    "root": "makeup"
+   },
+   {
+    "genreId": 216579,
+    "name": "マスカラ",
+    "root": "makeup"
+   },
+   {
+    "genreId": 510002,
+    "name": "マスカラ下地",
+    "root": "makeup"
+   }
+  ],
+  "eye": [
+   {
+    "genreId": 216539,
+    "name": "アイシャドウ",
+    "root": "makeup"
+   }
+  ],
+  "liner": [
+   {
+    "genreId": 216559,
+    "name": "アイライナー",
+    "root": "makeup"
+   }
+  ],
+  "lip": [
+   {
+    "genreId": 216600,
+    "name": "口紅・リップスティック",
+    "root": "makeup"
+   },
+   {
+    "genreId": 503106,
+    "name": "リップライナー",
+    "root": "makeup"
+   },
+   {
+    "genreId": 216620,
+    "name": "リップグロス",
+    "root": "makeup"
+   },
+   {
+    "genreId": 568658,
+    "name": "リッププランパー",
+    "root": "skincare"
+   }
+  ],
+  "cheek": [
+   {
+    "genreId": 216640,
+    "name": "チーク",
+    "root": "makeup"
+   }
+  ],
+  "cleansing": [
+   {
+    "genreId": 210450,
+    "name": "クレンジング",
+    "root": "skincare"
+   }
+  ],
+  "wash": [
+   {
+    "genreId": 216301,
+    "name": "洗顔料",
+    "root": "skincare"
+   }
+  ],
+  "toner": [
+   {
+    "genreId": 216307,
+    "name": "化粧水・ローション",
+    "root": "skincare"
+   },
+   {
+    "genreId": 562135,
+    "name": "スカルプケアローション・エッセンス",
+    "root": "hair"
+   }
+  ],
+  "serum": [
+   {
+    "genreId": 216348,
+    "name": "美容液",
+    "root": "skincare"
+   },
+   {
+    "genreId": 509822,
+    "name": "目元美容液",
+    "root": "skincare"
+   }
+  ],
+  "mask": [
+   {
+    "genreId": 216467,
+    "name": "ジェルパック・クリーム",
+    "root": "skincare"
+   },
+   {
+    "genreId": 503020,
+    "name": "シートマスク・フェイスパック",
+    "root": "skincare"
+   }
+  ],
+  "shampoo": [
+   {
+    "genreId": 210677,
+    "name": "シャンプー",
+    "root": "hair"
+   },
+   {
+    "genreId": 210686,
+    "name": "リンス・コンディショナー",
+    "root": "hair"
+   },
+   {
+    "genreId": 567232,
+    "name": "リンスインシャンプー",
+    "root": "hair"
+   },
+   {
+    "genreId": 567233,
+    "name": "シャンプー・リンスセット",
+    "root": "hair"
+   },
+   {
+    "genreId": 210695,
+    "name": "トリートメント",
+    "root": "hair"
+   },
+   {
+    "genreId": 567538,
+    "name": "シャンプー・トリートメントセット",
+    "root": "hair"
+   },
+   {
+    "genreId": 505436,
+    "name": "ソープボトル・シャンプーボトル",
+    "root": "bath"
+   }
+  ],
+  "hairoil": [
+   {
+    "genreId": 507825,
+    "name": "アウトバストリートメント",
+    "root": "hair"
+   }
+  ],
+  "styling": [
+   {
+    "genreId": 111541,
+    "name": "スタイリング剤",
+    "root": "hair"
+   }
+  ],
+  "tool": [
+   {
+    "genreId": 568288,
+    "name": "シャンプーブラシ",
+    "root": "hair"
+   },
+   {
+    "genreId": 100663,
+    "name": "ブラシ",
+    "root": "hair"
+   },
+   {
+    "genreId": 208527,
+    "name": "電動頭皮ブラシ",
+    "root": "device"
+   },
+   {
+    "genreId": 208522,
+    "name": "電動歯ブラシ",
+    "root": "device"
+   },
+   {
+    "genreId": 566899,
+    "name": "歯ブラシ除菌器",
+    "root": "device"
+   },
+   {
+    "genreId": 401589,
+    "name": "ボディスポンジ",
+    "root": "bath"
+   },
+   {
+    "genreId": 401595,
+    "name": "ボディブラシ",
+    "root": "bath"
+   }
+  ],
+  "dryer": [
+   {
+    "genreId": 212540,
+    "name": "ヘアドライヤー・ヘアアイロン",
+    "root": "device"
+   },
+   {
+    "genreId": 569311,
+    "name": "ハンドドライヤー",
+    "root": "device"
+   }
+  ],
+  "brow": [
+   {
+    "genreId": 212577,
+    "name": "フェイス・眉シェーバー",
+    "root": "device"
+   }
+  ],
+  "softener": [
+   {
+    "genreId": 565621,
+    "name": "洗濯用洗剤・柔軟剤",
+    "root": "laundry"
+   }
+  ],
+  "bath": [
+   {
+    "genreId": 205761,
+    "name": "入浴剤",
+    "root": "bath"
+   }
+  ]
+ }
+}
