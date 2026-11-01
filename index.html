@@ -574,8 +574,10 @@
   const flag = c => ({ "日本": "日本", "韓國": "韓國" }[c] || "其他");
   const tagHits = (dict, text) => Object.entries(dict).filter(([, words]) => words.some(w => text.includes(w))).map(([tag]) => tag);
 
+  const PROMO = /OFF|ポイント|P\d|クーポン|送料|限定|公式|楽天|位|倍|セール|%|％|円|発売|受賞|正規|LOT|即日|予約|在庫|お得|SALE|ランキング|特典|ギフト|プレゼント|選べる|新色|新商品|NEW|メール便|翌日/;
   function cleanName(name) {
-    return name.replace(/[【［\[≪《＼★◆<＜].*?[】］\]≫》／★◆>＞]/g, " ").replace(/\s+/g, " ").trim().slice(0, 40) || name.slice(0, 40);
+    // 先拿掉成對的【…】［…］（裡面常是優惠、點數），再拿掉其他符號包住的宣傳字
+    return name.replace(/【([^】]*)】|［([^］]*)］|\[([^\]]*)\]|≪([^≫]*)≫|《([^》]*)》/g, (m, ...g) => { const t = g.slice(0, 5).find(x => x !== undefined) || ""; return PROMO.test(t) ? " " : " " + t + " "; }).replace(/[＼★◆<＜].*?[／★◆>＞]/g, " ").replace(/\s+/g, " ").trim().slice(0, 40) || name.slice(0, 40);
   }
   function detectCountry(text) {
     if (KR_WORDS.some(w => text.includes(w))) return "韓國";
@@ -598,7 +600,7 @@
     ["ロアザオイル", "LOA"], ["ロア ザ", "LOA"], ["ReFa", "ReFa"], ["サロニア", "SALONIA"], ["パナソニック", "Panasonic 國際牌"], ["テスコム", "TESCOM"], ["クレイツ", "CREATE ION"], ["アタック", "Attack 花王"],
     ["アリエール", "Ariel"], ["ボールド", "Bold"], ["レノア", "Lenor"], ["さらさ", "さらさ（P&G）"], ["クナイプ", "Kneipp 克奈圃"], ["エチュード", "ETUDE"], ["イニスフリー", "innisfree"],
     ["トリデン", "Torriden"], ["ダルバ", "d'Alba"], ["メディキューブ", "medicube"], ["ティルティル", "TIRTIR"], ["ロムアンド", "rom&nd"], ["マジョリカ", "MAJOLICA MAJORCA"], ["ジルスチュアート", "JILL STUART"],
-    ["ポール & ジョー", "PAUL & JOE"], ["アディクション", "ADDICTION"], ["イプサ", "IPSA"], ["タカミ", "TAKAMI"], ["オバジ", "Obagi"], ["エトヴォス", "ETVOS"], ["メイベリン", "Maybelline 媚比琳"], ["リケラ", "ReKERA"], ["エルジューダ", "MILBON"], ["ユニプレックス", "UNIPLEX"], ["イニスフリー", "innisfree"], ["laka", "Laka"], ["Laka", "Laka"], ["スナイデル", "SNIDEL BEAUTY"], ["トムフォード", "TOM FORD BEAUTY"], ["シロル", "SHIRORU"], ["dプログラム", "d program"], ["サーモス", "THERMOS 膳魔師"]]
+    ["ポール & ジョー", "PAUL & JOE"], ["アディクション", "ADDICTION"], ["イプサ", "IPSA"], ["タカミ", "TAKAMI"], ["オバジ", "Obagi"], ["エトヴォス", "ETVOS"], ["メイベリン", "Maybelline 媚比琳"], ["リケラ", "ReKERA"], ["エルジューダ", "MILBON"], ["ユニプレックス", "UNIPLEX"], ["イニスフリー", "innisfree"], ["laka", "Laka"], ["Laka", "Laka"], ["スナイデル", "SNIDEL BEAUTY"], ["トムフォード", "TOM FORD BEAUTY"], ["シロル", "SHIRORU"], ["dプログラム", "d program"], ["タフト24", "Oral Care タフト"], ["タフト 24", "Oral Care タフト"], ["サーモス", "THERMOS 膳魔師"]]
     .sort((a, b) => b[0].length - a[0].length);
   function brandFromName(name) { const hit = BRAND_NAMES.find(([k]) => name.includes(k)); return hit ? hit[1] : ""; }
   function toItem(raw, group) {
