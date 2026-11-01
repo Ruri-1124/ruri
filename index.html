@@ -453,7 +453,19 @@
     }
   };
   const NEED_TITLE = { "髮品": "髮質・需求", "美容家電": "功能特色", "日用品": "用途・特色" };
-  const needsOf = cat => NEEDS_BY_CAT[cat] || NEEDS;
+  // 日用品每個品項差很多（水壺跟洗衣精沒有共同的特色），所以日用品改成「每個品項各自的條件」
+  const NEEDS_BY_TYPE = {
+    detergent: { "抗菌・除臭": ["抗菌", "除菌", "消臭", "防臭"], "室內晾衣": ["部屋干し"], "香味持久": ["香り", "フレグランス"], "無香・低刺激": ["無香", "無添加", "低刺激"], "洗衣球": ["ジェルボール", "ボール"], "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"] },
+    softener: { "抗菌・除臭": ["抗菌", "除菌", "消臭", "防臭"], "室內晾衣": ["部屋干し"], "香味持久": ["香り", "フレグランス", "アロマ"], "無香・低刺激": ["無香", "無添加", "低刺激"], "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"] },
+    bath: { "瀉鹽": ["エプソム", "マグネシウム"], "碳酸泡澡": ["炭酸"], "香味": ["香り", "アロマ", "ゆず", "ラベンダー"], "溫泉系列": ["温泉", "名湯"], "大容量": ["大容量", "kg", "まとめ買い"] },
+    shower: { "微細氣泡": ["ファインバブル", "マイクロバブル", "ミスト"], "除氯": ["塩素", "カートリッジ"], "省水": ["節水"] },
+    toothbrush: { "刷毛軟": ["やわらか", "やわらかめ", "ソフト"], "刷毛硬": ["かため", "ハード"], "多支裝": ["本セット", "本入", "本組"], "小刷頭": ["コンパクト", "小さめ"], "牙縫清潔": ["歯間", "フロス"] },
+    toothpaste: { "含氟": ["フッ素"], "清新口氣": ["ミント", "ブレス"], "低研磨": ["低研磨", "研磨剤無配合"], "大容量・多入": ["本セット", "大容量", "本入"] },
+    umbrella: { "晴雨兩用": ["晴雨兼用"], "抗UV・遮光": ["UVカット", "遮光", "遮熱"], "折疊傘": ["折りたたみ", "折り畳み"], "自動開合": ["自動開閉", "ワンタッチ"], "輕量": ["軽量"], "抗風": ["耐風", "強風"] },
+    bottle: { "保溫保冷": ["保温", "保冷"], "直飲式": ["直飲み"], "可用洗碗機": ["食洗機"], "輕量": ["軽量"], "大容量（1L 以上）": ["1L", "1.0L", "1.5L", "2L", "大容量"] },
+    bag: { "可折疊收納": ["折りたたみ", "コンパクト", "ポケッタブル"], "保冷袋": ["保冷"], "大容量": ["大容量", "大きめ", "特大"], "防潑水": ["撥水", "防水"] }
+  };
+  const needsOf = (cat, itype) => NEEDS_BY_TYPE[itype] || NEEDS_BY_CAT[cat] || NEEDS;
   const KR_WORDS = ["韓国", "mileda", "ミレダ", "Anua", "アヌア", "AESTURA", "TIRTIR", "ティルティル", "BIOHEAL", "MEDIHEAL", "メディヒール", "rom&nd", "ロムアンド", "CLIO", "クリオ", "COSRX", "innisfree", "イニスフリー", "Dr.Jart", "numbuzin", "ナンバーズイン", "ma:nyo", "魔女工場", "d'Alba", "ダルバ", "Torriden", "トリデン", "SKIN1004", "ROUND LAB", "ラウンドラボ", "KAHI", "BANILA", "MISSHA", "ミシャ", "ETUDE", "エチュード", "LANEIGE", "ラネージュ", "Sulwhasoo", "雪花秀", "AMUSE", "fwee", "peripera", "ペリペラ", "3CE", "hince", "dasique", "UNOVE", "Abib", "VT CICA", "VTcosmetic", "BY UR", "VERAMORE"];
   const OTHER_WORDS = ["ラロッシュポゼ", "La Roche", "Cetaphil", "セタフィル", "M・A・C", "ケラスターゼ", "KERASTASE", "Ulike", "ブラウン", "BRAUN", "Oral-B", "エスティ ローダー", "エスティローダー", "ESTEE", "Estee Lauder", "クナイプ", "Kneipp", "アリエール", "レノア", "ランコム", "ディオール", "シャネル", "ボビイ ブラウン"];
 
@@ -567,6 +579,11 @@
 
   // 樂天原始資料＋你整理的標籤 → 網站用的商品
   function toItem(raw, group) {
+    const p = toItemBase(raw, group);
+    p.tags = tagHits(needsOf(p.cat, p.itype), raw.itemName);   // 篩選條件依品項／分類不同
+    return p;
+  }
+  function toItemBase(raw, group) {
     const L = LABELS[raw.itemCode] || {};
     const D = getDetail(raw.itemCode);
     const text = raw.itemName + " " + (raw.shopName || "");
@@ -575,7 +592,7 @@
       brand: L.brand || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || (raw.shopName || "").replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName,
       name: L.twName || L.jpName || cleanName(raw.itemName),   // 有台灣正式中文名就用，沒有就用日文原名，不自己翻譯
       twName: L.twName || "", jpName: L.jpName || "", desc: L.desc || "", jp: raw.itemName,
-      country: L.country || detectCountry(text), tags: tagHits(needsOf(CAT[group]), raw.itemName),
+      country: L.country || detectCountry(text), tags: [],
       skin: !["彩妝", "保養", "美容"].includes(CAT[group]) ? [] : D ? (D.skin || []) : (L.skin || tagHits(SKIN, raw.itemName)),   // 膚質只用在彩妝、保養
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
       img: raw.image, url: raw.url, exclude: raw.exclude || (L.hide ? "法規或安全疑慮" : ""),   // hide：有法規或安全疑慮，不放上網站
@@ -630,7 +647,7 @@
     for (const [key, t] of Object.entries((types && types.types) || {})) {
       const tdef = ITYPES.find(x => x.key === key);
       const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" }[tdef && tdef.cat];
-      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; return p; })
+      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) { p.itype = key; p.tags = tagHits(needsOf(p.cat, key), r.itemName); } return p; })
         .filter(p => !p.exclude);
       TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
@@ -748,8 +765,10 @@
     const needsHere = new Set(list.flatMap(p => p.tags || []));
     const chips = (items, key, has) => items.map(([v, l]) => `<button class="chip" type="button" data-${key}="${v}" aria-pressed="${has(v)}">${l}</button>`).join("");
     const skinOpts = Object.keys(SKIN).filter(t => t !== "所有膚質" && (skinsHere.has(t) || skinsHere.has("所有膚質") || state.skins.has(t))).map(t => [t, t]);
-    const allNeeds = [...new Set([NEEDS, ...Object.values(NEEDS_BY_CAT)].flatMap(d => Object.keys(d)))];
-    const needOpts = allNeeds.filter(t => needsHere.has(t) || state.needs.has(t)).map(t => [t, t]);
+    const allNeeds = [...new Set([NEEDS, ...Object.values(NEEDS_BY_CAT), ...Object.values(NEEDS_BY_TYPE)].flatMap(d => Object.keys(d)))];
+    // 日用品裡混了好幾個品項時（洗衣精＋水壺＋雨傘⋯），條件會太雜，改成提示先選品項
+    const mixedTypes = new Set(list.map(p => p.itype).filter(t => NEEDS_BY_TYPE[t])).size > 1;
+    const needOpts = mixedTypes ? [] : allNeeds.filter(t => needsHere.has(t) || state.needs.has(t)).map(t => [t, t]);
     const cats = [...new Set(list.map(p => p.cat))];
     const needTitle = cats.length === 1 ? (NEED_TITLE[cats[0]] || "在意的問題") : cats.every(c => ["彩妝", "保養", "美容"].includes(c)) ? "在意的問題" : "需求・特色";
     return `
@@ -762,6 +781,7 @@
           return ts.length > 1 ? `<div class="fgroup"><h3>品項</h3><div class="opts">${chips([["all", "全部"], ...ts], "itype", v => state.itype === v)}</div></div>` : "";
         })() : ""}
         ${skinOpts.length ? `<div class="fgroup"><h3>適合膚質</h3><div class="opts">${chips(skinOpts, "skin", v => state.skins.has(v))}</div></div>` : ""}
+        ${mixedTypes ? `<div class="fgroup"><h3>${needTitle}</h3><p style="margin:0;font-size:13px;color:var(--muted)">先在上方選一個品項（例如水壺、雨傘），就會出現那個品項的篩選條件。</p></div>` : ""}
         ${needOpts.length ? `<div class="fgroup"><h3>${needTitle}</h3><div class="opts">${chips(needOpts, "need", v => state.needs.has(v))}</div></div>` : ""}
         ${opts.noPrice ? "" : `<div class="fgroup"><h3>日本售價</h3><div class="opts">${chips([["all", "不限"], ...PRICES], "price", v => state.price === v)}</div></div>`}
         <div class="fgroup"><h3>顯示方式</h3>
@@ -1009,7 +1029,7 @@
         const ti = dedupe(tItems.filter(p => p.itype === state.itype));
         const ids = new Set(ti.map(p => p.id));
         listBase = ti.concat(base.filter(p => !ids.has(p.id) && p.itype === state.itype).map(p => ({ ...p, catRank: p.rank, rank: 100 + (p.rank || 0) })));
-      } else if (byType) listBase = union;
+      } else if (byType) listBase = union.filter(p => p.itype === state.itype);
       else if (tItems.length) {
         // 「全部」：分類排行的商品排前面，再接各品項排行的商品（依各自名次穿插），所以件數＝所有品項加起來（去掉重複）
         const ids = new Set(base.map(p => p.id));
