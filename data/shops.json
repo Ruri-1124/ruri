@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T15:17+08:00",
+ "updated": "2026-11-01T23:03+08:00",
  "shops": {
   "hands": {
    "name": "Hands",
@@ -567,6 +567,18 @@
     },
     {
      "rank": 19,
+     "itemCode": "mujirushi-ryohin:10006814",
+     "itemName": "敏感肌用化粧水 高保湿・300mL【無印良品 公式】無印 顔 保湿 メンズ しっとり",
+     "price": 990,
+     "rating": 4.59,
+     "reviews": 22,
+     "shopName": "無印良品",
+     "shopCode": "mujirushi-ryohin",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item35/4550583434991.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583434991%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10006814%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 20,
      "itemCode": "mujirushi-ryohin:10007604",
      "itemName": "薬用クリアケアふき取りローション・300mL 拭き取り化粧水【無印良品 公式】無印 顔 化粧水 メンズ 毛穴",
      "price": 1690,
@@ -578,31 +590,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583924393%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10007604%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 20,
-     "itemCode": "mujirushi-ryohin:10006814",
-     "itemName": "敏感肌用化粧水 高保湿・300mL【無印良品 公式】無印 顔 保湿 メンズ しっとり",
-     "price": 990,
-     "rating": 4.57,
-     "reviews": 21,
-     "shopName": "無印良品",
-     "shopCode": "mujirushi-ryohin",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item35/4550583434991.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583434991%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10006814%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
      "rank": 21,
-     "itemCode": "mujirushi-ryohin:10009290",
-     "itemName": "植物発酵液　薬用スカルプシャンプー（詰替用）・340mL【無印良品 公式】",
-     "price": 1190,
-     "rating": 4.35,
-     "reviews": 20,
-     "shopName": "無印良品",
-     "shopCode": "mujirushi-ryohin",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550584465758.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584465758%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009290%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 22,
      "itemCode": "mujirushi-ryohin:10004874",
      "itemName": "薬用リップクリーム・敏感肌用 5．3g【無印良品 公式】",
      "price": 290,
@@ -614,7 +602,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4547315822782%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10004874%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 23,
+     "rank": 22,
      "itemCode": "mujirushi-ryohin:10007444",
      "itemName": "コードレス超音波アロマディフューザー・MJ-CAD2【無印良品 公式】",
      "price": 3990,
@@ -626,7 +614,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583648824%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10007444%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 24,
+     "rank": 23,
      "itemCode": "mujirushi-ryohin:10007593",
      "itemName": "（SPF41・PA+++）薬用ブライトニングUV乳液 200mL【無印良品 公式】無印 乳液 エイジング ビタミンC誘導体 ビタミンC 乳液 日焼け止め",
      "price": 2290,
@@ -638,7 +626,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583926700%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10007593%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 25,
+     "rank": 24,
      "itemCode": "mujirushi-ryohin:10003042",
      "itemName": "ポンプヘッド・コットン専用化粧水用【無印良品 公式】",
      "price": 350,
@@ -650,7 +638,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4549337775541%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10003042%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 26,
+     "rank": 25,
      "itemCode": "mujirushi-ryohin:10009202",
      "itemName": "ひんやりボディミスト　エクストラクール・150mL【無印良品 公式】",
      "price": 990,
@@ -662,7 +650,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584744235%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009202%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 27,
+     "rank": 26,
      "itemCode": "mujirushi-ryohin:10008495",
      "itemName": "ホホバオイル（詰替用）180mL【無印良品 公式】",
      "price": 2390,
@@ -674,7 +662,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584085376%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10008495%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 28,
+     "rank": 27,
      "itemCode": "mujirushi-ryohin:10003022",
      "itemName": "ローションシート（全体用）圧縮タイプ・20個入【無印良品 公式】",
      "price": 490,
@@ -686,7 +674,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4547315011902%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10003022%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 29,
+     "rank": 28,
      "itemCode": "mujirushi-ryohin:10009284",
      "itemName": "植物発酵液　薬用スカルプシャンプー・400mL【無印良品 公式】",
      "price": 1490,
@@ -698,7 +686,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584465734%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009284%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 30,
+     "rank": 29,
      "itemCode": "mujirushi-ryohin:10009383",
      "itemName": "ねかせて焚く香皿・約105×23×23mm【無印良品 公式】",
      "price": 1490,
@@ -708,6 +696,18 @@
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550584465345_06.jpg?_ex=300x300",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584465345%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009383%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 30,
+     "itemCode": "mujirushi-ryohin:10009208",
+     "itemName": "日焼け止めミルク・SPF50＋ PA＋＋＋＋ 150g【無印良品 公式】顔 日焼け止め 日焼け 日焼け対策 メンズ ガード UV 全身",
+     "price": 1290,
+     "rating": 3.93,
+     "reviews": 14,
+     "shopName": "無印良品",
+     "shopCode": "mujirushi-ryohin",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item44/4550584464959.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584464959%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009208%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     }
    ]
   }
