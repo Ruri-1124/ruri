@@ -49,15 +49,46 @@
   .favbtn span { color: var(--pink); }
   .favbtn em { font-style: normal; }
 
-  /* 分類列：圖示在上、文字在下，選中的底下有一條線 */
-  .tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-  .tabs::-webkit-scrollbar { display: none; }
-  .tab { flex: none; border: 0; background: transparent; padding: 6px 12px 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--muted); font-size: 13px; font-weight: 500; border-bottom: 3px solid transparent; min-width: 72px; }
-  .tab i { font-style: normal; font-size: 22px; line-height: 1; }
+  /* 主選單：像購物網站一樣的商品分類列，滑鼠移上去展開品項清單 */
   .ti { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #E0303F; color: #fff; font-size: 13px; font-weight: 900; font-family: var(--font-display); }
   .ti.kr { background: #2F5BD3; }
-  .tab:hover { color: var(--ink); }
-  .tab[aria-selected="true"] { color: var(--ink); font-weight: 700; border-bottom-color: var(--ruri); }
+  .menubtn { display: none; flex: none; width: 40px; height: 40px; border: 0; background: none; border-radius: 10px; cursor: pointer; padding: 8px; }
+  .menubtn svg { width: 24px; height: 24px; }
+  .mainnav { border-top: 1px solid var(--line); position: relative; }
+  .navrow { display: flex; align-items: stretch; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  .navrow::-webkit-scrollbar { display: none; }
+  .nav { flex: none; display: flex; align-items: center; gap: 4px; padding: 12px 14px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: 3px solid transparent; white-space: nowrap; }
+  .nav:hover { color: var(--ruri); }
+  .nav[aria-current="page"] { color: var(--ruri); border-bottom-color: var(--ruri); }
+  .nav .caret { font-size: 10px; color: var(--muted); }
+  .nav.feat { font-weight: 500; font-size: 14px; color: var(--muted); }
+  .nav.feat:hover, .nav.feat[aria-current="page"] { color: var(--ruri); }
+  .navsep { flex: none; width: 1px; background: var(--line); margin: 12px 6px; }
+  .mega { position: absolute; left: 0; right: 0; top: 100%; background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 18px 40px rgba(34,30,58,.12); z-index: 25; }
+  .megain { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; padding-block: 20px 24px; }
+  .megain h3 { font-family: var(--font-display); font-weight: 900; font-size: 24px; margin: 0 0 6px; }
+  .megain p { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+  .megain .all { font-size: 14px; font-weight: 700; color: var(--ruri); text-decoration: none; }
+  .megagrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px 14px; }
+  .megalink { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-radius: 10px; color: var(--ink); text-decoration: none; font-size: 14px; }
+  .megalink:hover { background: var(--bg); color: var(--ruri); }
+  .megalink span { width: 36px; height: 36px; flex: none; border-radius: 50%; border: 1px solid var(--line); background: #fff; overflow: hidden; }
+  .megalink img { width: 100%; height: 100%; object-fit: contain; padding: 3px; }
+  .megalink small { color: var(--muted); font-size: 12px; margin-left: auto; }
+  /* 手機版：左上角☰打開的側邊選單 */
+  .drawer { position: fixed; inset: 0 auto 0 0; width: min(340px, 88vw); background: var(--surface); z-index: 35; overflow-y: auto; box-shadow: 10px 0 40px rgba(34,30,58,.2); padding: 0 0 calc(24px + env(safe-area-inset-bottom, 0px)); }
+  .drawer-head { position: sticky; top: 0; background: var(--surface); display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--line); font-weight: 900; font-family: var(--font-display); font-size: 18px; z-index: 1; }
+  .drawer-head button { border: 0; background: var(--bg); width: 36px; height: 36px; border-radius: 50%; font-size: 18px; cursor: pointer; }
+  .dgroup { border-bottom: 1px solid var(--line); }
+  .dgroup summary { list-style: none; cursor: pointer; padding: 14px 16px; font-weight: 700; display: flex; justify-content: space-between; }
+  .dgroup summary::-webkit-details-marker { display: none; }
+  .dgroup summary::after { content: "＋"; color: var(--muted); }
+  .dgroup[open] summary::after { content: "－"; }
+  .dlinks { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; padding: 0 16px 14px; }
+  .dlinks a { padding: 7px 0; color: var(--ink); text-decoration: none; font-size: 14px; }
+  .dlinks a.allc { grid-column: 1 / -1; color: var(--ruri); font-weight: 700; }
+  .dfeat { display: grid; padding: 8px 0; }
+  .dfeat a { padding: 12px 16px; color: var(--ink); text-decoration: none; font-weight: 700; }
   /* 第二層分類：日本、韓國底下的小分類 */
   .subtabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 10px 0 12px; border-top: 1px solid var(--line); }
   .subtabs::-webkit-scrollbar { display: none; }
@@ -75,7 +106,7 @@
 
   /* ── 左側篩選＋商品區 ── */
   .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; margin-top: 18px; align-items: start; }
-  .side { position: sticky; top: 196px; max-height: calc(100vh - 216px); overflow-y: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 4px 16px 16px; }
+  .side { position: sticky; top: 140px; max-height: calc(100vh - 160px); overflow-y: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 4px 16px 16px; }
   .side-head { display: none; }
   .fgroup { padding-top: 14px; }
   .fgroup + .fgroup { border-top: 1px solid var(--line); margin-top: 14px; }
@@ -235,6 +266,8 @@
 
   /* 圓形品項入口 */
   .circles { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 16px 10px; }
+  .catcircles { margin-top: 18px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+  .catcircles + .sub { margin-top: 22px; }
   .circ { display: grid; justify-items: center; gap: 6px; text-decoration: none; color: var(--ink); text-align: center; }
   .circ .ring { width: 84px; height: 84px; border-radius: 50%; background: #fff; border: 2px solid var(--line); overflow: hidden; display: grid; place-items: center; transition: border-color .15s, transform .15s; }
   .circ .ring img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
@@ -303,7 +336,12 @@
   @media (max-width: 640px) {
     .logo small { display: none; }
     .favbtn em { display: none; }
-    .tab { min-width: 64px; padding-inline: 8px; }
+    .menubtn { display: block; margin-left: -8px; }
+    .top { gap: 8px; }
+    .logo svg { width: 34px; height: 34px; } .logo b { font-size: 22px; }
+    .nav { padding: 10px 10px; font-size: 14px; }
+    .nav .caret { display: none; }
+    .mega { display: none; }
     .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .podium { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .podium .card:nth-child(1) { grid-column: 1 / -1; }
@@ -322,7 +360,8 @@
 <header>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#home" aria-label="ruri 首頁">
+      <button class="menubtn" type="button" id="menubtn" aria-label="打開分類選單"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+      <a class="logo" href="#home" aria-label="ruri 日韓熱賣情報站，回到首頁">
         <svg viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg>
         <b>ruri</b><small>日韓熱賣情報站</small>
       </a>
@@ -332,10 +371,15 @@
       </label>
       <button class="favbtn" type="button" id="favjump"><span>♥</span><em>我的最愛</em> <b id="favcount">0</b></button>
     </div>
-    <nav class="tabs" id="tabs" role="tablist" aria-label="分類"></nav>
-    <nav class="subtabs" id="subtabs" aria-label="小分類" hidden></nav>
   </div>
+  <nav class="mainnav" id="mainnav" aria-label="商品分類">
+    <div class="wrap navrow" id="navrow"></div>
+    <div class="mega" id="mega" hidden></div>
+  </nav>
+  <div class="wrap"><nav class="subtabs" id="subtabs" aria-label="小分類" hidden></nav></div>
 </header>
+<div class="shade" id="dshade" hidden></div>
+<aside class="drawer" id="drawer" aria-label="分類選單" hidden></aside>
 
 <main class="wrap" id="view" aria-live="polite"></main>
 
@@ -360,13 +404,6 @@
   const CAT = { beauty: "美容", makeup: "彩妝", skincare: "保養", hair: "髮品", device: "美容家電", laundry: "日用品", bath: "日用品" };
 
   // 大分類（上面那一排）
-  const GROUPS = [
-    { key: "home", icon: "🧭", label: "首頁" },
-    { key: "jp",  icon: "<b class=\"ti\">日</b>", label: "日本" },
-    { key: "kr",  icon: "<b class=\"ti kr\">韓</b>", label: "韓國" },
-    { key: "creators", icon: "👀", label: "達人推薦" },
-    { key: "fav", icon: "♥", label: "我的最愛" }
-  ];
   // 每一頁（parent 是它屬於哪個大分類）
   const PAGES = [
     { key: "home",     parent: "home", label: "✨ 精選首頁", title: "ruri 精選首頁", desc: "從「腮紅」「化妝水」這種品項開始找，每個品項都有自己的排行", source: "home" },
@@ -918,8 +955,8 @@
 
   function render() {
     const page = PAGES.find(p => p.key === state.tab) || PAGES[0];
-    document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.key === page.parent));
-    const kids = PAGES.filter(p => p.parent === page.parent);
+    document.querySelectorAll(".nav").forEach(a => { const n = NAV.find(x => x.key === a.dataset.nav); const on = n && (n.key === page.key || (n.also || []).includes(page.key)); if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    const kids = page.parent === "kr" ? PAGES.filter(p => p.parent === "kr") : [];   // 只有韓國專區有小分類列
     const sub = document.getElementById("subtabs");
     sub.hidden = kids.length < 2;
     sub.innerHTML = kids.length < 2 ? "" : kids.map(p => `<button type="button" class="stab" data-page="${p.key}" aria-selected="${p.key === page.key}">${p.label}</button>`).join("");
@@ -955,9 +992,14 @@
       const showRank = state.sort === "rank" && !page.catFilter && !state.merge && (page.groups.length === 1 || byType);
       const rankOf = (p, i) => showRank ? (byType || page.source === "month" ? i + 1 : p.rank) : null;
       const shown = byType ? { ...page, title: (page.source === "month" ? "本月熱門・" : "日本") + typeLabel(state.itype) + "排行", desc: `${page.title.replace(/排行$/, "")}裡的「${typeLabel(state.itype)}」，依日本樂天名次排序` } : page;
-      if (page.itypes || page.catFilter) html += crumbs([["首頁", "home"], [page.parent === "jp" ? "日本" : "全部商品", page.parent === "jp" ? "awards" : "all"], ...(page.key === "all" ? [] : [[page.label.replace(/^\S+\s/, ""), byType ? page.key : ""]]), ...(byType ? [[typeLabel(state.itype), ""]] : [])]);
+      if (page.itypes || page.catFilter) html += crumbs([["首頁", "home"], ...(page.parent === "jp" ? [] : [["全部商品", "all"]]), ...(page.key === "all" ? [] : [[page.label.replace(/^\S+\s/, ""), byType ? page.key : ""]]), ...(byType ? [[typeLabel(state.itype), ""]] : [])]);
       html += pagehead(shown, badge, updatedText());
-      if (page.itypes) html += typeRow(page.key, union, base.length);
+      // 分類頁還沒選品項時：用圓形品項入口（像分類首頁）；選了品項：用一排品項按鈕方便切換
+      const pcat = CAT[page.groups[0]];
+      if (page.source === "rank" && page.itypes && !byType && CAT_PAGE[pcat] === page.key) {
+        const idx = typeIndex(pcat);
+        if (idx.length > 1) html += `<div class="circles catcircles">${idx.map(({ t, ps }) => { const im = ps.find(p => p.img); return `<a class="circ" href="#${page.key}/${t.key}"><span class="ring">${im ? `<img src="${esc(im.img)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(t.label.slice(0, 2))}</em>`}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`; }).join("")}</div><h2 class="sub">${esc(pcat)}綜合排行</h2>`;
+      } else if (page.itypes) html += typeRow(page.key, union, base.length);
       let grid;
       const plain = !state.q && !state.skins.size && !state.needs.size && state.price === "all";
       if (!list.length) grid = `<div class="empty">沒有符合條件的商品，試試看取消一些篩選。</div>`;
@@ -973,7 +1015,7 @@
       const inAw = (p, k) => p.award.awards.some(x => x.award === k);
       const scoped = AW_ITEMS.filter(p => state.aw === "all" || inAw(p, state.aw));
       const list = applyFilters(scoped, { noPrice: true, itype: true });
-      html += crumbs([["首頁", "home"], ["日本", ""], ["年度熱門", ""]]);
+      html += crumbs([["首頁", "home"], ["年度熱門", ""]]);
       html += pagehead(page, `<span class="src">${AW_ITEMS.length} 個得獎商品</span>`, AWARDS.updated ? `${esc(AWARDS.updated)} 整理` : "");
       if (AWARDS.next) html += `<div class="notice">📣 ${esc(AWARDS.next)}</div>`;
       html += `<div class="opts" style="margin:14px 0 4px">${[["all", "全部大賞", AW_ITEMS.length], ...metas.map(m => [m.key, m.name, AW_ITEMS.filter(p => inAw(p, m.key)).length])].map(([k, l, n]) => `<button class="chip" type="button" data-aw="${k}" aria-pressed="${state.aw === k}">${esc(l)}（${n}）</button>`).join("")}</div>`;
@@ -1056,7 +1098,7 @@
     if (page.source === "shops") {
       const keys = Object.keys(SHOP_ITEMS);
       if (!keys.includes(state.shop)) state.shop = keys[0] || "";
-      html += crumbs([["首頁", "home"], ["日本", ""], ["Hands・無印良品", ""]]);
+      html += crumbs([["首頁", "home"], ["Hands・無印良品", ""]]);
       html += pagehead(page, `<span class="src">日本樂天官方店</span>`, SHOPS.updated ? `${+SHOPS.updated.slice(5, 7)} 月 ${+SHOPS.updated.slice(8, 10)} 日更新` : "");
       if (!keys.length) html += `<div class="empty" style="margin-top:18px">選物店的商品會在下一次自動更新後出現。</div>`;
       else {
@@ -1166,20 +1208,60 @@
   // =========================================================
   // ⑧ 互動
   // =========================================================
-  const tabsEl = document.getElementById("tabs");
-  GROUPS.forEach(g => {
-    const b = document.createElement("button");
-    b.type = "button"; b.className = "tab"; b.setAttribute("role", "tab"); b.dataset.key = g.key;
-    b.innerHTML = `<i aria-hidden="true">${g.icon}</i>${g.label}`;
-    // 點大分類：如果已經在這個大分類裡就不動，否則跳到它的第一個小分類
-    b.addEventListener("click", () => { const cur = PAGES.find(p => p.key === state.tab); if (!cur || cur.parent !== g.key) location.hash = PAGES.find(p => p.parent === g.key).key; });
-    tabsEl.appendChild(b);
+  // 主選單：商品分類（滑鼠移上去展開品項）＋精選專區
+  const NAV = [
+    { key: "makeup", label: "彩妝", cat: "彩妝" }, { key: "skincare", label: "保養", cat: "保養" }, { key: "hair", label: "髮品", cat: "髮品" },
+    { key: "daily", label: "日用品・沐浴", cat: "日用品" }, { key: "device", label: "美容家電", cat: "美容家電" },
+    { sep: true },
+    { key: "awards", label: "🏆 年度熱門" }, { key: "month", label: "本月熱門" }, { key: "oy", label: "韓國人氣", also: ["kr-makeup", "kr-skincare", "kr-hair", "kr-injp"] },
+    { key: "creators", label: "達人推薦" }, { key: "shops", label: "Hands・無印" }
+  ];
+  const CAT_DESC = { "彩妝": "底妝、眼妝、唇彩，日本樂天每天的真實排行", "保養": "卸妝、化妝水、精華、防曬到身體保養", "髮品": "洗潤髮、護髮油、造型、頭皮與梳子", "日用品": "洗衣精、柔軟精、泡澡入浴劑", "美容家電": "吹風機、離子夾、捲髮器" };
+  // 某個大分類底下有哪些品項、各有幾件商品（日本商品：分類排行＋品項排行）
+  function typeIndex(cat) {
+    const pool = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat())
+      .filter(p => p.country !== "韓國" && p.cat === cat);
+    const uniq = [...new Map(pool.map(p => [p.id, p])).values()];
+    return ITYPES.filter(t => t.cat === cat).map(t => ({ t, ps: uniq.filter(p => p.itype === t.key).sort((a, b) => (a.typeRank || a.rank || 99) - (b.typeRank || b.rank || 99)) })).filter(o => o.ps.length);
+  }
+  function buildNav() {
+    document.getElementById("navrow").innerHTML = NAV.map(n => n.sep ? `<span class="navsep" aria-hidden="true"></span>`
+      : `<a class="nav ${n.cat ? "" : "feat"}" href="#${n.key}" data-nav="${n.key}" ${n.cat ? `data-mega="${n.cat}"` : ""}>${esc(n.label)}${n.cat ? `<span class="caret" aria-hidden="true">▾</span>` : ""}</a>`).join("");
+    const pic = p => p && p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">` : "";
+    document.getElementById("drawer").innerHTML = `<div class="drawer-head">商品分類<button type="button" id="drawerClose" aria-label="關閉">×</button></div>
+      ${NAV.filter(n => n.cat).map(n => `<details class="dgroup"><summary>${esc(n.label)}</summary><div class="dlinks">
+        <a class="allc" href="#${n.key}">看${esc(n.label)}全部排行 ›</a>${typeIndex(n.cat).map(({ t, ps }) => `<a href="#${n.key}/${t.key}">${esc(t.label)}</a>`).join("")}</div></details>`).join("")}
+      <div class="dfeat">${NAV.filter(n => n.key && !n.cat).map(n => `<a href="#${n.key}">${esc(n.label)}</a>`).join("")}<a href="#all">🛍️ 全部商品</a><a href="#fav">♥ 我的最愛</a></div>`;
+    window.megaHtml = cat => {
+      const n = NAV.find(x => x.cat === cat);
+      return `<div class="wrap megain"><div><h3>${esc(n.label)}</h3><p>${esc(CAT_DESC[cat] || "")}</p><a class="all" href="#${n.key}">看${esc(n.label)}全部排行 ›</a></div>
+        <div class="megagrid">${typeIndex(cat).map(({ t, ps }) => `<a class="megalink" href="#${n.key}/${t.key}"><span>${pic(ps.find(p => p.img))}</span>${esc(t.label)}<small>${ps.length}</small></a>`).join("")}</div></div>`;
+    };
+  }
+  // 展開／收起品項清單（只有滑鼠才會展開；手機點分類直接進分類頁）
+  const megaEl = document.getElementById("mega");
+  let megaTimer;
+  document.getElementById("mainnav").addEventListener("pointerover", e => {
+    if (e.pointerType !== "mouse") return;
+    const a = e.target.closest("[data-mega]");
+    if (a) { clearTimeout(megaTimer); megaEl.innerHTML = window.megaHtml(a.dataset.mega); megaEl.hidden = false; }
+    else if (e.target.closest(".nav")) megaEl.hidden = true;
   });
+  document.getElementById("mainnav").addEventListener("pointerleave", () => { megaTimer = setTimeout(() => megaEl.hidden = true, 150); });
+  megaEl.addEventListener("click", e => { if (e.target.closest("a")) megaEl.hidden = true; });
+  function openDrawer(open) {
+    document.getElementById("drawer").hidden = !open;
+    document.getElementById("dshade").hidden = !open;
+  }
+  document.getElementById("menubtn").addEventListener("click", () => openDrawer(true));
+  document.getElementById("dshade").addEventListener("click", () => openDrawer(false));
+  document.getElementById("drawer").addEventListener("click", e => { if (e.target.closest("a") || e.target.id === "drawerClose") openDrawer(false); });
 
   function fromHash() {
     let [key, sub] = decodeURIComponent(location.hash.slice(1)).split("/");
     if (key === "today") key = "awards";
-    const dlg = document.getElementById("detail"); if (dlg.open) dlg.close();   // 舊網址「今日熱門」改成「年度熱門」
+    const dlg = document.getElementById("detail"); if (dlg.open) dlg.close();
+    megaEl.hidden = true;   // 舊網址「今日熱門」改成「年度熱門」
     state.tab = PAGES.some(p => p.key === key) ? key : "home";
     state.needs.clear(); state.skins.clear(); state.cat = "all"; state.price = "all"; state.sideOpen = false; state.aw = "all";
     state.itype = sub && (sub === "other" || ITYPES.some(t => t.key === sub)) ? sub : "all";
@@ -1255,7 +1337,7 @@
   });
 
   updateFavCount();
-  loadData().then(fromHash).catch(err => {
+  loadData().then(() => { buildNav(); fromHash(); }).catch(err => {
     console.error(err);
     document.getElementById("view").innerHTML = '<div class="empty" style="margin-top:24px">資料載入失敗，請稍後重新整理頁面。</div>';
   });
