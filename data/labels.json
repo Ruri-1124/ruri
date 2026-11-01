@@ -1313,5 +1313,13 @@
  },
  "beinfinity:10000039": {
   "hide": true
+ },
+ "zakkanibankan:10000006": {
+  "brand": "Crest",
+  "country": "其他",
+  "hide": true
+ },
+ "be-garden:10000160": {
+  "hide": true
  }
 }
