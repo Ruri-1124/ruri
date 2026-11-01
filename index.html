@@ -178,6 +178,44 @@
   .dbuys { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .dbuys .buy { display: inline-block; }
 
+  /* ── 品項列、麵包屑、得獎標籤 ── */
+  .crumbs { margin-top: 14px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .crumbs a { color: var(--ruri); text-decoration: none; }
+  .crumbs i { font-style: normal; color: var(--line); }
+  .crumbs + .pagehead { margin-top: 6px; }
+  .itypes { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 14px 0 2px; }
+  .itypes::-webkit-scrollbar { display: none; }
+  .ichip { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 7px 14px; cursor: pointer; font-size: 14px; font-weight: 700; display: flex; gap: 6px; align-items: baseline; }
+  .ichip small { font-weight: 400; color: var(--muted); font-size: 12px; }
+  .ichip:hover { border-color: var(--ruri); }
+  .ichip[aria-pressed="true"] { background: var(--ruri); border-color: var(--ruri); color: #fff; }
+  .ichip[aria-pressed="true"] small { color: rgba(255,255,255,.8); }
+  .awards { display: flex; flex-wrap: wrap; gap: 4px; }
+  .aw { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #FFF3D6; color: #8A5A00; }
+  .notice { margin-top: 14px; background: var(--surface); border: 1px dashed var(--gold); border-radius: 12px; padding: 10px 14px; font-size: 14px; }
+  .subnote { display: block; font-family: var(--font-body); font-weight: 400; font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .subnote a { color: var(--muted); }
+
+  /* ── 首頁：入口＋品項方塊 ── */
+  .entries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+  .entry { display: grid; gap: 4px; padding: 18px 20px; border-radius: 18px; text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--surface); }
+  .entry b { font-family: var(--font-display); font-size: 20px; font-weight: 900; }
+  .entry span { font-size: 13px; color: var(--muted); }
+  .entry:hover { border-color: var(--ruri); }
+  .e-aw { background: linear-gradient(135deg, #FFF6DD, #fff); }
+  .e-mo { background: linear-gradient(135deg, var(--ruri-soft), #fff); }
+  .e-kr { background: linear-gradient(135deg, var(--kr-soft), #fff); }
+  .hubcat .sub { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .hubcat .sub a { font-family: var(--font-body); font-size: 13px; font-weight: 700; color: var(--ruri); text-decoration: none; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+  .tilecard { display: grid; grid-template-columns: 52px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 10px; align-items: center; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); }
+  .tilecard:hover { border-color: var(--ruri); }
+  .tpic { grid-row: span 2; width: 52px; height: 52px; border-radius: 10px; background: var(--bg); overflow: hidden; }
+  .tpic img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+  .tilecard b { font-size: 15px; }
+  .tilecard small { font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 640px) { .entries { grid-template-columns: 1fr; } .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
   .empty { text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
   footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
   .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 10px; font-size: 14px; z-index: 40; max-width: calc(100% - 32px); }
@@ -216,7 +254,7 @@
 <header>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="#all" aria-label="ruri 首頁">
+      <a class="logo" href="#home" aria-label="ruri 首頁">
         <svg viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg>
         <b>ruri</b><small>日韓熱賣情報站</small>
       </a>
@@ -255,7 +293,7 @@
 
   // 大分類（上面那一排）
   const GROUPS = [
-    { key: "all", icon: "🛍️", label: "全部商品" },
+    { key: "home", icon: "🧭", label: "首頁" },
     { key: "jp",  icon: "<b class=\"ti\">日</b>", label: "日本" },
     { key: "kr",  icon: "<b class=\"ti kr\">韓</b>", label: "韓國" },
     { key: "creators", icon: "👀", label: "達人推薦" },
@@ -263,14 +301,15 @@
   ];
   // 每一頁（parent 是它屬於哪個大分類）
   const PAGES = [
-    { key: "all",      parent: "all", label: "全部商品", title: "日韓熱賣全部商品", desc: "日本的彩妝、保養、髮品、日用品、美容家電，一次看完", source: "rank", groups: ["makeup", "skincare", "hair", "device", "laundry", "bath"], catFilter: true, pastToggle: true },
-    { key: "today",    parent: "jp", label: "🔥 今日熱門", title: "今天日本人都在買什麼？", desc: "日本樂天「美容・彩妝・香水」綜合排行", source: "rank", groups: ["beauty"], podium: true },
-    { key: "month",    parent: "jp", label: "📅 本月熱門", title: "這個月日本人都在買什麼", desc: "過去 30 天最常出現在排行榜上的商品", source: "month", groups: ["beauty"] },
-    { key: "makeup",   parent: "jp", label: "💄 彩妝", title: "日本彩妝排行", desc: "日本樂天「底妝・彩妝」分類", source: "rank", groups: ["makeup"] },
-    { key: "skincare", parent: "jp", label: "🧴 保養", title: "日本保養排行", desc: "日本樂天「保養」分類", source: "rank", groups: ["skincare"] },
-    { key: "hair",     parent: "jp", label: "💇‍♀️ 髮品", title: "日本髮品排行", desc: "日本樂天「護髮・造型」分類", source: "rank", groups: ["hair"] },
-    { key: "daily",    parent: "jp", label: "🛁 日用品", title: "日本日用品排行", desc: "洗衣精・柔軟精，以及泡澡・沐浴用品", source: "rank", groups: ["laundry", "bath"] },
-    { key: "device",   parent: "jp", label: "✨ 美容家電", title: "日本美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"] },
+    { key: "home",     parent: "home", label: "🧭 用品項找排行", title: "想找什麼？先選品項", desc: "從「腮紅」「化妝水」這種品項開始找，每個品項都有自己的排行", source: "home" },
+    { key: "all",      parent: "home", label: "🛍️ 全部商品", title: "日韓熱賣全部商品", desc: "日本的彩妝、保養、髮品、日用品、美容家電，一次看完", source: "rank", groups: ["makeup", "skincare", "hair", "device", "laundry", "bath"], catFilter: true, pastToggle: true },
+    { key: "awards",   parent: "jp", label: "🏆 年度熱門", title: "年度熱門商品", desc: "日本美妝大賞的得獎商品，一次整理", source: "awards" },
+    { key: "month",    parent: "jp", label: "📅 本月熱門", title: "這個月日本人都在買什麼", desc: "過去 30 天最常出現在排行榜上的商品", source: "month", groups: ["beauty"], itypes: true },
+    { key: "makeup",   parent: "jp", label: "💄 彩妝", title: "日本彩妝排行", desc: "日本樂天「底妝・彩妝」分類", source: "rank", groups: ["makeup"], itypes: true },
+    { key: "skincare", parent: "jp", label: "🧴 保養", title: "日本保養排行", desc: "日本樂天「保養」分類", source: "rank", groups: ["skincare"], itypes: true },
+    { key: "hair",     parent: "jp", label: "💇‍♀️ 髮品", title: "日本髮品排行", desc: "日本樂天「護髮・造型」分類", source: "rank", groups: ["hair"], itypes: true },
+    { key: "daily",    parent: "jp", label: "🛁 日用品", title: "日本日用品排行", desc: "洗衣精・柔軟精，以及泡澡・沐浴用品", source: "rank", groups: ["laundry", "bath"], itypes: true },
+    { key: "device",   parent: "jp", label: "✨ 美容家電", title: "日本美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"], itypes: true },
     { key: "oy",       parent: "kr", label: "⭐ 人氣精選", title: "韓國人氣美妝", desc: "韓國人自己在買的美妝，透過 Olive Young Global 直接寄台灣", source: "oy", injp: true },
     { key: "kr-makeup",   parent: "kr", label: "💄 彩妝", title: "韓國彩妝", desc: "Olive Young Global 暢銷彩妝", source: "oy", ocat: ["彩妝"] },
     { key: "kr-skincare", parent: "kr", label: "🧴 保養", title: "韓國保養", desc: "Olive Young Global 暢銷保養、面膜、防曬", source: "oy", ocat: ["保養", "面膜", "防曬"] },
@@ -309,6 +348,62 @@
     "ローラ メルシエ": "Laura Mercier", "ナーズ": "NARS", "クリニーク": "倩碧", "イプサ": "IPSA", "ドクターシーラボ": "城野醫生", "ティルティル": "TIRTIR",
     "アヌア": "Anua", "ケイト": "KATE", "エクセル": "excel 眼影", "ヒロインメイク": "Heroine Make", "デジャヴュ": "dejavu", "メディヒール": "MEDIHEAL", "マナラ": "MANARA"
   };
+  // 品項：用商品名稱判斷是哪一種東西（腮紅、化妝水⋯）。同一個名稱裡有好幾個關鍵字時，取「最前面出現」的那個
+  // zh：你在 labels.json 寫的中文類型（desc）用的字；jp：日本樂天商品名稱用的字
+  const ITYPES = [
+    { key: "foundation", cat: "彩妝", label: "粉底・氣墊", zh: ["粉底", "氣墊"], jp: ["ファンデ", "クッション", "メークアップ N", "メークアップN"] },
+    { key: "primer", cat: "彩妝", label: "妝前・飾底乳", zh: ["妝前", "飾底", "隔離"], jp: ["下地", "プライマー", "センサーベース", "CCクリーム", "BBクリーム"] },
+    { key: "concealer", cat: "彩妝", label: "遮瑕", zh: ["遮瑕"], jp: ["コンシーラー"] },
+    { key: "powder", cat: "彩妝", label: "蜜粉・粉餅", zh: ["蜜粉", "粉餅"], jp: ["パウダー", "おしろい"] },
+    { key: "cheek", cat: "彩妝", label: "腮紅", zh: ["腮紅"], jp: ["チーク", "ブラッシュ", "頬紅"] },
+    { key: "highlight", cat: "彩妝", label: "打亮・修容", zh: ["打亮", "修容"], jp: ["ハイライ", "シェーディング", "コントゥア", "スキンフィニッシュ"] },
+    { key: "eye", cat: "彩妝", label: "眼影", zh: ["眼影"], jp: ["アイシャドウ", "アイシャドー", "アイパレット", "アイデザイナー", "アイカラー"] },
+    { key: "liner", cat: "彩妝", label: "眼線", zh: ["眼線"], jp: ["アイライナー", "ライナー"] },
+    { key: "mascara", cat: "彩妝", label: "睫毛膏", zh: ["睫毛膏"], jp: ["マスカラ"] },
+    { key: "lash", cat: "彩妝", label: "睫毛保養", zh: ["睫毛"], jp: ["まつ毛美容液", "まつげ美容液", "睫毛美容液", "アイラッシュ", "まつ毛コーティング", "カールアップ"] },
+    { key: "brow", cat: "彩妝", label: "眉彩", zh: ["眉"], jp: ["アイブロウ", "眉マスカラ", "ブロウ"] },
+    { key: "lip", cat: "彩妝", label: "唇彩", zh: ["唇", "口紅"], jp: ["リップ", "口紅", "ティント", "グロス", "ルージュ"] },
+    { key: "tool", cat: "彩妝", label: "刷具・粉撲", zh: ["刷", "粉撲"], jp: ["ブラシ", "パフ", "スポンジ"] },
+    { key: "makeupset", cat: "彩妝", label: "彩妝組・聖誕禮盒", zh: ["禮盒", "組合"], jp: ["福袋", "アドベント", "コレクション", "コフレ", "セット"], weak: true },
+    { key: "cleansing", cat: "保養", label: "卸妝", zh: ["卸妝"], jp: ["クレンジング", "クレンズ", "メイク落とし"] },
+    { key: "wash", cat: "保養", label: "洗面乳", zh: ["洗面", "洗顏"], jp: ["洗顔", "フォーム", "ウォッシュ"] },
+    { key: "toner", cat: "保養", label: "化妝水", zh: ["化妝水", "噴霧"], jp: ["化粧水", "ローション", "トナー", "ミスト"] },
+    { key: "serum", cat: "保養", label: "精華液", zh: ["精華"], jp: ["美容液", "セラム", "エッセンス", "アンプル"] },
+    { key: "emulsion", cat: "保養", label: "乳液・乳霜", zh: ["乳液", "乳霜", "凝霜", "凝膠"], jp: ["乳液", "エマルジョン", "クリーム", "オールインワン", "ジェル"] },
+    { key: "mask", cat: "保養", label: "面膜", zh: ["面膜"], jp: ["マスク", "パック"] },
+    { key: "sunscreen", cat: "保養", label: "防曬", zh: ["防曬"], jp: ["日焼け止め", "日焼止め", "サンスクリーン", "UVジェル", "UVミルク", "UVエッセンス"] },
+    { key: "skinset", cat: "保養", label: "保養組・體驗組", zh: ["體驗組", "組合", "禮盒"], jp: ["トライアル", "キット", "セット", "コフレ"], weak: true },
+    { key: "body", cat: "保養", label: "身體保養", zh: ["身體", "護手"], jp: ["ボディ", "ハンド"] },
+    { key: "shampoo", cat: "髮品", label: "洗髮・潤髮", zh: ["洗髮", "潤髮"], jp: ["シャンプー", "コンディショナー", "トリートメント"] },
+    { key: "hairoil", cat: "髮品", label: "護髮油・免沖洗", zh: ["護髮油", "免沖"], jp: ["ヘアオイル", "洗い流さない", "ヘアミルク", "THE OIL", "アウトバス"] },
+    { key: "styling", cat: "髮品", label: "造型", zh: ["造型", "定型"], jp: ["ワックス", "スプレー", "スタイリング", "ヘアバーム", "ケープ"] },
+    { key: "scalp", cat: "髮品", label: "頭皮・梳子", zh: ["頭皮", "梳"], jp: ["頭皮", "スカルプ", "ヘッドスパ", "ブラシ", "コーム", "シャワーヘッド"] },
+    { key: "dryer", cat: "美容家電", label: "吹風機", zh: ["吹風機"], jp: ["ドライヤー"] },
+    { key: "iron", cat: "美容家電", label: "離子夾・捲髮器", zh: ["離子夾", "捲髮", "直髮梳"], jp: ["アイロン", "カールドライヤー", "ヘアビューロン", "ストレート"] },
+    { key: "facial", cat: "美容家電", label: "美顏器", zh: ["美顏"], jp: ["美顔器", "美顔", "フェイス"] },
+    { key: "shaver", cat: "美容家電", label: "除毛・修容刀", zh: ["除毛"], jp: ["除毛", "フェリエ"] },
+    { key: "detergent", cat: "日用品", label: "洗衣精", zh: ["洗衣"], jp: ["洗剤", "洗濯", "ジェルボール", "ニュービーズ", "スノール", "アタック", "アリエール", "ボールド"] },
+    { key: "softener", cat: "日用品", label: "柔軟精", zh: ["柔軟"], jp: ["柔軟剤", "柔軟仕上げ"] },
+    { key: "shower", cat: "日用品", label: "蓮蓬頭", zh: ["蓮蓬頭"], jp: ["シャワーヘッド"] },
+    { key: "clean", cat: "日用品", label: "清潔・消毒", zh: ["清潔", "消毒"], jp: ["消毒", "アルコール", "除菌"] },
+    { key: "bath", cat: "日用品", label: "泡澡・沐浴", zh: ["泡澡", "沐浴", "入浴"], jp: ["入浴剤", "バスソルト", "エプソム", "ボディソープ", "バス"] }
+  ];
+  // 品項 → 屬於哪一頁（點品項方塊時跳到那一頁）
+  const CAT_PAGE = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "日用品": "daily", "美容家電": "device" };
+  // weak：組合、禮盒這種「整組」的類型，只有找不到具體品項時才用
+  function earliest(text, types, field) {
+    const find = list => { let best = null, pos = Infinity; for (const t of list) for (const w of t[field]) { const i = text.indexOf(w); if (i >= 0 && i < pos) { pos = i; best = t; } } return best; };
+    return find(types.filter(t => !t.weak)) || find(types.filter(t => t.weak));
+  }
+  // 先看人工整理的中文類型，再看樂天商品名稱；先在自己的大分類裡找，找不到才看全部
+  function itemType(cat, desc, jp) {
+    const mine = ITYPES.filter(t => t.cat === cat);
+    const name = cleanName(jp || "") + " " + (jp || "");
+    const hit = (desc && earliest(desc, mine, "zh")) || earliest(name, mine, "jp") || (desc && earliest(desc, ITYPES, "zh")) || (mine.length ? null : earliest(name, ITYPES, "jp"));
+    return hit ? hit.key : "other";
+  }
+  const typeLabel = k => (ITYPES.find(t => t.key === k) || { label: "其他" }).label;
+
   const STOP = ["OFF", "SPF", "PA", "UV", "ml", "mL", "ML", "LOT", "TV", "NEW", "SALE", "SET", "PRO", "EX", "CICA", "PDRN", "LED", "EMS", "RF", "WEB", "BOX", "LDK", "QR"];
 
   // =========================================================
@@ -316,7 +411,7 @@
   // =========================================================
   let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, DETAILS = {}, ARCHIVE = {}, CREATORS = { items: [] }, OY = { items: [] };
   let BY_CODE = {}, LATEST_DAY = "";
-  const state = { ex: { role: "all", cat: "all", country: "all" }, tab: "all", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
+  const state = { ex: { role: "all", cat: "all", country: "all" }, aw: "all", itype: "all", tab: "home", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
 
   let FAVS = {};
   try { FAVS = JSON.parse(localStorage.getItem("ruri-favs") || "{}"); } catch (e) { FAVS = {}; }
@@ -355,12 +450,20 @@
       skin: D ? (D.skin || []) : (L.skin || tagHits(SKIN, raw.itemName)),
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
       img: raw.image, url: raw.url, exclude: raw.exclude || (L.hide ? "法規或安全疑慮" : ""),   // hide：有法規或安全疑慮，不放上網站
-      daysOn: raw.daysOn, bestRank: raw.bestRank
+      daysOn: raw.daysOn, bestRank: raw.bestRank,
+      itype: L.type || itemType(CAT[group], L.desc || "", raw.itemName)   // 品項（labels.json 可以用 type 手動指定）
     };
   }
   const oyItem = (o, i) => ({ id: "oy:" + o.brand + ":" + o.name, isOY: true, brand: o.brand, name: o.name, desc: "", cat: o.cat, country: "韓國", tags: o.tags || [], skin: o.skin || [], why: o.why, url: o.url, img: o.img, priceText: o.price || "", rank: i + 1, rating: 0, reviews: 0, price: 0 });
 
   // 達人推薦的商品：圖片、價格、連結來自自動更新程式在樂天搜尋到的結果（找不到就沒有圖片）
+  // 年度熱門（大賞得獎）商品：圖片、價格、連結從樂天排行資料裡找同一個商品（找不到就只顯示品牌）
+  let AWARDS = { awards: [], items: [] }, AW_ITEMS = [], AW_BY_CODE = {};   // AW_BY_CODE：樂天商品 → 得過的獎（排行卡片上也顯示🏆）
+  const awItem = (a, found) => ({
+    id: "aw:" + a.id, isAw: true, brand: a.brand, name: a.name, desc: a.desc, cat: a.cat, country: a.country, itype: a.type || itemType(a.cat, a.desc, ""),
+    tags: [], skin: [], award: a, kw: a.kw, img: found ? found.img : "", url: found ? found.url : "", linked: found ? found.id : "",
+    price: found ? found.price : 0, rating: found ? found.rating : 0, reviews: found ? found.reviews : 0, priceText: "", jp: found ? found.jp : ""
+  });
   let EXPERTS = [], YT = { videos: [] }, TWR = { brands: [] }, DKD = { brands: [] };
   const exItem = (e, found) => ({
     id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
@@ -378,6 +481,7 @@
     YT = await get("data/youtube.json") || YT;
     TWR = await get("data/tw_rakuten.json") || TWR;
     DKD = await get("data/dokodemo.json") || DKD;
+    AWARDS = await get("data/awards.json") || AWARDS;
     const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
@@ -407,9 +511,15 @@
       return exItem(e, found);
     });
     EXPERTS.updated = EXRAW.experts ? EXRAW.experts.updated : "";
+    AW_ITEMS = (AWARDS.items || []).map(a => {
+      const words = (a.mustHave || []).map(w => w.toLowerCase());
+      const found = words.length ? pool.find(p => p.jp && words.every(w => p.jp.toLowerCase().includes(w))) : null;
+      return awItem(a, found);
+    });
+    AW_ITEMS.forEach(p => { if (p.linked) AW_BY_CODE[p.linked] = p.award.awards; });
   }
   function stripFav(p) { const { history, creator, ...rest } = p; return rest; }
-  const isGone = p => !p.isOY && !p.isEx && !BY_CODE[p.id];
+  const isGone = p => !p.isOY && !p.isEx && !p.isAw && !BY_CODE[p.id];
 
   // =========================================================
   // ③ 連結
@@ -425,6 +535,7 @@
       if (jpn && /^[A-Za-z0-9 .'&-]+$/.test(jpn)) return jpn.toLowerCase().includes(b.toLowerCase()) ? jpn : b + " " + jpn;   // 英文商品名直接搜
       return (b + " " + noParen(L.desc)).trim();
     }
+    if (p.isAw) return p.kw || (brandWord(p.brand) + " " + p.desc);
     if (p.isEx) return (brandWord(p.brand) + " " + p.desc.replace(/[（(].*?[)）]/g, "")).trim();
     if (p.isOY) return p.brand + " " + p.name.replace(/[（(].*?[)）]/g, "").replace(/\d+\s?(mL|ml|g|片|入).*$/i, "").trim();
     const jp = p.jp || "";
@@ -470,6 +581,7 @@
     if (opts.japanOnly) out = out.filter(p => p.country !== "韓國");
     if (state.q) { const q = state.q.toLowerCase(); out = out.filter(p => (p.brand + p.name + (p.desc || "") + (p.jp || "")).toLowerCase().includes(q)); }
     if (opts.catFilter && state.cat !== "all") out = out.filter(p => p.cat === state.cat);
+    if (opts.itype && state.itype !== "all") out = out.filter(p => p.itype === state.itype);
     if (state.skins.size) out = out.filter(p => [...state.skins].some(t => (p.skin || []).includes(t) || (p.skin || []).includes("所有膚質")));
     if (state.needs.size) out = out.filter(p => [...state.needs].every(t => (p.tags || []).includes(t)));
     if (state.price !== "all" && !opts.noPrice) { const [lo, hi] = state.price.split("-").map(Number); out = out.filter(p => p.price >= lo && p.price < hi); }
@@ -493,6 +605,11 @@
       <aside class="side ${state.sideOpen ? "open" : ""}" id="side" aria-label="篩選">
         <div class="side-head">篩選條件<button type="button" id="closeSide" aria-label="關閉">×</button></div>
         ${opts.catFilter ? `<div class="fgroup"><h3>分類</h3><div class="opts">${chips([["all", "全部"], ...CATS.map(c => [c, c])], "cat", v => state.cat === v)}</div></div>` : ""}
+        ${opts.catFilter && state.cat !== "all" ? (() => {
+          const here = new Set(list.filter(p => p.cat === state.cat).map(p => p.itype));
+          const ts = ITYPES.filter(t => here.has(t.key)).map(t => [t.key, t.label]).concat(here.has("other") ? [["other", "其他"]] : []);
+          return ts.length > 1 ? `<div class="fgroup"><h3>品項</h3><div class="opts">${chips([["all", "全部"], ...ts], "itype", v => state.itype === v)}</div></div>` : "";
+        })() : ""}
         ${skinOpts.length ? `<div class="fgroup"><h3>適合膚質</h3><div class="opts">${chips(skinOpts, "skin", v => state.skins.has(v))}</div></div>` : ""}
         ${needOpts.length ? `<div class="fgroup"><h3>在意的問題</h3><div class="opts">${chips(needOpts, "need", v => state.needs.has(v))}</div></div>` : ""}
         ${opts.noPrice ? "" : `<div class="fgroup"><h3>日本售價</h3><div class="opts">${chips([["all", "不限"], ...PRICES], "price", v => state.price === v)}</div></div>`}
@@ -506,6 +623,7 @@
   function toolbar(count, opts) {
     const active = [
       ...(state.cat !== "all" && opts.catFilter ? [["cat", state.cat, state.cat]] : []),
+      ...(state.itype !== "all" && opts.catFilter ? [["itype", state.itype, typeLabel(state.itype)]] : []),
       ...[...state.skins].map(s => ["skin", s, s]),
       ...[...state.needs].map(s => ["need", s, s]),
       ...(state.price !== "all" ? [["price", state.price, PRICES.find(x => x[0] === state.price)[1]]] : [])
@@ -527,7 +645,7 @@
   // =========================================================
   const heartSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"></path></svg>';
 
-  function buyButtons(p, inline) {
+  function buyButtons(p, inline, compact) {
     if ((LABELS[p.id] || {}).noTW) return `<div class="rate">台灣不能當化粧品販售，本站不提供購買連結</div>`;
     const shopee = shopeeLink(p), tw = twRakutenLink(p);
     const a = (cls, href, text) => `<a class="${cls}" href="${esc(href)}" target="_blank" rel="sponsored noopener">${text}</a>`;
@@ -539,8 +657,19 @@
       !p.isOY && shopee && p.url ? ["日本樂天看原價", p.url] : null
     ].filter(Boolean);
     if (inline) return main + alts.map(([t, h]) => a("buy ghost", h, t)).join("");
+    if (compact) return main || (alts[0] ? a("buy ghost", alts[0][1], alts[0][0]) : "");   // 卡片上只放一個按鈕，其他購買管道在詳細介紹裡
     return main + (alts.length ? `<div class="alts">${alts.map(([t, h]) => a("alt", h, t)).join("")}</div>` : "");
   }
+
+  // 按鈕文字跟內容一致：還沒整理詳細介紹的商品，不寫「成分・心得」
+  function moreText(p) {
+    if (p.isEx) return "看推薦重點";
+    if (p.isAw) return "看得獎資訊";
+    if (!getDetail(p.id)) return "看商品資訊";
+    return p.group === "device" ? "看規格・用法" : "看成分・用法・心得";
+  }
+  const awardMeta = k => (AWARDS.awards || []).find(a => a.key === k) || { short: k, name: k, sources: [] };
+  const awardShort = x => awardMeta(x.award).short + " " + x.title;
 
   function card(p, opts = {}) {
     const fav = !!FAVS[p.id];
@@ -551,23 +680,24 @@
     return `
       <article class="card">
         <div class="pic">
-          <button class="picbtn" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹"><span class="tile">${esc(p.brand)}</span>${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</button>
+          <button class="picbtn" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹"><span class="tile">${esc(p.brand)}</span>${p.img ? `<img src="${esc(p.img)}" alt="" loading="${opts.eager ? "eager" : "lazy"}" onerror="this.remove()">` : ""}</button>
           ${opts.showRank ? `<span class="rank r${opts.showRank}">${opts.showRank}</span>` : ""}
           ${opts.gone ? `<span class="gone">目前不在排行榜上</span>` : ""}
           <button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="${fav ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button>
         </div>
         <div class="body">
-          <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)}・${esc(p.cat || "")}</span></div>
+          <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)}・${esc(p.itype && p.itype !== "other" ? typeLabel(p.itype) : (p.cat || ""))}</span></div>
           <h3 class="nm"><button class="nmbtn" type="button" data-detail="${esc(p.id)}" title="${esc(p.jp || p.name)}">${esc(p.name)}</button></h3>
           ${p.desc ? `<div class="desc">${esc(p.desc)}</div>` : ""}
+          ${p.isAw || AW_BY_CODE[p.id] ? `<div class="awards">${(p.isAw ? p.award.awards : AW_BY_CODE[p.id]).map(x => `<span class="aw">🏆 ${esc(awardShort(x))}</span>`).join("")}</div>` : ""}
           ${(p.skin || []).length ? `<div class="skin">適合：${p.skin.map(esc).join("、")}</div>` : ""}
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（${p.reviews.toLocaleString()} 則評價）</div>` : ""}
           ${opts.meta || ""}
           ${p.why ? `<div class="why">${esc(p.why)}</div>` : ""}
           ${(p.tags || []).length ? `<div class="tags">${p.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>` : ""}
           ${opts.extra || ""}
-          <button class="more" type="button" data-detail="${esc(p.id)}">${p.isEx ? "看推薦重點" : p.group === "device" ? "看規格・用法" : "看成分・用法・心得"} ›</button>
-          <div class="bottom">${price}${buyButtons(p)}</div>
+          <button class="more" type="button" data-detail="${esc(p.id)}">${moreText(p)} ›</button>
+          <div class="bottom">${price}${buyButtons(p, false, true)}</div>
         </div>
       </article>`;
   }
@@ -613,7 +743,10 @@
       : noIngr ? `<p>請依商品說明書使用。</p>` : `<p>品牌沒有公開詳細用法，請依商品包裝說明使用。</p>`;
     const revBody = d.reviews ? list(d.reviews) + muted(`${esc(d.reviewSource || "整理自網路上的使用心得")}，使用感受因人而異。`) : "";
     const exSec = p.isEx ? sec("達人怎麼說", `<p><b>${esc(p.expert.role)} ${esc(p.expert.who)}</b>：${esc(p.expert.say)}</p>${muted("出處：" + p.expert.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>（${esc(s.date)}）`).join("、"))}`) : "";
-    const body = p.isEx ? exSec : !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>` : `
+    const awSec = p.isAw ? sec("得獎紀錄", list(p.award.awards.map(x => `${awardMeta(x.award).name}・${x.title}（${awardMeta(x.award).date}）`)) + (p.award.note ? `<p style="margin-top:6px">${esc(p.award.note)}</p>` : "")
+      + muted("出處：" + [...new Set(p.award.awards.map(x => x.award))].flatMap(k => awardMeta(k).sources).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、"))
+      + (p.linked ? "" : muted("日本樂天排行裡還沒有這個商品，所以沒有圖片和日本售價；購買連結是用商品名稱搜尋的結果。"))) : "";
+    const body = p.isAw ? awSec : p.isEx ? exSec : !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>` : `
           ${skinBody ? sec(skinTitle, skinBody) : ""}
           ${d.features ? sec(type === "device" ? "規格與特色" : "商品特色", list(d.features)) : ""}
           ${ingrBody ? sec("主要成分", ingrBody) : ""}
@@ -626,13 +759,13 @@
         <div class="dbody">
           <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)}・${esc(p.cat || "")}</span></div>
           <h2>${esc(p.name)}</h2>
-          ${p.twName ? `<div class="twname">台灣名稱：${esc(p.twName)}</div>` : (p.isOY ? "" : p.isEx ? `<div class="desc">類型：${esc(p.desc)}</div>` : `<div class="desc">${p.desc ? "類型：" + esc(p.desc) + "・" : ""}${p.jpName ? "台灣查不到正式中文名稱，標示日本官方名稱" : "標示日本樂天上的商品名稱"}</div>`)}
+          ${p.twName ? `<div class="twname">台灣名稱：${esc(p.twName)}</div>` : (p.isOY ? "" : p.isEx || p.isAw ? `<div class="desc">類型：${esc(p.desc)}</div>` : `<div class="desc">${p.desc ? "類型：" + esc(p.desc) + "・" : ""}${p.jpName ? "台灣查不到正式中文名稱，標示日本官方名稱" : "標示日本樂天上的商品名稱"}</div>`)}
           ${(d.awards || []).map(a => `<span class="award">🏆 ${esc(a)}</span>`).join(" ")}
           ${d.ratingNote ? `<div class="rate">${esc(d.ratingNote)}</div>` : ""}
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）</div>` : ""}
           ${d.useNote ? `<div class="note">${esc(d.useNote)}</div>` : ""}
           ${body}
-          ${historyFacts(p)}
+          ${historyFacts(p.isAw && p.linked ? (findItem(p.linked) || p) : p)}
           ${p.jp && !p.isOY && !p.isEx ? sec("日本樂天商品名稱", `<p style="font-size:12px;color:var(--muted)">${esc(p.jp)}</p>`) : ""}
           <div class="dbuys">${buyButtons(p, true)}${p.price ? `<span class="rate">${yen(p.price)}（${twd(p.price)}）</span>` : ""}</div>
           ${(d.sources || []).length ? `<p class="srcs" style="font-size:12px;margin:0">資料來源：${d.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、")}</p>` : ""}
@@ -642,6 +775,7 @@
   }
   function findItem(id) {
     if (id.startsWith("ex:")) return EXPERTS.find(p => p.id === id);
+    if (id.startsWith("aw:")) return AW_ITEMS.find(p => p.id === id);
     return BY_CODE[id] || ARCHIVE[id] || Object.values(MONTH.groups).flat().find(p => p.id === id) || OY.items.map(oyItem).find(p => p.id === id) || FAVS[id];
   }
   function openDetail(id) {
@@ -659,6 +793,17 @@
     return `<section class="pagehead"><div><h1>${page.title}</h1><p>${page.desc}</p></div><div class="info">${badge || ""}${info ? `<span>${info}</span>` : ""}</div></section>`;
   }
   const updatedText = () => LATEST_DAY ? `${+LATEST_DAY.slice(5, 7)} 月 ${+LATEST_DAY.slice(8, 10)} 日更新` : "";
+
+  // 品項列：「全部・粉底・腮紅⋯」，每個品項後面是件數；點了會改網址（例如 #makeup/cheek），可以直接分享
+  function typeRow(pageKey, items) {
+    const count = {};
+    items.forEach(p => { count[p.itype] = (count[p.itype] || 0) + 1; });
+    const keys = ITYPES.map(t => t.key).filter(k => count[k]).concat(count.other ? ["other"] : []);
+    if (keys.length < 2) return "";
+    const b = (k, l, n) => `<button class="ichip" type="button" data-page="${pageKey}${k === "all" ? "" : "/" + k}" aria-pressed="${state.itype === k}">${esc(l)}<small>${n}</small></button>`;
+    return `<nav class="itypes" aria-label="品項">${b("all", "全部", items.length)}${keys.map(k => b(k, typeLabel(k), count[k])).join("")}</nav>`;
+  }
+  const crumbs = parts => `<div class="crumbs">${parts.map(([l, h]) => h ? `<a href="#${h}">${esc(l)}</a>` : `<span>${esc(l)}</span>`).join("<i>›</i>")}</div>`;
 
   function render() {
     const page = PAGES.find(p => p.key === state.tab) || PAGES[0];
@@ -678,18 +823,73 @@
         const ids = new Set(base.map(p => p.id));
         base = base.concat(Object.values(ARCHIVE).filter(p => !ids.has(p.id) && p.group !== "beauty" && !p.exclude && p.history.lastSeen >= cutoff));
       }
-      const list = applyFilters(base, { catFilter: page.catFilter, japanOnly: true });
+      base = base.filter(p => p.country !== "韓國");
+      const byType = state.itype !== "all";
+      const list = applyFilters(base, { catFilter: page.catFilter, japanOnly: true, itype: true });
       const badge = page.source === "month" ? `<span class="src">已累積 ${MONTH.days} 天資料</span>` : `<span class="src">日本樂天真實排行</span>`;
-      const meta = p => page.source === "month" ? `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天・最高第 ${p.bestRank} 名</div>` : (p.rank && page.catFilter ? `<div class="meta">樂天${esc(p.cat)}第 ${p.rank} 名</div>` : "");
-      const showRank = state.sort === "rank" && !page.catFilter && page.groups.length === 1 && !state.merge;
-      html += pagehead(page, badge, updatedText());
+      const meta = p => page.source === "month" ? `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天・最高第 ${p.bestRank} 名</div>` : (p.rank && (page.catFilter || byType) ? `<div class="meta">樂天${esc(p.cat)}第 ${p.rank} 名</div>` : "");
+      // 有選品項時，名次改成「這個品項裡的第幾名」
+      const showRank = state.sort === "rank" && !page.catFilter && !state.merge && (page.groups.length === 1 || byType);
+      const rankOf = (p, i) => showRank ? (byType || page.source === "month" ? i + 1 : p.rank) : null;
+      const shown = byType ? { ...page, title: (page.source === "month" ? "本月熱門・" : "日本") + typeLabel(state.itype) + "排行", desc: `${page.title.replace(/排行$/, "")}裡的「${typeLabel(state.itype)}」，依日本樂天名次排序` } : page;
+      if (page.itypes || page.catFilter) html += crumbs([["首頁", "home"], [page.parent === "jp" ? "日本" : "全部商品", page.parent === "jp" ? "awards" : "all"], ...(page.key === "all" ? [] : [[page.label.replace(/^\S+\s/, ""), byType ? page.key : ""]]), ...(byType ? [[typeLabel(state.itype), ""]] : [])]);
+      html += pagehead(shown, badge, updatedText());
+      if (page.itypes) html += typeRow(page.key, base);
       let grid;
+      const plain = !state.q && !state.skins.size && !state.needs.size && state.price === "all";
       if (!list.length) grid = `<div class="empty">沒有符合條件的商品，試試看取消一些篩選。</div>`;
-      else if (page.podium && showRank && list.length > 3 && !state.q && !state.skins.size && !state.needs.size && state.price === "all") {
-        grid = `<div class="podium">${list.slice(0, 3).map(p => card(p, { showRank: p.rank, meta: meta(p) })).join("")}</div>
-                <div class="grid">${list.slice(3).map(p => card(p, { showRank: p.rank, meta: meta(p) })).join("")}</div>`;
-      } else grid = `<div class="grid">${list.map(p => card(p, { showRank: showRank ? p.rank : null, meta: meta(p), gone: isGone(p) })).join("")}</div>`;
+      else if ((page.podium || byType) && showRank && list.length > 3 && plain) {
+        grid = `<div class="podium">${list.slice(0, 3).map((p, i) => card(p, { showRank: rankOf(p, i), meta: meta(p), eager: true })).join("")}</div>
+                <div class="grid">${list.slice(3).map((p, i) => card(p, { showRank: rankOf(p, i + 3), meta: meta(p), eager: i < 5 })).join("")}</div>`;
+      } else grid = `<div class="grid">${list.map((p, i) => card(p, { showRank: rankOf(p, i), meta: meta(p), gone: isGone(p), eager: i < 8 })).join("")}</div>`;
       html += `<div class="layout">${sidePanel(base, page, list.length)}<div class="results">${toolbar(list.length, page)}${grid}</div></div>`;
+    }
+
+    if (page.source === "awards") {
+      const metas = AWARDS.awards || [];
+      const inAw = (p, k) => p.award.awards.some(x => x.award === k);
+      const scoped = AW_ITEMS.filter(p => state.aw === "all" || inAw(p, state.aw));
+      const list = applyFilters(scoped, { noPrice: true, itype: true });
+      html += crumbs([["首頁", "home"], ["日本", ""], ["年度熱門", ""]]);
+      html += pagehead(page, `<span class="src">${AW_ITEMS.length} 個得獎商品</span>`, AWARDS.updated ? `${esc(AWARDS.updated)} 整理` : "");
+      if (AWARDS.next) html += `<div class="notice">📣 ${esc(AWARDS.next)}</div>`;
+      html += `<div class="opts" style="margin:14px 0 4px">${[["all", "全部大賞", AW_ITEMS.length], ...metas.map(m => [m.key, m.name, AW_ITEMS.filter(p => inAw(p, m.key)).length])].map(([k, l, n]) => `<button class="chip" type="button" data-aw="${k}" aria-pressed="${state.aw === k}">${esc(l)}（${n}）</button>`).join("")}</div>`;
+      html += typeRow("awards", scoped);
+      const section = m => {
+        const its = list.filter(p => inAw(p, m.key)).map(p => ({ p, x: p.award.awards.find(x => x.award === m.key) }))
+          .sort((a, b) => (a.x.rank || 99) - (b.x.rank || 99));
+        if (!its.length) return "";
+        const c = ({ p, x }, i) => card(p, { showRank: x.rank && state.itype === "all" ? x.rank : null, eager: i < 8 });
+        const top = state.itype === "all" && !state.q ? its.filter(o => o.x.rank && o.x.rank <= 3) : [];
+        const rest = its.filter(o => !top.includes(o));
+        return `<h2 class="sub">${esc(m.name)}<span class="subnote">${esc(m.date)}・出處：${m.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、")}</span></h2>
+          ${top.length === 3 ? `<div class="podium">${top.map(c).join("")}</div>` : ""}
+          <div class="grid">${(top.length === 3 ? rest : its).map(c).join("")}</div>`;
+      };
+      const body = metas.filter(m => state.aw === "all" || m.key === state.aw).map(section).join("");
+      html += body || `<div class="empty" style="margin-top:12px">沒有符合條件的得獎商品，換個品項看看。</div>`;
+      html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">得獎資料整理自各大賞公開的新聞稿與報導，名次與獎項名稱以主辦單位公布為準；本站與各大賞主辦單位無合作關係。商品圖片與日本售價來自日本樂天排行，排行裡沒有的商品不顯示圖片。</p>`;
+    }
+
+    if (page.source === "home") {
+      const jpAll = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).filter(p => p.country !== "韓國");
+      const uniq = [...new Map(jpAll.map(p => [p.id, p])).values()];
+      html += pagehead(page, `<span class="src">日本樂天真實排行</span>`, updatedText());
+      html += `<div class="entries">
+        <a class="entry e-aw" href="#awards"><b>🏆 年度熱門</b><span>日本美妝大賞得獎商品 ${AW_ITEMS.length} 件</span></a>
+        <a class="entry e-mo" href="#month"><b>📅 本月熱門</b><span>過去 30 天一直在榜上的商品</span></a>
+        <a class="entry e-kr" href="#oy"><b>🇰🇷 韓國人氣</b><span>Olive Young 暢銷・日本也在紅</span></a>
+      </div>`;
+      for (const cat of CATS) {
+        const pageKey = CAT_PAGE[cat];
+        const items = uniq.filter(p => p.cat === cat);
+        if (!items.length) continue;
+        const types = ITYPES.filter(t => t.cat === cat).map(t => ({ t, ps: items.filter(p => p.itype === t.key).sort((a, b) => a.rank - b.rank) })).filter(o => o.ps.length);
+        html += `<section class="hubcat"><h2 class="sub">${esc(cat)}<a href="#${pageKey}">看${esc(cat)}全部排行（${items.length}）›</a></h2><div class="tiles">
+          ${types.map(({ t, ps }) => `<a class="tilecard" href="#${pageKey}/${t.key}"><span class="tpic">${ps[0].img ? `<img src="${esc(ps[0].img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`).join("")}
+        </div></section>`;
+      }
+      html += `<p style="text-align:center;margin-top:24px"><a class="buy ghost" style="display:inline-block;padding:10px 22px" href="#all">直接看全部 ${uniq.length} 件商品 ›</a></p>`;
     }
 
     if (page.source === "oy") {
@@ -778,9 +978,12 @@
   });
 
   function fromHash() {
-    const key = location.hash.slice(1);
-    state.tab = PAGES.some(p => p.key === key) ? key : "all";
-    state.needs.clear(); state.skins.clear(); state.cat = "all"; state.price = "all"; state.sideOpen = false;
+    let [key, sub] = decodeURIComponent(location.hash.slice(1)).split("/");
+    if (key === "today") key = "awards";
+    const dlg = document.getElementById("detail"); if (dlg.open) dlg.close();   // 舊網址「今日熱門」改成「年度熱門」
+    state.tab = PAGES.some(p => p.key === key) ? key : "home";
+    state.needs.clear(); state.skins.clear(); state.cat = "all"; state.price = "all"; state.sideOpen = false; state.aw = "all";
+    state.itype = sub && (sub === "other" || ITYPES.some(t => t.key === sub)) ? sub : "all";
     render();
     const cur = document.querySelector(`.stab[aria-selected="true"]`);
     if (cur) cur.scrollIntoView({ block: "nearest", inline: "nearest" });
@@ -812,13 +1015,15 @@
     if (t.dataset.skin) { toggleSet(state.skins, t.dataset.skin); render(); return; }
     if (t.dataset.need) { toggleSet(state.needs, t.dataset.need); render(); return; }
     if (t.dataset.price) { state.price = t.dataset.price; render(); return; }
-    if (t.dataset.cat) { state.cat = t.dataset.cat; render(); return; }
+    if (t.dataset.cat) { state.cat = t.dataset.cat; state.itype = "all"; render(); return; }
+    if (t.dataset.itype) { state.itype = t.dataset.itype; render(); return; }
+    if (t.dataset.aw) { state.aw = t.dataset.aw; render(); return; }
     if (t.dataset.remove) {
       const k = t.dataset.remove, v = t.dataset.value;
-      if (k === "skin") state.skins.delete(v); else if (k === "need") state.needs.delete(v); else if (k === "price") state.price = "all"; else if (k === "cat") state.cat = "all";
+      if (k === "skin") state.skins.delete(v); else if (k === "need") state.needs.delete(v); else if (k === "price") state.price = "all"; else if (k === "cat") { state.cat = "all"; state.itype = "all"; } else if (k === "itype") state.itype = "all";
       render(); return;
     }
-    if (t.id === "clearAll") { state.skins.clear(); state.needs.clear(); state.price = "all"; state.cat = "all"; render(); return; }
+    if (t.id === "clearAll") { state.skins.clear(); state.needs.clear(); state.price = "all"; state.cat = "all"; state.itype = "all"; render(); return; }
     if (t.id === "openSide") { state.sideOpen = true; render(); return; }
     if (t.id === "closeSide" || t.id === "applySide") { state.sideOpen = false; render(); return; }
     if (t.id === "favjump") { location.hash = "fav"; return; }
@@ -841,7 +1046,7 @@
     clearTimeout(qTimer);
     qTimer = setTimeout(() => {
       state.q = e.target.value.trim();
-      if (state.q && !["all", "oy", "kr-makeup", "kr-skincare", "kr-hair", "creators", "fav"].includes(state.tab)) { location.hash = "all"; return; }
+      if (state.q && !["all", "awards", "oy", "kr-makeup", "kr-skincare", "kr-hair", "creators", "fav"].includes(state.tab)) { location.hash = "all"; return; }
       render();
     }, 200);
   });
