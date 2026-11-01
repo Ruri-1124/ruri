@@ -626,8 +626,10 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳光澤唇彩」：顯色飽滿、有豐唇感。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "M・A・C ラスターガラス ステイン",
+   "mustHave": [
+    "ラスターガラス"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
@@ -646,8 +648,11 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳霧面唇彩」：柔霧質地、持色久。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "カラーグラム ヌーディ ブラー スティック",
+   "mustHave": [
+    "ヌーディ",
+    "ブラー"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
@@ -666,8 +671,10 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳眼妝」：好暈染、顯色，可以當眼影也可以當腮紅。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "トゥークールフォースクール フロッタージュ ペンシル",
+   "mustHave": [
+    "フロッタージュ"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
@@ -686,8 +693,11 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳妝前」：讓膚況看起來平滑、修飾不均，妝容更持久。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "エスポア ボンディング プライマー",
+   "mustHave": [
+    "ボンディング",
+    "プライマー"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
@@ -706,8 +716,10 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳腮紅」：霜狀加粉狀的雙質地，柔霧服貼。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "hince ハーフムーンチーク",
+   "mustHave": [
+    "ハーフムーン"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
@@ -726,8 +738,10 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳氣墊」：清透，疊擦也不厚重。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "タリタクム ダンデライオン クッション",
+   "mustHave": [
+    "クッション"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
@@ -1130,8 +1144,10 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳彩妝」：滑順偏乾爽的質地，擦上去是清透的好氣色。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "ジョンセンムル クッション ブラッシュ",
+   "mustHave": [
+    "ブラッシュ"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 編輯精選",
@@ -1195,8 +1211,10 @@
    "who": "Allure Korea 編輯部",
    "role": "雜誌編輯",
    "say": "2026 韓國 Allure 美妝大獎「最佳洗面」：綠茶粉加木瓜酵素，洗起來溫和、膚觸滑順。",
-   "kw": "",
-   "mustHave": [],
+   "kw": "JUICE TO CLEANSE 抹茶 パウダーウォッシュ",
+   "mustHave": [
+    "抹茶"
+   ],
    "sources": [
     {
      "name": "Allure Korea 2026 Best of Beauty 編輯精選",
