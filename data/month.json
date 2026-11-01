@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-01T23:36+08:00",
- "days": 5,
+ "updated": "2026-11-02T06:45+08:00",
+ "days": 6,
  "groups": {
   "beauty": [
    {
@@ -14,9 +14,9 @@
     "shopCode": "attenir",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/attenir/cabinet/thum/166013_main_2608-2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tna6o.nrqgiedd.g00tna6o.nrqgj296/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fattenir%2F166013%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 3.2
+    "avgRank": 3.3
    },
    {
     "rank": 2,
@@ -29,9 +29,9 @@
     "shopCode": "tvert",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tvert/cabinet/goods/cart/nano_topr2026.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00q4g8o.nrqgi843.g00q4g8o.nrqgj374/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftvert%2F972273%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 4.0
+    "avgRank": 4.2
    },
    {
     "rank": 3,
@@ -44,25 +44,25 @@
     "shopCode": "beautypark2017",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautypark2017/cabinet/haircare/loaoil/loa100-30_02.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sqjgo.nrqgi275.g00sqjgo.nrqgj2df/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautypark2017%2Floaoil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 6.6
+    "avgRank": 7.3
    },
    {
     "rank": 4,
-    "itemCode": "kobe-beauty-labo:10002820",
-    "itemName": "≪11/4から 神トククーポンで20%OFF≫ 【 SALONIA サロニア ペン型美顔器 】ペン型美顔器 美顔器 たるみケア ポスポス リフトアップ 持ち運び 耳 引き上げる コリ 母の日 プレゼント ギフト にもおすすめ",
-    "price": 13200,
-    "rating": 4.52,
-    "reviews": 518,
-    "shopName": "アンド ハビット",
-    "shopCode": "kobe-beauty-labo",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/sal060.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fsal060%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "brighte-onlineshop:10000000",
+    "itemName": "＜今なら19,800円相当！＞ ラヴィットで紹介【イベント開催中】 ELEKI LIFT 【公式】美顔器 リフトアップ ブライト エレキリフト / Brighte 美顔器 | ems 美容 美容家電 角質汚れ フェイスライン エイジングケア クーポン適応条件あり",
+    "price": 58000,
+    "rating": 4.18,
+    "reviews": 787,
+    "shopName": "【公式】Brighte Store 楽天市場店",
+    "shopCode": "brighte-onlineshop",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brighte-onlineshop/cabinet/10566429/10575588/10661392/brt-fl170_261101.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj5xo.nrqgie72.g00uj5xo.nrqgj5cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-fl170%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
-    "bestRank": 4,
-    "avgRank": 9.0
+    "daysOn": 6,
+    "bestRank": 3,
+    "avgRank": 8.7
    },
    {
     "rank": 5,
@@ -76,25 +76,25 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/biolucia/cabinet/thumb/thumb_tsudo/thumb_tsu/lca-eye1-pic_1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj6uo.nrqgif9c.g00uj6uo.nrqgj09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiolucia%2Fbiolucia-eyelashserum_1-r%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 5,
-    "avgRank": 9.2
+    "avgRank": 9.8
    },
    {
     "rank": 6,
-    "itemCode": "brighte-onlineshop:10000000",
-    "itemName": "＜今なら19,800円相当！＞ ラヴィットで紹介【イベント開催中】 ELEKI LIFT 【公式】美顔器 リフトアップ ブライト エレキリフト / Brighte 美顔器 | ems 美容 美容家電 角質汚れ フェイスライン エイジングケア クーポン適応条件あり",
-    "price": 58000,
-    "rating": 4.18,
-    "reviews": 787,
-    "shopName": "【公式】Brighte Store 楽天市場店",
-    "shopCode": "brighte-onlineshop",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brighte-onlineshop/cabinet/10566429/10575588/10661392/brt-fl170_261101.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj5xo.nrqgie72.g00uj5xo.nrqgj5cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-fl170%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "kobe-beauty-labo:10002820",
+    "itemName": "≪11/4から 神トククーポンで20%OFF≫ 【 SALONIA サロニア ペン型美顔器 】ペン型美顔器 美顔器 たるみケア ポスポス リフトアップ 持ち運び 耳 引き上げる コリ 母の日 プレゼント ギフト にもおすすめ",
+    "price": 13200,
+    "rating": 4.52,
+    "reviews": 518,
+    "shopName": "アンド ハビット",
+    "shopCode": "kobe-beauty-labo",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/sal060.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fsal060%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
-    "bestRank": 3,
-    "avgRank": 9.8
+    "daysOn": 6,
+    "bestRank": 4,
+    "avgRank": 10.0
    },
    {
     "rank": 7,
@@ -107,9 +107,9 @@
     "shopCode": "shuuemura",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/shuuemura/cabinet/12824584/13204797/13525001/new.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tl4no.nrqgi194.g00tl4no.nrqgj7ef/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshuuemura%2Fshu30001jp%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 3,
-    "avgRank": 12.6
+    "avgRank": 13.8
    },
    {
     "rank": 8,
@@ -122,9 +122,9 @@
     "shopCode": "larocheposay",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/larocheposay/cabinet/products/main/10419231/imgrc0137248590.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00twl6o.nrqgiffb.g00twl6o.nrqgj250/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flarocheposay%2Fl00332ropenkit%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 18,
-    "avgRank": 20.8
+    "avgRank": 22.2
    },
    {
     "rank": 9,
@@ -137,9 +137,9 @@
     "shopCode": "attenir",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/attenir/cabinet/thum/166011_main_2611.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tna6o.nrqgiedd.g00tna6o.nrqgj296/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fattenir%2F166011%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 16,
-    "avgRank": 21.4
+    "avgRank": 22.5
    },
    {
     "rank": 10,
@@ -152,9 +152,9 @@
     "shopCode": "aurelie-tokyo",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aurelie-tokyo/cabinet/11397195/event_p5/alcl02_v2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00uloqo.nrqgi7fd.g00uloqo.nrqgj04d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faurelie-tokyo%2Falcl02%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 21,
-    "avgRank": 25.0
+    "avgRank": 24.7
    },
    {
     "rank": 11,
@@ -167,9 +167,9 @@
     "shopCode": "anuajapan",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/anuajapan/cabinet/anua00180/new/main_thumb2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u6mzo.nrqgie51.g00u6mzo.nrqgjd58/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fanuajapan%2Fanua00180%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 2,
-    "avgRank": 11.5
+    "avgRank": 9.6
    },
    {
     "rank": 12,
@@ -182,9 +182,9 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/aile_brush/imgrc0136911175.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1201310101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 11,
-    "avgRank": 14.5
+    "avgRank": 15.8
    },
    {
     "rank": 13,
@@ -198,9 +198,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bjc-onlinestore/cabinet/item/lashaddict01a/lashaddict0810.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Flashaddict01a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 12,
-    "avgRank": 16.5
+    "avgRank": 16.6
    },
    {
     "rank": 14,
@@ -213,12 +213,43 @@
     "shopCode": "arianakosume",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/arianakosume/cabinet/main-8/decorte-002-ra-rk.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t269o.nrqgie8a.g00t269o.nrqgj651/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2F4953923307878-fukubukuro%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 12,
-    "avgRank": 17.0
+    "avgRank": 18.8
    },
    {
     "rank": 15,
+    "itemCode": "ntvshop:10008706",
+    "itemName": "クリアージュ アイリフト Neo 特別セット 【期間限定11/1まで】 日テレポシュレ(日本テレビ 通販 ポシュレ)",
+    "price": 13998,
+    "rating": 3.0,
+    "reviews": 5,
+    "shopName": "日テレポシュレ",
+    "shopCode": "ntvshop",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ntvshop/cabinet/main19/8006a2030004_1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r8seo.nrqgi6bf.g00r8seo.nrqgj748/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fntvshop%2F8006a2030004%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
+    "daysOn": 4,
+    "bestRank": 7,
+    "avgRank": 14.5
+   },
+   {
+    "rank": 16,
+    "itemCode": "takami-labo:10000519",
+    "itemName": "タカミスキンピール◆送料無料│2本～購入で特典付き◆角質美容水 美容皮膚発想 スキンケア 毛穴 キメ くすみ タカミ スキンピール 角質ケア 美容液 肌荒れ ザラつき 敏感肌 TAKAMI 30mL",
+    "price": 5720,
+    "rating": 4.69,
+    "reviews": 6582,
+    "shopName": "タカミ 公式ショップ楽天市場店",
+    "shopCode": "takami-labo",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/takami-labo/cabinet/prd/r-s009/imgrc0115058669.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q04mo.nrqgi68c.g00q04mo.nrqgj598/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftakami-labo%2Fr-s009%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 7,
+    "avgRank": 17.5
+   },
+   {
+    "rank": 17,
     "itemCode": "sakurap:10005223",
     "itemName": "【公式】VALANROSE バランローズ KUROクリームシャンプー 150g/400g 【単品】 白髪染めシャンプー 白髪染め カラーシャンプー カラートリートメント 白髪染めトリートメント オールインワン 白髪隠し ダメージケア ジアミンフリー 不使用 パッチテスト済 レディース",
     "price": 2640,
@@ -234,23 +265,37 @@
     "avgRank": 22.5
    },
    {
-    "rank": 16,
-    "itemCode": "ntvshop:10008706",
-    "itemName": "クリアージュ アイリフト Neo 特別セット 【期間限定11/1まで】 日テレポシュレ(日本テレビ 通販 ポシュレ)",
-    "price": 13998,
-    "rating": 3.0,
-    "reviews": 5,
-    "shopName": "日テレポシュレ",
-    "shopCode": "ntvshop",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ntvshop/cabinet/main19/8006a2030004_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r8seo.nrqgi6bf.g00r8seo.nrqgj748/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fntvshop%2F8006a2030004%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "法規或安全疑慮",
-    "daysOn": 3,
-    "bestRank": 7,
-    "avgRank": 12.0
+    "rank": 18,
+    "itemCode": "sk-ii:10003857",
+    "itemName": "【公式】フェイシャルトリートメント エッセンス コフレ2026 ホリデーコレクション ｜SK-2 / SK-II（エスケーツー） 正規品 送料無料 SK2 SKII ピテラ 美容液 スキンケア 誕生日 女性 化粧品 コスメ 妻 誕生日",
+    "price": 29150,
+    "rating": 4.29,
+    "reviews": 7,
+    "shopName": "SK-II 公式ショップ楽天市場店",
+    "shopCode": "sk-ii",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/set-ftec-holiday2026/set-ftec-holiday2026.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fset-ftec-holiday2026%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 25,
+    "avgRank": 26.0
    },
    {
-    "rank": 17,
+    "rank": 19,
+    "itemCode": "yunth:10000000",
+    "itemName": "★クーポン+セット1日23:59マデ★【送料無料】Yunth 生ビタミンC 美白美容液 1ml×28包 | 美容液 ビタミンC 導入美容液 先行美容液 ブースター 美白 ランキング おすすめ スキンケア | ユンス ゆんす イベント",
+    "price": 3960,
+    "rating": 4.69,
+    "reviews": 45384,
+    "shopName": "【公式】Yunth Store 楽天市場店",
+    "shopCode": "yunth",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/yunth/cabinet/11294195/11294196/event/10000000_260918.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7rbo.nrqgiee5.g00u7rbo.nrqgjff9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyunth%2F10000000%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 10,
+    "avgRank": 15.0
+   },
+   {
+    "rank": 20,
     "itemCode": "veramoreofficial:10000146",
     "itemName": "【VERAMORE公式 】【 3STEP ナイトスペシャルケアセット 】 スピキュール 300 セラム 50ml +コラーゲン SPT スリーピングパック 100g+ZPポテンシャルクリーム 50ml　 導入美容液 ブースター 低刺激 保湿 韓国コスメ スキンケア 潤い",
     "price": 3000,
@@ -266,22 +311,7 @@
     "avgRank": 15.0
    },
    {
-    "rank": 18,
-    "itemCode": "takami-labo:10000519",
-    "itemName": "タカミスキンピール◆送料無料│2本～購入で特典付き◆角質美容水 美容皮膚発想 スキンケア 毛穴 キメ くすみ タカミ スキンピール 角質ケア 美容液 肌荒れ ザラつき 敏感肌 TAKAMI 30mL",
-    "price": 5720,
-    "rating": 4.69,
-    "reviews": 6582,
-    "shopName": "タカミ 公式ショップ楽天市場店",
-    "shopCode": "takami-labo",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/takami-labo/cabinet/prd/r-s009/imgrc0115058669.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q04mo.nrqgi68c.g00q04mo.nrqgj598/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftakami-labo%2Fr-s009%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 7,
-    "avgRank": 15.3
-   },
-   {
-    "rank": 19,
+    "rank": 21,
     "itemCode": "mycosmeticbox:10000939",
     "itemName": "＼楽天ランキング入賞／【本気で最安値挑戦中・なくなり次第終了】【美容室専売品】リケラエマルジョンReKERA リケラ ミスト オイル リトルサイエンティスト 洗い流さないトリートメント ヘアミスト ヘアオイル ダメージ補修 うるおい ツヤ髪 熱ダメージケア 詰め替え",
     "price": 2980,
@@ -296,7 +326,7 @@
     "avgRank": 19.7
    },
    {
-    "rank": 20,
+    "rank": 22,
     "itemCode": "kerastase-varie:10000005",
     "itemName": "2026ホリデー ヘアオイル ユイル クロノロジスト◆ミニサイズ30mL/本体75mLセット(2026ホリデー)/付替え用レフィル75mL/本体75mL+レフィル75mLセット/レフィル75mL 2本セット◆洗い流さない トリートメント アウトバス クリスマス ギフト コフレ◆ケラスターゼ",
     "price": 3960,
@@ -311,22 +341,22 @@
     "avgRank": 20.0
    },
    {
-    "rank": 21,
-    "itemCode": "sk-ii:10003857",
-    "itemName": "【公式】フェイシャルトリートメント エッセンス コフレ2026 ホリデーコレクション ｜SK-2 / SK-II（エスケーツー） 正規品 送料無料 SK2 SKII ピテラ 美容液 スキンケア 誕生日 女性 化粧品 コスメ 妻 誕生日",
-    "price": 29150,
-    "rating": 4.29,
-    "reviews": 7,
-    "shopName": "SK-II 公式ショップ楽天市場店",
-    "shopCode": "sk-ii",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/set-ftec-holiday2026/set-ftec-holiday2026.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fset-ftec-holiday2026%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 23,
+    "itemCode": "rakuten24:11354091",
+    "itemName": "レチノパワー リンクルクリーム ba L(22g)【エリクシール(ELIXIR)】[レチノール クリーム しわ対策 しっとり 目もと]",
+    "price": 8800,
+    "rating": 4.59,
+    "reviews": 254,
+    "shopName": "楽天24",
+    "shopCode": "rakuten24",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/685/4909978214685.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978214685%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 3,
-    "bestRank": 25,
-    "avgRank": 25.7
+    "bestRank": 13,
+    "avgRank": 24.3
    },
    {
-    "rank": 22,
+    "rank": 24,
     "itemCode": "clinique:10001547",
     "itemName": "【ポイント10倍｜10/30 10:00-11/1 23:59】【数量限定｜Holiday】クリニーク ラッシュ パワー マスカラ セット 27 CLINIQUE | ロングマスカラ ボリュームマスカラ お湯で落ちる お湯オフ アイライナー ギフト プレゼント ホリデー 限定セット アイクリーム",
     "price": 4730,
@@ -341,7 +371,22 @@
     "avgRank": 1.0
    },
    {
-    "rank": 23,
+    "rank": 25,
+    "itemCode": "selectshopmint:10000054",
+    "itemName": "【IMINT2周年感謝祭】【1＋1】WAKEY PAD 60枚 ウェイキーパッド トナーパッド 拭き取り パッド 美白 しわ ナイアシンアミド 5種ペプチド ヒアルロン酸 アデノシン グルタミン酸 『IMINT親子ステッカーギフト付き』",
+    "price": 2500,
+    "rating": 4.56,
+    "reviews": 176,
+    "shopName": "select shop MINT",
+    "shopCode": "selectshopmint",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801591.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 2,
+    "bestRank": 1,
+    "avgRank": 1.0
+   },
+   {
+    "rank": 26,
     "itemCode": "clinique:10001529",
     "itemName": "【ポイント10倍｜10/30 10:00-11/1 23:59】【数量限定｜Holiday】クリニーク チーク ポップ デュオ セット 27 CLINIQUE | ギフト 頬紅 チークカラーツヤ 血色 カラー フェイスカラー プレゼント ピンク デパコス ホリデー 限定セット パウダー パウダーチーク",
     "price": 6600,
@@ -356,109 +401,65 @@
     "avgRank": 3.0
    },
    {
-    "rank": 24,
-    "itemCode": "loa-official:10000000",
-    "itemName": "【公式】LOA THE OIL ロア ザ オイル 30ml/100ml ヘアオイル ロアオイル スタイリング剤 ボディオイル アウトバス 洗い流さないトリートメント パフュームオイル 送料無料 メーカー公式 ギフト LOATHEOIL",
-    "price": 3520,
-    "rating": 4.52,
-    "reviews": 578,
-    "shopName": "LOA 公式ショップ",
-    "shopCode": "loa-official",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/loa-official/cabinet/12369844/12369846/imgrc0108821023.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ursto.nrqgi178.g00ursto.nrqgjede/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Floa-official%2Floaoil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 10,
-    "avgRank": 10.0
-   },
-   {
-    "rank": 25,
-    "itemCode": "cepolab:10000000",
-    "itemName": "【cepoLAB公式】バイオジェニックエッセンス 90% (155ml・100ml・30ml 3種) CLEPS® 92.8% 肌の基礎ケアエッセンス 4週間の継続ケア 保湿・ハリ・毛穴ケア プレミアムバイオエッセンス 化学成分不使用 敏感肌でもOK",
-    "price": 3630,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "cepoLAB公式楽天市場店",
-    "shopCode": "cepolab",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cepolab/cabinet/12882582/imgrc0206941949.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uuhxo.nrqgi340.g00uuhxo.nrqgje9a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcepolab%2F90_155%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 17,
-    "avgRank": 17.0
-   },
-   {
-    "rank": 26,
-    "itemCode": "yunth:10000000",
-    "itemName": "★クーポン+セット1日23:59マデ★【送料無料】Yunth 生ビタミンC 美白美容液 1ml×28包 | 美容液 ビタミンC 導入美容液 先行美容液 ブースター 美白 ランキング おすすめ スキンケア | ユンス ゆんす イベント",
-    "price": 3960,
-    "rating": 4.69,
-    "reviews": 45384,
-    "shopName": "【公式】Yunth Store 楽天市場店",
-    "shopCode": "yunth",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/yunth/cabinet/11294195/11294196/event/10000000_260918.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7rbo.nrqgiee5.g00u7rbo.nrqgjff9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyunth%2F10000000%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 10,
-    "avgRank": 17.5
-   },
-   {
     "rank": 27,
-    "itemCode": "rakuten24:11354091",
-    "itemName": "レチノパワー リンクルクリーム ba L(22g)【エリクシール(ELIXIR)】[レチノール クリーム しわ対策 しっとり 目もと]",
-    "price": 8800,
-    "rating": 4.59,
-    "reviews": 254,
-    "shopName": "楽天24",
-    "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/685/4909978214685.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978214685%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "selectshopmint:10000069",
+    "itemName": "【IMINT2周年感謝祭】【1＋1】新作 JUICY BOOSTER 美容液 セラム 30ml ジューシー ブースター コラーゲン ヒアルロン酸 シカ 鎮静 保湿 時短 韓国コスメ 美肌",
+    "price": 2700,
+    "rating": 4.14,
+    "reviews": 14,
+    "shopName": "select shop MINT",
+    "shopCode": "selectshopmint",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801588.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000016%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 2,
-    "bestRank": 13,
-    "avgRank": 21.5
+    "bestRank": 6,
+    "avgRank": 6.0
    },
    {
     "rank": 28,
-    "itemCode": "origotou:10000454",
-    "itemName": "「1本でパウダーまで終わるファンデーション」HACKTICK 5.6g スティック ファンデーション 3色（ライト ナチュラル オークル）専用スポンジ（435円）付き",
-    "price": 4980,
-    "rating": 4.31,
-    "reviews": 1509,
-    "shopName": "【公式】北の快適工房 楽天市場店",
-    "shopCode": "origotou",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/origotou/cabinet/12990382/12990390/imgrc0134712026.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qchbo.nrqgi680.g00qchbo.nrqgjdee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forigotou%2Fhack-tick2%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "selectshopmint:10000057",
+    "itemName": "【IMINT2周年感謝祭】【1＋1】 HEY SUNNY 日焼け止め 化粧下地 40ml ヘイサニー トーンアップ シカマデカバイオーム ペプチド ビタミン ウォーターミント 鎮静 保湿 時短 韓国コスメ 美肌",
+    "price": 2700,
+    "rating": 4.58,
+    "reviews": 24,
+    "shopName": "select shop MINT",
+    "shopCode": "selectshopmint",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801587.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000012%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 2,
-    "bestRank": 22,
-    "avgRank": 22.0
+    "bestRank": 7,
+    "avgRank": 7.0
    },
    {
     "rank": 29,
-    "itemCode": "cosmecomonline:10183134",
-    "itemName": "「ポイント10倍 11月1日」キャンメイク イルミネイティングフィニッシュパウダー Abloom〜01 限定シェル 6.5g フェイスパウダー アットコスメ",
-    "price": 1034,
+    "itemCode": "maccosmetics:10001670",
+    "itemName": "【2026 ホリデーコレクション】フィジー フィールズ リップ バーム ｜ M・A・C マック MAC クリスマスコフレ コフレ 口紅 リップ カラーリップ ラメ グリッター キラキラ 艶 ツヤ リップクリーム リップグロス バーム 保湿 ギフト プレゼント",
+    "price": 4510,
     "rating": 0.0,
     "reviews": 0,
-    "shopName": "アットコスメショッピング",
-    "shopCode": "cosmecomonline",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cosmecomonline/cabinet/item-img250/item_1000240843_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qawwo.nrqgi1d3.g00qawwo.nrqgj0f8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000240843%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "shopName": "M・A・C 公式ショップ",
+    "shopCode": "maccosmetics",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/maccosmetics/cabinet/pdp/thumb_01/holiday2026_16.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t0fko.nrqgid08.g00t0fko.nrqgjac9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaccosmetics%2Fholiday2026_16%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 2,
-    "bestRank": 24,
-    "avgRank": 24.0
+    "bestRank": 8,
+    "avgRank": 8.0
    },
    {
     "rank": 30,
-    "itemCode": "arianakosume:10001906",
-    "itemName": "【2倍ポイント・LOT番号あり正規品】V3ファンデーション 本体 リフィル 詰め替え 15g エキサイティング シャイニング ブリリアント インテリジェント スピケア クッションファンデーション セットアップパウダー キキ＆ララ 下地不要 韓国コスメ",
-    "price": 3980,
-    "rating": 4.5,
-    "reviews": 1990,
-    "shopName": "アリアナ　ショップ",
-    "shopCode": "arianakosume",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/arianakosume/cabinet/main-ariana/v3-foundation-1-ra1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t269o.nrqgie8a.g00t269o.nrqgj651/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2Fv3-foundation%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "selectshopmint:10000062",
+    "itemName": "【IMINT2周年感謝祭】【1＋1】 ILY MIST TONER 95ml アイリー トナーミスト シカエクソソーム ウォーターミントミントエキス ヒアルロン酸 セラミド 鎮静 保湿 時短 スキンケア 韓国コスメ 美肌 『IMINT親子ステッカーギフト付き』",
+    "price": 2990,
+    "rating": 4.33,
+    "reviews": 9,
+    "shopName": "select shop MINT",
+    "shopCode": "selectshopmint",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801589.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000015%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
     "daysOn": 2,
-    "bestRank": 27,
-    "avgRank": 27.0
+    "bestRank": 9,
+    "avgRank": 9.0
    }
   ],
   "makeup": [
@@ -474,9 +475,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/biolucia/cabinet/thumb/thumb_tsudo/thumb_tsu/lca-eye1-pic_1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00uj6uo.nrqgif9c.g00uj6uo.nrqgj09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiolucia%2Fbiolucia-eyelashserum_1-r%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 2.6
+    "avgRank": 2.7
    },
    {
     "rank": 2,
@@ -490,9 +491,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bjc-onlinestore/cabinet/item/lashaddict01a/lashaddict0810.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Flashaddict01a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 3,
-    "avgRank": 4.4
+    "avgRank": 4.5
    },
    {
     "rank": 3,
@@ -505,9 +506,9 @@
     "shopCode": "arianakosume",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/arianakosume/cabinet/main-8/decorte-002-ra-rk.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t269o.nrqgie8a.g00t269o.nrqgj651/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2F4953923307878-fukubukuro%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 4,
-    "avgRank": 5.4
+    "avgRank": 5.7
    },
    {
     "rank": 4,
@@ -520,9 +521,9 @@
     "shopCode": "origotou",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/origotou/cabinet/12990382/12990390/imgrc0134712026.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00qchbo.nrqgi680.g00qchbo.nrqgjdee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forigotou%2Fhack-tick2%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 9.0
+    "avgRank": 9.5
    },
    {
     "rank": 5,
@@ -535,9 +536,9 @@
     "shopCode": "yayoi-cosme",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/yayoi-cosme/cabinet/08015879/12457389/imgrc0123335901.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3lio.nrqgic0e.g00t3lio.nrqgj8fd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F10369%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 8,
-    "avgRank": 10.6
+    "avgRank": 10.7
    },
    {
     "rank": 6,
@@ -550,27 +551,12 @@
     "shopCode": "maccosmetics",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/maccosmetics/cabinet/pdp/thumb_01/88565-1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t0fko.nrqgid08.g00t0fko.nrqgjac9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaccosmetics%2F88565-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 12.0
+    "avgRank": 11.0
    },
    {
     "rank": 7,
-    "itemCode": "arianakosume:10001906",
-    "itemName": "【2倍ポイント・LOT番号あり正規品】V3ファンデーション 本体 リフィル 詰め替え 15g エキサイティング シャイニング ブリリアント インテリジェント スピケア クッションファンデーション セットアップパウダー キキ＆ララ 下地不要 韓国コスメ",
-    "price": 3980,
-    "rating": 4.5,
-    "reviews": 1992,
-    "shopName": "アリアナ　ショップ",
-    "shopCode": "arianakosume",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/arianakosume/cabinet/main-ariana/v3-foundation-1-ra1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t269o.nrqgie8a.g00t269o.nrqgj651/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2Fv3-foundation%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
-    "bestRank": 8,
-    "avgRank": 12.8
-   },
-   {
-    "rank": 8,
     "itemCode": "beautyforest2018:10000703",
     "itemName": "エグータム まつげ美容液 2ml 全2種 プレミアム EGUTAM premium まつ毛 まつげ まつ毛 ボリューム ハリ ダメージケア まつエク まつぱ まつげケア アイケア エクソソーム アルマダスタイル armada-style プロ仕様",
     "price": 5480,
@@ -581,12 +567,12 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyforest2018/cabinet/11547088/egutam3.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F201218-001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 9,
-    "avgRank": 13.0
+    "avgRank": 12.3
    },
    {
-    "rank": 9,
+    "rank": 8,
     "itemCode": "brain-service:10000078",
     "itemName": "【正規品/安心 追跡可能メール便/ランキング入賞】フェニックス アイラッシュサポートジェル 9ml / ザ ブラック 8ml まつ毛美容液 日本製 まつ毛 エクステ まつ育 コーティング アイラッシュ サポートジェ 美容 液 まつげ PHENIX",
     "price": 1980,
@@ -597,9 +583,24 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brain-service/cabinet/product/10000078a/imgrc0102780446.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugq8o.nrqgie7c.g00ugq8o.nrqgj177/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrain-service%2F10000078%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 10,
-    "avgRank": 13.4
+    "avgRank": 12.8
+   },
+   {
+    "rank": 9,
+    "itemCode": "arianakosume:10001906",
+    "itemName": "【2倍ポイント・LOT番号あり正規品】V3ファンデーション 本体 リフィル 詰め替え 15g エキサイティング シャイニング ブリリアント インテリジェント スピケア クッションファンデーション セットアップパウダー キキ＆ララ 下地不要 韓国コスメ",
+    "price": 3980,
+    "rating": 4.5,
+    "reviews": 1992,
+    "shopName": "アリアナ　ショップ",
+    "shopCode": "arianakosume",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/arianakosume/cabinet/main-ariana/v3-foundation-1-ra1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t269o.nrqgie8a.g00t269o.nrqgj651/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2Fv3-foundation%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 6,
+    "bestRank": 8,
+    "avgRank": 13.8
    },
    {
     "rank": 10,
@@ -612,9 +613,9 @@
     "shopCode": "brandshiseido",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brandshiseido/cabinet/prd/smu0021/2607_smu0021.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00umpto.nrqgib13.g00umpto.nrqgjeb6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrandshiseido%2Fsmu0021%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 9,
-    "avgRank": 14.2
+    "avgRank": 14.5
    },
    {
     "rank": 11,
@@ -627,9 +628,9 @@
     "shopCode": "bjc-onlinestore",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bjc-onlinestore/cabinet/item/13077962/new_v3f/imgrc0121029424.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ug4zo.nrqgi765.g00ug4zo.nrqgj0ed/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbjc-onlinestore%2Fspicare-v3-03%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 14,
-    "avgRank": 17.0
+    "avgRank": 16.7
    },
    {
     "rank": 12,
@@ -643,9 +644,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyforest2018/cabinet/11547088/13666642/imgrc0187657508.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F10000125%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 10,
-    "avgRank": 18.2
+    "avgRank": 17.5
    },
    {
     "rank": 13,
@@ -658,9 +659,9 @@
     "shopCode": "egawakikaku",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/egawakikaku/cabinet/covermark/covermark-26.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u5p1o.nrqgi23f.g00u5p1o.nrqgj180/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fegawakikaku%2F493505903%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 15,
-    "avgRank": 18.6
+    "avgRank": 18.5
    },
    {
     "rank": 14,
@@ -673,9 +674,9 @@
     "shopCode": "brandshiseido",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brandshiseido/cabinet/prd/smu0053/smu0053_bc2026fh.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00umpto.nrqgib13.g00umpto.nrqgjeb6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrandshiseido%2Fsmu0053%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 22,
-    "avgRank": 28.2
+    "avgRank": 28.3
    },
    {
     "rank": 15,
@@ -688,9 +689,9 @@
     "shopCode": "bobbibrown",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bobbibrown/cabinet/item2/141221d.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sst4o.nrqgi289.g00sst4o.nrqgj102/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbobbibrown%2F141221%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 1,
-    "avgRank": 10.5
+    "avgRank": 12.6
    },
    {
     "rank": 16,
@@ -703,27 +704,12 @@
     "shopCode": "esteelauder",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/esteelauder/cabinet/thumb/25holiday_07.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sw7io.nrqgic0a.g00sw7io.nrqgj786/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Festeelauder%2F25holiday_07%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 5,
-    "avgRank": 12.8
+    "avgRank": 15.0
    },
    {
     "rank": 17,
-    "itemCode": "sk-ii:10003757",
-    "itemName": "【公式】SK-II ジェノプティクス CC プライマー(30g/50g)｜SK-2 / SK-II（エスケーツー） 正規品 送料無料 SK2 SKII UVケア スキンケア 下地 誕生日 女性 化粧品 コスメ 妻 誕生日 化粧下地 ベース uv ケア 紫外線対策",
-    "price": 9900,
-    "rating": 4.5,
-    "reviews": 769,
-    "shopName": "SK-II 公式ショップ楽天市場店",
-    "shopCode": "sk-ii",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/gccr/2605_gccr.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fgccr%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 12,
-    "avgRank": 18.5
-   },
-   {
-    "rank": 18,
     "itemCode": "brain-service:10000144",
     "itemName": "【正規品/安心 追跡可能メール便】フェニックス アイ カールアップ コーティング 8ml/ ザ ブラック 8ml 【2種から選べる】 まつ毛美容液 まつげ オデット アイラッシュ アイコーティング まつ毛 正規品 サロン専売 カールキープ マスカラ",
     "price": 2880,
@@ -734,9 +720,24 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/brain-service/cabinet/product/brain01/imgrc0102780445.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugq8o.nrqgie7c.g00ugq8o.nrqgj177/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrain-service%2Fbrain01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 13,
-    "avgRank": 19.8
+    "avgRank": 18.4
+   },
+   {
+    "rank": 18,
+    "itemCode": "sk-ii:10003757",
+    "itemName": "【公式】SK-II ジェノプティクス CC プライマー(30g/50g)｜SK-2 / SK-II（エスケーツー） 正規品 送料無料 SK2 SKII UVケア スキンケア 下地 誕生日 女性 化粧品 コスメ 妻 誕生日 化粧下地 ベース uv ケア 紫外線対策",
+    "price": 9900,
+    "rating": 4.5,
+    "reviews": 769,
+    "shopName": "SK-II 公式ショップ楽天市場店",
+    "shopCode": "sk-ii",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/gccr/2605_gccr.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fgccr%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 12,
+    "avgRank": 19.2
    },
    {
     "rank": 19,
@@ -749,12 +750,27 @@
     "shopCode": "beautyforest2018",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyforest2018/cabinet/11547088/imgrc0165223101.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t9n2o.nrqgi43a.g00t9n2o.nrqgj1ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyforest2018%2F231030-002%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 21,
     "avgRank": 23.2
    },
    {
     "rank": 20,
+    "itemCode": "byurjapan:10000005",
+    "itemName": "＼本日限定ポイント10倍／＼全方位リニューアル／ セラムフィット フルカバー グロークッション V2クッションファンデ ファンデーション ファンデ カバー力 崩れない 発光 ツヤ肌 毛穴 美白 皮脂 紫外線 崩れにくい 保湿 密着 ツヤ ハイカバー 角質ケア 毛穴ケア 崩れ防止",
+    "price": 3080,
+    "rating": 4.42,
+    "reviews": 3929,
+    "shopName": "ByUR 公式 楽天市場店",
+    "shopCode": "byurjapan",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_gold/byurjapan/event/today-p10/a100120-1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ub5ho.nrqgi9e1.g00ub5ho.nrqgjdc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbyurjapan%2Fa100120-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 4,
+    "avgRank": 21.2
+   },
+   {
+    "rank": 21,
     "itemCode": "onemakem:10001126",
     "itemName": "【国内正規品・送料無料】コスメデコルテ ルース パウダー #00 #01 #02 #03 #04 #05 #06 #07 #101 COSME DECORTE KOSE コーセー フェイスパウダー ルースパウダー 透明感 ツヤ肌 毛穴カバー 崩れにくい デパコス",
     "price": 3470,
@@ -769,7 +785,7 @@
     "avgRank": 23.8
    },
    {
-    "rank": 21,
+    "rank": 22,
     "itemCode": "4843-64:10000499",
     "itemName": "【メーカー公式通販】【まつげ美容液】【EMAKED】【エマーキット】エマーキッド（2ml）",
     "price": 6600,
@@ -785,7 +801,7 @@
     "avgRank": 27.0
    },
    {
-    "rank": 22,
+    "rank": 23,
     "itemCode": "tirtir:10000184",
     "itemName": "＼クーポンで、20％OFF 10/30(金) 23:59まで！／【TIRTIR公式】クッションシリーズ（ティンティッド/レッド/ルビーメッシュ/クリスタルメッシュ/AI全5種)本品18g,15gクッションファンデ/ファンデーション/マスクフィット",
     "price": 2970,
@@ -800,22 +816,38 @@
     "avgRank": 28.0
    },
    {
-    "rank": 23,
-    "itemCode": "byurjapan:10000005",
-    "itemName": "＼本日限定ポイント10倍／＼全方位リニューアル／ セラムフィット フルカバー グロークッション V2クッションファンデ ファンデーション ファンデ カバー力 崩れない 発光 ツヤ肌 毛穴 美白 皮脂 紫外線 崩れにくい 保湿 密着 ツヤ ハイカバー 角質ケア 毛穴ケア 崩れ防止",
-    "price": 3080,
-    "rating": 4.42,
-    "reviews": 3929,
-    "shopName": "ByUR 公式 楽天市場店",
-    "shopCode": "byurjapan",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_gold/byurjapan/event/today-p10/a100120-1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ub5ho.nrqgi9e1.g00ub5ho.nrqgjdc8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbyurjapan%2Fa100120-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 24,
+    "itemCode": "granbeautyon-line:10000024",
+    "itemName": "【3日間限定】＼3,500円OFF／正規品【1位獲得】ラッシュアディクト アイラッシュコンディショニングセラム アドバンス 5ml まつ毛美容液 Lashaddict リーフレット シリアルナンバー QRコード付き",
+    "price": 11000,
+    "rating": 4.53,
+    "reviews": 5075,
+    "shopName": "GRAN BEAUTY WORLD楽天市場店",
+    "shopCode": "granbeautyon-line",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/granbeautyon-line/cabinet/3000off2/3wfeed.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg13o.nrqgief2.g00tg13o.nrqgj46f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgranbeautyon-line%2F0012250%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
     "daysOn": 3,
-    "bestRank": 4,
-    "avgRank": 18.3
+    "bestRank": 17,
+    "avgRank": 17.3
    },
    {
-    "rank": 24,
+    "rank": 25,
+    "itemCode": "rakuten24:11095955",
+    "itemName": "マキアージュ ドラマティックスキンセンサーベース NEO(25ml)【マキアージュ(MAQUillAGE)】[化粧下地 SPF50 PA+++ くずれ防止 毛穴補正 乾燥]",
+    "price": 2970,
+    "rating": 4.57,
+    "reviews": 1079,
+    "shopName": "楽天24",
+    "shopCode": "rakuten24",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/749/404749.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404749%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 5,
+    "avgRank": 19.0
+   },
+   {
+    "rank": 26,
     "itemCode": "kobe-beauty-labo:10002511",
     "itemName": "【 WrinkFade 薬用 リンクル ファンデーション ハイカバー】楽天週間1位獲得!送料無料 ゆうパケット対象商品 リンクフェード wrfc 美白 保湿 しわ シミ 毛穴 プレゼント ギフト ナイアシンアミド",
     "price": 5980,
@@ -830,7 +862,22 @@
     "avgRank": 22.3
    },
    {
-    "rank": 25,
+    "rank": 27,
+    "itemCode": "formalklein:10001456",
+    "itemName": "HARIAS ハリアス 公式 クッションファンデ クッションコンパクト ファンデーション ツヤ肌 カバー力 高濃度フラバンジェノール 日本製 国産 UV 紫外線 美白 保湿 シワ 改善 美容 毛穴 ナイアシンアミド",
+    "price": 3520,
+    "rating": 4.35,
+    "reviews": 5074,
+    "shopName": "HARIAS公式 楽天市場店",
+    "shopCode": "formalklein",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/formalklein/cabinet/harias/badge/biteki_badge/fk754_1b.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qubyo.nrqgib55.g00qubyo.nrqgjb71/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fformalklein%2Ffk754%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 25,
+    "avgRank": 25.0
+   },
+   {
+    "rank": 28,
     "itemCode": "clinique:10001547",
     "itemName": "【ポイント10倍｜10/30 10:00-11/1 23:59】【数量限定｜Holiday】クリニーク ラッシュ パワー マスカラ セット 27 CLINIQUE | ロングマスカラ ボリュームマスカラ お湯で落ちる お湯オフ アイライナー ギフト プレゼント ホリデー 限定セット アイクリーム",
     "price": 4730,
@@ -845,7 +892,22 @@
     "avgRank": 1.0
    },
    {
-    "rank": 26,
+    "rank": 29,
+    "itemCode": "maccosmetics:10001670",
+    "itemName": "【2026 ホリデーコレクション】フィジー フィールズ リップ バーム ｜ M・A・C マック MAC クリスマスコフレ コフレ 口紅 リップ カラーリップ ラメ グリッター キラキラ 艶 ツヤ リップクリーム リップグロス バーム 保湿 ギフト プレゼント",
+    "price": 4510,
+    "rating": 0.0,
+    "reviews": 0,
+    "shopName": "M・A・C 公式ショップ",
+    "shopCode": "maccosmetics",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/maccosmetics/cabinet/pdp/thumb_01/holiday2026_16.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t0fko.nrqgid08.g00t0fko.nrqgjac9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaccosmetics%2Fholiday2026_16%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 2,
+    "bestRank": 1,
+    "avgRank": 1.0
+   },
+   {
+    "rank": 30,
     "itemCode": "clinique:10001529",
     "itemName": "【ポイント10倍｜10/30 10:00-11/1 23:59】【数量限定｜Holiday】クリニーク チーク ポップ デュオ セット 27 CLINIQUE | ギフト 頬紅 チークカラーツヤ 血色 カラー フェイスカラー プレゼント ピンク デパコス ホリデー 限定セット パウダー パウダーチーク",
     "price": 6600,
@@ -858,66 +920,6 @@
     "daysOn": 2,
     "bestRank": 2,
     "avgRank": 2.0
-   },
-   {
-    "rank": 27,
-    "itemCode": "cosmecomonline:10183134",
-    "itemName": "「ポイント10倍 11月1日」キャンメイク イルミネイティングフィニッシュパウダー Abloom〜01 限定シェル 6.5g フェイスパウダー アットコスメ",
-    "price": 1034,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "アットコスメショッピング",
-    "shopCode": "cosmecomonline",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cosmecomonline/cabinet/item-img250/item_1000240843_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qawwo.nrqgi1d3.g00qawwo.nrqgj0f8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000240843%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 7,
-    "avgRank": 7.0
-   },
-   {
-    "rank": 28,
-    "itemCode": "cosmecomonline:10183127",
-    "itemName": "「ポイント10倍 11月1日」キャンメイク マシュマロフィニッシュパウダー Abloom〜01 限定シェル 4.0g フェイスパウダー アットコスメ",
-    "price": 1034,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "アットコスメショッピング",
-    "shopCode": "cosmecomonline",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cosmecomonline/cabinet/item-img250/item_1000240842_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qawwo.nrqgi1d3.g00qawwo.nrqgj0f8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000240842%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 9,
-    "avgRank": 9.0
-   },
-   {
-    "rank": 29,
-    "itemCode": "supernice-store:10000012",
-    "itemName": "★45％OFF★【SPICARE正規品】SPICARE V3 ファンデーション スピケア 崩れない カバー力 肌に優しい 美肌 保湿 保湿成分配合 ツヤ ハリ感 本体 レフィル パフ付き 15g",
-    "price": 7700,
-    "rating": 4.44,
-    "reviews": 81,
-    "shopName": "SUPER NICE！Store",
-    "shopCode": "supernice-store",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/supernice-store/cabinet/11108856/13233098/thu_45.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uno6o.nrqgi5e3.g00uno6o.nrqgj5ff/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsupernice-store%2Fspicare-v3%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 2,
-    "avgRank": 13.5
-   },
-   {
-    "rank": 30,
-    "itemCode": "rakuten24:11095955",
-    "itemName": "マキアージュ ドラマティックスキンセンサーベース NEO(25ml)【マキアージュ(MAQUillAGE)】[化粧下地 SPF50 PA+++ くずれ防止 毛穴補正 乾燥]",
-    "price": 2970,
-    "rating": 4.57,
-    "reviews": 1079,
-    "shopName": "楽天24",
-    "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/749/404749.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404749%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 5,
-    "avgRank": 15.5
    }
   ],
   "skincare": [
@@ -932,9 +934,9 @@
     "shopCode": "attenir",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/attenir/cabinet/thum/166013_main_2608-2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tna6o.nrqgiedd.g00tna6o.nrqgj296/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fattenir%2F166013%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 1.8
+    "avgRank": 2.0
    },
    {
     "rank": 2,
@@ -947,9 +949,9 @@
     "shopCode": "tvert",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tvert/cabinet/goods/cart/nano_topr2026.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00q4g8o.nrqgi843.g00q4g8o.nrqgj374/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftvert%2F972273%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 2.4
+    "avgRank": 2.7
    },
    {
     "rank": 3,
@@ -962,9 +964,9 @@
     "shopCode": "shuuemura",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/shuuemura/cabinet/12824584/13204797/13525001/new.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tl4no.nrqgi194.g00tl4no.nrqgj7ef/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshuuemura%2Fshu30001jp%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 3,
-    "avgRank": 5.0
+    "avgRank": 5.8
    },
    {
     "rank": 4,
@@ -977,9 +979,9 @@
     "shopCode": "attenir",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/attenir/cabinet/thum/166011_main_2611.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tna6o.nrqgiedd.g00tna6o.nrqgj296/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fattenir%2F166011%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 8.8
+    "avgRank": 9.7
    },
    {
     "rank": 5,
@@ -992,9 +994,9 @@
     "shopCode": "takami-labo",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/takami-labo/cabinet/prd/r-s009/imgrc0115058669.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00q04mo.nrqgi68c.g00q04mo.nrqgj598/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftakami-labo%2Fr-s009%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 5,
-    "avgRank": 9.4
+    "avgRank": 9.8
    },
    {
     "rank": 6,
@@ -1007,9 +1009,9 @@
     "shopCode": "aurelie-tokyo",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aurelie-tokyo/cabinet/11397195/event_p5/alcl02_v2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00uloqo.nrqgi7fd.g00uloqo.nrqgj04d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faurelie-tokyo%2Falcl02%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 8,
-    "avgRank": 10.4
+    "avgRank": 10.5
    },
    {
     "rank": 7,
@@ -1022,9 +1024,9 @@
     "shopCode": "sk-ii",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/set-ftec-holiday2026/set-ftec-holiday2026.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fset-ftec-holiday2026%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 7,
-    "avgRank": 11.6
+    "avgRank": 11.8
    },
    {
     "rank": 8,
@@ -1037,9 +1039,9 @@
     "shopCode": "aestura-japan",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/aestura-japan/cabinet/ev/sum-point/p20/150100394.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ukqio.nrqgia8c.g00ukqio.nrqgje88/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faestura-japan%2Fatobarrier365cream%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 13,
-    "avgRank": 16.4
+    "avgRank": 16.3
    },
    {
     "rank": 9,
@@ -1052,9 +1054,9 @@
     "shopCode": "fancl-shop",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/fancl-shop/cabinet/item-img/3500-3999_2/3670-21_2607.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sms5o.nrqgi72f.g00sms5o.nrqgja07/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ffancl-shop%2F3670-21%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 18,
-    "avgRank": 19.2
+    "avgRank": 19.3
    },
    {
     "rank": 10,
@@ -1068,9 +1070,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cr-lab/cabinet/lucifer-hq/007_main2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tnpwo.nrqgi610.g00tnpwo.nrqgj657/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcr-lab%2Fhq-cream-copy%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 14,
-    "avgRank": 22.8
+    "avgRank": 23.3
    },
    {
     "rank": 11,
@@ -1083,9 +1085,9 @@
     "shopCode": "anuajapan",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/anuajapan/cabinet/anua00180/new/main_thumb2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u6mzo.nrqgie51.g00u6mzo.nrqgjd58/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fanuajapan%2Fanua00180%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 2,
-    "avgRank": 4.2
+    "avgRank": 3.8
    },
    {
     "rank": 12,
@@ -1098,9 +1100,9 @@
     "shopCode": "almado01",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/almado01/cabinet/10431793/10786840/1119_falco_bescos.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s961o.nrqgi9e7.g00s961o.nrqgjb42/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Falmado01%2F3259%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 10,
-    "avgRank": 12.2
+    "avgRank": 13.6
    },
    {
     "rank": 13,
@@ -1113,12 +1115,57 @@
     "shopCode": "sk-ii",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/ftk/2607_ftk.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fftk%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 9,
-    "avgRank": 13.5
+    "avgRank": 14.4
    },
    {
     "rank": 14,
+    "itemCode": "norganic:10000018",
+    "itemName": "＼神トク20%OFF／【公式】 N organic Basic バランシング ローション ミルク VCエッセンス 単品 セット | 化粧水 乳液 美容液 スキンケア スキンケアセット 化粧品 保湿 乾燥 敏感肌 | nオーガニック エヌオーガニック",
+    "price": 4180,
+    "rating": 4.45,
+    "reviews": 869,
+    "shopName": "エヌオーガニック楽天市場店",
+    "shopCode": "norganic",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/norganic/cabinet/05920040/cf/basic/nr-set-01_2606.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1jgo.nrqgi5ea.g00t1jgo.nrqgjfb0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorganic%2Fnr-set-01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 14,
+    "avgRank": 21.2
+   },
+   {
+    "rank": 15,
+    "itemCode": "sk-ii:10003011",
+    "itemName": "【公式】SK-II フェイシャルトリートメントエッセンス75mL、160mL、230mL | SK-2 / SK-II（エスケーツー）正規品 送料無料 潤い 保湿 | ピテラ エッセンス 20代 30代 40代 50代 スキンケア 化粧品 コスメ 女性 彼女 デパコス 高級 化粧水",
+    "price": 12650,
+    "rating": 4.47,
+    "reviews": 601,
+    "shopName": "SK-II 公式ショップ楽天市場店",
+    "shopCode": "sk-ii",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/fte_230-sgl/260617_fte_230-sgl.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Ffte_230-sgl%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 23,
+    "avgRank": 24.6
+   },
+   {
+    "rank": 16,
+    "itemCode": "riceforce:10000204",
+    "itemName": "＼発売記念50%OFFクーポン！10/31まで／【楽天デイリー1位】＜手軽さ×本格ケアを叶える＞【ライスフォース 公式】バイタリンクワン 発酵トリートメントマルチジェルクリーム オールインワン ライスパワーNo.11α 植物発酵成分 ハリ 透明感 くすみ 年齢肌 保湿",
+    "price": 5478,
+    "rating": 4.74,
+    "reviews": 38,
+    "shopName": "ライスフォース楽天市場店",
+    "shopCode": "riceforce",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/riceforce/cabinet/newlp/r0522/thumb_50_ranking.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00s20xo.nrqgi808.g00s20xo.nrqgjd4a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Friceforce%2Fr0522%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 10,
+    "avgRank": 15.0
+   },
+   {
+    "rank": 17,
     "itemCode": "renngekesyousui:10000002",
     "itemName": "れんげ化粧水 140cc 生レモン果汁の化粧水 素肌を育てるシンプルケア 100年続く素肌づくり 【れんげ研究所 公式オンラインショップ】 (使用期限2027年1月31日) シンプル シミ 肌荒れ エイジングケア ビタミンc 化粧水 保湿 ノーファンデ スキンケア",
     "price": 1200,
@@ -1133,37 +1180,37 @@
     "avgRank": 16.0
    },
    {
-    "rank": 15,
-    "itemCode": "norganic:10000018",
-    "itemName": "＼神トク20%OFF／【公式】 N organic Basic バランシング ローション ミルク VCエッセンス 単品 セット | 化粧水 乳液 美容液 スキンケア スキンケアセット 化粧品 保湿 乾燥 敏感肌 | nオーガニック エヌオーガニック",
-    "price": 4180,
-    "rating": 4.45,
-    "reviews": 869,
-    "shopName": "エヌオーガニック楽天市場店",
-    "shopCode": "norganic",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/norganic/cabinet/05920040/cf/basic/nr-set-01_2606.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1jgo.nrqgi5ea.g00t1jgo.nrqgjfb0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorganic%2Fnr-set-01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 18,
+    "itemCode": "hugkumi:10000404",
+    "itemName": "1日限定 P10倍★売上第1位※★【 医薬部外品 】 エシエンス 美容液 シワ改善 ナイアシンアミド ナノシープセラム 卵殻膜 ハリ 毛穴 炭酸美容液 導入美容液 ブースター ビタミンC 導入化粧液 ESIENCE 美容液 敏感肌 年齢肌 エイジング 美容液 シミ シミ取り シミ消し 美白",
+    "price": 4980,
+    "rating": 4.57,
+    "reviews": 685,
+    "shopName": "はぐくみプラス",
+    "shopCode": "hugkumi",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hugkumi/cabinet/06099131/11140106/11262718/ns_image1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1hno.nrqgi400.g00t1hno.nrqgje01/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhugkumi%2Fr_esience_ns_serum_n%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 4,
-    "bestRank": 14,
-    "avgRank": 20.5
+    "bestRank": 15,
+    "avgRank": 21.5
    },
    {
-    "rank": 16,
-    "itemCode": "sk-ii:10003011",
-    "itemName": "【公式】SK-II フェイシャルトリートメントエッセンス75mL、160mL、230mL | SK-2 / SK-II（エスケーツー）正規品 送料無料 潤い 保湿 | ピテラ エッセンス 20代 30代 40代 50代 スキンケア 化粧品 コスメ 女性 彼女 デパコス 高級 化粧水",
-    "price": 12650,
-    "rating": 4.47,
-    "reviews": 601,
-    "shopName": "SK-II 公式ショップ楽天市場店",
-    "shopCode": "sk-ii",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sk-ii/cabinet/item/thumb/fte_230-sgl/260617_fte_230-sgl.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy3o.nrqgib6d.g00siy3o.nrqgj046/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Ffte_230-sgl%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 23,
-    "avgRank": 25.0
+    "rank": 19,
+    "itemCode": "yunth:10000000",
+    "itemName": "★クーポン+セット1日23:59マデ★【送料無料】Yunth 生ビタミンC 美白美容液 1ml×28包 | 美容液 ビタミンC 導入美容液 先行美容液 ブースター 美白 ランキング おすすめ スキンケア | ユンス ゆんす イベント",
+    "price": 3960,
+    "rating": 4.69,
+    "reviews": 45384,
+    "shopName": "【公式】Yunth Store 楽天市場店",
+    "shopCode": "yunth",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/yunth/cabinet/11294195/11294196/event/10000000_260918.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7rbo.nrqgiee5.g00u7rbo.nrqgjff9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyunth%2F10000000%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 8,
+    "avgRank": 9.3
    },
    {
-    "rank": 17,
+    "rank": 20,
     "itemCode": "manara:10000214",
     "itemName": "【まとめ買いで最大10%OFF★10/30限定】 【日本一売れている毛穴クレンジングゲル】【マナラ公式】 クレンジング ホットクレンジングゲル マッサージプラス 200g 1本 2本セット 3本セットMANARA 温感クレンジング ジェル メイク落とし 洗顔",
     "price": 2790,
@@ -1178,22 +1225,22 @@
     "avgRank": 11.3
    },
    {
-    "rank": 18,
-    "itemCode": "riceforce:10000204",
-    "itemName": "＼発売記念50%OFFクーポン！10/31まで／【楽天デイリー1位】＜手軽さ×本格ケアを叶える＞【ライスフォース 公式】バイタリンクワン 発酵トリートメントマルチジェルクリーム オールインワン ライスパワーNo.11α 植物発酵成分 ハリ 透明感 くすみ 年齢肌 保湿",
-    "price": 5478,
-    "rating": 4.74,
-    "reviews": 38,
-    "shopName": "ライスフォース楽天市場店",
-    "shopCode": "riceforce",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/riceforce/cabinet/newlp/r0522/thumb_50_ranking.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00s20xo.nrqgi808.g00s20xo.nrqgjd4a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Friceforce%2Fr0522%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 21,
+    "itemCode": "rakuten24:11354091",
+    "itemName": "レチノパワー リンクルクリーム ba L(22g)【エリクシール(ELIXIR)】[レチノール クリーム しわ対策 しっとり 目もと]",
+    "price": 8800,
+    "rating": 4.59,
+    "reviews": 254,
+    "shopName": "楽天24",
+    "shopCode": "rakuten24",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/685/4909978214685.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978214685%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 3,
-    "bestRank": 10,
-    "avgRank": 14.3
+    "bestRank": 7,
+    "avgRank": 12.3
    },
    {
-    "rank": 19,
+    "rank": 22,
     "itemCode": "tvert:10000307",
     "itemName": "【送料無料】化粧水 グリシルグリシン 6% アゼライン酸誘導体 プレ化粧水 毛穴 テカリ 皮脂 エイジングケア 楽天ベストコスメ2024 2冠受賞 選べる 2タイプ トゥベール トゥヴェール バランシングGAローション",
     "price": 2100,
@@ -1208,7 +1255,7 @@
     "avgRank": 16.3
    },
    {
-    "rank": 20,
+    "rank": 23,
     "itemCode": "mediplus:10000000",
     "itemName": "【公式】メディプラス オールインワンジェル 180g (約2か月分) メディプラスゲル mediplus 長時間保湿 大容量 保湿ジェル ポンプ式 乾燥肌 敏感肌 ゆらぎ肌 肌荒れ ハリ 無添加 低刺激 セラミド ビタミンC誘導体 ヒアルロン酸 コラーゲン 美容液 乳液 メンズ レディース",
     "price": 4400,
@@ -1223,22 +1270,7 @@
     "avgRank": 18.0
    },
    {
-    "rank": 21,
-    "itemCode": "hugkumi:10000404",
-    "itemName": "1日限定 P10倍★売上第1位※★【 医薬部外品 】 エシエンス 美容液 シワ改善 ナイアシンアミド ナノシープセラム 卵殻膜 ハリ 毛穴 炭酸美容液 導入美容液 ブースター ビタミンC 導入化粧液 ESIENCE 美容液 敏感肌 年齢肌 エイジング 美容液 シミ シミ取り シミ消し 美白",
-    "price": 4980,
-    "rating": 4.57,
-    "reviews": 685,
-    "shopName": "はぐくみプラス",
-    "shopCode": "hugkumi",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hugkumi/cabinet/06099131/11140106/11262718/ns_image1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1hno.nrqgi400.g00t1hno.nrqgje01/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhugkumi%2Fr_esience_ns_serum_n%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 15,
-    "avgRank": 19.3
-   },
-   {
-    "rank": 22,
+    "rank": 24,
     "itemCode": "doctork-official:10000013",
     "itemName": "【楽天ベスコス2025】＼連続1位／ 【ドクターケイ 公式】角質ケア泡洗顔 ABC-Gピールウォッシュ 200mL つめかえ用 190mL ビタミンC 誘導体 レチノール 詰め替え 洗顔 保湿 敏感肌 洗顔フォーム ピーリング スキンケア 女性 ドクターk Dr.K",
     "price": 3960,
@@ -1253,7 +1285,7 @@
     "avgRank": 23.7
    },
    {
-    "rank": 23,
+    "rank": 25,
     "itemCode": "tvert:10000308",
     "itemName": "【送料無料】レチノール クリーム 30g ペプチド セラミド マトリキシル11％ ピュアレチノール 美容液 ナイトケア 楽天ベストコスメ ハリ キメ くすみ 毛穴 エイジングケア トゥベール トゥヴェール レチノショット 0.1",
     "price": 3980,
@@ -1268,7 +1300,22 @@
     "avgRank": 23.7
    },
    {
-    "rank": 24,
+    "rank": 26,
+    "itemCode": "rakuten24:11421132",
+    "itemName": "エリクシール シュペリエル トータルV ファーミングクリーム ca(50g)【エリクシール(ELIXIR)】",
+    "price": 11220,
+    "rating": 4.33,
+    "reviews": 6,
+    "shopName": "楽天24",
+    "shopCode": "rakuten24",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/833/4909978251833.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978251833%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 15,
+    "avgRank": 25.0
+   },
+   {
+    "rank": 27,
     "itemCode": "kinui:10000024",
     "itemName": "カームセブンスージングセラム CICA 美容液 セラム 化粧水 ビタミンc 誘導体 保湿美容オイル 植物由来成分 角質 ケア 肌 ハリ 皮脂 テカリ 保湿 導入美容液 導入液 導入化粧水 導入オイル 毛穴 エイジングケア スキンケア レチノール KINUI",
     "price": 2970,
@@ -1283,7 +1330,7 @@
     "avgRank": 25.0
    },
    {
-    "rank": 25,
+    "rank": 28,
     "itemCode": "brandshiseido:10000124",
     "itemName": "【SHISEIDO 公式】アルティミューン パワライジング セラム | SHISEIDO 資生堂 シセイドウ | 美容液 うるおい 保湿 ホリデー クリスマス",
     "price": 9900,
@@ -1298,7 +1345,7 @@
     "avgRank": 25.7
    },
    {
-    "rank": 26,
+    "rank": 29,
     "itemCode": "arianakosume:10000332",
     "itemName": "【国内正規品】IPSA イプサ ザ・タイムR アクア / ザ タイムR アクア e 200ml 化粧水 薬用化粧水 保湿 ニキビ予防 無香料 無着色 アルコール オイル無配合 ローション スキンケア 医薬部外品 1/2/3本 送料無料",
     "price": 3780,
@@ -1313,64 +1360,19 @@
     "avgRank": 26.7
    },
    {
-    "rank": 27,
-    "itemCode": "cepolab:10000000",
-    "itemName": "【cepoLAB公式】バイオジェニックエッセンス 90% (155ml・100ml・30ml 3種) CLEPS® 92.8% 肌の基礎ケアエッセンス 4週間の継続ケア 保湿・ハリ・毛穴ケア プレミアムバイオエッセンス 化学成分不使用 敏感肌でもOK",
-    "price": 3630,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "cepoLAB公式楽天市場店",
-    "shopCode": "cepolab",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cepolab/cabinet/12882582/imgrc0206941949.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uuhxo.nrqgi340.g00uuhxo.nrqgje9a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcepolab%2F90_155%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 5,
-    "avgRank": 5.0
-   },
-   {
-    "rank": 28,
-    "itemCode": "yunth:10000000",
-    "itemName": "★クーポン+セット1日23:59マデ★【送料無料】Yunth 生ビタミンC 美白美容液 1ml×28包 | 美容液 ビタミンC 導入美容液 先行美容液 ブースター 美白 ランキング おすすめ スキンケア | ユンス ゆんす イベント",
-    "price": 3960,
-    "rating": 4.69,
-    "reviews": 45384,
-    "shopName": "【公式】Yunth Store 楽天市場店",
-    "shopCode": "yunth",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/yunth/cabinet/11294195/11294196/event/10000000_260918.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7rbo.nrqgiee5.g00u7rbo.nrqgjff9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyunth%2F10000000%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 8,
-    "avgRank": 10.0
-   },
-   {
-    "rank": 29,
-    "itemCode": "rakuten24:11354091",
-    "itemName": "レチノパワー リンクルクリーム ba L(22g)【エリクシール(ELIXIR)】[レチノール クリーム しわ対策 しっとり 目もと]",
-    "price": 8800,
-    "rating": 4.59,
-    "reviews": 254,
-    "shopName": "楽天24",
-    "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/685/4909978214685.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978214685%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 7,
-    "avgRank": 11.0
-   },
-   {
     "rank": 30,
-    "itemCode": "the-beautopia:10000111",
-    "itemName": "【10/30(金)より順次お届け】ラブミータッチ Lov me Touch コフレ特別セット クリスマス クリスマスコフレ 2026 スキンバリアナノミルク スキンバリアナノミルクリッチ 高濃度セラミド15％ ウォーター乳液 ヒアルロン酸 乳液 セラミド 保湿 化粧品 上原恵理 スキンケア",
-    "price": 9999,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "The BEAUTOPIA",
-    "shopCode": "the-beautopia",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/the-beautopia/cabinet/item/xmas_coffret/imgrc0137919981.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugd0o.nrqgi424.g00ugd0o.nrqgj33e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fthe-beautopia%2F20297-039%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "selectshopmint:10000054",
+    "itemName": "【IMINT2周年感謝祭】【1＋1】WAKEY PAD 60枚 ウェイキーパッド トナーパッド 拭き取り パッド 美白 しわ ナイアシンアミド 5種ペプチド ヒアルロン酸 アデノシン グルタミン酸 『IMINT親子ステッカーギフト付き』",
+    "price": 2500,
+    "rating": 4.56,
+    "reviews": 176,
+    "shopName": "select shop MINT",
+    "shopCode": "selectshopmint",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801591.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 2,
-    "bestRank": 11,
-    "avgRank": 11.0
+    "bestRank": 1,
+    "avgRank": 1.0
    }
   ],
   "hair": [
@@ -1385,7 +1387,7 @@
     "shopCode": "beautypark2017",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautypark2017/cabinet/haircare/loaoil/loa100-30_02.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sqjgo.nrqgi275.g00sqjgo.nrqgj2df/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautypark2017%2Floaoil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
     "avgRank": 1.2
    },
@@ -1400,9 +1402,9 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/aile_brush/imgrc0136911175.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1201310101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 4.4
+    "avgRank": 4.2
    },
    {
     "rank": 3,
@@ -1416,9 +1418,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sakurap/cabinet/slide/09073883/imgrc0114819933.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00pvono.nrqgi3ca.g00pvono.nrqgjf1b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakurap%2F10008554%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 4,
-    "avgRank": 4.8
+    "avgRank": 4.7
    },
    {
     "rank": 4,
@@ -1431,9 +1433,9 @@
     "shopCode": "kerastase-varie",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kerastase-varie/cabinet/thumbna/ch-huilc_120/261026.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tnoao.nrqgi6a6.g00tnoao.nrqgjfd2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkerastase-varie%2Fch-huilc_120%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 4,
-    "avgRank": 6.4
+    "avgRank": 7.0
    },
    {
     "rank": 5,
@@ -1446,9 +1448,9 @@
     "shopCode": "mycosmeticbox",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mycosmeticbox/cabinet/rekera/rikera-top.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u9wao.nrqgiaa0.g00u9wao.nrqgjbe8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmycosmeticbox%2Frekera%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 3,
-    "avgRank": 7.4
+    "avgRank": 8.7
    },
    {
     "rank": 6,
@@ -1461,9 +1463,9 @@
     "shopCode": "stylife",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/stylife/cabinet/item/424/qh8424-01_1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00rf71o.nrqgif96.g00rf71o.nrqgj47e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstylife%2Fqh8424%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 10.0
+    "avgRank": 8.7
    },
    {
     "rank": 7,
@@ -1476,9 +1478,9 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/heart_comb_aira/imgrc0140387102.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1186210101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 5,
-    "avgRank": 10.2
+    "avgRank": 9.3
    },
    {
     "rank": 8,
@@ -1491,9 +1493,9 @@
     "shopCode": "onemakem",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/onemakem/cabinet/biiino/item/main-image/20260522224921_1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tysso.nrqgi709.g00tysso.nrqgj6ae/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fonemakem%2Fjm000000000653%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 9,
-    "avgRank": 11.4
+    "avgRank": 11.0
    },
    {
     "rank": 9,
@@ -1506,9 +1508,9 @@
     "shopCode": "angfa",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angfa/cabinet/2023/item/imgrc0130650909.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ps33o.nrqgifd7.g00ps33o.nrqgj0da/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fangfa%2Fsd_pouch_sp2set%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 8,
-    "avgRank": 12.6
+    "avgRank": 12.3
    },
    {
     "rank": 10,
@@ -1522,28 +1524,12 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/b-ris-shop/cabinet/09891584/09891585/imgrc0121084693.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ucqco.nrqgi51f.g00ucqco.nrqgjc05/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fb-ris-shop%2Fr_larich_001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 4,
-    "avgRank": 14.0
+    "avgRank": 12.7
    },
    {
     "rank": 11,
-    "itemCode": "f-netclub:10000296",
-    "itemName": "育毛剤 女性用 薬用リリィジュ | 医薬部外品 育毛 女性 レディース 抜け毛 産後 生え際 30代 40代 50代 60代 薬用育毛剤 乾燥 頭皮 薄毛 コシ 抜け毛 予防 頭皮ケア 育毛ローション スカルプ 地肌ケア スカルプローション かゆみ 分け目 ヘアトニック スカルプケア ヘアケア",
-    "price": 5820,
-    "rating": 4.22,
-    "reviews": 1181,
-    "shopName": "WELLBESTショッピング楽天市場店",
-    "shopCode": "f-netclub",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f-netclub/cabinet/rere-img/imgrc0142787619.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00px2fo.nrqgi988.g00px2fo.nrqgj5bd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff-netclub%2F10000296%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "法規或安全疑慮",
-    "daysOn": 5,
-    "bestRank": 16,
-    "avgRank": 18.2
-   },
-   {
-    "rank": 12,
     "itemCode": "bijinlabo:10000710",
     "itemName": "＼白髪に3分／選べる5色【公式】ルプルプ ヘアカラートリートメント白髪染め トリートメント エッセンス ショートヘア約5回分 ノンジアミン 手袋・ヘアキャップ付 ヘアカラー 女性用 男性用 毛染め 低刺激 LPLP",
     "price": 3630,
@@ -1554,9 +1540,25 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bijinlabo/cabinet/items/essence/test/4-85.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ryd9o.nrqgidb5.g00ryd9o.nrqgj9d5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbijinlabo%2Fr198900%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 14,
-    "avgRank": 18.8
+    "avgRank": 18.0
+   },
+   {
+    "rank": 12,
+    "itemCode": "f-netclub:10000296",
+    "itemName": "育毛剤 女性用 薬用リリィジュ | 医薬部外品 育毛 女性 レディース 抜け毛 産後 生え際 30代 40代 50代 60代 薬用育毛剤 乾燥 頭皮 薄毛 コシ 抜け毛 予防 頭皮ケア 育毛ローション スカルプ 地肌ケア スカルプローション かゆみ 分け目 ヘアトニック スカルプケア ヘアケア",
+    "price": 5820,
+    "rating": 4.22,
+    "reviews": 1181,
+    "shopName": "WELLBESTショッピング楽天市場店",
+    "shopCode": "f-netclub",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f-netclub/cabinet/rere-img/imgrc0142787619.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00px2fo.nrqgi988.g00px2fo.nrqgj5bd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff-netclub%2F10000296%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
+    "daysOn": 6,
+    "bestRank": 16,
+    "avgRank": 19.0
    },
    {
     "rank": 13,
@@ -1569,27 +1571,12 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/lock_oil_series/imgrc0121540500.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F5144020101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 19,
-    "avgRank": 22.4
+    "avgRank": 23.2
    },
    {
     "rank": 14,
-    "itemCode": "loa-official:10000000",
-    "itemName": "【公式】LOA THE OIL ロア ザ オイル 30ml/100ml ヘアオイル ロアオイル スタイリング剤 ボディオイル アウトバス 洗い流さないトリートメント パフュームオイル 送料無料 メーカー公式 ギフト LOATHEOIL",
-    "price": 3520,
-    "rating": 4.53,
-    "reviews": 583,
-    "shopName": "LOA 公式ショップ",
-    "shopCode": "loa-official",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/loa-official/cabinet/12369844/12369846/imgrc0108821023.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ursto.nrqgi178.g00ursto.nrqgjede/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Floa-official%2Floaoil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 2,
-    "avgRank": 7.8
-   },
-   {
-    "rank": 15,
     "itemCode": "tamago-kichi:10000533",
     "itemName": "【ポイント20倍】【公式】ニューモV 育毛剤 医薬部外品 送料無料 養毛剤 薄毛 増毛 促進 薄毛対策 抜け毛 生え際 抜け毛対策 産後 スカルプ スカルプケア ヘアトニック 男性 女性 メンズ 育毛トニック 男性用 にゅーも タマゴ 頭皮ケア",
     "price": 7970,
@@ -1600,9 +1587,24 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tamago-kichi/cabinet/thumb/newmo_v01.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u11lo.nrqgi810.g00u11lo.nrqgjc92/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftamago-kichi%2Fnewmo_v01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 7,
-    "avgRank": 8.5
+    "avgRank": 8.2
+   },
+   {
+    "rank": 15,
+    "itemCode": "loa-official:10000000",
+    "itemName": "【公式】LOA THE OIL ロア ザ オイル 30ml/100ml ヘアオイル ロアオイル スタイリング剤 ボディオイル アウトバス 洗い流さないトリートメント パフュームオイル 送料無料 メーカー公式 ギフト LOATHEOIL",
+    "price": 3520,
+    "rating": 4.53,
+    "reviews": 583,
+    "shopName": "LOA 公式ショップ",
+    "shopCode": "loa-official",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/loa-official/cabinet/12369844/12369846/imgrc0108821023.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ursto.nrqgi178.g00ursto.nrqgjede/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Floa-official%2Floaoil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 2,
+    "avgRank": 8.6
    },
    {
     "rank": 16,
@@ -1615,9 +1617,9 @@
     "shopCode": "angfa",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angfa/cabinet/11720449/1040x1040_2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ps33o.nrqgifd7.g00ps33o.nrqgj0da/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fangfa%2F648226%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 7,
-    "avgRank": 10.2
+    "avgRank": 11.4
    },
    {
     "rank": 17,
@@ -1630,9 +1632,9 @@
     "shopCode": "lond",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/lond/cabinet/loatheoil/7.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u51so.nrqgic46.g00u51so.nrqgj560/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flond%2Floatheoil_select%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 17,
-    "avgRank": 22.0
+    "avgRank": 21.0
    },
    {
     "rank": 18,
@@ -1645,9 +1647,9 @@
     "shopCode": "beautifultoybox",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautifultoybox/cabinet/item/hc/10093045/theme-loa-202606.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t050o.nrqgi03f.g00t050o.nrqgjc4f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautifultoybox%2Floa-oil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 22,
-    "avgRank": 23.5
+    "avgRank": 23.2
    },
    {
     "rank": 19,
@@ -1660,12 +1662,57 @@
     "shopCode": "cleosbeaute",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cleosbeaute/cabinet/13239540/13967440/imgrc0115397390.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u93bo.nrqgic96.g00u93bo.nrqgjf11/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcleosbeaute%2F10000007%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
+    "daysOn": 4,
     "bestRank": 8,
     "avgRank": 8.0
    },
    {
     "rank": 20,
+    "itemCode": "kaminidoramawo:10000010",
+    "itemName": "【NEW】【セット】つるりんちょ。シャンプー＆トリートメント_レギュラー（ボトル） 縮毛矯正 パサつき 広がり 癖毛 くせ毛 うねり 頭皮 ホームケア 熱ダメージ カラーダメージ 髪ダメージ ダメージ プロユース 女性 美容院 美容室 美容師 髪にドラマを。 公式",
+    "price": 11200,
+    "rating": 4.66,
+    "reviews": 1863,
+    "shopName": "【公式】髪にドラマを。楽天市場店",
+    "shopCode": "kaminidoramawo",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kaminidoramawo/cabinet/item/tr/th/tr_shtr_reg_b_set.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ujueo.nrqgi80a.g00ujueo.nrqgjcbb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaminidoramawo%2Fkdrs001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 12,
+    "avgRank": 18.0
+   },
+   {
+    "rank": 21,
+    "itemCode": "chouchou-store:10001788",
+    "itemName": "【ポイント11倍/正規販売店/楽天1位】ロアザオイル LOA THE OIL 100ml 30mL ヘアオイル 洗い流さないトリートメント ヘアケア ギフト プレゼント ブランシュ ネロリスモークティー ジャスミンドレ シトラスベール ラテローズ ミスティックウッド ペアブランシュ ノワール",
+    "price": 3520,
+    "rating": 4.65,
+    "reviews": 756,
+    "shopName": "CHOUCHOU 楽天市場店",
+    "shopCode": "chouchou-store",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/chouchou-store/cabinet/loaoil/loatheoil-2.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tlvio.nrqgi596.g00tlvio.nrqgj8d8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fchouchou-store%2Floa-oil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 18,
+    "avgRank": 19.5
+   },
+   {
+    "rank": 22,
+    "itemCode": "kundal-japan:10000000",
+    "itemName": "【KUNDAL公式】★ベストセラー★ クンダル シャンプー トリートメント セット 500mL ハニー＆マカデミア ネイチャーシャンプー＆プロテイントリートメント　クンダル 弱酸性 無添加",
+    "price": 3300,
+    "rating": 4.41,
+    "reviews": 422,
+    "shopName": "KUNDAL日本ストア",
+    "shopCode": "kundal-japan",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kundal-japan/cabinet/11156693/13797514/imgrc0120576812.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00umr5o.nrqgi8a5.g00umr5o.nrqgja31/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkundal-japan%2Fshamtreat_set%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 20,
+    "avgRank": 22.5
+   },
+   {
+    "rank": 23,
     "itemCode": "emikuru:10000560",
     "itemName": "＼新シリーズ『リポルム』登場！／【プリュスオー シャンプー トリートメント 】【ポンプセット】plus eau メロウ メルティ リポア リポルム 各450ml ダメージ補修 保湿 うねり くせ毛 サロン 美容室",
     "price": 3300,
@@ -1680,22 +1727,7 @@
     "avgRank": 16.0
    },
    {
-    "rank": 21,
-    "itemCode": "kaminidoramawo:10000010",
-    "itemName": "【NEW】【セット】つるりんちょ。シャンプー＆トリートメント_レギュラー（ボトル） 縮毛矯正 パサつき 広がり 癖毛 くせ毛 うねり 頭皮 ホームケア 熱ダメージ カラーダメージ 髪ダメージ ダメージ プロユース 女性 美容院 美容室 美容師 髪にドラマを。 公式",
-    "price": 11200,
-    "rating": 4.66,
-    "reviews": 1863,
-    "shopName": "【公式】髪にドラマを。楽天市場店",
-    "shopCode": "kaminidoramawo",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kaminidoramawo/cabinet/item/tr/th/tr_shtr_reg_b_set.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ujueo.nrqgi80a.g00ujueo.nrqgjcbb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaminidoramawo%2Fkdrs001%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 12,
-    "avgRank": 16.0
-   },
-   {
-    "rank": 22,
+    "rank": 24,
     "itemCode": "mtgec-beauty:10002009",
     "itemName": "【ReFa公式】リファハートブラシ ヘアコーム くし ツヤ ヘアブラシ 持ち運び コンパクト 人気 ヘアケア プチギフト 絡まない 艶髪 彼女 妻 女性 ギフト 誕生日 プレゼント 卒業 入学 姪 娘 旅行 ライブ 銭湯 退職 就職 祝い 高校生 中学生",
     "price": 2970,
@@ -1710,52 +1742,7 @@
     "avgRank": 19.7
    },
    {
-    "rank": 23,
-    "itemCode": "chouchou-store:10001788",
-    "itemName": "【ポイント11倍/正規販売店/楽天1位】ロアザオイル LOA THE OIL 100ml 30mL ヘアオイル 洗い流さないトリートメント ヘアケア ギフト プレゼント ブランシュ ネロリスモークティー ジャスミンドレ シトラスベール ラテローズ ミスティックウッド ペアブランシュ ノワール",
-    "price": 3520,
-    "rating": 4.65,
-    "reviews": 756,
-    "shopName": "CHOUCHOU 楽天市場店",
-    "shopCode": "chouchou-store",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/chouchou-store/cabinet/loaoil/loatheoil-2.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tlvio.nrqgi596.g00tlvio.nrqgj8d8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fchouchou-store%2Floa-oil%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 18,
-    "avgRank": 20.0
-   },
-   {
-    "rank": 24,
-    "itemCode": "kundal-japan:10000000",
-    "itemName": "【KUNDAL公式】★ベストセラー★ クンダル シャンプー トリートメント セット 500mL ハニー＆マカデミア ネイチャーシャンプー＆プロテイントリートメント　クンダル 弱酸性 無添加",
-    "price": 3300,
-    "rating": 4.41,
-    "reviews": 422,
-    "shopName": "KUNDAL日本ストア",
-    "shopCode": "kundal-japan",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kundal-japan/cabinet/11156693/13797514/imgrc0120576812.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00umr5o.nrqgi8a5.g00umr5o.nrqgja31/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkundal-japan%2Fshamtreat_set%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 20,
-    "avgRank": 23.3
-   },
-   {
     "rank": 25,
-    "itemCode": "mtgec-beauty:10002313",
-    "itemName": "【ReFa公式】リファイオンケアブラシプレミアム スカルプブラシ 公式 シャンプーブラシ ReFa ブラシ 頭皮ケア ヘアケア 引っ越し ヘアブラシ 毛穴 洗浄 お風呂 ギフト プレゼント サラサラ ヘアケア 敬老の日 退職 入学 就職 祝い MTG",
-    "price": 8800,
-    "rating": 4.56,
-    "reviews": 940,
-    "shopName": "MTG ONLINESHOP",
-    "shopCode": "mtgec-beauty",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/brush_premium/imgrc0143701983.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1200620101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 20,
-    "avgRank": 20.0
-   },
-   {
-    "rank": 26,
     "itemCode": "chap-up:10000026",
     "itemName": "【 楽天39冠 】 育毛剤 男性用 メンズ 医薬部外品 女性用 レディース 頭皮ケア スカルプ 公式 チャップアップ CHAP UP 薬用 育毛 育毛トニック 男性 女性 ヘアケア 薄毛 薄毛対策 抜け毛 予防 頭皮 産後 発毛促進 120mL 1本 ～",
     "price": 8690,
@@ -1766,9 +1753,24 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/chap-up/cabinet/thumb/thumb_tsudo/thumb_tsu_u/lo1-pop.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s2uro.nrqgi049.g00s2uro.nrqgjb4d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fchap-up%2Fchapup-lotion_1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 2,
+    "daysOn": 3,
     "bestRank": 21,
-    "avgRank": 23.0
+    "avgRank": 22.3
+   },
+   {
+    "rank": 26,
+    "itemCode": "stylife:14991027",
+    "itemName": "track 【公式】trackオイル 90ml トラック ヘアケア スタイリング剤【送料無料】",
+    "price": 4620,
+    "rating": 4.22,
+    "reviews": 633,
+    "shopName": "Rakuten Fashion",
+    "shopCode": "stylife",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/stylife/cabinet/item/471/nv2471-08_1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rf71o.nrqgif96.g00rf71o.nrqgj47e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstylife%2Fnv2471%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 25,
+    "avgRank": 25.7
    },
    {
     "rank": 27,
@@ -1781,54 +1783,54 @@
     "shopCode": "beautifulnet-nagoya",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautifulnet-nagoya/cabinet/10025155/imgrc0107643584.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00swmzo.nrqgi72c.g00swmzo.nrqgja65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautifulnet-nagoya%2Fltl-02%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
+    "daysOn": 3,
     "bestRank": 19,
-    "avgRank": 24.0
+    "avgRank": 25.7
    },
    {
     "rank": 28,
-    "itemCode": "onemakem:10000085",
-    "itemName": "【選べる3つの香り】ナプラ N. エヌドット ポリッシュオイル 150ml マンダリンオレンジ SC セージ＆クローブ UR アーバンローズ napla ヘアオイル スタイリング 洗い流さないトリートメント アウトバス ボディオイル 濡れ髪 ツヤ セット まとめ買い",
-    "price": 2959,
-    "rating": 4.55,
-    "reviews": 1130,
-    "shopName": "one make 楽天市場店",
-    "shopCode": "onemakem",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/onemakem/cabinet/biiino/item/main-image/20260523224959_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tysso.nrqgi709.g00tysso.nrqgj6ae/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fonemakem%2F10000085%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 24,
-    "avgRank": 24.0
+    "itemCode": "rise-store:10000248",
+    "itemName": "【11/4 19:59までまとめ買いで最大20％OFFクーポン!】NILE 濃密泡 スカルプシャンプー 本体ボトル300ml 詰め替え用250ml スカルプケア 詰め替え アミノ酸 メンズシャンプー メンズ レディース シャンプー 頭皮ケア ノンシリコン 男性 美容室 人気",
+    "price": 1980,
+    "rating": 4.7,
+    "reviews": 6404,
+    "shopName": "NILE OFFICIAL",
+    "shopCode": "rise-store",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rise-store/cabinet/item/nile_shampoo/imgrc0118372910.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00szmgo.nrqgi227.g00szmgo.nrqgj457/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frise-store%2Fnile_shampoo%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 27,
+    "avgRank": 29.0
    },
    {
     "rank": 29,
-    "itemCode": "stylife:14991027",
-    "itemName": "track 【公式】trackオイル 90ml トラック ヘアケア スタイリング剤【送料無料】",
-    "price": 4620,
-    "rating": 4.22,
-    "reviews": 633,
-    "shopName": "Rakuten Fashion",
-    "shopCode": "stylife",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/stylife/cabinet/item/471/nv2471-08_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rf71o.nrqgif96.g00rf71o.nrqgj47e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstylife%2Fnv2471%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "kaminidoramawo:10000019",
+    "itemName": "【NEW】【セット】つるりんちょ。シャンプー ＆ トリートメント レギュラー（業務用） 髪にドラマを。 公式",
+    "price": 20130,
+    "rating": 4.79,
+    "reviews": 471,
+    "shopName": "【公式】髪にドラマを。楽天市場店",
+    "shopCode": "kaminidoramawo",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kaminidoramawo/cabinet/item/tr/th/tr_shtr_reg_1000_set.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ujueo.nrqgi80a.g00ujueo.nrqgjcbb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaminidoramawo%2Fkdrs009%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 2,
-    "bestRank": 25,
-    "avgRank": 26.0
+    "bestRank": 13,
+    "avgRank": 13.0
    },
    {
     "rank": 30,
-    "itemCode": "kobe-beauty-labo:10002520",
-    "itemName": "＼超早得 P5倍＆限定特典3つ！11月3日まで／福袋 2027【YOLU 2027 福袋 6点セット カームナイトリペア リラックスナイトリペア 】オンライン限定 シャンプー トリートメント セット コンディショナー ボディソープ yoru yolu ヨル よる おすすめ 人気 詰め替え",
-    "price": 7546,
-    "rating": 4.81,
-    "reviews": 287,
-    "shopName": "アンド ハビット",
-    "shopCode": "kobe-beauty-labo",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/yol110.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fyol110%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "itemCode": "tigre-cabat:10018642",
+    "itemName": "【送料無料】リトルサイエンティスト リケラエマルジョン 200ml アウトバス トリートメント (正規品・サロン専売品)",
+    "price": 4840,
+    "rating": 4.63,
+    "reviews": 106,
+    "shopName": "サロンコスメ　　リリ",
+    "shopCode": "tigre-cabat",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tigre-cabat/cabinet/image1/4562261082400.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00s5d2o.nrqgib73.g00s5d2o.nrqgjc7d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftigre-cabat%2F4562261082400%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 2,
-    "bestRank": 26,
-    "avgRank": 26.0
+    "bestRank": 19,
+    "avgRank": 19.0
    }
   ],
   "device": [
@@ -1843,9 +1845,9 @@
     "shopCode": "kobe-beauty-labo",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/main-salo6.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fmain-salo6%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 1.2
+    "avgRank": 1.3
    },
    {
     "rank": 2,
@@ -1858,9 +1860,9 @@
     "shopCode": "mycosmeticbox",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mycosmeticbox/cabinet/11105451/straght-top4.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u9wao.nrqgiaa0.g00u9wao.nrqgjbe8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmycosmeticbox%2Fwrinkle%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 3.2
+    "avgRank": 3.7
    },
    {
     "rank": 3,
@@ -1873,9 +1875,9 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/refa_siron_pro/imgrc0135157195.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F3891620108%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 3.6
+    "avgRank": 3.8
    },
    {
     "rank": 4,
@@ -1889,9 +1891,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/leapgrow/cabinet/mytrex/p0/p00_vd_01b.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ssj2o.nrqgi0f3.g00ssj2o.nrqgje4c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fleapgrow%2Fmt-vd22b%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 3,
-    "avgRank": 5.2
+    "avgRank": 5.0
    },
    {
     "rank": 5,
@@ -1904,9 +1906,9 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/refa_dryer_splus/imgrc0120473542.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1850320101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 5,
-    "avgRank": 6.4
+    "avgRank": 6.7
    },
    {
     "rank": 6,
@@ -1919,9 +1921,9 @@
     "shopCode": "salonmoon",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_gold/salonmoon/slm106/flick/slm106_108_f_00_ra_d2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t6tgo.nrqgi944.g00t6tgo.nrqgj01a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsalonmoon%2Fslm-006%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 9.2
+    "avgRank": 9.3
    },
    {
     "rank": 7,
@@ -1934,9 +1936,9 @@
     "shopCode": "createsstore",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/createsstore/cabinet/ci/imgrc0118878510.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ufv9o.nrqgia74.g00ufv9o.nrqgj57f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcreatesstore%2Fcurl-pro-2%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 7,
-    "avgRank": 9.8
+    "avgRank": 9.7
    },
    {
     "rank": 8,
@@ -1949,27 +1951,12 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/refa_ciron_pro/imgrc0132387764.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F5141920108%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 11,
-    "avgRank": 15.4
+    "avgRank": 15.8
    },
    {
     "rank": 9,
-    "itemCode": "kobe-beauty-labo:10002791",
-    "itemName": "≪11/4から 神トククーポンで30%OFF≫ 【 SALONIA サロニア コードレス ストレートヘアアイロン 】コードレスアイロン ヘアアイロン ストレートアイロン 旅行用品 トラベル ミニ 持ち運び モバイルバッテリー おすすめ ランキング",
-    "price": 5150,
-    "rating": 4.24,
-    "reviews": 171,
-    "shopName": "アンド ハビット",
-    "shopCode": "kobe-beauty-labo",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/sal024.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fsal024%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
-    "bestRank": 14,
-    "avgRank": 19.6
-   },
-   {
-    "rank": 10,
     "itemCode": "mtgec-beauty:10002451",
     "itemName": "【ReFa 公式】リファ ビューテック ドライヤー SE 手のひらサイズ 軽量 ミニ ReFa BEAUTECH DRYER SE リファ コンパクト 小型 速乾 サロン級 ツヤ まとまり 軽い 小さい パワフル 大風量 旅行 持ち運び 出張 ギフト プレゼント",
     "price": 33000,
@@ -1979,12 +1966,12 @@
     "shopCode": "mtgec-beauty",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/beautech_dryer_se/flick/2009320101_01.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F2009320101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 18,
-    "avgRank": 20.0
+    "avgRank": 20.3
    },
    {
-    "rank": 11,
+    "rank": 10,
     "itemCode": "milicute-himawari:10000007",
     "itemName": "「クーポンで最安2,975円」「楽天1位 30冠達成！」髭剃り シェーバー 電気シェーバー メンズ ひげそり メンズ シェーバー USB充電式 LED電池残量表示 髭剃り 電動 メンズシェーバー 丸洗い可能 電動ひげそり IPX7防水 ロック機能 トリマー刃付 1年保証 2026",
     "price": 3275,
@@ -1995,9 +1982,24 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/milicute-himawari/cabinet/10096580/8605x-2975-1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00uhmwo.nrqgi7cd.g00uhmwo.nrqgjec7/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmilicute-himawari%2F8605-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "健康家電",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 11,
-    "avgRank": 20.2
+    "avgRank": 20.3
+   },
+   {
+    "rank": 11,
+    "itemCode": "kobe-beauty-labo:10002791",
+    "itemName": "≪11/4から 神トククーポンで30%OFF≫ 【 SALONIA サロニア コードレス ストレートヘアアイロン 】コードレスアイロン ヘアアイロン ストレートアイロン 旅行用品 トラベル ミニ 持ち運び モバイルバッテリー おすすめ ランキング",
+    "price": 5150,
+    "rating": 4.24,
+    "reviews": 171,
+    "shopName": "アンド ハビット",
+    "shopCode": "kobe-beauty-labo",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kobe-beauty-labo/cabinet/1st_thum/sal024.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r23no.nrqgia3c.g00r23no.nrqgj32e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkobe-beauty-labo%2Fsal024%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 6,
+    "bestRank": 14,
+    "avgRank": 20.5
    },
    {
     "rank": 12,
@@ -2010,12 +2012,120 @@
     "shopCode": "angelique",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angelique/cabinet/createion/sr/sr_pouch_set_v2.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00psb8o.nrqgi617.g00psb8o.nrqgj0ec/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fangelique%2Fcreate_ioniron_32mm%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
+    "daysOn": 5,
     "bestRank": 6,
     "avgRank": 10.8
    },
    {
     "rank": 13,
+    "itemCode": "panasonic-store:10000005",
+    "itemName": "【公式店】 パナソニック 2025年度モデル ヘアードライヤー ナノケア EH-NA0K 無料ギフトラッピング 高浸透ナノイー ヘアケア 大風量 速乾 コンパクト 軽量 人気 温度 高級 潤い ツヤ まとまり ダメージケア UVケア 送料無料 クリスマス",
+    "price": 34967,
+    "rating": 4.69,
+    "reviews": 1210,
+    "shopName": "Panasonic Store Plus 楽天市場店",
+    "shopCode": "panasonic-store",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/panasonic-store/cabinet/banner/thumb/eh-na0k_004.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ubhyo.nrqgibf5.g00ubhyo.nrqgjcc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-na0j-a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 13,
+    "avgRank": 14.0
+   },
+   {
+    "rank": 14,
+    "itemCode": "shopjapan:10005374",
+    "itemName": "【公式】返品保証付 楽ちんヒアリング SK-05正規品 ベージュ ブラック ショップジャパン公式 集音器 耳掛けタイプ 耳掛け式 軽量 充電式 快適 USB充電 敬老の日 母の日 父の日 ギフト プレゼント 贈り物 両親 親",
+    "price": 10890,
+    "rating": 3.92,
+    "reviews": 607,
+    "shopName": "ショップジャパン 楽天市場店",
+    "shopCode": "shopjapan",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/shopjapan/cabinet/rah/main_2606.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ppmmo.nrqgi1d1.g00ppmmo.nrqgjfda/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshopjapan%2Frah20set13860%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "健康家電",
+    "daysOn": 5,
+    "bestRank": 7,
+    "avgRank": 18.0
+   },
+   {
+    "rank": 15,
+    "itemCode": "marble-inc:10000649",
+    "itemName": "【国内正規品】【1年保証】【レビュー2,000件超】KINUJO PRO ストレートアイロン KP001 LM225 KPS24 サファイア 選べる3機種 ヘアアイロン 絹女プロ キヌージョ サロン専売品",
+    "price": 23980,
+    "rating": 4.68,
+    "reviews": 2214,
+    "shopName": "美容コスメ マーブルストア",
+    "shopCode": "marble-inc",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/marble-inc/cabinet/imgrc0344629484.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u0u1o.nrqgifc6.g00u0u1o.nrqgja7f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmarble-inc%2F2915-001200%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 14,
+    "avgRank": 19.2
+   },
+   {
+    "rank": 16,
+    "itemCode": "chouchou-store:10001143",
+    "itemName": "【正規販売店/楽天1位/ヘアオイルとセットでお得！】クレイツ カールプロSR 正規品 26mm 32mm 38mm 45mm 美容師 ヘアケア ギフト プレゼント プロ サロン専売品 痛まない 太め コテ ヘアアイロン 巻き髪 前髪 軽量 持ち運び 1年保証 送料無料",
+    "price": 5779,
+    "rating": 4.6,
+    "reviews": 844,
+    "shopName": "CHOUCHOU 楽天市場店",
+    "shopCode": "chouchou-store",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/chouchou-store/cabinet/create/curlpro-sr/cpsr_lp-2.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tlvio.nrqgi596.g00tlvio.nrqgj8d8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fchouchou-store%2Fcurlpro-sr-32mm%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 12,
+    "avgRank": 21.6
+   },
+   {
+    "rank": 17,
+    "itemCode": "braun:10001087",
+    "itemName": "＼43%OFFクーポン利用で 85,800 ⇒ 48,906円／ 11/4 (水) 20:00〜11/11(水) 01:59まで |BRAUN ブラウン 電動シェーバー 充電式 シリーズ9Pro+ プレミアムモデル 9577cc-v 男性 男性用 メンズ 顔 顔そり ムダ毛処理 深剃り",
+    "price": 48906,
+    "rating": 4.47,
+    "reviews": 19,
+    "shopName": "ブラウンビューティー公式ストア",
+    "shopCode": "braun",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/braun/cabinet/event/2611/1104/9577cc-v.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t4o9o.nrqgi048.g00t4o9o.nrqgjc67/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbraun%2F9577cc-v%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "健康家電",
+    "daysOn": 4,
+    "bestRank": 3,
+    "avgRank": 8.8
+   },
+   {
+    "rank": 18,
+    "itemCode": "beautyeveryday:10000627",
+    "itemName": "サロニア スピーディーイオンドライヤー サロニアドライヤー 大風量 マイナスイオン 速乾 時短 軽量 軽い コンパクト 折り畳み ダメージ軽減 スタイリング SALONIA salonia くせ毛 新生活 家電 日時指定 新生活応援",
+    "price": 4950,
+    "rating": 4.52,
+    "reviews": 248,
+    "shopName": "ニコニコライフ",
+    "shopCode": "beautyeveryday",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyeveryday/cabinet/heakea/11920277/salonia-iondryer3.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uh2zo.nrqgi213.g00uh2zo.nrqgj838/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyeveryday%2F4582267399890%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 10,
+    "avgRank": 12.0
+   },
+   {
+    "rank": 19,
+    "itemCode": "doshisha-marche:10000266",
+    "itemName": "＼2点以上10%OFF／数量限定おまけ付 ゴリラのひとつかみ スーパーゴリラのひとつかみ ゴリラ仙人のひとつかみ 【正規品 公式通販】 ふくらはぎケア 片足タイプ 健康グッズ 癒し 美容 美脚 レッグケア 足 脚 強力 ハイパワー 軽量 簡単装着 コンパクト ごりら むくみ",
+    "price": 5500,
+    "rating": 4.56,
+    "reviews": 1792,
+    "shopName": "ドウシシャマルシェ　楽天市場店",
+    "shopCode": "doshisha-marche",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/doshisha-marche/cabinet/gorilla/p10/grf-2401_n.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u97qo.nrqgia30.g00u97qo.nrqgj3c5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdoshisha-marche%2Fgrf-2401%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "健康家電",
+    "daysOn": 4,
+    "bestRank": 7,
+    "avgRank": 12.5
+   },
+   {
+    "rank": 20,
     "itemCode": "mycosmeticbox:10000138",
     "itemName": "【本気で最安値挑戦中・なくなり次第終了】【1年保証付】kinujo ヘアドライヤーKH301　絹女ドライヤー KINUJO Silk Premium Dryer キヌージョシルクプレミアムドライヤー / KINUJO Hair Dryer Voyage ボヤージュ 大風量 速乾 軽量 ツヤ髪 美髪",
     "price": 24200,
@@ -2030,22 +2140,7 @@
     "avgRank": 12.8
    },
    {
-    "rank": 14,
-    "itemCode": "panasonic-store:10000005",
-    "itemName": "【公式店】 パナソニック 2025年度モデル ヘアードライヤー ナノケア EH-NA0K 無料ギフトラッピング 高浸透ナノイー ヘアケア 大風量 速乾 コンパクト 軽量 人気 温度 高級 潤い ツヤ まとまり ダメージケア UVケア 送料無料 クリスマス",
-    "price": 34967,
-    "rating": 4.69,
-    "reviews": 1210,
-    "shopName": "Panasonic Store Plus 楽天市場店",
-    "shopCode": "panasonic-store",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/panasonic-store/cabinet/banner/thumb/eh-na0k_004.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ubhyo.nrqgibf5.g00ubhyo.nrqgjcc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-na0j-a%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 13,
-    "avgRank": 14.2
-   },
-   {
-    "rank": 15,
+    "rank": 21,
     "itemCode": "mrock:10012094",
     "itemName": "【ケノン 公式　最新バージョン】 脱毛器 ランキング587週1位※ 日本製 美顔器 家庭用 ムダ毛処理 ヒゲ ボディ メンズレディース アンダーヘア レーザー 髭 光美容器 脱毛器ケノン公式 VIO 光脱毛器 口コミ IPL 介護 脱毛機 ホーム フラッシュ 美顔機 ※詳細ペ-ジ※9 ケツ毛",
     "price": 79800,
@@ -2061,100 +2156,84 @@
     "avgRank": 15.2
    },
    {
-    "rank": 16,
-    "itemCode": "marble-inc:10000649",
-    "itemName": "【国内正規品】【1年保証】【レビュー2,000件超】KINUJO PRO ストレートアイロン KP001 LM225 KPS24 サファイア 選べる3機種 ヘアアイロン 絹女プロ キヌージョ サロン専売品",
-    "price": 23980,
-    "rating": 4.68,
-    "reviews": 2214,
-    "shopName": "美容コスメ マーブルストア",
-    "shopCode": "marble-inc",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/marble-inc/cabinet/imgrc0344629484.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u0u1o.nrqgifc6.g00u0u1o.nrqgja7f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmarble-inc%2F2915-001200%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 22,
+    "itemCode": "link5520889:10000001",
+    "itemName": "★19700円！yete公式 yete（エイティー）脱毛器 サファイア冷却技術 ★snsで人気★男女兼用 VIO対応 無痛脱毛 無限照射回数 ヒゲ脱毛 脱毛機 シェーバー プロムダ毛処理 脱毛器おすすめ 自宅でフラッシュ脱毛 メンズ脱毛器 口コミ 美顔器",
+    "price": 35800,
+    "rating": 4.44,
+    "reviews": 4046,
+    "shopName": "yete公式ショップ",
+    "shopCode": "link5520889",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/link5520889/cabinet/11905574/mb-19700.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tprno.nrqgi38d.g00tprno.nrqgj78d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flink5520889%2Fbt01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
     "daysOn": 4,
-    "bestRank": 14,
+    "bestRank": 12,
+    "avgRank": 15.5
+   },
+   {
+    "rank": 23,
+    "itemCode": "ulike-store:10000046",
+    "itemName": "＼本日ポイント5倍+数量限定！豪華特典／【クーポンで69,800円 → 45,371円+条件達成で合計3,000P！10/30〜11/1】＜新発売＞ Ulike 公式 Air 10 Max IPL 光美容器 2026年モデル ユーライク 脱毛器 脱毛 サファイア美容器 冷却機能 USHRモード 顔 ワキ 自宅ケア",
+    "price": 69800,
+    "rating": 4.47,
+    "reviews": 8288,
+    "shopName": "ULIKE CARE",
+    "shopCode": "ulike-store",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ulike-store/cabinet/kiritanimireisan/air10max_thumb_ma.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7u0o.nrqgi29c.g00u7u0o.nrqgjd08/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fulike-store%2Fair10-ui20%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
+    "daysOn": 4,
+    "bestRank": 7,
+    "avgRank": 17.2
+   },
+   {
+    "rank": 24,
+    "itemCode": "panasonic-store:10001874",
+    "itemName": "【公式店】【新モデル追加】 パナソニック ヘアードライヤー イオニティ選べる4色 　EH-NE8N/NE9N/NE9P 無料ギフトラッピング マイナスイオン UV・摩擦ダメージ 速乾 指通り 小型 コンパクト 軽量 ドライヤー 送料無料 クリスマス",
+    "price": 15985,
+    "rating": 4.52,
+    "reviews": 173,
+    "shopName": "Panasonic Store Plus 楽天市場店",
+    "shopCode": "panasonic-store",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/panasonic-store/cabinet/banner/thumb/eh-ne9n-w_01.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ubhyo.nrqgibf5.g00ubhyo.nrqgjcc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-ne8n-w%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 13,
+    "avgRank": 17.5
+   },
+   {
+    "rank": 25,
+    "itemCode": "mtgec-beauty:10002127",
+    "itemName": "＼持ち運びに便利な コードレスアイロン／ ReFa公式店 ミニ ヘアアイロン リファ フィンガーアイロン ST ReFa finger iron ストレートアイロン 持ち運び 充電 前髪 ギフト プレゼント 海外対応 コンパクト コードレス 中学生",
+    "price": 14500,
+    "rating": 4.28,
+    "reviews": 1069,
+    "shopName": "MTG ONLINESHOP",
+    "shopCode": "mtgec-beauty",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/finger_iron_st/imgrc0135157776.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F5439720109%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 9,
     "avgRank": 19.0
    },
    {
-    "rank": 17,
-    "itemCode": "chouchou-store:10001143",
-    "itemName": "【正規販売店/楽天1位/ヘアオイルとセットでお得！】クレイツ カールプロSR 正規品 26mm 32mm 38mm 45mm 美容師 ヘアケア ギフト プレゼント プロ サロン専売品 痛まない 太め コテ ヘアアイロン 巻き髪 前髪 軽量 持ち運び 1年保証 送料無料",
-    "price": 5779,
-    "rating": 4.6,
-    "reviews": 844,
-    "shopName": "CHOUCHOU 楽天市場店",
-    "shopCode": "chouchou-store",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/chouchou-store/cabinet/create/curlpro-sr/cpsr_lp-2.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tlvio.nrqgi596.g00tlvio.nrqgj8d8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fchouchou-store%2Fcurlpro-sr-32mm%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 26,
+    "itemCode": "azusa:10000180",
+    "itemName": "期間限定！4,190円【楽天1位！AI温度制御&美容師監修】 ドライヤー 大風量 低温速乾 1400w ヘアドライヤー 9億マイナスイオン 高速風 12モード調節 ヘアドライヤー 速乾 時短 静電気防止 静音設計 ダメージ軽減 髪質改善 ヘアケア 美髪 ツヤ髪 ホワイト グレー",
+    "price": 8380,
+    "rating": 4.55,
+    "reviews": 2397,
+    "shopName": "春夏秋冬",
+    "shopCode": "azusa",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/azusa/cabinet/dryer01/azusa16_main03a.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tyy9o.nrqgib24.g00tyy9o.nrqgj080/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fazusa%2Fazusa16%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 4,
-    "bestRank": 12,
-    "avgRank": 20.0
+    "bestRank": 28,
+    "avgRank": 28.5
    },
    {
-    "rank": 18,
-    "itemCode": "shopjapan:10005374",
-    "itemName": "【公式】返品保証付 楽ちんヒアリング SK-05正規品 ベージュ ブラック ショップジャパン公式 集音器 耳掛けタイプ 耳掛け式 軽量 充電式 快適 USB充電 敬老の日 母の日 父の日 ギフト プレゼント 贈り物 両親 親",
-    "price": 10890,
-    "rating": 3.92,
-    "reviews": 607,
-    "shopName": "ショップジャパン 楽天市場店",
-    "shopCode": "shopjapan",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/shopjapan/cabinet/rah/main_2606.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ppmmo.nrqgi1d1.g00ppmmo.nrqgjfda/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshopjapan%2Frah20set13860%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "健康家電",
-    "daysOn": 4,
-    "bestRank": 7,
-    "avgRank": 20.8
-   },
-   {
-    "rank": 19,
-    "itemCode": "braun:10001087",
-    "itemName": "＼43%OFFクーポン利用で 85,800 ⇒ 48,906円／ 11/4 (水) 20:00〜11/11(水) 01:59まで |BRAUN ブラウン 電動シェーバー 充電式 シリーズ9Pro+ プレミアムモデル 9577cc-v 男性 男性用 メンズ 顔 顔そり ムダ毛処理 深剃り",
-    "price": 48906,
-    "rating": 4.47,
-    "reviews": 19,
-    "shopName": "ブラウンビューティー公式ストア",
-    "shopCode": "braun",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/braun/cabinet/event/2611/1104/9577cc-v.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t4o9o.nrqgi048.g00t4o9o.nrqgjc67/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbraun%2F9577cc-v%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "健康家電",
-    "daysOn": 3,
-    "bestRank": 3,
-    "avgRank": 10.7
-   },
-   {
-    "rank": 20,
-    "itemCode": "doshisha-marche:10000266",
-    "itemName": "＼2点以上10%OFF／数量限定おまけ付 ゴリラのひとつかみ スーパーゴリラのひとつかみ ゴリラ仙人のひとつかみ 【正規品 公式通販】 ふくらはぎケア 片足タイプ 健康グッズ 癒し 美容 美脚 レッグケア 足 脚 強力 ハイパワー 軽量 簡単装着 コンパクト ごりら むくみ",
-    "price": 5500,
-    "rating": 4.56,
-    "reviews": 1792,
-    "shopName": "ドウシシャマルシェ　楽天市場店",
-    "shopCode": "doshisha-marche",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/doshisha-marche/cabinet/gorilla/p10/grf-2401_n.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u97qo.nrqgia30.g00u97qo.nrqgj3c5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdoshisha-marche%2Fgrf-2401%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "健康家電",
-    "daysOn": 3,
-    "bestRank": 7,
-    "avgRank": 11.3
-   },
-   {
-    "rank": 21,
-    "itemCode": "beautyeveryday:10000627",
-    "itemName": "サロニア スピーディーイオンドライヤー サロニアドライヤー 大風量 マイナスイオン 速乾 時短 軽量 軽い コンパクト 折り畳み ダメージ軽減 スタイリング SALONIA salonia くせ毛 新生活 家電 日時指定 新生活応援",
-    "price": 4950,
-    "rating": 4.52,
-    "reviews": 248,
-    "shopName": "ニコニコライフ",
-    "shopCode": "beautyeveryday",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/beautyeveryday/cabinet/heakea/11920277/salonia-iondryer3.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uh2zo.nrqgi213.g00uh2zo.nrqgj838/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbeautyeveryday%2F4582267399890%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 10,
-    "avgRank": 11.3
-   },
-   {
-    "rank": 22,
+    "rank": 27,
     "itemCode": "kinujo:10000000",
     "itemName": "【公式限定2年延長保証付き】 絹女 KINUJO ストレートアイロン LM225 シルクプレート ヘアアイロン コテ ヘアケア スタイリング ツヤ髪 ダメージレス マイナスイオン 傷みにくい キヌージョ メーカー保証1年 梅雨 ギフト プレゼント 誕生日 記念日",
     "price": 24200,
@@ -2169,69 +2248,23 @@
     "avgRank": 15.3
    },
    {
-    "rank": 23,
-    "itemCode": "mtgec-beauty:10002127",
-    "itemName": "＼持ち運びに便利な コードレスアイロン／ ReFa公式店 ミニ ヘアアイロン リファ フィンガーアイロン ST ReFa finger iron ストレートアイロン 持ち運び 充電 前髪 ギフト プレゼント 海外対応 コンパクト コードレス 中学生",
-    "price": 14500,
-    "rating": 4.28,
-    "reviews": 1069,
-    "shopName": "MTG ONLINESHOP",
-    "shopCode": "mtgec-beauty",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/finger_iron_st/imgrc0135157776.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F5439720109%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 9,
-    "avgRank": 16.3
-   },
-   {
-    "rank": 24,
-    "itemCode": "link5520889:10000001",
-    "itemName": "★19700円！yete公式 yete（エイティー）脱毛器 サファイア冷却技術 ★snsで人気★男女兼用 VIO対応 無痛脱毛 無限照射回数 ヒゲ脱毛 脱毛機 シェーバー プロムダ毛処理 脱毛器おすすめ 自宅でフラッシュ脱毛 メンズ脱毛器 口コミ 美顔器",
-    "price": 35800,
-    "rating": 4.44,
-    "reviews": 4046,
-    "shopName": "yete公式ショップ",
-    "shopCode": "link5520889",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/link5520889/cabinet/11905574/mb-19700.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tprno.nrqgi38d.g00tprno.nrqgj78d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flink5520889%2Fbt01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rank": 28,
+    "itemCode": "nissoplus:10000178",
+    "itemName": "【かまいたちチャンネルで紹介｜楽天総合1位★ポイントUP】レビュー高評価！足 マッサージ器 EMS フットマッサージャー NIPLUX ニップラックス LEG FIT ふくらはぎ マッサージ機 フットマッサージ コンパクト 持ち運び コードレス 太もも 足裏 脚",
+    "price": 9900,
+    "rating": 4.53,
+    "reviews": 4460,
+    "shopName": "NIPLUX楽天市場店",
+    "shopCode": "nissoplus",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/nissoplus/cabinet/item/leg_fit3/main/lfm_01_260807.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tmc7o.nrqgic11.g00tmc7o.nrqgj92a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnissoplus%2Fnp-lf23%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "法規或安全疑慮",
     "daysOn": 3,
-    "bestRank": 12,
-    "avgRank": 16.7
+    "bestRank": 15,
+    "avgRank": 16.0
    },
    {
-    "rank": 25,
-    "itemCode": "panasonic-store:10001874",
-    "itemName": "【公式店】【新モデル追加】 パナソニック ヘアードライヤー イオニティ選べる4色 　EH-NE8N/NE9N/NE9P 無料ギフトラッピング マイナスイオン UV・摩擦ダメージ 速乾 指通り 小型 コンパクト 軽量 ドライヤー 送料無料 クリスマス",
-    "price": 15985,
-    "rating": 4.52,
-    "reviews": 173,
-    "shopName": "Panasonic Store Plus 楽天市場店",
-    "shopCode": "panasonic-store",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/panasonic-store/cabinet/banner/thumb/eh-ne9n-w_01.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ubhyo.nrqgibf5.g00ubhyo.nrqgjcc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-ne8n-w%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 13,
-    "avgRank": 17.0
-   },
-   {
-    "rank": 26,
-    "itemCode": "ulike-store:10000046",
-    "itemName": "＼本日ポイント5倍+数量限定！豪華特典／【クーポンで69,800円 → 45,371円+条件達成で合計3,000P！10/30〜11/1】＜新発売＞ Ulike 公式 Air 10 Max IPL 光美容器 2026年モデル ユーライク 脱毛器 脱毛 サファイア美容器 冷却機能 USHRモード 顔 ワキ 自宅ケア",
-    "price": 69800,
-    "rating": 4.47,
-    "reviews": 8288,
-    "shopName": "ULIKE CARE",
-    "shopCode": "ulike-store",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ulike-store/cabinet/kiritanimireisan/air10max_thumb_ma.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7u0o.nrqgi29c.g00u7u0o.nrqgjd08/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fulike-store%2Fair10-ui20%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "法規或安全疑慮",
-    "daysOn": 3,
-    "bestRank": 7,
-    "avgRank": 17.3
-   },
-   {
-    "rank": 27,
+    "rank": 29,
     "itemCode": "mtgec-beauty:10002632",
     "itemName": "＼梳かすだけ簡単スタイリング／ 火傷しにくい リファストレートブローアイロン ReFa STRAIGHT BLOW IRON ブラシ型ヘアアイロン ストレートブラシ ヒートブラシ ブラシアイロン コームアイロン ブラシ感覚 まとまり髪 テクニック不要 サロン級 時短 ヘアアイロン 広がりケア",
     "price": 23100,
@@ -2246,7 +2279,7 @@
     "avgRank": 23.3
    },
    {
-    "rank": 28,
+    "rank": 30,
     "itemCode": "marble-inc:10000554",
     "itemName": "【11/8まで限定8000円OFFクーポン】【シリアルNo付】【正規品取扱店】ラディアント シルクプロアイロン 28mm 35mm ヘアアイロン ストレートアイロン radiant シルクプレート 2025年新仕様 プロ仕様 レビューでヘアオイル",
     "price": 24200,
@@ -2259,36 +2292,6 @@
     "daysOn": 3,
     "bestRank": 18,
     "avgRank": 25.3
-   },
-   {
-    "rank": 29,
-    "itemCode": "azusa:10000180",
-    "itemName": "期間限定！4,190円【楽天1位！AI温度制御&美容師監修】 ドライヤー 大風量 低温速乾 1400w ヘアドライヤー 9億マイナスイオン 高速風 12モード調節 ヘアドライヤー 速乾 時短 静電気防止 静音設計 ダメージ軽減 髪質改善 ヘアケア 美髪 ツヤ髪 ホワイト グレー",
-    "price": 8380,
-    "rating": 4.55,
-    "reviews": 2397,
-    "shopName": "春夏秋冬",
-    "shopCode": "azusa",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/azusa/cabinet/dryer01/azusa16_main03a.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tyy9o.nrqgib24.g00tyy9o.nrqgj080/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fazusa%2Fazusa16%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 28,
-    "avgRank": 28.3
-   },
-   {
-    "rank": 30,
-    "itemCode": "azusa:10000193",
-    "itemName": "期間限定！3,080円【楽天1位・美容家監修】 ヘアアイロン ストレート アイロン 立ち上がり18秒 オイル対応 2way 低温 ダメージ低減 6段階温度調節 130℃〜230℃ マイナスイオン コーム付き 耐熱手袋付属 3重髪保護 軽量 ツヤ髪 カラー退色抑制 PSE認証 海外対応",
-    "price": 5980,
-    "rating": 4.54,
-    "reviews": 827,
-    "shopName": "春夏秋冬",
-    "shopCode": "azusa",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/azusa/cabinet/v2396/v2396_main06.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tyy9o.nrqgib24.g00tyy9o.nrqgj080/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fazusa%2Fv2396%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 3,
-    "avgRank": 13.0
    }
   ],
   "laundry": [
@@ -2303,9 +2306,9 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/889/404889.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404889%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 2.6
+    "avgRank": 2.7
    },
    {
     "rank": 2,
@@ -2318,27 +2321,12 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/117/4901301458117.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4901301458117%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 4.0
+    "avgRank": 4.5
    },
    {
     "rank": 3,
-    "itemCode": "rakuten24:11228829",
-    "itemName": "【1種類を選べる】アリエール 洗濯洗剤 ジェルボール プロ 詰め替え(2袋セット)【アリエール ジェルボール】[洗剤 洗濯 ジェルボール 超メガジャンボ]",
-    "price": 4979,
-    "rating": 4.68,
-    "reviews": 624,
-    "shopName": "楽天24",
-    "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/192/405192.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405192%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
-    "bestRank": 1,
-    "avgRank": 6.6
-   },
-   {
-    "rank": 4,
     "itemCode": "rakuten24:11319035",
     "itemName": "アリエール 洗濯洗剤 ジェルボール プロ 部屋干し＆スポーツ 詰め替え(89個入)【アリエール ジェルボール】",
     "price": 2997,
@@ -2348,12 +2336,12 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/914/4987176284914.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4987176284914%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
-    "avgRank": 6.6
+    "avgRank": 5.8
    },
    {
-    "rank": 5,
+    "rank": 4,
     "itemCode": "rakuten24:11348605",
     "itemName": "アタック抗菌EX 部屋干し用 つめかえ用(1520g×6個)【アタック】",
     "price": 6171,
@@ -2363,9 +2351,24 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/148/4901301458148.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4901301458148%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 4,
-    "avgRank": 8.2
+    "avgRank": 7.7
+   },
+   {
+    "rank": 5,
+    "itemCode": "rakuten24:11228829",
+    "itemName": "【1種類を選べる】アリエール 洗濯洗剤 ジェルボール プロ 詰め替え(2袋セット)【アリエール ジェルボール】[洗剤 洗濯 ジェルボール 超メガジャンボ]",
+    "price": 4979,
+    "rating": 4.68,
+    "reviews": 624,
+    "shopName": "楽天24",
+    "shopCode": "rakuten24",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/192/405192.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405192%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 6,
+    "bestRank": 1,
+    "avgRank": 8.7
    },
    {
     "rank": 6,
@@ -2379,9 +2382,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/orbtech/cabinet/biiino/item/main-image-2/20240918141731_1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tebzo.nrqgiab5.g00tebzo.nrqgjfc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Forbtech%2Fa002%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "洗碗精・清潔劑",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 7,
-    "avgRank": 9.2
+    "avgRank": 9.8
    },
    {
     "rank": 7,
@@ -2395,9 +2398,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kanfudo/cabinet/12702040/13087856/main_0001.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00urpwo.nrqgi14f.g00urpwo.nrqgj52d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkanfudo%2Fkanfudo174-2%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "洗碗精・清潔劑",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 11.8
+    "avgRank": 11.2
    },
    {
     "rank": 8,
@@ -2410,9 +2413,9 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/025/405025.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405025%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 12.6
+    "avgRank": 11.5
    },
    {
     "rank": 9,
@@ -2425,9 +2428,9 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/421/405421.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405421%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 12,
-    "avgRank": 16.0
+    "avgRank": 16.7
    },
    {
     "rank": 10,
@@ -2440,12 +2443,90 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/954/404954.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404954%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 5,
-    "avgRank": 19.8
+    "avgRank": 21.2
    },
    {
     "rank": 11,
+    "itemCode": "hoconico:10000005",
+    "itemName": "【公式】モルクリアプロ カビ取り剤 カビ取りスプレー 超強力 業務用並みの威力！ ゴムパッキン 窓枠 お風呂 壁紙 天井 黒カビ 赤カビ 日本製 99.99%除菌 安全性検証済 プロも使う劇落ちカビ取り剤 / ホテルやクリニックでも活躍！ Mol clear Pro",
+    "price": 6980,
+    "rating": 4.12,
+    "reviews": 217,
+    "shopName": "ホコニコ楽天市場店",
+    "shopCode": "hoconico",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hoconico/cabinet/09740258/mol/molclear_sm03.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ueqho.nrqgicf9.g00ueqho.nrqgjbc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhoconico%2Fmolclearpro%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
+    "daysOn": 5,
+    "bestRank": 8,
+    "avgRank": 11.0
+   },
+   {
+    "rank": 12,
+    "itemCode": "tv-ya:10002730",
+    "itemName": "シュワッ！とパンチ 【 洗浄剤 弱アルカリ性 酸素系漂白剤 界面活性剤不使用 酵素系漂白剤 テレビショッピング テレビ通販 しゅわっとパンチ シュワッとパンチ シュワっとパンチ しゅわっとパンチ シュワッとパンチ洗浄剤 大掃除 1キロ 600g 】",
+    "price": 3280,
+    "rating": 3.94,
+    "reviews": 332,
+    "shopName": "ダイレクトテレショップ",
+    "shopCode": "tv-ya",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tv-ya/cabinet/item/shuwattopunc-a-1/thum/shuwattopunc-a-1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pqoro.nrqgibf7.g00pqoro.nrqgj9c6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftv-ya%2Fshuwattopunc-a-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
+    "daysOn": 5,
+    "bestRank": 10,
+    "avgRank": 16.2
+   },
+   {
+    "rank": 13,
+    "itemCode": "kanfudo:10000258",
+    "itemName": "【正規品】ピエールダルジャン 300g 全6種 選べる 限定ローズ 限定オリエンタルパフューム フランス製 マルチクリーナー 多目的クリーナー 固形洗剤 天然成分",
+    "price": 2880,
+    "rating": 4.39,
+    "reviews": 87,
+    "shopName": "KANFUDO",
+    "shopCode": "kanfudo",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kanfudo/cabinet/12702040/13087856/main_01.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00urpwo.nrqgi14f.g00urpwo.nrqgj52d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkanfudo%2Fkanfudo174-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "洗碗精・清潔劑",
+    "daysOn": 5,
+    "bestRank": 15,
+    "avgRank": 17.0
+   },
+   {
+    "rank": 14,
+    "itemCode": "rakuten24:11224272",
+    "itemName": "【1種類を選べる】レノア 超消臭 柔軟剤 特大 詰め替え(745ml×6セット)【レノア超消臭】[液体 大容量]",
+    "price": 4748,
+    "rating": 4.7,
+    "reviews": 379,
+    "shopName": "楽天24",
+    "shopCode": "rakuten24",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/171/405171.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405171%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 10,
+    "avgRank": 18.6
+   },
+   {
+    "rank": 15,
+    "itemCode": "tsuruha:10118117",
+    "itemName": "《セット販売》 *旧品につき訳あり・処分品*花王　アタック抗菌EX　部屋干し用詰め替え　ツルハG限定品　2.13kg×4個セット【送料無料】",
+    "price": 3480,
+    "rating": 5.0,
+    "reviews": 9,
+    "shopName": "ツルハドラッグ",
+    "shopCode": "tsuruha",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tsuruha/cabinet/syohin110/10186935.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rbnvo.nrqgi873.g00rbnvo.nrqgj237/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftsuruha%2F10186935%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 24,
+    "avgRank": 25.6
+   },
+   {
+    "rank": 16,
     "itemCode": "rakuten24:11342601",
     "itemName": "さらさ 洗濯洗剤 液体 ほのかでやさしい柑橘系の香り 詰め替え 1490g(1490g×6セット)【さらさ】",
     "price": 10340,
@@ -2460,23 +2541,38 @@
     "avgRank": 6.0
    },
    {
-    "rank": 12,
-    "itemCode": "hoconico:10000005",
-    "itemName": "【公式】モルクリアプロ カビ取り剤 カビ取りスプレー 超強力 業務用並みの威力！ ゴムパッキン 窓枠 お風呂 壁紙 天井 黒カビ 赤カビ 日本製 99.99%除菌 安全性検証済 プロも使う劇落ちカビ取り剤 / ホテルやクリニックでも活躍！ Mol clear Pro",
-    "price": 6980,
-    "rating": 4.12,
-    "reviews": 217,
-    "shopName": "ホコニコ楽天市場店",
-    "shopCode": "hoconico",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hoconico/cabinet/09740258/mol/molclear_sm03.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ueqho.nrqgicf9.g00ueqho.nrqgjbc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhoconico%2Fmolclearpro%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "法規或安全疑慮",
+    "rank": 17,
+    "itemCode": "rakutensokuhaimart:10025930",
+    "itemName": "フレア フレグランス IROKA 柔軟剤 ネイキッドリリーの香り 詰め替え 超特大サイズ 1200ml 【フレア フレグランス】 柔軟剤",
+    "price": 1248,
+    "rating": 4.89,
+    "reviews": 97,
+    "shopName": "楽天24エクスプレス",
+    "shopCode": "rakutensokuhaimart",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/355/4901301397355.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4901301397355%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 4,
-    "bestRank": 8,
-    "avgRank": 10.8
+    "bestRank": 4,
+    "avgRank": 10.5
    },
    {
-    "rank": 13,
+    "rank": 18,
+    "itemCode": "legendonlineshop:10000049",
+    "itemName": "東金石鹸 マルチクレンザー クレンザー 万能クリーナー マルチクリーナー 水垢 水アカ 水あか 湯あか 黄ばみ 黒ズミ 手垢 掃除 掃除用品 石けん 石ケン 汚れ落とし 洗剤 浴槽 浴室 風呂 床 キッチン 台所 シンク 食器 金属 鏡 ガラス ヒルナンデス レジェンド松下 石鹸",
+    "price": 1980,
+    "rating": 4.2,
+    "reviews": 55,
+    "shopName": "レジェンドオンラインショップ",
+    "shopCode": "legendonlineshop",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/legendonlineshop/cabinet/biiino/item/main-image/20241003174946_1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ulupo.nrqgif20.g00ulupo.nrqgja9e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flegendonlineshop%2F10000311%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "洗碗精・清潔劑",
+    "daysOn": 4,
+    "bestRank": 1,
+    "avgRank": 11.2
+   },
+   {
+    "rank": 19,
     "itemCode": "rakuten24:11279568",
     "itemName": "【1種類を選べる】ボールド 洗濯洗剤 ジェルボール4in1 詰替(2袋セット)【ボールド ジェルボール】",
     "price": 5550,
@@ -2491,38 +2587,68 @@
     "avgRank": 15.0
    },
    {
-    "rank": 14,
-    "itemCode": "rakuten24:11224272",
-    "itemName": "【1種類を選べる】レノア 超消臭 柔軟剤 特大 詰め替え(745ml×6セット)【レノア超消臭】[液体 大容量]",
-    "price": 4748,
-    "rating": 4.7,
-    "reviews": 379,
+    "rank": 20,
+    "itemCode": "cosmebox:10054192",
+    "itemName": "ファーファ(FaFa) ファインフレグランス オム 詰替用 特大1400ml 洗濯柔軟剤 抗菌・防臭 静電気防止(FINE FRAGRANCE HOMME)",
+    "price": 1290,
+    "rating": 0.0,
+    "reviews": 0,
+    "shopName": "コスメボックス",
+    "shopCode": "cosmebox",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cosmebox/cabinet/item74/j4902135672922_1.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q7yxo.nrqgi8ae.g00q7yxo.nrqgjcdc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmebox%2Fj4902135672922%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 9,
+    "avgRank": 15.5
+   },
+   {
+    "rank": 21,
+    "itemCode": "rakuten24:11128650",
+    "itemName": "【1種類を選べる】アタックZERO 洗濯洗剤 詰替用(1460g×6個入)【アタックZERO】",
+    "price": 10794,
+    "rating": 4.77,
+    "reviews": 1352,
     "shopName": "楽天24",
     "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/171/405171.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405171%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/888/404888.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404888%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 4,
-    "bestRank": 10,
-    "avgRank": 15.8
+    "bestRank": 2,
+    "avgRank": 16.5
    },
    {
-    "rank": 15,
-    "itemCode": "kanfudo:10000258",
-    "itemName": "【正規品】ピエールダルジャン 300g 全6種 選べる 限定ローズ 限定オリエンタルパフューム フランス製 マルチクリーナー 多目的クリーナー 固形洗剤 天然成分",
-    "price": 2880,
-    "rating": 4.39,
-    "reviews": 87,
-    "shopName": "KANFUDO",
-    "shopCode": "kanfudo",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kanfudo/cabinet/12702040/13087856/main_01.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00urpwo.nrqgi14f.g00urpwo.nrqgj52d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkanfudo%2Fkanfudo174-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "洗碗精・清潔劑",
+    "rank": 22,
+    "itemCode": "k-relight:10001303",
+    "itemName": "ドーバー パストリーゼ 77 詰め替え用 5000ml（5L） 注ぎ口付き アルコール消毒液 防菌 消臭 防カビ ウィルス",
+    "price": 3810,
+    "rating": 4.83,
+    "reviews": 1013,
+    "shopName": "Re-light",
+    "shopCode": "k-relight",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/k-relight/cabinet/imgrc0100195713.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tvoao.nrqgidfb.g00tvoao.nrqgj6e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fk-relight%2F77-4510759890013blk004%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 4,
-    "bestRank": 15,
-    "avgRank": 16.8
+    "bestRank": 13,
+    "avgRank": 17.0
    },
    {
-    "rank": 16,
+    "rank": 23,
+    "itemCode": "rakutensokuhaimart:10040432",
+    "itemName": "日立 洗濯槽クリーナー SK-1500",
+    "price": 2172,
+    "rating": 4.89,
+    "reviews": 57,
+    "shopName": "楽天24エクスプレス",
+    "shopCode": "rakutensokuhaimart",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/kaden/4549873133850-0.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F100000000100582%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮",
+    "daysOn": 4,
+    "bestRank": 14,
+    "avgRank": 17.5
+   },
+   {
+    "rank": 24,
     "itemCode": "hikaritv:10251702",
     "itemName": "さらさ 洗濯洗剤 液体 ほのかでやさしい柑橘系の香り 詰め替え ウルトラジャンボ 6袋",
     "price": 7980,
@@ -2537,129 +2663,6 @@
     "avgRank": 17.8
    },
    {
-    "rank": 17,
-    "itemCode": "tv-ya:10002730",
-    "itemName": "シュワッ！とパンチ 【 洗浄剤 弱アルカリ性 酸素系漂白剤 界面活性剤不使用 酵素系漂白剤 テレビショッピング テレビ通販 しゅわっとパンチ シュワッとパンチ シュワっとパンチ しゅわっとパンチ シュワッとパンチ洗浄剤 大掃除 1キロ 600g 】",
-    "price": 3280,
-    "rating": 3.94,
-    "reviews": 332,
-    "shopName": "ダイレクトテレショップ",
-    "shopCode": "tv-ya",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tv-ya/cabinet/item/shuwattopunc-a-1/thum/shuwattopunc-a-1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00pqoro.nrqgibf7.g00pqoro.nrqgj9c6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftv-ya%2Fshuwattopunc-a-1%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "法規或安全疑慮",
-    "daysOn": 4,
-    "bestRank": 10,
-    "avgRank": 17.8
-   },
-   {
-    "rank": 18,
-    "itemCode": "tsuruha:10118117",
-    "itemName": "《セット販売》 *旧品につき訳あり・処分品*花王　アタック抗菌EX　部屋干し用詰め替え　ツルハG限定品　2.13kg×4個セット【送料無料】",
-    "price": 3480,
-    "rating": 5.0,
-    "reviews": 9,
-    "shopName": "ツルハドラッグ",
-    "shopCode": "tsuruha",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tsuruha/cabinet/syohin110/10186935.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rbnvo.nrqgi873.g00rbnvo.nrqgj237/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftsuruha%2F10186935%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 24,
-    "avgRank": 26.0
-   },
-   {
-    "rank": 19,
-    "itemCode": "rakutensokuhaimart:10025930",
-    "itemName": "フレア フレグランス IROKA 柔軟剤 ネイキッドリリーの香り 詰め替え 超特大サイズ 1200ml 【フレア フレグランス】 柔軟剤",
-    "price": 1248,
-    "rating": 4.89,
-    "reviews": 97,
-    "shopName": "楽天24エクスプレス",
-    "shopCode": "rakutensokuhaimart",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/355/4901301397355.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4901301397355%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 4,
-    "avgRank": 12.7
-   },
-   {
-    "rank": 20,
-    "itemCode": "rakuten24:11128650",
-    "itemName": "【1種類を選べる】アタックZERO 洗濯洗剤 詰替用(1460g×6個入)【アタックZERO】",
-    "price": 10794,
-    "rating": 4.77,
-    "reviews": 1352,
-    "shopName": "楽天24",
-    "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/888/404888.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404888%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 2,
-    "avgRank": 14.7
-   },
-   {
-    "rank": 21,
-    "itemCode": "legendonlineshop:10000049",
-    "itemName": "東金石鹸 マルチクレンザー クレンザー 万能クリーナー マルチクリーナー 水垢 水アカ 水あか 湯あか 黄ばみ 黒ズミ 手垢 掃除 掃除用品 石けん 石ケン 汚れ落とし 洗剤 浴槽 浴室 風呂 床 キッチン 台所 シンク 食器 金属 鏡 ガラス ヒルナンデス レジェンド松下 石鹸",
-    "price": 1980,
-    "rating": 4.2,
-    "reviews": 55,
-    "shopName": "レジェンドオンラインショップ",
-    "shopCode": "legendonlineshop",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/legendonlineshop/cabinet/biiino/item/main-image/20241003174946_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ulupo.nrqgif20.g00ulupo.nrqgja9e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flegendonlineshop%2F10000311%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "洗碗精・清潔劑",
-    "daysOn": 3,
-    "bestRank": 1,
-    "avgRank": 14.7
-   },
-   {
-    "rank": 22,
-    "itemCode": "k-relight:10001303",
-    "itemName": "ドーバー パストリーゼ 77 詰め替え用 5000ml（5L） 注ぎ口付き アルコール消毒液 防菌 消臭 防カビ ウィルス",
-    "price": 3810,
-    "rating": 4.83,
-    "reviews": 1013,
-    "shopName": "Re-light",
-    "shopCode": "k-relight",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/k-relight/cabinet/imgrc0100195713.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tvoao.nrqgidfb.g00tvoao.nrqgj6e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fk-relight%2F77-4510759890013blk004%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 13,
-    "avgRank": 15.7
-   },
-   {
-    "rank": 23,
-    "itemCode": "cosmebox:10054192",
-    "itemName": "ファーファ(FaFa) ファインフレグランス オム 詰替用 特大1400ml 洗濯柔軟剤 抗菌・防臭 静電気防止(FINE FRAGRANCE HOMME)",
-    "price": 1290,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "コスメボックス",
-    "shopCode": "cosmebox",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/cosmebox/cabinet/item74/j4902135672922_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q7yxo.nrqgi8ae.g00q7yxo.nrqgjcdc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmebox%2Fj4902135672922%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
-    "bestRank": 9,
-    "avgRank": 17.7
-   },
-   {
-    "rank": 24,
-    "itemCode": "rakutensokuhaimart:10040432",
-    "itemName": "日立 洗濯槽クリーナー SK-1500",
-    "price": 2172,
-    "rating": 4.89,
-    "reviews": 57,
-    "shopName": "楽天24エクスプレス",
-    "shopCode": "rakutensokuhaimart",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/kaden/4549873133850-0.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F100000000100582%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "法規或安全疑慮",
-    "daysOn": 3,
-    "bestRank": 14,
-    "avgRank": 18.7
-   },
-   {
     "rank": 25,
     "itemCode": "rakuten24:11163655",
     "itemName": "【1種類を選べる】レノアハピネス 柔軟剤 詰め替え 特大(720ml×8袋)【レノアハピネス】[レノア 液体 大容量]",
@@ -2670,9 +2673,9 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/028/405028.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F405028%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
+    "daysOn": 4,
     "bestRank": 16,
-    "avgRank": 20.7
+    "avgRank": 19.8
    },
    {
     "rank": 26,
@@ -2685,9 +2688,9 @@
     "shopCode": "rakutensokuhaimart",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/211/4901301466211.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4901301466211%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 3,
+    "daysOn": 4,
     "bestRank": 26,
-    "avgRank": 26.7
+    "avgRank": 26.5
    },
    {
     "rank": 27,
@@ -2700,27 +2703,12 @@
     "shopCode": "rakutensokuhaimart",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/sku/700047-sku.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F700047%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
+    "daysOn": 3,
     "bestRank": 5,
-    "avgRank": 8.0
-   },
-   {
-    "rank": 28,
-    "itemCode": "rakuten24:11223013",
-    "itemName": "さらさ 柔軟剤 詰め替え 超特大(1350ml*6袋セット)【さらさ】",
-    "price": 8890,
-    "rating": 4.81,
-    "reviews": 218,
-    "shopName": "楽天24",
-    "shopCode": "rakuten24",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/528/568528.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F568528%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 9,
     "avgRank": 9.0
    },
    {
-    "rank": 29,
+    "rank": 28,
     "itemCode": "rakuten24:11148573",
     "itemName": "【1種類を選べる】ハミングフレア 柔軟剤 つめかえ用 梱販売用(4袋入)【フレア フレグランス】",
     "price": 5243,
@@ -2730,24 +2718,40 @@
     "shopCode": "rakuten24",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/953/404953.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.nrqgi941.g00r136o.nrqgjce3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F404953%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
+    "daysOn": 3,
     "bestRank": 4,
-    "avgRank": 10.0
+    "avgRank": 12.0
+   },
+   {
+    "rank": 29,
+    "itemCode": "rakutensokuhaimart:10042593",
+    "itemName": "アタックZERO ドラム式専用 つめかえ用 2300g 【アタックZERO】 洗濯洗剤",
+    "price": 2475,
+    "rating": 4.74,
+    "reviews": 19,
+    "shopName": "楽天24エクスプレス",
+    "shopCode": "rakutensokuhaimart",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/235/4901301466235.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4901301466235%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 3,
+    "bestRank": 15,
+    "avgRank": 19.3
    },
    {
     "rank": 30,
-    "itemCode": "matinozakka:10022764",
-    "itemName": "ファーファ ファインフレグランス オム 詰替（780mL）柔軟剤/ NSファーファ",
-    "price": 625,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "街の雑貨屋さん",
-    "shopCode": "matinozakka",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/matinozakka/cabinet/img01/4902135672946.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rzxgo.nrqgifb9.g00rzxgo.nrqgj4dc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatinozakka%2F10022778%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 14,
-    "avgRank": 14.0
+    "itemCode": "rakutensokuhaimart:10040765",
+    "itemName": "ジョイ W除菌 食器用洗剤 詰替 930ml 【ジョイ(Joy)】 さわやか微香 / フレッシュクリーン / シトラスレモン / 緑茶 / グレープフルーツ / シトラスオレンジ",
+    "price": 523,
+    "rating": 4.63,
+    "reviews": 19,
+    "shopName": "楽天24エクスプレス",
+    "shopCode": "rakutensokuhaimart",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutensokuhaimart/cabinet/rakuten24/sku/700162-sku.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ugyno.nrqgiebe.g00ugyno.nrqgjfc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F700162%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "洗碗精・清潔劑",
+    "daysOn": 3,
+    "bestRank": 13,
+    "avgRank": 19.7
    }
   ],
   "bath": [
@@ -2763,7 +2767,7 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kiroran/cabinet/13890768/26xmt.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ufk6o.nrqgiefd.g00ufk6o.nrqgjed3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiroran%2Fdl-xmt%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
     "avgRank": 1.2
    },
@@ -2778,9 +2782,9 @@
     "shopCode": "auc-epsomsalt",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/auc-epsomsalt/cabinet/sma_original/101.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r4tyo.nrqgib65.g00r4tyo.nrqgj340/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-epsomsalt%2Fesc-10kg%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 1,
-    "avgRank": 2.6
+    "avgRank": 2.8
    },
    {
     "rank": 3,
@@ -2794,12 +2798,27 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kiroran/cabinet/13890768/26dl.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ufk6o.nrqgiefd.g00ufk6o.nrqgjed3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiroran%2Fdl%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 2,
     "avgRank": 3.0
    },
    {
     "rank": 4,
+    "itemCode": "mtgec-beauty:10002177",
+    "itemName": "リファ シャワーヘッド ファインバブル U プレゼント ギフト ReFa FINE BUBBLE U スキンケア うるおい 美肌 愛犬 節水 結婚 リファ公式店 【国内マーケットシェアNo.1】",
+    "price": 30000,
+    "rating": 4.61,
+    "reviews": 1564,
+    "shopName": "MTG ONLINESHOP",
+    "shopCode": "mtgec-beauty",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/refa_fbu_p/imgrc0143982470.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1579320101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 6,
+    "bestRank": 2,
+    "avgRank": 6.7
+   },
+   {
+    "rank": 5,
     "itemCode": "lekeke:10000143",
     "itemName": "ソープディスペンサー 自動 泡 液体 ディスペンサー 充電式 ステンレス鋼製 ABS オートディスペンサー ハンドソープディスペンサー ノータッチ 吐出量2段階調整 300ml おしゃれ コンパクト 小型 詰め替え IPX5防水 洗面所 キッチン 1年保証",
     "price": 3290,
@@ -2810,24 +2829,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/lekeke/cabinet/09135325/09143874/10938095/1-1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u9cmo.nrqgic45.g00u9cmo.nrqgj42f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flekeke%2Fx20%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 3,
-    "avgRank": 7.2
-   },
-   {
-    "rank": 5,
-    "itemCode": "mtgec-beauty:10002177",
-    "itemName": "リファ シャワーヘッド ファインバブル U プレゼント ギフト ReFa FINE BUBBLE U スキンケア うるおい 美肌 愛犬 節水 結婚 リファ公式店 【国内マーケットシェアNo.1】",
-    "price": 30000,
-    "rating": 4.61,
-    "reviews": 1564,
-    "shopName": "MTG ONLINESHOP",
-    "shopCode": "mtgec-beauty",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mtgec-beauty/cabinet/refa/refa_fbu_p/imgrc0143982470.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00r20go.nrqgib73.g00r20go.nrqgje0a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1579320101%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
-    "bestRank": 2,
-    "avgRank": 7.6
+    "avgRank": 6.8
    },
    {
     "rank": 6,
@@ -2841,9 +2845,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/tora1983/cabinet/od/od/imgrc0103328049.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tfoyo.nrqgi7c0.g00tfoyo.nrqgj8d2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftora1983%2Fod%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
-    "avgRank": 8.8
+    "avgRank": 8.3
    },
    {
     "rank": 7,
@@ -2857,9 +2861,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sinkatec/cabinet/bath/hubath_sh/sm54_s_size.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s7h3o.nrqgi884.g00s7h3o.nrqgj08a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsinkatec%2Fhu_shair_catcher%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 8,
-    "avgRank": 9.8
+    "avgRank": 9.5
    },
    {
     "rank": 8,
@@ -2873,9 +2877,9 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kiroran/cabinet/13890768/dlw-zt1.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ufk6o.nrqgiefd.g00ufk6o.nrqgjed3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiroran%2Fdlw%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 7,
-    "avgRank": 10.2
+    "avgRank": 9.7
    },
    {
     "rank": 9,
@@ -2889,7 +2893,7 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/premmllc/cabinet/09666132/dispenser550.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u43co.nrqgi376.g00u43co.nrqgj1bf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpremmllc%2Fpremm01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 6,
     "avgRank": 10.8
    },
@@ -2904,9 +2908,9 @@
     "shopCode": "libertylife",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/libertylife/cabinet/sale/wonderfulday/b_epsom_3kg_fr.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tm6bo.nrqgi20e.g00tm6bo.nrqgjf50/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flibertylife%2F201019-2%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 7,
-    "avgRank": 12.6
+    "avgRank": 14.8
    },
    {
     "rank": 11,
@@ -2919,28 +2923,12 @@
     "shopCode": "sleepdays",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sleepdays/cabinet/item/barth/bath_tablet/imgrc0130842869.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sk3uo.nrqgi1b5.g00sk3uo.nrqgj886/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsleepdays%2F20000003%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 11,
-    "avgRank": 18.4
+    "avgRank": 19.0
    },
    {
     "rank": 12,
-    "itemCode": "mk-corporation:10003232",
-    "itemName": "＼ワンダフルデー限定P5倍／ お風呂 マグネット 収納 ステンレス 浴室ラック お風呂 ラック さびない おもちゃ マグネットラック シャンプー シャンプーボトル 磁石 浮かせる (L)",
-    "price": 3699,
-    "rating": 4.78,
-    "reviews": 1239,
-    "shopName": "TREMiUM",
-    "shopCode": "mk-corporation",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mk-corporation/cabinet/06071192/rack_l/rack_l_01.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t4mko.nrqgib35.g00t4mko.nrqgj1de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmk-corporation%2Frack-big%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "浴室五金・收納",
-    "daysOn": 5,
-    "bestRank": 15,
-    "avgRank": 20.2
-   },
-   {
-    "rank": 13,
     "itemCode": "roomy:10017673",
     "itemName": "【限定カラー】レコルト オートソープディスペンサー 自動 泡 液体 充電式 ハンドソープ 洗剤 洗面所 キッチン 台所 洗面 コンパクト おしゃれ かわいい シンプル ディスペンサー USB充電 食器用洗剤 防水 RDS-1 RDS-2［ recolte 充電式オートディスペンサー 泡用／液体用 ］",
     "price": 3960,
@@ -2951,9 +2939,25 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/roomy/cabinet/500cart_all/500cart_11g/p10-7/win1004-su026-1_gt01.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00qb0lo.nrqgic43.g00qb0lo.nrqgj75b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Froomy%2Fwin25jul15a01%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 14,
-    "avgRank": 21.8
+    "avgRank": 20.5
+   },
+   {
+    "rank": 13,
+    "itemCode": "mk-corporation:10003232",
+    "itemName": "＼ワンダフルデー限定P5倍／ お風呂 マグネット 収納 ステンレス 浴室ラック お風呂 ラック さびない おもちゃ マグネットラック シャンプー シャンプーボトル 磁石 浮かせる (L)",
+    "price": 3699,
+    "rating": 4.78,
+    "reviews": 1239,
+    "shopName": "TREMiUM",
+    "shopCode": "mk-corporation",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mk-corporation/cabinet/06071192/rack_l/rack_l_01.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00t4mko.nrqgib35.g00t4mko.nrqgj1de/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmk-corporation%2Frack-big%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "浴室五金・收納",
+    "daysOn": 6,
+    "bestRank": 15,
+    "avgRank": 20.8
    },
    {
     "rank": 14,
@@ -2967,12 +2971,89 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/myhomeshop/cabinet/10300832/10351995/10721915/imgrc0330046974.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tz25o.nrqgi2f5.g00tz25o.nrqgj6c0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmyhomeshop%2Fmk-xsjp11%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 5,
+    "daysOn": 6,
     "bestRank": 18,
-    "avgRank": 22.6
+    "avgRank": 22.0
    },
    {
     "rank": 15,
+    "itemCode": "mikirona:10000092",
+    "itemName": "【楽天1位★クーポンで3,070円～】シャワーヘッド マイクロナノバブル 手元止水 6段階モード ミスト 増圧 節水 塩素除去 シャワー フェース 肌ケア 高洗浄力 毛穴 汚れ除去 美肌 美顔 美髪 カートリッジ 美容 取付簡単 国際汎用基準G1/2 新生活 正規品",
+    "price": 6140,
+    "rating": 4.56,
+    "reviews": 3523,
+    "shopName": "Mikirona",
+    "shopCode": "mikirona",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mikirona/cabinet/11312680/imgrc0135318818.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u8azo.nrqgiaff.g00u8azo.nrqgj20e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmikirona%2Fs-hs-11%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 9,
+    "avgRank": 13.4
+   },
+   {
+    "rank": 16,
+    "itemCode": "livingut:10209620",
+    "itemName": "風呂ふた シャッター Ag抗菌 日本製 奥行65～80cm 幅80～160cm （ 風呂蓋 風呂フタ 風呂 ふた シャッタータイプ 抗菌 防カビ シャッター式 お風呂のふた 保温 軽量 75×140 L14 75×150 L15 75×160 L16 ）",
+    "price": 2780,
+    "rating": 4.65,
+    "reviews": 358,
+    "shopName": "リビングート　楽天市場店",
+    "shopCode": "livingut",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/livingut/cabinet/maker_mie2/uni445414.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q728o.nrqgi7da.g00q728o.nrqgj7d3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flivingut%2Funi445414%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "浴室五金・收納",
+    "daysOn": 5,
+    "bestRank": 9,
+    "avgRank": 14.8
+   },
+   {
+    "rank": 17,
+    "itemCode": "miraiblue:10000056",
+    "itemName": "ミラブルEx シャワーヘッド 本体 正規品 公式 プレゼント",
+    "price": 38500,
+    "rating": 4.53,
+    "reviews": 117,
+    "shopName": "サイエンス公式ショップ楽天市場店",
+    "shopCode": "miraiblue",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/miraiblue/cabinet/item/science/ex/ex_main001.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ukq8o.nrqgi33c.g00ukq8o.nrqgjbd0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmiraiblue%2Fj00000235%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 13,
+    "avgRank": 19.8
+   },
+   {
+    "rank": 18,
+    "itemCode": "ennshopstore:10000072",
+    "itemName": "半額！【COUPON+P5倍で3,132円〜美容師監修＆99%塩素除去】 シャワーヘッド マイクロナノバブル 塩素除去 28億9000万個美容泡 90%節水 シャワーヘッド 水圧 強い水量 6つのモード 手元止水 ミスト 保湿 保温 増圧 シャワーヘッド 節水 毛穴 汚れ除去 美肌美髪 取付簡単",
+    "price": 6780,
+    "rating": 4.51,
+    "reviews": 3217,
+    "shopName": "Rakuhome",
+    "shopCode": "ennshopstore",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ennshopstore/cabinet/b1hs13/b1hs13_28yi_zt.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ubfso.nrqgia2c.g00ubfso.nrqgj3e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fennshopstore%2Fb1hs13%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 5,
+    "bestRank": 23,
+    "avgRank": 25.0
+   },
+   {
+    "rank": 19,
+    "itemCode": "kiroran:10000207",
+    "itemName": "【FULNG ヘアキャッチャー】お風呂用 洗面台用 キッチン用 お風呂TOTO向け 排水溝 排水口 ステンレス ゴミ受け 髪の毛ホコリ除去 掃除簡単 ユニットバス用 排水口ネット 排水溝ネット [実用新案出願済み]",
+    "price": 2180,
+    "rating": 4.59,
+    "reviews": 295,
+    "shopName": "FULNG 楽天市場店",
+    "shopCode": "kiroran",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kiroran/cabinet/13890768/dl-zh.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ufk6o.nrqgiefd.g00ufk6o.nrqgjed3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiroran%2Fdl-zh%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "浴室五金・收納",
+    "daysOn": 5,
+    "bestRank": 24,
+    "avgRank": 26.0
+   },
+   {
+    "rank": 20,
     "itemCode": "auc-epsomsalt:10000212",
     "itemName": "【公式】国産 化粧品 エプソムソルト 8.8kg 【2.2kg×4袋】 マグネシウム 入浴剤 バスソルト 無香料 計量スプーン付 中身が見える透明パック 1回150g 約58回分 累計レビュー1.2万件 シークリスタルス",
     "price": 3402,
@@ -2987,7 +3068,22 @@
     "avgRank": 6.2
    },
    {
-    "rank": 16,
+    "rank": 21,
+    "itemCode": "ganentonya:10000161",
+    "itemName": "国産 エプソムソルト【3kg/30回分/1回66円】入浴剤 レビュー約1万件！最上級グレード100% マグネシウム風呂 30日間返金保証【送料無料】保湿 プレゼント ギフト（自然派入浴剤 バスソルト メーカー直営店 アースコンシャス）",
+    "price": 1980,
+    "rating": 4.52,
+    "reviews": 10040,
+    "shopName": "アースコンシャス楽天市場店",
+    "shopCode": "ganentonya",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ganentonya/cabinet/00973047/epsomsalt/bs-703-new.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qpfro.nrqgib4f.g00qpfro.nrqgj659/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fganentonya%2Fbathsalt-pink-wakeari-0302%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "daysOn": 4,
+    "bestRank": 10,
+    "avgRank": 11.0
+   },
+   {
+    "rank": 22,
     "itemCode": "e-kit:10042872",
     "itemName": "＼ 1年保証 ／ ソープディスペンサー ステンレス 自動 泡 液体 充電式 おしゃれ 大容量 自動洗浄 オートソープディスペンサー 自動ソープディスペンサー ハンドソープ 洗剤 食器用洗剤 洗面所 キッチン 詰め替え シンプル USB充電 IPX5 防水 錆びにくい [CICADA]",
     "price": 5990,
@@ -3003,68 +3099,7 @@
     "avgRank": 12.8
    },
    {
-    "rank": 17,
-    "itemCode": "mikirona:10000092",
-    "itemName": "【楽天1位★クーポンで3,070円～】シャワーヘッド マイクロナノバブル 手元止水 6段階モード ミスト 増圧 節水 塩素除去 シャワー フェース 肌ケア 高洗浄力 毛穴 汚れ除去 美肌 美顔 美髪 カートリッジ 美容 取付簡単 国際汎用基準G1/2 新生活 正規品",
-    "price": 6140,
-    "rating": 4.56,
-    "reviews": 3523,
-    "shopName": "Mikirona",
-    "shopCode": "mikirona",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mikirona/cabinet/11312680/imgrc0135318818.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00u8azo.nrqgiaff.g00u8azo.nrqgj20e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmikirona%2Fs-hs-11%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 9,
-    "avgRank": 13.8
-   },
-   {
-    "rank": 18,
-    "itemCode": "livingut:10209620",
-    "itemName": "風呂ふた シャッター Ag抗菌 日本製 奥行65～80cm 幅80～160cm （ 風呂蓋 風呂フタ 風呂 ふた シャッタータイプ 抗菌 防カビ シャッター式 お風呂のふた 保温 軽量 75×140 L14 75×150 L15 75×160 L16 ）",
-    "price": 2780,
-    "rating": 4.65,
-    "reviews": 358,
-    "shopName": "リビングート　楽天市場店",
-    "shopCode": "livingut",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/livingut/cabinet/maker_mie2/uni445414.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q728o.nrqgi7da.g00q728o.nrqgj7d3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flivingut%2Funi445414%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "浴室五金・收納",
-    "daysOn": 4,
-    "bestRank": 9,
-    "avgRank": 16.2
-   },
-   {
-    "rank": 19,
-    "itemCode": "miraiblue:10000056",
-    "itemName": "ミラブルEx シャワーヘッド 本体 正規品 公式 プレゼント",
-    "price": 38500,
-    "rating": 4.53,
-    "reviews": 117,
-    "shopName": "サイエンス公式ショップ楽天市場店",
-    "shopCode": "miraiblue",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/miraiblue/cabinet/item/science/ex/ex_main001.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ukq8o.nrqgi33c.g00ukq8o.nrqgjbd0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmiraiblue%2Fj00000235%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 13,
-    "avgRank": 19.0
-   },
-   {
-    "rank": 20,
-    "itemCode": "ennshopstore:10000072",
-    "itemName": "半額！【COUPON+P5倍で3,132円〜美容師監修＆99%塩素除去】 シャワーヘッド マイクロナノバブル 塩素除去 28億9000万個美容泡 90%節水 シャワーヘッド 水圧 強い水量 6つのモード 手元止水 ミスト 保湿 保温 増圧 シャワーヘッド 節水 毛穴 汚れ除去 美肌美髪 取付簡単",
-    "price": 6780,
-    "rating": 4.51,
-    "reviews": 3217,
-    "shopName": "Rakuhome",
-    "shopCode": "ennshopstore",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ennshopstore/cabinet/b1hs13/b1hs13_28yi_zt.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ubfso.nrqgia2c.g00ubfso.nrqgj3e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fennshopstore%2Fb1hs13%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 4,
-    "bestRank": 23,
-    "avgRank": 25.0
-   },
-   {
-    "rank": 21,
+    "rank": 23,
     "itemCode": "koyama-p:10012324",
     "itemName": "【お好きな香り3点】クナイプ バスソルト 850g×3個",
     "price": 6480,
@@ -3079,23 +3114,7 @@
     "avgRank": 25.0
    },
    {
-    "rank": 22,
-    "itemCode": "kiroran:10000207",
-    "itemName": "【FULNG ヘアキャッチャー】お風呂用 洗面台用 キッチン用 お風呂TOTO向け 排水溝 排水口 ステンレス ゴミ受け 髪の毛ホコリ除去 掃除簡単 ユニットバス用 排水口ネット 排水溝ネット [実用新案出願済み]",
-    "price": 2180,
-    "rating": 4.59,
-    "reviews": 295,
-    "shopName": "FULNG 楽天市場店",
-    "shopCode": "kiroran",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kiroran/cabinet/13890768/dl-zh.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00ufk6o.nrqgiefd.g00ufk6o.nrqgjed3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiroran%2Fdl-zh%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "浴室五金・收納",
-    "daysOn": 4,
-    "bestRank": 24,
-    "avgRank": 25.5
-   },
-   {
-    "rank": 23,
+    "rank": 24,
     "itemCode": "ears:10002617",
     "itemName": "アズマジック 浴室用ソフトブラシ 風呂掃除 浴室 掃除用 クリーニング BT763 本倉庫",
     "price": 3580,
@@ -3111,22 +3130,22 @@
     "avgRank": 4.3
    },
    {
-    "rank": 24,
-    "itemCode": "ganentonya:10000161",
-    "itemName": "国産 エプソムソルト【3kg/30回分/1回66円】入浴剤 レビュー約1万件！最上級グレード100% マグネシウム風呂 30日間返金保証【送料無料】保湿 プレゼント ギフト（自然派入浴剤 バスソルト メーカー直営店 アースコンシャス）",
+    "rank": 25,
+    "itemCode": "happymag:10000208",
+    "itemName": "バスソルト 1袋 45回分 600g 入浴剤 追い焚きできる 1個 2個 3個 5個 セット マグネシウム 塩化マグネシウム 天然 塩 浄化 子供 風呂 送料無料 EPSOPIA エプソピア RSL出荷",
     "price": 1980,
-    "rating": 4.52,
-    "reviews": 10040,
-    "shopName": "アースコンシャス楽天市場店",
-    "shopCode": "ganentonya",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/ganentonya/cabinet/00973047/epsomsalt/bs-703-new.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qpfro.nrqgib4f.g00qpfro.nrqgj659/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fganentonya%2Fbathsalt-pink-wakeari-0302%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "rating": 4.67,
+    "reviews": 3359,
+    "shopName": "EPSOPIA（エプソピア）",
+    "shopCode": "happymag",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/happymag/cabinet/sku/1-2610.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tgejo.nrqgic22.g00tgejo.nrqgjd90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhappymag%2F2set-epsopia-600%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "daysOn": 3,
-    "bestRank": 10,
-    "avgRank": 11.3
+    "bestRank": 16,
+    "avgRank": 17.0
    },
    {
-    "rank": 25,
+    "rank": 26,
     "itemCode": "livingut:10209755",
     "itemName": "風呂ふた 折りたたみ Ag銀イオン 日本製 奥行65～80cm 幅80～160cm （ 風呂蓋 風呂フタ 抗菌 カビにくい ヌメリ防止 ミューファン 風呂 ふた フタ 蓋 ag 銀イオン 軽量 東プレ 75×140 L14 75×150 L15 70×120 M12 ）",
     "price": 3980,
@@ -3142,38 +3161,7 @@
     "avgRank": 19.7
    },
    {
-    "rank": 26,
-    "itemCode": "livingut:10224170",
-    "itemName": "【レビュー特典付き】 風呂椅子 バスチェアEX 座面高30～40cm 銀イオン 日本製 （ 風呂いす バスチェア お風呂 腰掛け 座面高30 座面高35 座面高40 抗菌加工 湯桶 湯おけ 洗面器 風呂おけ 椅子 4本脚 高さ30cm 高さ35cm 高さ40cm ）",
-    "price": 4480,
-    "rating": 4.62,
-    "reviews": 328,
-    "shopName": "リビングート　楽天市場店",
-    "shopCode": "livingut",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/livingut/cabinet/maker_asvel8/uni471495.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00q728o.nrqgi7da.g00q728o.nrqgj7d3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flivingut%2Funi471495%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "exclude": "浴室五金・收納",
-    "daysOn": 2,
-    "bestRank": 16,
-    "avgRank": 16.0
-   },
-   {
     "rank": 27,
-    "itemCode": "happymag:10000208",
-    "itemName": "バスソルト 1袋 45回分 600g 入浴剤 追い焚きできる 1個 2個 3個 5個 セット マグネシウム 塩化マグネシウム 天然 塩 浄化 子供 風呂 送料無料 EPSOPIA エプソピア RSL出荷",
-    "price": 1980,
-    "rating": 4.67,
-    "reviews": 3359,
-    "shopName": "EPSOPIA（エプソピア）",
-    "shopCode": "happymag",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/happymag/cabinet/sku/1-2610.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tgejo.nrqgic22.g00tgejo.nrqgjd90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhappymag%2F2set-epsopia-600%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 16,
-    "avgRank": 17.5
-   },
-   {
-    "rank": 28,
     "itemCode": "bathroom:10005403",
     "itemName": "82週1位!《 山崎実業 マグネット風呂イス タワー SH25 桶セット or 単品 》単品/セット 高さ25cm tower 湯桶 手おけ マグネットバスチェアー お風呂の椅子 お風呂いす 洗面器 ボウル 引っ掛け 浮かせる 洗いやすい シンプル おしゃれ ギフト 新築祝 公式 白黒 6925 5378 3607",
     "price": 4620,
@@ -3184,12 +3172,12 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/bathroom/cabinet/0001/04521920/yj-6925set_sam01b.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s670o.nrqgi1c2.g00s670o.nrqgjdcb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbathroom%2Fyj-6925-set%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 2,
+    "daysOn": 3,
     "bestRank": 20,
-    "avgRank": 20.5
+    "avgRank": 20.3
    },
    {
-    "rank": 29,
+    "rank": 28,
     "itemCode": "auc-risecreation:10005233",
     "itemName": "【35%OFF★11/1 23:59迄】 送料無料 浴室 ラック マグネット 強力 シャンプーラック マグネットラック バスラック お風呂 キッチン 収納 浴室ラック キッチン収納 浴室収納 ステンレス 冷蔵庫 洗濯機 小物 バスケット",
     "price": 3980,
@@ -3200,24 +3188,41 @@
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/auc-risecreation/cabinet/product/top/r0579_01a.jpg?_ex=300x300",
     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s0p3o.nrqgi2ac.g00s0p3o.nrqgj57c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-risecreation%2Fr0579%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
     "exclude": "浴室五金・收納",
-    "daysOn": 2,
+    "daysOn": 3,
     "bestRank": 13,
-    "avgRank": 21.0
+    "avgRank": 23.7
+   },
+   {
+    "rank": 29,
+    "itemCode": "roomy:10016704",
+    "itemName": "［ 洗いやすいマグネット風呂イス タワー SH32 選べる桶セット ］山崎実業 tower 風呂椅子 手おけ いす 湯桶 磁石 浮かせる収納 高め 32cm バスルーム 浴室 バスチェア 北欧 おしゃれ yamazaki 公式 モノトーン ブラック ホワイト 1653 1654 5378 5379 3607 3608",
+    "price": 5500,
+    "rating": 4.75,
+    "reviews": 2529,
+    "shopName": "インテリアショップ roomy",
+    "shopCode": "roomy",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/roomy/cabinet/500cart_all/500cart_11g/p5-7/ymz7005-rw009-0_gt01.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qb0lo.nrqgic43.g00qb0lo.nrqgj75b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Froomy%2Fymz24jun13h02%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "浴室五金・收納",
+    "daysOn": 3,
+    "bestRank": 21,
+    "avgRank": 23.7
    },
    {
     "rank": 30,
-    "itemCode": "stylife:15932151",
-    "itemName": "Francfranc 【数量限定】2026 クリスマス アドベントカレンダー L (24個入り) フランフラン ボディケア・オーラルケア 入浴剤【送料無料】",
-    "price": 10000,
-    "rating": 0.0,
-    "reviews": 0,
-    "shopName": "Rakuten Fashion",
-    "shopCode": "stylife",
-    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/stylife/cabinet/item/750/tb1750-01_1.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rf71o.nrqgif96.g00rf71o.nrqgj47e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstylife%2Ftb1750%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
-    "daysOn": 2,
-    "bestRank": 22,
-    "avgRank": 22.0
+    "itemCode": "sinkatec:10000428",
+    "itemName": "レビューCP実施中！《楽天1位》スタンダードサイズ:直径140mm 【HUBATH お風呂 マグネット ヘアーキャッチャー STD140 】 排水溝 ゴミ受け 風呂 浴室 掃除 ユニットバス 排水口ネット ごみ受け 送料無料 極排水 バスルーム 磁石",
+    "price": 2530,
+    "rating": 4.63,
+    "reviews": 5357,
+    "shopName": "SINKATEC 公式ショップ 楽天市場店",
+    "shopCode": "sinkatec",
+    "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sinkatec/cabinet/bath/hubath_bmh/imgrc0151319519.jpg?_ex=300x300",
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00s7h3o.nrqgi884.g00s7h3o.nrqgj08a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsinkatec%2Fhu_mhair_catcher%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "浴室五金・收納",
+    "daysOn": 3,
+    "bestRank": 25,
+    "avgRank": 26.3
    }
   ]
  }
