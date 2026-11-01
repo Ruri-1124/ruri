@@ -11,6 +11,7 @@ ruri 的「廚房」：每天自動去樂天抓排行，整理好存成 data/lat
 """
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -22,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ENDPOINT = "https://openapi.rakuten.co.jp/ichibaranking/api/IchibaItem/Ranking/20220601"
 SEARCH_ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701"
+GENRE_ENDPOINT = "https://openapi.rakuten.co.jp/ichibagt/api/IchibaGenre/Search/20260701"
 TAIWAN = timezone(timedelta(hours=8))
 
 # ① 讀取金鑰（在 GitHub 上設定成 Secrets）
@@ -152,6 +154,12 @@ def main():
     build_experts()
     # ⑦ YouTube：最近 30 天的熱門美妝影片，以及說明欄提到的商品
     build_youtube()
+    # ⑧ 品項排行：每個品項（腮紅、化妝水⋯）自己的樂天排行
+    build_types(config)
+    # ⑨ 年度熱門：去樂天搜尋得獎商品，抓圖片和價格
+    build_awards()
+    # ⑩ 日本選物店（Hands、無印良品）在樂天的官方店
+    build_shops(config)
 
 
 def youtube_get(path, params):
@@ -212,16 +220,11 @@ def build_youtube():
         print(f"✗ YouTube 更新失敗：{e}")
 
 
-def build_experts():
-    """讀 data/experts.json，每個有 kw 的商品去樂天搜尋一次，結果存到 data/experts_items.json"""
-    path = ROOT / "data" / "experts.json"
-    if not path.exists():
-        return
-    experts = json.loads(path.read_text(encoding="utf-8"))
-    out_path = ROOT / "data" / "experts_items.json"
+def search_found(items, out_path, label):
+    """items 裡每個有 kw 的商品去樂天搜尋一次，名稱要含有 mustHave 的每個字才算找到；結果存到 out_path"""
     old = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {}
     found = {}
-    for it in experts.get("items", []):
+    for it in items:
         kw = it.get("kw")
         if not kw:
             continue
@@ -232,6 +235,8 @@ def build_experts():
             results = data.get("Items") or data.get("items") or []   # 新版 API 可能用小寫 items
             for raw in results:
                 item = simplify(raw)
+                if any(w in item["itemName"] for w in RISK_WORDS):
+                    continue
                 if all(m.lower() in item["itemName"].lower() for m in must):
                     hit = item
                     break
@@ -241,16 +246,206 @@ def build_experts():
             elif it["id"] in old:
                 found[it["id"]] = old[it["id"]]   # 這次找不到就沿用上次的
         except urllib.error.HTTPError as e:
-            print(f"✗ 達人推薦搜尋失敗（{it['id']}）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:300]}")
+            print(f"✗ {label}搜尋失敗（{it['id']}）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:300]}")
             if it["id"] in old:
                 found[it["id"]] = old[it["id"]]
         except Exception as e:
-            print(f"✗ 達人推薦搜尋失敗（{it['id']}）：{e}")
+            print(f"✗ {label}搜尋失敗（{it['id']}）：{e}")
             if it["id"] in old:
                 found[it["id"]] = old[it["id"]]
-        time.sleep(1.5)
+        time.sleep(1.2)
     out_path.write_text(json.dumps(found, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"已更新達人推薦商品（找到 {len(found)} 個）")
+    print(f"已更新{label}商品（找到 {len(found)} 個）")
+
+
+def build_experts():
+    """讀 data/experts.json，每個有 kw 的商品去樂天搜尋一次，結果存到 data/experts_items.json"""
+    path = ROOT / "data" / "experts.json"
+    if not path.exists():
+        return
+    experts = json.loads(path.read_text(encoding="utf-8"))
+    search_found(experts.get("items", []), ROOT / "data" / "experts_items.json", "達人推薦")
+
+
+def build_awards():
+    """讀 data/awards.json，用「品牌＋日文商品名」（或 rkw）去樂天搜尋，結果存到 data/awards_items.json"""
+    path = ROOT / "data" / "awards.json"
+    if not path.exists():
+        return
+    try:
+        awards = json.loads(path.read_text(encoding="utf-8"))
+        def kw(a):
+            if a.get("rkw"):
+                return a["rkw"]
+            name = re.sub(r"（.*?）|\(.*?\)", " ", a.get("name", ""))
+            name = re.sub(r"[＜＞<>「」]", " ", name)
+            extra = [w for w in a.get("mustHave", []) if w.lower() not in name.lower()]
+            return " ".join([name] + extra).strip()
+        items = [{**a, "kw": kw(a)} for a in awards.get("items", [])]
+        search_found(items, ROOT / "data" / "awards_items.json", "年度熱門")
+    except Exception as e:
+        print(f"✗ 年度熱門搜尋失敗：{e}")
+
+
+def genre_children(genre_id):
+    """問樂天：這個分類底下有哪些子分類？回傳 [(genreId, 名稱)]"""
+    data = call_api(GENRE_ENDPOINT, {"genreId": genre_id})
+    out = []
+    for c in data.get("children") or []:
+        c = c.get("child", c)   # 兩種回應格式都處理
+        gid = c.get("genreId")
+        name = c.get("genreName") or c.get("nameJa") or ""
+        if gid:
+            out.append((int(gid), name))
+    return out
+
+
+def find_type_genres(config):
+    """從大分類往下找子分類，名稱符合 match 的就記下來（例如「チーク」→ cheek）"""
+    tg = config["typeGenres"]
+    skip = tg.get("skip", [])
+    def which(name):
+        for key, words in tg["match"]:
+            if any(w in name for w in words):
+                return key
+        return None
+    found = {}   # 品項 → [{genreId, name, root}]
+    calls = 0
+    for root in tg["roots"]:
+        rule = config["groups"].get(root)
+        if not rule:
+            continue
+        queue = [(rule["genreId"], 1)]
+        while queue and calls < 120:
+            gid, depth = queue.pop(0)
+            try:
+                kids = genre_children(gid)
+            except urllib.error.HTTPError as e:
+                print(f"✗ 子分類查詢失敗（{gid}）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:200]}")
+                kids = []
+            except Exception as e:
+                print(f"✗ 子分類查詢失敗（{gid}）：{e}")
+                kids = []
+            calls += 1
+            time.sleep(1.1)
+            for kid, name in kids:
+                if any(w in name for w in skip):
+                    print(f"  略過子分類 {name}（{kid}）")
+                    continue
+                key = which(name)
+                if key:
+                    found.setdefault(key, []).append({"genreId": kid, "name": name, "root": root})
+                    print(f"  子分類 {name}（{kid}）→ {key}")
+                elif depth < tg.get("maxDepth", 3):
+                    queue.append((kid, depth + 1))
+    return found
+
+
+def build_types(config):
+    """品項排行：每個品項抓它的樂天子分類排行（一個品項有好幾個子分類時，合併後依名次排），存到 data/types.json"""
+    if "typeGenres" not in config:
+        return
+    try:
+        cache = ROOT / "data" / "type_genres.json"
+        old = json.loads(cache.read_text(encoding="utf-8")) if cache.exists() else {}
+        fresh = old.get("updated", "") >= (datetime.now(TAIWAN) - timedelta(days=30)).strftime("%Y-%m-%d")
+        if old.get("types") and fresh:
+            genres = old["types"]
+        else:
+            print("重新尋找樂天子分類⋯")
+            genres = find_type_genres(config)
+            if genres:
+                cache.write_text(json.dumps({"updated": datetime.now(TAIWAN).strftime("%Y-%m-%d"), "types": genres}, ensure_ascii=False, indent=1), encoding="utf-8")
+            else:
+                genres = old.get("types", {})
+        out_path = ROOT / "data" / "types.json"
+        prev = json.loads(out_path.read_text(encoding="utf-8")).get("types", {}) if out_path.exists() else {}
+        out = {}
+        for key, glist in genres.items():
+            merged = {}
+            ok = False
+            for g in glist[:3]:   # 一個品項最多抓 3 個子分類
+                try:
+                    data = fetch_ranking(g["genreId"])
+                    rule = {k: v for k, v in config["groups"].get(g["root"], {}).items() if k != "keepOnly"}   # 子分類本身已經是品項，不用 keepOnly
+                    for raw in data.get("Items", []):
+                        item = apply_rules(simplify(raw), rule)
+                        if item.get("exclude"):
+                            continue
+                        code = item["itemCode"]
+                        if code not in merged or (item["rank"] or 99) < (merged[code]["rank"] or 99):
+                            merged[code] = {**item, "root": g["root"]}
+                    ok = True
+                except urllib.error.HTTPError as e:
+                    print(f"✗ 品項排行失敗（{key} {g['name']}）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:200]}")
+                except Exception as e:
+                    print(f"✗ 品項排行失敗（{key} {g['name']}）：{e}")
+                time.sleep(1.2)
+            if ok:
+                items = sorted(merged.values(), key=lambda x: x["rank"] or 99)[:30]
+                out[key] = {"genres": [g["name"] for g in glist[:3]], "items": items}
+                print(f"✓ 品項 {key}：{len(items)} 個商品")
+            elif key in prev:
+                out[key] = prev[key]   # 這次失敗就沿用上次的
+        if out:
+            data = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"), "types": out}
+            out_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+            print(f"已更新品項排行（{len(out)} 個品項）")
+    except Exception as e:   # 品項排行出錯不影響其他資料
+        print(f"✗ 品項排行更新失敗：{e}")
+
+
+def build_shops(config):
+    """日本選物店（Hands、無印良品）在樂天的官方店：抓美容分類裡評價數最多的商品，存到 data/shops.json"""
+    cfg = config.get("shops")
+    if not cfg:
+        return
+    out_path = ROOT / "data" / "shops.json"
+    prev = json.loads(out_path.read_text(encoding="utf-8")).get("shops", {}) if out_path.exists() else {}
+    out = {}
+    for shop in cfg["list"]:
+        try:
+            code = shop.get("shopCode") or (prev.get(shop["key"]) or {}).get("shopCode", "")
+            if not code:   # 不知道店家代號：先搜尋，找店名含 shopNameHas 的店
+                data = call_api(SEARCH_ENDPOINT, {"keyword": shop["findKeyword"], "hits": 30})
+                for raw in data.get("Items") or data.get("items") or []:
+                    it = simplify(raw)
+                    if shop["shopNameHas"] in it["shopName"]:
+                        code = it["shopCode"]
+                        print(f"  找到 {shop['name']} 的樂天店：{it['shopName']}（{code}）")
+                        break
+                time.sleep(1.2)
+            if not code:
+                print(f"✗ 找不到 {shop['name']} 的樂天店")
+                if shop["key"] in prev:
+                    out[shop["key"]] = prev[shop["key"]]
+                continue
+            data = call_api(SEARCH_ENDPOINT, {"shopCode": code, "genreId": cfg.get("genreId", 100939), "hits": 30,
+                                              "sort": "-reviewCount", "availability": 1})
+            items = []
+            for raw in data.get("Items") or data.get("items") or []:
+                it = simplify(raw)
+                if shop["shopNameHas"] not in it["shopName"] or any(w in it["itemName"] for w in RISK_WORDS):
+                    continue
+                it["rank"] = len(items) + 1
+                items.append(it)
+            print(f"✓ {shop['name']}：{len(items)} 個商品")
+            if items:
+                out[shop["key"]] = {"name": shop["name"], "shopCode": code, "shopName": items[0]["shopName"], "items": items}
+            elif shop["key"] in prev:
+                out[shop["key"]] = prev[shop["key"]]
+        except urllib.error.HTTPError as e:
+            print(f"✗ {shop['name']} 失敗 HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:200]}")
+            if shop["key"] in prev:
+                out[shop["key"]] = prev[shop["key"]]
+        except Exception as e:
+            print(f"✗ {shop['name']} 失敗：{e}")
+            if shop["key"] in prev:
+                out[shop["key"]] = prev[shop["key"]]
+        time.sleep(1.2)
+    if out:
+        data = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"), "shops": out}
+        out_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def build_archive(history, keep_days=120):

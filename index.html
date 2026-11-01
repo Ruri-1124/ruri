@@ -196,17 +196,73 @@
   .subnote { display: block; font-family: var(--font-body); font-weight: 400; font-size: 12px; color: var(--muted); margin-top: 2px; }
   .subnote a { color: var(--muted); }
 
-  /* ── 首頁：入口＋品項方塊 ── */
-  .entries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+  /* ── 首頁 ── */
+  /* 主題輪播：橫向滑動、自動切換 */
+  .hero { position: relative; margin-top: 16px; }
+  .slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: 22px; }
+  .slides::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 100%; scroll-snap-align: start; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 12px; min-height: 260px; padding: 28px 36px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden; }
+  .slide .kicker { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
+  .slide h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(26px, 4vw, 40px); line-height: 1.15; margin: 6px 0 8px; text-wrap: balance; }
+  .slide p { margin: 0 0 16px; font-size: 14px; color: var(--muted); max-width: 30em; }
+  .slide .go { display: inline-flex; align-items: center; gap: 6px; background: var(--ink); color: #fff; font-weight: 700; font-size: 14px; padding: 9px 18px; border-radius: 999px; }
+  .collage { position: relative; height: 210px; }
+  .collage span { position: absolute; width: 46%; aspect-ratio: 1; border-radius: 18px; background: #fff; box-shadow: 0 10px 30px rgba(34,30,58,.14); overflow: hidden; }
+  .collage span:nth-child(1) { left: 4%; top: 12%; transform: rotate(-6deg); }
+  .collage span:nth-child(2) { left: 30%; top: 0; z-index: 2; width: 50%; }
+  .collage span:nth-child(3) { right: 0; top: 18%; transform: rotate(6deg); }
+  .collage img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+  .s-aw { background: radial-gradient(circle at 85% 20%, #FFE7A3 0, transparent 45%), linear-gradient(120deg, #FFF8E6, #FFEFD0); }
+  .s-mo { background: radial-gradient(circle at 85% 20%, #CBD6FF 0, transparent 45%), linear-gradient(120deg, #EEF1FF, #DFE5FF); }
+  .s-kr { background: radial-gradient(circle at 85% 20%, #B9EBDD 0, transparent 45%), linear-gradient(120deg, #EAF8F3, #D5F2E8); }
+  .s-sh { background: radial-gradient(circle at 85% 20%, #FFD0E0 0, transparent 45%), linear-gradient(120deg, #FFF0F5, #FFE2EC); }
+  .dots { display: flex; justify-content: center; gap: 8px; margin-top: 10px; }
+  .dot { width: 8px; height: 8px; border-radius: 999px; border: 0; padding: 0; background: var(--line); cursor: pointer; transition: width .2s; }
+  .dot[aria-current="true"] { width: 24px; background: var(--ruri); }
+  .harrow { position: absolute; top: 50%; transform: translateY(-80%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); box-shadow: 0 2px 10px rgba(0,0,0,.12); cursor: pointer; font-size: 18px; z-index: 2; }
+  .harrow.prev { left: -12px; } .harrow.next { right: -12px; }
+
+  /* 區塊標題：大字＋右邊「看全部」 */
+  .sec { margin-top: 36px; }
+  .sechead { display: flex; align-items: end; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+  .sechead h2 { font-family: var(--font-display); font-weight: 900; font-size: 24px; margin: 0; line-height: 1.2; }
+  .sechead h2 small { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 700; color: var(--ruri); letter-spacing: .14em; margin-bottom: 2px; }
+  .sechead a { flex: none; font-size: 13px; font-weight: 700; color: var(--ruri); text-decoration: none; }
+  .seg { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-bottom: 14px; }
+  .seg::-webkit-scrollbar { display: none; }
+  .segb { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 16px; cursor: pointer; font-size: 14px; font-weight: 700; color: var(--muted); }
+  .segb[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+  /* 圓形品項入口 */
+  .circles { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 16px 10px; }
+  .circ { display: grid; justify-items: center; gap: 6px; text-decoration: none; color: var(--ink); text-align: center; }
+  .circ .ring { width: 84px; height: 84px; border-radius: 50%; background: #fff; border: 2px solid var(--line); overflow: hidden; display: grid; place-items: center; transition: border-color .15s, transform .15s; }
+  .circ .ring img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+  .circ .ring em { font-style: normal; font-family: var(--font-display); font-weight: 900; color: var(--ruri); font-size: 13px; }
+  .circ:hover .ring { border-color: var(--ruri); transform: translateY(-2px); }
+  .circ b { font-size: 13px; line-height: 1.3; }
+  .circ small { font-size: 11px; color: var(--muted); margin-top: -4px; }
+
+  /* 橫向商品列 */
+  .rail { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 12px; overflow-x: auto; scroll-snap-type: x proximity; padding: 2px 2px 12px; scrollbar-width: thin; }
+  .rail > * { scroll-snap-align: start; }
+  .rail .card:hover { transform: none; }
+  .mini .minibody { border: 0; background: none; text-align: left; cursor: pointer; font: inherit; color: inherit; gap: 3px; }
+  .mini .nm { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .mini .kind { font-size: 12px; color: var(--muted); }
+  .mini .aw { align-self: start; }
+  .mini .price { margin-top: auto; padding-top: 6px; font-size: 16px; }
+  .mini:hover .nm { color: var(--ruri); }
+  .crown { position: absolute; left: 8px; top: 8px; z-index: 1; pointer-events: none; display: grid; place-items: center; width: 36px; height: 40px; font-family: var(--font-display); font-weight: 900; font-size: 16px; color: #fff; background: var(--ink); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%); padding-bottom: 6px; }
+  .crown.c1 { background: var(--gold); } .crown.c2 { background: var(--silver); } .crown.c3 { background: var(--bronze); }
+  .morecard { display: grid; place-items: center; align-content: center; gap: 6px; border: 1px dashed var(--line); border-radius: 16px; text-decoration: none; color: var(--ruri); font-weight: 700; background: var(--surface); min-height: 200px; }
+  .morecard span { font-size: 28px; }
+
+  .entries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
   .entry { display: grid; gap: 4px; padding: 18px 20px; border-radius: 18px; text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--surface); }
-  .entry b { font-family: var(--font-display); font-size: 20px; font-weight: 900; }
+  .entry b { font-family: var(--font-display); font-size: 18px; font-weight: 900; }
   .entry span { font-size: 13px; color: var(--muted); }
   .entry:hover { border-color: var(--ruri); }
-  .e-aw { background: linear-gradient(135deg, #FFF6DD, #fff); }
-  .e-mo { background: linear-gradient(135deg, var(--ruri-soft), #fff); }
-  .e-kr { background: linear-gradient(135deg, var(--kr-soft), #fff); }
-  .hubcat .sub { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
-  .hubcat .sub a { font-family: var(--font-body); font-size: 13px; font-weight: 700; color: var(--ruri); text-decoration: none; }
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
   .tilecard { display: grid; grid-template-columns: 52px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 10px; align-items: center; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); }
   .tilecard:hover { border-color: var(--ruri); }
@@ -214,7 +270,19 @@
   .tpic img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
   .tilecard b { font-size: 15px; }
   .tilecard small { font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  @media (max-width: 640px) { .entries { grid-template-columns: 1fr; } .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) {
+    .slide { grid-template-columns: 1fr; min-height: 0; padding: 22px 20px 18px; }
+    .collage { height: 130px; order: -1; }
+    .collage span { width: 34%; } .collage span:nth-child(1) { left: 6%; } .collage span:nth-child(2) { left: 33%; width: 36%; } .collage span:nth-child(3) { right: 6%; }
+    .slide p { margin-bottom: 12px; }
+    .harrow { display: none; }
+    .circles { grid-auto-flow: column; grid-auto-columns: 76px; grid-template-columns: none; grid-template-rows: auto auto; overflow-x: auto; scrollbar-width: none; gap: 12px 8px; }
+    .circles::-webkit-scrollbar { display: none; }
+    .circ .ring { width: 68px; height: 68px; }
+    .rail { grid-auto-columns: 160px; gap: 10px; }
+    .entries { grid-template-columns: 1fr; } .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sechead h2 { font-size: 20px; }
+  }
 
   .empty { text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
   footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
@@ -301,7 +369,7 @@
   ];
   // 每一頁（parent 是它屬於哪個大分類）
   const PAGES = [
-    { key: "home",     parent: "home", label: "🧭 用品項找排行", title: "想找什麼？先選品項", desc: "從「腮紅」「化妝水」這種品項開始找，每個品項都有自己的排行", source: "home" },
+    { key: "home",     parent: "home", label: "✨ 精選首頁", title: "ruri 精選首頁", desc: "從「腮紅」「化妝水」這種品項開始找，每個品項都有自己的排行", source: "home" },
     { key: "all",      parent: "home", label: "🛍️ 全部商品", title: "日韓熱賣全部商品", desc: "日本的彩妝、保養、髮品、日用品、美容家電，一次看完", source: "rank", groups: ["makeup", "skincare", "hair", "device", "laundry", "bath"], catFilter: true, pastToggle: true },
     { key: "awards",   parent: "jp", label: "🏆 年度熱門", title: "年度熱門商品", desc: "日本美妝大賞的得獎商品，一次整理", source: "awards" },
     { key: "month",    parent: "jp", label: "📅 本月熱門", title: "這個月日本人都在買什麼", desc: "過去 30 天最常出現在排行榜上的商品", source: "month", groups: ["beauty"], itypes: true },
@@ -310,6 +378,7 @@
     { key: "hair",     parent: "jp", label: "💇‍♀️ 髮品", title: "日本髮品排行", desc: "日本樂天「護髮・造型」分類", source: "rank", groups: ["hair"], itypes: true },
     { key: "daily",    parent: "jp", label: "🛁 日用品", title: "日本日用品排行", desc: "洗衣精・柔軟精，以及泡澡・沐浴用品", source: "rank", groups: ["laundry", "bath"], itypes: true },
     { key: "device",   parent: "jp", label: "✨ 美容家電", title: "日本美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"], itypes: true },
+    { key: "shops",    parent: "jp", label: "🏬 Hands・無印", title: "日本選物店人氣美妝", desc: "Hands、無印良品在日本樂天官方店裡，評價數最多的美容商品", source: "shops" },
     { key: "oy",       parent: "kr", label: "⭐ 人氣精選", title: "韓國人氣美妝", desc: "韓國人自己在買的美妝，透過 Olive Young Global 直接寄台灣", source: "oy", injp: true },
     { key: "kr-makeup",   parent: "kr", label: "💄 彩妝", title: "韓國彩妝", desc: "Olive Young Global 暢銷彩妝", source: "oy", ocat: ["彩妝"] },
     { key: "kr-skincare", parent: "kr", label: "🧴 保養", title: "韓國保養", desc: "Olive Young Global 暢銷保養、面膜、防曬", source: "oy", ocat: ["保養", "面膜", "防曬"] },
@@ -411,7 +480,7 @@
   // =========================================================
   let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, DETAILS = {}, ARCHIVE = {}, CREATORS = { items: [] }, OY = { items: [] };
   let BY_CODE = {}, LATEST_DAY = "";
-  const state = { ex: { role: "all", cat: "all", country: "all" }, aw: "all", itype: "all", tab: "home", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
+  const state = { hc: "all", ht: "彩妝", shop: "", ex: { role: "all", cat: "all", country: "all" }, aw: "all", itype: "all", tab: "home", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
 
   let FAVS = {};
   try { FAVS = JSON.parse(localStorage.getItem("ruri-favs") || "{}"); } catch (e) { FAVS = {}; }
@@ -464,6 +533,7 @@
     tags: [], skin: [], award: a, kw: a.kw, img: found ? found.img : "", url: found ? found.url : "", linked: found ? found.id : "",
     price: found ? found.price : 0, rating: found ? found.rating : 0, reviews: found ? found.reviews : 0, priceText: "", jp: found ? found.jp : ""
   });
+  let TYPE_ITEMS = {}, SHOPS = { shops: {} }, SHOP_ITEMS = {};   // 品項排行（樂天子分類排行）、日本選物店
   let EXPERTS = [], YT = { videos: [] }, TWR = { brands: [] }, DKD = { brands: [] };
   const exItem = (e, found) => ({
     id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
@@ -482,6 +552,7 @@
     TWR = await get("data/tw_rakuten.json") || TWR;
     DKD = await get("data/dokodemo.json") || DKD;
     AWARDS = await get("data/awards.json") || AWARDS;
+    const [types, awFound, shops] = await Promise.all([get("data/types.json"), get("data/awards_items.json"), get("data/shops.json")]);
     const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
@@ -494,6 +565,18 @@
         const group = Object.keys(a.groups).find(g => g !== "beauty") || Object.keys(a.groups)[0];
         ARCHIVE[code] = { ...toItem({ ...a.item, itemCode: code, rank: null }, group), history: a };
       }
+    }
+    // 品項排行：每個品項自己的樂天排行（腮紅排行、化妝水排行⋯），商品數比較多
+    for (const [key, t] of Object.entries((types && types.types) || {})) {
+      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; return p; })
+        .filter(p => !p.exclude);
+      TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
+    }
+    // 日本選物店（Hands、無印良品）：樂天官方店裡評價數最多的美容商品
+    SHOPS = shops || SHOPS;
+    for (const [key, sh] of Object.entries(SHOPS.shops || {})) {
+      SHOP_ITEMS[key] = (sh.items || []).map(r => ({ ...toItem(r, "beauty"), ...((LABELS[r.itemCode] || {}).brand ? {} : { brand: sh.name }), country: "日本", shopKey: key })).filter(p => !p.exclude);
+      SHOP_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
     LATEST_DAY = latest.updated.slice(0, 10);
     // 我的最愛：用最新資料更新價格和連結；下榜的商品保留原本存下的資料
@@ -513,7 +596,9 @@
     EXPERTS.updated = EXRAW.experts ? EXRAW.experts.updated : "";
     AW_ITEMS = (AWARDS.items || []).map(a => {
       const words = (a.mustHave || []).map(w => w.toLowerCase());
-      const found = words.length ? pool.find(p => p.jp && words.every(w => p.jp.toLowerCase().includes(w))) : null;
+      let found = words.length ? pool.find(p => p.jp && words.every(w => p.jp.toLowerCase().includes(w))) : null;
+      const f = (awFound || {})[a.id];   // 自動更新程式在樂天搜尋到的同一個商品（有圖片和價格）
+      if (!found && f) found = { id: f.itemCode, img: f.image, url: f.url, price: f.price, rating: f.rating, reviews: f.reviews, jp: f.itemName };
       return awItem(a, found);
     });
     AW_ITEMS.forEach(p => { if (p.linked) AW_BY_CODE[p.linked] = p.award.awards; });
@@ -673,6 +758,7 @@
 
   function card(p, opts = {}) {
     const fav = !!FAVS[p.id];
+    if (opts.compact) return miniCard(p, opts, fav);
     const [mainPrice, ...rest] = String(p.priceText || "").split("（");
     const price = p.price ? `<div class="price">${yen(p.price)}<small>${twd(p.price)}</small></div>`
       : p.priceText ? `<div class="price">${esc(mainPrice)}<small>${rest.length ? esc("（" + rest.join("（")) : "價格以官網為準"}</small></div>`
@@ -682,6 +768,7 @@
         <div class="pic">
           <button class="picbtn" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹"><span class="tile">${esc(p.brand)}</span>${p.img ? `<img src="${esc(p.img)}" alt="" loading="${opts.eager ? "eager" : "lazy"}" onerror="this.remove()">` : ""}</button>
           ${opts.showRank ? `<span class="rank r${opts.showRank}">${opts.showRank}</span>` : ""}
+          ${opts.crown ? `<span class="crown c${opts.crown}">${opts.crown}</span>` : ""}
           ${opts.gone ? `<span class="gone">目前不在排行榜上</span>` : ""}
           <button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="${fav ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button>
         </div>
@@ -699,6 +786,28 @@
           <button class="more" type="button" data-detail="${esc(p.id)}">${moreText(p)} ›</button>
           <div class="bottom">${price}${buyButtons(p, false, true)}</div>
         </div>
+      </article>`;
+  }
+
+  // 首頁橫向列用的精簡卡片：圖片、品牌、名稱、評價、價格；點了看詳細介紹
+  function miniCard(p, opts, fav) {
+    const aw = p.isAw ? p.award.awards : AW_BY_CODE[p.id];
+    return `
+      <article class="card mini">
+        <div class="pic">
+          <button class="picbtn" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹"><span class="tile">${esc(p.brand)}</span>${p.img ? `<img src="${esc(p.img)}" alt="" loading="${opts.eager ? "eager" : "lazy"}" onerror="this.remove()">` : ""}</button>
+          ${opts.crown ? `<span class="crown c${opts.crown}">${opts.crown}</span>` : ""}
+          <button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="${fav ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button>
+        </div>
+        <button class="body minibody" type="button" data-detail="${esc(p.id)}">
+          <span class="brand"><span>${esc(p.brand)}</span></span>
+          <span class="nm">${esc(p.name)}</span>
+          <span class="kind">${esc(p.itype && p.itype !== "other" ? typeLabel(p.itype) : (p.desc || p.cat || ""))}</span>
+          ${aw ? `<span class="aw">🏆 ${esc(awardShort(aw[0]))}</span>` : ""}
+          ${p.rating ? `<span class="rate"><b>★ ${p.rating.toFixed(1)}</b>（${p.reviews.toLocaleString()}）</span>` : ""}
+          ${opts.meta || ""}
+          <span class="price">${p.price ? `${yen(p.price)}<small>${twd(p.price)}</small>` : `<small>${esc(String(p.priceText || "").split("（")[0] || "價格以各通路為準")}</small>`}</span>
+        </button>
       </article>`;
   }
 
@@ -795,13 +904,13 @@
   const updatedText = () => LATEST_DAY ? `${+LATEST_DAY.slice(5, 7)} 月 ${+LATEST_DAY.slice(8, 10)} 日更新` : "";
 
   // 品項列：「全部・粉底・腮紅⋯」，每個品項後面是件數；點了會改網址（例如 #makeup/cheek），可以直接分享
-  function typeRow(pageKey, items) {
+  function typeRow(pageKey, items, allCount) {
     const count = {};
     items.forEach(p => { count[p.itype] = (count[p.itype] || 0) + 1; });
     const keys = ITYPES.map(t => t.key).filter(k => count[k]).concat(count.other ? ["other"] : []);
     if (keys.length < 2) return "";
     const b = (k, l, n) => `<button class="ichip" type="button" data-page="${pageKey}${k === "all" ? "" : "/" + k}" aria-pressed="${state.itype === k}">${esc(l)}<small>${n}</small></button>`;
-    return `<nav class="itypes" aria-label="品項">${b("all", "全部", items.length)}${keys.map(k => b(k, typeLabel(k), count[k])).join("")}</nav>`;
+    return `<nav class="itypes" aria-label="品項">${b("all", "全部", allCount ?? items.length)}${keys.map(k => b(k, typeLabel(k), count[k])).join("")}</nav>`;
   }
   const crumbs = parts => `<div class="crumbs">${parts.map(([l, h]) => h ? `<a href="#${h}">${esc(l)}</a>` : `<span>${esc(l)}</span>`).join("<i>›</i>")}</div>`;
 
@@ -825,16 +934,28 @@
       }
       base = base.filter(p => p.country !== "韓國");
       const byType = state.itype !== "all";
-      const list = applyFilters(base, { catFilter: page.catFilter, japanOnly: true, itype: true });
+      // 品項排行（樂天子分類排行）的商品也算進來：選了品項時，先列品項排行，再補分類排行裡同品項的商品
+      const tItems = page.source === "rank" ? Object.values(TYPE_ITEMS).flat().filter(p => page.groups.includes(p.group) && p.country !== "韓國") : [];
+      const dedupe = arr => [...new Map(arr.map(p => [p.id, p])).values()];
+      const union = dedupe([...base, ...tItems]);
+      let listBase = base;
+      if (byType && tItems.some(p => p.itype === state.itype)) {
+        const ti = dedupe(tItems.filter(p => p.itype === state.itype));
+        const ids = new Set(ti.map(p => p.id));
+        listBase = ti.concat(base.filter(p => !ids.has(p.id) && p.itype === state.itype).map(p => ({ ...p, catRank: p.rank, rank: 100 + (p.rank || 0) })));
+      } else if (byType) listBase = union;
+      const list = applyFilters(listBase, { catFilter: page.catFilter, japanOnly: true, itype: true });
       const badge = page.source === "month" ? `<span class="src">已累積 ${MONTH.days} 天資料</span>` : `<span class="src">日本樂天真實排行</span>`;
-      const meta = p => page.source === "month" ? `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天・最高第 ${p.bestRank} 名</div>` : (p.rank && (page.catFilter || byType) ? `<div class="meta">樂天${esc(p.cat)}第 ${p.rank} 名</div>` : "");
+      const meta = p => page.source === "month" ? `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天・最高第 ${p.bestRank} 名</div>`
+        : p.typeRank && byType ? `<div class="meta">樂天${esc(typeLabel(p.itype))}排行第 ${p.typeRank} 名</div>`
+        : (p.rank && (page.catFilter || byType) ? `<div class="meta">樂天${esc(p.cat)}第 ${p.catRank || p.rank} 名</div>` : "");
       // 有選品項時，名次改成「這個品項裡的第幾名」
       const showRank = state.sort === "rank" && !page.catFilter && !state.merge && (page.groups.length === 1 || byType);
       const rankOf = (p, i) => showRank ? (byType || page.source === "month" ? i + 1 : p.rank) : null;
       const shown = byType ? { ...page, title: (page.source === "month" ? "本月熱門・" : "日本") + typeLabel(state.itype) + "排行", desc: `${page.title.replace(/排行$/, "")}裡的「${typeLabel(state.itype)}」，依日本樂天名次排序` } : page;
       if (page.itypes || page.catFilter) html += crumbs([["首頁", "home"], [page.parent === "jp" ? "日本" : "全部商品", page.parent === "jp" ? "awards" : "all"], ...(page.key === "all" ? [] : [[page.label.replace(/^\S+\s/, ""), byType ? page.key : ""]]), ...(byType ? [[typeLabel(state.itype), ""]] : [])]);
       html += pagehead(shown, badge, updatedText());
-      if (page.itypes) html += typeRow(page.key, base);
+      if (page.itypes) html += typeRow(page.key, union, base.length);
       let grid;
       const plain = !state.q && !state.skins.size && !state.needs.size && state.price === "all";
       if (!list.length) grid = `<div class="empty">沒有符合條件的商品，試試看取消一些篩選。</div>`;
@@ -842,7 +963,7 @@
         grid = `<div class="podium">${list.slice(0, 3).map((p, i) => card(p, { showRank: rankOf(p, i), meta: meta(p), eager: true })).join("")}</div>
                 <div class="grid">${list.slice(3).map((p, i) => card(p, { showRank: rankOf(p, i + 3), meta: meta(p), eager: i < 5 })).join("")}</div>`;
       } else grid = `<div class="grid">${list.map((p, i) => card(p, { showRank: rankOf(p, i), meta: meta(p), gone: isGone(p), eager: i < 8 })).join("")}</div>`;
-      html += `<div class="layout">${sidePanel(base, page, list.length)}<div class="results">${toolbar(list.length, page)}${grid}</div></div>`;
+      html += `<div class="layout">${sidePanel(byType ? listBase : union, page, list.length)}<div class="results">${toolbar(list.length, page)}${grid}</div></div>`;
     }
 
     if (page.source === "awards") {
@@ -872,24 +993,76 @@
     }
 
     if (page.source === "home") {
-      const jpAll = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).filter(p => p.country !== "韓國");
-      const uniq = [...new Map(jpAll.map(p => [p.id, p])).values()];
-      html += pagehead(page, `<span class="src">日本樂天真實排行</span>`, updatedText());
-      html += `<div class="entries">
-        <a class="entry e-aw" href="#awards"><b>🏆 年度熱門</b><span>日本美妝大賞得獎商品 ${AW_ITEMS.length} 件</span></a>
-        <a class="entry e-mo" href="#month"><b>📅 本月熱門</b><span>過去 30 天一直在榜上的商品</span></a>
-        <a class="entry e-kr" href="#oy"><b>🇰🇷 韓國人氣</b><span>Olive Young 暢銷・日本也在紅</span></a>
-      </div>`;
-      for (const cat of CATS) {
-        const pageKey = CAT_PAGE[cat];
-        const items = uniq.filter(p => p.cat === cat);
-        if (!items.length) continue;
-        const types = ITYPES.filter(t => t.cat === cat).map(t => ({ t, ps: items.filter(p => p.itype === t.key).sort((a, b) => a.rank - b.rank) })).filter(o => o.ps.length);
-        html += `<section class="hubcat"><h2 class="sub">${esc(cat)}<a href="#${pageKey}">看${esc(cat)}全部排行（${items.length}）›</a></h2><div class="tiles">
-          ${types.map(({ t, ps }) => `<a class="tilecard" href="#${pageKey}/${t.key}"><span class="tpic">${ps[0].img ? `<img src="${esc(ps[0].img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`).join("")}
-        </div></section>`;
+      const jpRank = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).filter(p => p.country !== "韓國");
+      const jpTypes = Object.values(TYPE_ITEMS).flat().filter(p => p.country !== "韓國");
+      const uniq = [...new Map(jpRank.concat(jpTypes).map(p => [p.id, p])).values()];
+      const pics = arr => arr.filter(p => p.img).slice(0, 3);
+      const collage = arr => `<div class="collage" aria-hidden="true">${pics(arr).map(p => `<span><img src="${esc(p.img)}" alt="" onerror="this.remove()"></span>`).join("")}</div>`;
+      const shopAll = Object.values(SHOP_ITEMS).flat();
+      const krTop = OY.items.map(oyItem).concat(Object.values(RANK).flat().filter(p => p.country === "韓國"));
+      // ① 主題輪播
+      const slides = [
+        ["s-aw", "#awards", "AWARDS", "日本美妝大賞<br>得獎商品", `@cosme、LIPS 大賞的 ${AW_ITEMS.length} 件得獎商品，一次看完`, AW_ITEMS],
+        ["s-mo", "#month", "MONTHLY", "這個月<br>日本人都在買", "過去 30 天一直待在樂天排行榜上的商品", (MONTH.groups.beauty || [])],
+        ["s-kr", "#oy", "KOREA", "韓國人氣美妝", "Olive Young 暢銷，加上在日本也爆紅的韓系商品", krTop],
+        ...(shopAll.length ? [["s-sh", "#shops", "SELECT SHOP", "Hands・無印良品<br>人氣美妝", "日本選物店樂天官方店裡，評價最多的商品", shopAll]] : [])
+      ];
+      html += `<section class="hero" aria-label="主題精選">
+        <div class="slides" id="slides">${slides.map(([cls, href, k, h, d, arr]) => `<a class="slide ${cls}" href="${href}"><div><div class="kicker">${k}</div><h2>${h}</h2><p>${esc(d)}</p><span class="go">去看看 ›</span></div>${collage(arr)}</a>`).join("")}</div>
+        <button class="harrow prev" type="button" data-slide="-1" aria-label="上一個">‹</button><button class="harrow next" type="button" data-slide="1" aria-label="下一個">›</button>
+        <div class="dots">${slides.map((_, i) => `<button class="dot" type="button" data-dot="${i}" aria-label="第 ${i + 1} 個主題" aria-current="${i === 0}"></button>`).join("")}</div>
+      </section>`;
+
+      // ② 用品項找（圓形入口）
+      const tcats = CATS.filter(c => uniq.some(p => p.cat === c));
+      if (!tcats.includes(state.ht)) state.ht = tcats[0];
+      const its = uniq.filter(p => p.cat === state.ht);
+      const circ = ITYPES.filter(t => t.cat === state.ht).map(t => ({ t, ps: its.filter(p => p.itype === t.key).sort((a, b) => (a.typeRank || a.rank || 99) - (b.typeRank || b.rank || 99)) })).filter(o => o.ps.length);
+      html += `<section class="sec"><div class="sechead"><h2><small>FIND BY ITEM</small>用品項找排行</h2><a href="#${CAT_PAGE[state.ht]}">${esc(state.ht)}全部 ›</a></div>
+        <div class="seg">${tcats.map(c => `<button class="segb" type="button" data-ht="${c}" aria-pressed="${state.ht === c}">${c}</button>`).join("")}</div>
+        <div class="circles">${circ.map(({ t, ps }) => { const im = ps.find(p => p.img); return `<a class="circ" href="#${CAT_PAGE[state.ht]}/${t.key}"><span class="ring">${im ? `<img src="${esc(im.img)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(t.label.slice(0, 2))}</em>`}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`; }).join("")}</div>
+      </section>`;
+
+      // ③ 今日排行 TOP 10（可切換分類）
+      const hcs = [["all", "綜合", "beauty", "awards"], ["彩妝", "彩妝", "makeup", "makeup"], ["保養", "保養", "skincare", "skincare"], ["髮品", "髮品", "hair", "hair"], ["日用品", "日用品", "laundry", "daily"], ["美容家電", "美容家電", "device", "device"]];
+      const hc = hcs.find(x => x[0] === state.hc) || hcs[0];
+      const top = (RANK[hc[2]] || []).filter(p => p.country !== "韓國").slice(0, 10);
+      const rail = (arr, opts = {}) => `<div class="rail">${arr.map((p, i) => card(p, { compact: true, crown: opts.rank ? i + 1 : null, eager: i < 4, meta: opts.meta ? opts.meta(p) : "" })).join("")}${opts.more ? `<a class="morecard" href="${opts.more[0]}"><span>›</span>${esc(opts.more[1])}</a>` : ""}</div>`;
+      html += `<section class="sec"><div class="sechead"><h2><small>DAILY RANKING</small>今日日本樂天排行</h2><span class="src">${esc(updatedText())}</span></div>
+        <div class="seg">${hcs.map(([k, l]) => `<button class="segb" type="button" data-hc="${k}" aria-pressed="${hc[0] === k}">${l}</button>`).join("")}</div>
+        ${top.length ? rail(top, { rank: true, more: [`#${hc[0] === "all" ? "all" : hc[3]}`, `看${hc[1]}完整排行`] }) : `<div class="empty">這個分類今天沒有資料。</div>`}
+      </section>`;
+
+      // ④ 大賞得獎
+      if (AW_ITEMS.length) {
+        const aw = [...AW_ITEMS].sort((a, b) => (b.img ? 1 : 0) - (a.img ? 1 : 0) || Math.min(...a.award.awards.map(x => x.rank || 99)) - Math.min(...b.award.awards.map(x => x.rank || 99))).slice(0, 12);
+        html += `<section class="sec"><div class="sechead"><h2><small>BEST COSME</small>🏆 日本美妝大賞得獎</h2><a href="#awards">全部 ${AW_ITEMS.length} 件 ›</a></div>${rail(aw, { more: ["#awards", "看全部得獎商品"] })}</section>`;
       }
-      html += `<p style="text-align:center;margin-top:24px"><a class="buy ghost" style="display:inline-block;padding:10px 22px" href="#all">直接看全部 ${uniq.length} 件商品 ›</a></p>`;
+      // ⑤ 本月一直在榜上
+      const mo = (MONTH.groups.beauty || []).filter(p => p.country !== "韓國").slice(0, 12);
+      if (mo.length) html += `<section class="sec"><div class="sechead"><h2><small>MONTHLY</small>📅 這個月一直在榜上</h2><a href="#month">看本月熱門 ›</a></div>${rail(mo, { meta: p => `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天</div>`, more: ["#month", "看本月熱門"] })}</section>`;
+      // ⑥ 達人推薦
+      const ex = EXPERTS.filter(p => p.img).slice(0, 12);
+      if (ex.length) html += `<section class="sec"><div class="sechead"><h2><small>PRO'S PICK</small>👀 化妝師・美容家推薦</h2><a href="#creators">看全部推薦 ›</a></div>${rail(ex, { meta: p => `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)}</div>`, more: ["#creators", "看全部推薦"] })}</section>`;
+      // ⑦ 日本選物店
+      if (shopAll.length) html += `<section class="sec"><div class="sechead"><h2><small>SELECT SHOP</small>🏬 Hands・無印良品人氣美妝</h2><a href="#shops">看全部 ›</a></div>${rail(Object.values(SHOP_ITEMS).flatMap(a => a.slice(0, 6)), { meta: p => `<div class="meta">${esc((SHOPS.shops[p.shopKey] || {}).name || "")} 樂天官方店</div>`, more: ["#shops", "看全部"] })}</section>`;
+      // ⑧ 韓國
+      if (krTop.length) html += `<section class="sec"><div class="sechead"><h2><small>KOREA</small><b class="ti kr" style="display:inline-grid;vertical-align:-3px">韓</b> 韓國人氣美妝</h2><a href="#oy">看韓國全部 ›</a></div>${rail(krTop.slice(0, 12), { more: ["#oy", "看韓國全部"] })}</section>`;
+      html += `<p style="text-align:center;margin-top:28px"><a class="buy ghost" style="display:inline-block;padding:10px 22px" href="#all">直接看全部 ${uniq.length} 件日本商品 ›</a></p>`;
+    }
+
+    if (page.source === "shops") {
+      const keys = Object.keys(SHOP_ITEMS);
+      if (!keys.includes(state.shop)) state.shop = keys[0] || "";
+      html += crumbs([["首頁", "home"], ["日本", ""], ["Hands・無印良品", ""]]);
+      html += pagehead(page, `<span class="src">日本樂天官方店</span>`, SHOPS.updated ? `${+SHOPS.updated.slice(5, 7)} 月 ${+SHOPS.updated.slice(8, 10)} 日更新` : "");
+      if (!keys.length) html += `<div class="empty" style="margin-top:18px">選物店的商品會在下一次自動更新後出現。</div>`;
+      else {
+        html += `<div class="seg" style="margin-top:16px">${keys.map(k => `<button class="segb" type="button" data-shop="${k}" aria-pressed="${state.shop === k}">${esc(SHOPS.shops[k].name)}（${SHOP_ITEMS[k].length}）</button>`).join("")}</div>`;
+        const list = applyFilters(SHOP_ITEMS[state.shop] || [], { noPrice: true });
+        html += list.length ? `<div class="grid">${list.map((p, i) => card(p, { showRank: state.sort === "rank" && !state.q ? i + 1 : null, meta: `<div class="meta">${esc(SHOPS.shops[state.shop].shopName || "")}</div>`, eager: i < 8 })).join("")}</div>` : `<div class="empty">沒有符合條件的商品。</div>`;
+        html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">商品來自 Hands、無印良品在日本樂天市場的官方店，依評價數排序，每天自動更新。本站不是 Hands 或無印良品的官方網站，與兩者沒有合作關係。</p>`;
+      }
     }
 
     if (page.source === "oy") {
@@ -960,8 +1133,32 @@
         : `<div class="empty" style="margin-top:18px">還沒有收藏的商品。<br>在任何商品圖片右上角點 ♥，就會出現在這裡。</div>`;
     }
 
+    // 首頁輪播切換時，保留目前的位置
+    const keep = page.source === "home" ? heroIndex() : 0;
     document.getElementById("view").innerHTML = html;
     document.getElementById("shade").hidden = !state.sideOpen;
+    if (page.source === "home") { heroGo(keep, true); heroWatch(); }
+  }
+
+  // 首頁輪播：滑動、點圓點、每 6 秒自動換下一個（滑鼠移上去或手指碰到時暫停）
+  let heroTimer, heroPaused = false;
+  function heroIndex() { const el = document.getElementById("slides"); return el ? Math.round(el.scrollLeft / Math.max(1, el.clientWidth)) : 0; }
+  function heroGo(i, instant) {
+    const el = document.getElementById("slides"); if (!el) return;
+    const n = el.children.length; i = (i + n) % n;
+    el.scrollTo({ left: i * el.clientWidth, behavior: instant ? "auto" : "smooth" });
+    document.querySelectorAll(".dot").forEach((d, k) => d.setAttribute("aria-current", k === i));
+  }
+  function heroWatch() {
+    const el = document.getElementById("slides"); if (!el) return;
+    el.addEventListener("scroll", () => { const i = heroIndex(); document.querySelectorAll(".dot").forEach((d, k) => d.setAttribute("aria-current", k === i)); }, { passive: true });
+    const hero = el.closest(".hero");
+    hero.addEventListener("pointerenter", () => heroPaused = true);
+    hero.addEventListener("pointerleave", () => heroPaused = false);
+    hero.addEventListener("touchstart", () => heroPaused = true, { passive: true });
+  }
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroTimer = setInterval(() => { if (!heroPaused && !document.hidden && state.tab === "home" && !document.getElementById("detail").open) heroGo(heroIndex() + 1); }, 6000);
   }
 
   // =========================================================
@@ -1018,6 +1215,10 @@
     if (t.dataset.cat) { state.cat = t.dataset.cat; state.itype = "all"; render(); return; }
     if (t.dataset.itype) { state.itype = t.dataset.itype; render(); return; }
     if (t.dataset.aw) { state.aw = t.dataset.aw; render(); return; }
+    if (t.dataset.hc) { state.hc = t.dataset.hc; render(); return; }
+    if (t.dataset.ht) { state.ht = t.dataset.ht; render(); return; }
+    if (t.dataset.shop) { state.shop = t.dataset.shop; render(); return; }
+    if (t.dataset.slide || t.dataset.dot) { heroGo(t.dataset.dot !== undefined ? +t.dataset.dot : heroIndex() + +t.dataset.slide); return; }
     if (t.dataset.remove) {
       const k = t.dataset.remove, v = t.dataset.value;
       if (k === "skin") state.skins.delete(v); else if (k === "need") state.needs.delete(v); else if (k === "price") state.price = "all"; else if (k === "cat") { state.cat = "all"; state.itype = "all"; } else if (k === "itype") state.itype = "all";
@@ -1046,7 +1247,7 @@
     clearTimeout(qTimer);
     qTimer = setTimeout(() => {
       state.q = e.target.value.trim();
-      if (state.q && !["all", "awards", "oy", "kr-makeup", "kr-skincare", "kr-hair", "creators", "fav"].includes(state.tab)) { location.hash = "all"; return; }
+      if (state.q && !["all", "awards", "shops", "oy", "kr-makeup", "kr-skincare", "kr-hair", "creators", "fav"].includes(state.tab)) { location.hash = "all"; return; }
       render();
     }, 200);
   });
