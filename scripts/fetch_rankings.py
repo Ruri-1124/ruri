@@ -314,6 +314,7 @@ def find_type_genres(config):
     seen = set()   # 已經看過的子分類（「美容綜合」底下會再遇到彩妝、保養，不重複找）
     descend = tg.get("descend", [])
     budget = {"calls": 0}
+    pending = []   # 混合分類（descend）：下一層找不到同品項時，才用這個混合分類
 
     def children(gid):
         try:
@@ -339,10 +340,16 @@ def find_type_genres(config):
                 if kid in seen:
                     continue
                 seen.add(kid)
-                if any(w in name for w in skip):
+                if any(w in name for w in skip) and name not in descend:
                     print(f"  略過子分類 {name}（{kid}）")
                     continue
-                key = None if name in descend else which(name)
+                if name in descend:
+                    k = which(name.replace("・", " "))
+                    if k and (not only or k in only):
+                        pending.append((k, {"genreId": kid, "name": name, "root": root}))   # 往下找不到時才用它
+                    key = None
+                else:
+                    key = which(name)
                 if key and only and key not in only:
                     key = None
                 if key:
@@ -369,6 +376,10 @@ def find_type_genres(config):
                 continue
             print(f"  從「{hit[1]}」（{hit[0]}）找 {', '.join(ex['only'])}")
             walk(hit[0], ex.get("root", "daily"), ex.get("depth", 3), set(ex["only"]), ex.get("limit", 60))
+    for key, g in pending:
+        if key not in found:
+            found[key] = [g]
+            print(f"  子分類 {g['name']}（{g['genreId']}）→ {key}（下一層沒有更準確的，就用它）")
     return found
 
 
