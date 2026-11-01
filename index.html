@@ -413,7 +413,7 @@
     { key: "makeup",   parent: "jp", label: "💄 彩妝", title: "日本彩妝排行", desc: "日本樂天「底妝・彩妝」分類", source: "rank", groups: ["makeup"], itypes: true },
     { key: "skincare", parent: "jp", label: "🧴 保養", title: "日本保養排行", desc: "日本樂天「保養」分類", source: "rank", groups: ["skincare"], itypes: true },
     { key: "hair",     parent: "jp", label: "💇‍♀️ 髮品", title: "日本髮品排行", desc: "日本樂天「護髮・造型」分類", source: "rank", groups: ["hair"], itypes: true },
-    { key: "daily",    parent: "jp", label: "🛁 日用品", title: "日本日用品排行", desc: "洗衣精・柔軟精，以及泡澡・沐浴用品", source: "rank", groups: ["laundry", "bath"], itypes: true },
+    { key: "daily",    parent: "jp", label: "🛁 日用品", title: "日本日用品排行", desc: "洗衣精、泡澡用品、牙刷牙膏、雨傘、水壺、環保袋", source: "rank", groups: ["laundry", "bath"], itypes: true },
     { key: "device",   parent: "jp", label: "✨ 美容家電", title: "日本美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"], itypes: true },
     { key: "shops",    parent: "jp", label: "🏬 Hands・無印", title: "日本選物店人氣美妝", desc: "Hands、無印良品在日本樂天官方店裡，評價數最多的美容商品", source: "shops" },
     { key: "oy",       parent: "kr", label: "⭐ 人氣精選", title: "韓國人氣美妝", desc: "韓國人自己在買的美妝，透過 Olive Young Global 直接寄台灣", source: "oy", injp: true },
@@ -433,9 +433,27 @@
   const NEEDS = {
     "保濕": ["保湿", "うるおい", "乾燥", "セラミド", "ヒアルロン"], "毛孔": ["毛穴", "角栓", "黒ずみ"],
     "暗沉": ["美白", "くすみ", "シミ", "透明感", "トーンアップ", "ビタミンC"], "熟齡肌": ["エイジング", "シワ", "しわ", "ハリ", "レチノール", "リンクル", "年齢肌"],
-    "油痘肌": ["ニキビ", "にきび", "肌荒れ"], "容易脫妝": ["テカリ", "崩れない", "崩れにくい"], "防曬": ["日焼け止め", "SPF", "UVカット"],
-    "乾燥受損髮": ["ダメージ", "補修", "パサつき"], "白髮": ["白髪"], "頭皮": ["頭皮", "スカルプ"]
+    "油痘肌": ["ニキビ", "にきび", "肌荒れ"], "容易脫妝": ["テカリ", "崩れない", "崩れにくい"], "防曬": ["日焼け止め", "SPF", "UVカット"]
   };
+  // 各大分類自己的篩選條件：髮品看髮質、家電看功能、日用品看用途（不用彩妝保養的「膚質、毛孔」）
+  const NEEDS_BY_CAT = {
+    "髮品": {
+      "受損修護": ["ダメージ", "補修", "ケラチン", "ブリーチ"], "毛躁・好整理": ["広がり", "うねり", "くせ毛", "まとまり", "パサつき"], "保濕滋潤": ["保湿", "しっとり", "モイスト"],
+      "清爽蓬鬆": ["さらさら", "サラサラ", "ふんわり", "ボリューム"], "頭皮清潔": ["頭皮", "スカルプ", "フケ", "かゆみ"], "胺基酸・無矽靈": ["アミノ酸", "ノンシリコン", "シリコンフリー"],
+      "香味": ["香り", "フレグランス"], "染後護色": ["カラーケア", "退色", "褪色"], "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"]
+    },
+    "美容家電": {
+      "大風量・速乾": ["大風量", "速乾"], "負離子・護髮": ["イオン", "ナノイー", "nanoe"], "溫度調整": ["温度調節", "低温"], "輕巧好收納": ["軽量", "コンパクト", "ミニ", "折りたたみ"],
+      "海外電壓可用": ["海外対応", "海外兼用", "100-240V"], "充電・無線": ["USB", "コードレス", "充電式"], "直髮": ["ストレート"], "捲髮": ["カール"]
+    },
+    "日用品": {
+      "抗菌・除臭": ["抗菌", "除菌", "消臭", "防臭"], "室內晾衣": ["部屋干し"], "香味持久": ["香り", "フレグランス", "アロマ"], "無香・低刺激": ["無香", "無添加", "低刺激"],
+      "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"], "泡澡放鬆": ["入浴剤", "バスソルト", "エプソム"], "保溫保冷": ["保温", "保冷"],
+      "晴雨兩用・抗UV": ["晴雨兼用", "UVカット", "遮光"], "輕量・折疊": ["軽量", "折りたたみ", "コンパクト"], "清新口氣": ["ミント", "ブレス"]
+    }
+  };
+  const NEED_TITLE = { "髮品": "髮質・需求", "美容家電": "功能特色", "日用品": "用途・特色" };
+  const needsOf = cat => NEEDS_BY_CAT[cat] || NEEDS;
   const KR_WORDS = ["韓国", "mileda", "ミレダ", "Anua", "アヌア", "AESTURA", "TIRTIR", "ティルティル", "BIOHEAL", "MEDIHEAL", "メディヒール", "rom&nd", "ロムアンド", "CLIO", "クリオ", "COSRX", "innisfree", "イニスフリー", "Dr.Jart", "numbuzin", "ナンバーズイン", "ma:nyo", "魔女工場", "d'Alba", "ダルバ", "Torriden", "トリデン", "SKIN1004", "ROUND LAB", "ラウンドラボ", "KAHI", "BANILA", "MISSHA", "ミシャ", "ETUDE", "エチュード", "LANEIGE", "ラネージュ", "Sulwhasoo", "雪花秀", "AMUSE", "fwee", "peripera", "ペリペラ", "3CE", "hince", "dasique", "UNOVE", "Abib", "VT CICA", "VTcosmetic", "BY UR", "VERAMORE"];
   const OTHER_WORDS = ["ラロッシュポゼ", "La Roche", "Cetaphil", "セタフィル", "M・A・C", "ケラスターゼ", "KERASTASE", "Ulike", "ブラウン", "BRAUN", "Oral-B", "エスティ ローダー", "エスティローダー", "ESTEE", "Estee Lauder", "クナイプ", "Kneipp", "アリエール", "レノア", "ランコム", "ディオール", "シャネル", "ボビイ ブラウン"];
 
@@ -492,6 +510,11 @@
     { key: "softener", cat: "日用品", label: "柔軟精", zh: ["柔軟"], jp: ["柔軟剤", "柔軟仕上げ"] },
     { key: "shower", cat: "日用品", label: "蓮蓬頭", zh: ["蓮蓬頭"], jp: ["シャワーヘッド"] },
     { key: "clean", cat: "日用品", label: "清潔・消毒", zh: ["清潔", "消毒"], jp: ["消毒", "アルコール", "除菌"] },
+    { key: "toothbrush", cat: "日用品", label: "牙刷", zh: ["牙刷"], jp: ["歯ブラシ"] },
+    { key: "toothpaste", cat: "日用品", label: "牙膏・口腔清潔", zh: ["牙膏"], jp: ["歯磨き", "ハミガキ", "歯みがき", "マウスウォッシュ"] },
+    { key: "umbrella", cat: "日用品", label: "雨傘・陽傘", zh: ["傘"], jp: ["日傘", "雨傘", "折りたたみ傘", "晴雨兼用"] },
+    { key: "bottle", cat: "日用品", label: "水壺・保溫瓶", zh: ["水壺", "保溫瓶"], jp: ["水筒", "マグボトル", "タンブラー"] },
+    { key: "bag", cat: "日用品", label: "環保袋・提袋", zh: ["環保袋", "提袋"], jp: ["エコバッグ", "トートバッグ", "サブバッグ"] },
     { key: "bath", cat: "日用品", label: "泡澡・沐浴", zh: ["泡澡", "沐浴", "入浴"], jp: ["入浴剤", "バスソルト", "エプソム", "ボディソープ", "バス"] }
   ];
   // 品項 → 屬於哪一頁（點品項方塊時跳到那一頁）
@@ -552,8 +575,8 @@
       brand: L.brand || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || (raw.shopName || "").replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName,
       name: L.twName || L.jpName || cleanName(raw.itemName),   // 有台灣正式中文名就用，沒有就用日文原名，不自己翻譯
       twName: L.twName || "", jpName: L.jpName || "", desc: L.desc || "", jp: raw.itemName,
-      country: L.country || detectCountry(text), tags: tagHits(NEEDS, raw.itemName),
-      skin: D ? (D.skin || []) : (L.skin || tagHits(SKIN, raw.itemName)),
+      country: L.country || detectCountry(text), tags: tagHits(needsOf(CAT[group]), raw.itemName),
+      skin: !["彩妝", "保養", "美容"].includes(CAT[group]) ? [] : D ? (D.skin || []) : (L.skin || tagHits(SKIN, raw.itemName)),   // 膚質只用在彩妝、保養
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
       img: raw.image, url: raw.url, exclude: raw.exclude || (L.hide ? "法規或安全疑慮" : ""),   // hide：有法規或安全疑慮，不放上網站
       daysOn: raw.daysOn, bestRank: raw.bestRank,
@@ -607,7 +630,7 @@
     for (const [key, t] of Object.entries((types && types.types) || {})) {
       const tdef = ITYPES.find(x => x.key === key);
       const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" }[tdef && tdef.cat];
-      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, r.root === "beauty" && tgroup ? tgroup : r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; return p; })
+      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; return p; })
         .filter(p => !p.exclude);
       TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
@@ -720,11 +743,15 @@
   const CATS = ["彩妝", "保養", "髮品", "日用品", "美容家電"];
 
   function sidePanel(list, opts, count) {
+    if (opts.catFilter && state.cat !== "all") list = list.filter(p => p.cat === state.cat);   // 選了分類，就只顯示那個分類的篩選條件
     const skinsHere = new Set(list.flatMap(p => p.skin || []));
     const needsHere = new Set(list.flatMap(p => p.tags || []));
     const chips = (items, key, has) => items.map(([v, l]) => `<button class="chip" type="button" data-${key}="${v}" aria-pressed="${has(v)}">${l}</button>`).join("");
     const skinOpts = Object.keys(SKIN).filter(t => t !== "所有膚質" && (skinsHere.has(t) || skinsHere.has("所有膚質") || state.skins.has(t))).map(t => [t, t]);
-    const needOpts = Object.keys(NEEDS).filter(t => needsHere.has(t) || state.needs.has(t)).map(t => [t, t]);
+    const allNeeds = [...new Set([NEEDS, ...Object.values(NEEDS_BY_CAT)].flatMap(d => Object.keys(d)))];
+    const needOpts = allNeeds.filter(t => needsHere.has(t) || state.needs.has(t)).map(t => [t, t]);
+    const cats = [...new Set(list.map(p => p.cat))];
+    const needTitle = cats.length === 1 ? (NEED_TITLE[cats[0]] || "在意的問題") : cats.every(c => ["彩妝", "保養", "美容"].includes(c)) ? "在意的問題" : "需求・特色";
     return `
       <aside class="side ${state.sideOpen ? "open" : ""}" id="side" aria-label="篩選">
         <div class="side-head">篩選條件<button type="button" id="closeSide" aria-label="關閉">×</button></div>
@@ -735,7 +762,7 @@
           return ts.length > 1 ? `<div class="fgroup"><h3>品項</h3><div class="opts">${chips([["all", "全部"], ...ts], "itype", v => state.itype === v)}</div></div>` : "";
         })() : ""}
         ${skinOpts.length ? `<div class="fgroup"><h3>適合膚質</h3><div class="opts">${chips(skinOpts, "skin", v => state.skins.has(v))}</div></div>` : ""}
-        ${needOpts.length ? `<div class="fgroup"><h3>在意的問題</h3><div class="opts">${chips(needOpts, "need", v => state.needs.has(v))}</div></div>` : ""}
+        ${needOpts.length ? `<div class="fgroup"><h3>${needTitle}</h3><div class="opts">${chips(needOpts, "need", v => state.needs.has(v))}</div></div>` : ""}
         ${opts.noPrice ? "" : `<div class="fgroup"><h3>日本售價</h3><div class="opts">${chips([["all", "不限"], ...PRICES], "price", v => state.price === v)}</div></div>`}
         <div class="fgroup"><h3>顯示方式</h3>
           <label class="toggle"><input type="checkbox" id="merge" ${state.merge ? "checked" : ""}> 同品牌只看一個</label>
@@ -1221,7 +1248,7 @@
     { key: "awards", label: "🏆 年度熱門" }, { key: "month", label: "本月熱門" }, { key: "oy", label: "韓國人氣", also: ["kr-makeup", "kr-skincare", "kr-hair", "kr-injp"] },
     { key: "creators", label: "達人推薦" }, { key: "shops", label: "Hands・無印" }
   ];
-  const CAT_DESC = { "彩妝": "底妝、眼妝、唇彩，日本樂天每天的真實排行", "保養": "卸妝、化妝水、精華、防曬到身體保養", "髮品": "洗潤髮、護髮油、造型、頭皮與梳子", "日用品": "洗衣精、柔軟精、泡澡入浴劑", "美容家電": "吹風機、離子夾、捲髮器" };
+  const CAT_DESC = { "彩妝": "底妝、眼妝、唇彩，日本樂天每天的真實排行", "保養": "卸妝、化妝水、精華、防曬到身體保養", "髮品": "洗潤髮、護髮油、造型、頭皮與梳子", "日用品": "洗衣精、泡澡、牙刷牙膏、雨傘、水壺、環保袋", "美容家電": "吹風機、離子夾、捲髮器" };
   // 某個大分類底下有哪些品項、各有幾件商品（日本商品：分類排行＋品項排行）
   function typeIndex(cat) {
     const pool = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat())
