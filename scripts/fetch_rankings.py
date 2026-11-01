@@ -225,7 +225,7 @@ def search_found(items, out_path, label):
     old = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {}
     found = {}
     for it in items:
-        kw = it.get("kw")
+        kw = " ".join(w for w in (it.get("kw") or "").split() if len(w) >= 2)   # 樂天不接受單一字元的關鍵字（例如 N、R）
         if not kw:
             continue
         try:
@@ -237,7 +237,8 @@ def search_found(items, out_path, label):
                 item = simplify(raw)
                 if any(w in item["itemName"] for w in RISK_WORDS):
                     continue
-                if all(m.lower() in item["itemName"].lower() for m in must):
+                flat = item["itemName"].lower().replace(" ", "").replace("　", "")
+                if all(m.lower().replace(" ", "") in flat for m in must):
                     hit = item
                     break
             print(f"  {it['id']}：樂天搜尋到 {len(results)} 筆，{'有' if hit else '沒有'}符合的商品")
@@ -311,12 +312,17 @@ def find_type_genres(config):
         return None
     found = {}   # 品項 → [{genreId, name, root}]
     calls = 0
+    seen = set()   # 已經看過的子分類（「美容綜合」底下會再遇到彩妝、保養，不重複找）
+    descend = tg.get("descend", [])
+    for root in tg["roots"]:
+        if root in config["groups"]:
+            seen.add(config["groups"][root]["genreId"])
     for root in tg["roots"]:
         rule = config["groups"].get(root)
         if not rule:
             continue
         queue = [(rule["genreId"], 1)]
-        while queue and calls < 120:
+        while queue and calls < 200:
             gid, depth = queue.pop(0)
             try:
                 kids = genre_children(gid)
@@ -329,10 +335,13 @@ def find_type_genres(config):
             calls += 1
             time.sleep(1.1)
             for kid, name in kids:
+                if kid in seen:
+                    continue
+                seen.add(kid)
                 if any(w in name for w in skip):
                     print(f"  略過子分類 {name}（{kid}）")
                     continue
-                key = which(name)
+                key = None if name in descend else which(name)
                 if key:
                     found.setdefault(key, []).append({"genreId": kid, "name": name, "root": root})
                     print(f"  子分類 {name}（{kid}）→ {key}")
@@ -349,13 +358,14 @@ def build_types(config):
         cache = ROOT / "data" / "type_genres.json"
         old = json.loads(cache.read_text(encoding="utf-8")) if cache.exists() else {}
         fresh = old.get("updated", "") >= (datetime.now(TAIWAN) - timedelta(days=30)).strftime("%Y-%m-%d")
-        if old.get("types") and fresh:
+        sig = json.dumps({k: config["typeGenres"].get(k) for k in ("roots", "match", "skip", "descend")}, ensure_ascii=False, sort_keys=True)
+        if old.get("types") and fresh and old.get("sig") == sig:
             genres = old["types"]
         else:
             print("重新尋找樂天子分類⋯")
             genres = find_type_genres(config)
             if genres:
-                cache.write_text(json.dumps({"updated": datetime.now(TAIWAN).strftime("%Y-%m-%d"), "types": genres}, ensure_ascii=False, indent=1), encoding="utf-8")
+                cache.write_text(json.dumps({"updated": datetime.now(TAIWAN).strftime("%Y-%m-%d"), "sig": sig, "types": genres}, ensure_ascii=False, indent=1), encoding="utf-8")
             else:
                 genres = old.get("types", {})
         out_path = ROOT / "data" / "types.json"

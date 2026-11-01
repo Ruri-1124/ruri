@@ -568,7 +568,9 @@
     }
     // 品項排行：每個品項自己的樂天排行（腮紅排行、化妝水排行⋯），商品數比較多
     for (const [key, t] of Object.entries((types && types.types) || {})) {
-      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; return p; })
+      const tdef = ITYPES.find(x => x.key === key);
+      const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" }[tdef && tdef.cat];
+      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, r.root === "beauty" && tgroup ? tgroup : r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; return p; })
         .filter(p => !p.exclude);
       TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
