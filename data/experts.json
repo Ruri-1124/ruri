@@ -1,6 +1,6 @@
 {
  "_說明": "達人推薦（人工整理）。每個商品：推薦人 who、身分 role（化妝師／YouTuber／美容家／醫師／雜誌編輯）、推薦重點 say（用自己的話整理，不照抄）、原文 source。kw 是給自動更新程式去日本樂天搜尋圖片、價格用的關鍵字；mustHave 是搜尋結果商品名稱一定要包含的字，用來避免抓錯商品。",
- "updated": "2026-10-30",
+ "updated": "2026-11-01",
  "items": [
   {
    "id": "igari-ysl-gloss",
@@ -16,50 +16,6 @@
    "mustHave": [
     "ラブシャイン",
     "グロスプランパー"
-   ],
-   "sources": [
-    {
-     "name": "MAQUIA：イガリシノブ推薦 37 選",
-     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
-     "date": "2026-05-16"
-    }
-   ]
-  },
-  {
-   "id": "igari-canmake-plump",
-   "brand": "CANMAKE",
-   "name": "プランプコーデアイズ 03",
-   "desc": "臥蠶眼影",
-   "cat": "彩妝",
-   "country": "日本",
-   "who": "イガリシノブ",
-   "role": "化妝師",
-   "say": "畫臥蠶很簡單，低調的顏色也適合熟齡的眼周。",
-   "kw": "キャンメイク プランプコーデアイズ",
-   "mustHave": [
-    "プランプコーデ"
-   ],
-   "sources": [
-    {
-     "name": "MAQUIA：イガリシノブ推薦 37 選",
-     "url": "https://maquia.hpplus.jp/makeup/matome/118787/",
-     "date": "2026-05-16"
-    }
-   ]
-  },
-  {
-   "id": "igari-kate-concealer",
-   "brand": "KATE",
-   "name": "ジェリーリープコンシーラー BU",
-   "desc": "藍色修色遮瑕",
-   "cat": "彩妝",
-   "country": "日本",
-   "who": "イガリシノブ",
-   "role": "化妝師",
-   "say": "藍色可以修飾偏黃的暗沉。",
-   "kw": "ジェリーリープコンシーラー",
-   "mustHave": [
-    "コンシーラー"
    ],
    "sources": [
     {
@@ -432,28 +388,6 @@
    ]
   },
   {
-   "id": "oono-bidol-brow",
-   "brand": "b idol",
-   "name": "マジックアイブロウパウダー 02",
-   "desc": "眉粉",
-   "cat": "彩妝",
-   "country": "日本",
-   "who": "大野真理子",
-   "role": "美容家",
-   "say": "三色粉棕色，眉毛自然有立體感，定妝粉能吸油讓眉毛不易掉。",
-   "kw": "マジックアイブロウパウダー",
-   "mustHave": [
-    "マジックアイブロウ"
-   ],
-   "sources": [
-    {
-     "name": "VoCE：大野真理子 2026 上半年滿分彩妝",
-     "url": "https://i-voce.jp/feed/4999974/",
-     "date": "2026-06-30"
-    }
-   ]
-  },
-  {
    "id": "tomori-decorte-palette",
    "brand": "COSME DECORTE 黛珂",
    "name": "スキンシャドウ デザイニングパレット 10",
@@ -798,6 +732,475 @@
     {
      "name": "Allure Korea 2026 Best of Beauty 彩妝",
      "url": "https://allurekorea.com/2026/10/01/2026-%eb%b2%a0%ec%8a%a4%ed%8a%b8-%ec%98%a4%eb%b8%8c-%eb%b7%b0%ed%8b%b0%ec%9d%98-%ec%9c%84%eb%84%88-%eb%a9%94%ec%9d%b4%ed%81%ac%ec%97%85/",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "voce-jill-dressedbloom",
+   "brand": "JILL STUART",
+   "name": "ドレスドブルーム アイズ 05 spiced orchid",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "吉崎沙世子、長井かおり",
+   "role": "化妝師",
+   "say": "帶一點灰調的多色珠光，不會太甜、有時髦感；長井かおり 也說顏色成熟又帥氣。",
+   "kw": "ジルスチュアート ドレスドブルーム アイズ",
+   "mustHave": [
+    "ドレスドブルーム"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋妝趨勢與新作推薦",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "id": "voce-addiction-104m",
+   "brand": "ADDICTION",
+   "name": "ザ シングル アイシャドウ マット 104M Slip Dress",
+   "desc": "單色眼影",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "吉崎沙世子、長井かおり",
+   "role": "化妝師",
+   "say": "今年秋天的代表色「沙色」單色眼影，霧面質地能畫出眼窩的立體感，又不會顯得沉重。",
+   "kw": "アディクション ザ シングル アイシャドウ",
+   "mustHave": [
+    "シングル",
+    "アイシャドウ"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋妝趨勢與新作推薦",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "id": "voce-burberry-600",
+   "brand": "BURBERRY",
+   "name": "ブリット シャイン 600",
+   "desc": "唇膏",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "長井かおり、吉崎沙世子",
+   "role": "化妝師",
+   "say": "帶一點白的沙色唇膏，光澤膜感讓嘴唇看起來豐潤；也可以疊在手邊的唇膏上換個感覺。",
+   "kw": "バーバリー ブリット シャイン",
+   "mustHave": [
+    "ブリット",
+    "シャイン"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋妝趨勢與新作推薦",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "id": "maquia-shiseido-skinsmooth",
+   "brand": "SHISEIDO 資生堂",
+   "name": "エッセンス スキンスムース ファンデーション",
+   "desc": "粉底液",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "2026 秋冬底妝趨勢「保養型粉底」的代表之一：質地像保養品，上妝同時兼顧滋潤感。",
+   "kw": "SHISEIDO エッセンス スキンスムース ファンデーション",
+   "mustHave": [
+    "スキンスムース"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-ipsa-serum-fd",
+   "brand": "IPSA",
+   "name": "セラム ファウンデイション",
+   "desc": "粉底液",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「保養型粉底」趨勢代表：精華般的質地，薄薄一層就很自然。",
+   "kw": "イプサ セラム ファウンデイション",
+   "mustHave": [
+    "セラム",
+    "ファウンデイション"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-albion-milkfd",
+   "brand": "ALBION",
+   "name": "スタジオ ミルク ファンデーション",
+   "desc": "粉底",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「保養型粉底」趨勢代表：乳液般的觸感，適合想要自然膚感的人。",
+   "kw": "アルビオン スタジオ ミルク ファンデーション",
+   "mustHave": [
+    "スタジオ",
+    "ミルク"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-kate-jellycushion",
+   "brand": "KATE",
+   "name": "ジュレリープクッション ファンデーション",
+   "desc": "氣墊粉底",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「用氣墊調整質感」趨勢的平價代表：薄透自然，可以疊擦或搭配妝前、蜜粉改變妝感。",
+   "kw": "ケイト ジュレリープクッション",
+   "mustHave": [
+    "ジュレリープ",
+    "クッション"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-byur-cushion",
+   "brand": "ByUR",
+   "name": "セラムフィット シルキーヌードクッション V1",
+   "desc": "氣墊粉底",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「用氣墊調整質感」趨勢代表：薄透服貼，偏自然裸膚的妝感。",
+   "kw": "ByUR セラムフィット シルキーヌードクッション",
+   "mustHave": [
+    "セラムフィット"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-estee-dwcushion",
+   "brand": "Estée Lauder 雅詩蘭黛",
+   "name": "ダブル ウェア スキンフィット クッション",
+   "desc": "氣墊粉底",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「用氣墊調整質感」趨勢代表：持妝型的氣墊，薄擦就能修飾膚色。",
+   "kw": "ダブル ウェア スキンフィット クッション",
+   "mustHave": [
+    "スキンフィット",
+    "クッション"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-suqqu-thefd",
+   "brand": "SUQQU",
+   "name": "ザ ファンデーション e",
+   "desc": "粉底",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「有彈性的膜感粉底」趨勢代表：比較有支撐感的妝膜，適合不喜歡太薄粉底的人。",
+   "kw": "SUQQU ザ ファンデーション",
+   "mustHave": [
+    "ザ ファンデーション"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-lunasol-fusing",
+   "brand": "LUNASOL",
+   "name": "スキンフュージングフィルター",
+   "desc": "粉底",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「有彈性的膜感粉底」趨勢代表：妝感服貼，像一層濾鏡。",
+   "kw": "ルナソル スキンフュージングフィルター",
+   "mustHave": [
+    "スキンフュージング"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-dior-velvetveil",
+   "brand": "Dior",
+   "name": "フォーエヴァー ベルベット ヴェール",
+   "desc": "妝前乳",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「妝前回歸基本」趨勢代表：先把膚面整理平滑，讓粉底更好上。",
+   "kw": "ディオール フォーエヴァー ベルベット ヴェール",
+   "mustHave": [
+    "ベルベット",
+    "ヴェール"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-cledepeau-eclat",
+   "brand": "Clé de Peau Beauté 肌膚之鑰",
+   "name": "アンベリスールデクラ",
+   "desc": "妝前乳",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「妝前回歸基本」趨勢代表：帶自然光澤感的妝前，讓膚色看起來有好氣色。",
+   "kw": "クレ・ド・ポー ボーテ アンベリスールデクラ",
+   "mustHave": [
+    "アンベリスール"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-elegance-glowbase",
+   "brand": "Elégance",
+   "name": "グロウリフティング ベース N",
+   "desc": "妝前乳",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「妝前回歸基本」趨勢代表：打底時就帶出自然光澤。",
+   "kw": "エレガンス グロウリフティング ベース",
+   "mustHave": [
+    "グロウリフティング"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-shu-serumpowder",
+   "brand": "shu uemura 植村秀",
+   "name": "アンリミテッド セラム スムース パウダー",
+   "desc": "蜜粉",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「能修飾膚色困擾的蜜粉」趨勢代表：定妝的同時也能修飾泛紅、膚色不均。",
+   "kw": "シュウ ウエムラ アンリミテッド セラム スムース パウダー",
+   "mustHave": [
+    "アンリミテッド",
+    "パウダー"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-pauljoe-poudre",
+   "brand": "PAUL & JOE",
+   "name": "プードル ヴィサージュ ルミエール ドゥース",
+   "desc": "蜜粉",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「能修飾膚色的蜜粉」趨勢代表：帶顏色的蜜粉，用起來像飾底乳。",
+   "kw": "ポール & ジョー プードル ヴィサージュ",
+   "mustHave": [
+    "プードル",
+    "ヴィサージュ"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "maquia-maybelline-fitme",
+   "brand": "Maybelline 媚比琳",
+   "name": "フィットミー ルースセッティング パウダー",
+   "desc": "蜜粉",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "「能修飾膚色的蜜粉」平價代表（日本官方價 ¥1,892）。",
+   "kw": "メイベリン フィットミー ルースセッティング パウダー",
+   "mustHave": [
+    "フィットミー",
+    "パウダー"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：長井かおり 2026 秋冬底妝 16 選",
+     "url": "https://maquia.hpplus.jp/catalog/basemake/121496/",
+     "date": "2026-08-21"
+    }
+   ]
+  },
+  {
+   "id": "allure-jsm-cushionblush",
+   "brand": "정샘물 JUNGSAEMMOOL",
+   "name": "뷰티아티스트 쿠션 블러쉬 블러 #퍼키 코랄",
+   "desc": "氣墊腮紅",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳彩妝」：滑順偏乾爽的質地，擦上去是清透的好氣色。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 編輯精選",
+     "url": "https://www.allurekorea.com/?p=357280",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-amuse-gelfit",
+   "brand": "AMUSE",
+   "name": "젤핏 글로스 #01 오트 바닐라",
+   "desc": "唇蜜",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳唇彩」：清透豐潤感，疊擦也不黏。",
+   "kw": "アミューズ ジェルフィット グロス",
+   "mustHave": [
+    "ジェルフィット"
+   ],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 編輯精選",
+     "url": "https://www.allurekorea.com/?p=357280",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-tirtir-red",
+   "brand": "TIRTIR",
+   "name": "마스크 핏 레드 쿠션 #11N 피오니",
+   "desc": "氣墊粉底",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳底妝」：輕薄像皮膚，遮瑕力也夠。",
+   "kw": "ティルティル マスクフィット レッドクッション",
+   "mustHave": [
+    "レッド",
+    "クッション"
+   ],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 編輯精選",
+     "url": "https://www.allurekorea.com/?p=357280",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "id": "allure-juicetocleanse-matcha",
+   "brand": "JUICE TO CLEANSE",
+   "name": "말차 파우더 워시",
+   "desc": "洗顏粉",
+   "cat": "保養",
+   "country": "韓國",
+   "who": "Allure Korea 編輯部",
+   "role": "雜誌編輯",
+   "say": "2026 韓國 Allure 美妝大獎「最佳洗面」：綠茶粉加木瓜酵素，洗起來溫和、膚觸滑順。",
+   "kw": "",
+   "mustHave": [],
+   "sources": [
+    {
+     "name": "Allure Korea 2026 Best of Beauty 編輯精選",
+     "url": "https://www.allurekorea.com/?p=357280",
      "date": "2026-10-01"
     }
    ]

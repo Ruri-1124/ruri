@@ -588,6 +588,19 @@
   }
 
   // 樂天原始資料＋你整理的標籤 → 網站用的商品
+  // 沒有人工標籤的商品：先從商品名稱找品牌（例如「ラロッシュポゼ」→ 理膚寶水），找不到才用店名
+  const BRAND_NAMES = [["ラロッシュポゼ", "LA ROCHE-POSAY 理膚寶水"], ["ラ ロッシュ ポゼ", "LA ROCHE-POSAY 理膚寶水"], ["コスメデコルテ", "COSME DECORTE 黛珂"], ["エリクシール", "ELIXIR 怡麗絲爾"],
+    ["マキアージュ", "MAQuillAGE 心機"], ["シュウ ウエムラ", "shu uemura 植村秀"], ["シュウウエムラ", "shu uemura 植村秀"], ["クレ・ド・ポー", "Clé de Peau Beauté 肌膚之鑰"], ["サーモス", "THERMOS 膳魔師"],
+    ["タイガー", "TIGER 虎牌"], ["象印", "ZOJIRUSHI 象印"], ["ライオン", "LION 獅王"], ["クリニカ", "Clinica"], ["システマ", "Systema"], ["セタフィル", "Cetaphil 舒特膚"], ["キュレル", "Curel 珂潤"],
+    ["アネッサ", "ANESSA 安耐曬"], ["ファンケル", "FANCL 芳珂"], ["オルビス", "ORBIS"], ["アテニア", "Attenir 艾天然"], ["キャンメイク", "CANMAKE"], ["セザンヌ", "CEZANNE"], ["ケイト", "KATE"],
+    ["エクセル", "excel"], ["ルナソル", "LUNASOL"], ["スック", "SUQQU"], ["ディオール", "Dior"], ["シャネル", "CHANEL"], ["ボビイ ブラウン", "Bobbi Brown 芭比波朗"], ["ボビイブラウン", "Bobbi Brown 芭比波朗"],
+    ["ランコム", "Lancôme 蘭蔻"], ["エスティ ローダー", "Estée Lauder 雅詩蘭黛"], ["エスティローダー", "Estée Lauder 雅詩蘭黛"], ["クリニーク", "CLINIQUE 倩碧"], ["ミルボン", "MILBON"], ["ナプラ", "napla"],
+    ["ロアザオイル", "LOA"], ["ロア ザ", "LOA"], ["ReFa", "ReFa"], ["サロニア", "SALONIA"], ["パナソニック", "Panasonic 國際牌"], ["テスコム", "TESCOM"], ["クレイツ", "CREATE ION"], ["アタック", "Attack 花王"],
+    ["アリエール", "Ariel"], ["ボールド", "Bold"], ["レノア", "Lenor"], ["さらさ", "さらさ（P&G）"], ["クナイプ", "Kneipp 克奈圃"], ["エチュード", "ETUDE"], ["イニスフリー", "innisfree"],
+    ["トリデン", "Torriden"], ["ダルバ", "d'Alba"], ["メディキューブ", "medicube"], ["ティルティル", "TIRTIR"], ["ロムアンド", "rom&nd"], ["マジョリカ", "MAJOLICA MAJORCA"], ["ジルスチュアート", "JILL STUART"],
+    ["ポール & ジョー", "PAUL & JOE"], ["アディクション", "ADDICTION"], ["イプサ", "IPSA"], ["タカミ", "TAKAMI"], ["オバジ", "Obagi"], ["エトヴォス", "ETVOS"], ["メイベリン", "Maybelline 媚比琳"]]
+    .sort((a, b) => b[0].length - a[0].length);
+  function brandFromName(name) { const hit = BRAND_NAMES.find(([k]) => name.includes(k)); return hit ? hit[1] : ""; }
   function toItem(raw, group) {
     const p = toItemBase(raw, group);
     p.tags = tagHits(needsOf(p.cat, p.itype), raw.itemName);   // 篩選條件依品項／分類不同
@@ -599,7 +612,7 @@
     const text = raw.itemName + " " + (raw.shopName || "");
     return {
       id: raw.itemCode, group, cat: CAT[group], rank: raw.rank,
-      brand: L.brand || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || (raw.shopName || "").replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName,
+      brand: L.brand || brandFromName(raw.itemName) || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || (raw.shopName || "").replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName,
       name: L.twName || L.jpName || cleanName(raw.itemName),   // 有台灣正式中文名就用，沒有就用日文原名，不自己翻譯
       twName: L.twName || "", jpName: L.jpName || "", desc: L.desc || "", jp: raw.itemName,
       country: L.country || detectCountry(text), tags: [],

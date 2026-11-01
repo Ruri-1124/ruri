@@ -1,26 +1,336 @@
 {
  "_說明": "台灣樂天「樂分紅」品牌連結。每個連結都是在樂分紅後台用「自訂推廣連結」官方產生的（追蹤標籤 ruri-web），不可以自己修改網址。match 是用來判斷商品品牌的字，商品的品牌名稱包含其中一個字，就會用這條連結。",
- "updated": "2026-10-30",
+ "updated": "2026-11-01",
  "brands": [
-  { "name": "ReFa", "link": "https://r10.to/hYOsmi", "match": ["ReFa", "リファ"] },
-  { "name": "LOA", "link": "https://r10.to/h5R6oq", "match": ["LOA", "ロアザオイル"] },
-  { "name": "艾天然 Attenir", "link": "https://r10.to/hP9Zhe", "match": ["Attenir", "アテニア"] },
-  { "name": "SK-II", "link": "https://r10.to/h57FXq", "match": ["SK-II", "SK-2"] },
-  { "name": "SALONIA", "link": "https://r10.to/h5Qp6v", "match": ["SALONIA", "サロニア"] },
-  { "name": "KINUJO", "link": "https://r10.to/h8c1is", "match": ["KINUJO", "絹女", "キヌージョ"] },
-  { "name": "資生堂", "link": "https://r10.to/h5tk4Q", "match": ["SHISEIDO"] },
-  { "name": "黛珂", "link": "https://r10.to/h5vSXT", "match": ["DECORTE", "デコルテ"] },
-  { "name": "植村秀", "link": "https://r10.to/hYuZaD", "match": ["shu uemura", "シュウ ウエムラ", "シュウウエムラ"] },
-  { "name": "怡麗絲爾", "link": "https://r10.to/hP7e8k", "match": ["ELIXIR", "エリクシール"] },
-  { "name": "TAKAMI", "link": "https://r10.to/hPAmyh", "match": ["TAKAMI", "タカミ"] },
-  { "name": "心機", "link": "https://r10.to/hg4cjm", "match": ["MAQuillAGE", "マキアージュ"] },
-  { "name": "卡詩", "link": "https://r10.to/h5Tksn", "match": ["KÉRASTASE", "KERASTASE", "ケラスターゼ"] },
-  { "name": "一匙靈", "link": "https://r10.to/hkmety", "match": ["Attack", "アタック"] },
-  { "name": "Ariel", "link": "https://r10.to/hRSWvq", "match": ["Ariel", "アリエール"] },
-  { "name": "CANMAKE", "link": "https://r10.to/he2W6w", "match": ["CANMAKE", "キャンメイク"] },
-  { "name": "倩碧", "link": "https://r10.to/hgwzvU", "match": ["CLINIQUE", "クリニーク"] },
-  { "name": "理膚寶水", "link": "https://r10.to/hPb2uB", "match": ["ROCHE-POSAY", "ラ ロッシュ ポゼ", "ラロッシュポゼ"] },
-  { "name": "Anua", "link": "https://r10.to/hkbq56", "match": ["Anua", "アヌア"] },
-  { "name": "CREATE ION", "link": "https://r10.to/hg8mGz", "match": ["CREATE ION", "クレイツ"] }
+  {
+   "name": "ReFa",
+   "link": "https://r10.to/hYOsmi",
+   "match": [
+    "ReFa",
+    "リファ"
+   ]
+  },
+  {
+   "name": "LOA",
+   "link": "https://r10.to/h5R6oq",
+   "match": [
+    "LOA",
+    "ロアザオイル"
+   ]
+  },
+  {
+   "name": "艾天然 Attenir",
+   "link": "https://r10.to/hP9Zhe",
+   "match": [
+    "Attenir",
+    "アテニア"
+   ]
+  },
+  {
+   "name": "SK-II",
+   "link": "https://r10.to/h57FXq",
+   "match": [
+    "SK-II",
+    "SK-2"
+   ]
+  },
+  {
+   "name": "SALONIA",
+   "link": "https://r10.to/h5Qp6v",
+   "match": [
+    "SALONIA",
+    "サロニア"
+   ]
+  },
+  {
+   "name": "KINUJO",
+   "link": "https://r10.to/h8c1is",
+   "match": [
+    "KINUJO",
+    "絹女",
+    "キヌージョ"
+   ]
+  },
+  {
+   "name": "資生堂",
+   "link": "https://r10.to/h5tk4Q",
+   "match": [
+    "SHISEIDO"
+   ]
+  },
+  {
+   "name": "黛珂",
+   "link": "https://r10.to/h5vSXT",
+   "match": [
+    "DECORTE",
+    "デコルテ"
+   ]
+  },
+  {
+   "name": "植村秀",
+   "link": "https://r10.to/hYuZaD",
+   "match": [
+    "shu uemura",
+    "シュウ ウエムラ",
+    "シュウウエムラ"
+   ]
+  },
+  {
+   "name": "怡麗絲爾",
+   "link": "https://r10.to/hP7e8k",
+   "match": [
+    "ELIXIR",
+    "エリクシール"
+   ]
+  },
+  {
+   "name": "TAKAMI",
+   "link": "https://r10.to/hPAmyh",
+   "match": [
+    "TAKAMI",
+    "タカミ"
+   ]
+  },
+  {
+   "name": "心機",
+   "link": "https://r10.to/hg4cjm",
+   "match": [
+    "MAQuillAGE",
+    "マキアージュ"
+   ]
+  },
+  {
+   "name": "卡詩",
+   "link": "https://r10.to/h5Tksn",
+   "match": [
+    "KÉRASTASE",
+    "KERASTASE",
+    "ケラスターゼ"
+   ]
+  },
+  {
+   "name": "一匙靈",
+   "link": "https://r10.to/hkmety",
+   "match": [
+    "Attack",
+    "アタック"
+   ]
+  },
+  {
+   "name": "Ariel",
+   "link": "https://r10.to/hRSWvq",
+   "match": [
+    "Ariel",
+    "アリエール"
+   ]
+  },
+  {
+   "name": "CANMAKE",
+   "link": "https://r10.to/he2W6w",
+   "match": [
+    "CANMAKE",
+    "キャンメイク"
+   ]
+  },
+  {
+   "name": "倩碧",
+   "link": "https://r10.to/hgwzvU",
+   "match": [
+    "CLINIQUE",
+    "クリニーク"
+   ]
+  },
+  {
+   "name": "理膚寶水",
+   "link": "https://r10.to/hPb2uB",
+   "match": [
+    "ROCHE-POSAY",
+    "ラ ロッシュ ポゼ",
+    "ラロッシュポゼ"
+   ]
+  },
+  {
+   "name": "Anua",
+   "link": "https://r10.to/hkbq56",
+   "match": [
+    "Anua",
+    "アヌア"
+   ]
+  },
+  {
+   "name": "CREATE ION",
+   "link": "https://r10.to/hg8mGz",
+   "match": [
+    "CREATE ION",
+    "クレイツ"
+   ]
+  },
+  {
+   "name": "M·A·C",
+   "link": "https://r10.to/hPHWJ1",
+   "match": [
+    "M·A·C",
+    "M・A・C",
+    "MAC",
+    "マック"
+   ]
+  },
+  {
+   "name": "獅王",
+   "link": "https://r10.to/hPGrnS",
+   "match": [
+    "LION",
+    "ライオン",
+    "獅王"
+   ]
+  },
+  {
+   "name": "芭比波朗",
+   "link": "https://r10.to/hPOCMJ",
+   "match": [
+    "Bobbi Brown",
+    "ボビイ ブラウン",
+    "ボビイブラウン"
+   ]
+  },
+  {
+   "name": "ETVOS",
+   "link": "https://r10.to/hYv5ZX",
+   "match": [
+    "ETVOS",
+    "エトヴォス"
+   ]
+  },
+  {
+   "name": "FANCL",
+   "link": "https://r10.to/h85d15",
+   "match": [
+    "FANCL",
+    "ファンケル"
+   ]
+  },
+  {
+   "name": "ORBIS",
+   "link": "https://r10.to/hPHpOf",
+   "match": [
+    "ORBIS",
+    "オルビス"
+   ]
+  },
+  {
+   "name": "珂潤",
+   "link": "https://r10.to/hg2FbJ",
+   "match": [
+    "Curel",
+    "キュレル",
+    "珂潤"
+   ]
+  },
+  {
+   "name": "安耐曬",
+   "link": "https://r10.to/hPIWIl",
+   "match": [
+    "ANESSA",
+    "アネッサ"
+   ]
+  },
+  {
+   "name": "rom&nd",
+   "link": "https://r10.to/hPPsv3",
+   "match": [
+    "rom&nd",
+    "ロムアンド"
+   ]
+  },
+  {
+   "name": "肌膚之鑰",
+   "link": "https://r10.to/hP4ZzZ",
+   "match": [
+    "Clé de Peau",
+    "クレ・ド・ポー",
+    "CLE DE PEAU"
+   ]
+  },
+  {
+   "name": "蘭蔻",
+   "link": "https://r10.to/hoUVgd",
+   "match": [
+    "Lancôme",
+    "LANCOME",
+    "ランコム"
+   ]
+  },
+  {
+   "name": "LUNASOL",
+   "link": "https://r10.to/hRbqG9",
+   "match": [
+    "LUNASOL",
+    "ルナソル"
+   ]
+  },
+  {
+   "name": "SUQQU",
+   "link": "https://r10.to/hgEhHp",
+   "match": [
+    "SUQQU",
+    "スック"
+   ]
+  },
+  {
+   "name": "膳魔師",
+   "link": "https://r10.to/hgFVuj",
+   "match": [
+    "THERMOS",
+    "サーモス"
+   ]
+  },
+  {
+   "name": "虎牌",
+   "link": "https://r10.to/hPni5G",
+   "match": [
+    "TIGER",
+    "タイガー"
+   ]
+  },
+  {
+   "name": "象印",
+   "link": "https://r10.to/hFigGa",
+   "match": [
+    "ZOJIRUSHI",
+    "象印"
+   ]
+  },
+  {
+   "name": "Panasonic",
+   "link": "https://r10.to/hgSihw",
+   "match": [
+    "Panasonic",
+    "パナソニック"
+   ]
+  },
+  {
+   "name": "TESCOM",
+   "link": "https://r10.to/hYquJU",
+   "match": [
+    "TESCOM",
+    "テスコム"
+   ]
+  },
+  {
+   "name": "Bold",
+   "link": "https://r10.to/hF5Qeu",
+   "match": [
+    "Bold",
+    "ボールド"
+   ]
+  },
+  {
+   "name": "Lenor",
+   "link": "https://r10.to/hPqd2p",
+   "match": [
+    "Lenor",
+    "レノア"
+   ]
+  }
  ]
 }

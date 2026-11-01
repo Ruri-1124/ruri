@@ -126,9 +126,9 @@
  },
  "velus:10000120": {
   "brand": "PILIEMO",
-  "name": "美白導入美容液 28 包",
+  "name": "導入精華液 28 包",
   "country": "日本",
-  "desc": "美白導入美容液 28 包"
+  "desc": "導入精華液 28 包"
  },
  "shuuemura:10000018": {
   "brand": "shu uemura 植村秀",
@@ -158,9 +158,9 @@
  },
  "rakuten24:11354091": {
   "brand": "ELIXIR 怡麗絲爾",
-  "name": "A 醇抗皺霜 22g",
+  "name": "A 醇眼霜 22g",
   "country": "日本",
-  "desc": "A 醇抗皺霜 22g"
+  "desc": "A 醇眼霜 22g"
  },
  "anuajapan:10000450": {
   "brand": "Anua",
@@ -176,9 +176,9 @@
  },
  "yunth:10000000": {
   "brand": "Yunth",
-  "name": "生維他命 C 美白美容液",
+  "name": "維生素 C 導入精華 28 包",
   "country": "日本",
-  "desc": "生維他命 C 美白美容液"
+  "desc": "維生素 C 導入精華 28 包"
  },
  "aestura-japan:10000007": {
   "brand": "AESTURA",
@@ -640,9 +640,10 @@
  },
  "velus:10000092": {
   "brand": "VELUS",
-  "name": "對苯二酚淡斑霜",
+  "name": "對苯二酚乳霜",
   "country": "日本",
-  "desc": "對苯二酚淡斑霜"
+  "desc": "對苯二酚乳霜",
+  "hide": true
  },
  "rakuten24:11386627": {
   "brand": "ELIXIR 怡麗絲爾",
@@ -685,9 +686,9 @@
  },
  "rakuten24:11421132": {
   "brand": "ELIXIR 怡麗絲爾",
-  "name": "緊緻乳霜 50g",
+  "name": "乳霜 50g",
   "country": "日本",
-  "desc": "緊緻乳霜 50g"
+  "desc": "乳霜 50g"
  },
  "bobbibrown:10001609": {
   "brand": "Bobbi Brown 芭比波朗",
