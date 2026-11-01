@@ -280,7 +280,7 @@
   .railwrap { position: relative; }
   .rail { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 12px; scrollbar-width: none; scroll-behavior: smooth; }
   .rail::-webkit-scrollbar { display: none; }
-  /* 左右圓形箭頭：點一下移動一頁；另外每 4 秒自動往右（滑鼠移上去或手指碰到時暫停，到最後會回到第一個） */
+  /* 左右圓形箭頭：點一下移動一頁；另外每 5 秒自動往右一整排（滑鼠移上去或手指碰到時暫停，到最後會回到第一個） */
   .rarrow { position: absolute; top: 34%; transform: translateY(-50%); z-index: 3; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.96); box-shadow: 0 4px 14px rgba(34,30,58,.18); cursor: pointer; display: grid; place-items: center; padding: 0; transition: transform .15s, background .15s; }
   .rarrow svg { width: 20px; height: 20px; fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
   .rarrow:hover { background: var(--ruri); border-color: var(--ruri); }
@@ -1246,7 +1246,7 @@
     if (page.source === "home") { heroGo(keep, true); heroWatch(); railWatch(); }
   }
 
-  // 橫向商品列：點箭頭移動一頁；每 4 秒自動往右一格，到最後回到開頭；滑鼠移上去或手指碰到就暫停
+  // 橫向商品列：點箭頭移動一頁；每 5 秒自動往右一整排，到最後回到開頭；滑鼠移上去或手指碰到就暫停
   function railStep(rail, dir, page) {
     const card = rail.querySelector(".card, .morecard");
     const step = page ? rail.clientWidth * 0.9 : (card ? card.getBoundingClientRect().width + 12 : 200);
@@ -1268,9 +1268,9 @@
       document.querySelectorAll(".railwrap").forEach(w => {
         const r = w.getBoundingClientRect();
         if (w.dataset.hold || r.bottom < 0 || r.top > innerHeight) return;   // 只動畫面上看得到的那幾列
-        railStep(w.querySelector(".rail"), 1);
+        railStep(w.querySelector(".rail"), 1, true);   // 一次跳一整排
       });
-    }, 4000);
+    }, 5000);
   }
 
   // 首頁輪播：滑動、點圓點、每 6 秒自動換下一個（滑鼠移上去或手指碰到時暫停）
