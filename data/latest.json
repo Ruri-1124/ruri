@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T22:59+08:00",
+ "updated": "2026-11-01T23:31+08:00",
  "groups": {
   "beauty": [
    {
@@ -268,7 +268,8 @@
     "shopName": "select shop MINT",
     "shopCode": "selectshopmint",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801589.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000015%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000015%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 8,
@@ -1025,7 +1026,8 @@
     "shopName": "select shop MINT",
     "shopCode": "selectshopmint",
     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/selectshopmint/cabinet/12342806/imgrc0117801589.jpg?_ex=300x300",
-    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000015%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01"
+    "url": "https://hb.afl.rakuten.co.jp/hgc/g00uf51o.nrqgi5ad.g00uf51o.nrqgj8e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopmint%2F00000015%2F&rafcid=wsc_i_ra_f22df348-caf1-434d-9f6b-56c437324d01",
+    "exclude": "法規或安全疑慮"
    },
    {
     "rank": 6,
