@@ -525,6 +525,7 @@
     { key: "makeupset", cat: "彩妝", label: "彩妝組・聖誕禮盒", zh: ["禮盒", "組合"], jp: ["福袋", "アドベント", "コレクション", "コフレ", "セット"], weak: true },
     { key: "cleansing", cat: "保養", label: "卸妝", zh: ["卸妝"], jp: ["クレンジング", "クレンズ", "メイク落とし"] },
     { key: "wash", cat: "保養", label: "洗面乳", zh: ["洗面", "洗顏"], jp: ["洗顔", "フォーム", "ウォッシュ"] },
+    { key: "pad", cat: "保養", label: "化妝棉片・棉片", zh: ["棉片"], jp: ["パッド"] },
     { key: "toner", cat: "保養", label: "化妝水", zh: ["化妝水", "噴霧"], jp: ["化粧水", "ローション", "トナー", "ミスト"] },
     { key: "serum", cat: "保養", label: "精華液", zh: ["精華"], jp: ["美容液", "セラム", "エッセンス", "アンプル"] },
     { key: "emulsion", cat: "保養", label: "乳液・乳霜", zh: ["乳液", "乳霜", "凝霜", "凝膠"], jp: ["乳液", "エマルジョン", "クリーム", "オールインワン", "ジェル"] },
@@ -564,6 +565,48 @@
     const name = cleanName(jp || "") + " " + (jp || "");
     const hit = (desc && earliest(desc, mine, "zh")) || earliest(name, mine, "jp") || (desc && earliest(desc, ITYPES, "zh")) || (mine.length ? null : earliest(name, ITYPES, "jp"));
     return hit ? hit.key : "other";
+  }
+  // 品項校正：樂天的子分類或搜尋關鍵字，有時會混到別種商品（例如面膜分類裡有面霜、乳霜搜尋到護唇膏）。
+  // 規則：商品名稱裡沒有原本品項的字、卻只出現另一個品項的字，就改成那個品項
+  const STRONG = {
+    foundation: ["ファンデ", "クッション", "リキッド", "パクト", "タンプードル"], primer: ["下地", "プライマー", "BB", "CC", "ベース"], concealer: ["コンシーラー"], powder: ["パウダー", "おしろい", "プードル"],
+    cheek: ["チーク", "ブラッシュ", "頬紅"], highlight: ["ハイライ", "シェーディング"], eye: ["アイシャドウ", "アイシャドー", "オンブル", "アイパレット", "アイカラー", "アイデザイナー", "スタイリングアイズ"],
+    liner: ["アイライナー", "ライナー"], mascara: ["マスカラ", "まつ毛用", "まつげ用"], brow: ["アイブロウ", "眉", "ブロウ"], lip: ["口紅", "リップ", "ティント", "グロス", "ルージュ", "メルティングバーム"],
+    tool: ["ブラシ", "パフ", "スポンジ"], cleansing: ["クレンジング", "メイク落とし"], wash: ["洗顔"], pad: ["パッド"], toner: ["化粧水", "ローション", "トナー"],
+    serum: ["美容液", "セラム", "エッセンス", "アンプル"], emulsion: ["乳液", "クリーム", "オールインワン", "デーケア"], mask: ["マスク", "パック"], sunscreen: ["日焼け止め", "日やけ止め", "UV", "サンスクリーン", "日焼止め", "サンクリーム"],
+    body: ["ボディ", "ハンド", "デオドラント", "インシャワー", "消臭", "フット"], shampoo: ["シャンプー", "コンディショナー", "トリートメント"], hairoil: ["ヘアオイル", "流さない", "アウトバス", "オイル", "ヘアミルク", "ミルク", "ミスト"],
+    styling: ["スタイリング", "ワックス", "スプレー", "ヘアバーム"], scalp: ["頭皮", "スカルプ", "ブラシ", "コーム", "ヘアローション", "ヘアエッセンス"], dryer: ["ドライヤー"], iron: ["アイロン", "カール", "カーリング", "くるくる", "スタイラー", "ブロー"]
+  };
+  function refineType(key, name) {
+    if (!STRONG[key]) return key;   // 組合、其他：不動
+    const has = k => (STRONG[k] || []).some(w => name.includes(w));
+    for (const [re, k] of TYPE_FIX) if (re.test(name)) return k;   // 個別確認過的商品
+    if (/アドベントカレンダー|コフレ|福袋|詰め合わせ/.test(name) && STRONG[key]) return key;   // 組合禮盒：字很雜，維持原分類
+    if (has("pad") && ["toner", "mask", "serum", "wash", "cleansing"].includes(key)) return "pad";   // トナーパッド、ゲルパッド＝化妝棉片
+    if (!STRONG[key] || has(key)) return key;
+    if (key === "tool") return "x-drop";   // 「メイク道具」分類混了收納盒、鞋子除臭粉這類不相關的東西：沒有刷具、粉撲字樣就不放
+    const cat = (ITYPES.find(t => t.key === key) || {}).cat;
+    const same = ITYPES.filter(t => t.cat === cat && t.key !== key && has(t.key)).map(t => t.key);
+    if (same.length === 1) return same[0];
+    if (same.length || cat === "髮品" || cat === "美容家電") return key;   // 髮品、家電不跨到保養彩妝
+    const any = Object.keys(STRONG).filter(k => k !== key && has(k) && ["彩妝", "保養", "髮品"].includes((ITYPES.find(t => t.key === k) || {}).cat));
+    return any.length === 1 ? any[0] : key;
+  }
+  function sameCatType(key, name) {   // 排行榜商品：只在同一大類裡校正，不換大類
+    const k = refineType(key, name || "");
+    const c = t => (ITYPES.find(x => x.key === t) || {}).cat;
+    return k !== "x-drop" && c(k) === c(key) ? k : key;
+  }
+  const TYPE_FIX = [[/UVトーンアップスポッツ/, "sunscreen"], [/フェイシャル ?トリートメント ?エッセンス|ピテラ ?ベスト ?コレクション/, "toner"]];
+  const FRONT_RISK = ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
+  const CAT_GROUP = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" };
+  function setType(p, key, name) {
+    const k = refineType(key, name || "");
+    if (k === "x-drop" || FRONT_RISK.some(w => (name || "").includes(w))) { p.exclude = "不相關或有疑慮"; return; }
+    const cat = (ITYPES.find(t => t.key === k) || {}).cat;
+    p.itype = k;
+    if (cat && cat !== p.cat && CAT_GROUP[cat]) { p.cat = cat; p.group = CAT_GROUP[cat]; }
+    p.tags = tagHits(needsOf(p.cat, k), name || "");
   }
   const typeLabel = k => (ITYPES.find(t => t.key === k) || { label: "其他" }).label;
 
@@ -618,6 +661,7 @@
   function toItem(raw, group) {
     const p = toItemBase(raw, group);
     p.tags = tagHits(needsOf(p.cat, p.itype), raw.itemName);   // 篩選條件依品項／分類不同
+    if (FRONT_RISK.some(w => raw.itemName.includes(w))) p.exclude = "法規或安全疑慮";
     return p;
   }
   function toItemBase(raw, group) {
@@ -634,7 +678,7 @@
       price: raw.price, rating: raw.rating, reviews: raw.reviews,
       img: raw.image, url: raw.url, exclude: raw.exclude || (L.hide ? "法規或安全疑慮" : ""),   // hide：有法規或安全疑慮，不放上網站
       daysOn: raw.daysOn, bestRank: raw.bestRank,
-      itype: L.type || itemType(CAT[group], L.desc || "", raw.itemName)   // 品項（labels.json 可以用 type 手動指定）
+      itype: L.type || sameCatType(itemType(CAT[group], L.desc || "", raw.itemName), raw.itemName)   // 品項（labels.json 可以用 type 手動指定）
     };
   }
   // Olive Young 商品：價格超過 14 天就不顯示金額（特價常常幾天就結束，避免誤導）
@@ -698,7 +742,7 @@
     for (const [key, t] of Object.entries((types && types.types) || {})) {
       const tdef = ITYPES.find(x => x.key === key);
       const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" }[tdef && tdef.cat];
-      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.gone ? null : r.rank; if (r.gone) { p.typeGone = true; p.rank = 1000 + (r.rank || 0); } if (!(LABELS[r.itemCode] || {}).type) { p.itype = key; p.tags = tagHits(needsOf(p.cat, key), r.itemName); } return p; })
+      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.gone ? null : r.rank; if (r.gone) { p.typeGone = true; p.rank = 1000 + (r.rank || 0); } if (!(LABELS[r.itemCode] || {}).type) setType(p, key, r.itemName); return p; })
         .filter(p => !p.exclude);
       TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
@@ -706,7 +750,7 @@
     for (const [key, t] of Object.entries((krItems && krItems.types) || {})) {
       const tdef = ITYPES.find(x => x.key === key);
       const g = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair" }[tdef && tdef.cat] || "beauty";
-      (t.items || []).forEach(r => { const p = toItem(r, g); if (p.exclude) return; p.country = "韓國"; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; p.krSearch = true; p.rank = 500 + r.rank; KR_ITEMS.push(p); if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
+      (t.items || []).forEach(r => { const p = toItem(r, g); if (p.exclude) return; p.country = "韓國"; if (!(LABELS[r.itemCode] || {}).type) setType(p, key, r.itemName); if (p.exclude) return; p.krSearch = true; p.rank = 500 + r.rank; KR_ITEMS.push(p); if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
     // 日本選物店（Hands、無印良品）：樂天官方店裡評價數最多的美容商品
     SHOPS = shops || SHOPS;
