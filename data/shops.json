@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T23:51+08:00",
+ "updated": "2026-11-05T07:02+08:00",
  "shops": {
   "hands": {
    "name": "Hands",
@@ -104,15 +104,15 @@
     },
     {
      "rank": 9,
-     "itemCode": "hands-net:10980668",
-     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
-     "price": 352,
-     "rating": 5.0,
+     "itemCode": "hands-net:10965651",
+     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
+     "price": 1320,
+     "rating": 4.0,
      "reviews": 3,
      "shopName": "ハンズ(HANDS)楽天市場店",
      "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/15/00/4518753050815-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 10,
@@ -164,15 +164,15 @@
     },
     {
      "rank": 14,
-     "itemCode": "hands-net:10965651",
-     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
-     "price": 1320,
-     "rating": 4.0,
+     "itemCode": "hands-net:10980668",
+     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
+     "price": 352,
+     "rating": 5.0,
      "reviews": 3,
      "shopName": "ハンズ(HANDS)楽天市場店",
      "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/15/00/4518753050815-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 15,
