@@ -1,0 +1,365 @@
+{
+ "_說明": "韓國品牌的 Olive Young 搜尋連結。Olive Young 聯盟後台只能幫「商品頁」產生分潤連結，品牌搜尋頁不行，所以這裡用一般搜尋網址（search），網站會在按鈕下面提醒讀者結帳輸入優惠代碼 RURI112424。如果之後有品牌頁的專屬連結，可以填在 link。",
+ "brands": [
+  {
+   "name": "Anua",
+   "match": [
+    "Anua",
+    "アヌア"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Anua"
+  },
+  {
+   "name": "TIRTIR",
+   "match": [
+    "TIRTIR",
+    "ティルティル"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=TIRTIR"
+  },
+  {
+   "name": "MEDIHEAL",
+   "match": [
+    "MEDIHEAL",
+    "メディヒール"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=MEDIHEAL"
+  },
+  {
+   "name": "d'Alba",
+   "match": [
+    "d'Alba",
+    "ダルバ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=d%27Alba"
+  },
+  {
+   "name": "Torriden",
+   "match": [
+    "Torriden",
+    "トリデン"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Torriden"
+  },
+  {
+   "name": "numbuzin",
+   "match": [
+    "numbuzin",
+    "ナンバーズイン"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=numbuzin"
+  },
+  {
+   "name": "ROUND LAB",
+   "match": [
+    "ROUND LAB",
+    "ラウンドラボ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=ROUND%20LAB"
+  },
+  {
+   "name": "SKIN1004",
+   "match": [
+    "SKIN1004"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=SKIN1004"
+  },
+  {
+   "name": "COSRX",
+   "match": [
+    "COSRX"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=COSRX"
+  },
+  {
+   "name": "Beauty of Joseon",
+   "match": [
+    "Beauty of Joseon",
+    "朝鮮美女"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Beauty%20of%20Joseon"
+  },
+  {
+   "name": "BIODANCE",
+   "match": [
+    "BIODANCE",
+    "バイオダンス"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=BIODANCE"
+  },
+  {
+   "name": "rom&nd",
+   "match": [
+    "rom&nd",
+    "ロムアンド"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=rom%26nd"
+  },
+  {
+   "name": "CLIO",
+   "match": [
+    "CLIO",
+    "クリオ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=CLIO"
+  },
+  {
+   "name": "peripera",
+   "match": [
+    "peripera",
+    "ペリペラ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=peripera"
+  },
+  {
+   "name": "hince",
+   "match": [
+    "hince",
+    "ヒンス"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=hince"
+  },
+  {
+   "name": "3CE",
+   "match": [
+    "3CE"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=3CE"
+  },
+  {
+   "name": "dasique",
+   "match": [
+    "dasique",
+    "デイジーク"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=dasique"
+  },
+  {
+   "name": "AMUSE",
+   "match": [
+    "AMUSE",
+    "アミューズ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=AMUSE"
+  },
+  {
+   "name": "fwee",
+   "match": [
+    "fwee",
+    "フィー"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=fwee"
+  },
+  {
+   "name": "LANEIGE",
+   "match": [
+    "LANEIGE",
+    "ラネージュ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=LANEIGE"
+  },
+  {
+   "name": "innisfree",
+   "match": [
+    "innisfree",
+    "イニスフリー"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=innisfree"
+  },
+  {
+   "name": "ma:nyo",
+   "match": [
+    "ma:nyo",
+    "魔女工場"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=ma%3Anyo"
+  },
+  {
+   "name": "AESTURA",
+   "match": [
+    "AESTURA",
+    "エストラ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=AESTURA"
+  },
+  {
+   "name": "Dr.Jart+",
+   "match": [
+    "Dr.Jart",
+    "ドクタージャルト"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Dr.Jart%2B"
+  },
+  {
+   "name": "medicube",
+   "match": [
+    "medicube",
+    "メディキューブ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=medicube"
+  },
+  {
+   "name": "VT",
+   "match": [
+    "VT COSMETICS",
+    "VT CICA",
+    "VTcosmetic",
+    "ブイティー"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=VT"
+  },
+  {
+   "name": "Abib",
+   "match": [
+    "Abib",
+    "アビブ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Abib"
+  },
+  {
+   "name": "mixsoon",
+   "match": [
+    "mixsoon",
+    "ミクスン"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=mixsoon"
+  },
+  {
+   "name": "Dr.Althea",
+   "match": [
+    "Dr.Althea",
+    "ドクターエルシア"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Dr.Althea"
+  },
+  {
+   "name": "celimax",
+   "match": [
+    "celimax",
+    "セリマックス"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=celimax"
+  },
+  {
+   "name": "BIOHEAL BOH",
+   "match": [
+    "BIOHEAL",
+    "バイオヒールボ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=BIOHEAL%20BOH"
+  },
+  {
+   "name": "ETUDE",
+   "match": [
+    "ETUDE",
+    "エチュード"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=ETUDE"
+  },
+  {
+   "name": "MISSHA",
+   "match": [
+    "MISSHA",
+    "ミシャ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=MISSHA"
+  },
+  {
+   "name": "Wakemake",
+   "match": [
+    "Wakemake",
+    "WAKEMAKE",
+    "ウェイクメイク"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Wakemake"
+  },
+  {
+   "name": "Centellian24",
+   "match": [
+    "Centellian24",
+    "センテリアン"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Centellian24"
+  },
+  {
+   "name": "Purito Seoul",
+   "match": [
+    "Purito",
+    "ピュリト"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Purito%20Seoul"
+  },
+  {
+   "name": "Isntree",
+   "match": [
+    "Isntree",
+    "イズントリー"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=Isntree"
+  },
+  {
+   "name": "KAHI",
+   "match": [
+    "KAHI",
+    "カヒ"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=KAHI"
+  },
+  {
+   "name": "espoir",
+   "match": [
+    "espoir",
+    "エスポア"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=espoir"
+  },
+  {
+   "name": "colorgram",
+   "match": [
+    "colorgram",
+    "カラーグラム"
+   ],
+   "link": "",
+   "search": "https://global.oliveyoung.com/tw/search/results?query=colorgram"
+  }
+ ]
+}

@@ -49,9 +49,12 @@ def call_api(endpoint, params):
         return json.load(response)
 
 
-def fetch_ranking(genre_id):
-    """問樂天：這個分類今天賣最好的是哪些？"""
-    return call_api(ENDPOINT, {"genreId": genre_id})
+def fetch_ranking(genre_id, page=1):
+    """問樂天：這個分類今天賣最好的是哪些？（一頁 30 個，page=2 是第 31～60 名）"""
+    params = {"genreId": genre_id}
+    if page > 1:
+        params["page"] = page
+    return call_api(ENDPOINT, params)
 
 
 def first_image(item):
@@ -160,6 +163,8 @@ def main():
     build_awards()
     # ⑩ 日本選物店（Hands、無印良品）在樂天的官方店
     build_shops(config)
+    # ⑪ 韓國商品：日本樂天上的韓國彩妝保養（依品項搜尋評價最多的）
+    build_korea(config)
 
 
 def youtube_get(path, params):
@@ -407,27 +412,41 @@ def build_types(config):
         for key, glist in genres.items():
             merged = {}
             ok = False
+            pages = config["typeGenres"].get("pages", 3)   # 每個子分類抓幾頁（一頁 30 名）
+            today = datetime.now(TAIWAN).strftime("%Y-%m-%d")
             for g in glist[:3]:   # 一個品項最多抓 3 個子分類
-                try:
-                    data = fetch_ranking(g["genreId"])
-                    rule = {k: v for k, v in config["groups"].get(g["root"], {}).items() if k != "keepOnly"}   # 子分類本身已經是品項，不用 keepOnly
-                    for raw in data.get("Items", []):
-                        item = apply_rules(simplify(raw), rule)
-                        if item.get("exclude"):
-                            continue
-                        code = item["itemCode"]
-                        if code not in merged or (item["rank"] or 99) < (merged[code]["rank"] or 99):
-                            merged[code] = {**item, "root": g["root"]}
-                    ok = True
-                except urllib.error.HTTPError as e:
-                    print(f"✗ 品項排行失敗（{key} {g['name']}）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:200]}")
-                except Exception as e:
-                    print(f"✗ 品項排行失敗（{key} {g['name']}）：{e}")
-                time.sleep(1.2)
+                rule = {k: v for k, v in config["groups"].get(g["root"], {}).items() if k != "keepOnly"}   # 子分類本身已經是品項，不用 keepOnly
+                for page in range(1, pages + 1):
+                    try:
+                        data = fetch_ranking(g["genreId"], page)
+                        got = data.get("Items", [])
+                        for raw in got:
+                            item = apply_rules(simplify(raw), rule)
+                            if item.get("exclude"):
+                                continue
+                            code = item["itemCode"]
+                            if code not in merged or (item["rank"] or 999) < (merged[code]["rank"] or 999):
+                                merged[code] = {**item, "root": g["root"], "lastSeen": today}
+                        ok = True
+                        if len(got) < 30:
+                            break
+                    except urllib.error.HTTPError as e:
+                        print(f"✗ 品項排行失敗（{key} {g['name']} 第 {page} 頁）HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:200]}")
+                        break
+                    except Exception as e:
+                        print(f"✗ 品項排行失敗（{key} {g['name']} 第 {page} 頁）：{e}")
+                        break
+                    time.sleep(1.1)
             if ok:
-                items = sorted(merged.values(), key=lambda x: x["rank"] or 99)[:30]
+                items = sorted(merged.values(), key=lambda x: x["rank"] or 999)[:30 * pages]
+                # 最近 30 天上過這個品項排行、今天下榜的商品也留著（標 gone），商品才不會一下就變少
+                cutoff = (datetime.now(TAIWAN) - timedelta(days=30)).strftime("%Y-%m-%d")
+                codes = {i["itemCode"] for i in items}
+                kept = [{**i, "gone": True} for i in (prev.get(key) or {}).get("items", [])
+                        if i["itemCode"] not in codes and i.get("lastSeen", "") >= cutoff and not any(w in i["itemName"] for w in RISK_WORDS)]
+                items += kept[:60]
                 out[key] = {"genres": [g["name"] for g in glist[:3]], "items": items}
-                print(f"✓ 品項 {key}：{len(items)} 個商品")
+                print(f"✓ 品項 {key}：{len(items) - len(kept)} 個商品上榜中，另外保留 {len(kept)} 個近 30 天下榜的")
             elif key in prev:
                 out[key] = prev[key]   # 這次失敗就沿用上次的
         if out:
@@ -436,6 +455,49 @@ def build_types(config):
             print(f"已更新品項排行（{len(out)} 個品項）")
     except Exception as e:   # 品項排行出錯不影響其他資料
         print(f"✗ 品項排行更新失敗：{e}")
+
+
+def build_korea(config):
+    """韓國商品：在日本樂天用「韓国コスメ＋品項」搜尋評價數最多的商品（名稱要有「韓国」），存到 data/kr_items.json"""
+    cfg = config.get("krSearch")
+    if not cfg:
+        return
+    out_path = ROOT / "data" / "kr_items.json"
+    prev = json.loads(out_path.read_text(encoding="utf-8")).get("types", {}) if out_path.exists() else {}
+    out = {}
+    for q in cfg["queries"]:
+        key = q["type"]
+        try:
+            data = call_api(SEARCH_ENDPOINT, {"keyword": q["kw"], "genreId": cfg.get("genreId", 100939), "hits": 30,
+                                              "sort": "-reviewCount", "availability": 1})
+            items = []
+            for raw in data.get("Items") or data.get("items") or []:
+                it = simplify(raw)
+                if "韓国" not in it["itemName"] or any(w in it["itemName"] for w in RISK_WORDS):
+                    continue
+                if any(w in it["itemName"] for w in q.get("exclude", [])):
+                    continue
+                it["rank"] = len(items) + 1
+                items.append(it)
+            seen = {i["itemCode"] for v in out.values() for i in v["items"]}
+            items = [i for i in items if i["itemCode"] not in seen]
+            print(f"✓ 韓國 {key}（{q['kw']}）：{len(items)} 個商品")
+            if items:
+                out.setdefault(key, {"items": []})["items"] += items
+            elif key in prev and key not in out:
+                out[key] = prev[key]
+        except urllib.error.HTTPError as e:
+            print(f"✗ 韓國 {key} 失敗 HTTP {e.code}：{e.read().decode('utf-8', 'replace')[:200]}")
+            if key in prev and key not in out:
+                out[key] = prev[key]
+        except Exception as e:
+            print(f"✗ 韓國 {key} 失敗：{e}")
+            if key in prev and key not in out:
+                out[key] = prev[key]
+        time.sleep(1.2)
+    if out:
+        data = {"updated": datetime.now(TAIWAN).isoformat(timespec="minutes"), "types": out}
+        out_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def build_shops(config):

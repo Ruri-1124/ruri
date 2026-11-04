@@ -179,6 +179,9 @@
   .buy.shopee { background: var(--shopee); }
   .buy.ghost { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
   .buy:hover { filter: brightness(1.05); }
+  .codetip { font-size: 11px; color: #1A7A63; text-align: center; margin-top: -2px; }
+  .codetip b { letter-spacing: .05em; }
+  .dbuys .codetip { width: 100%; text-align: left; }
   .alts { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 10px; }
   .alt { font-size: 12px; color: var(--muted); text-decoration: underline; }
   .voices { display: grid; gap: 4px; margin-top: 4px; }
@@ -657,7 +660,7 @@
     tags: [], skin: [], award: a, kw: a.kw, img: found ? found.img : "", url: found ? found.url : "", linked: found ? found.id : "",
     price: found ? found.price : 0, rating: found ? found.rating : 0, reviews: found ? found.reviews : 0, priceText: "", jp: found ? found.jp : ""
   });
-  let TYPE_ITEMS = {}, SHOPS = { shops: {} }, SHOP_ITEMS = {};   // 品項排行（樂天子分類排行）、日本選物店
+  let OYB = [], KR_ITEMS = [], TYPE_ITEMS = {}, SHOPS = { shops: {} }, SHOP_ITEMS = {};   // 品項排行（樂天子分類排行）、日本選物店
   let EXPERTS = [], YT = { videos: [] }, TWR = { brands: [] }, DKD = { brands: [] };
   const exItem = (e, found) => ({
     id: "ex:" + e.id, isEx: true, brand: e.brand, name: e.name, desc: e.desc, cat: e.cat, country: e.country,
@@ -676,7 +679,8 @@
     TWR = await get("data/tw_rakuten.json") || TWR;
     DKD = await get("data/dokodemo.json") || DKD;
     AWARDS = await get("data/awards.json") || AWARDS;
-    const [types, awFound, shops] = await Promise.all([get("data/types.json"), get("data/awards_items.json"), get("data/shops.json")]);
+    const [types, awFound, shops, krItems, oyBrands] = await Promise.all([get("data/types.json"), get("data/awards_items.json"), get("data/shops.json"), get("data/kr_items.json"), get("data/oy_brands.json")]);
+    OYB = (oyBrands && oyBrands.brands) || [];
     const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
     LABELS = labels || {}; DETAILS = details || {};
@@ -694,9 +698,15 @@
     for (const [key, t] of Object.entries((types && types.types) || {})) {
       const tdef = ITYPES.find(x => x.key === key);
       const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" }[tdef && tdef.cat];
-      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.rank; if (!(LABELS[r.itemCode] || {}).type) { p.itype = key; p.tags = tagHits(needsOf(p.cat, key), r.itemName); } return p; })
+      TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.gone ? null : r.rank; if (r.gone) { p.typeGone = true; p.rank = 1000 + (r.rank || 0); } if (!(LABELS[r.itemCode] || {}).type) { p.itype = key; p.tags = tagHits(needsOf(p.cat, key), r.itemName); } return p; })
         .filter(p => !p.exclude);
       TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
+    }
+    // 韓國美妝補充商品：日本樂天上「韓国コスメ」各品項評價最多的商品（只出現在韓國美妝區）
+    for (const [key, t] of Object.entries((krItems && krItems.types) || {})) {
+      const tdef = ITYPES.find(x => x.key === key);
+      const g = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair" }[tdef && tdef.cat] || "beauty";
+      (t.items || []).forEach(r => { const p = toItem(r, g); if (p.exclude) return; p.country = "韓國"; if (!(LABELS[r.itemCode] || {}).type) p.itype = key; p.krSearch = true; p.rank = 500 + r.rank; KR_ITEMS.push(p); if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
     }
     // 日本選物店（Hands、無印良品）：樂天官方店裡評價數最多的美容商品
     SHOPS = shops || SHOPS;
@@ -863,10 +873,33 @@
   // =========================================================
   const heartSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"></path></svg>';
 
+  // 韓國商品：日本樂天常常不寄台灣，所以主要按鈕改成「去 Olive Young 找這個品牌」
+  function oyBrand(p) {
+    const t = ((LABELS[p.id] || {}).brand || p.brand || "") + " " + (p.jp || p.name || "");
+    return OYB.find(b => b.match.some(m => t.toLowerCase().includes(m.toLowerCase())));
+  }
+  function oyFindLink(p) {
+    const b = oyBrand(p);
+    if (b) return { name: b.name, url: b.link || b.search };
+    const br = String(p.brand || "").replace(/[\u3040-\u30ff\u4e00-\u9fff]/g, "").trim();
+    if (br && !p.krSearch) return { name: br, url: "https://global.oliveyoung.com/tw/search/results?query=" + encodeURIComponent(br) };
+    const kw = p.itype && p.itype !== "other" ? typeLabel(p.itype).split("・")[0] : "";   // 認不出品牌：改用品項搜尋，例如「面膜」
+    return kw ? { name: kw, url: "https://global.oliveyoung.com/tw/search/results?query=" + encodeURIComponent(kw) } : null;
+  }
   function buyButtons(p, inline, compact) {
     if ((LABELS[p.id] || {}).noTW) return `<div class="rate">台灣不能當化粧品販售，本站不提供購買連結</div>`;
     const shopee = shopeeLink(p), tw = twRakutenLink(p);
     const a = (cls, href, text) => `<a class="${cls}" href="${esc(href)}" target="_blank" rel="sponsored noopener">${text}</a>`;
+    const oyf = p.country === "韓國" && !p.isOY ? oyFindLink(p) : null;
+    if (oyf) {
+      const alts2 = [shopee ? ["在蝦皮搜尋", shopee] : null, tw ? [twBrand(p) ? "台灣樂天找 " + twBrand(p).name : "台灣樂天找找", tw] : null, p.url ? ["日本樂天（可能不寄台灣）", p.url] : null].filter(Boolean);
+      // Olive Young 只能幫「商品頁」產生分潤連結，品牌搜尋頁不行，所以提醒讀者結帳時輸入優惠代碼（代碼也會算分潤）
+      const codeTip = OY.code ? `<div class="codetip">結帳輸入代碼 <b>${esc(OY.code)}</b> 享 5% 折扣</div>` : "";
+      const m = a("buy oy", oyf.url, "去 Olive Young 找 " + esc(oyf.name)) + codeTip;
+      if (inline) return m + alts2.map(([t, h]) => a("buy ghost", h, t)).join("");
+      if (compact) return m;
+      return m + (alts2.length ? `<div class="alts">${alts2.map(([t, h]) => a("alt", h, t)).join("")}</div>` : "");
+    }
     const main = p.isOY ? a("buy oy", p.url, "去 Olive Young") : (shopee ? a("buy shopee", shopee, "在蝦皮搜尋") : (p.url ? a("buy", p.url, "去日本樂天看看") : ""));
     const alts = [
       p.isOY && shopee ? ["在蝦皮找找", shopee] : null,
@@ -902,7 +935,7 @@
           <button class="picbtn" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹">${tileHtml(p)}${p.img ? `<img src="${esc(p.img)}" alt="" loading="${opts.eager ? "eager" : "lazy"}" onerror="this.remove()">` : ""}</button>
           ${opts.showRank ? `<span class="rank r${opts.showRank}">${opts.showRank}</span>` : ""}
           ${opts.crown ? `<span class="crown c${opts.crown}">${opts.crown}</span>` : ""}
-          ${opts.gone ? `<span class="gone">目前不在排行榜上</span>` : ""}
+          ${opts.gone || p.typeGone ? `<span class="gone">目前不在排行榜上</span>` : ""}
           <button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${fav}" aria-label="${fav ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button>
         </div>
         <div class="body">
@@ -1217,10 +1250,12 @@
       const byType = state.itype !== "all";
       const oyAll = OY.items.map(oyItem);
       const jpKr = [...new Map(Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat())
-        .filter(p => p.country === "韓國").map(p => [p.id, p])).values()];
+        .filter(p => p.country === "韓國").concat(KR_ITEMS).map(p => [p.id, p])).values()];
       const exKr = EXPERTS.filter(p => p.country === "韓國").map(p => ({ ...p, itype: p.itype || itemType(p.cat, p.desc || "", "") }));
       const order = p => p.isOY ? (p.hot ? 0 : 1) : p.isEx ? 3 : 2;
-      let pool = [...oyAll, ...jpKr, ...exKr];
+      // 日本樂天的韓國商品沒有中文名：標題改成「品牌＋中文品項」，日文原名放在下面一行（不自己翻譯商品名稱）
+      const zh = p => { if (!p.itype || p.itype === "other") return p; const b = (oyBrand(p) || {}).name || ((LABELS[p.id] || {}).brand) || (p.krSearch || /[\u3040-\u30ff]/.test(p.brand) ? "韓國品牌" : p.brand); return { ...p, brand: b, name: `${b} ${typeLabel(p.itype)}`, desc: cleanName(p.jp || p.name) }; };
+      let pool = [...oyAll, ...jpKr.map(zh), ...exKr];
       const inK = (p, kc) => p.itype === "body" ? kc.includes("身體") : kc.includes(p.cat);   // 身體保養放在「髮品・身體」
       if (page.kcat) pool = pool.filter(p => inK(p, page.kcat));
       const list = applyFilters(pool, { noPrice: true, itype: true }).sort((a, b) => order(a) - order(b) || (a.rank || 99) - (b.rank || 99));
@@ -1237,8 +1272,8 @@
         const cats = PAGES.filter(p => p.parent === "kr" && p.kcat);
         html += `<div class="entries" style="margin-top:16px">${cats.map(c => `<a class="entry e-kr" href="#${c.key}"><b>${esc(c.label)}</b><span>${oyAll.concat(jpKr).filter(p => inK(p, c.kcat)).length} 件</span></a>`).join("")}</div>`;
       }
-      const meta = p => p.isOY ? "" : p.isEx ? `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)} 推薦</div>` : `<div class="meta">日本樂天${p.typeRank ? esc(typeLabel(p.itype)) + "排行第 " + p.typeRank : esc(p.cat) + "第 " + p.rank} 名</div>`;
-      html += `<h2 class="sub">${byType ? esc(typeLabel(state.itype)) : page.kcat ? esc(label) + "全部商品" : "全部韓國商品"}<span class="subnote">🔥 標籤是這次 Olive Young 暢銷區的商品；其他是之前上過暢銷、日本樂天排行上的韓國品牌，或達人推薦</span></h2>`;
+      const meta = p => p.isOY ? "" : p.isEx ? `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)} 推薦</div>` : p.krSearch ? `<div class="meta">日本樂天人氣韓國${esc(typeLabel(p.itype))}</div>` : `<div class="meta">日本樂天${p.typeRank ? esc(typeLabel(p.itype)) + "排行第 " + p.typeRank : esc(p.cat) + "第 " + p.rank} 名</div>`;
+      html += `<h2 class="sub">${byType ? esc(typeLabel(state.itype)) : page.kcat ? esc(label) + "全部商品" : "全部韓國商品"}<span class="subnote">🔥 標籤是這次 Olive Young 暢銷區的商品；其他是之前上過暢銷的 Olive Young 商品、日本樂天上的人氣韓國商品，或達人推薦</span></h2>`;
       html += list.length ? `<div class="grid">${list.map((p, i) => card(p, { meta: meta(p), eager: i < 8 })).join("")}</div>` : `<div class="empty">這個分類的韓國商品整理中。</div>`;
       html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">ruri 是 Olive Young Global 的聯盟夥伴，並非 Olive Young 官方網站。Olive Young 價格會變動，網站上的價格為整理當天的參考價，超過 14 天不顯示金額，請以 Olive Young 頁面為準。</p>`;
     }

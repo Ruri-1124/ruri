@@ -468,7 +468,8 @@
     "depth": 3,
     "limit": 40
    }
-  ]
+  ],
+  "pages": 3
  },
  "shops": {
   "_說明": "日本選物店在樂天的官方店：用樂天商品搜尋抓「美容」分類裡評價數最多的商品。shopCode 不知道時，用 findKeyword 搜尋，再找店名含 shopNameHas 的店。",
@@ -487,6 +488,84 @@
     "shopCode": "",
     "shopNameHas": "無印良品",
     "findKeyword": "無印良品 化粧水"
+   }
+  ]
+ },
+ "krSearch": {
+  "_說明": "韓國美妝區的補充商品：在日本樂天用這些關鍵字搜尋美容分類、依評價數排序，名稱要有「韓国」才算。type 是品項代號。",
+  "genreId": 100939,
+  "queries": [
+   {
+    "type": "foundation",
+    "kw": "韓国コスメ クッションファンデ"
+   },
+   {
+    "type": "concealer",
+    "kw": "韓国コスメ コンシーラー"
+   },
+   {
+    "type": "cheek",
+    "kw": "韓国コスメ チーク"
+   },
+   {
+    "type": "eye",
+    "kw": "韓国コスメ アイシャドウ"
+   },
+   {
+    "type": "mascara",
+    "kw": "韓国コスメ マスカラ"
+   },
+   {
+    "type": "brow",
+    "kw": "韓国コスメ アイブロウ"
+   },
+   {
+    "type": "lip",
+    "kw": "韓国コスメ ティント"
+   },
+   {
+    "type": "cleansing",
+    "kw": "韓国コスメ クレンジング"
+   },
+   {
+    "type": "wash",
+    "kw": "韓国コスメ 洗顔"
+   },
+   {
+    "type": "toner",
+    "kw": "韓国コスメ 化粧水"
+   },
+   {
+    "type": "toner",
+    "kw": "韓国コスメ トナーパッド"
+   },
+   {
+    "type": "serum",
+    "kw": "韓国コスメ 美容液"
+   },
+   {
+    "type": "emulsion",
+    "kw": "韓国コスメ クリーム"
+   },
+   {
+    "type": "mask",
+    "kw": "韓国コスメ シートマスク"
+   },
+   {
+    "type": "sunscreen",
+    "kw": "韓国コスメ 日焼け止め"
+   },
+   {
+    "type": "shampoo",
+    "kw": "韓国 シャンプー"
+   },
+   {
+    "type": "hairoil",
+    "kw": "韓国 ヘアオイル"
+   },
+   {
+    "type": "body",
+    "kw": "韓国コスメ ボディクリーム"
    }
   ]
  }
