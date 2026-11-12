@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T07:05+08:00",
+ "updated": "2026-11-13T07:02+08:00",
  "shops": {
   "hands": {
    "name": "Hands",
@@ -378,8 +378,8 @@
      "itemCode": "mujirushi-ryohin:10009292",
      "itemName": "植物発酵液　薬用エイジングケアエッセンス・150mL【無印良品 公式】",
      "price": 1590,
-     "rating": 4.29,
-     "reviews": 75,
+     "rating": 4.26,
+     "reviews": 76,
      "shopName": "無印良品",
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550584465840.jpg?_ex=300x300",
@@ -483,6 +483,18 @@
     },
     {
      "rank": 12,
+     "itemCode": "mujirushi-ryohin:10009283",
+     "itemName": "植物発酵液　薬用スカルプローション・150mL【無印良品 公式】",
+     "price": 1390,
+     "rating": 4.26,
+     "reviews": 34,
+     "shopName": "無印良品",
+     "shopCode": "mujirushi-ryohin",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550584465833_02.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584465833%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009283%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 13,
      "itemCode": "mujirushi-ryohin:10006804",
      "itemName": "ふき取り化粧水・300mL【無印良品 公式】",
      "price": 1490,
@@ -492,18 +504,6 @@
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item35/4550583451325.jpg?_ex=300x300",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583451325%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10006804%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 13,
-     "itemCode": "mujirushi-ryohin:10009283",
-     "itemName": "植物発酵液　薬用スカルプローション・150mL【無印良品 公式】",
-     "price": 1390,
-     "rating": 4.33,
-     "reviews": 33,
-     "shopName": "無印良品",
-     "shopCode": "mujirushi-ryohin",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550584465833_02.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550584465833%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10009283%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 14,
