@@ -279,10 +279,13 @@
   .circles { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 16px 10px; }
   .catcircles { margin-top: 18px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
   .catcircles + .sub { margin-top: 22px; }
+  .krcircles { grid-template-columns: repeat(4, 1fr); gap: 12px 6px; }
+  @media (max-width: 480px) { .circles.krcircles { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); grid-template-rows: none; grid-auto-columns: auto; overflow: visible; padding: 14px 6px; } .krcircles .ring { width: 66px; height: 66px; } .krcircles b { font-size: 12px; } }
   .circ { display: grid; justify-items: center; gap: 6px; text-decoration: none; color: var(--ink); text-align: center; }
   .circ .ring { width: 84px; height: 84px; border-radius: 50%; background: #fff; border: 2px solid var(--line); overflow: hidden; display: grid; place-items: center; transition: border-color .15s, transform .15s; }
   .circ .ring img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
   .circ .ring em { font-style: normal; font-family: var(--font-display); font-weight: 900; color: var(--ruri); font-size: 13px; }
+  .circ .ring.kr { border-color: #BFE6DA; }
   .circ:hover .ring { border-color: var(--ruri); transform: translateY(-2px); }
   .circ b { font-size: 13px; line-height: 1.3; }
   .circ small { font-size: 11px; color: var(--muted); margin-top: -4px; }
@@ -340,6 +343,7 @@
   }
 
   .empty { text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
+  .fb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; color: var(--ink); }
   footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
   .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 10px; font-size: 14px; z-index: 40; max-width: calc(100% - 32px); }
   .shade { position: fixed; inset: 0; background: rgba(34,30,58,.45); z-index: 29; }
@@ -407,6 +411,7 @@
 
 <footer>
   <div class="wrap">
+    <div class="fb" id="fb"><b>這個網站對你有幫助嗎？</b><button type="button" class="chip" data-fb="good">👍 有幫助</button><button type="button" class="chip" data-fb="bad">👎 不太好用</button></div>
     排行資料來自日本樂天市場，每天台灣時間早上 6 點左右自動更新；上榜過的商品會保留在資料庫裡。價格為日本售價，台幣以 1 日圓 ≈ 0.21 台幣估算。
     膚質與需求標籤由商品說明的關鍵字自動判斷，僅供參考。「在蝦皮搜尋」、「台灣樂天找找」會帶你到該平台的搜尋結果，台灣不一定有販售，請確認賣家與商品內容後再購買。
     本站含蝦皮、樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。本站內容為商品資訊整理，不代表療效。
@@ -444,6 +449,7 @@
     { key: "kr-hair",     parent: "kr", label: "💇‍♀️ 髮品・身體", title: "韓國髮品・身體", desc: "洗髮、護髮、頭皮與身體保養", source: "kr", kcat: ["髮品", "身體"] },
     { key: "kr-injp",     parent: "kr", label: "🗾 日本也在紅", title: "在日本也爆紅的韓系商品", desc: "這些韓國品牌正在日本樂天排行榜上", source: "krjp" },
     { key: "creators", parent: "creators", label: "達人推薦", title: "達人都在推什麼", desc: "整理化妝師、YouTuber、IG 與小紅書創作者的推薦", source: "creators" },
+    { key: "search",   parent: "search", label: "搜尋", title: "搜尋結果", desc: "日本、韓國、達人推薦的商品一起找", source: "search" },
     { key: "fav",      parent: "fav", label: "我的最愛", title: "我的最愛", desc: "收藏的商品存在這台裝置的瀏覽器裡，商品下榜了也不會消失", source: "fav" }
   ];
 
@@ -621,7 +627,7 @@
   // =========================================================
   let RANK = {}, MONTH = { groups: {}, days: 0 }, LABELS = {}, DETAILS = {}, ARCHIVE = {}, CREATORS = { items: [] }, OY = { items: [] };
   let BY_CODE = {}, LATEST_DAY = "";
-  const state = { hc: "all", ht: "彩妝", shop: "", ex: { role: "all", cat: "all", country: "all" }, aw: "all", itype: "all", tab: "home", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
+  const state = { scat: "all", hc: "all", ht: "彩妝", shop: "", ex: { role: "all", cat: "all", country: "all" }, aw: "all", itype: "all", tab: "home", needs: new Set(), skins: new Set(), price: "all", sort: "rank", merge: false, cat: "all", q: "", past: false, sideOpen: false };
 
   let FAVS = {};
   try { FAVS = JSON.parse(localStorage.getItem("ruri-favs") || "{}"); } catch (e) { FAVS = {}; }
@@ -680,7 +686,7 @@
     const text = raw.itemName + " " + (raw.shopName || "");
     return {
       id: raw.itemCode, group, cat: CAT[group], rank: raw.rank, shop: raw.shopName || "",
-      brand: L.brand || brandFromName(raw.itemName) || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || (raw.shopName || "").replace(/【.*?】|楽天市場店|楽天市場|公式|ショップ|店$/g, "").trim() || raw.shopName,
+      brand: L.brand || brandFromName(raw.itemName) || knownBrand(raw.itemName || "", raw.shopName || "") || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || shopBrand(raw.shopName),
       name: L.twName || L.jpName || cleanName(raw.itemName),   // 有台灣正式中文名就用，沒有就用日文原名，不自己翻譯
       twName: L.twName || "", jpName: L.jpName || "", desc: L.desc || "", jp: raw.itemName,
       country: L.country || detectCountry(text), tags: [],
@@ -819,6 +825,13 @@
   }
   const KR_PAIRS = KR_WORDS.map((w, i) => /^[ァ-ヶー・]+$/.test(w) && /^[A-Za-z]/.test(KR_WORDS[i - 1] || "") ? [w, KR_WORDS[i - 1]] : null).filter(Boolean).concat([["セロラバイ", "CELORABY"]]);
   const KANA_KEYS = Object.keys(BRAND_KANA).sort((a, b) => b.length - a.length);
+  // 認不出品牌時才看店名：藥妝店、樂天24 這類「賣很多品牌的店」不能當品牌，改顯示「日本品牌」
+  function shopBrand(shop) {
+    shop = String(shop || "");
+    if (!shop || /楽天24|楽天ビック|ドラッグ|薬局|薬店|ツルハ|サンドラッグ|マツキヨ|ココカラ|ウエルシア|スギ薬|コスメ館|コスメティック|KSK|ホッチポッチ|AOHAL|美容|健康|ビューティー|セレクト|輸入|雑貨|問屋|卸|ネット|通販|マート|ヤフー|Yahoo|ASストア|ショッピング|コスメ|化粧品|総合|専門店|本舗|堂/.test(shop)) return "日本品牌";
+    const b = shop.replace(/【.*?】|（.*?）|\(.*?\)|楽天市場店|楽天市場|公式|オンラインストア|オンラインショップ|ONLINE ?SHOP|ONLINE ?STORE|WEB ?shop|e-shop|ストア|ショップ|STORE|SHOP|shop|store|店$/g, "").trim();
+    return b.length >= 2 ? b : "日本品牌";
+  }
   function knownBrand(jp, shop) {
     const brandWord = s => (s || "").replace(/[（(].*?[)）]/g, "").replace(/[一-鿿]+/g, "").replace(/\s+/g, " ").trim() || (s || "").replace(/[（(].*?[)）]/g, "");
     const kana = KANA_KEYS.find(k => brandIn(jp, k));
@@ -1174,10 +1187,65 @@
   }
   const crumbs = parts => `<div class="crumbs">${parts.map(([l, h]) => h ? `<a href="#${h}">${esc(l)}</a>` : `<span>${esc(l)}</span>`).join("<i>›</i>")}</div>`;
 
+  // 韓國美妝全部商品：Olive Young＋日本樂天上的韓國商品＋達人推薦的韓國商品
+  function krPool() {
+    const oyAll = OY.items.map(oyItem);
+    const jpKr = [...new Map(Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat())
+      .filter(p => p.country === "韓國" && !p.exclude).concat(KR_ITEMS.filter(p => !p.exclude)).map(p => [p.id, p])).values()];
+    const exKr = EXPERTS.filter(p => p.country === "韓國").map(p => ({ ...p, itype: p.itype || itemType(p.cat, p.desc || "", "") }));
+    // 日本樂天的韓國商品沒有中文名：標題改成「品牌＋中文品項」，日文原名放在下面一行（不自己翻譯商品名稱）
+    const zh = p => { if (!p.itype || p.itype === "other") return p; const b = (oyBrand(p) || {}).name || ((LABELS[p.id] || {}).brand) || (p.krSearch || /[\u3040-\u30ff]/.test(p.brand) ? "韓國品牌" : p.brand); return { ...p, brand: b, name: `${b} ${typeLabel(p.itype)}`, desc: cleanName(p.jp || p.name) }; };
+    return { oyAll, jpKr, pool: [...oyAll, ...jpKr.map(zh), ...exKr] };
+  }
+  // 日本商品全部：分類排行＋品項排行＋達人推薦（不含韓國）
+  function jpPool() {
+    const all = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat()).filter(p => p.country !== "韓國" && !p.exclude);
+    const ex = EXPERTS.filter(p => p.country !== "韓國").map(p => ({ ...p, itype: p.itype || itemType(p.cat, p.desc || "", "") }));
+    return [...new Map(all.concat(ex).map(p => [p.id, p])).values()];
+  }
+  // ── 搜尋 ──
+  // 每個字都要對到才算（「ReFa 吹風機」＝ReFa 而且是吹風機）；中文品項字會對到商品的品項，例如「卸妝」對到所有卸妝商品
+  const TYPE_WORDS = {
+    cleansing: ["卸妝", "卸妝油", "卸妝水", "卸妝乳", "卸妝膏", "卸妝凝膠", "潔顏油"], wash: ["洗面乳", "洗顏", "洗臉", "潔面", "洗面", "洗顏粉"], pad: ["棉片", "化妝棉"],
+    toner: ["化妝水", "爽膚水", "精華水", "噴霧"], serum: ["精華", "精華液", "安瓶", "原液"], emulsion: ["乳液", "乳霜", "面霜", "保濕霜", "凝霜", "凝膠"], mask: ["面膜", "眼膜"],
+    sunscreen: ["防曬", "防曬乳", "防曬霜", "隔離"], foundation: ["粉底", "粉底液", "氣墊", "粉餅"], primer: ["妝前", "飾底", "隔離", "BB霜", "CC霜", "素顏霜"], concealer: ["遮瑕"],
+    powder: ["蜜粉", "定妝", "散粉", "粉餅"], cheek: ["腮紅", "頰彩"], highlight: ["打亮", "修容", "高光"], eye: ["眼影", "眼影盤"], liner: ["眼線", "眼線筆", "眼線液"],
+    mascara: ["睫毛膏", "睫毛"], brow: ["眉筆", "眉粉", "眉彩", "眉毛"], lip: ["唇膏", "口紅", "唇釉", "唇彩", "唇蜜", "護唇膏", "潤唇膏", "染唇", "唇"], tool: ["刷具", "粉撲", "化妝刷", "海綿"],
+    body: ["身體乳", "身體", "護手霜", "沐浴", "沐浴乳", "沐浴露", "體香"], shampoo: ["洗髮", "洗髮精", "潤髮", "潤髮乳", "護髮", "髮膜"], hairoil: ["護髮油", "髮油", "護髮", "免沖洗"],
+    styling: ["造型", "髮蠟", "定型", "髮膠"], scalp: ["頭皮", "梳子", "梳"], dryer: ["吹風機"], iron: ["離子夾", "捲髮", "捲髮器", "直髮夾", "電棒"],
+    toothbrush: ["牙刷"], toothpaste: ["牙膏"], umbrella: ["雨傘", "陽傘", "傘"], bottle: ["水壺", "保溫瓶", "保溫杯", "水瓶"], bag: ["環保袋", "購物袋", "提袋", "包"],
+    detergent: ["洗衣精", "洗衣", "洗衣球", "洗衣粉"], softener: ["柔軟精", "柔軟劑"], bath: ["入浴劑", "泡澡", "沐浴"]
+  };
+  // 比較細的字：對到品項以後再看日文原名（例如「卸妝油」＝卸妝而且名稱有オイル）
+  const FINE_WORDS = { "卸妝油": /オイル|oil/i, "卸妝水": /ウォーター|ミセラー|water/i, "卸妝膏": /バーム|balm/i, "卸妝乳": /ミルク|milk/i, "潔顏油": /オイル|oil/i,
+    "洗顏粉": /パウダー|powder/i, "氣墊": /クッション|cushion/i, "粉餅": /パクト|プレスト|ファンデーション|pact/i, "粉底液": /リキッド|liquid/i, "眼膜": /アイ|eye/i,
+    "護唇膏": /リップクリーム|バーム|balm/i, "潤唇膏": /リップクリーム|バーム|balm/i, "髮膜": /マスク|パック|mask/i, "護手霜": /ハンド|hand/i, "保溫瓶": /ボトル|マグ|bottle/i };
+  const normQ = s => String(s || "").toLowerCase().replace(/[\s・·．.\-_\/]+/g, "");
+  function searchHay(p) {
+    if (!p._hay) p._hay = normQ([p.brand, p.name, p.desc, p.jp, cleanName(p.jp || ""), typeLabel(p.itype), p.cat, p.country, (LABELS[p.id] || {}).brand,
+      knownBrand(p.jp || "", p.shop || ""), (oyBrand(p) || {}).name].filter(Boolean).join(" "));
+    return p._hay;
+  }
+  function matchToken(p, tok) {
+    const t = normQ(tok); if (!t) return true;
+    const typeHit = Object.entries(TYPE_WORDS).some(([k, ws]) => p.itype === k && ws.some(w => normQ(w) === t));
+    if (typeHit) { const fine = FINE_WORDS[tok]; return !fine || fine.test((p.jp || "") + " " + (p.name || "")); }
+    return searchHay(p).includes(t);
+  }
+  function searchItems(q) {
+    const toks = String(q).trim().split(/[\s　,，]+/).filter(Boolean);
+    const all = jpPool().concat(krPool().pool);
+    const hits = all.filter(p => toks.every(t => matchToken(p, t)));
+    const score = p => { const b = normQ(p.brand + " " + ((LABELS[p.id] || {}).brand || "")); return (toks.some(t => b.includes(normQ(t))) ? 0 : 1) * 10 + (p.isOY ? (p.hot ? 0 : 1) : p.isEx ? 3 : 2); };
+    const seen = new Set();
+    return hits.sort((a, b) => score(a) - score(b) || (a.typeRank || a.rank || 999) - (b.typeRank || b.rank || 999))
+      .filter(p => !seen.has(p.id) && seen.add(p.id));
+  }
+
   function render() {
     const page = PAGES.find(p => p.key === state.tab) || PAGES[0];
     document.querySelectorAll(".nav").forEach(a => { const n = NAV.find(x => x.key === a.dataset.nav); const on = n && (n.key === page.key || (n.also || []).includes(page.key)); if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-    const kids = page.parent === "kr" ? PAGES.filter(p => p.parent === "kr") : [];   // 只有韓國專區有小分類列
+    const kids = [];   // 韓國美妝的小分類改成頁面裡的圓形入口（跟日本分類一樣），上方不再放一條按鈕
     const sub = document.getElementById("subtabs");
     sub.hidden = kids.length < 2;
     sub.innerHTML = kids.length < 2 ? "" : kids.map(p => `<button type="button" class="stab" data-page="${p.key}" aria-selected="${p.key === page.key}">${p.label}</button>`).join("");
@@ -1335,17 +1403,35 @@
       }
     }
 
+    if (page.source === "search") {
+      const q = state.q;
+      html += crumbs([["首頁", "home"], ["搜尋", ""]]);
+      if (!q) {
+        html += pagehead(page);
+        html += `<div class="empty">在上面的搜尋框輸入品牌或品項，例如「ReFa 吹風機」「卸妝油」「rom&nd」「防曬」。</div>`;
+      } else {
+        const all = searchItems(q);
+        const CAT_ORDER = ["彩妝", "保養", "髮品", "日用品・沐浴", "美容家電"];
+        const catOf = p => p.itype === "body" ? "保養" : p.cat;
+        const cats = CAT_ORDER.map(c => [c, all.filter(p => catOf(p) === c).length]).filter(([, n]) => n);
+        const krN = all.filter(p => p.country === "韓國").length;
+        if (state.scat !== "all" && !cats.some(([c]) => c === state.scat) && state.scat !== "韓國") state.scat = "all";
+        const list = state.scat === "all" ? all : state.scat === "韓國" ? all.filter(p => p.country === "韓國") : all.filter(p => catOf(p) === state.scat);
+        html += pagehead({ ...page, title: `「${q}」的搜尋結果`, desc: `共 ${all.length} 件` });
+        if (all.length) html += `<div class="chips" style="margin:4px 0 14px">${[["all", "全部", all.length], ...cats.map(([c, n]) => [c, c, n]), ...(krN && krN < all.length ? [["韓國", "只看韓國", krN]] : [])]
+          .map(([k, l, n]) => `<button type="button" class="chip" data-scat="${esc(k)}" aria-pressed="${state.scat === k}">${esc(l)} ${n}</button>`).join("")}</div>`;
+        const meta = p => p.isOY ? `<div class="meta">Olive Young${p.hot ? " 暢銷" : ""}</div>` : p.isEx ? `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)} 推薦</div>` : p.typeRank ? `<div class="meta">日本樂天${esc(typeLabel(p.itype))}排行第 ${p.typeRank} 名</div>` : p.rank && p.rank < 100 ? `<div class="meta">日本樂天${esc(p.cat)}第 ${p.rank} 名</div>` : "";
+        html += list.length ? `<div class="grid">${list.slice(0, 120).map((p, i) => card(p, { meta: meta(p), eager: i < 8 })).join("")}</div>` + (list.length > 120 ? `<p class="empty">結果太多，只顯示前 120 件，可以多打一個字縮小範圍，例如加上品牌或品項。</p>` : "")
+          : `<div class="empty">找不到「${esc(q)}」。可以試試：<br>・只打品牌英文，例如「ANUA」「SK-II」<br>・或只打品項，例如「防曬」「洗面乳」「吹風機」</div>`;
+      }
+    }
+
     if (page.source === "kr") {
       // 韓國美妝：Olive Young 商品（暢銷的排前面，換季後不在暢銷區的也保留）＋日本樂天排行上的韓國商品＋達人推薦的韓國商品
       const byType = state.itype !== "all";
-      const oyAll = OY.items.map(oyItem);
-      const jpKr = [...new Map(Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat())
-        .filter(p => p.country === "韓國").concat(KR_ITEMS).map(p => [p.id, p])).values()];
-      const exKr = EXPERTS.filter(p => p.country === "韓國").map(p => ({ ...p, itype: p.itype || itemType(p.cat, p.desc || "", "") }));
+      const { oyAll, jpKr, pool: krAll } = krPool();
       const order = p => p.isOY ? (p.hot ? 0 : 1) : p.isEx ? 3 : 2;
-      // 日本樂天的韓國商品沒有中文名：標題改成「品牌＋中文品項」，日文原名放在下面一行（不自己翻譯商品名稱）
-      const zh = p => { if (!p.itype || p.itype === "other") return p; const b = (oyBrand(p) || {}).name || ((LABELS[p.id] || {}).brand) || (p.krSearch || /[\u3040-\u30ff]/.test(p.brand) ? "韓國品牌" : p.brand); return { ...p, brand: b, name: `${b} ${typeLabel(p.itype)}`, desc: cleanName(p.jp || p.name) }; };
-      let pool = [...oyAll, ...jpKr.map(zh), ...exKr];
+      let pool = krAll;
       const inK = (p, kc) => p.itype === "body" ? kc.includes("身體") : kc.includes(p.cat);   // 身體保養放在「髮品・身體」
       if (page.kcat) pool = pool.filter(p => inK(p, page.kcat));
       const list = applyFilters(pool, { noPrice: true, itype: true }).sort((a, b) => order(a) - order(b) || (a.rank || 99) - (b.rank || 99));
@@ -1359,8 +1445,12 @@
         if (!byType && types.length > 1) html += `<div class="circles catcircles">${types.map(({ t, ps }) => { const im = ps.find(p => p.img); return `<a class="circ" href="#${page.key}/${t.key}"><span class="ring">${im ? `<img src="${esc(im.img)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(t.label.slice(0, 2))}</em>`}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`; }).join("")}</div>`;
         else html += typeRow(page.key, pool);
       } else {
-        const cats = PAGES.filter(p => p.parent === "kr" && p.kcat);
-        html += `<div class="entries" style="margin-top:16px">${cats.map(c => `<a class="entry e-kr" href="#${c.key}"><b>${esc(c.label)}</b><span>${oyAll.concat(jpKr).filter(p => inK(p, c.kcat)).length} 件</span></a>`).join("")}</div>`;
+        // 小分類：圓形入口，照片用這個分類裡 Olive Young 暢銷的第一件
+        const cats = PAGES.filter(p => p.parent === "kr" && p.key !== "oy");
+        const krN = c => c.kcat ? pool.filter(p => inK(p, c.kcat)).length : jpKr.length;
+        const krImg = c => { const ps = c.kcat ? pool.filter(p => inK(p, c.kcat)) : jpKr; const im = ps.find(p => p.isOY && p.hot && p.img) || ps.find(p => p.img); return im ? im.img : ""; };
+        const krCircles = `<div class="circles catcircles krcircles" style="margin:16px 0">${cats.map(c => { const im = krImg(c); return `<a class="circ" href="#${c.key}"><span class="ring kr">${im ? `<img src="${esc(im)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(c.title.slice(0, 2))}</em>`}</span><b>${esc(c.label.replace(/^\S+\s/, ""))}</b><small>${krN(c)} 件</small></a>`; }).join("")}</div>`;
+        html = html.includes('<div class="oybanner"') ? html.replace('<div class="oybanner"', krCircles + '<div class="oybanner"') : html + krCircles;   // 圓形入口放在優惠代碼上面，手機一打開就看得到
       }
       const meta = p => p.isOY ? "" : p.isEx ? `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)} 推薦</div>` : p.krSearch ? `<div class="meta">日本樂天人氣韓國${esc(typeLabel(p.itype))}</div>` : `<div class="meta">日本樂天${p.typeRank ? esc(typeLabel(p.itype)) + "排行第 " + p.typeRank : esc(p.cat) + "第 " + p.rank} 名</div>`;
       html += `<h2 class="sub">${byType ? esc(typeLabel(state.itype)) : page.kcat ? esc(label) + "全部商品" : "全部韓國商品"}<span class="subnote">🔥 標籤是這次 Olive Young 暢銷區的商品；其他是之前上過暢銷的 Olive Young 商品、日本樂天上的人氣韓國商品，或達人推薦</span></h2>`;
@@ -1524,6 +1614,7 @@
     const dlg = document.getElementById("detail"); if (dlg.open) dlg.close();
     megaEl.hidden = true;   // 舊網址「今日熱門」改成「年度熱門」
     state.tab = PAGES.some(p => p.key === key) ? key : "home";
+    if (state.tab !== "search" && state.q) { state.q = ""; document.getElementById("q").value = ""; }   // 離開搜尋頁就清掉搜尋字，避免其他頁被偷偷篩掉
     state.needs.clear(); state.skins.clear(); state.cat = "all"; state.price = "all"; state.sideOpen = false; state.aw = "all";
     state.itype = sub && (sub === "other" || ITYPES.some(t => t.key === sub)) ? sub : "all";
     render();
@@ -1560,6 +1651,7 @@
     if (t.dataset.cat) { state.cat = t.dataset.cat; state.itype = "all"; render(); return; }
     if (t.dataset.itype) { state.itype = t.dataset.itype; render(); return; }
     if (t.dataset.aw) { state.aw = t.dataset.aw; render(); return; }
+    if (t.dataset.scat) { state.scat = t.dataset.scat; render(); return; }
     if (t.dataset.hc) { state.hc = t.dataset.hc; render(); return; }
     if (t.dataset.ht) { state.ht = t.dataset.ht; render(); return; }
     if (t.dataset.shop) { state.shop = t.dataset.shop; render(); return; }
@@ -1592,11 +1684,41 @@
   document.getElementById("q").addEventListener("input", e => {
     clearTimeout(qTimer);
     qTimer = setTimeout(() => {
-      state.q = e.target.value.trim();
-      if (state.q && !["all", "awards", "shops", "oy", "kr-makeup", "kr-skincare", "kr-hair", "creators", "fav"].includes(state.tab)) { location.hash = "all"; return; }
+      state.q = e.target.value.trim(); state.scat = "all";
+      if (state.q && state.tab !== "search") { location.hash = "search"; return; }
+      if (!state.q && state.tab === "search") { location.hash = "home"; return; }
       render();
     }, 200);
   });
+
+  // ── 網站數據（Google Analytics 4）──
+  // GA_ID 填入 Google Analytics 的「評估 ID」（G- 開頭）才會開始統計；空白＝不統計
+  const GA_ID = "";
+  function track(name, params) { try { if (window.gtag) gtag("event", name, params || {}); } catch (e) {} }
+  if (GA_ID) {
+    const sc = document.createElement("script"); sc.async = true; sc.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(sc);
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", GA_ID, { anonymize_ip: true });
+  }
+  // 點購買按鈕：記下去哪個平台、哪個商品（之後在 GA 看「哪個平台最多人點」）
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[rel~="sponsored"]'); if (!a) return;
+    const h = a.href;
+    const platform = /oliveyoung/.test(h) ? "Olive Young" : /shopee|shope\.ee/.test(h) ? "蝦皮" : /rakuten\.com\.tw|r10\.to/.test(h) ? "台灣樂天" : /rakuten\.co\.jp|afl\.rakuten/.test(h) ? "日本樂天" : /dokodemo|ichannels/.test(h) ? "DOKODEMO" : "其他";
+    const card = a.closest(".card, #detailBody");
+    const name = card ? (card.querySelector("h3, h2, .name") || {}).innerText || "" : "";
+    track("buy_click", { platform, item_name: name.slice(0, 90), page: state.tab });
+  }, true);
+  let lastQ = "";
+  const trackSearch = () => { if (state.q && state.q !== lastQ) { lastQ = state.q; track("search", { search_term: state.q }); } };
+  setInterval(trackSearch, 3000);
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-fb]"); if (!b) return;
+    track("feedback", { value: b.dataset.fb });
+    try { localStorage.setItem("ruri_fb", b.dataset.fb); } catch (err) {}
+    document.getElementById("fb").innerHTML = b.dataset.fb === "good" ? "<b>謝謝你的回饋！</b>" : "<b>謝謝！我們會繼續改進。</b>";
+  });
+  try { if (localStorage.getItem("ruri_fb")) document.getElementById("fb").hidden = true; } catch (err) {}
 
   updateFavCount();
   loadData().then(() => { buildNav(); fromHash(); }).catch(err => {
