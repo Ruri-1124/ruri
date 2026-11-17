@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:54+08:00",
+ "updated": "2026-11-18T07:09+08:00",
  "shops": {
   "hands": {
    "name": "Hands",
@@ -116,15 +116,15 @@
     },
     {
      "rank": 10,
-     "itemCode": "hands-net:10965651",
-     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
-     "price": 1320,
-     "rating": 4.0,
+     "itemCode": "hands-net:10980668",
+     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
+     "price": 352,
+     "rating": 5.0,
      "reviews": 3,
      "shopName": "ハンズ(HANDS)楽天市場店",
      "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/15/00/4518753050815-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 11,
@@ -176,15 +176,15 @@
     },
     {
      "rank": 15,
-     "itemCode": "hands-net:10980668",
-     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
-     "price": 352,
-     "rating": 5.0,
+     "itemCode": "hands-net:10965651",
+     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
+     "price": 1320,
+     "rating": 4.0,
      "reviews": 3,
      "shopName": "ハンズ(HANDS)楽天市場店",
      "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/15/00/4518753050815-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 16,
@@ -354,8 +354,8 @@
      "itemCode": "mujirushi-ryohin:10007319",
      "itemName": "発酵導入美容液・50mL【無印良品 公式】",
      "price": 1990,
-     "rating": 4.54,
-     "reviews": 218,
+     "rating": 4.53,
+     "reviews": 219,
      "shopName": "無印良品",
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item36/4550583451295.jpg?_ex=300x300",
@@ -391,7 +391,7 @@
      "itemName": "発酵導入美容液（大容量）・100mL【無印良品 公式】",
      "price": 3490,
      "rating": 4.78,
-     "reviews": 68,
+     "reviews": 69,
      "shopName": "無印良品",
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item50/4550584935930.jpg?_ex=300x300",
@@ -475,7 +475,7 @@
      "itemName": "マイルドジェルクレンジング（大容量）・220g【無印良品 公式】無印 クレンジングオイル 毛穴 メンズ クレンジングジェル 敏感肌 ヒアルロン酸 セラミド",
      "price": 850,
      "rating": 4.83,
-     "reviews": 35,
+     "reviews": 36,
      "shopName": "無印良品",
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550583941185.jpg?_ex=300x300",
@@ -543,6 +543,18 @@
     },
     {
      "rank": 17,
+     "itemCode": "mujirushi-ryohin:10003209",
+     "itemName": "ほぐしテトラ約90×90×90mm【無印良品 公式】",
+     "price": 490,
+     "rating": 4.83,
+     "reviews": 24,
+     "shopName": "無印良品",
+     "shopCode": "mujirushi-ryohin",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item08/4550182202564.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550182202564%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10003209%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 18,
      "itemCode": "mujirushi-ryohin:10007447",
      "itemName": "詰替えパウチ用吊り下げノズル・シャンプー／コンディショナー／ボディソープ用【無印良品 公式】",
      "price": 390,
@@ -552,18 +564,6 @@
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item31/4550344487976.jpg?_ex=300x300",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550344487976%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10007447%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 18,
-     "itemCode": "mujirushi-ryohin:10003209",
-     "itemName": "ほぐしテトラ約90×90×90mm【無印良品 公式】",
-     "price": 490,
-     "rating": 4.83,
-     "reviews": 23,
-     "shopName": "無印良品",
-     "shopCode": "mujirushi-ryohin",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item08/4550182202564.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdho.nrqgid8f.g00tpdho.nrqgjd51/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550182202564%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10003209%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 19,
