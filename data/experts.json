@@ -1,7 +1,475 @@
 {
  "_說明": "達人推薦（人工整理）。每個商品：推薦人 who、身分 role（化妝師／YouTuber／美容家／醫師／雜誌編輯）、推薦重點 say（用自己的話整理，不照抄）、原文 source。kw 是給自動更新程式去日本樂天搜尋圖片、價格用的關鍵字；mustHave 是搜尋結果商品名稱一定要包含的字，用來避免抓錯商品。",
- "updated": "2026-11-01",
+ "updated": "2026-11-17",
  "items": [
+  {
+   "id": "mizukoshi26-twany-mist",
+   "brand": "TWANY",
+   "name": "ファーストヘア セラムミスト",
+   "desc": "護髮噴霧",
+   "cat": "髮品",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "美容家",
+   "say": "不用弄濕頭髮，噴一噴就能整理睡亂的頭髮和打結，也能在吹整前使用。",
+   "kw": "トワニー ファーストヘア セラムミスト",
+   "mustHave": [
+    "ファーストヘア"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：水越みさと 2026 個人最佳 9 選",
+     "url": "https://maquia.hpplus.jp/skincare/news/119818/",
+     "date": "2026-06-27"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi26-nars-powder",
+   "brand": "NARS",
+   "name": "ライトリフレクティング セッティングパウダー プレスト N",
+   "desc": "蜜粉餅",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "水越みさと",
+   "role": "美容家",
+   "say": "透明感和持妝度都很好，能修飾毛孔又保留光澤。",
+   "kw": "NARS ライトリフレクティング セッティングパウダー プレスト",
+   "mustHave": [
+    "セッティングパウダー"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：水越みさと 2026 個人最佳 9 選",
+     "url": "https://maquia.hpplus.jp/skincare/news/119818/",
+     "date": "2026-06-27"
+    }
+   ]
+  },
+  {
+   "id": "mizukoshi26-suqqu-liquid",
+   "brand": "SUQQU",
+   "name": "ザ リクイドファンデーション e",
+   "desc": "粉底液",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "水越みさと",
+   "role": "美容家",
+   "say": "推開非常滑順又不會浮在臉上，可以疊擦調整遮瑕度。",
+   "kw": "SUQQU ザ リクイド ファンデーション",
+   "mustHave": [
+    "リクイド",
+    "ファンデーション"
+   ],
+   "sources": [
+    {
+     "name": "MAQUIA：水越みさと 2026 個人最佳 9 選",
+     "url": "https://maquia.hpplus.jp/skincare/news/119818/",
+     "date": "2026-06-27"
+    }
+   ]
+  },
+  {
+   "id": "nagai26-shiroru-conc",
+   "brand": "SHIRORU",
+   "name": "ブライト コンシーラーパレット",
+   "desc": "遮瑕盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "服貼不易脫妝，遮瑕的同時也保濕，眼周也好用。",
+   "kw": "SHIRORU ブライト コンシーラーパレット",
+   "mustHave": [
+    "コンシーラーパレット"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半期最佳彩妝",
+     "url": "https://www.biteki.com/2159627/",
+     "date": "2026-07-22"
+    }
+   ]
+  },
+  {
+   "id": "nagai26-maq-brow",
+   "brand": "MAQuillAGE 心機",
+   "name": "アイブロウ カラーマスカラ PK703",
+   "desc": "眉彩",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "刷上去會變成粉霧感，灰調顏色讓眉毛有空氣感。",
+   "kw": "マキアージュ アイブロウ カラーマスカラ",
+   "mustHave": [
+    "アイブロウ",
+    "カラーマスカラ"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半期最佳彩妝",
+     "url": "https://www.biteki.com/2159627/",
+     "date": "2026-07-22"
+    }
+   ]
+  },
+  {
+   "id": "nagai26-dejavu-lash",
+   "brand": "dejavu",
+   "name": "フォルミングラッシュ プレミアム",
+   "desc": "睫毛膏",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "睫毛根部刷粗、末端刷細，刷出來很滑順整齊。",
+   "kw": "デジャヴュ フォルミングラッシュ プレミアム",
+   "mustHave": [
+    "フォルミングラッシュ"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半期最佳彩妝",
+     "url": "https://www.biteki.com/2159627/",
+     "date": "2026-07-22"
+    }
+   ]
+  },
+  {
+   "id": "nagai26-canmake-liner",
+   "brand": "CANMAKE",
+   "name": "ミューテッド チュールライナー 01",
+   "desc": "眼線",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "像陰影一樣自然的透色眼線，可以疊擦調整濃淡。",
+   "kw": "キャンメイク ミューテッドチュールライナー",
+   "mustHave": [
+    "チュールライナー"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半期最佳彩妝",
+     "url": "https://www.biteki.com/2159627/",
+     "date": "2026-07-22"
+    }
+   ]
+  },
+  {
+   "id": "nagai26-laneige-cushion",
+   "brand": "LANEIGE",
+   "name": "ネオクッション ザ グロウ",
+   "desc": "氣墊粉底",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "光澤感和不易脫妝都升級了，拍一下就能均勻服貼。",
+   "kw": "ラネージュ ネオクッション グロウ",
+   "mustHave": [
+    "ネオクッション"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半期最佳彩妝",
+     "url": "https://www.biteki.com/2159627/",
+     "date": "2026-07-22"
+    }
+   ]
+  },
+  {
+   "id": "nagai26-dior-fluid",
+   "brand": "Dior",
+   "name": "フォーエヴァー フルイド スキン グロウ",
+   "desc": "粉底液",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "長井かおり",
+   "role": "化妝師",
+   "say": "光澤底妝能維持很久，遮瑕和持妝都做得好，她選為上半期底妝第一。",
+   "kw": "ディオール フォーエヴァー フルイド スキン グロウ",
+   "mustHave": [
+    "フルイド",
+    "スキン グロウ"
+   ],
+   "sources": [
+    {
+     "name": "美的：長井かおり 2026 上半期最佳彩妝",
+     "url": "https://www.biteki.com/2159627/",
+     "date": "2026-07-22"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-laneige-tint",
+   "brand": "LANEIGE",
+   "name": "ジュースポップボックスリップティント",
+   "desc": "唇釉",
+   "cat": "彩妝",
+   "country": "韓國",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "水潤又亮的染唇釉，顏色鮮明，日本雜誌也常介紹的韓國唇彩。",
+   "kw": "ラネージュ ジュースポップ リップティント",
+   "mustHave": [
+    "ジュースポップ"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-excel-sk08",
+   "brand": "excel",
+   "name": "スキニーリッチシャドウ N SK08",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "帶藍調的紫褐色，好暈染、不容易變髒。開架價。",
+   "kw": "エクセル スキニーリッチシャドウ",
+   "mustHave": [
+    "スキニーリッチシャドウ"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-kate-073",
+   "brand": "KATE",
+   "name": "ザ アイカラー 073",
+   "desc": "單色眼影",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "淡粉色帶細珠光，單擦或疊在其他眼影上都能讓眼妝有點不一樣。",
+   "kw": "KATE ザ アイカラー",
+   "mustHave": [
+    "ザ アイカラー"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-cezanne-eye04",
+   "brand": "CEZANNE",
+   "name": "ライティングアップアイシャドウ 04",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "透明感的烘焙棕色，柔焦感好暈染，開架就買得到。",
+   "kw": "セザンヌ ライティングアップアイシャドウ",
+   "mustHave": [
+    "ライティングアップアイシャドウ"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-visee-rouge",
+   "brand": "Visée",
+   "name": "ネンマクフェイク ルージュII RO651",
+   "desc": "唇膏",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "像嘴唇原本血色的顏色，帶豐潤光澤，偏深的玫瑰色。開架價。",
+   "kw": "ヴィセ ネンマクフェイク ルージュ",
+   "mustHave": [
+    "ネンマクフェイク"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-suqqu-face06",
+   "brand": "SUQQU",
+   "name": "コンプレクション フェイス カラー 06",
+   "desc": "液態打亮",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "液態質地，可以在底妝裡先埋一點水潤光澤。",
+   "kw": "SUQQU コンプレクション フェイス カラー",
+   "mustHave": [
+    "フェイス カラー"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-nars-blush",
+   "brand": "NARS",
+   "name": "インセイシャブル リキッドブラッシュ 05917",
+   "desc": "液態腮紅",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "灰調玫瑰色，薄薄一層就有氣色，顏色深也不會看起來重。",
+   "kw": "NARS インセイシャブル リキッドブラッシュ",
+   "mustHave": [
+    "インセイシャブル"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-celvoke-eyes",
+   "brand": "Celvoke",
+   "name": "レイヤード シルエットアイズ 01",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "四色都很透，中性米色系，疊出來是自然的立體感。",
+   "kw": "セルヴォーク レイヤード シルエットアイズ",
+   "mustHave": [
+    "レイヤード",
+    "シルエットアイズ"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-rmk-palette10",
+   "brand": "RMK",
+   "name": "シンクロマティック アイシャドウパレット 10",
+   "desc": "眼影盤",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "四種質地搭在一起的冷調灰褐色，暈開後很乾淨，不容易顯得粉粉白白。",
+   "kw": "RMK シンクロマティック アイシャドウパレット",
+   "mustHave": [
+    "シンクロマティック"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-decorte-rouge",
+   "brand": "COSME DECORTE 黛珂",
+   "name": "ルージュデコルテ クリームサテン 03S",
+   "desc": "唇膏",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "柔霧之中帶一點水潤感，偏紅的珊瑚粉，跟膚色很合。",
+   "kw": "ルージュ デコルテ クリームサテン",
+   "mustHave": [
+    "ルージュ",
+    "クリームサテン"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-ysl-stain",
+   "brand": "YSL",
+   "name": "ラブヌード リップ ステイン 1",
+   "desc": "染唇液",
+   "cat": "彩妝",
+   "country": "其他",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "擦上去是奶霜感，乾了變成輕薄的膜，粉裸色日常好用、不太會掉色。",
+   "kw": "イヴ・サンローラン ラブヌード リップ ステイン",
+   "mustHave": [
+    "ラブヌード",
+    "ステイン"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "id": "voce26a-addiction-lip",
+   "brand": "ADDICTION",
+   "name": "コンフィデントマット リップ 006",
+   "desc": "霧面唇膏",
+   "cat": "彩妝",
+   "country": "日本",
+   "who": "VOCE 編輯部・人氣化妝師",
+   "role": "雜誌編輯",
+   "say": "霧面但不會乾，帶點煙燻感的玫瑰色，很適合秋冬的成熟感妝容。",
+   "kw": "アディクション コンフィデントマット リップ",
+   "mustHave": [
+    "コンフィデントマット"
+   ],
+   "sources": [
+    {
+     "name": "VOCE：2026 秋新作與秋妝趨勢（人氣化妝師提案）",
+     "url": "https://i-voce.jp/feed/4429712/",
+     "date": "2026-11-02"
+    }
+   ]
+  },
   {
    "id": "igari-ysl-gloss",
    "brand": "YSL",
