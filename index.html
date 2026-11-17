@@ -38,8 +38,8 @@
   /* ── 頂部 ── */
   header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
   .top { display: flex; align-items: center; gap: 14px; padding-block: 10px 6px; }
-  .logo { display: flex; align-items: center; gap: 8px; color: var(--ruri); text-decoration: none; flex: none; }
-  .logo svg { width: 40px; height: 40px; }
+  .logo { display: flex; align-items: center; gap: 8px; color: #634999; text-decoration: none; flex: none; }
+  .logo img { width: 40px; height: 40px; object-fit: contain; }
   .logo b { font-family: var(--font-display); font-weight: 900; font-size: 26px; }
   .logo small { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: .08em; }
   .search { flex: 1; min-width: 0; position: relative; max-width: 560px; margin-inline: auto; }
@@ -366,7 +366,7 @@
     .favbtn em { display: none; }
     .menubtn { display: block; margin-left: -8px; }
     .top { gap: 8px; }
-    .logo svg { width: 34px; height: 34px; } .logo b { font-size: 22px; }
+    .logo img { width: 34px; height: 34px; } .logo b { font-size: 22px; }
     .nav { padding: 10px 10px; font-size: 14px; }
     .nav .caret { display: none; }
     .mega { display: none; }
@@ -382,6 +382,9 @@
   }
   @media (prefers-reduced-motion: reduce) { .card, .side { transition: none; } .card:hover { transform: none; } }
 </style>
+<link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#D9CCF0">
 </head>
 <body>
 
@@ -390,7 +393,7 @@
     <div class="top">
       <button class="menubtn" type="button" id="menubtn" aria-label="打開分類選單"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
       <a class="logo" href="#home" aria-label="ruri 日韓熱賣情報站，回到首頁">
-        <svg viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="190" cy="205" rx="112" ry="100"></ellipse><path d="M80 200 L36 172 M80 216 L32 222"></path><path d="M164 306 L160 330 M206 306 L210 330"></path><path d="M248 120 Q262 92 288 100"></path></g><polygon points="298,168 330,180 298,192" fill="#FFB020" stroke="currentColor" stroke-width="10" stroke-linejoin="round"></polygon><circle cx="256" cy="168" r="12" fill="currentColor"></circle><ellipse cx="268" cy="198" rx="13" ry="8" fill="#FF8FB8"></ellipse><text x="182" y="248" font-size="100" text-anchor="middle" fill="currentColor" font-weight="700">瑠</text></svg>
+        <img src="logo-bird.png" alt="" width="40" height="40">
         <b>ruri</b><small>日韓熱賣情報站</small>
       </a>
       <label class="search">
