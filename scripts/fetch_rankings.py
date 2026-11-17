@@ -67,9 +67,14 @@ def first_image(item):
     return url.replace("_ex=128x128", "_ex=300x300") if url else None
 
 
+CAPS = {}   # 商品說明（itemCaption）：最後由 build_captions() 抽出「成分」「使用方法」
+
+
 def simplify(item):
     """只留下網站會用到的欄位"""
     item = item.get("Item", item)  # 兩種回應格式都處理
+    if item.get("itemCaption") and item.get("itemCode"):
+        CAPS[item["itemCode"]] = item["itemCaption"]
     return {
         "rank": item.get("rank"),
         "itemCode": item.get("itemCode"),
@@ -165,6 +170,8 @@ def main():
     build_shops(config)
     # ⑪ 韓國商品：日本樂天上的韓國彩妝保養（依品項搜尋評價最多的）
     build_korea(config)
+    # ⑫ 賣家標示的成分、使用方法（日文原文；中文翻譯在 data/captions_zh.json）
+    build_captions()
 
 
 def youtube_get(path, params):
@@ -607,6 +614,63 @@ def build_monthly(history, days=30):
         ]
     (ROOT / "data" / "month.json").write_text(json.dumps(monthly, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"已更新本月熱門（統計 {len(files)} 天）")
+
+
+# ── ⑫ 成分、使用方法 ──
+CAP_SHARDS = 16
+ING_MARK = r"(?:全成分(?:表示)?|【成分】|\[成分\]|＜成分＞|<成分>|■成分|◆成分|●成分|成分名|成分[:：])"
+HOW_MARK = r"(?:ご使用方法|ご使用の?方法|使用方法|使い方|お使いいただき方|【使用法】|使用法)"
+STOP_MARK = r"(?:【|■|◆|●|＜|※|\n\s*\n|全成分|成分[:：]|ご使用|使用方法|使い方|注意|ご注意|内容量|容量|原産国|製造|販売|区分|広告文責|JAN|商品名|ブランド|メーカー|発売元|配送|お届け)"
+
+
+def cap_shard(code):
+    return sum(ord(c) for c in code) % CAP_SHARDS
+
+
+def clean_caption(text):
+    text = re.sub(r"(?i)<br\s*/?>", "\n", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = text.replace("&nbsp;", " ").replace("&amp;", "&")
+    return re.sub(r"[ \t\u3000]+", " ", text)
+
+
+def cap_section(text, mark, limit):
+    m = re.search(mark + r"\s*[】\]＞>:：]?\s*", text)
+    if not m:
+        return ""
+    rest = text[m.end():]
+    end = re.search(STOP_MARK, rest[2:])
+    part = rest[: end.start() + 2] if end else rest
+    part = re.sub(r"\s*\n\s*", " ", part).strip(" 　:：・-")
+    if len(part) < 6:
+        return ""
+    return part[:limit] + ("…" if len(part) > limit else "")
+
+
+def build_captions(keep_days=120):
+    out_dir = ROOT / "data" / "cap"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    shards = {}
+    for i in range(CAP_SHARDS):
+        f = out_dir / f"{i:02d}.json"
+        shards[i] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    today = datetime.now(TAIWAN).strftime("%Y-%m-%d")
+    found = 0
+    for code, raw in CAPS.items():
+        text = clean_caption(raw)
+        ingr = cap_section(text, ING_MARK, 700)
+        how = cap_section(text, HOW_MARK, 400)
+        if not (ingr or how):
+            continue
+        shards[cap_shard(code)][code] = {k: v for k, v in (("ingr", ingr), ("how", how), ("d", today)) if v}
+        found += 1
+    cutoff = (datetime.now(TAIWAN) - timedelta(days=keep_days)).strftime("%Y-%m-%d")
+    total = 0
+    for i, data in shards.items():
+        data = {k: v for k, v in data.items() if v.get("d", today) >= cutoff}
+        total += len(data)
+        (out_dir / f"{i:02d}.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"✓ 成分／用法：這次抓到 {found} 件，共保存 {total} 件")
 
 
 if __name__ == "__main__":

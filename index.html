@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ruri 日韓熱賣情報站</title>
-<meta name="description" content="每天自動更新的日韓美妝熱賣排行：彩妝、保養、髮品、日用品、美容家電，可依膚質篩選、看成分與心得、收藏我的最愛。">
+<meta name="description" content="每天自動更新的日韓美妝熱賣排行：彩妝、保養、髮品、身體沐浴、日用品、美容家電，可依膚質篩選、看成分與心得、收藏我的最愛。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
@@ -343,6 +343,8 @@
   }
 
   .empty { text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 40px 20px; }
+  .volt { font-size: 12px; color: #9A5B00; background: #FFF6E5; border-radius: 8px; padding: 4px 8px; margin: 6px 0 2px; }
+  .voltnote { background: #FFF6E5; border-color: #F3D9A4; color: #6B4300; }
   .fb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; color: var(--ink); }
   footer { margin-top: 48px; padding-block: 24px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
   .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 18px; border-radius: 10px; font-size: 14px; z-index: 40; max-width: calc(100% - 32px); }
@@ -428,7 +430,7 @@
   // =========================================================
   const JPY_TO_TWD = 0.21;
   const SHOPEE_AFFILIATE_ID = "16357710003";   // 蝦皮分潤 ID（會出現在所有分潤連結裡，本來就是公開的）
-  const CAT = { beauty: "美容", makeup: "彩妝", skincare: "保養", hair: "髮品", device: "美容家電", laundry: "日用品", bath: "日用品" };
+  const CAT = { beauty: "美容", makeup: "彩妝", skincare: "保養", hair: "髮品", device: "美容家電", laundry: "日用品", bath: "身體" };
 
   // 大分類（上面那一排）
   // 每一頁（parent 是它屬於哪個大分類）
@@ -440,7 +442,8 @@
     { key: "makeup",   parent: "jp", label: "💄 彩妝", title: "日本彩妝排行", desc: "日本樂天「底妝・彩妝」分類", source: "rank", groups: ["makeup"], itypes: true },
     { key: "skincare", parent: "jp", label: "🧴 保養", title: "日本保養排行", desc: "日本樂天「保養」分類", source: "rank", groups: ["skincare"], itypes: true },
     { key: "hair",     parent: "jp", label: "💇‍♀️ 髮品", title: "日本髮品排行", desc: "日本樂天「護髮・造型」分類", source: "rank", groups: ["hair"], itypes: true },
-    { key: "daily",    parent: "jp", label: "🛁 日用品", title: "日本日用品排行", desc: "洗衣精、泡澡用品、牙刷牙膏、雨傘、水壺、環保袋", source: "rank", groups: ["laundry", "bath"], itypes: true },
+    { key: "bodycare", parent: "jp", label: "🧼 身體・沐浴", title: "日本身體・沐浴排行", desc: "身體乳、護手霜、沐浴乳、體香、泡澡用品", source: "rank", groups: ["bath"], itypes: true },
+    { key: "daily",    parent: "jp", label: "🧺 日用品", title: "日本日用品排行", desc: "洗衣精、柔軟精、牙刷牙膏、雨傘、水壺、環保袋", source: "rank", groups: ["laundry"], itypes: true },
     { key: "device",   parent: "jp", label: "✨ 美容家電", title: "日本美容家電排行", desc: "吹風機、離子夾、美顏器", source: "rank", groups: ["device"], itypes: true },
     { key: "shops",    parent: "jp", label: "🏬 Hands・無印", title: "日本選物店人氣美妝", desc: "Hands、無印良品在日本樂天官方店裡，評價數最多的美容商品", source: "shops" },
     { key: "oy",       parent: "kr", label: "✨ 全部", title: "韓國美妝", desc: "Olive Young 的暢銷與熱門韓國彩妝保養，加上日本也在紅的韓系商品", source: "kr" },
@@ -474,13 +477,18 @@
       "大風量・速乾": ["大風量", "速乾"], "負離子・護髮": ["イオン", "ナノイー", "nanoe"], "溫度調整": ["温度調節", "低温"], "輕巧好收納": ["軽量", "コンパクト", "ミニ", "折りたたみ"],
       "海外電壓可用": ["海外対応", "海外兼用", "100-240V"], "充電・無線": ["USB", "コードレス", "充電式"], "直髮": ["ストレート"], "捲髮": ["カール"]
     },
+    "身體": {
+      "保濕滋潤": ["保湿", "しっとり", "うるおい", "乾燥", "セラミド", "シアバター"], "清爽不黏": ["さっぱり", "さらさら", "ベタつかない", "べたつかない"],
+      "香味": ["香り", "フレグランス", "パフューム", "アロマ"], "無香・低刺激": ["無香", "無添加", "低刺激", "敏感肌"], "去角質": ["スクラブ", "角質", "ピーリング"],
+      "體香・止汗": ["デオドラント", "制汗"], "泡澡放鬆": ["入浴剤", "バスソルト", "エプソム", "炭酸"], "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"]
+    },
     "日用品": {
       "抗菌・除臭": ["抗菌", "除菌", "消臭", "防臭"], "室內晾衣": ["部屋干し"], "香味持久": ["香り", "フレグランス", "アロマ"], "無香・低刺激": ["無香", "無添加", "低刺激"],
       "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"], "泡澡放鬆": ["入浴剤", "バスソルト", "エプソム"], "保溫保冷": ["保温", "保冷"],
       "晴雨兩用・抗UV": ["晴雨兼用", "UVカット", "遮光"], "輕量・折疊": ["軽量", "折りたたみ", "コンパクト"], "清新口氣": ["ミント", "ブレス"]
     }
   };
-  const NEED_TITLE = { "髮品": "髮質・需求", "美容家電": "功能特色", "日用品": "用途・特色" };
+  const NEED_TITLE = { "髮品": "髮質・需求", "美容家電": "功能特色", "日用品": "用途・特色", "身體": "需求・特色" };
   // 日用品每個品項差很多（水壺跟洗衣精沒有共同的特色），所以日用品改成「每個品項各自的條件」
   const NEEDS_BY_TYPE = {
     detergent: { "抗菌・除臭": ["抗菌", "除菌", "消臭", "防臭"], "室內晾衣": ["部屋干し"], "香味持久": ["香り", "フレグランス"], "無香・低刺激": ["無香", "無添加", "低刺激"], "洗衣球": ["ジェルボール", "ボール"], "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"] },
@@ -540,7 +548,7 @@
     { key: "mask", cat: "保養", label: "面膜", zh: ["面膜"], jp: ["マスク", "パック"] },
     { key: "sunscreen", cat: "保養", label: "防曬", zh: ["防曬"], jp: ["日焼け止め", "日焼止め", "サンスクリーン", "UVジェル", "UVミルク", "UVエッセンス"] },
     { key: "skinset", cat: "保養", label: "保養組・體驗組", zh: ["體驗組", "組合", "禮盒"], jp: ["トライアル", "キット", "セット", "コフレ"], weak: true },
-    { key: "body", cat: "保養", label: "身體保養", zh: ["身體", "護手"], jp: ["ボディ", "ハンド"] },
+    { key: "body", cat: "身體", label: "身體保養", zh: ["身體", "護手"], jp: ["ボディ", "ハンド"] },
     { key: "shampoo", cat: "髮品", label: "洗髮・潤髮", zh: ["洗髮", "潤髮"], jp: ["シャンプー", "コンディショナー", "トリートメント"] },
     { key: "hairoil", cat: "髮品", label: "護髮油・免沖洗", zh: ["護髮油", "免沖"], jp: ["ヘアオイル", "洗い流さない", "ヘアミルク", "THE OIL", "アウトバス"] },
     { key: "styling", cat: "髮品", label: "造型", zh: ["造型", "定型"], jp: ["ワックス", "スプレー", "スタイリング", "ヘアバーム", "ケープ"] },
@@ -558,10 +566,10 @@
     { key: "umbrella", cat: "日用品", label: "雨傘・陽傘", zh: ["傘"], jp: ["日傘", "雨傘", "折りたたみ傘", "晴雨兼用"] },
     { key: "bottle", cat: "日用品", label: "水壺・保溫瓶", zh: ["水壺", "保溫瓶"], jp: ["水筒", "マグボトル", "タンブラー"] },
     { key: "bag", cat: "日用品", label: "環保袋・提袋", zh: ["環保袋", "提袋"], jp: ["エコバッグ", "トートバッグ", "サブバッグ"] },
-    { key: "bath", cat: "日用品", label: "泡澡・沐浴", zh: ["泡澡", "沐浴", "入浴"], jp: ["入浴剤", "バスソルト", "エプソム", "ボディソープ", "バス"] }
+    { key: "bath", cat: "身體", label: "泡澡・沐浴", zh: ["泡澡", "沐浴", "入浴"], jp: ["入浴剤", "バスソルト", "エプソム", "ボディソープ", "バス"] }
   ];
   // 品項 → 屬於哪一頁（點品項方塊時跳到那一頁）
-  const CAT_PAGE = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "日用品": "daily", "美容家電": "device" };
+  const CAT_PAGE = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "身體": "bodycare", "日用品": "daily", "美容家電": "device" };
   // weak：組合、禮盒這種「整組」的類型，只有找不到具體品項時才用
   function earliest(text, types, field) {
     const find = list => { let best = null, pos = Infinity; for (const t of list) for (const w of t[field]) { const i = text.indexOf(w); if (i >= 0 && i < pos) { pos = i; best = t; } } return best; };
@@ -599,7 +607,7 @@
     const same = ITYPES.filter(t => t.cat === cat && t.key !== key && has(t.key)).map(t => t.key);
     if (same.length === 1) return same[0];
     if (same.length || cat === "髮品" || cat === "美容家電") return key;   // 髮品、家電不跨到保養彩妝
-    const any = Object.keys(STRONG).filter(k => k !== key && has(k) && ["彩妝", "保養", "髮品"].includes((ITYPES.find(t => t.key === k) || {}).cat));
+    const any = Object.keys(STRONG).filter(k => k !== key && has(k) && ["彩妝", "保養", "髮品", "身體"].includes((ITYPES.find(t => t.key === k) || {}).cat));
     return any.length === 1 ? any[0] : key;
   }
   function sameCatType(key, name) {   // 排行榜商品：只在同一大類裡校正，不換大類
@@ -609,7 +617,7 @@
   }
   const TYPE_FIX = [[/UVトーンアップスポッツ/, "sunscreen"], [/フェイシャル ?トリートメント ?エッセンス|ピテラ ?ベスト ?コレクション/, "toner"]];
   const FRONT_RISK = ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
-  const CAT_GROUP = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" };
+  const CAT_GROUP = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry", "身體": "bath" };
   function setType(p, key, name) {
     const k = refineType(key, name || "");
     if (k === "x-drop" || FRONT_RISK.some(w => (name || "").includes(w))) { p.exclude = "不相關或有疑慮"; return; }
@@ -757,7 +765,7 @@
     // 品項排行：每個品項自己的樂天排行（腮紅排行、化妝水排行⋯），商品數比較多
     for (const [key, t] of Object.entries((types && types.types) || {})) {
       const tdef = ITYPES.find(x => x.key === key);
-      const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry" }[tdef && tdef.cat];
+      const tgroup = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry", "身體": "bath" }[tdef && tdef.cat];
       TYPE_ITEMS[key] = (t.items || []).map(r => { const p = toItem(r, (r.root === "beauty" || !CAT[r.root]) && tgroup ? tgroup : r.root); p.typeRank = r.gone ? null : r.rank; if (r.gone) { p.typeGone = true; p.rank = 1000 + (r.rank || 0); } if (!(LABELS[r.itemCode] || {}).type) setType(p, key, r.itemName); return p; })
         .filter(p => !p.exclude);
       TYPE_ITEMS[key].forEach(p => { if (!BY_CODE[p.id]) BY_CODE[p.id] = p; });
@@ -917,7 +925,7 @@
     return [...out].sort(sorters[state.sort]);
   }
   const PRICES = [["0-2000", "¥2,000 以下"], ["2000-5000", "¥2,000–5,000"], ["5000-10000", "¥5,000–10,000"], ["10000-9999999", "¥10,000 以上"]];
-  const CATS = ["彩妝", "保養", "髮品", "日用品", "美容家電"];
+  const CATS = ["彩妝", "保養", "髮品", "身體", "日用品", "美容家電"];
 
   function sidePanel(list, opts, count) {
     if (opts.catFilter && state.cat !== "all") list = list.filter(p => p.cat === state.cat);   // 選了分類，就只顯示那個分類的篩選條件
@@ -1053,6 +1061,7 @@
           ${p.why ? `<div class="why">${esc(p.why)}</div>` : ""}
           ${(p.tags || []).length ? `<div class="tags">${p.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>` : ""}
           ${opts.extra || ""}
+          ${isJpDevice(p) ? `<div class="volt">⚡ 日本規格電器，台灣使用前請確認電壓</div>` : ""}
           <button class="more" type="button" data-detail="${esc(p.id)}">${moreText(p)} ›</button>
           <div class="bottom">${price}${buyButtons(p, false, true)}</div>
         </div>
@@ -1104,6 +1113,17 @@
     </div></div>`;
   }
 
+  // 日本電器：日本電壓 100V、台灣 110V，提醒使用前確認；壞掉或不能用不是本站能負責的
+  function isJpDevice(p) {
+    if (!p || p.country === "韓國" || p.isOY) return false;
+    return p.group === "device" || (ITYPES.find(t => t.key === p.itype) || {}).cat === "美容家電";
+  }
+  function voltNote(p) {
+    const global = /海外対応|海外兼用|100-240V|100～240V|100V-240V|AC100-240/.test(p.jp || "");
+    return "⚡ 電壓提醒：這是日本當地販售的電器。日本電壓是 100V，台灣是 110V，"
+      + (global ? "這個商品的名稱有標示可海外使用，但仍請以商品說明為準。" : "不一定能在台灣正常使用。")
+      + "購買前請先確認商品標示的電壓與插頭規格。若因電壓或規格不同而無法使用、故障或縮短壽命，本站只提供商品資訊，無法負責；購買、保固與售後服務請向購買平台或賣家詢問。";
+  }
   function detailHtml(p) {
     const d = getDetail(p.id) || {};
     const list = (arr, tag = "ul") => `<${tag}>${arr.map(x => `<li>${esc(x)}</li>`).join("")}</${tag}>`;
@@ -1120,15 +1140,15 @@
       : d.skinNote ? `<p>${esc(d.skinNote)}</p>` : (noIngr ? "" : `<p>品牌沒有特別標示。</p>`);
     const ingrBody = d.ingredients ? list(d.ingredients) + muted("只列出部分主要成分，完整成分以商品包裝標示為準。")
       : noIngr ? "" : type === "set" ? `<p>組合內容依你選的商品而定，成分請看各商品的包裝標示。</p>`
-      : `<p>品牌沒有公開完整成分，購買前請以商品包裝標示為準。</p>`;
+      : `<div data-cap="ingr"><p>品牌沒有公開完整成分，購買前請以商品包裝標示為準。</p></div>`;
     const howBody = d.howto ? list(d.howto, "ol")
-      : noIngr ? `<p>請依商品說明書使用。</p>` : `<p>品牌沒有公開詳細用法，請依商品包裝說明使用。</p>`;
+      : noIngr ? `<p>請依商品說明書使用。</p>` : `<div data-cap="how"><p>品牌沒有公開詳細用法，請依商品包裝說明使用。</p></div>`;
     const revBody = d.reviews ? list(d.reviews) + muted(`${esc(d.reviewSource || "整理自網路上的使用心得")}，使用感受因人而異。`) : "";
     const exSec = p.isEx ? sec("達人怎麼說", `<p><b>${esc(p.expert.role)} ${esc(p.expert.who)}</b>：${esc(p.expert.say)}</p>${muted("出處：" + p.expert.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>（${esc(s.date)}）`).join("、"))}`) : "";
     const awSec = p.isAw ? sec("得獎紀錄", list(p.award.awards.map(x => `${awardMeta(x.award).name}・${x.title}（${awardMeta(x.award).date}）`)) + (p.award.note ? `<p style="margin-top:6px">${esc(p.award.note)}</p>` : "")
       + muted("出處：" + [...new Set(p.award.awards.map(x => x.award))].flatMap(k => awardMeta(k).sources).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、"))
       + (p.linked ? "" : muted("日本樂天排行裡還沒有這個商品，所以沒有圖片和日本售價；購買連結是用商品名稱搜尋的結果。"))) : "";
-    const body = p.isAw ? awSec : p.isEx ? exSec : !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>` : `
+    const body = p.isAw ? awSec : p.isEx ? exSec : !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>${noIngr ? "" : `<div class="dsec" hidden><h3>主要成分</h3><div data-cap="ingr"></div></div><div class="dsec" hidden><h3>使用方法</h3><div data-cap="how"></div></div>`}` : `
           ${skinBody ? sec(skinTitle, skinBody) : ""}
           ${d.features ? sec(type === "device" ? "規格與特色" : "商品特色", list(d.features)) : ""}
           ${ingrBody ? sec("主要成分", ingrBody) : ""}
@@ -1149,6 +1169,7 @@
           ${body}
           ${historyFacts(p.isAw && p.linked ? (findItem(p.linked) || p) : p)}
           ${p.jp && !p.isOY && !p.isEx ? sec("日本樂天商品名稱", `<p style="font-size:12px;color:var(--muted)">${esc(p.jp)}</p>`) : ""}
+          ${isJpDevice(p) ? `<div class="note voltnote">${esc(voltNote(p))}</div>` : ""}
           <div class="dbuys">${buyButtons(p, true)}${p.price ? `<span class="rate">${yen(p.price)}（${twd(p.price)}）</span>` : ""}</div>
           ${(d.sources || []).length ? `<p class="srcs" style="font-size:12px;margin:0">資料來源：${d.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、")}</p>` : ""}
           <p class="legal">本站內容為商品資訊整理，不代表療效，也不能取代專業醫療建議。使用感受因人而異；使用後如有肌膚不適，請停止使用並諮詢醫師。成分、用法以商品包裝標示為準。</p>
@@ -1160,10 +1181,32 @@
     if (id.startsWith("aw:")) return AW_ITEMS.find(p => p.id === id);
     return BY_CODE[id] || ARCHIVE[id] || Object.values(MONTH.groups).flat().find(p => p.id === id) || OY.items.map(oyItem).find(p => p.id === id) || FAVS[id];
   }
+  // 賣家標示的成分、使用方法（每天自動從日本樂天抓，分 16 個檔案，打開詳細頁才讀）
+  const CAP_CACHE = {};
+  let CAP_ZH = null;
+  const capShard = code => String([...code].reduce((a, c) => a + c.charCodeAt(0), 0) % 16).padStart(2, "0");
+  async function fillCaption(p) {
+    const slots = document.querySelectorAll("#detailBody [data-cap]");
+    if (!slots.length || !p || !p.id || /^(ex|aw|oy):/.test(p.id)) return;
+    const get = u => fetch(u).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+    const sh = capShard(p.id);
+    if (!CAP_CACHE[sh]) CAP_CACHE[sh] = get(`data/cap/${sh}.json`);
+    if (!CAP_ZH) CAP_ZH = get("data/captions_zh.json");
+    const [jp, zh] = [(await CAP_CACHE[sh])[p.id] || {}, ((await CAP_ZH).items || {})[p.id] || {}];
+    const muted = t => `<p style="color:var(--muted);font-size:12px;margin-top:4px">${t}</p>`;
+    slots.forEach(el => {
+      const k = el.dataset.cap, z = zh[k], j = jp[k];
+      if (z) el.innerHTML = `<p>${esc(z)}</p>` + muted("中文翻譯自日本樂天賣家標示，僅供參考，請以商品包裝標示為準。");
+      if (z || j) { const box = el.closest(".dsec"); if (box) box.hidden = false; }
+      if (!z && j) el.innerHTML = `<p style="font-size:13px">${esc(j)}</p>`
+        + muted(`日文原文，取自日本樂天賣家標示，請以商品包裝標示為準。<a href="https://translate.google.com/?sl=ja&tl=zh-TW&op=translate&text=${encodeURIComponent(j.slice(0, 1500))}" target="_blank" rel="noopener">用 Google 翻譯看中文 ↗</a>`);
+    });
+  }
   function openDetail(id) {
     const p = findItem(id);
     if (!p) return;
     document.getElementById("detailBody").innerHTML = detailHtml(p);
+    fillCaption(p);
     const dlg = document.getElementById("detail");
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
   }
@@ -1362,7 +1405,7 @@
       </section>`;
 
       // ③ 今日排行 TOP 10（可切換分類）
-      const hcs = [["all", "綜合", "beauty", "awards"], ["彩妝", "彩妝", "makeup", "makeup"], ["保養", "保養", "skincare", "skincare"], ["髮品", "髮品", "hair", "hair"], ["日用品", "日用品", "laundry", "daily"], ["美容家電", "美容家電", "device", "device"]];
+      const hcs = [["all", "綜合", "beauty", "awards"], ["彩妝", "彩妝", "makeup", "makeup"], ["保養", "保養", "skincare", "skincare"], ["髮品", "髮品", "hair", "hair"], ["身體", "身體・沐浴", "bath", "bodycare"], ["日用品", "日用品", "laundry", "daily"], ["美容家電", "美容家電", "device", "device"]];
       const hc = hcs.find(x => x[0] === state.hc) || hcs[0];
       const top = (RANK[hc[2]] || []).filter(p => p.country !== "韓國").slice(0, 10);
       const rail = (arr, opts = {}) => `<div class="railwrap"><button class="rarrow prev" type="button" data-rail="-1" aria-label="往左看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rarrow next" type="button" data-rail="1" aria-label="往右看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button><div class="rail">${arr.map((p, i) => card(p, { compact: true, crown: opts.rank ? i + 1 : null, eager: i < 4, meta: opts.meta ? opts.meta(p) : "" })).join("")}${opts.more ? `<a class="morecard" href="${opts.more[0]}"><span>›</span>${esc(opts.more[1])}</a>` : ""}</div></div>`;
@@ -1411,8 +1454,8 @@
         html += `<div class="empty">在上面的搜尋框輸入品牌或品項，例如「ReFa 吹風機」「卸妝油」「rom&nd」「防曬」。</div>`;
       } else {
         const all = searchItems(q);
-        const CAT_ORDER = ["彩妝", "保養", "髮品", "日用品・沐浴", "美容家電"];
-        const catOf = p => p.itype === "body" ? "保養" : p.cat;
+        const CAT_ORDER = ["彩妝", "保養", "髮品", "身體", "日用品", "美容家電"];
+        const catOf = p => (ITYPES.find(t => t.key === p.itype) || {}).cat || p.cat;
         const cats = CAT_ORDER.map(c => [c, all.filter(p => catOf(p) === c).length]).filter(([, n]) => n);
         const krN = all.filter(p => p.country === "韓國").length;
         if (state.scat !== "all" && !cats.some(([c]) => c === state.scat) && state.scat !== "韓國") state.scat = "all";
@@ -1562,12 +1605,12 @@
   // 主選單：商品分類（滑鼠移上去展開品項）＋精選專區
   const NAV = [
     { key: "makeup", label: "彩妝", cat: "彩妝" }, { key: "skincare", label: "保養", cat: "保養" }, { key: "hair", label: "髮品", cat: "髮品" },
-    { key: "daily", label: "日用品・沐浴", cat: "日用品" }, { key: "device", label: "美容家電", cat: "美容家電" },
+    { key: "bodycare", label: "身體・沐浴", cat: "身體" }, { key: "daily", label: "日用品", cat: "日用品" }, { key: "device", label: "美容家電", cat: "美容家電" },
     { sep: true },
     { key: "awards", label: "🏆 年度熱門" }, { key: "month", label: "本月熱門" }, { key: "oy", label: "韓國美妝", also: ["kr-makeup", "kr-skincare", "kr-hair", "kr-injp"] },
     { key: "creators", label: "達人推薦" }, { key: "shops", label: "Hands・無印" }
   ];
-  const CAT_DESC = { "彩妝": "底妝、眼妝、唇彩，日本樂天每天的真實排行", "保養": "卸妝、化妝水、精華、防曬到身體保養", "髮品": "洗潤髮、護髮油、造型、頭皮與梳子", "日用品": "洗衣精、泡澡、牙刷牙膏、雨傘、水壺、環保袋", "美容家電": "吹風機、離子夾、捲髮器" };
+  const CAT_DESC = { "彩妝": "底妝、眼妝、唇彩，日本樂天每天的真實排行", "保養": "卸妝、化妝水、精華、面膜、防曬", "身體": "身體乳、護手霜、沐浴乳、體香、泡澡", "髮品": "洗潤髮、護髮油、造型、頭皮與梳子", "日用品": "洗衣精、柔軟精、牙刷牙膏、雨傘、水壺、環保袋", "美容家電": "吹風機、離子夾、捲髮器" };
   // 某個大分類底下有哪些品項、各有幾件商品（日本商品：分類排行＋品項排行）
   function typeIndex(cat) {
     const pool = Object.entries(RANK).filter(([g]) => g !== "beauty").flatMap(([, v]) => v).concat(Object.values(TYPE_ITEMS).flat())
