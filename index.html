@@ -163,6 +163,8 @@
   .nmbtn:focus-visible { outline: 2px solid var(--ruri); }
   .desc { font-size: 12px; color: var(--muted); }
   .twname { font-size: 12px; color: var(--ruri); font-weight: 700; }
+  .revlink { margin-left: 6px; font-weight: 700; color: var(--ruri); white-space: nowrap; }
+  .revtip { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .rate { font-size: 12px; color: var(--muted); }
   .rate b { color: var(--star); }
   .skin { font-size: 12px; font-weight: 700; color: #1A7A63; }
@@ -619,7 +621,7 @@
     return k !== "x-drop" && c(k) === c(key) ? k : key;
   }
   const TYPE_FIX = [[/UVトーンアップスポッツ/, "sunscreen"], [/フェイシャル ?トリートメント ?エッセンス|ピテラ ?ベスト ?コレクション/, "toner"]];
-  const FRONT_RISK = ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
+  const FRONT_RISK = ["育毛", "発毛", "養毛", "薄毛", "白髪染め", "白髪ぼかし", "カラートリートメント", "ヘアカラー", "ラッシュアディクト", "Lashaddict", "まつ毛美容液", "まつげ美容液", "まつ育", "アイラッシュセラム", "ハイドロキノン", "医薬品", "ヒト幹細胞", "幹細胞培養液", "エクソソーム", "Whitening", "まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
   const CAT_GROUP = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry", "身體": "bath" };
   function setType(p, key, name) {
     const k = refineType(key, name || "");
@@ -691,6 +693,52 @@
     if (FRONT_RISK.some(w => raw.itemName.includes(w))) p.exclude = "法規或安全疑慮";
     return p;
   }
+  // 中文標題：用「品牌＋中文品項＋規格」組出來（不是翻譯商品名稱；正式名稱看詳細頁的日本樂天商品名稱）
+  const KANA_RE = /[぀-ヿ]/;
+  function zhTypeWord(k, jp) {
+    if (k === "eye") return /パレット/.test(jp) ? "眼影盤" : "眼影";
+    if (k === "lip") return /リップクリーム|リップバーム|リップケア/.test(jp) ? "護唇膏" : /ティント/.test(jp) ? "染唇液" : /グロス/.test(jp) ? "唇蜜" : /リップ ?オイル/.test(jp) ? "唇油" : "唇膏";
+    if (k === "foundation") return /クッション/.test(jp) ? "氣墊粉餅" : /リキッド/.test(jp) ? "粉底液" : /パクト|プレスト/.test(jp) ? "粉餅" : "粉底";
+    if (k === "cleansing") return /オイル/.test(jp) ? "卸妝油" : /バーム/.test(jp) ? "卸妝膏" : /ミルク/.test(jp) ? "卸妝乳" : /ジェル/.test(jp) ? "卸妝凝膠" : /ウォーター|ミセラー/.test(jp) ? "卸妝水" : "卸妝";
+    if (k === "mask") return /アイ ?(パッチ|マスク|シート)/.test(jp) ? "眼膜" : "面膜";
+    if (k === "serum") return /アンプル/.test(jp) ? "安瓶精華" : "精華液";
+    const w = searchTypeWord(k, jp);
+    return w && w.length > 1 ? w : typeLabel(k).split("・")[0];
+  }
+  function zhSpec(jp) {
+    const t = String(jp || "").replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 65248)).replace(/ｍｌ|ＭＬ/g, "ml").replace(/ｇ/g, "g");
+    const out = [];
+    const all = t.match(/全\s?(\d{1,3})\s?(色|種|カラー)/);
+    const col = t.match(/(?:^|[^\d全])(\d{1,2})\s?色(?!素)/);
+    if (col && (!all || col[1] !== all[1])) out.push(col[1] + " 色");
+    if (all) out.push("全 " + all[1] + " 款可選");
+    const vol = t.match(/(\d+(?:\.\d+)?)\s?(ml|mL|ML|g|G|kg|L)(?![A-Za-z])/);
+    if (vol) out.push(vol[1] + vol[2].toLowerCase().replace("ml", "ml"));
+    const cnt = t.match(/(\d{1,3})\s?(枚|個|本|袋|包|錠|回分)(?:入|セット|組)?/);
+    if (cnt) out.push(cnt[1] + ({ 枚: " 片", 個: " 個", 本: " 支", 袋: " 袋", 包: " 包", 錠: " 錠", 回分: " 次份" })[cnt[2]]);
+    if (/詰め?替え?|つめかえ|リフィル|レフィル/.test(t)) out.push("補充包");
+    else if (/セット/.test(t) && !cnt) out.push("組合");
+    return out.slice(0, 3);
+  }
+  const SERIES_SKIP = /^(MTG|KOSE|SK2|SK-2|KAO|P&G|LION|OFF|SPF\d*|PA|UV|ml|mL|ML|LOT|TV|NEW|SALE|SET|PRO|EX|LED|EMS|RF|WEB|BOX|LDK|QR|SNS|BB|CC|cm|mm|kg|g|L|P|No|NO|ver|Ver|VER|Japan|JAPAN|Korea|KOREA|Official|OFFICIAL|Beauty|BEAUTY|Cosme|COSME|Rakuten|RAKUTEN|Point|POINT|Ranking|SHOP|STORE|Shop|Store|Free|FREE|Gift|GIFT|Limited|LIMITED|Edition|NEWS|PREMIUM|Premium)$/i;
+  function seriesWords(jp, brand) {   // 商品名稱裡的英文系列名（例如 ReFa「BEAUTECH DRYER SMART」），幫忙分辨同品牌的不同商品
+    const bl = String(brand || "").toLowerCase();
+    const skel = x => x.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/[aeiou]/g, "");
+    const bs = skel(bl.split(/\s+/)[0] || "");
+    const raw = String(jp || "").replace(/【[^】]*】|［[^］]*］|\[[^\]]*\]|≪[^≫]*≫|《[^》]*》/g, " ");
+    const seen = new Set();
+    return (raw.match(/[A-Za-z][A-Za-z0-9+'\-]{1,}/g) || [])
+      .filter(w => /^[A-Z]/.test(w) && !SERIES_SKIP.test(w) && !/^(ml|spf|of|the|and|for|with|by|in|to|my|de|la|le)$/i.test(w) && !/^(ml|spf)\d/i.test(w)
+        && !bl.includes(w.toLowerCase()) && skel(w) !== bs && !(w.toUpperCase() === "SK-2" && /sk-ii/.test(bl)))
+      .filter(w => !seen.has(w.toLowerCase()) && seen.add(w.toLowerCase())).slice(0, 2).join(" ");
+  }
+  function zhTitle(brand, itype, jp, country) {
+    if (!itype || itype === "other") return "";
+    let b = String(brand || "").trim();
+    if (!b || KANA_RE.test(b)) b = country === "韓國" ? "韓國品牌" : "日本品牌";
+    const sp = zhSpec(jp), se = seriesWords(jp, b);
+    return `${b} ${zhTypeWord(itype, jp || "")}${se ? " " + se : ""}${sp.length ? `（${sp.join("・")}）` : ""}`;
+  }
   function toItemBase(raw, group) {
     const L = LABELS[raw.itemCode] || {};
     const D = getDetail(raw.itemCode);
@@ -698,7 +746,7 @@
     return {
       id: raw.itemCode, group, cat: CAT[group], rank: raw.rank, shop: raw.shopName || "",
       brand: L.brand || brandFromName(raw.itemName) || knownBrand(raw.itemName || "", raw.shopName || "") || KR_WORDS.find(w => w.length > 2 && raw.itemName.includes(w)) || shopBrand(raw.shopName),
-      name: L.twName || L.jpName || cleanName(raw.itemName),   // 有台灣正式中文名就用，沒有就用日文原名，不自己翻譯
+      name: L.twName || L.jpName || cleanName(raw.itemName),   // 有台灣正式中文名就用；沒有的話下面改成中文標題（品牌＋品項＋規格），日文原名放詳細頁
       twName: L.twName || "", jpName: L.jpName || "", desc: L.desc || "", jp: raw.itemName,
       country: L.country || detectCountry(text), tags: [],
       skin: !["彩妝", "保養", "美容"].includes(CAT[group]) ? [] : D ? (D.skin || []) : (L.skin || tagHits(SKIN, raw.itemName)),   // 膚質只用在彩妝、保養
@@ -707,6 +755,12 @@
       daysOn: raw.daysOn, bestRank: raw.bestRank,
       itype: L.type || sameCatType(itemType(CAT[group], L.desc || "", raw.itemName), raw.itemName)   // 品項（labels.json 可以用 type 手動指定）
     };
+  }
+  function withZh(p) {
+    if (!p || p.twName || p.isOY || p.isEx || p.isAw || p.zhAuto) return p;
+    const z = zhTitle(p.brand, p.itype, p.jp, p.country);
+    if (z) { p.name = z; p.zhAuto = true; }
+    return p;
   }
   // Olive Young 商品：價格超過 14 天就不顯示金額（特價常常幾天就結束，避免誤導）
   function oyPrice(o) {
@@ -1037,6 +1091,7 @@
   const awardShort = x => awardMeta(x.award).short + " " + x.title;
 
   function card(p, opts = {}) {
+    withZh(p);
     const fav = !!FAVS[p.id];
     if (opts.compact) return miniCard(p, opts, fav);
     const [mainPrice, ...rest] = String(p.priceText || "").split("（");
@@ -1075,6 +1130,7 @@
   // 沒有商品照片時的替代圖：依國家換底色，顯示品牌和品項
   const tileHtml = p => `<span class="tile ${p.country === "韓國" ? "t-kr" : p.country === "日本" ? "t-jp" : "t-ot"}"><b>${esc(p.brand)}</b><small>${esc(p.desc || (p.itype && p.itype !== "other" ? typeLabel(p.itype) : p.cat || ""))}</small><i>${esc(p.country === "韓國" ? "KOREA" : p.country === "日本" ? "JAPAN" : "BEAUTY")}</i></span>`;
   function miniCard(p, opts, fav) {
+    withZh(p);
     const aw = p.isAw ? p.award.awards : AW_BY_CODE[p.id];
     return `
       <article class="card mini">
@@ -1128,6 +1184,7 @@
       + "購買前請先確認商品標示的電壓與插頭規格。若因電壓或規格不同而無法使用、故障或縮短壽命，本站只提供商品資訊，無法負責；購買、保固與售後服務請向購買平台或賣家詢問。";
   }
   function detailHtml(p) {
+    withZh(p);
     const d = getDetail(p.id) || {};
     const list = (arr, tag = "ul") => `<${tag}>${arr.map(x => `<li>${esc(x)}</li>`).join("")}</${tag}>`;
     const sec = (title, body) => `<div class="dsec"><h3>${title}</h3>${body}</div>`;
@@ -1151,7 +1208,7 @@
     const awSec = p.isAw ? sec("得獎紀錄", list(p.award.awards.map(x => `${awardMeta(x.award).name}・${x.title}（${awardMeta(x.award).date}）`)) + (p.award.note ? `<p style="margin-top:6px">${esc(p.award.note)}</p>` : "")
       + muted("出處：" + [...new Set(p.award.awards.map(x => x.award))].flatMap(k => awardMeta(k).sources).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join("、"))
       + (p.linked ? "" : muted("日本樂天排行裡還沒有這個商品，所以沒有圖片和日本售價；購買連結是用商品名稱搜尋的結果。"))) : "";
-    const body = p.isAw ? awSec : p.isEx ? exSec : !has ? `<p class="pending">這個商品剛上榜，詳細介紹整理中。可以先看下方的日本樂天商品名稱和上榜紀錄。</p>${noIngr ? "" : `<div class="dsec" hidden><h3>主要成分</h3><div data-cap="ingr"></div></div><div class="dsec" hidden><h3>使用方法</h3><div data-cap="how"></div></div>`}` : `
+    const body = p.isAw ? awSec : p.isEx ? exSec : !has ? `<p class="pending">這個商品還沒有中文介紹。賣家有標示成分、使用方法的話會顯示在下面；也可以先看日本樂天商品名稱和上榜紀錄。</p>${noIngr ? "" : `<div class="dsec" hidden><h3>主要成分</h3><div data-cap="ingr"></div></div><div class="dsec" hidden><h3>使用方法</h3><div data-cap="how"></div></div>`}` : `
           ${skinBody ? sec(skinTitle, skinBody) : ""}
           ${d.features ? sec(type === "device" ? "規格與特色" : "商品特色", list(d.features)) : ""}
           ${ingrBody ? sec("主要成分", ingrBody) : ""}
@@ -1164,10 +1221,10 @@
         <div class="dbody">
           <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)}・${esc(p.cat || "")}</span></div>
           <h2>${esc(p.name)}</h2>
-          ${p.twName ? `<div class="twname">台灣名稱：${esc(p.twName)}</div>` : (p.isOY ? "" : p.isEx || p.isAw ? `<div class="desc">類型：${esc(p.desc)}</div>` : `<div class="desc">${p.desc ? "類型：" + esc(p.desc) + "・" : ""}${p.jpName ? "台灣查不到正式中文名稱，標示日本官方名稱" : "標示日本樂天上的商品名稱"}</div>`)}
+          ${p.twName ? `<div class="twname">台灣名稱：${esc(p.twName)}</div>` : (p.isOY ? "" : p.isEx || p.isAw ? `<div class="desc">類型：${esc(p.desc)}</div>` : `<div class="desc">${p.zhAuto ? "中文標題依品牌、品項和規格整理，正式名稱請看下方「日本樂天商品名稱」" : (p.desc ? "類型：" + esc(p.desc) + "・" : "") + (p.jpName ? "台灣查不到正式中文名稱，標示日本官方名稱" : "標示日本樂天上的商品名稱")}</div>`)}
           ${(d.awards || []).map(a => `<span class="award">🏆 ${esc(a)}</span>`).join(" ")}
           ${d.ratingNote ? `<div class="rate">${esc(d.ratingNote)}</div>` : ""}
-          ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）</div>` : ""}
+          ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）${p.url && p.reviews && !p.isOY ? ` <a class="revlink" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">看日本買家評價 ›</a><div class="revtip">評價是日文，可以在瀏覽器按右鍵「翻譯成中文」</div>` : ""}</div>` : ""}
           ${d.useNote ? `<div class="note">${esc(d.useNote)}</div>` : ""}
           ${body}
           ${historyFacts(p.isAw && p.linked ? (findItem(p.linked) || p) : p)}
@@ -1240,7 +1297,7 @@
       .filter(p => p.country === "韓國" && !p.exclude).concat(KR_ITEMS.filter(p => !p.exclude)).map(p => [p.id, p])).values()];
     const exKr = EXPERTS.filter(p => p.country === "韓國").map(p => ({ ...p, itype: p.itype || itemType(p.cat, p.desc || "", "") }));
     // 日本樂天的韓國商品沒有中文名：標題改成「品牌＋中文品項」，日文原名放在下面一行（不自己翻譯商品名稱）
-    const zh = p => { if (!p.itype || p.itype === "other") return p; const b = (oyBrand(p) || {}).name || ((LABELS[p.id] || {}).brand) || (p.krSearch || /[\u3040-\u30ff]/.test(p.brand) ? "韓國品牌" : p.brand); return { ...p, brand: b, name: `${b} ${typeLabel(p.itype)}`, desc: cleanName(p.jp || p.name) }; };
+    const zh = p => { if (!p.itype || p.itype === "other" || p.twName) return p; const b = (oyBrand(p) || {}).name || ((LABELS[p.id] || {}).brand) || knownBrand(p.jp || "", p.shop || "") || (p.krSearch || /[\u3040-\u30ff]/.test(p.brand) ? "韓國品牌" : p.brand); return { ...p, brand: b, name: zhTitle(b, p.itype, p.jp, "韓國"), zhAuto: true, desc: cleanName(p.jp || p.name) }; };
     return { oyAll, jpKr, pool: [...oyAll, ...jpKr.map(zh), ...exKr] };
   }
   // 日本商品全部：分類排行＋品項排行＋達人推薦（不含韓國）
@@ -1265,7 +1322,8 @@
   // 比較細的字：對到品項以後再看日文原名（例如「卸妝油」＝卸妝而且名稱有オイル）
   const FINE_WORDS = { "卸妝油": /オイル|oil/i, "卸妝水": /ウォーター|ミセラー|water/i, "卸妝膏": /バーム|balm/i, "卸妝乳": /ミルク|milk/i, "潔顏油": /オイル|oil/i,
     "洗顏粉": /パウダー|powder/i, "氣墊": /クッション|cushion/i, "粉餅": /パクト|プレスト|ファンデーション|pact/i, "粉底液": /リキッド|liquid/i, "眼膜": /アイ|eye/i,
-    "護唇膏": /リップクリーム|バーム|balm/i, "潤唇膏": /リップクリーム|バーム|balm/i, "髮膜": /マスク|パック|mask/i, "護手霜": /ハンド|hand/i, "保溫瓶": /ボトル|マグ|bottle/i };
+    "護唇膏": /リップクリーム|バーム|balm/i, "潤唇膏": /リップクリーム|バーム|balm/i, "髮膜": /マスク|パック|mask/i, "護手霜": /ハンド|hand/i, "保溫瓶": /ボトル|マグ|bottle/i,
+    "唇釉": /ティント|グロス|tint|gloss/i, "染唇": /ティント|tint/i, "唇蜜": /グロス|gloss/i, "眼影盤": /パレット|palette/i };
   const normQ = s => String(s || "").toLowerCase().replace(/[\s・·．.\-_\/]+/g, "");
   function searchHay(p) {
     if (!p._hay) p._hay = normQ([p.brand, p.name, p.desc, p.jp, cleanName(p.jp || ""), typeLabel(p.itype), p.cat, p.country, (LABELS[p.id] || {}).brand,
@@ -1278,11 +1336,37 @@
     if (typeHit) { const fine = FINE_WORDS[tok]; return !fine || fine.test((p.jp || "") + " " + (p.name || "")); }
     return searchHay(p).includes(t);
   }
+  // 把搜尋字拆開：英文（品牌）、中文品項字一定要對到；顏色名稱、數字這類對到越多排越前面
+  // 例如「dasique 9色眼影盤（03 燕麥奶茶）」→ 一定要：dasique、眼影盤；加分：9色、03、燕麥奶茶
+  const TW_ALL = Object.values(TYPE_WORDS).flat().concat(Object.keys(FINE_WORDS)).filter((w, i, a) => a.indexOf(w) === i).sort((a, b) => b.length - a.length);
+  function parseQ(q) {
+    const hard = [], soft = [];
+    const z2h = String(q).replace(/[Ａ-Ｚａ-ｚ０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 65248));
+    for (const chunk of z2h.split(/[\s　,，、。（）()【】「」『』\[\]｜|／\/~～!！?？:：;；"'“”＋+]+/).filter(Boolean)) {
+      for (const r of chunk.match(/[A-Za-z][A-Za-z0-9&'.\-]*|\d+(?:\.\d+)?\s*(?:ml|g|色|片|入|個|支|號|号)?|[^A-Za-z0-9]+/gi) || []) {
+        if (/^[A-Za-z]/.test(r)) { (r.length >= 2 ? hard : soft).push(r); continue; }
+        if (/^\d/.test(r)) { soft.push(r.replace(/\s+/g, "")); continue; }
+        let rest = r;
+        for (const w of TW_ALL) if (rest.includes(w)) { hard.push(w); rest = rest.split(w).join(" "); }
+        rest.split(/\s+/).filter(x => x && !/^[的和跟與及]$/.test(x)).forEach(x => soft.push(x));
+      }
+    }
+    return { hard: [...new Set(hard)], soft: [...new Set(soft)] };
+  }
+  let SEARCH_NEAR = false, SEARCH_MISS = [];   // true：沒有完全一樣的，列出最接近的
   function searchItems(q) {
-    const toks = String(q).trim().split(/[\s　,，]+/).filter(Boolean);
-    const all = jpPool().concat(krPool().pool);
-    const hits = all.filter(p => toks.every(t => matchToken(p, t)));
-    const score = p => { const b = normQ(p.brand + " " + ((LABELS[p.id] || {}).brand || "")); return (toks.some(t => b.includes(normQ(t))) ? 0 : 1) * 10 + (p.isOY ? (p.hot ? 0 : 1) : p.isEx ? 3 : 2); };
+    const { hard, soft } = parseQ(q);
+    const all = jpPool().concat(krPool().pool).map(withZh);
+    const softN = p => soft.filter(t => matchToken(p, t)).length;
+    let hits = hard.length ? all.filter(p => hard.every(t => matchToken(p, t))) : all.filter(p => softN(p) > 0);
+    if (!hits.length && hard.some(t => /^[A-Za-z]/.test(t)) && hard.some(t => !/^[A-Za-z]/.test(t))) {
+      hits = all.filter(p => hard.filter(t => /^[A-Za-z]/.test(t)).every(t => matchToken(p, t)));   // 品牌對到、品項沒對到：先列這個品牌的商品
+    }
+    if (hard.length && soft.length) { const best = hits.filter(p => softN(p) > 0); if (best.length) hits = best; }
+    SEARCH_NEAR = soft.length > 0 && !hits.some(p => softN(p) === soft.length);
+    SEARCH_MISS = soft.filter(t => !hits.some(p => matchToken(p, t)));
+    const toks = hard.concat(soft);
+    const score = p => { const b = normQ(p.brand + " " + ((LABELS[p.id] || {}).brand || "")); return -softN(p) * 100 + (toks.some(t => b.includes(normQ(t))) ? 0 : 1) * 10 + (p.isOY ? (p.hot ? 0 : 1) : p.isEx ? 3 : 2); };
     const seen = new Set();
     return hits.sort((a, b) => score(a) - score(b) || (a.typeRank || a.rank || 999) - (b.typeRank || b.rank || 999))
       .filter(p => !seen.has(p.id) && seen.add(p.id));
@@ -1464,6 +1548,7 @@
         if (state.scat !== "all" && !cats.some(([c]) => c === state.scat) && state.scat !== "韓國") state.scat = "all";
         const list = state.scat === "all" ? all : state.scat === "韓國" ? all.filter(p => p.country === "韓國") : all.filter(p => catOf(p) === state.scat);
         html += pagehead({ ...page, title: `「${q}」的搜尋結果`, desc: `共 ${all.length} 件` });
+        if (all.length && SEARCH_NEAR) html += `<p class="empty" style="margin:0 0 10px;padding:10px 14px;text-align:left">沒有找到名稱完全一樣的商品，先列出最接近的結果。${SEARCH_MISS.length ? `（「${esc(SEARCH_MISS.join("」「"))}」沒有對到：顏色名稱、色號通常只寫在商品頁裡，點進商品頁再選；品牌中文名找不到時，可以改打英文品牌名）` : ""}</p>`;
         if (all.length) html += `<div class="chips" style="margin:4px 0 14px">${[["all", "全部", all.length], ...cats.map(([c, n]) => [c, c, n]), ...(krN && krN < all.length ? [["韓國", "只看韓國", krN]] : [])]
           .map(([k, l, n]) => `<button type="button" class="chip" data-scat="${esc(k)}" aria-pressed="${state.scat === k}">${esc(l)} ${n}</button>`).join("")}</div>`;
         const meta = p => p.isOY ? `<div class="meta">Olive Young${p.hot ? " 暢銷" : ""}</div>` : p.isEx ? `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)} 推薦</div>` : p.typeRank ? `<div class="meta">日本樂天${esc(typeLabel(p.itype))}排行第 ${p.typeRank} 名</div>` : p.rank && p.rank < 100 ? `<div class="meta">日本樂天${esc(p.cat)}第 ${p.rank} 名</div>` : "";
