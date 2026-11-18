@@ -163,6 +163,11 @@
   .nmbtn:focus-visible { outline: 2px solid var(--ruri); }
   .desc { font-size: 12px; color: var(--muted); }
   .twname { font-size: 12px; color: var(--ruri); font-weight: 700; }
+  .ytrev { display: grid; gap: 8px; }
+  .ytrev a { display: flex; gap: 10px; align-items: center; text-decoration: none; color: inherit; background: var(--soft, #f6f4fb); border-radius: 10px; padding: 6px; }
+  .ytrev img { width: 112px; height: 63px; object-fit: cover; border-radius: 6px; flex: none; }
+  .ytrev b { display: block; font-size: 13px; line-height: 1.4; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ytrev small { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
   .revlink { margin-left: 6px; font-weight: 700; color: var(--ruri); white-space: nowrap; }
   .revtip { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .rate { font-size: 12px; color: var(--muted); }
@@ -621,7 +626,7 @@
     return k !== "x-drop" && c(k) === c(key) ? k : key;
   }
   const TYPE_FIX = [[/UVトーンアップスポッツ/, "sunscreen"], [/フェイシャル ?トリートメント ?エッセンス|ピテラ ?ベスト ?コレクション/, "toner"]];
-  const FRONT_RISK = ["育毛", "発毛", "養毛", "薄毛", "白髪染め", "白髪ぼかし", "カラートリートメント", "ヘアカラー", "ラッシュアディクト", "Lashaddict", "まつ毛美容液", "まつげ美容液", "まつ育", "アイラッシュセラム", "ハイドロキノン", "医薬品", "ヒト幹細胞", "幹細胞培養液", "エクソソーム", "Whitening", "まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
+  const FRONT_RISK = ["アイラッシュサポート", "育毛", "発毛", "養毛", "薄毛", "白髪染め", "白髪ぼかし", "カラートリートメント", "ヘアカラー", "ラッシュアディクト", "Lashaddict", "まつ毛美容液", "まつげ美容液", "まつ育", "アイラッシュセラム", "ハイドロキノン", "医薬品", "ヒト幹細胞", "幹細胞培養液", "エクソソーム", "Whitening", "まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
   const CAT_GROUP = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry", "身體": "bath" };
   function setType(p, key, name) {
     const k = refineType(key, name || "");
@@ -1227,6 +1232,7 @@
           ${p.rating ? `<div class="rate"><b>★ ${p.rating.toFixed(1)}</b>（日本樂天 ${p.reviews.toLocaleString()} 則評價）${p.url && p.reviews && !p.isOY ? ` <a class="revlink" href="${esc(p.url)}" target="_blank" rel="sponsored noopener">看日本買家評價 ›</a><div class="revtip">評價是日文，可以在瀏覽器按右鍵「翻譯成中文」</div>` : ""}</div>` : ""}
           ${d.useNote ? `<div class="note">${esc(d.useNote)}</div>` : ""}
           ${body}
+          ${p.isOY || p.isEx || p.isAw ? "" : `<div class="dsec" data-yt hidden></div>`}
           ${historyFacts(p.isAw && p.linked ? (findItem(p.linked) || p) : p)}
           ${p.jp && !p.isOY && !p.isEx ? sec("日本樂天商品名稱", `<p style="font-size:12px;color:var(--muted)">${esc(p.jp)}</p>`) : ""}
           ${isJpDevice(p) ? `<div class="note voltnote">${esc(voltNote(p))}</div>` : ""}
@@ -1262,11 +1268,25 @@
         + muted(`日文原文，取自日本樂天賣家標示，請以商品包裝標示為準。<a href="https://translate.google.com/?sl=ja&tl=zh-TW&op=translate&text=${encodeURIComponent(j.slice(0, 1500))}" target="_blank" rel="noopener">用 Google 翻譯看中文 ↗</a>`);
     });
   }
+  // YouTube 評測影片（每天自動搜尋排行前面的商品，打開詳細頁才讀）
+  let YT_REV = null;
+  async function fillVideos(p) {
+    const box = document.querySelector("#detailBody [data-yt]");
+    if (!box || !p || !p.id) return;
+    if (!YT_REV) YT_REV = fetch("data/yt_reviews.json").then(r => r.ok ? r.json() : {}).catch(() => ({}));
+    const v = (((await YT_REV).items || {})[p.id] || {}).videos || [];
+    if (!v.length) return;
+    const k = n => n >= 10000 ? (n / 10000).toFixed(n >= 100000 ? 0 : 1) + " 萬" : n.toLocaleString();
+    box.innerHTML = `<h3>YouTube 評測影片</h3><div class="ytrev">${v.map(x => `<a href="https://www.youtube.com/watch?v=${encodeURIComponent(x.id)}" target="_blank" rel="noopener">${x.thumb ? `<img src="${esc(x.thumb)}" alt="" loading="lazy">` : ""}<span><b>${esc(x.title)}</b><small>${esc(x.where)}・${esc(x.channel)}・${k(x.views || 0)} 次觀看</small></span></a>`).join("")}</div>`
+      + `<p style="color:var(--muted);font-size:12px;margin-top:4px">依商品名稱自動搜尋的影片，是不是同一款、同一個顏色請以影片內容為準；影片內容是創作者自己的看法。</p>`;
+    box.hidden = false;
+  }
   function openDetail(id) {
     const p = findItem(id);
     if (!p) return;
     document.getElementById("detailBody").innerHTML = detailHtml(p);
     fillCaption(p);
+    fillVideos(p);
     const dlg = document.getElementById("detail");
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
   }

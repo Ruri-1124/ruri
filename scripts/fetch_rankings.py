@@ -172,6 +172,8 @@ def main():
     build_korea(config)
     # ⑫ 賣家標示的成分、使用方法（日文原文；中文翻譯在 data/captions_zh.json）
     build_captions()
+    # ⑬ 熱門商品的 YouTube 評測影片（台灣中文＋日本），詳細頁顯示「YouTube 評測影片」
+    build_review_videos()
 
 
 def youtube_get(path, params):
@@ -671,6 +673,93 @@ def build_captions(keep_days=120):
         total += len(data)
         (out_dir / f"{i:02d}.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"✓ 成分／用法：這次抓到 {found} 件，共保存 {total} 件")
+
+
+# ── 熱門商品的 YouTube 評測影片 ──
+YT_PROMO = re.compile(r"【[^】]*】|［[^］]*］|\[[^\]]*\]|≪[^≫]*≫|《[^》]*》|＼[^／]*／|★[^★]*★|\([^)]*\)|（[^）]*）")
+YT_KANA_SKIP = {"ランキング", "クリスマス", "プレゼント", "ギフト", "セット", "ベストコスメ", "ポイント", "クーポン", "ネット", "カバー", "ホコリ", "アンバサダー",
+                "サイズ", "タイプ", "シリーズ", "カラー", "メール", "スーパー", "ブラックフライデー", "コスメ", "スキンケア", "ヘアケア", "オススメ", "おすすめ"}
+YT_SKIP = {"OFF", "SPF", "PA", "UV", "NEW", "SALE", "SET", "LOT", "LDK", "JAPAN", "OFFICIAL", "STORE", "SHOP", "MTG", "KOSE", "PREMIUM", "BEAUTY", "COSME"}
+
+
+def review_keywords(name, shop=""):
+    """商品名稱 → 搜尋用關鍵字：英文品牌／系列名、片假名品名（最多 3 個）；名稱裡沒有英文品牌時，用官方店店名的英文"""
+    t = YT_PROMO.sub(" ", name)
+    words = []
+    sw = [w for w in re.findall(r"[A-Za-z][A-Za-z0-9&'.\-]{2,}", shop or "") if w.upper() not in YT_SKIP | {"ONLINE", "STORE", "SHOP", "WEB", "PLUS"}]
+    if sw and not re.search(r"[A-Za-z]{3,}", t) and not re.search(r"楽天|ドラッグ|薬局|コスメ館|マート", shop or ""):
+        words.append(sw[0])
+    for w in re.findall(r"[A-Za-z][A-Za-z0-9&'.+\-]{2,}|[ァ-ヶー]{3,}", t):
+        if w.upper() in YT_SKIP or w in YT_KANA_SKIP or w in words or (re.match(r"[A-Za-z]", w) and w.islower() and len(w) < 4):
+            continue
+        words.append(w)
+        if len(words) >= 3:
+            break
+    return words
+
+
+def build_review_videos(per_group=10, max_new=20, refresh_days=14):
+    """排行前面的商品：用 YouTube 搜尋評測影片（台灣中文一次、日本一次），影片標題或說明要提到商品關鍵字才留下"""
+    if not YOUTUBE_KEY:
+        print("（沒有設定 YOUTUBE_API_KEY，略過評測影片）")
+        return
+    path = ROOT / "data" / "yt_reviews.json"
+    old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    items = old.get("items", {})
+    latest = json.loads((ROOT / "data" / "latest.json").read_text(encoding="utf-8"))
+    risk = RISK_WORDS + ["まつ毛", "まつげ"]
+    today = datetime.now(TAIWAN)
+    todo = []
+    for g, rows in latest.get("groups", {}).items():
+        if g in ("laundry",):
+            continue
+        for r in sorted(rows, key=lambda x: x.get("rank") or 999)[:per_group]:
+            code, name, shop = r["itemCode"], r.get("itemName", ""), r.get("shopName", "")
+            if any(w in name for w in risk):
+                continue
+            had = items.get(code)
+            if had and (today.date() - datetime.fromisoformat(had["date"]).date()).days < refresh_days:
+                continue
+            if code not in [c for c, *_ in todo]:
+                todo.append((code, name, shop))
+    done = 0
+    try:
+        for code, name, shop in todo[:max_new]:
+            kws = review_keywords(name, shop)
+            latin = [w for w in kws if re.match(r"[A-Za-z]", w)]
+            if not kws:
+                continue
+            found = {}
+            queries = []
+            if latin:
+                queries.append((" ".join(latin[:2]) + " 心得", "zh-Hant", "TW", "台灣"))
+            queries.append((" ".join(kws[:2]) + " レビュー", "ja", "JP", "日本"))
+            for q, lang, region, where in queries:
+                res = youtube_get("search", {"part": "snippet", "q": q, "type": "video", "order": "relevance",
+                                             "maxResults": 8, "relevanceLanguage": lang, "regionCode": region, "safeSearch": "strict"})
+                for it in res.get("items", []):
+                    vid = it["id"].get("videoId")
+                    sn = it["snippet"]
+                    text = (sn.get("title", "") + " " + sn.get("description", "")).lower()
+                    if vid and vid not in found and kws[0].lower() in text and not any(w in sn.get("title", "") for w in risk):
+                        found[vid] = {"id": vid, "title": sn["title"], "channel": sn["channelTitle"], "date": sn["publishedAt"][:10],
+                                      "where": where, "thumb": (sn.get("thumbnails", {}).get("medium") or {}).get("url", "")}
+            if found:
+                res = youtube_get("videos", {"part": "statistics", "id": ",".join(list(found)[:50])})
+                for v in res.get("items", []):
+                    found[v["id"]]["views"] = int(v.get("statistics", {}).get("viewCount", 0))
+            vids = [v for v in found.values() if v.get("views", 0) >= 3000]
+            vids.sort(key=lambda v: (v["where"] != "台灣", -v.get("views", 0)))
+            items[code] = {"date": today.strftime("%Y-%m-%d"), "q": [q for q, *_ in queries], "videos": vids[:3]}
+            done += 1
+    except Exception as e:  # YouTube 出錯（例如額度用完）不影響其他資料
+        print(f"✗ 評測影片更新中斷：{e}")
+    keep = (today - timedelta(days=90)).date()
+    items = {k: v for k, v in items.items() if datetime.fromisoformat(v["date"]).date() >= keep}
+    data = {"_說明": "排行前面商品的 YouTube 評測影片（每天最多更新 %d 件、每件 %d 天重查一次）。" % (max_new, refresh_days),
+            "updated": today.isoformat(timespec="minutes"), "items": items}
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"已更新評測影片：這次查了 {done} 件，共 {sum(1 for v in items.values() if v['videos'])} 件有影片")
 
 
 if __name__ == "__main__":
