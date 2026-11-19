@@ -677,16 +677,28 @@ def build_captions(keep_days=120):
 
 # ── 熱門商品的 YouTube 評測影片 ──
 YT_PROMO = re.compile(r"【[^】]*】|［[^］]*］|\[[^\]]*\]|≪[^≫]*≫|《[^》]*》|＼[^／]*／|★[^★]*★|\([^)]*\)|（[^）]*）")
-YT_KANA_SKIP = {"ランキング", "クリスマス", "プレゼント", "ギフト", "セット", "ベストコスメ", "ポイント", "クーポン", "ネット", "カバー", "ホコリ", "アンバサダー",
+YT_KANA_SKIP = {"パウダー", "ファンデーション", "クリーム", "セラミド", "インナードライ", "ドライヤー", "ヘアドライヤー", "ヘアードライヤー", "ヘアアイロン",
+                "ストレートアイロン", "アイロン", "カールアイロン", "シャワーヘッド", "バスソルト", "エプソムソルト", "ソープディスペンサー", "ディスペンサー",
+                "ブラシ", "ヘアブラシ", "ヘアコーム", "ヘアオイル", "ホリデー", "ポーチ", "レビュー", "ユニットバス", "マルチクリーナー", "スプレー", "クレンジング",
+                "オイル", "シャンプー", "トリートメント", "マスカラ", "リップ", "ルース", "レフィル", "セット", "キット", "ベストセラーキット", "マイナスイオン",
+                "マイクロナノバブル", "ステンレス", "ソフトブラシ", "クリーニング", "ゴムパッキン", "ジェルボール", "リフティング", "レチノール", "ブライト", "ブラック",
+                "ランキング", "クリスマス", "プレゼント", "ギフト", "セット", "ベストコスメ", "ポイント", "クーポン", "ネット", "カバー", "ホコリ", "アンバサダー",
                 "サイズ", "タイプ", "シリーズ", "カラー", "メール", "スーパー", "ブラックフライデー", "コスメ", "スキンケア", "ヘアケア", "オススメ", "おすすめ"}
-YT_SKIP = {"OFF", "SPF", "PA", "UV", "NEW", "SALE", "SET", "LOT", "LDK", "JAPAN", "OFFICIAL", "STORE", "SHOP", "MTG", "KOSE", "PREMIUM", "BEAUTY", "COSME"}
+YT_TITLE_RISK = re.compile(r"修復|再生|シワ|しわ|消え|美白|ニキビ|毛穴改善|シミ|治療|医師|皮膚科|効果|育毛|薄毛|痩せ|痘|皺|斑|美白|淡斑|抗老|療效|效果|醫美|整形|PR\b|#PR|提供")
+YT_SKIP = {"PDRN", "BASIC", "TECA", "ORGANIC", "THE", "ONLINESHOP", "ONLINE", "BOX", "REFILL", "OFF", "SPF", "PA", "UV", "NEW", "SALE", "SET", "LOT", "LDK", "JAPAN", "OFFICIAL", "STORE", "SHOP", "MTG", "KOSE", "PREMIUM", "BEAUTY", "COSME"}
 
 
 def review_keywords(name, shop=""):
     """商品名稱 → 搜尋用關鍵字：英文品牌／系列名、片假名品名（最多 3 個）；名稱裡沒有英文品牌時，用官方店店名的英文"""
     t = YT_PROMO.sub(" ", name)
     words = []
-    sw = [w for w in re.findall(r"[A-Za-z][A-Za-z0-9&'.\-]{2,}", shop or "") if w.upper() not in YT_SKIP | {"ONLINE", "STORE", "SHOP", "WEB", "PLUS"}]
+    # 括號裡寫「公式」的是品牌（例如【BIOHEAL BOH公式】、[COSRX 公式]），先拿出來
+    for br in re.findall(r"[【\[［]([^】\]］]*(?:公式|official|OFFICIAL)[^】\]］]*)[】\]］]", name):
+        bw = re.findall(r"[A-Za-z][A-Za-z0-9&'.\-]{1,}(?:\s+[A-Z][A-Za-z0-9&'.\-]+)?", br.replace("公式", " "))
+        if bw and bw[0].upper() not in YT_SKIP:
+            words.append(bw[0].strip())
+            break
+    sw = [] if words else [w for w in re.findall(r"[A-Za-z][A-Za-z0-9&'.\-]{2,}", shop or "") if w.upper() not in YT_SKIP | {"ONLINE", "STORE", "SHOP", "WEB", "PLUS"}]
     if sw and not re.search(r"[A-Za-z]{3,}", t) and not re.search(r"楽天|ドラッグ|薬局|コスメ館|マート", shop or ""):
         words.append(sw[0])
     for w in re.findall(r"[A-Za-z][A-Za-z0-9&'.+\-]{2,}|[ァ-ヶー]{3,}", t):
@@ -695,7 +707,9 @@ def review_keywords(name, shop=""):
         words.append(w)
         if len(words) >= 3:
             break
-    return words
+    # 英文品牌（大寫開頭）排前面：例如 HACKTICK、SPICARE
+    first = [w for w in words if re.match(r"[A-Z]", w)]
+    return first[:1] + [w for w in words if w not in first[:1]]
 
 
 def build_review_videos(per_group=10, max_new=20, refresh_days=14):
@@ -715,7 +729,7 @@ def build_review_videos(per_group=10, max_new=20, refresh_days=14):
             continue
         for r in sorted(rows, key=lambda x: x.get("rank") or 999)[:per_group]:
             code, name, shop = r["itemCode"], r.get("itemName", ""), r.get("shopName", "")
-            if any(w in name for w in risk):
+            if any(w in name for w in risk) or re.search(r"サブスク|定期便|福袋", name):
                 continue
             had = items.get(code)
             if had and (today.date() - datetime.fromisoformat(had["date"]).date()).days < refresh_days:
@@ -741,7 +755,8 @@ def build_review_videos(per_group=10, max_new=20, refresh_days=14):
                     vid = it["id"].get("videoId")
                     sn = it["snippet"]
                     text = (sn.get("title", "") + " " + sn.get("description", "")).lower()
-                    if vid and vid not in found and kws[0].lower() in text and not any(w in sn.get("title", "") for w in risk):
+                    title = sn.get("title", "")
+                    if vid and vid not in found and kws[0].lower() in title.lower() and not YT_TITLE_RISK.search(title) and not any(w in title for w in risk):
                         found[vid] = {"id": vid, "title": sn["title"], "channel": sn["channelTitle"], "date": sn["publishedAt"][:10],
                                       "where": where, "thumb": (sn.get("thumbnails", {}).get("medium") or {}).get("url", "")}
             if found:
