@@ -1,8 +1,13 @@
 {
   "_說明": "年度熱門商品（人工整理）：日本美妝大賞的得獎商品。只寫事實（獎項、名次、商品名稱），用自己的話寫類型說明，並附上公開的新聞稿或報導連結。商品名稱用日本官方名稱，不自己翻譯。mustHave：在樂天排行資料裡找同一個商品用的關鍵字（全部都要出現才算），找到就會用排行的圖片、價格、連結。kw：蝦皮／台灣樂天搜尋用的關鍵字。",
-  "updated": "2026-11-01",
-  "next": "@cosme 2026 年度大賞預計 11 月下旬公布，公布後會更新這一頁",
+  "updated": "2026-11-21",
+  "next": "@cosme 2027 上半期新作預計 2027 年 5 月公布",
   "awards": [
+    { "key": "cosme2026", "name": "@cosme 2026 年度大賞", "short": "@cosme 2026 年度", "date": "2026 年 11 月公布",
+      "sources": [
+        { "name": "istyle 新聞稿", "url": "https://www.istyle.co.jp/news/press/2026/11/1118-bc.html" },
+        { "name": "FASHIONSNAP 報導", "url": "https://www.fashionsnap.com/article/2026-11-18/atcosme-best-cosmetics-2026/" }
+      ] },
     { "key": "cosme2026h1", "name": "@cosme 2026 上半期新作", "short": "@cosme 2026 上半期", "date": "2026 年 5 月公布",
       "sources": [
         { "name": "istyle 新聞稿（PDF）", "url": "https://www.istyle.co.jp/news/uploads/20260520-bc.pdf" },
@@ -19,8 +24,29 @@
       ] }
   ],
   "items": [
+    { "id": "orbis-the-cleansing-oil", "brand": "ORBIS", "name": "オルビス ザ クレンジング オイル", "desc": "卸妝油", "country": "日本", "cat": "保養", "type": "cleansing",
+      "awards": [{ "award": "cosme2026", "rank": 3, "title": "總合第 3 名" }],
+      "mustHave": ["オルビス", "クレンジング", "オイル"], "kw": "ORBIS 卸妝油" },
+    { "id": "anua-pdrn-ha100-serum", "brand": "Anua", "name": "PDRN ヒアルロン酸100 セラム", "desc": "精華液", "country": "韓國", "cat": "保養", "type": "serum",
+      "awards": [{ "award": "cosme2026", "rank": 4, "title": "總合第 4 名" }],
+      "mustHave": ["Anua", "PDRN", "セラム"], "kw": "Anua PDRN 精華" },
+    { "id": "kanebo-cream-in-day-2", "brand": "KANEBO", "name": "カネボウ クリーム イン デイII", "desc": "日間乳霜（白天用，含防曬係數）", "country": "日本", "cat": "保養", "type": "cream",
+      "awards": [{ "award": "cosme2026", "rank": 5, "title": "總合第 5 名" }],
+      "mustHave": ["カネボウ", "クリーム イン デイ"], "kw": "KANEBO 日間乳霜" },
+    { "id": "anua-pdrn-ha100-mask", "brand": "Anua", "name": "PDRN100ヒアルロン酸セラムマスク", "desc": "片狀面膜", "country": "韓國", "cat": "保養", "type": "mask",
+      "awards": [{ "award": "cosme2026", "rank": 7, "title": "總合第 7 名" }],
+      "mustHave": ["Anua", "PDRN", "マスク"], "kw": "Anua PDRN 面膜" },
+    { "id": "sofina-ip-goldentime-cream", "brand": "SOFINA iP", "name": "ゴールデンタイムリペア 深夜浸透クリーム", "desc": "晚間乳霜", "country": "日本", "cat": "保養", "type": "cream",
+      "awards": [{ "award": "cosme2026", "rank": 8, "title": "總合第 8 名" }],
+      "mustHave": ["ソフィーナ", "深夜浸透"], "kw": "SOFINA iP 晚霜" },
+    { "id": "skii-skinpower-renew-cream", "brand": "SK-II", "name": "スキンパワー リニュー クリーム", "desc": "乳霜", "country": "日本", "cat": "保養", "type": "cream",
+      "awards": [{ "award": "cosme2026", "rank": 9, "title": "總合第 9 名" }],
+      "mustHave": ["スキンパワー", "リニュー"], "kw": "SK-II 乳霜" },
+    { "id": "decorte-skin-shadow-palette", "brand": "COSME DECORTE 黛珂", "name": "スキンシャドウ デザイニング パレット", "desc": "眼影盤", "country": "日本", "cat": "彩妝", "type": "eye",
+      "awards": [{ "award": "cosme2026", "rank": 10, "title": "總合第 10 名" }],
+      "mustHave": ["コスメデコルテ", "スキンシャドウ"], "kw": "黛珂 眼影盤" },
     { "id": "dprogram-moist-lotion", "brand": "d program", "name": "モイストケア ローション EX", "desc": "化妝水", "country": "日本", "cat": "保養", "type": "toner",
-      "awards": [{ "award": "cosme2026h1", "rank": 1, "title": "總合大賞" }],
+      "awards": [{ "award": "cosme2026", "rank": 6, "title": "總合第 6 名" }, { "award": "cosme2026h1", "rank": 1, "title": "總合大賞" }],
       "note": "同時拿下 @cosme 最佳化妝水第 1 名。125mL，日本官方價 ¥3,300。",
       "mustHave": ["モイストケア", "ローション"], "kw": "d program 化妝水" },
     { "id": "rosyrosa-brush-angled", "brand": "Rosy Rosa", "name": "パウダーブラシEX＜アングルド＞", "desc": "斜角蜜粉刷", "country": "日本", "cat": "彩妝", "type": "tool",
@@ -54,7 +80,6 @@
     { "id": "dprogram-moist-emulsion", "brand": "d program", "name": "モイストケア エマルジョン EX", "desc": "乳液", "country": "日本", "cat": "保養", "type": "emulsion",
       "awards": [{ "award": "cosme2026h1", "title": "最佳乳液 第 1 名" }],
       "mustHave": ["モイストケア", "エマルジョン"], "kw": "d program 乳液" },
-
     { "id": "attenir-cleanse-oil", "brand": "Attenir 艾天然", "name": "スキンクリア クレンズ オイル アロマタイプ", "desc": "卸妝油", "country": "日本", "cat": "保養", "type": "cleansing",
       "awards": [{ "award": "cosme2025", "rank": 1, "title": "總合大賞" }],
       "mustHave": ["スキンクリア クレンズ オイル"], "kw": "Attenir 卸妝油" },
@@ -74,7 +99,8 @@
       "awards": [{ "award": "cosme2025", "rank": 6, "title": "總合第 6 名" }],
       "mustHave": ["ブロウカラ"], "kw": "rom&nd 染眉膏" },
     { "id": "rmk-dewy-melt-lip", "brand": "RMK", "name": "デューイーメルト リップカラー", "desc": "唇膏", "country": "日本", "cat": "彩妝", "type": "lip",
-      "awards": [{ "award": "cosme2025", "rank": 7, "title": "總合第 7 名" }],
+      "awards": [{ "award": "cosme2026", "rank": 1, "title": "總合大賞" }, { "award": "cosme2025", "rank": 7, "title": "總合第 7 名" }],
+      "note": "2026 年度總合大賞，@cosme 睽違 4 年由唇彩拿下大賞；2025 年度也排總合第 7 名。",
       "mustHave": ["RMK", "デューイーメルト"], "kw": "RMK 唇膏" },
     { "id": "rosyrosa-powder-brush", "brand": "Rosy Rosa", "name": "パウダーブラシEX", "desc": "蜜粉刷", "country": "日本", "cat": "彩妝", "type": "tool",
       "awards": [{ "award": "cosme2025", "rank": 8, "title": "總合第 8 名" }],
@@ -89,7 +115,6 @@
       "awards": [{ "award": "cosme2025", "title": "下半期最佳熱賣賞" }],
       "note": "日本官方價 ¥11,000。",
       "mustHave": ["コスメデコルテ", "毛穴美容液オイル"], "kw": "黛珂 AQ 精華油" },
-
     { "id": "shuuemura-bright-cleansing", "brand": "植村秀 shu uemura", "name": "ブライト クレンジング オイル", "desc": "卸妝油", "country": "日本", "cat": "保養", "type": "cleansing",
       "awards": [{ "award": "lips2026h1", "title": "新作大賞" }],
       "mustHave": ["シュウ ウエムラ", "クレンジング"], "kw": "植村秀 卸妝油" },
