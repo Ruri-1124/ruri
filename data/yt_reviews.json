@@ -1,6 +1,6 @@
 {
  "_說明": "排行前面商品的 YouTube 評測影片（每天最多更新 20 件、每件 14 天重查一次）。",
- "updated": "2026-11-21T22:20+08:00",
+ "updated": "2026-11-22T06:59+08:00",
  "items": {
   "rakuten24:11405676": {
    "date": "2026-11-19",
@@ -773,6 +773,536 @@
      "where": "日本",
      "thumb": "https://i.ytimg.com/vi/YGNgf0Zmr18/mqdefault.jpg",
      "views": 40026
+    }
+   ]
+  },
+  "mycosmeticbox:10000939": {
+   "date": "2026-11-22",
+   "q": [
+    "ReKERA 心得",
+    "ReKERA リケラエマルジョン レビュー"
+   ],
+   "videos": []
+  },
+  "kobe-beauty-labo:10002363": {
+   "date": "2026-11-22",
+   "q": [
+    "YOLU 心得",
+    "YOLU ナイトリペア レビュー"
+   ],
+   "videos": [
+    {
+     "id": "lw17AeqXlNw",
+     "title": "新作YOLU実際どうなの？！ #シャンプー #ヘアケア #トリートメント",
+     "channel": "おつ@ヘアケア",
+     "date": "2023-10-03",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/lw17AeqXlNw/mqdefault.jpg",
+     "views": 468298
+    },
+    {
+     "id": "cdtKK7Od-dw",
+     "title": "#シャンプー#yolu#美容師",
+     "channel": "【Five by ikki】竹内一輝",
+     "date": "2024-11-16",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/cdtKK7Od-dw/mqdefault.jpg",
+     "views": 201945
+    },
+    {
+     "id": "arhjWGZNglw",
+     "title": "【爆売れシャンプー『YOLU』大進化】待望の卒・禁断処方！全種リニューアルでついに完成した新時代シャンプーをプロが解説！【これなら推せます】",
+     "channel": "かずのすけ",
+     "date": "2025-05-27",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/arhjWGZNglw/mqdefault.jpg",
+     "views": 164521
+    }
+   ]
+  },
+  "cleosbeaute:10000188": {
+   "date": "2026-11-22",
+   "q": [
+    "Cleo's Beaute 心得",
+    "Cleo's Beaute レビュー"
+   ],
+   "videos": []
+  },
+  "mtgec-beauty:10002142": {
+   "date": "2026-11-22",
+   "q": [
+    "STRAIGHT IRON 心得",
+    "STRAIGHT リファ レビュー"
+   ],
+   "videos": [
+    {
+     "id": "TQHhAW7pnqg",
+     "title": "ReFa STRAIGHT BLOW IRON | リファストレートブローアイロン",
+     "channel": "ReFa [ リファ公式 ]",
+     "date": "2026-04-15",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/TQHhAW7pnqg/mqdefault.jpg",
+     "views": 1076864
+    }
+   ]
+  },
+  "mtgec-beauty:10002330": {
+   "date": "2026-11-22",
+   "q": [
+    "リファ ビューテック レビュー"
+   ],
+   "videos": [
+    {
+     "id": "skQ1oL0EJ78",
+     "title": "リファの人気小型軽量速乾ドライヤーがさらに進化！リファビューテックドライヤーS＋！#リファドライヤーS＋ #速乾 #折り畳み",
+     "channel": "ピチエコチャンネル",
+     "date": "2025-02-05",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/skQ1oL0EJ78/mqdefault.jpg",
+     "views": 186208
+    },
+    {
+     "id": "bIoGtxGFNeM",
+     "title": "ReFa BEAUTECH DRYER SE｜リファビューテック ドライヤー SE",
+     "channel": "ReFa [ リファ公式 ]",
+     "date": "2025-09-30",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/bIoGtxGFNeM/mqdefault.jpg",
+     "views": 67222
+    },
+    {
+     "id": "9ugEs7hkHG8",
+     "title": "【ReFa新作ドライヤー】ReFaの最新モデルを本音レビュー！☝🏻🌿｜性能・使い心地・全シリーズの特徴を徹底的に解説！📣#refa #リファ #ドライヤー ",
+     "channel": "miki takami",
+     "date": "2025-11-12",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/9ugEs7hkHG8/mqdefault.jpg",
+     "views": 49813
+    }
+   ]
+  },
+  "mycosmeticbox:10000390": {
+   "date": "2026-11-22",
+   "q": [
+    "Kinujo KINUJO 心得",
+    "Kinujo キヌージョ レビュー"
+   ],
+   "videos": [
+    {
+     "id": "1gdB6EzUXxM",
+     "title": "【ET.粉.友.形】冠軍銷售日版KINUJO-T001 V.S 輕巧夢幻台版NaryT1/5款負離子吹風機/使用分享/選擇困難者必看/重點推薦-DIY愛美小站EP10",
+     "channel": "ET粉.友.形",
+     "date": "2021-11-27",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/1gdB6EzUXxM/mqdefault.jpg",
+     "views": 7132
+    },
+    {
+     "id": "z6gVor8uR6g",
+     "title": "KINUJO 絹女 吹風機25秒介紹短片",
+     "channel": "KINUJO 絹女 Taiwan",
+     "date": "2024-04-17",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/z6gVor8uR6g/mqdefault.jpg",
+     "views": 3409
+    }
+   ]
+  },
+  "mtgec-beauty:10002143": {
+   "date": "2026-11-22",
+   "q": [
+    "ReFa CURLIRON 心得",
+    "ReFa リファ レビュー"
+   ],
+   "videos": [
+    {
+     "id": "rTgbky-OM0U",
+     "title": "ReFa BEAUTECH  CURL IRON - 當自己的造型師篇",
+     "channel": "MTG Taiwan",
+     "date": "2021-12-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/rTgbky-OM0U/mqdefault.jpg",
+     "views": 26335
+    },
+    {
+     "id": "jByuvOPaiEk",
+     "title": "ReFa BEAUTECH CURL IRON - 安心好上手篇",
+     "channel": "MTG Taiwan",
+     "date": "2021-12-22",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/jByuvOPaiEk/mqdefault.jpg",
+     "views": 26295
+    },
+    {
+     "id": "sU8zaPo1f1A",
+     "title": "【進化系カールアイロン】ReFa CURL IRON PRO+｜美容室専売・銀座で正規購入💎 #shorts #美容 #リファ #ヘアケア #ヘアセット #ヘアアレンジ",
+     "channel": "【髪質改善・縮毛矯正】銀座美容室ShellBear",
+     "date": "2025-11-17",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/sU8zaPo1f1A/mqdefault.jpg",
+     "views": 6200
+    }
+   ]
+  },
+  "kobe-beauty-labo:10000074": {
+   "date": "2026-11-22",
+   "q": [
+    "slall 心得",
+    "サロニア クリスマスプレゼント レビュー"
+   ],
+   "videos": [
+    {
+     "id": "OLZtiJBpUig",
+     "title": "サロニアから多機能コードレスストレートヘアアイロンが登場！前髪アレンジとスマホ充電の両方で活躍！ #コードレスヘアアイロン #サロニア #小型携帯ヘアアイロン",
+     "channel": "ピチエコチャンネル",
+     "date": "2025-10-29",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/OLZtiJBpUig/mqdefault.jpg",
+     "views": 56217
+    },
+    {
+     "id": "kTakd0rVbu8",
+     "title": "【サロニア】天才すぎるコードレスヘアアイロン💡#shorts #サロニア #SALONIA #コードレスヘアアイロン #ストレートアイロン #ヘアアイロン",
+     "channel": "Mimi Beauty",
+     "date": "2026-01-01",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/kTakd0rVbu8/mqdefault.jpg",
+     "views": 44420
+    },
+    {
+     "id": "_gzYLNjypuw",
+     "title": "旅行やお出かけに最適！万能コードレスアイロン💫#SALONIA #サロニア #ヘアアイロン#コードレスアイロン #コードレスヘアアイロン #前髪 #横髪 #ヘアアレンジ #ヘアセット #お直し",
+     "channel": "SALONIA (サロニア)",
+     "date": "2025-10-20",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/_gzYLNjypuw/mqdefault.jpg",
+     "views": 23602
+    }
+   ]
+  },
+  "mtgec-beauty:10002632": {
+   "date": "2026-11-22",
+   "q": [
+    "ReFa STRAIGHT 心得",
+    "ReFa リファストレートブローアイロン レビュー"
+   ],
+   "videos": [
+    {
+     "id": "GcE3OA_JkSA",
+     "title": "♥用後感♥ 4️⃣款高人氣熱門直髮夾大比拼🔥元老級ghd～黑馬Glampalm🫢超高討論度ReFa🗣️CP值之鬼SALONIA👻選哪一個好？||DottieHidee||",
+     "channel": "Dottie Hidee",
+     "date": "2026-05-09",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/GcE3OA_JkSA/mqdefault.jpg",
+     "views": 26725
+    },
+    {
+     "id": "EYpm3soRsyw",
+     "title": "日本好好買 Refa買到爆",
+     "channel": "克里斯小姐Chris",
+     "date": "2025-11-27",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/EYpm3soRsyw/mqdefault.jpg",
+     "views": 20202
+    },
+    {
+     "id": "d3EMBHep7Zs",
+     "title": "日本女生超愛的ReFa離子夾好用嗎？",
+     "channel": "AMO美妝開箱",
+     "date": "2026-03-10",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/d3EMBHep7Zs/mqdefault.jpg",
+     "views": 9535
+    }
+   ]
+  },
+  "mtgec-beauty:10002451": {
+   "date": "2026-11-22",
+   "q": [
+    "ReFa 心得",
+    "ReFa リファ レビュー"
+   ],
+   "videos": [
+    {
+     "id": "EYpm3soRsyw",
+     "title": "日本好好買 Refa買到爆",
+     "channel": "克里斯小姐Chris",
+     "date": "2025-11-27",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/EYpm3soRsyw/mqdefault.jpg",
+     "views": 20202
+    },
+    {
+     "id": "YsN6F3YnpS4",
+     "title": "【媽咪最推薦】日本 Refa Beautech 新款智能吹風機",
+     "channel": "媽咪最推薦",
+     "date": "2025-07-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/YsN6F3YnpS4/mqdefault.jpg",
+     "views": 12914
+    },
+    {
+     "id": "6r7btPD6nDo",
+     "title": "吹風機推薦？！｜ refa吹風機 解析｜開箱吹風機｜大仁先生MR.DR",
+     "channel": "大仁先生",
+     "date": "2021-11-07",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/6r7btPD6nDo/mqdefault.jpg",
+     "views": 11279
+    }
+   ]
+  },
+  "panasonic-store:10002135": {
+   "date": "2026-11-22",
+   "q": [
+    "EH-NB70 心得",
+    "EH-NB70 パナソニック レビュー"
+   ],
+   "videos": [
+    {
+     "id": "1j8uV2ZHHrw",
+     "title": "Panasonic 吹風機 | EH-NB70 公主機 | 新機登場 | 輕鬆美得我型我速",
+     "channel": "PanasonicTaiwan",
+     "date": "2026-09-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/1j8uV2ZHHrw/mqdefault.jpg",
+     "views": 833912
+    },
+    {
+     "id": "frt6QofEZho",
+     "title": "Panasonic 吹風機 | EH-NB70 公主機 | 吹髮同時水潤 | 極速乾、潤澤美",
+     "channel": "PanasonicTaiwan",
+     "date": "2026-09-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/frt6QofEZho/mqdefault.jpg",
+     "views": 604453
+    },
+    {
+     "id": "zuPY_ouT_To",
+     "title": "全新旗艦級 nanoe ® 護髮風筒 EH-NB70  |  加倍水潤 速乾護髮",
+     "channel": "Panasonic Hong Kong",
+     "date": "2026-10-06",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/zuPY_ouT_To/mqdefault.jpg",
+     "views": 283291
+    }
+   ]
+  },
+  "mtgec-beauty:10002177": {
+   "date": "2026-11-22",
+   "q": [
+    "ReFa 心得",
+    "ReFa リファ レビュー"
+   ],
+   "videos": [
+    {
+     "id": "EYpm3soRsyw",
+     "title": "日本好好買 Refa買到爆",
+     "channel": "克里斯小姐Chris",
+     "date": "2025-11-27",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/EYpm3soRsyw/mqdefault.jpg",
+     "views": 20202
+    },
+    {
+     "id": "YsN6F3YnpS4",
+     "title": "【媽咪最推薦】日本 Refa Beautech 新款智能吹風機",
+     "channel": "媽咪最推薦",
+     "date": "2025-07-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/YsN6F3YnpS4/mqdefault.jpg",
+     "views": 12914
+    },
+    {
+     "id": "pXbvVUafNxY",
+     "title": "ReFa離子夾別買錯！大支 vs 迷你，用途差很大！｜新店蔡 Shorts",
+     "channel": "我是老爸,我不要當爸!",
+     "date": "2026-09-29",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/pXbvVUafNxY/mqdefault.jpg",
+     "views": 6941
+    }
+   ]
+  },
+  "kiroran:10000205": {
+   "date": "2026-11-22",
+   "q": [
+    "セール レビュー"
+   ],
+   "videos": [
+    {
+     "id": "1Htr9ByMk-c",
+     "title": "【セール】ブラックフライデーセール開催！ニンテンドースイッチのオススメタイトル15選！【Black Friday / Switch / Switch2】",
+     "channel": "いちごうのゲームビート",
+     "date": "2026-11-20",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/1Htr9ByMk-c/mqdefault.jpg",
+     "views": 152002
+    },
+    {
+     "id": "gYT5FCDN9tU",
+     "title": "【大チャンス！】ミニPCがブラックフライデーセールで安い！ AliExpressのセールを見逃すな！",
+     "channel": "戸田覚ガジェット",
+     "date": "2026-11-18",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/gYT5FCDN9tU/mqdefault.jpg",
+     "views": 50844
+    },
+    {
+     "id": "Li4OnSxpZl8",
+     "title": "【最新版】Amazonタイムセールの“買い”工具ランキングTOP10！【おすすめ工具紹介】",
+     "channel": "【公式】ふじワークス",
+     "date": "2026-11-20",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/Li4OnSxpZl8/mqdefault.jpg",
+     "views": 22117
+    }
+   ]
+  },
+  "auc-epsomsalt:10000222": {
+   "date": "2026-11-22",
+   "q": [
+    "シークリスタルス マグネシウム レビュー"
+   ],
+   "videos": [
+    {
+     "id": "zcKozpQscKc",
+     "title": "【エプソムソルト】おすすめ入浴剤/シークリスタルス (Sea Crystals)国産",
+     "channel": "キョーココカラchannel",
+     "date": "2020-06-24",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/zcKozpQscKc/mqdefault.jpg",
+     "views": 9791
+    }
+   ]
+  },
+  "auc-epsomsalt:10000212": {
+   "date": "2026-11-22",
+   "q": [
+    "マグネシウム スプーン レビュー"
+   ],
+   "videos": []
+  },
+  "kiroran:10000196": {
+   "date": "2026-11-22",
+   "q": [
+    "セール レビュー"
+   ],
+   "videos": [
+    {
+     "id": "1Htr9ByMk-c",
+     "title": "【セール】ブラックフライデーセール開催！ニンテンドースイッチのオススメタイトル15選！【Black Friday / Switch / Switch2】",
+     "channel": "いちごうのゲームビート",
+     "date": "2026-11-20",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/1Htr9ByMk-c/mqdefault.jpg",
+     "views": 152002
+    },
+    {
+     "id": "gYT5FCDN9tU",
+     "title": "【大チャンス！】ミニPCがブラックフライデーセールで安い！ AliExpressのセールを見逃すな！",
+     "channel": "戸田覚ガジェット",
+     "date": "2026-11-18",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/gYT5FCDN9tU/mqdefault.jpg",
+     "views": 50844
+    },
+    {
+     "id": "Li4OnSxpZl8",
+     "title": "【最新版】Amazonタイムセールの“買い”工具ランキングTOP10！【おすすめ工具紹介】",
+     "channel": "【公式】ふじワークス",
+     "date": "2026-11-20",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/Li4OnSxpZl8/mqdefault.jpg",
+     "views": 22117
+    }
+   ]
+  },
+  "lekeke:10000143": {
+   "date": "2026-11-22",
+   "q": [
+    "ABS 心得",
+    "ABS オートディスペンサー レビュー"
+   ],
+   "videos": [
+    {
+     "id": "WaFPEJTKm5s",
+     "title": "[IN測試] 都會型ABS車款集評 - SYM 全新迪爵 x 活力 x Z1 attila x VEGA",
+     "channel": "Bike IN 機車資訊網",
+     "date": "2020-02-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/WaFPEJTKm5s/mqdefault.jpg",
+     "views": 365340
+    },
+    {
+     "id": "MQXFMDFzSkE",
+     "title": "購車金 11,000 元！光陽新 K1 150 ABS 特仕版上架",
+     "channel": "小老婆汽機車資訊網 Jorsindo Motor Club",
+     "date": "2026-02-21",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/MQXFMDFzSkE/mqdefault.jpg",
+     "views": 167517
+    },
+    {
+     "id": "4gFkArt3ykw",
+     "title": "你知道ABS一年能救10萬個台灣人嗎？我在日本滑到爆的瓷磚路上實測給你看💥#Bosch #博世 #ABS #TCS #內燃機暴徒 #ICEThug #暴徒小教室",
+     "channel": "ICE Thug內燃機暴徒",
+     "date": "2025-10-27",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/4gFkArt3ykw/mqdefault.jpg",
+     "views": 161451
+    }
+   ]
+  },
+  "libertylife:10000488": {
+   "date": "2026-11-22",
+   "q": [
+    "BASSPA 心得",
+    "BASSPA マグネシウム レビュー"
+   ],
+   "videos": []
+  },
+  "happymag:10000208": {
+   "date": "2026-11-22",
+   "q": [
+    "EPSOPIA 心得",
+    "EPSOPIA マグネシウム レビュー"
+   ],
+   "videos": []
+  },
+  "sleepdays:10000013": {
+   "date": "2026-11-22",
+   "q": [
+    "BARTH 心得",
+    "BARTH バース レビュー"
+   ],
+   "videos": [
+    {
+     "id": "AwaqQ87C5Yc",
+     "title": "Abarth 595，與Mini Cooper S的決擇題？沒技術別挑戰她，手排毒蠍｜ 圈外人二手車開箱Vol.30",
+     "channel": "圈外人車庫Foot Dance Motor By 明松汽車商行",
+     "date": "2023-07-26",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/AwaqQ87C5Yc/mqdefault.jpg",
+     "views": 13205
+    },
+    {
+     "id": "XFw4oN0ZNjA",
+     "title": "【睡眠投資】入浴剤のBARTH（バース）が控えめに言って最高。重炭酸に包まれる至福のバスタイム。 #shorts",
+     "channel": "お風呂大好きTommy〜バスグッズマニア〜",
+     "date": "2021-04-29",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/XFw4oN0ZNjA/mqdefault.jpg",
+     "views": 9761
+    },
+    {
+     "id": "ca_JJr3gJ6A",
+     "title": "BARTH バース 中性重炭酸入浴剤 90錠 (ギフト 発汗 バスソルト お風呂 美肌) 医薬部外品 無香料 に対するみんなの反応集　レビュー",
+     "channel": "みんなのコスメ反応集",
+     "date": "2024-03-17",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/ca_JJr3gJ6A/mqdefault.jpg",
+     "views": 3338
     }
    ]
   }
