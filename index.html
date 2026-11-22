@@ -12,24 +12,26 @@
 <meta property="og:description" content="每天自動更新的日韓美妝熱賣排行，彩妝、保養、髮品一次看，附中文商品名與網路評價重點。">
 <meta property="og:image" content="https://ruribeauty.tw/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
   /* 版面概念：美妝電商的「分類列＋左側篩選＋商品格」。手機版篩選收進底部面板 */
   :root {
-    --bg: #F6F4FF;
+    --bg: #FBF6F2;
     --surface: #FFFFFF;
-    --ink: #221E3A;
-    --muted: #6E6888;
-    --line: #E6E1F7;
-    --ruri: #3F5BD8;
-    --ruri-soft: #E8ECFF;
-    --pink: #FF5C93;
-    --pink-soft: #FFE6EF;
-    --gold: #F2A900; --silver: #9AA3B5; --bronze: #D98146;
-    --star: #F5A623;
-    --kr: #2BA98C; --kr-soft: #DDF5EE;
+    --ink: #3E3133;
+    --muted: #8A7472;
+    --line: #EFE2DA;
+    --ruri: #B05C6B;
+    --ruri-soft: #FBEAEA;
+    --pink: #C26A7A;
+    --pink-soft: #FBEAEA;
+    --gold: #B05C6B; --silver: #C98E92; --bronze: #D8AFA8;
+    --star: #D9A35B;
+    --kr: #8E6AA8; --kr-soft: #F1EBF8;
     --shopee: #EE4D2D;
-    --font-display: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
+    --tilebg: #F6EDE9;
+    --latin: "Lora", "Noto Serif TC", serif;
+    --font-display: "Noto Serif TC", "Lora", serif;
     --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
     color-scheme: light;
   }
@@ -394,20 +396,161 @@
     .dbody { padding: 18px; }
   }
   @media (prefers-reduced-motion: reduce) { .card, .side { transition: none; } .card:hover { transform: none; } }
+
+  /* ── D 版：奶茶粉質感風（2026-11-23） ── */
+  body { background: var(--bg); }
+  .annc { background: #EFE2DA; color: #7A5C5A; font-size: 13px; text-align: center; padding: 7px 12px; letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .annc b { color: var(--ruri); font-weight: 500; }
+  header { background: rgba(255,253,251,.96); }
+  .logo { color: var(--ink); gap: 10px; }
+  .logo img { width: 38px; height: 38px; }
+  .logo .lw { display: grid; line-height: 1; }
+  .logo b { font-family: var(--latin); font-weight: 500; font-size: 27px; letter-spacing: .14em; }
+  .logo small { font-family: var(--latin); font-weight: 400; font-size: 9px; letter-spacing: .26em; color: #9A7F7C; margin-top: 4px; }
+  .search input { background: #fff; border-color: #E5D3CB; }
+  .favbtn { border-color: #E5D3CB; font-weight: 500; }
+  .nav { font-weight: 500; }
+  .sechead { margin-bottom: 18px; }
+  .sechead h2 { font-weight: 500; font-size: 27px; letter-spacing: .05em; }
+  .sechead h2 small { font-family: var(--latin); font-weight: 400; font-size: 12px; letter-spacing: .24em; color: #B9817F; text-transform: uppercase; margin-bottom: 4px; }
+  .sechead a { font-weight: 500; }
+  .pagehead h1, .megain h3, .drawer-head { font-weight: 600; }
+  .segb, .stab, .chip { font-weight: 500; }
+  .segb[aria-pressed="true"], .stab[aria-selected="true"], .chip[aria-pressed="true"] { background: var(--ruri); border-color: var(--ruri); }
+  .card { border: 0; border-radius: 18px; box-shadow: 0 8px 22px rgba(150,100,90,.07); }
+  .card:hover { box-shadow: 0 14px 30px rgba(150,100,90,.13); }
+  .pic { margin: 10px 10px 0; border: 0; border-radius: 14px; overflow: hidden; background: var(--tilebg); }
+  .picbtn { background: var(--tilebg); }
+  .picbtn img { inset: 12px; width: calc(100% - 24px); height: calc(100% - 24px); padding: 0; background: transparent; border-radius: 10px; }
+  .brand { font-family: var(--latin); font-weight: 500; letter-spacing: .08em; color: #A68481; text-transform: uppercase; }
+  .nm { font-weight: 500; }
+  .price { font-family: var(--latin); font-weight: 500; }
+  .price small { font-family: var(--font-body); }
+  .buy { border-radius: 999px; font-weight: 500; }
+  .crown { clip-path: none; border-radius: 50%; width: 34px; height: 34px; padding: 0; font-family: var(--latin); font-style: italic; font-weight: 500; font-size: 17px; background: #fff; color: var(--ruri); box-shadow: 0 2px 8px rgba(150,100,90,.16); left: 10px; top: 10px; }
+  .crown.c1 { background: var(--ruri); color: #fff; } .crown.c2 { background: #C98E92; color: #fff; } .crown.c3 { background: #D8AFA8; color: #fff; }
+  .rank { font-family: var(--latin); font-style: italic; font-weight: 500; }
+  .tile { background: linear-gradient(150deg, #FBEAEA, #fff 70%); color: var(--ruri); }
+  .tile b { font-weight: 600; }
+  .tile.t-kr { background: linear-gradient(150deg, var(--kr-soft), #fff 70%); color: #7E5A96; } .tile.t-kr i { color: rgba(126,90,150,.45); }
+  .tile.t-jp { color: var(--ruri); } .tile.t-jp i, .tile i { color: rgba(176,92,107,.4); }
+  .aw.hot { background: var(--kr-soft); color: #6E4F8A; }
+  .aw { background: #F8EEE4; color: #8A5A3C; }
+  .morecard { border-color: #E5D3CB; color: var(--ruri); font-weight: 500; }
+  .circ .ring { border-color: #EFE2DA; background: var(--tilebg); }
+  .catcircles { border: 0; box-shadow: 0 8px 22px rgba(150,100,90,.06); }
+  .src { background: var(--ruri-soft); color: var(--ruri); font-weight: 500; }
+  .shade { background: rgba(62,49,51,.4); }
+
+  /* 首頁主視覺 */
+  .dhero { margin-top: 18px; border-radius: 26px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: 430px; background: linear-gradient(120deg, #F6E8E1 0%, #FBF3EE 55%, #F3E1DC 100%); }
+  .dtx { padding: 64px 0 48px 56px; align-self: center; }
+  .cap { font-family: var(--latin); letter-spacing: .24em; font-size: 12px; color: #B9817F; text-transform: uppercase; }
+  .dtx h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.45; margin: 14px 0 14px; letter-spacing: .04em; color: #3E3133; text-wrap: balance; }
+  .dtx p { margin: 0; color: #7A6463; font-size: 15px; line-height: 1.9; max-width: 28em; }
+  .dbtn { display: inline-flex; gap: 12px; margin-top: 26px; background: #C99A8E; color: #fff; padding: 12px 28px; border-radius: 30px; font-size: 15px; letter-spacing: .08em; text-decoration: none; }
+  .dbtn:hover { background: #B98577; }
+  .dstage { position: relative; min-height: 380px; }
+  .dstage .arch { position: absolute; right: 13%; top: 40px; width: 46%; height: 82%; border-radius: 999px 999px 0 0; background: linear-gradient(180deg, #fff, #F7ECE7); box-shadow: inset 0 0 0 10px #F1DDD6; }
+  .dstage .pod { position: absolute; right: 6%; bottom: 22px; width: 70%; height: 56px; border-radius: 50%; background: radial-gradient(ellipse at 50% 30%, #fff, #EAD8D1 70%); box-shadow: 0 18px 30px rgba(150,100,90,.15); }
+  .dph { position: absolute; border: 0; background: #fff; border-radius: 16px; padding: 10px; box-shadow: 0 14px 28px rgba(150,100,90,.18); cursor: pointer; display: grid; place-items: center; }
+  .dph img { width: 100%; height: 100%; object-fit: contain; border-radius: 8px; }
+  .dph i { position: absolute; left: 12px; top: 12px; background: var(--ruri); color: #fff; font-family: var(--latin); font-size: 13px; padding: 3px 10px; border-radius: 12px; }
+  .dph.p0 { right: 40%; top: 58px; width: 34%; height: 66%; }
+  .dph.p1 { right: 8%; top: 96px; width: 34%; height: 58%; }
+  .dnote { position: absolute; left: 0; bottom: 34px; width: min(290px, 62%); background: #FFFDFB; border: 1px solid #EAD8D1; border-radius: 14px; padding: 12px 16px 12px 66px; font-size: 13px; line-height: 1.7; color: #7A6463; box-shadow: 0 8px 18px rgba(150,100,90,.12); z-index: 2; }
+  .dnote img { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; }
+  .dnote b { display: block; font-family: var(--latin); font-style: italic; font-weight: 400; color: var(--ruri); font-size: 13px; }
+  /* 功能列 */
+  .dfeat { display: flex; align-items: flex-start; justify-content: center; gap: clamp(18px, 5vw, 64px); padding: 26px 0 8px; }
+  .dfeat a, .dfeat button { border: 0; background: none; cursor: pointer; text-decoration: none; color: #6A5554; text-align: center; font-size: 14px; display: grid; justify-items: center; gap: 2px; font: inherit; }
+  .dfeat > * { display: grid; align-content: start; justify-items: center; line-height: 1.5; padding: 0; }
+  .dfeat i { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid #E5D3CB; background: #FFFDFB; font-style: normal; font-size: 20px; color: #C08A86; margin-bottom: 6px; transition: background .15s; }
+  .dfeat a:hover i, .dfeat button:hover i { background: var(--ruri-soft); }
+  .dfeat small { color: #A69391; font-size: 12px; }
+  /* 排行列表 */
+  .drows { background: #fff; border-radius: 20px; padding: 6px 26px; box-shadow: 0 8px 22px rgba(150,100,90,.06); }
+  .drow { display: grid; grid-template-columns: 78px 150px minmax(0, 1fr) 190px 150px 44px; align-items: center; gap: 20px; padding: 16px 0; border-bottom: 1px solid #F3E8E3; position: relative; }
+  .drow:last-child { border-bottom: 0; }
+  .drow.first { background: linear-gradient(90deg, #FBEFEF, #fff 60%); margin: 0 -26px; padding-left: 26px; padding-right: 26px; border-radius: 16px; }
+  .dno { font-family: var(--latin); font-style: italic; font-size: 44px; color: #C98E92; line-height: 1; }
+  .dth { grid-area: auto; border: 0; padding: 8px; background: var(--tilebg); border-radius: 14px; width: 150px; height: 124px; cursor: pointer; display: grid; place-items: center; }
+  .dth { overflow: hidden; }
+  .dth img { width: 100%; height: 100%; object-fit: contain; border-radius: 8px; display: block; }
+  .dinfo { border: 0; background: none; padding: 0; text-align: left; cursor: pointer; display: grid; gap: 3px; font: inherit; color: inherit; min-width: 0; }
+  .dinfo .b { font-family: var(--latin); font-size: 12px; letter-spacing: .12em; color: #A68481; text-transform: uppercase; }
+  .dinfo .n { font-size: 17px; color: #3E3133; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .dinfo:hover .n { color: var(--ruri); }
+  .dinfo .m { font-size: 13px; color: #9A8583; }
+  .pill { display: inline-flex; gap: 6px; align-items: center; background: #FBEAEA; color: var(--ruri); font-size: 13px; padding: 6px 12px; border-radius: 16px; white-space: nowrap; }
+  .pill.g { background: #EEF2E8; color: #6F8556; } .pill.p { background: #F1EBF8; color: #7E66A8; }
+  .dpr { font-family: var(--latin); font-size: 20px; color: #3E3133; white-space: nowrap; }
+  .dpr small { font-family: var(--font-body); font-size: 12px; color: #9A8583; margin-left: 6px; }
+  .drow .heart { position: static; box-shadow: none; background: none; }
+  .dmore { display: block; text-align: center; margin-top: 16px; color: var(--ruri); text-decoration: none; font-size: 14px; }
+  /* 日本・韓國入口 */
+  .dduo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .dmood { position: relative; overflow: hidden; border-radius: 22px; min-height: 280px; padding: 38px 40px; text-decoration: none; color: #4A3B3C; display: block; }
+  .dmood h3 { font-family: var(--font-display); font-weight: 500; font-size: 30px; margin: 10px 0 8px; letter-spacing: .06em; position: relative; }
+  .dmood p { position: relative; margin: 0; font-size: 14px; line-height: 1.8; color: #6A5554; max-width: 15em; }
+  .dmood .go { position: relative; display: inline-block; margin-top: 16px; font-size: 14px; border-bottom: 1px solid; padding-bottom: 3px; }
+  .dmood .ph { position: absolute; right: 44px; bottom: 40px; width: 160px; height: 160px; background: #fff; border-radius: 14px; padding: 8px; box-shadow: 0 10px 22px rgba(0,0,0,.12); }
+  .dmood .ph img { width: 100%; height: 100%; object-fit: contain; }
+  .dmood.jp { background: #EBD7C2; }
+  .dmood.jp .go { color: #8A4E4E; }
+  .fan { position: absolute; width: 300px; height: 300px; border-radius: 50%; background-image: repeating-conic-gradient(from -90deg, transparent 0 6deg, rgba(255,255,255,.35) 6deg 7deg); }
+  .fan.f1 { right: -90px; top: -130px; background-color: #E9B9B9; clip-path: polygon(50% 50%, 0 100%, 0 0, 100% 0); }
+  .fan.f2 { right: 150px; bottom: -190px; background-color: #5F8F74; clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%); opacity: .9; }
+  .dmood.kr { background: linear-gradient(180deg, #BFD3EA 0%, #E9D9E6 60%, #F6D9DF 100%); }
+  .dmood.kr .go { color: #8E4E6A; }
+  .cloud { position: absolute; border-radius: 50%; background: #fff; filter: blur(18px); opacity: .75; }
+  .dcode { position: relative; display: inline-block; margin-top: 14px; background: rgba(255,255,255,.75); padding: 8px 16px; border-radius: 12px; font-family: var(--latin); letter-spacing: .12em; font-size: 18px; color: #8E4E6A; }
+  @media (max-width: 900px) {
+    .drow { grid-template-columns: 56px 120px minmax(0, 1fr) 44px; grid-template-areas: "no th info hr" "no th tr pr"; row-gap: 8px; }
+    .dno { grid-area: no; } .dth { grid-area: th; width: 120px; height: 104px; } .dinfo { grid-area: info; } .dtr { grid-area: tr; } .dpr { grid-area: pr; justify-self: end; } .drow .heart { grid-area: hr; }
+  }
+  @media (max-width: 640px) {
+    .annc { font-size: 11px; padding: 6px 10px; }
+    .logo b { font-size: 22px; }
+    .dhero { grid-template-columns: 1fr; min-height: 0; border-radius: 20px; margin-top: 12px; }
+    .dtx { padding: 28px 22px 4px; }
+    .dtx p { font-size: 14px; }
+    .dbtn { margin-top: 18px; padding: 10px 22px; font-size: 14px; }
+    .dstage { min-height: 250px; }
+    .dph.p0 { right: 48%; top: 20px; width: 40%; height: 72%; } .dph.p1 { right: 6%; top: 40px; width: 40%; height: 64%; }
+    .dnote { display: none; }
+    .dstage .arch { top: 10px; height: 88%; }
+    .dfeat { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; gap: 22px; padding: 20px 4px 4px; }
+    .dfeat::-webkit-scrollbar { display: none; }
+    .dfeat a, .dfeat button { flex: none; font-size: 13px; }
+    .dfeat i { width: 46px; height: 46px; font-size: 18px; }
+    .drows { padding: 4px 14px; border-radius: 16px; }
+    .drow { grid-template-columns: 30px 92px minmax(0, 1fr) 34px; column-gap: 10px; padding: 12px 0; }
+    .drow.first { margin: 0 -14px; padding-left: 14px; padding-right: 14px; }
+    .dno { font-size: 26px; }
+    .dth { width: 92px; height: 84px; padding: 6px; border-radius: 12px; }
+    .dinfo .n { font-size: 14px; } .dinfo .m { display: none; }
+    .pill { font-size: 11px; padding: 4px 8px; }
+    .dpr { font-size: 15px; } .dpr small { display: block; margin: 0; font-size: 11px; }
+    .dduo { grid-template-columns: 1fr; gap: 14px; }
+    .dmood { min-height: 200px; padding: 26px 24px; }
+    .dmood h3 { font-size: 24px; }
+    .dmood .ph { width: 110px; height: 110px; right: 20px; bottom: 24px; }
+  }
 </style>
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#D9CCF0">
+<meta name="theme-color" content="#F6E8E1">
 </head>
 <body>
-
+<div class="annc">日本樂天排行每天早上 6 點更新　｜　Olive Young 結帳輸入 <b>RURI112424</b> 享 95 折</div>
 <header>
   <div class="wrap">
     <div class="top">
       <button class="menubtn" type="button" id="menubtn" aria-label="打開分類選單"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
       <a class="logo" href="#home" aria-label="ruri 日韓熱賣情報站，回到首頁">
         <img src="logo-bird.png" alt="" width="40" height="40">
-        <b>ruri</b><small>日韓熱賣情報站</small>
+        <span class="lw"><b>RURI</b><small>JAPAN &amp; KOREA FINDS</small></span>
       </a>
       <label class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
@@ -832,6 +975,7 @@
     DKD = await get("data/dokodemo.json") || DKD;
     AWARDS = await get("data/awards.json") || AWARDS;
     const [types, awFound, shops, krItems, oyBrands] = await Promise.all([get("data/types.json"), get("data/awards_items.json"), get("data/shops.json"), get("data/kr_items.json"), get("data/oy_brands.json")]);
+    FEATURE = await get("data/feature.json");
     OYB = (oyBrands && oyBrands.brands) || [];
     const EXRAW = { experts, exFound };
     if (!latest) throw new Error("no data");
@@ -1319,6 +1463,30 @@
   function pagehead(page, badge, info) {
     return `<section class="pagehead"><div><h1>${page.title}</h1><p>${page.desc}</p></div><div class="info">${badge || ""}${info ? `<span>${info}</span>` : ""}</div></section>`;
   }
+  // 排行趨勢標籤：跟 7 天前比（data/history），再看商品資料庫的上榜天數
+  let FEATURE = null, WEEK = null, weekLoading = false;
+  function loadWeek() {
+    if (WEEK || weekLoading || !LATEST_DAY) return; weekLoading = true;
+    const d0 = new Date(LATEST_DAY + "T00:00:00Z");
+    const ds = [7, 6, 8].map(n => new Date(d0 - n * 864e5).toISOString().slice(0, 10));
+    (async () => {
+      for (const d of ds) {
+        const j = await fetch(`data/history/${d}.json`).then(r => r.ok ? r.json() : null).catch(() => null);
+        if (j && j.groups) { WEEK = {}; for (const [g, arr] of Object.entries(j.groups)) { WEEK[g] = {}; arr.forEach(r => WEEK[g][r.itemCode] = r.rank); } break; }
+      }
+      if (!WEEK) WEEK = {};
+      if (state.tab === "home" && !document.getElementById("detail").open) render();
+    })();
+  }
+  function trendPill(p, g) {
+    const a = ARCHIVE[p.id] && ARCHIVE[p.id].history, gd = a && a.groups && a.groups[g];
+    const days = gd ? gd.days : 0, wk = WEEK && WEEK[g] ? WEEK[g][p.id] : undefined;
+    if (wk && p.rank && wk > p.rank) return `<span class="pill">↗ 一週上升 ${wk - p.rank} 名</span>`;
+    if (a && a.firstSeen && (new Date(LATEST_DAY) - new Date(a.firstSeen)) / 864e5 <= 3) return `<span class="pill p">✦ 新上榜</span>`;
+    if (WEEK && WEEK[g] && Object.keys(WEEK[g]).length && wk === undefined) return `<span class="pill p">✦ 本週新上榜</span>`;
+    if (days >= 7) return `<span class="pill g">● 上榜 ${days} 天</span>`;
+    return "";
+  }
   const updatedText = () => LATEST_DAY ? `${+LATEST_DAY.slice(5, 7)} 月 ${+LATEST_DAY.slice(8, 10)} 日更新` : "";
 
   // 品項列：「全部・粉底・腮紅⋯」，每個品項後面是件數；點了會改網址（例如 #makeup/cheek），可以直接分享
@@ -1510,25 +1678,28 @@
       const collage = arr => `<div class="collage" aria-hidden="true">${pics(arr).map(p => `<span><img src="${esc(p.img)}" alt="" onerror="this.remove()"></span>`).join("")}</div>`;
       const shopAll = Object.values(SHOP_ITEMS).flat();
       const krTop = OY.items.map(oyItem).concat(Object.values(RANK).flat().filter(p => p.country === "韓國"));
-      // ① 主題輪播
-      const slides = [
-        ["s-aw", "#awards", "AWARDS", "日本美妝大賞<br>得獎商品", `@cosme、LIPS 大賞的 ${AW_ITEMS.length} 件得獎商品，一次看完`, AW_ITEMS],
-        ["s-mo", "#month", "MONTHLY", "這個月<br>日本人都在買", "過去 30 天一直待在樂天排行榜上的商品", (MONTH.groups.beauty || [])],
-        ["s-kr", "#oy", "KOREA", "韓國美妝", "Olive Young 暢銷，加上在日本也爆紅的韓系商品", krTop],
-        ...(shopAll.length ? [["s-sh", "#shops", "SELECT SHOP", "Hands・無印良品<br>人氣美妝", "日本選物店樂天官方店裡，評價最多的商品", shopAll]] : [])
-      ];
-      html += `<section class="hero" aria-label="主題精選">
-        <div class="slides" id="slides">${slides.map(([cls, href, k, h, d, arr]) => `<a class="slide ${cls}" href="${href}"><div><div class="kicker">${k}</div><h2>${h}</h2><p>${esc(d)}</p><span class="go">去看看 ›</span></div>${collage(arr)}</a>`).join("")}</div>
-        <button class="harrow prev" type="button" data-slide="-1" aria-label="上一個">‹</button><button class="harrow next" type="button" data-slide="1" aria-label="下一個">›</button>
-        <div class="dots">${slides.map((_, i) => `<button class="dot" type="button" data-dot="${i}" aria-label="第 ${i + 1} 個主題" aria-current="${i === 0}"></button>`).join("")}</div>
-      </section>`;
+      // ① 主視覺：data/feature.json（每週手寫）；過期或沒有時，自動顯示今天綜合排行前 2 名
+      const fNow = FEATURE && (!FEATURE.until || FEATURE.until >= LATEST_DAY) ? FEATURE : null;
+      const bTop = (RANK.beauty || []).filter(p => p.country !== "韓國" && p.img).sort((a, b) => (a.rank || 999) - (b.rank || 999));
+      const fItems = fNow ? (fNow.items || []).map(id => findItem(id)).filter(p => p && p.img) : [];
+      const hero = fNow && fItems.length ? { ...fNow, items: fItems } : bTop.length ? {
+        kicker: "Today ・ Japan ranking", title: "今天日本樂天\n賣最好的是這兩樣", link: "#all", linkText: "看今天的排行", items: bTop.slice(0, 2), tags: ["No.1", "No.2"],
+        text: `第 1 名 ${bTop[0].brand}，${bTop[1] ? `第 2 名 ${bTop[1].brand}。` : ""}排行每天早上 6 點更新。`
+      } : null;
+      if (hero) {
+        hero.items.slice(0, 2).forEach(withZh);
+        html += `<section class="dhero" aria-label="本週焦點"><div class="dtx"><div class="cap">${esc(hero.kicker || "This week")}</div><h1>${esc(hero.title).replace(/\n/g, "<br>")}</h1>${hero.text ? `<p>${esc(hero.text)}</p>` : ""}<a class="dbtn" href="${esc(hero.link || "#all")}">${esc(hero.linkText || "去看看")}　→</a></div>
+          <div class="dstage"><span class="arch"></span><span class="pod"></span>${hero.items.slice(0, 2).map((p, i) => `<button class="dph p${i}" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹">${(hero.tags || [])[i] ? `<i>${esc(hero.tags[i])}</i>` : ""}<img src="${esc(p.img)}" alt="" onerror="this.remove()"></button>`).join("")}
+          ${hero.note ? `<div class="dnote"><img src="logo-bird.png" alt="">${`<b>ruri's note</b>`}${esc(hero.note)}</div>` : ""}</div></section>`;
+      }
+      html += `<nav class="dfeat" aria-label="網站功能"><a href="#all"><i>♛</i>人氣排行<small>每天早上更新</small></a><button type="button" data-goq="1"><i>⌕</i>中文搜尋<small>打中文也找得到</small></button><button type="button" data-gofav="1"><i>♡</i>我的最愛<small>收藏想買的</small></button><a href="#creators"><i>✧</i>達人推薦<small>日本美妝達人選的</small></a><a href="#awards"><i>♕</i>年度熱門<small>美妝大賞得獎</small></a></nav>`;
 
       // ② 用品項找（圓形入口）
       const tcats = CATS.filter(c => uniq.some(p => p.cat === c));
       if (!tcats.includes(state.ht)) state.ht = tcats[0];
       const its = uniq.filter(p => p.cat === state.ht);
       const circ = ITYPES.filter(t => t.cat === state.ht).map(t => ({ t, ps: its.filter(p => p.itype === t.key).sort((a, b) => (a.typeRank || a.rank || 99) - (b.typeRank || b.rank || 99)) })).filter(o => o.ps.length);
-      html += `<section class="sec"><div class="sechead"><h2><small>FIND BY ITEM</small>用品項找排行</h2><a href="#${CAT_PAGE[state.ht]}">${esc(state.ht)}全部 ›</a></div>
+      html += `<section class="sec"><div class="sechead"><h2><small>Find by item</small>用品項找排行</h2><a href="#${CAT_PAGE[state.ht]}">${esc(state.ht)}全部 ›</a></div>
         <div class="seg">${tcats.map(c => `<button class="segb" type="button" data-ht="${c}" aria-pressed="${state.ht === c}">${c}</button>`).join("")}</div>
         <div class="circles">${circ.map(({ t, ps }) => { const im = ps.find(p => p.img); return `<a class="circ" href="#${CAT_PAGE[state.ht]}/${t.key}"><span class="ring">${im ? `<img src="${esc(im.img)}" alt="" loading="lazy" onerror="this.remove()">` : `<em>${esc(t.label.slice(0, 2))}</em>`}</span><b>${esc(t.label)}</b><small>${ps.length} 件</small></a>`; }).join("")}</div>
       </section>`;
@@ -1536,28 +1707,33 @@
       // ③ 今日排行 TOP 10（可切換分類）
       const hcs = [["all", "綜合", "beauty", "awards"], ["彩妝", "彩妝", "makeup", "makeup"], ["保養", "保養", "skincare", "skincare"], ["髮品", "髮品", "hair", "hair"], ["身體", "身體・沐浴", "bath", "bodycare"], ["日用品", "日用品", "laundry", "daily"], ["美容家電", "美容家電", "device", "device"]];
       const hc = hcs.find(x => x[0] === state.hc) || hcs[0];
-      const top = (RANK[hc[2]] || []).filter(p => p.country !== "韓國").slice(0, 10);
+      const top = (RANK[hc[2]] || []).filter(p => p.country !== "韓國").sort((a, b) => (a.rank || 999) - (b.rank || 999)).slice(0, 10);
       const rail = (arr, opts = {}) => `<div class="railwrap"><button class="rarrow prev" type="button" data-rail="-1" aria-label="往左看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="rarrow next" type="button" data-rail="1" aria-label="往右看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button><div class="rail">${arr.map((p, i) => card(p, { compact: true, crown: opts.rank ? i + 1 : null, eager: i < 4, meta: opts.meta ? opts.meta(p) : "" })).join("")}${opts.more ? `<a class="morecard" href="${opts.more[0]}"><span>›</span>${esc(opts.more[1])}</a>` : ""}</div></div>`;
-      html += `<section class="sec"><div class="sechead"><h2><small>DAILY RANKING</small>今日日本樂天排行</h2><span class="src">${esc(updatedText())}</span></div>
+      const top5 = top.slice(0, 5); top5.forEach(withZh);
+      html += `<section class="sec"><div class="sechead"><h2><small>Ranking</small>今日日本樂天排行</h2><span class="src">${esc(updatedText())}</span></div>
         <div class="seg">${hcs.map(([k, l]) => `<button class="segb" type="button" data-hc="${k}" aria-pressed="${hc[0] === k}">${l}</button>`).join("")}</div>
-        ${top.length ? rail(top, { rank: true, more: [`#${hc[0] === "all" ? "all" : hc[3]}`, `看${hc[1]}完整排行`] }) : `<div class="empty">這個分類今天沒有資料。</div>`}
+        ${top5.length ? `<div class="drows">${top5.map((p, i) => `<div class="drow${i ? "" : " first"}"><span class="dno">${String(i + 1).padStart(2, "0")}</span><button class="dth" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹">${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</button><button class="dinfo" type="button" data-detail="${esc(p.id)}"><span class="b">${esc(p.brand)}</span><span class="n">${esc(p.name)}</span><span class="m">${esc(p.itype && p.itype !== "other" ? typeLabel(p.itype) : (p.desc || p.cat || ""))}</span></button><span class="dtr">${trendPill(p, hc[2])}</span><span class="dpr">${p.price ? `${yen(p.price)}<small>${twd(p.price).replace("約台幣 ", "約 ")}</small>` : ""}</span><button class="heart" type="button" data-fav="${esc(p.id)}" aria-pressed="${!!FAVS[p.id]}" aria-label="${FAVS[p.id] ? "從我的最愛移除" : "加入我的最愛"}">${heartSvg}</button></div>`).join("")}</div><a class="dmore" href="#${hc[0] === "all" ? "all" : hc[3]}">看${esc(hc[1])}完整排行 →</a>` : `<div class="empty">這個分類今天沒有資料。</div>`}
       </section>`;
 
       // ④ 大賞得獎
       if (AW_ITEMS.length) {
         const aw = [...AW_ITEMS].sort((a, b) => (b.img ? 1 : 0) - (a.img ? 1 : 0) || Math.min(...a.award.awards.map(x => x.rank || 99)) - Math.min(...b.award.awards.map(x => x.rank || 99))).slice(0, 12);
-        html += `<section class="sec"><div class="sechead"><h2><small>BEST COSME</small>🏆 日本美妝大賞得獎</h2><a href="#awards">全部 ${AW_ITEMS.length} 件 ›</a></div>${rail(aw, { more: ["#awards", "看全部得獎商品"] })}</section>`;
+        html += `<section class="sec"><div class="sechead"><h2><small>Best cosme</small>日本美妝大賞得獎</h2><a href="#awards">全部 ${AW_ITEMS.length} 件 ›</a></div>${rail(aw, { more: ["#awards", "看全部得獎商品"] })}</section>`;
       }
       // ⑤ 本月一直在榜上
       const mo = (MONTH.groups.beauty || []).filter(p => p.country !== "韓國").slice(0, 12);
-      if (mo.length) html += `<section class="sec"><div class="sechead"><h2><small>MONTHLY</small>📅 這個月一直在榜上</h2><a href="#month">看本月熱門 ›</a></div>${rail(mo, { meta: p => `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天</div>`, more: ["#month", "看本月熱門"] })}</section>`;
+      if (mo.length) html += `<section class="sec"><div class="sechead"><h2><small>Monthly</small>這個月一直在榜上</h2><a href="#month">看本月熱門 ›</a></div>${rail(mo, { meta: p => `<div class="meta">上榜 ${p.daysOn} / ${MONTH.days} 天</div>`, more: ["#month", "看本月熱門"] })}</section>`;
       // ⑥ 達人推薦
       const ex = EXPERTS.filter(p => p.img).slice(0, 12);
-      if (ex.length) html += `<section class="sec"><div class="sechead"><h2><small>PRO'S PICK</small>👀 化妝師・美容家推薦</h2><a href="#creators">看全部推薦 ›</a></div>${rail(ex, { meta: p => `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)}</div>`, more: ["#creators", "看全部推薦"] })}</section>`;
+      if (ex.length) html += `<section class="sec"><div class="sechead"><h2><small>Pro's pick</small>化妝師・美容家推薦</h2><a href="#creators">看全部推薦 ›</a></div>${rail(ex, { meta: p => `<div class="meta">${esc(p.expert.role)} ${esc(p.expert.who)}</div>`, more: ["#creators", "看全部推薦"] })}</section>`;
       // ⑦ 日本選物店
-      if (shopAll.length) html += `<section class="sec"><div class="sechead"><h2><small>SELECT SHOP</small>🏬 Hands・無印良品人氣美妝</h2><a href="#shops">看全部 ›</a></div>${rail(Object.values(SHOP_ITEMS).flatMap(a => a.slice(0, 6)), { meta: p => `<div class="meta">${esc((SHOPS.shops[p.shopKey] || {}).name || "")} 樂天官方店</div>`, more: ["#shops", "看全部"] })}</section>`;
+      if (shopAll.length) html += `<section class="sec"><div class="sechead"><h2><small>Select shop</small>Hands・無印良品人氣美妝</h2><a href="#shops">看全部 ›</a></div>${rail(Object.values(SHOP_ITEMS).flatMap(a => a.slice(0, 6)), { meta: p => `<div class="meta">${esc((SHOPS.shops[p.shopKey] || {}).name || "")} 樂天官方店</div>`, more: ["#shops", "看全部"] })}</section>`;
+      // ⑦-2 日本・韓國入口
+      const krPic = (OY.items.find(x => x.hot && x.img) || OY.items.find(x => x.img) || {}).img;
+      html += `<section class="sec dduo"><a class="dmood jp" href="#all"><span class="fan f1"></span><span class="fan f2"></span><div class="cap" style="position:relative;color:#8A6248">Japan beauty</div><h3>日本美妝</h3><p>樂天排行、年度熱門、日本美妝達人推薦，一次看。</p><span class="go">逛日本美妝 →</span>${bTop[0] ? `<span class="ph"><img src="${esc(bTop[0].img)}" alt="" loading="lazy" onerror="this.remove()"></span>` : ""}</a>
+        <a class="dmood kr" href="#oy"><span class="cloud" style="width:240px;height:80px;left:-40px;top:30px"></span><span class="cloud" style="width:280px;height:100px;right:-60px;top:70px"></span><div class="cap" style="position:relative;color:#8E4E6A">Korea beauty</div><h3>韓國美妝</h3><p>Olive Young 現在韓國人在買的</p><span class="dcode">RURI112424 ・ 95 折</span><br><span class="go">逛韓國美妝 →</span>${krPic ? `<span class="ph"><img src="${esc(krPic)}" alt="" loading="lazy" onerror="this.remove()"></span>` : ""}</a></section>`;
       // ⑧ 韓國
-      if (krTop.length) html += `<section class="sec"><div class="sechead"><h2><small>KOREA</small><b class="ti kr" style="display:inline-grid;vertical-align:-3px">韓</b> 韓國美妝</h2><a href="#oy">看韓國全部 ›</a></div>${rail(krTop.slice(0, 12), { more: ["#oy", "看韓國全部"] })}</section>`;
+      if (krTop.length) html += `<section class="sec"><div class="sechead"><h2><small>Olive Young</small>韓國現在在買的</h2><a href="#oy">看韓國全部 ›</a></div>${rail(krTop.slice(0, 12), { more: ["#oy", "看韓國全部"] })}</section>`;
       html += `<p style="text-align:center;margin-top:28px"><a class="buy ghost" style="display:inline-block;padding:10px 22px" href="#all">直接看全部 ${uniq.length} 件日本商品 ›</a></p>`;
     }
 
@@ -1678,7 +1854,7 @@
     const keep = page.source === "home" ? heroIndex() : 0;
     document.getElementById("view").innerHTML = html;
     document.getElementById("shade").hidden = !state.sideOpen;
-    if (page.source === "home") { heroGo(keep, true); heroWatch(); railWatch(); }
+    if (page.source === "home") { heroGo(keep, true); heroWatch(); railWatch(); loadWeek(); }
   }
 
   // 橫向商品列：點箭頭移動一頁；每 5 秒自動往右一整排，到最後回到開頭；滑鼠移上去或手指碰到就暫停
@@ -1826,6 +2002,8 @@
     if (t.dataset.aw) { state.aw = t.dataset.aw; render(); return; }
     if (t.dataset.scat) { state.scat = t.dataset.scat; render(); return; }
     if (t.dataset.hc) { state.hc = t.dataset.hc; render(); return; }
+    if (t.dataset.goq) { const q = document.getElementById("q"); q.scrollIntoView({ block: "center" }); q.focus(); return; }
+    if (t.dataset.gofav) { document.getElementById("favjump").click(); return; }
     if (t.dataset.ht) { state.ht = t.dataset.ht; render(); return; }
     if (t.dataset.shop) { state.shop = t.dataset.shop; render(); return; }
     if (t.dataset.rail) { railStep(t.closest(".railwrap").querySelector(".rail"), +t.dataset.rail, true); return; }
