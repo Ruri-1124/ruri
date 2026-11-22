@@ -462,12 +462,12 @@
   .dnote img { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; }
   .dnote b { display: block; font-family: var(--latin); font-style: italic; font-weight: 400; color: var(--ruri); font-size: 13px; }
   /* 功能列 */
-  .dfeat { display: flex; align-items: flex-start; justify-content: center; gap: clamp(18px, 5vw, 64px); padding: 26px 0 8px; }
-  .dfeat a, .dfeat button { border: 0; background: none; cursor: pointer; text-decoration: none; color: #6A5554; text-align: center; font-size: 14px; display: grid; justify-items: center; gap: 2px; font: inherit; }
-  .dfeat > * { display: grid; align-content: start; justify-items: center; line-height: 1.5; padding: 0; }
-  .dfeat i { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid #E5D3CB; background: #FFFDFB; font-style: normal; font-size: 20px; color: #C08A86; margin-bottom: 6px; transition: background .15s; }
-  .dfeat a:hover i, .dfeat button:hover i { background: var(--ruri-soft); }
-  .dfeat small { color: #A69391; font-size: 12px; }
+  .dfeats { display: flex; align-items: flex-start; justify-content: center; gap: clamp(18px, 5vw, 64px); padding: 26px 0 8px; }
+  .dfeats a, .dfeats button { border: 0; background: none; cursor: pointer; text-decoration: none; color: #6A5554; text-align: center; font-size: 14px; display: grid; justify-items: center; gap: 2px; font: inherit; }
+  .dfeats > * { display: grid; align-content: start; justify-items: center; line-height: 1.5; padding: 0; }
+  .dfeats i { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid #E5D3CB; background: #FFFDFB; font-style: normal; font-size: 20px; color: #C08A86; margin-bottom: 6px; transition: background .15s; }
+  .dfeats a:hover i, .dfeats button:hover i { background: var(--ruri-soft); }
+  .dfeats small { color: #A69391; font-size: 12px; }
   /* 排行列表 */
   .drows { background: #fff; border-radius: 20px; padding: 6px 26px; box-shadow: 0 8px 22px rgba(150,100,90,.06); }
   .drow { display: grid; grid-template-columns: 78px 150px minmax(0, 1fr) 190px 150px 44px; align-items: center; gap: 20px; padding: 16px 0; border-bottom: 1px solid #F3E8E3; position: relative; }
@@ -520,10 +520,10 @@
     .dph.p0 { right: 48%; top: 20px; width: 40%; height: 72%; } .dph.p1 { right: 6%; top: 40px; width: 40%; height: 64%; }
     .dnote { display: none; }
     .dstage .arch { top: 10px; height: 88%; }
-    .dfeat { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; gap: 22px; padding: 20px 4px 4px; }
-    .dfeat::-webkit-scrollbar { display: none; }
-    .dfeat a, .dfeat button { flex: none; font-size: 13px; }
-    .dfeat i { width: 46px; height: 46px; font-size: 18px; }
+    .dfeats { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; gap: 22px; padding: 20px 4px 4px; }
+    .dfeats::-webkit-scrollbar { display: none; }
+    .dfeats a, .dfeats button { flex: none; font-size: 13px; }
+    .dfeats i { width: 46px; height: 46px; font-size: 18px; }
     .drows { padding: 4px 14px; border-radius: 16px; }
     .drow { grid-template-columns: 30px 92px minmax(0, 1fr) 34px; column-gap: 10px; padding: 12px 0; }
     .drow.first { margin: 0 -14px; padding-left: 14px; padding-right: 14px; }
@@ -1692,7 +1692,7 @@
           <div class="dstage"><span class="arch"></span><span class="pod"></span>${hero.items.slice(0, 2).map((p, i) => `<button class="dph p${i}" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹">${(hero.tags || [])[i] ? `<i>${esc(hero.tags[i])}</i>` : ""}<img src="${esc(p.img)}" alt="" onerror="this.remove()"></button>`).join("")}
           ${hero.note ? `<div class="dnote"><img src="logo-bird.png" alt="">${`<b>ruri's note</b>`}${esc(hero.note)}</div>` : ""}</div></section>`;
       }
-      html += `<nav class="dfeat" aria-label="網站功能"><a href="#all"><i>♛</i>人氣排行<small>每天早上更新</small></a><button type="button" data-goq="1"><i>⌕</i>中文搜尋<small>打中文也找得到</small></button><button type="button" data-gofav="1"><i>♡</i>我的最愛<small>收藏想買的</small></button><a href="#creators"><i>✧</i>達人推薦<small>日本美妝達人選的</small></a><a href="#awards"><i>♕</i>年度熱門<small>美妝大賞得獎</small></a></nav>`;
+      html += `<nav class="dfeats" aria-label="網站功能"><a href="#all"><i>♛</i>人氣排行<small>每天早上更新</small></a><button type="button" data-goq="1"><i>⌕</i>中文搜尋<small>打中文也找得到</small></button><button type="button" data-gofav="1"><i>♡</i>我的最愛<small>收藏想買的</small></button><a href="#creators"><i>✧</i>達人推薦<small>日本美妝達人選的</small></a><a href="#awards"><i>♕</i>年度熱門<small>美妝大賞得獎</small></a></nav>`;
 
       // ② 用品項找（圓形入口）
       const tcats = CATS.filter(c => uniq.some(p => p.cat === c));
