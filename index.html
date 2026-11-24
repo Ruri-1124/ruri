@@ -537,6 +537,10 @@
     .dmood h3 { font-size: 24px; }
     .dmood .ph { width: 110px; height: 110px; right: 20px; bottom: 24px; }
   }
+  /* 商品頁關閉鍵：捲動時固定在右上角，手機也看得到 */
+  .dclose { position: sticky; top: 10px; display: block; margin: 10px 10px -54px auto; width: 44px; height: 44px; background: rgba(255,255,255,.96); color: var(--ink); font-size: 24px; line-height: 1; box-shadow: 0 2px 12px rgba(62,49,51,.22); z-index: 5; }
+  .dclose:hover { background: var(--ruri-soft); }
+  @media (max-width: 760px) { .dpic { position: relative; top: auto; } }   /* 手機：商品圖跟著捲走，不要一直擋住一半畫面 */
 </style>
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1455,6 +1459,9 @@
     fillVideos(p);
     const dlg = document.getElementById("detail");
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    dlg.scrollTop = 0;
+    // 手機按「上一頁」時先關掉商品頁，不要離開網站
+    if (!(history.state && history.state.ruriDetail)) history.pushState({ ruriDetail: 1 }, "");
   }
 
   // =========================================================
@@ -2026,6 +2033,8 @@
     }
   });
   document.getElementById("detail").addEventListener("click", e => { if (e.target.id === "detail") e.target.close(); });
+  document.getElementById("detail").addEventListener("close", () => { if (history.state && history.state.ruriDetail) history.back(); });
+  window.addEventListener("popstate", () => { const dlg = document.getElementById("detail"); if (dlg.open && !(history.state && history.state.ruriDetail)) dlg.close(); });
   document.addEventListener("change", e => {
     if (e.target.id === "sort") { state.sort = e.target.value; render(); }
     if (e.target.id === "merge") { state.merge = e.target.checked; render(); }
