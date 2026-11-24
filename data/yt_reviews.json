@@ -1,6 +1,6 @@
 {
  "_說明": "排行前面商品的 YouTube 評測影片（每天最多更新 20 件、每件 14 天重查一次）。",
- "updated": "2026-11-22T06:59+08:00",
+ "updated": "2026-11-24T22:26+08:00",
  "items": {
   "rakuten24:11405676": {
    "date": "2026-11-19",
@@ -1305,6 +1305,183 @@
      "views": 3338
     }
    ]
+  },
+  "fatuite:10000022": {
+   "date": "2026-11-24",
+   "q": [
+    "FATUITE 心得",
+    "FATUITE ブースター レビュー"
+   ],
+   "videos": []
+  },
+  "esteelauder:10001265": {
+   "date": "2026-11-24",
+   "q": [
+    "ダブル ウェア レビュー"
+   ],
+   "videos": [
+    {
+     "id": "0FjJRh_zZLo",
+     "title": "【ベースメイク】エスティ ローダーの新作ダブル ウェア徹底解説！何が変わった？くずれは？カバー力は？✨",
+     "channel": "水越みさと",
+     "date": "2026-02-25",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/0FjJRh_zZLo/mqdefault.jpg",
+     "views": 79742
+    },
+    {
+     "id": "xn3gWtehU-k",
+     "title": "【エスティ―ローダーダブルウェア】色選び失敗したくない私たちのリアル作戦！",
+     "channel": "ヘアメイク職人_化け子",
+     "date": "2026-05-17",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/xn3gWtehU-k/mqdefault.jpg",
+     "views": 55816
+    },
+    {
+     "id": "b6QpZZNBhnw",
+     "title": "エスティローダーの新作ダブルウェアリキッドとクッションを比較してみた。あなたはどっちが好き？",
+     "channel": "デパコスマニアaicaちゃんねる",
+     "date": "2026-07-14",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/b6QpZZNBhnw/mqdefault.jpg",
+     "views": 10685
+    }
+   ]
+  },
+  "smart-cosme:10000000": {
+   "date": "2026-11-24",
+   "q": [
+    "CHPT.9 心得",
+    "CHPT.9 ポアクリアセラム レビュー"
+   ],
+   "videos": []
+  },
+  "velus:10000120": {
+   "date": "2026-11-24",
+   "q": [
+    "PILIEMO 心得",
+    "PILIEMO ブースター レビュー"
+   ],
+   "videos": []
+  },
+  "tsurunishi:10001332": {
+   "date": "2026-11-24",
+   "q": [
+    "オルナオーガニックトータルケア リペアトリートメント レビュー"
+   ],
+   "videos": []
+  },
+  "mtgec-beauty:10002009": {
+   "date": "2026-11-24",
+   "q": [
+    "リファハートブラシ コンパクト レビュー"
+   ],
+   "videos": [
+    {
+     "id": "-KoG1x1_WNY",
+     "title": "#ReFa #リファハートブラシ #美意識 #プレゼント #ヘアケア",
+     "channel": "eri_na",
+     "date": "2024-01-09",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/-KoG1x1_WNY/mqdefault.jpg",
+     "views": 208641
+    },
+    {
+     "id": "QAK8e0VnFtk",
+     "title": "リファハートブラシの使用感はどんな感じ？辛口採点❗️ #メンズ縮毛矯正 #メンズ美容室",
+     "channel": "JADE with AKROS Channel",
+     "date": "2025-07-06",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/QAK8e0VnFtk/mqdefault.jpg",
+     "views": 161151
+    }
+   ]
+  },
+  "angfa:10009301": {
+   "date": "2026-11-24",
+   "q": [
+    "スカルプ スカルプシャンプー レビュー"
+   ],
+   "videos": [
+    {
+     "id": "WwoMD1ofoOU",
+     "title": "【無印の隠れ名品】市販スカルプケア市場に一石を投じる『植物発酵液 薬用スカルプシャンプー＆コンディショナー』…これは普通じゃありません。",
+     "channel": "かずのすけ",
+     "date": "2025-06-20",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/WwoMD1ofoOU/mqdefault.jpg",
+     "views": 362440
+    },
+    {
+     "id": "PuxfNitTPRA",
+     "title": "【ドン・キホーテ】美容師がガチで選んだ、スカルプシャンプーランキング！ベスト５",
+     "channel": "あなたの髪を美しくするチャンネル",
+     "date": "2020-12-31",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/PuxfNitTPRA/mqdefault.jpg",
+     "views": 279578
+    },
+    {
+     "id": "WejxNiuhQxM",
+     "title": "【最強オールインワン】リンス不要で本当に大丈夫？haru スカルプシャンプーの研究開発が詰まった商品を紹介します",
+     "channel": "haru サブチャンネル",
+     "date": "2025-12-29",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/WejxNiuhQxM/mqdefault.jpg",
+     "views": 53639
+    }
+   ]
+  },
+  "mycosmeticbox:10000138": {
+   "date": "2026-11-24",
+   "q": [
+    "BLACKFRIDAY kinujo 心得",
+    "BLACKFRIDAY kinujo レビュー"
+   ],
+   "videos": []
+  },
+  "kobe-beauty-labo:10001795": {
+   "date": "2026-11-24",
+   "q": [
+    "slall 心得",
+    "サロニア slall レビュー"
+   ],
+   "videos": []
+  },
+  "ennshopstore:10000072": {
+   "date": "2026-11-24",
+   "q": [
+    "Rakuhome 心得",
+    "Rakuhome モード レビュー"
+   ],
+   "videos": []
+  },
+  "premmllc:10000017": {
+   "date": "2026-11-24",
+   "q": [
+    "PREMM 心得",
+    "PREMM フジテレビ レビュー"
+   ],
+   "videos": [
+    {
+     "id": "03Euet0HUN0",
+     "title": "ソープディスペンサーを買ったよ🫧 PREMM マグネット 壁掛け シャンプーディスペンサー #お風呂場 #お風呂収納 #購入品紹介 #ソープディスペンサー #premm",
+     "channel": "えも",
+     "date": "2025-08-16",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/03Euet0HUN0/mqdefault.jpg",
+     "views": 16354
+    }
+   ]
+  },
+  "sinkatec:10000425": {
+   "date": "2026-11-24",
+   "q": [
+    "SM64 makuake 心得",
+    "SM64 エントリー レビュー"
+   ],
+   "videos": []
   }
  }
 }
