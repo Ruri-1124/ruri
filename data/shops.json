@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T07:13+08:00",
+ "updated": "2026-11-26T07:11+08:00",
  "shops": {
   "hands": {
    "name": "Hands",
@@ -8,6 +8,18 @@
    "items": [
     {
      "rank": 1,
+     "itemCode": "hands-net:10940928",
+     "itemName": "PURE95（ピュア95）　シャンプー　詰替　700mL",
+     "price": 5310,
+     "rating": 4.82,
+     "reviews": 11,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/91/00/4529653000091-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4529653000091%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10940928%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 2,
      "itemCode": "hands-net:12123131",
      "itemName": "メディプラス（Mediplus）　メディプラスゲル　180g",
      "price": 4400,
@@ -19,7 +31,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4589645795978%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12123131%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 2,
+     "rank": 3,
      "itemCode": "hands-net:11117415",
      "itemName": "高田製油所　三原椿油　150mL",
      "price": 2750,
@@ -31,7 +43,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F2401027307505%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11117415%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 3,
+     "rank": 4,
      "itemCode": "hands-net:10940926",
      "itemName": "PURE95（ピュア95）　シャンプー　800mL",
      "price": 6770,
@@ -43,7 +55,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4529653000015%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10940926%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 4,
+     "rank": 5,
      "itemCode": "hands-net:11137122",
      "itemName": "カドゥー　ナチュラル　パウダー　ファンデーション　レフィル",
      "price": 8894,
@@ -55,7 +67,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F2410001992880%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11137122%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 5,
+     "rank": 6,
      "itemCode": "hands-net:10941979",
      "itemName": "泡工房　泡工房ラージ　500ml　透明",
      "price": 1067,
@@ -67,7 +79,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4547164001376%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10941979%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 6,
+     "rank": 7,
      "itemCode": "hands-net:10977892",
      "itemName": "花雪肌　角質クリアジェル　200ml",
      "price": 3500,
@@ -79,7 +91,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4920341396876%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10977892%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 7,
+     "rank": 8,
      "itemCode": "hands-net:12160182",
      "itemName": "メディプラス（Mediplus）　ゲルコンク　180g",
      "price": 6600,
@@ -91,7 +103,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4589645797453%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12160182%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 8,
+     "rank": 9,
      "itemCode": "hands-net:12156251",
      "itemName": "ハンズオリジナル　muqna（ムクナ）　化粧水　しっとり　400mL",
      "price": 1480,
@@ -103,7 +115,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4549917232129%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12156251%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 9,
+     "rank": 10,
      "itemCode": "hands-net:11120010",
      "itemName": "PSMシリーズ　CFBミニセット",
      "price": 6600,
@@ -115,7 +127,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F2400045007664%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11120010%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 10,
+     "rank": 11,
      "itemCode": "hands-net:11088124",
      "itemName": "泡工房　ハンディ50ml　半透明",
      "price": 540,
@@ -127,67 +139,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4547164000041%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11088124%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 11,
-     "itemCode": "hands-net:10980668",
-     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
-     "price": 352,
-     "rating": 5.0,
-     "reviews": 3,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
      "rank": 12,
-     "itemCode": "hands-net:11129563",
-     "itemName": "泡工房　泡工房レギュラー　350ml　透明",
-     "price": 935,
-     "rating": 4.67,
-     "reviews": 3,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/83/01/4547164001383-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4547164001383%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11129563%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 13,
-     "itemCode": "hands-net:11108317",
-     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　ゆずの香り",
-     "price": 1320,
-     "rating": 4.33,
-     "reviews": 3,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/09/00/4518753110809-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753110809%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11108317%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 14,
-     "itemCode": "hands-net:11138304",
-     "itemName": "石澤研究所　植物生まれのオレンジ　地肌クレンジングN",
-     "price": 1650,
-     "rating": 4.67,
-     "reviews": 3,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/08/01/4992440034508-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4992440034508%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11138304%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 15,
-     "itemCode": "hands-net:10980666",
-     "itemName": "松山油脂　Mマーク　ローズマリーせっけん　100g",
-     "price": 352,
-     "rating": 4.67,
-     "reviews": 3,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/00/02/4954540126200-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126200%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980666%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 16,
      "itemCode": "hands-net:10965651",
      "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
      "price": 1320,
@@ -199,7 +151,67 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
+     "rank": 13,
+     "itemCode": "hands-net:11129563",
+     "itemName": "泡工房　泡工房レギュラー　350ml　透明",
+     "price": 935,
+     "rating": 4.67,
+     "reviews": 3,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/83/01/4547164001383-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4547164001383%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11129563%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 14,
+     "itemCode": "hands-net:11108317",
+     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　ゆずの香り",
+     "price": 1320,
+     "rating": 4.33,
+     "reviews": 3,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/09/00/4518753110809-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753110809%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11108317%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 15,
+     "itemCode": "hands-net:11138304",
+     "itemName": "石澤研究所　植物生まれのオレンジ　地肌クレンジングN",
+     "price": 1650,
+     "rating": 4.67,
+     "reviews": 3,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/08/01/4992440034508-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4992440034508%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11138304%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 16,
+     "itemCode": "hands-net:10980666",
+     "itemName": "松山油脂　Mマーク　ローズマリーせっけん　100g",
+     "price": 352,
+     "rating": 4.67,
+     "reviews": 3,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/00/02/4954540126200-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126200%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980666%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
      "rank": 17,
+     "itemCode": "hands-net:10980668",
+     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
+     "price": 352,
+     "rating": 5.0,
+     "reviews": 3,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 18,
      "itemCode": "hands-net:12184411",
      "itemName": "バランローズ（VALANROSE）　KURO　クリームシャンプー　ナチュラルブラック　400g",
      "price": 5808,
@@ -211,7 +223,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4560253331994%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12184411%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 18,
+     "rank": 19,
      "itemCode": "hands-net:12112200",
      "itemName": "クオリティファースト（QUALITY　1ST）　ダーマレーザー　スーパーVC100　マスク　7枚入り",
      "price": 880,
@@ -223,7 +235,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4560401461436%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12112200%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 19,
+     "rank": 20,
      "itemCode": "hands-net:11666699",
      "itemName": "ひとすみ　馬油　無香料　80mL",
      "price": 2200,
@@ -235,7 +247,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4582538430017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11666699%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 20,
+     "rank": 21,
      "itemCode": "hands-net:11070669",
      "itemName": "石澤研究所　透明白肌　薬用ホワイトパックN",
      "price": 2200,
@@ -245,18 +257,6 @@
      "shopCode": "hands-net",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/23/00/4992440034423-1.jpg?_ex=300x300",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4992440034423%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11070669%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 21,
-     "itemCode": "hands-net:11042925",
-     "itemName": "CFB　新フェイスパウダー　PSM700　20g",
-     "price": 3960,
-     "rating": 4.0,
-     "reviews": 2,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/06/02/4571392197006-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4571392197006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11042925%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 22,
@@ -341,18 +341,6 @@
      "shopCode": "hands-net",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/29/03/2401007826729-1.jpg?_ex=300x300",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F2401007826729%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10937568%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 29,
-     "itemCode": "hands-net:11442216",
-     "itemName": "アルガンビューティー(AGB)　クレンジングオイル　150ml",
-     "price": 3630,
-     "rating": 5.0,
-     "reviews": 2,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/28/01/4975723028128-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4975723028128%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11442216%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     }
    ]
   },

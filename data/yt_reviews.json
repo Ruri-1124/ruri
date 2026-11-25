@@ -1,6 +1,6 @@
 {
  "_說明": "排行前面商品的 YouTube 評測影片（每天最多更新 20 件、每件 14 天重查一次）。",
- "updated": "2026-11-25T07:14+08:00",
+ "updated": "2026-11-26T07:12+08:00",
  "items": {
   "rakuten24:11405676": {
    "date": "2026-11-19",
@@ -1480,6 +1480,169 @@
    "q": [
     "SM64 makuake 心得",
     "SM64 エントリー レビュー"
+   ],
+   "videos": []
+  },
+  "anuajapan:10000000": {
+   "date": "2026-11-26",
+   "q": [
+    "Anua 心得",
+    "Anua レビュー"
+   ],
+   "videos": [
+    {
+     "id": "JTYcymDV5wk",
+     "title": "$250 以下韓國必買! 🇰🇷 實測 Anua 魚腥草 (舒敏退紅?) &amp; Medicube PDRN 面膜 | 黑咪",
+     "channel": "Hakme",
+     "date": "2025-05-24",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/JTYcymDV5wk/mqdefault.jpg",
+     "views": 13188
+    },
+    {
+     "id": "BWf09o-Zyec",
+     "title": "【本社突撃】Anuaに直接よく聞かれる質問を聞いてきました",
+     "channel": "なぎ | スキンケア研究室",
+     "date": "2025-11-23",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/BWf09o-Zyec/mqdefault.jpg",
+     "views": 4908
+    },
+    {
+     "id": "YC87tNgilJw",
+     "title": "韓國超火的噴霧好用嗎？ANUA PDRN mist review",
+     "channel": "YUNA LAND 유나랜드",
+     "date": "2025-12-29",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/YC87tNgilJw/mqdefault.jpg",
+     "views": 3218
+    }
+   ]
+  },
+  "cetaphil-official-gkk:10000127": {
+   "date": "2026-11-26",
+   "q": [
+    "セタフィル モイスチャライジングクリーム レビュー"
+   ],
+   "videos": [
+    {
+     "id": "pThzbzzVrnI",
+     "title": "セタフィル  モイスチャライジング クリーム 566g （ 保湿 クリーム ）  に対するみんなの反応集　レビュー",
+     "channel": "みんなのコスメ反応集",
+     "date": "2024-04-11",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/pThzbzzVrnI/mqdefault.jpg",
+     "views": 8660
+    },
+    {
+     "id": "tghLiL0onLI",
+     "title": "アトピー&amp;敏感肌のアラサーがセタフィルのローション&amp;クリームを比べてみた！",
+     "channel": "ゆらぎ肌ラボ ゆらぎちゃん",
+     "date": "2026-02-15",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/tghLiL0onLI/mqdefault.jpg",
+     "views": 7548
+    }
+   ]
+  },
+  "lancome:10000010": {
+   "date": "2026-11-26",
+   "q": [
+    "LANC 心得",
+    "LANC タンイドル レビュー"
+   ],
+   "videos": [
+    {
+     "id": "Us2Arob4rlo",
+     "title": "LANCÔMEの新作ファンデすごくいいわよ〜🤍 美容液ファンデならランコムがおすすめよ！",
+     "channel": "HIRO BEAUTY CHANNEL",
+     "date": "2023-11-03",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/Us2Arob4rlo/mqdefault.jpg",
+     "views": 206644
+    }
+   ]
+  },
+  "tvert:10000064": {
+   "date": "2026-11-26",
+   "q": [
+    "トゥベール トゥヴェール レビュー"
+   ],
+   "videos": []
+  },
+  "re-ine:10001467": {
+   "date": "2026-11-26",
+   "q": [
+    "DRH+ 心得",
+    "DRH+ エイジング レビュー"
+   ],
+   "videos": []
+  },
+  "vicrea-shop:10000096": {
+   "date": "2026-11-26",
+   "q": [
+    "THERATIS 心得",
+    "THERATIS セラティス レビュー"
+   ],
+   "videos": [
+    {
+     "id": "lzFZW9ihAnk",
+     "title": "セラティスナイトリペアシャンプーを採点してみた。THERATISセラティス ナイトリペア#シャンプー#THERATIS",
+     "channel": "labyness株式会社　西尾隆介と愉快な仲間達",
+     "date": "2023-10-12",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/lzFZW9ihAnk/mqdefault.jpg",
+     "views": 57851
+    }
+   ]
+  },
+  "loa-official:10000000": {
+   "date": "2026-11-26",
+   "q": [
+    "LOA OIL 心得",
+    "LOA OIL レビュー"
+   ],
+   "videos": [
+    {
+     "id": "qs59NGAqKt8",
+     "title": "東京購物開箱 | 質感香氛 LOA髮油、SHIRO護手霜必買/三萬以下精品包愛不釋手/超舒服On慢跑鞋🔥",
+     "channel": "蔚茵 WeiYin",
+     "date": "2026-02-22",
+     "where": "台灣",
+     "thumb": "https://i.ytimg.com/vi/qs59NGAqKt8/mqdefault.jpg",
+     "views": 17986
+    },
+    {
+     "id": "rj2izdB8UTQ",
+     "title": "【髪の香水】LOAがあれば香水いらない説｜香り×スタイリングが強すぎた。",
+     "channel": "SATOSHI ASAZUMA アラサー男子の色気計画 天パの日常",
+     "date": "2025-05-15",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/rj2izdB8UTQ/mqdefault.jpg",
+     "views": 60786
+    },
+    {
+     "id": "WBCO5Q4t-ZU",
+     "title": "【ロアザオイル】今流行りのヘアオイルを美容師が忖度なしで徹底解剖！【LOA THE OIL】",
+     "channel": "channel hangover@酒好きおっさん美容師",
+     "date": "2025-02-17",
+     "where": "日本",
+     "thumb": "https://i.ytimg.com/vi/WBCO5Q4t-ZU/mqdefault.jpg",
+     "views": 52060
+    }
+   ]
+  },
+  "suisosum-shop:10000062": {
+   "date": "2026-11-26",
+   "q": [
+    "アッシュアンド ナノバブル レビュー"
+   ],
+   "videos": []
+  },
+  "suisosum-shop:10000193": {
+   "date": "2026-11-26",
+   "q": [
+    "アッシュアンド ラベンダー レビュー"
    ],
    "videos": []
   }
