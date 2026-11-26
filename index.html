@@ -541,13 +541,25 @@
   .dclose { position: sticky; top: 10px; display: block; margin: 10px 10px -54px auto; width: 44px; height: 44px; background: rgba(255,255,255,.96); color: var(--ink); font-size: 24px; line-height: 1; box-shadow: 0 2px 12px rgba(62,49,51,.22); z-index: 5; }
   .dclose:hover { background: var(--ruri-soft); }
   @media (max-width: 760px) { .dpic { position: relative; top: auto; } }   /* 手機：商品圖跟著捲走，不要一直擋住一半畫面 */
+  /* 手機修正（2026-11-26） */
+  html.noscroll, html.noscroll body { overflow: hidden; }
+  .drawer { height: 100vh; height: 100dvh; overscroll-behavior: contain; touch-action: manipulation; }
+  .dgroup summary { min-height: 52px; align-items: center; -webkit-tap-highlight-color: rgba(176,92,107,.12); user-select: none; -webkit-user-select: none; }
+  .dgroup summary::after { font-size: 18px; width: 28px; text-align: center; }
+  @media (max-width: 640px) {
+    .annc-a { display: none; }
+    .annc { font-size: 12px; }
+    .dmood p { max-width: calc(100% - 118px); }
+    .dcode { font-size: 14px; letter-spacing: .06em; padding: 6px 12px; max-width: calc(100% - 118px); }
+    .dmood .ph { width: 96px; height: 96px; right: 16px; bottom: 20px; padding: 6px; }
+  }
 </style>
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#F6E8E1">
 </head>
 <body>
-<div class="annc">日本樂天排行每天早上 6 點更新　｜　Olive Young 結帳輸入 <b>RURI112424</b> 享 95 折</div>
+<div class="annc"><span class="annc-a">日本樂天排行每天早上 6 點更新　｜　</span>Olive Young 結帳輸入 <b>RURI112424</b> 享 95 折</div>
 <header>
   <div class="wrap">
     <div class="top">
@@ -1959,6 +1971,7 @@
   function openDrawer(open) {
     document.getElementById("drawer").hidden = !open;
     document.getElementById("dshade").hidden = !open;
+    document.documentElement.classList.toggle("noscroll", open);   // 選單打開時後面的頁面不能捲，避免 iPhone 網址列伸縮讓點的位置跑掉
   }
   document.getElementById("menubtn").addEventListener("click", () => openDrawer(true));
   document.getElementById("dshade").addEventListener("click", () => openDrawer(false));
