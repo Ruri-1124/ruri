@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T07:11+08:00",
+ "updated": "2026-11-27T01:01+08:00",
  "shops": {
   "hands": {
    "name": "Hands",
@@ -56,18 +56,6 @@
     },
     {
      "rank": 5,
-     "itemCode": "hands-net:11137122",
-     "itemName": "カドゥー　ナチュラル　パウダー　ファンデーション　レフィル",
-     "price": 8894,
-     "rating": 4.86,
-     "reviews": 7,
-     "shopName": "ハンズ(HANDS)楽天市場店",
-     "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/80/00/2410001992880-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F2410001992880%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11137122%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
-    },
-    {
-     "rank": 6,
      "itemCode": "hands-net:10941979",
      "itemName": "泡工房　泡工房ラージ　500ml　透明",
      "price": 1067,
@@ -79,7 +67,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4547164001376%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10941979%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 7,
+     "rank": 6,
      "itemCode": "hands-net:10977892",
      "itemName": "花雪肌　角質クリアジェル　200ml",
      "price": 3500,
@@ -91,7 +79,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4920341396876%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10977892%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 8,
+     "rank": 7,
      "itemCode": "hands-net:12160182",
      "itemName": "メディプラス（Mediplus）　ゲルコンク　180g",
      "price": 6600,
@@ -103,7 +91,7 @@
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4589645797453%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12160182%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
-     "rank": 9,
+     "rank": 8,
      "itemCode": "hands-net:12156251",
      "itemName": "ハンズオリジナル　muqna（ムクナ）　化粧水　しっとり　400mL",
      "price": 1480,
@@ -113,6 +101,18 @@
      "shopCode": "hands-net",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/29/01/4549917232129-1.jpg?_ex=300x300",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4549917232129%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F12156251%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+    },
+    {
+     "rank": 9,
+     "itemCode": "hands-net:11042921",
+     "itemName": "CFB　カームローション　300mL　PSM−201",
+     "price": 4290,
+     "rating": 4.4,
+     "reviews": 5,
+     "shopName": "ハンズ(HANDS)楽天市場店",
+     "shopCode": "hands-net",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/18/00/4571392192018-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4571392192018%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F11042921%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 10,
@@ -140,15 +140,15 @@
     },
     {
      "rank": 12,
-     "itemCode": "hands-net:10965651",
-     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
-     "price": 1320,
-     "rating": 4.0,
+     "itemCode": "hands-net:10980668",
+     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
+     "price": 352,
+     "rating": 5.0,
      "reviews": 3,
      "shopName": "ハンズ(HANDS)楽天市場店",
      "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/15/00/4518753050815-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 13,
@@ -200,15 +200,15 @@
     },
     {
      "rank": 17,
-     "itemCode": "hands-net:10980668",
-     "itemName": "松山油脂　Mマーク　ラベンダーせっけん　100g",
-     "price": 352,
-     "rating": 5.0,
+     "itemCode": "hands-net:10965651",
+     "itemName": "ヤーマン　プロ・業務用　ハンドクリーム　60g",
+     "price": 1320,
+     "rating": 4.0,
      "reviews": 3,
      "shopName": "ハンズ(HANDS)楽天市場店",
      "shopCode": "hands-net",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/24/02/4954540126224-1.jpg?_ex=300x300",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4954540126224%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10980668%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/hands-net/cabinet/15/00/4518753050815-1.jpg?_ex=300x300",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00r7cro.nrqgi7e5.g00r7cro.nrqgjbde/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhands-net%2F4518753050815%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fhands-net%2Fi%2F10965651%2F&rafcid=wsc_i_is_f22df348-caf1-434d-9f6b-56c437324d01"
     },
     {
      "rank": 18,
@@ -378,8 +378,8 @@
      "itemCode": "mujirushi-ryohin:10009292",
      "itemName": "植物発酵液　薬用エイジングケアエッセンス・150mL【無印良品 公式】",
      "price": 1590,
-     "rating": 4.26,
-     "reviews": 76,
+     "rating": 4.27,
+     "reviews": 77,
      "shopName": "無印良品",
      "shopCode": "mujirushi-ryohin",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/mujirushi-ryohin/cabinet/item48/4550584465840.jpg?_ex=300x300",
