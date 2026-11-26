@@ -553,6 +553,26 @@
     .dcode { font-size: 14px; letter-spacing: .06em; padding: 6px 12px; max-width: calc(100% - 118px); }
     .dmood .ph { width: 96px; height: 96px; right: 16px; bottom: 20px; padding: 6px; }
   }
+  /* 膚質小測驗 */
+  .quiz { max-width: 980px; margin: 22px auto 0; }
+  .qhead { display: flex; gap: 18px; align-items: center; background: linear-gradient(120deg, #F6E8E1, #FBF3EE 60%, #F3E1DC); border-radius: 24px; padding: 28px 32px; }
+  .qhead img { width: 84px; height: 84px; flex: none; }
+  .qhead h1 { font-family: var(--font-display); font-weight: 500; font-size: 32px; margin: 6px 0; letter-spacing: .05em; }
+  .qhead p { margin: 0; color: #7A6463; }
+  .qq { background: #fff; border-radius: 18px; padding: 18px 22px; margin-top: 14px; box-shadow: 0 6px 18px rgba(150,100,90,.06); }
+  .qq h3 { margin: 0 0 12px; font-size: 17px; font-weight: 500; display: flex; gap: 10px; align-items: baseline; }
+  .qq h3 b { font-family: var(--latin); font-style: italic; color: var(--ruri); font-weight: 500; }
+  .qq.ok h3 b::after { content: " ✓"; font-style: normal; }
+  .qnote { text-align: center; color: var(--muted); margin: 18px 0; }
+  .qres { margin-top: 22px; background: #FFF6DC; border-radius: 20px; padding: 24px 28px; }
+  .qres h2 { font-family: var(--font-display); font-weight: 500; font-size: 28px; margin: 6px 0 10px; }
+  .qres h2 em { font-style: normal; color: var(--ruri); }
+  .qres p { line-height: 1.8; margin: 0 0 8px; }
+  .qwarn { font-size: 13px; color: var(--muted); }
+  .qstep { margin-top: 28px; }
+  .qstep h3 { font-family: var(--font-display); font-weight: 500; font-size: 22px; margin: 0 0 12px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .qstep h3 small { font-family: var(--font-body); font-size: 13px; color: var(--muted); }
+  @media (max-width: 640px) { .qhead { padding: 20px; } .qhead img { width: 60px; height: 60px; } .qhead h1 { font-size: 24px; } .qq { padding: 16px; } .qres { padding: 20px; } .qres h2 { font-size: 23px; } }
 </style>
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -627,6 +647,7 @@
     { key: "kr-hair",     parent: "kr", label: "💇‍♀️ 髮品・身體", title: "韓國髮品・身體", desc: "洗髮、護髮、頭皮與身體保養", source: "kr", kcat: ["髮品", "身體"] },
     { key: "kr-injp",     parent: "kr", label: "🗾 日本也在紅", title: "在日本也爆紅的韓系商品", desc: "這些韓國品牌正在日本樂天排行榜上", source: "krjp" },
     { key: "creators", parent: "creators", label: "達人推薦", title: "達人都在推什麼", desc: "整理化妝師、YouTuber、IG 與小紅書創作者的推薦", source: "creators" },
+    { key: "quiz", parent: "quiz", label: "膚質小測驗", title: "膚質小測驗", desc: "回答 5 題，看看你的膚質適合怎麼挑保養品", source: "quiz" },
     { key: "search",   parent: "search", label: "搜尋", title: "搜尋結果", desc: "日本、韓國、達人推薦的商品一起找", source: "search" },
     { key: "fav",      parent: "fav", label: "我的最愛", title: "我的最愛", desc: "收藏的商品存在這台裝置的瀏覽器裡，商品下榜了也不會消失", source: "fav" }
   ];
@@ -643,6 +664,14 @@
   };
   // 各大分類自己的篩選條件：髮品看髮質、家電看功能、日用品看用途（不用彩妝保養的「膚質、毛孔」）
   const NEEDS_BY_CAT = {
+    // 彩妝：看妝感、持妝、適合的膚色（參考 @cosme、LIPS 的彩妝篩選），不用保養的「熟齡肌、油痘肌」
+    "彩妝": {
+      "持久不脫妝": ["崩れない", "崩れにくい", "落ちにくい", "化粧持ち", "ロングラスト", "皮脂崩れ", "よれない"], "防水・防汗": ["ウォータープルーフ", "耐水", "汗・水", "汗水"],
+      "霧面": ["マット"], "光澤・水光": ["ツヤ", "つや", "艶", "グロウ", "水光"], "遮瑕力高": ["カバー力", "高カバー", "コンシール"], "自然輕薄": ["素肌感", "薄づき", "軽い", "ナチュラル"],
+      "修飾毛孔": ["毛穴"], "校色・提亮": ["トーンアップ", "コントロールカラー", "くすみ"], "含防曬": ["SPF", "UVカット"], "不沾口罩": ["マスク"],
+      "溫水可卸": ["お湯で落ち", "お湯オフ", "お湯落ち"], "敏感肌可用": ["敏感肌", "石けんオフ", "石鹸オフ", "低刺激"], "顯色": ["高発色", "発色"], "滋潤不乾": ["保湿", "うるおい"],
+      "黃調肌": ["イエベ"], "冷調肌": ["ブルベ"], "捲翹": ["カール"], "纖長": ["ロング"], "濃密": ["ボリューム"], "限定色・聯名": ["限定色", "限定カラー", "コラボ"], "替換芯・補充包": ["レフィル", "詰め替え", "付け替え"]
+    },
     "髮品": {
       "受損修護": ["ダメージ", "補修", "ケラチン", "ブリーチ"], "毛躁・好整理": ["広がり", "うねり", "くせ毛", "まとまり", "パサつき"], "保濕滋潤": ["保湿", "しっとり", "モイスト"],
       "清爽蓬鬆": ["さらさら", "サラサラ", "ふんわり", "ボリューム"], "頭皮清潔": ["頭皮", "スカルプ", "フケ", "かゆみ"], "胺基酸・無矽靈": ["アミノ酸", "ノンシリコン", "シリコンフリー"],
@@ -663,7 +692,7 @@
       "晴雨兩用・抗UV": ["晴雨兼用", "UVカット", "遮光"], "輕量・折疊": ["軽量", "折りたたみ", "コンパクト"], "清新口氣": ["ミント", "ブレス"]
     }
   };
-  const NEED_TITLE = { "髮品": "髮質・需求", "美容家電": "功能特色", "日用品": "用途・特色", "身體": "需求・特色" };
+  const NEED_TITLE = { "彩妝": "妝感・特色", "髮品": "髮質・需求", "美容家電": "功能特色", "日用品": "用途・特色", "身體": "需求・特色" };
   // 日用品每個品項差很多（水壺跟洗衣精沒有共同的特色），所以日用品改成「每個品項各自的條件」
   const NEEDS_BY_TYPE = {
     detergent: { "抗菌・除臭": ["抗菌", "除菌", "消臭", "防臭"], "室內晾衣": ["部屋干し"], "香味持久": ["香り", "フレグランス"], "無香・低刺激": ["無香", "無添加", "低刺激"], "洗衣球": ["ジェルボール", "ボール"], "大容量・補充包": ["詰め替え", "つめかえ", "詰替", "大容量"] },
@@ -1182,7 +1211,7 @@
     const mixedTypes = new Set(list.map(p => p.itype).filter(t => NEEDS_BY_TYPE[t])).size > 1;
     const needOpts = mixedTypes ? [] : allNeeds.filter(t => needsHere.has(t) || state.needs.has(t)).map(t => [t, t]);
     const cats = [...new Set(list.map(p => p.cat))];
-    const needTitle = cats.length === 1 ? (NEED_TITLE[cats[0]] || "在意的問題") : cats.every(c => ["彩妝", "保養", "美容"].includes(c)) ? "在意的問題" : "需求・特色";
+    const needTitle = cats.length === 1 ? (NEED_TITLE[cats[0]] || "在意的問題") : cats.every(c => ["保養", "美容"].includes(c)) ? "在意的問題" : "需求・特色";
     return `
       <aside class="side ${state.sideOpen ? "open" : ""}" id="side" aria-label="篩選">
         <div class="side-head">篩選條件<button type="button" id="closeSide" aria-label="關閉">×</button></div>
@@ -1601,6 +1630,76 @@
       .filter(p => !seen.has(p.id) && seen.add(p.id));
   }
 
+
+  // ── 膚質小測驗（2026-11-27）：依回答算膚質，再用商品名稱標示的膚質、需求和排行挑保養品
+  const QZ = [
+    { k: "a", q: "洗完臉什麼都不擦，30 分鐘後臉摸起來？", o: [["dry", "緊緊的、有點乾"], ["combo", "額頭鼻子油油的，臉頰正常"], ["oily", "整臉都油油亮亮"], ["sens", "還好，但容易刺刺癢癢或泛紅"]] },
+    { k: "b", q: "到了下午，臉（或妝）通常？", o: [["dry", "臉頰乾、浮粉或脫皮"], ["combo", "T 字出油"], ["oily", "整臉出油、容易脫妝"], ["none", "沒什麼變化"]] },
+    { k: "c", q: "換新的保養品或換季時？", o: [["s3", "常常泛紅、刺痛或癢"], ["s1", "偶爾會"], ["s0", "幾乎不會"]] },
+    { k: "d", q: "現在最在意的是？", o: [["保濕", "保濕"], ["毛孔", "毛孔"], ["暗沉", "膚色不均、暗沉"], ["容易脫妝", "容易出油脫妝"], ["simple", "簡單就好"]] },
+    { k: "e", q: "每一樣的預算（日本價）？", o: [["2000", "¥2,000 以下（約 NT$420）"], ["4000", "¥4,000 以下（約 NT$840）"], ["all", "不限"]] }
+  ];
+  const QZ_TYPES = {
+    dry: { name: "乾肌", tip: "皮膚比較容易缺水。挑商品名稱有寫「保湿」「セラミド」「しっとり（滋潤型）」的，洗臉選溫和的，乳霜可以擦厚一點。", jp: ["乾燥肌", "しっとり", "セラミド", "高保湿", "保湿"], avoid: ["さっぱり", "オイリー"] },
+    combo: { name: "混合肌", tip: "T 字和臉頰的狀況不一樣。整體選清爽到普通的質地，乾的地方再局部加乳霜就好。", jp: ["混合肌", "バランス", "ジェル"], avoid: [] },
+    oily: { name: "油肌", tip: "皮膚出油比較多。可以挑寫「さっぱり（清爽型）」「ジェル」「皮脂」的，保濕還是要做，選清爽質地就好。", jp: ["脂性肌", "オイリー", "さっぱり", "皮脂", "テカリ", "ジェル"], avoid: ["しっとり", "リッチ"] },
+    sens: { name: "敏感肌", tip: "皮膚比較容易有反應。挑寫「敏感肌」「低刺激」「無添加」「無香料」的，新東西先在耳後或下巴試擦幾天。", jp: ["敏感肌", "低刺激", "無添加", "無香料", "アルコールフリー", "セラミド"], avoid: ["ピーリング", "スクラブ", "レチノール"], brands: ["キュレル", "ミノン", "dプログラム", "d program", "ラロッシュポゼ", "アベンヌ", "AESTURA", "イハダ", "ノブ", "NOV"] }
+  };
+  const QZ_STEPS = [["cleansing", "① 卸妝"], ["wash", "② 洗臉"], ["toner", "③ 化妝水"], ["serum", "④ 精華液"], ["emulsion", "⑤ 乳液・乳霜"], ["sunscreen", "⑥ 防曬（白天）"]];
+  function quizResult(ans) {
+    const sc = { dry: 0, combo: 0, oily: 0 };
+    ["a", "b"].forEach(k => { if (sc[ans[k]] !== undefined) sc[ans[k]] += k === "a" ? 2 : 1; });
+    const sens = (ans.a === "sens" ? 3 : 0) + ({ s3: 3, s1: 1 }[ans.c] || 0);
+    let base = Object.entries(sc).sort((x, y) => y[1] - x[1])[0];
+    base = base[1] ? base[0] : "combo";
+    return { type: sens >= 3 ? "sens" : base, base, sens };
+  }
+  function quizPicks(r, ans) {
+    const T = QZ_TYPES[r.type], B = QZ_TYPES[r.base];
+    const max = ans.e === "all" ? 1e9 : +ans.e;
+    const pool = [...new Map(jpPool().concat(krPool().pool).map(withZh).filter(p => p.cat === "保養" && !p.exclude && p.img && !isGone(p)).map(p => [p.id, p])).values()];
+    const skinName = T.name, baseName = B.name;
+    const score = p => {
+      const n = (p.name || "") + " " + (p.jp || "") + " " + (p.jpName || "") + " " + (p.desc || "") + " " + (p.brand || "");
+      let v = 0;
+      if ((p.skin || []).includes(skinName)) v += 6;
+      if (r.type === "sens" && (p.skin || []).includes(baseName)) v += 2;
+      if ((p.skin || []).includes("所有膚質")) v += 1;
+      T.jp.forEach(w => { if (n.includes(w)) v += 2; });
+      (T.brands || []).forEach(w => { if (n.includes(w)) v += 3; });
+      T.avoid.forEach(w => { if (n.includes(w)) v -= 4; });
+      if (r.type === "sens") B.jp.forEach(w => { if (n.includes(w)) v += 1; });
+      if (ans.d && ans.d !== "simple" && (p.tags || []).includes(ans.d)) v += 2;
+      v += Math.max(0, 30 - (p.typeRank || p.rank || 30)) / 15;
+      if (p.isOY && p.hot) v += 1;
+      if (!p.brand || /日本品牌|其他品牌/.test(p.brand)) v -= 3;   // 認不出品牌的先往後放
+      return v;
+    };
+    return QZ_STEPS.map(([t, label]) => {
+      const QZ_SKIP = /緊緻|美白|レチノ|視黃|ハイドロキノン|対苯|ホワイトニング|男性|メンズ/;   // 測驗推薦不放有療效訴求或男性專用的
+      const seenB = new Set();
+      const c = pool.filter(p => p.itype === t && (!p.price || p.price <= max || p.isOY) && !QZ_SKIP.test((p.name || "") + (p.jp || "") + (p.brand || ""))
+          && !(t === "sunscreen" && /BB|ファンデ|粉底/.test((p.name || "") + (p.jp || ""))))
+        .map(p => [score(p), p]).sort((x, y) => y[0] - x[0]).map(x => x[1])
+        .filter(p => { const b = (p.brand || "").toUpperCase(); if (seenB.has(b)) return false; seenB.add(b); return true; }).slice(0, 3);
+      return { t, label, items: c };
+    });
+  }
+  function quizHtml() {
+    const ans = state.quiz || (state.quiz = {});
+    const done = QZ.every(x => ans[x.k]);
+    let h = `<section class="quiz"><div class="qhead"><img src="logo-bird.png" alt=""><div><div class="cap">Skin type quiz</div><h1>膚質小測驗</h1><p>回答 5 題，ruri 幫你從日本、韓國熱賣排行裡挑一套適合的保養。</p></div></div>`;
+    h += QZ.map((x, i) => `<div class="qq${ans[x.k] ? " ok" : ""}"><h3><b>Q${i + 1}</b>${esc(x.q)}</h3><div class="opts">${x.o.map(([v, l]) => `<button class="chip" type="button" data-qz="${x.k}" data-v="${v}" aria-pressed="${ans[x.k] === v}">${esc(l)}</button>`).join("")}</div></div>`).join("");
+    if (!done) return h + `<p class="qnote">還有 ${QZ.filter(x => !ans[x.k]).length} 題沒選，選完就會出現結果。</p></section>`;
+    const r = quizResult(ans), T = QZ_TYPES[r.type];
+    const sub = r.type === "sens" ? `（偏${QZ_TYPES[r.base].name.replace("肌", "")}）` : "";
+    h += `<div class="qres" id="qres"><div class="cap">Your result</div><h2>你比較像 <em>${T.name}${sub}</em></h2><p>${esc(T.tip)}</p>${r.type === "sens" && r.base !== "combo" ? `<p>另外你也有${QZ_TYPES[r.base].name}的狀況，可以參考：${esc(QZ_TYPES[r.base].tip)}</p>` : ""}
+      <p class="qwarn">這是依回答和日本商品包裝上寫的膚質、特色來挑的，不是皮膚診斷；皮膚有長期不舒服的狀況，建議先看皮膚科。</p>
+      <button class="chip" type="button" data-qzreset="1">重新測一次</button></div>`;
+    h += quizPicks(r, ans).filter(g => g.items.length).map(g => `<div class="qstep"><h3>${g.label}<small>${esc(typeLabel(g.t))}・依排行和膚質標示挑選</small></h3><div class="grid">${g.items.map(p => card(p)).join("")}</div></div>`).join("");
+    return h + `</section>`;
+  }
+
   function render() {
     const page = PAGES.find(p => p.key === state.tab) || PAGES[0];
     document.querySelectorAll(".nav").forEach(a => { const n = NAV.find(x => x.key === a.dataset.nav); const on = n && (n.key === page.key || (n.also || []).includes(page.key)); if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
@@ -1711,7 +1810,7 @@
           <div class="dstage"><span class="arch"></span><span class="pod"></span>${hero.items.slice(0, 2).map((p, i) => `<button class="dph p${i}" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹">${(hero.tags || [])[i] ? `<i>${esc(hero.tags[i])}</i>` : ""}<img src="${esc(p.img)}" alt="" onerror="this.remove()"></button>`).join("")}
           ${hero.note ? `<div class="dnote"><img src="logo-bird.png" alt="">${`<b>ruri's note</b>`}${esc(hero.note)}</div>` : ""}</div></section>`;
       }
-      html += `<nav class="dfeats" aria-label="網站功能"><a href="#all"><i>♛</i>人氣排行<small>每天早上更新</small></a><button type="button" data-goq="1"><i>⌕</i>中文搜尋<small>打中文也找得到</small></button><button type="button" data-gofav="1"><i>♡</i>我的最愛<small>收藏想買的</small></button><a href="#creators"><i>✧</i>達人推薦<small>日本美妝達人選的</small></a><a href="#awards"><i>♕</i>年度熱門<small>美妝大賞得獎</small></a></nav>`;
+      html += `<nav class="dfeats" aria-label="網站功能"><a href="#quiz"><i>✎</i>膚質測驗<small>5 題找適合的保養</small></a><a href="#all"><i>♛</i>人氣排行<small>每天早上更新</small></a><button type="button" data-goq="1"><i>⌕</i>中文搜尋<small>打中文也找得到</small></button><button type="button" data-gofav="1"><i>♡</i>我的最愛<small>收藏想買的</small></button><a href="#creators"><i>✧</i>達人推薦<small>日本美妝達人選的</small></a><a href="#awards"><i>♕</i>年度熱門<small>美妝大賞得獎</small></a></nav>`;
 
       // ② 用品項找（圓形入口）
       const tcats = CATS.filter(c => uniq.some(p => p.cat === c));
@@ -1861,6 +1960,8 @@
       html += `<p style="color:var(--muted);font-size:12px;margin-top:16px">推薦內容整理自公開的雜誌、網站文章，用本站自己的話摘要，並附上原文連結；商品圖片與價格來自日本樂天，可能與推薦的色號不同。</p>`;
     }
 
+    if (page.source === "quiz") html += quizHtml();
+
     if (page.source === "fav") {
       const list = applyFilters(Object.values(FAVS), { noPrice: true });
       html += pagehead(page);
@@ -1950,7 +2051,7 @@
     document.getElementById("drawer").innerHTML = `<div class="drawer-head">商品分類<button type="button" id="drawerClose" aria-label="關閉">×</button></div>
       ${NAV.filter(n => n.cat).map(n => `<details class="dgroup"><summary>${esc(n.label)}</summary><div class="dlinks">
         <a class="allc" href="#${n.key}">看${esc(n.label)}全部排行 ›</a>${typeIndex(n.cat).map(({ t, ps }) => `<a href="#${n.key}/${t.key}">${esc(t.label)}</a>`).join("")}</div></details>`).join("")}
-      <div class="dfeat">${NAV.filter(n => n.key && !n.cat).map(n => `<a href="#${n.key}">${esc(n.label)}</a>`).join("")}<a href="#all">🛍️ 全部商品</a><a href="#fav">♥ 我的最愛</a></div>`;
+      <div class="dfeat">${NAV.filter(n => n.key && !n.cat).map(n => `<a href="#${n.key}">${esc(n.label)}</a>`).join("")}<a href="#quiz">✎ 膚質小測驗</a><a href="#all">🛍️ 全部商品</a><a href="#fav">♥ 我的最愛</a></div>`;
     window.megaHtml = cat => {
       const n = NAV.find(x => x.cat === cat);
       return `<div class="wrap megain"><div><h3>${esc(n.label)}</h3><p>${esc(CAT_DESC[cat] || "")}</p><a class="all" href="#${n.key}">看${esc(n.label)}全部排行 ›</a></div>
@@ -2006,6 +2107,13 @@
     if (!t) return;
     if (t.dataset.page) { location.hash = t.dataset.page; return; }
     if (t.dataset.ex) { state.ex[t.dataset.ex] = t.dataset.v; render(); return; }
+    if (t.dataset.qz) {
+      const wasDone = QZ.every(x => (state.quiz || {})[x.k]);
+      (state.quiz = state.quiz || {})[t.dataset.qz] = t.dataset.v; render();
+      if (!wasDone && QZ.every(x => state.quiz[x.k])) { const r = quizResult(state.quiz); track("quiz_done", { skin_type: QZ_TYPES[r.type].name, need: state.quiz.d }); const el = document.getElementById("qres"); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      return;
+    }
+    if (t.dataset.qzreset) { state.quiz = {}; render(); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
     if (t.dataset.detail) { openDetail(t.dataset.detail); return; }
     if (t.id === "detailClose") { document.getElementById("detail").close(); return; }
     if (t.dataset.fav) {
