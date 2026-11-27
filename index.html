@@ -453,9 +453,9 @@
   .dstage { position: relative; min-height: 380px; }
   .dstage .arch { position: absolute; right: 13%; top: 40px; width: 46%; height: 82%; border-radius: 999px 999px 0 0; background: linear-gradient(180deg, #fff, #F7ECE7); box-shadow: inset 0 0 0 10px #F1DDD6; }
   .dstage .pod { position: absolute; right: 6%; bottom: 22px; width: 70%; height: 56px; border-radius: 50%; background: radial-gradient(ellipse at 50% 30%, #fff, #EAD8D1 70%); box-shadow: 0 18px 30px rgba(150,100,90,.15); }
-  .dph { position: absolute; border: 0; background: #fff; border-radius: 16px; padding: 10px; box-shadow: 0 14px 28px rgba(150,100,90,.18); cursor: pointer; display: grid; place-items: center; }
+  .dph { position: absolute; border: 0; background: #fff; border-radius: 16px; padding: 40px 10px 10px; box-shadow: 0 14px 28px rgba(150,100,90,.18); cursor: pointer; display: grid; place-items: center; }
   .dph img { width: 100%; height: 100%; object-fit: contain; border-radius: 8px; }
-  .dph i { position: absolute; left: 12px; top: 12px; background: var(--ruri); color: #fff; font-family: var(--latin); font-size: 13px; padding: 3px 10px; border-radius: 12px; }
+  .dph i { position: absolute; left: 12px; top: 9px; font-style: normal; background: var(--ruri); color: #fff; font-family: var(--latin); font-size: 13px; padding: 3px 10px; border-radius: 12px; }
   .dph.p0 { right: 40%; top: 58px; width: 34%; height: 66%; }
   .dph.p1 { right: 8%; top: 96px; width: 34%; height: 58%; }
   .dnote { position: absolute; left: 0; bottom: 34px; width: min(290px, 62%); background: #FFFDFB; border: 1px solid #EAD8D1; border-radius: 14px; padding: 12px 16px 12px 66px; font-size: 13px; line-height: 1.7; color: #7A6463; box-shadow: 0 8px 18px rgba(150,100,90,.12); z-index: 2; }
@@ -552,6 +552,20 @@
     .dmood p { max-width: calc(100% - 118px); }
     .dcode { font-size: 14px; letter-spacing: .06em; padding: 6px 12px; max-width: calc(100% - 118px); }
     .dmood .ph { width: 96px; height: 96px; right: 16px; bottom: 20px; padding: 6px; }
+  }
+  /* 膚質測驗大橫幅 */
+  .qbanner { display: flex; align-items: center; gap: 18px; margin-top: 18px; padding: 18px 26px; border-radius: 22px; text-decoration: none; color: #4A3B3C; background: linear-gradient(110deg, #FFF1C9 0%, #FDE3EA 55%, #EADFF6 100%); box-shadow: 0 10px 24px rgba(176,92,107,.14); border: 2px solid #fff; transition: transform .15s; }
+  .qbanner:hover { transform: translateY(-2px); }
+  .qbanner img { width: 78px; height: 78px; flex: none; }
+  .qbt { display: grid; gap: 3px; flex: 1; min-width: 0; }
+  .qbt b { font-family: var(--font-display); font-weight: 600; font-size: 24px; letter-spacing: .03em; }
+  .qbt > span:last-child { font-size: 14px; color: #7A6463; }
+  .qgo { flex: none; background: var(--ruri); color: #fff; padding: 12px 24px; border-radius: 30px; font-size: 16px; font-weight: 500; letter-spacing: .05em; box-shadow: 0 6px 14px rgba(176,92,107,.3); }
+  @media (max-width: 640px) {
+    .qbanner { flex-wrap: wrap; padding: 16px 18px; gap: 12px; }
+    .qbanner img { width: 58px; height: 58px; }
+    .qbt b { font-size: 19px; }
+    .qgo { width: 100%; text-align: center; padding: 11px; }
   }
   /* 膚質小測驗 */
   .quiz { max-width: 980px; margin: 22px auto 0; }
@@ -1508,8 +1522,9 @@
   // =========================================================
   // ⑦ 畫面
   // =========================================================
+  const quizBanner = (sub) => `<a class="qbanner" href="#quiz"><img src="logo-bird.png" alt=""><span class="qbt"><span class="cap">Skin type quiz</span><b>不知道自己適合什麼保養？</b><span>${sub}</span></span><span class="qgo">開始測驗 →</span></a>`;
   function pagehead(page, badge, info) {
-    return `<section class="pagehead"><div><h1>${page.title}</h1><p>${page.desc}</p></div><div class="info">${badge || ""}${info ? `<span>${info}</span>` : ""}</div></section>`;
+    return `<section class="pagehead"><div><h1>${page.title}</h1><p>${page.desc}</p></div><div class="info">${badge || ""}${info ? `<span>${info}</span>` : ""}</div></section>` + (page.key === "skincare" ? quizBanner("5 題找出膚質，幫你從排行裡挑卸妝到防曬一整套") : "");
   }
   // 排行趨勢標籤：跟 7 天前比（data/history），再看商品資料庫的上榜天數
   let FEATURE = null, WEEK = null, weekLoading = false;
@@ -1810,6 +1825,7 @@
           <div class="dstage"><span class="arch"></span><span class="pod"></span>${hero.items.slice(0, 2).map((p, i) => `<button class="dph p${i}" type="button" data-detail="${esc(p.id)}" aria-label="看 ${esc(p.name)} 的詳細介紹">${(hero.tags || [])[i] ? `<i>${esc(hero.tags[i])}</i>` : ""}<img src="${esc(p.img)}" alt="" onerror="this.remove()"></button>`).join("")}
           ${hero.note ? `<div class="dnote"><img src="logo-bird.png" alt="">${`<b>ruri's note</b>`}${esc(hero.note)}</div>` : ""}</div></section>`;
       }
+      html += quizBanner("回答 5 題，看你是乾肌、油肌、混合肌還是敏感肌，直接推薦一整套保養");
       html += `<nav class="dfeats" aria-label="網站功能"><a href="#quiz"><i>✎</i>膚質測驗<small>5 題找適合的保養</small></a><a href="#all"><i>♛</i>人氣排行<small>每天早上更新</small></a><button type="button" data-goq="1"><i>⌕</i>中文搜尋<small>打中文也找得到</small></button><button type="button" data-gofav="1"><i>♡</i>我的最愛<small>收藏想買的</small></button><a href="#creators"><i>✧</i>達人推薦<small>日本美妝達人選的</small></a><a href="#awards"><i>♕</i>年度熱門<small>美妝大賞得獎</small></a></nav>`;
 
       // ② 用品項找（圓形入口）

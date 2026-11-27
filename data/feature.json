@@ -1,11 +1,11 @@
 {
- "until": "2026-11-30",
+ "until": "2026-12-07",
  "kicker": "This week ・ Japan ranking",
- "title": "日本這週，\n大家都在買卸妝油。",
- "text": "日本樂天保養排行前兩名都是卸妝油，植村秀和 Attenir 這一週都還在往上爬。",
- "link": "#skincare",
- "linkText": "看保養排行",
- "items": ["shuuemura:10000018", "attenir:10000252"],
- "tags": ["No.1", "No.2"],
- "note": "Attenir 是 350mL 大瓶裝，還有補充包可以買。"
+ "title": "換季了，\n日本人都在補底妝。",
+ "text": "日本樂天彩妝排行前 10 名，有 7 樣是粉底、氣墊和妝前乳。第 1 名 SPICARE 氣墊，資生堂 SKIN GLOW 也在榜上。",
+ "link": "#makeup",
+ "linkText": "看彩妝排行",
+ "items": ["supernice-store:10000012", "brandshiseido:10000016"],
+ "tags": ["No.1", "No.6"],
+ "note": "SPICARE 粉撲要用「拍」的；SKIN GLOW 用海綿輕拍比較均勻。"
 }
