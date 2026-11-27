@@ -833,7 +833,7 @@
     const c = t => (ITYPES.find(x => x.key === t) || {}).cat;
     return k !== "x-drop" && c(k) === c(key) ? k : key;
   }
-  const TYPE_FIX = [[/UVトーンアップスポッツ/, "sunscreen"], [/トーンアップUV|プロテクショントーンアップ|日焼け止め/, "sunscreen"], [/フェイシャル ?トリートメント ?エッセンス|ピテラ ?ベスト ?コレクション/, "toner"]];
+  const TYPE_FIX = [[/シャワーヘッド/, "shower"], [/UVトーンアップスポッツ/, "sunscreen"], [/トーンアップUV|プロテクショントーンアップ|日焼け止め/, "sunscreen"], [/フェイシャル ?トリートメント ?エッセンス|ピテラ ?ベスト ?コレクション/, "toner"]];
   const FRONT_RISK = ["アイラッシュサポート", "育毛", "発毛", "養毛", "薄毛", "白髪染め", "白髪ぼかし", "カラートリートメント", "ヘアカラー", "ラッシュアディクト", "Lashaddict", "まつ毛美容液", "まつげ美容液", "まつ育", "アイラッシュセラム", "ハイドロキノン", "医薬品", "ヒト幹細胞", "幹細胞培養液", "エクソソーム", "Whitening", "まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "デリケートゾーン", "フェムケア", "セルライト", "ボディライン", "鼻毛", "脱毛", "バストアップ", "バストケア", "育乳", "ヘアーカラー", "食用", "マグネシウム", "チョコ", "お菓子", "スイーツ", "クッキー"];   // 也寫在 config/genres.json 的 riskExclude
   const CAT_GROUP = { "彩妝": "makeup", "保養": "skincare", "髮品": "hair", "美容家電": "device", "日用品": "laundry", "身體": "bath" };
   function setType(p, key, name) {
@@ -1962,7 +1962,7 @@
                 <div class="rate">出處：${p.expert.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" style="color:var(--muted)">${esc(s.name)}</a>`).join("、")}</div>`
       })).join("")}</div>` : `<div class="empty" style="margin-top:12px">沒有符合條件的推薦，換個條件看看。</div>`;
       if (ex.role === "all" || ex.role === "YouTuber") {
-        const vids = YT.videos.filter(v => (ex.cat === "all" || v.cat === ex.cat) && (ex.country === "all" || (ex.country === "韓國" ? v.country === "韓國" : v.country !== "韓國")));
+        const vids = YT.videos.filter(v => !/シワ|シミ|美白|ニキビ|たるみ|ほうれい線|毛穴改善|医師|皮膚科/.test(v.title || "")).filter(v => (ex.cat === "all" || v.cat === ex.cat) && (ex.country === "all" || (ex.country === "韓國" ? v.country === "韓國" : v.country !== "韓國")));
         if (vids.length) {
           html += `<h2 class="sub">▶ YouTube 最近 30 天熱門美妝影片</h2><p style="color:var(--muted);margin:-4px 0 12px">每天自動整理，列出影片說明欄提到的商品</p>`;
           html += `<div class="grid">${vids.map(v => `<article class="card"><a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener" style="display:block;aspect-ratio:16/9;background:#000"><img src="${esc(v.thumb)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></a>
