@@ -603,6 +603,17 @@
   .qstep h3 small { font-family: var(--font-body); font-size: 13px; color: var(--muted); }
   @media (max-width: 640px) { .qhead { padding: 20px; } .qhead img { width: 60px; height: 60px; } .qhead h1 { font-size: 24px; } .qq { padding: 16px; } .qres { padding: 20px; } .qres h2 { font-size: 23px; } }
   @media (max-width: 430px) { .logo .lw { display: none !important; } }   /* 手機多了登入鈕，留小鳥圖就好，讓搜尋框夠寬 */
+  /* 2026-11-28：手機卡片文字超出框（品牌太長、分類太長） → 品牌列可換行、長字自動斷行 */
+  .card, .card .body, .mini, .mini .body { min-width: 0; }
+  .brand { flex-wrap: wrap; row-gap: 2px; }
+  .brand > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+  .flag { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card .nm, .card .desc, .card .why, .card .skin { overflow-wrap: anywhere; }
+  .card .tags, .card .awards { flex-wrap: wrap; min-width: 0; }
+  .card .tag, .card .aw { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tile b { overflow-wrap: anywhere; max-width: 100%; }
+  .nmbtn { -webkit-line-clamp: 4; }   /* 商品名稱最多 4 行，台灣名＋英文名比較長也看得完整 */
+  .mini .nm { -webkit-line-clamp: 3; }
 </style>
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1422,7 +1433,7 @@
         <div class="body">
           <div class="brand"><span>${esc(p.brand)}</span><span class="flag">${flag(p.country)}・${esc(p.itype && p.itype !== "other" ? typeLabel(p.itype) : (p.cat || ""))}</span></div>
           <h3 class="nm"><button class="nmbtn" type="button" data-detail="${esc(p.id)}" title="${esc(p.jp || p.name)}">${esc(p.name)}</button></h3>
-          ${p.zhSub || p.desc ? `<div class="desc">${esc(p.zhSub || p.desc)}</div>` : ""}
+          ${(() => { const sub = p.zhSub || p.desc; return sub && !String(p.name || "").includes(sub) ? `<div class="desc">${esc(sub)}</div>` : ""; })()}
           ${p.hot ? `<div class="awards"><span class="aw hot">🔥 Olive Young 暢銷</span></div>` : ""}
           ${p.isAw || AW_BY_CODE[p.id] ? `<div class="awards">${(p.isAw ? p.award.awards : AW_BY_CODE[p.id]).map(x => `<span class="aw">🏆 ${esc(awardShort(x))}</span>`).join("")}</div>` : ""}
           ${(p.skin || []).length ? `<div class="skin">適合：${p.skin.map(esc).join("、")}</div>` : ""}
