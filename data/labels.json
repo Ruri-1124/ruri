@@ -35,8 +35,9 @@
  "arianakosume:10000637": {
   "brand": "COSME DECORTE 黛珂",
   "country": "日本",
-  "desc": "蜜粉 20g",
-  "jpName": "コスメデコルテ フェイスパウダー（ルース パウダー）"
+  "desc": "Face Powder 蜜粉（20g）",
+  "jpName": "フェイスパウダー",
+  "type": "powder"
  },
  "gb:10005000": {
   "brand": "KOTONA",
@@ -59,20 +60,23 @@
  "brandshiseido:10000016": {
   "brand": "SHISEIDO 資生堂",
   "country": "日本",
-  "desc": "精華粉底液",
-  "jpName": "エッセンス スキングロウ ファンデーション"
+  "desc": "Essence Skin Glow Foundation 粉底液",
+  "jpName": "エッセンス スキングロウ ファンデーション",
+  "type": "foundation"
  },
  "maccosmetics:10001118": {
   "brand": "M·A·C",
   "country": "其他",
-  "desc": "水光唇膏",
-  "jpName": "ラスター ガラス シアーシャイン リップスティック"
+  "desc": "Lustreglass Sheer-Shine 唇膏",
+  "jpName": "ラスター ガラス シアーシャイン リップスティック",
+  "type": "lip"
  },
  "sk-ii:10003757": {
   "brand": "SK-II",
   "country": "日本",
-  "desc": "CC 妝前乳",
-  "jpName": "ジェノプティクス CC プライマー"
+  "desc": "GenOptics CC Primer 妝前乳（30g／50g）",
+  "jpName": "ジェノプティクス CC プライマー",
+  "type": "primer"
  },
  "beautyforest2018:10000703": {
   "brand": "EGUTAM",
@@ -121,8 +125,9 @@
   "brand": "Attenir 艾天然",
   "name": "淨化卸妝油 大容量 350mL",
   "country": "日本",
-  "jpName": "スキンクリア クレンズ オイル（大容量 350mL）",
-  "desc": "卸妝油"
+  "jpName": "スキンクリア クレンズ オイル 大容量",
+  "desc": "Skin Clear Cleanse Oil 卸妝油 大容量（350mL・補充包）",
+  "type": "cleansing"
  },
  "velus:10000120": {
   "brand": "PILIEMO",
@@ -134,15 +139,18 @@
   "brand": "shu uemura 植村秀",
   "name": "潔顏油 暢銷組",
   "country": "日本",
-  "jpName": "アルティム8∞ ベストセラーキット／ブライト クレンジング オイル キット",
-  "desc": "卸妝油組合"
+  "jpName": "アルティム8∞ ベストセラーキット",
+  "desc": "卸妝油組合",
+  "twName": "全能奇蹟金萃潔顏油 熱銷組",
+  "type": "cleansing"
  },
  "tvert:10000064": {
   "brand": "Tuvert",
   "name": "神經醯胺奈米乳液",
   "country": "日本",
   "jpName": "ナノエマルジョン",
-  "desc": "乳液"
+  "desc": "Nano Emulsion 乳液（60mL）",
+  "type": "emulsion"
  },
  "takami-labo:10000519": {
   "brand": "TAKAMI",
@@ -154,13 +162,16 @@
   "brand": "VT",
   "name": "舒緩面膜 2 入組",
   "country": "韓國",
-  "desc": "舒緩面膜 2 入組"
+  "desc": "大容量面膜 2 種任選組",
+  "jpName": "VT 大容量 パック 2種セット",
+  "type": "mask"
  },
  "rakuten24:11354091": {
   "brand": "ELIXIR 怡麗絲爾",
   "name": "A 醇眼霜 22g",
   "country": "日本",
-  "desc": "A 醇眼霜 22g"
+  "desc": "Retino Power 眼霜（22g）",
+  "jpName": "レチノパワー リンクルクリーム ba L"
  },
  "anuajapan:10000450": {
   "brand": "Anua",
@@ -309,10 +320,11 @@
   "jpName": "ユイル クロノロジスト"
  },
  "stylife:15348833": {
-  "brand": "track",
+  "brand": "track oil",
   "country": "日本",
-  "desc": "護髮・造型油",
-  "jpName": "track Oil No.3"
+  "desc": "伯爵茶香 護髮・造型油（90mL）",
+  "jpName": "trackオイル アールグレイ",
+  "type": "hairoil"
  },
  "mtgec-beauty:10002091": {
   "brand": "ReFa",
@@ -323,8 +335,9 @@
  "onemakem:10000306": {
   "brand": "MILBON",
   "country": "日本",
-  "desc": "免沖洗護髮（可選款式）",
-  "jpName": "エルジューダ（FO／MO／エマルジョン＋／サントリートセラム／グレイスオン ほか）"
+  "desc": "ELUJUDA 免沖洗護髮（FO／MO 等可選）",
+  "jpName": "エルジューダ",
+  "type": "hairoil"
  },
  "b-ris-shop:10000035": {
   "brand": "b.ris",
@@ -550,7 +563,8 @@
   "brand": "Ulike",
   "name": "光感脫毛儀",
   "country": "其他",
-  "desc": "光感脫毛儀"
+  "desc": "Air 10 除毛儀",
+  "jpName": "Ulike Air 10"
  },
  "leapgrow:10000648": {
   "brand": "MYTREX",
@@ -594,7 +608,8 @@
   "brand": "NIPLUX",
   "name": "足部按摩器",
   "country": "日本",
-  "desc": "足部按摩器"
+  "desc": "LEG FIT 腿部按摩器",
+  "jpName": "LEG FIT"
  },
  "tescom-japan:10000516": {
   "brand": "Nobby by TESCOM",
@@ -674,16 +689,18 @@
   "brand": "Attenir 艾天然",
   "name": "淨化卸妝油 175mL",
   "country": "日本",
-  "jpName": "スキンクリア クレンズ オイル（175mL）",
-  "desc": "卸妝油"
+  "jpName": "スキンクリア クレンズ オイル",
+  "desc": "Skin Clear Cleanse Oil 卸妝油（175mL）",
+  "type": "cleansing"
  },
  "brighte-onlineshop:10000000": {
   "brand": "Brighte",
   "name": "ELEKI LIFT EMS 美顏器",
   "country": "日本",
-  "jpName": "ELEKI LIFT（エレキリフト）",
-  "desc": "臉部美容儀",
-  "hide": true
+  "jpName": "エレキリフト",
+  "desc": "ELEKI LIFT 美顏器",
+  "hide": true,
+  "type": "facial"
  },
  "rakuten24:11421132": {
   "brand": "ELIXIR 怡麗絲爾",
@@ -870,14 +887,16 @@
  "angelique:10016960": {
   "brand": "CREATE ION",
   "country": "日本",
-  "jpName": "クレイツ イオンカールプロ SR",
-  "desc": "電捲棒（26／32／38／45mm）"
+  "jpName": "イオンカールプロ SR",
+  "desc": "Ion Curl Pro SR 電捲棒（26／32／38／45mm）",
+  "type": "iron"
  },
  "chouchou-store:10001143": {
   "brand": "CREATE ION",
   "country": "日本",
-  "jpName": "クレイツ イオンカールプロ SR",
-  "desc": "電捲棒（26／32／38／45mm）"
+  "jpName": "カールプロSR",
+  "desc": "Curl Pro SR 電捲棒（26／32／38／45mm）",
+  "type": "iron"
  },
  "panasonic-store:10000005": {
   "brand": "Panasonic 國際牌",
@@ -965,8 +984,9 @@
  "mtgec-beauty:10002313": {
   "brand": "ReFa",
   "country": "日本",
-  "jpName": "ReFa ION CARE BRUSH PREMIUM",
-  "desc": "洗頭用頭皮刷"
+  "jpName": "リファイオンケアブラシプレミアム",
+  "desc": "ION CARE BRUSH PREMIUM 洗頭刷",
+  "type": "scalp"
  },
  "mtgec-beauty:10001958": {
   "brand": "ReFa",
@@ -1053,8 +1073,9 @@
  "clinique:10001547": {
   "brand": "CLINIQUE 倩碧",
   "country": "其他",
-  "jpName": "ラッシュ パワー マスカラ セット 27",
-  "desc": "睫毛膏 聖誕限定組"
+  "jpName": "ラッシュ パワー マスカラ セット",
+  "desc": "Lash Power 睫毛膏 聖誕限定組",
+  "type": "mascara"
  },
  "clinique:10001529": {
   "brand": "CLINIQUE 倩碧",
@@ -1072,8 +1093,9 @@
  "onemakem:10001126": {
   "brand": "COSME DECORTE 黛珂",
   "country": "日本",
-  "jpName": "コスメデコルテ ルース パウダー",
-  "desc": "蜜粉"
+  "jpName": "ルース パウダー",
+  "desc": "Loose Powder 蜜粉",
+  "type": "powder"
  },
  "cosmecomonline:10183134": {
   "brand": "CANMAKE",
@@ -1134,7 +1156,8 @@
   "brand": "SHISEIDO 資生堂",
   "country": "日本",
   "jpName": "エッセンス スキンセッティング パウダー",
-  "desc": "定妝蜜粉"
+  "desc": "Essence Skin Setting Powder 蜜粉",
+  "type": "powder"
  },
  "masayosiryouhin:10004070": {
   "brand": "Kanebo 佳麗寶",
@@ -1305,9 +1328,10 @@
  "hugkumi:10000426": {
   "brand": "ESIENCE",
   "country": "日本",
-  "jpName": "C×AZ ダーマインショット",
-  "desc": "微針維生素 C 精華（單次包）",
-  "hide": true
+  "jpName": "エシエンス ダーマインショット",
+  "desc": "Derma In Shot 微針精華",
+  "hide": true,
+  "type": "serum"
  },
  "link5520889:10000001": {
   "hide": true
@@ -1364,5 +1388,210 @@
   "jpName": "キールズ DS RTN リニューイング セラム",
   "desc": "A 醇精華 DS RTN（10／30／50mL）",
   "type": "serum"
+ },
+ "clinique:10001397": {
+  "brand": "CLINIQUE 倩碧",
+  "country": "其他",
+  "jpName": "ふき取り化粧水",
+  "twName": "溫和潔膚水 組合",
+  "desc": "化妝水（組合）",
+  "type": "toner"
+ },
+ "rakuten24:11354093": {
+  "brand": "ELIXIR 怡麗絲爾",
+  "country": "日本",
+  "jpName": "レチノパワー リンクルクリーム ba L つけかえ用",
+  "desc": "Retino Power 眼霜 補充芯（22g）"
+ },
+ "cetaphil-official-gkk:10000124": {
+  "brand": "Cetaphil 舒特膚",
+  "country": "其他",
+  "jpName": "モイスチャライジングローション",
+  "twName": "長效潤膚乳（591mL 2 入）",
+  "desc": "身體・臉部乳液",
+  "type": "body"
+ },
+ "yunth:10000130": {
+  "brand": "Yunth",
+  "country": "日本",
+  "jpName": "美顔器 Deep Boost",
+  "desc": "Deep Boost 美顏器",
+  "type": "facial"
+ },
+ "veramoreofficial:10000154": {
+  "brand": "VERAMORE",
+  "country": "韓國",
+  "jpName": "コラーゲンSPTスリーピングパック＋ZPポテンシャルクリーム",
+  "desc": "Collagen SPT 晚安面膜＋ZP Potential 乳霜（2+2 組）",
+  "type": "mask"
+ },
+ "lancome:10000010": {
+  "brand": "Lancôme 蘭蔻",
+  "country": "其他",
+  "jpName": "タンイドル ウルトラ ウェア リキッド N",
+  "desc": "Teint Idole Ultra Wear 粉底液（BO-02 等）",
+  "type": "foundation"
+ },
+ "rakuten24:11310814": {
+  "brand": "KATE",
+  "country": "日本",
+  "jpName": "リップモンスター",
+  "twName": "怪獸級持色唇膏（3.0g）",
+  "desc": "唇膏",
+  "type": "lip"
+ },
+ "norganic:10000140": {
+  "brand": "N organic",
+  "country": "日本",
+  "jpName": "N organic Vie 福袋2027",
+  "desc": "Vie 保養福袋 2027（9 件組）",
+  "type": "toner"
+ },
+ "norganic:10000076": {
+  "brand": "N organic",
+  "country": "日本",
+  "jpName": "N organic Basic 福袋2027",
+  "desc": "Basic 保養福袋 2027（11 件組）",
+  "type": "toner"
+ },
+ "norganic:10000220": {
+  "brand": "N organic",
+  "country": "日本",
+  "jpName": "N organic Plenum 福袋2027",
+  "desc": "Plenum 保養福袋 2027（9 件組）",
+  "type": "toner"
+ },
+ "shuuemura:10000381": {
+  "brand": "shu uemura 植村秀",
+  "country": "日本",
+  "jpName": "アンリミテッド ブロック:ブースター アドバンスト",
+  "desc": "Unlimited Block:Booster 妝前乳",
+  "type": "primer"
+ },
+ "fancylifecosme:10001833": {
+  "brand": "COVERMARK",
+  "country": "日本",
+  "jpName": "フローレス フィット リフィル",
+  "desc": "Flawless Fit 粉底 補充芯（全 10 色）",
+  "type": "foundation"
+ },
+ "lunasol:10000795": {
+  "brand": "LUNASOL",
+  "country": "日本",
+  "jpName": "アイカラーレーションN",
+  "desc": "Eye Coloration N 眼影盤",
+  "type": "eye"
+ },
+ "clinique:10001475": {
+  "brand": "CLINIQUE 倩碧",
+  "country": "其他",
+  "jpName": "イーブン ベター ベースメイク セット",
+  "desc": "Even Better 底妝聖誕限定組",
+  "type": "foundation"
+ },
+ "maccosmetics:10000632": {
+  "brand": "M·A·C",
+  "country": "其他",
+  "jpName": "スタジオ クロマグラフィック ペンシル",
+  "desc": "Studio Chromagraphic Pencil 遮瑕筆",
+  "type": "concealer"
+ },
+ "rakuten24:11298085": {
+  "brand": "SOFINA",
+  "country": "日本",
+  "jpName": "ソフィーナ iP ゴールデンタイムリペア 深夜浸透クリーム",
+  "desc": "iP Golden Time Repair 晚霜（55g）",
+  "type": "emulsion"
+ },
+ "suntorywellness:10000653": {
+  "brand": "VARON",
+  "country": "日本",
+  "jpName": "マスターズブレンド オールインワンセラム",
+  "desc": "Master's Blend 男性多合一精華",
+  "type": "serum"
+ },
+ "rakuten24:11422091": {
+  "brand": "ELIXIR 怡麗絲爾",
+  "country": "日本",
+  "jpName": "トータルV ファーミングクリーム",
+  "desc": "Superieur Total V 乳霜組",
+  "type": "emulsion"
+ },
+ "clinique:10001367": {
+  "brand": "CLINIQUE 倩碧",
+  "country": "其他",
+  "jpName": "モイスチャー サージ セット",
+  "desc": "Moisture Surge 保濕聖誕限定組",
+  "type": "emulsion"
+ },
+ "sk-ii:10003858": {
+  "brand": "SK-II",
+  "country": "日本",
+  "jpName": "ピテラベストコレクション2026",
+  "desc": "Pitera Best Collection 2026 聖誕限定組",
+  "type": "toner"
+ },
+ "kobe-beauty-labo:10000676": {
+  "brand": "BOTANIST",
+  "country": "日本",
+  "jpName": "ボタニカル シャンプー トリートメント",
+  "desc": "Botanical 洗髮精・潤髮乳（櫻花＆白杏限定香）",
+  "type": "shampoo"
+ },
+ "kobe-beauty-labo:10002260": {
+  "brand": "BOTANIST",
+  "country": "日本",
+  "jpName": "ボタニカル シャンプー・トリートメント 詰め替え 大容量",
+  "desc": "Botanical 洗髮精・潤髮乳 大容量補充包",
+  "type": "shampoo"
+ },
+ "stylife:14991027": {
+  "brand": "track oil",
+  "country": "日本",
+  "jpName": "trackオイル",
+  "desc": "護髮・造型油（90mL）",
+  "type": "hairoil"
+ },
+ "s-heart-s:10000001": {
+  "brand": "S-HEART-S",
+  "country": "日本",
+  "jpName": "スカルプブラシ ワールドプレミアム",
+  "desc": "World Premium 頭皮按摩刷",
+  "type": "scalp"
+ },
+ "coloria-home:10000002": {
+  "brand": "Coloria",
+  "country": "日本",
+  "jpName": "フレグランスシャンプー・トリートメント",
+  "desc": "香氛洗髮精・潤髮乳",
+  "type": "shampoo"
+ },
+ "moroccanoil:10000064": {
+  "brand": "MOROCCANOIL",
+  "country": "其他",
+  "jpName": "モロッカンオイル トリートメント",
+  "twName": "摩洛哥優油 Treatment（100mL＋限定護髮噴霧 25mL）",
+  "desc": "護髮油",
+  "type": "hairoil"
+ },
+ "panasonic-store:10002131": {
+  "brand": "Panasonic 國際牌",
+  "country": "日本",
+  "jpName": "バイタリフト RF LUXE EH-SR90",
+  "desc": "Vitalift RF LUXE 美顏器 EH-SR90",
+  "type": "facial"
+ },
+ "leapgrow:10000530": {
+  "brand": "MYTREX",
+  "country": "日本",
+  "jpName": "マイトレックス relax",
+  "desc": "relax 按摩槍"
+ },
+ "mtgec-beauty:10002724": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "リファハートコームアイロン",
+  "desc": "HEART COMB IRON 無線梳子造型夾",
+  "type": "iron"
  }
 }

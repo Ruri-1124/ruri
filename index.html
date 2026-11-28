@@ -725,6 +725,7 @@
 
   // 蝦皮／台灣樂天搜尋：日文片假名品牌 → 台灣搜尋得到的名稱
   const BRAND_KANA = {
+    "ブリリアージュ": "BRILLIAGE", "ジョー マローン": "Jo Malone London", "ジョーマローン": "Jo Malone London", "23yearsold": "23years old", "23years old": "23years old", "23YEARSOLD": "23years old", "クレイツイオン": "CREATE ION", "クレイツ イオン": "CREATE ION", "アルソア": "ARSOA", "コタ アイ ケア": "COTA i CARE", "ロージーローザ": "Rosy Rosa",
     "ミラノコレクション": "Kanebo Milano Collection", "キールズ": "Kiehl's 契爾氏", "kiehl's": "Kiehl's 契爾氏", "エヌオーガニック": "N organic", "N organic": "N organic",
     "リファカラット": "ReFa", "プリマヴィスタ": "Primavista", "CLINIQUE": "倩碧", "オルナオーガニック": "ORNA ORGANIC", "エスハートエス": "S-HEART-S", "shearts": "S-HEART-S", "レコルト": "récolte",
     "ボビイ ブラウン": "Bobbi Brown", "ボビイブラウン": "Bobbi Brown", "マキアージュ": "心機 MAQuillAGE", "キャンメイク": "CANMAKE", "セザンヌ": "CEZANNE",
@@ -935,7 +936,7 @@
     else if (/セット/.test(t) && !cnt) out.push("組合");
     return out.slice(0, 3);
   }
-  const SERIES_SKIP = /^(MTG|KOSE|SK2|SK-2|KAO|P&G|LION|OFF|SPF\d*|PA|UV|ml|mL|ML|LOT|TV|NEW|SALE|SET|PRO|EX|LED|EMS|RF|WEB|BOX|LDK|QR|SNS|BB|CC|cm|mm|kg|g|L|P|No|NO|ver|Ver|VER|Japan|JAPAN|Korea|KOREA|Official|OFFICIAL|Beauty|BEAUTY|Cosme|COSME|Rakuten|RAKUTEN|Point|POINT|Ranking|SHOP|STORE|Shop|Store|Free|FREE|Gift|GIFT|Limited|LIMITED|Edition|NEWS|PREMIUM|Premium)$/i;
+  const SERIES_SKIP = /^(MTG|KOSE|SK2|SK-2|KAO|P&G|LION|OFF\+?|WEEK|FRIDAY|DAY|DEAL|SPF\d*|PA|UV|ml|mL|ML|LOT|TV|NEW|SALE|SET|PRO|EX|LED|EMS|RF|WEB|BOX|LDK|QR|SNS|BB|CC|cm|mm|kg|g|L|P|No|NO|ver|Ver|VER|Japan|JAPAN|Korea|KOREA|Official|OFFICIAL|Beauty|BEAUTY|Cosme|COSME|Rakuten|RAKUTEN|Point|POINT|Ranking|SHOP|STORE|Shop|Store|Free|FREE|Gift|GIFT|Limited|LIMITED|Edition|NEWS|PREMIUM|Premium)$/i;
   function seriesWords(jp, brand) {   // 商品名稱裡的英文系列名（例如 ReFa「BEAUTECH DRYER SMART」），幫忙分辨同品牌的不同商品
     const bl = String(brand || "").toLowerCase();
     const skel = x => x.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/[aeiou]/g, "");
@@ -971,6 +972,62 @@
       itype: L.type || sameCatType(itemType(CAT[group], L.desc || "", raw.itemName), raw.itemName)   // 品項（labels.json 可以用 type 手動指定）
     };
   }
+  // 系列名稱對照（2026-11-28）：日文商品名稱裡出現這些系列，就顯示台灣正式名稱，沒有的話用品牌官方英文名＋中文品項
+  // 只放查得到的正式名稱；同一系列在月排行、歷史資料裡的其他賣場也會一起套用，搜尋日文名也找得到
+  const SERIES_NAMES = [
+    [/リップモンスター/, "怪獸級持色唇膏"], [/アルティム ?(8|８)/, "全能奇蹟金萃潔顏油"], [/スキンクリア ?クレンズ ?オイル/, "Skin Clear Cleanse Oil 卸妝油"],
+    [/マイルドクレンジング ?オイル/, "MCO速淨卸粧油"], [/ユイル ?クロノロジスト/, "黑鑽極萃逆時玫瑰香氛露"],
+    [/タンイドル ?ウルトラ ?ウェア/, "Teint Idole Ultra Wear 粉底液"], [/ジェニフィック ?アルティメ/, "Génifique Ultime 精華"],
+    [/エッセンス ?スキングロウ ?ファンデ/, "Essence Skin Glow Foundation 粉底液"], [/エッセンス ?スキンセッティング ?パウダー/, "Essence Skin Setting Powder 蜜粉"],
+    [/ジェノプティクス ?CC/, "GenOptics CC Primer 妝前乳"], [/モイスチャー ?サージ/, "Moisture Surge"], [/ラッシュ ?パワー/, "Lash Power 睫毛膏"],
+    [/イーブン ?ベター/, "Even Better"], [/スタジオ ?クロマグラフィック/, "Studio Chromagraphic Pencil 遮瑕筆"], [/ラスター ?ガラス/, "Lustreglass 唇膏"],
+    [/アイカラーレーション/, "Eye Coloration 眼影盤"], [/フローレス ?フィット/, "Flawless Fit 粉底"], [/ゴールデンタイムリペア/, "iP Golden Time Repair 晚霜"],
+    [/レチノパワー/, "Retino Power"], [/ナノエマルジョン/, "Nano Emulsion 乳液"], [/アンリミテッド ?ブロック/, "Unlimited Block:Booster 妝前乳"],
+    [/エルジューダ/, "ELUJUDA 免沖洗護髮"], [/モロッカンオイル ?トリートメント/, "摩洛哥優油 Treatment"], [/セタフィル.*モイスチャライジング ?ローション|モイスチャライジング ?ローション.*セタフィル/, "長效潤膚乳"],
+    [/クリニーク.*(ふき取り|拭き取り|クラリファイング)|(ふき取り|クラリファイング).*CLINIQUE/, "溫和潔膚水"], [/カールプロ ?SR/, "Curl Pro SR 電捲棒"],
+    [/フェイシャル ?トリートメント ?エッセンス/, "青春露"], [/フェイシャル ?トリートメント ?クレンジング ?オイル/, "Facial Treatment Cleansing Oil 卸妝油"], [/スキンパワー/, "Skinpower"],
+    [/ジェノプティクス ?インフィニット ?オーラ/, "GenOptics Infinite Aura Essence 精華"], [/ザ・?タイム ?R ?アクア/, "流金水"],
+    [/クリーミータッチライナー/, "Creamy Touch Liner"], [/プティパレットアイズ/, "Petit Palette Eyes"], [/マシュマロフィニッシュパウダー/, "Marshmallow Finish Powder"], [/キャンメイク.*クリームチーク|クリームチーク.*キャンメイク/, "Cream Cheek"],
+    [/スペシャルジェルクリーム/, "Special Gel Cream"], [/アクアレーベル.*トリートメントミルク/, "Treatment Milk"],
+    [/ボビイ ?ブラウン.*ロングウェア/, "Long-Wear"], [/ボビイ ?ブラウン.*リュクス/, "Luxe"],
+    [/トーンフィルターハイライト/, "Tone Filter Highlight"], [/セザンヌ.*チークブラッシュ|チークブラッシュ.*セザンヌ/, "Cheek Blush"], [/セザンヌ.*ジェルアイライナー|ジェルアイライナー.*CEZANNE/, "Gel Eyeliner"],
+    [/リケラ ?エマルジョン/, "ReKERA Emulsion 免沖洗護髮"],
+    [/エッセンスリキッド/, "Essence Liquid"], [/ドラマティック ?パウダリー/, "Dramatic Powdery"], [/マキアージュ.*エッセンスベース|エッセンスベース.*マキアージュ/, "Essence Base"], [/カスタマイズアイカラー/, "Customize Eye Color"],
+    [/ドラマティック ?カバージェリー/, "Dramatic Cover Jelly"], [/マキアージュ.*エッセンスクッション|エッセンスクッション.*マキアージュ/, "Essence Cushion"], [/ダブルブロークリエーター/, "Double Brow Creator"],
+    [/ドラマティック ?チークカラー/, "Dramatic Cheek Color"], [/ドラマティック ?アイカラー/, "Dramatic Eye Color"], [/ドラマティック ?スキンセンサーベース/, "Dramatic Skin Sensor Base"],
+    [/フェースアップパウダー/, "Face Up Powder"], [/トーン ?(&|＆)? ?フラット ?パーフェクティング|トーン ?パーフェクティング ?パレット/, "Tone Perfecting Palette"],
+    [/コスメデコルテ.*ルース ?パウダー|ルース ?パウダー.*コスメデコルテ/, "Loose Powder"], [/コスメデコルテ.*フェイスパウダー/, "Face Powder"], [/アイグロウ ?ジェム/, "Eye Glow Gem"],
+    [/リポソーム ?アドバンスト ?リペア ?セラム/, "Liposome Advanced Repair Serum 精華"], [/リポソーム ?アドバンスト ?リペア ?アイ ?セラム/, "Liposome Advanced Repair Eye Serum 眼部精華"],
+    [/リポソーム ?アドバンスト ?リペア ?クリーム/, "Liposome Advanced Repair Cream 乳霜"], [/コンフォート ?トーンアップ ?CC/, "UV Comfort Tone Up CC"],
+    [/カモフラージュ/, "Camouflage"], [/ステイブロウ/, "Stay Brow"],
+    [/ディープモイスチャースプレー/, "Deep Moisture Spray"], [/キュレル.*泡洗顔料|キュレル.*潤浸保湿.*泡/, "潤浸保濕洗顏慕斯"], [/キュレル.*潤浸保湿 ?フェイスクリーム/, "潤浸保濕深層乳霜"],
+    [/ポリッシュオイル/, "N. Polish Oil 護髮油"], [/エヌドット.*ナチュラルバーム|N\. ?ナチュラルバーム/, "N. Natural Balm"], [/エヌドット.*スタイリングセラム|N\. ?スタイリングセラム/, "N. Styling Serum"],
+    [/スキンブライト/, "Skin Bright"], [/ラスティンファイン/, "Lasting-fine 眼線"], [/ファイバーウィッグ/, "Fiberwig"], [/ラッシュノックアウト/, "Lash Knockout"],
+    [/リフトモイスト/, "Lift Moist"], [/シュペリエル/, "Superieur"], [/デーケアレボリューション/, "Day Care Revolution"],
+    [/ソフィーナ ?iP ?ベースケア/, "iP Base Care"], [/ソフィーナ ?iP ?マイクロ泡/, "iP Micro Foam"],
+    [/オレオ ?リラックス/, "Discipline Oléo-Relax"], [/プリオール.*BBジェルクリーム/, "BB Gel Cream"],
+    [/ダブル ?ウェア/, "Double Wear"], [/スタジオ ?フィックス/, "Studio Fix"], [/スタジオ ?ラディアンス/, "Studio Radiance"], [/マック.*スモール ?アイシャドウ/, "Small Eye Shadow"],
+    [/ミネラライズ ?スキンフィニッシュ/, "Mineralize Skinfinish"], [/エクストラ ?ディメンション/, "Extra Dimension"], [/コネクト ?イン ?カラー/, "Connect In Colour"], [/クリーム ?カラー ?ベース/, "Cream Colour Base"],
+    [/フェイスプロテクトパウダー/, "Face Protect Powder"], [/チャコット.*フィニッシングパウダー|Chacott.*フィニッシングパウダー/, "Finishing Powder"], [/スティロ ?ユー/, "Stylo Yeux Waterproof"],
+    [/ハイパーシャープ ?ライナー/, "Hyper Sharp Liner"], [/スカイハイ/, "Sky High 飛天翹睫毛膏"], [/ファッションブロウ/, "Fashion Brow"],
+    [/カールキープ ?マスカラベース/, "Curl Keep Mascara Base"], [/スムースリキッドアイライナー/, "Smooth Liquid Eyeliner"],
+    [/ブラーリング ?カラー ?ブラッシュ/, "Blurring Color Blush"], [/シグニチャー ?カラー ?アイズ/, "Signature Color Eyes"],
+    [/スクラビング ?マッド ?ウォッシュ/, "Scrubbing Mud Wash 洗顏泥"], [/デザイニング ?カラー ?リクイド/, "Designing Color Liquid"], [/ハードゼリー/, "Hard Jelly"],
+    [/ダーマシンコンシーラー/, "Dermashin Concealer"], [/カバーパーフェクション/, "Cover Perfection"],
+    [/B\.A ?ウォッシュ/, "B.A Wash 洗面乳"], [/B\.A ?アイゾーンクリーム/, "B.A Eye Zone Cream 眼霜"], [/エステロワイエ/, "Esthe Royer"],
+    [/デザイニングアイブロウ/, "Designing Eyebrow 3D"], [/プライムアイブロウ/, "Prime Eyebrow"], [/プロテクティブ ?UVエッセンス/, "Protective UV Essence"],
+    [/ブロー ?スウォード/, "Brow:Sword"], [/アイエディション/, "Eye Edition"],
+    [/ラディアント ?クリーミー ?コンシーラー/, "Radiant Creamy Concealer"], [/ライトリフレクティング ?セッティングパウダー/, "Light Reflecting Setting Powder"],
+    [/クレンジングバーム ?ブラックリペア/, "DUO The Cleansing Balm Black Repair"], [/ディープクリア ?洗顔パウダー/, "Deep Clear"], [/ファンケル.*ピュアモイスト|ピュアモイスト.*ファンケル/, "Pure Moist"], [/エンリッチプラス/, "Enrich+"],
+    [/エッセンスイン ?クレンジングフォーム/, "Essence-in Cleansing Foam"], [/ジェリー ?アクアリスタ/, "Jelly Aquarysta"], [/アイゾーンブースター/, "Eye Zone Booster"],
+    [/ルルルン ?ハイドラ/, "Hydra EX"], [/バイカルテ/, "BYKARTE"], [/グレイシィ ?プレミアム/, "Gracy Premium"], [/アンクル ?ド ?ポー/, "Encre de Peau Le Cushion"], [/メイクミーブラッシュ/, "Make Me Blush"],
+    [/プードル ?コンパクト ?エサンシエル/, "Poudre Compacte Essentielle"], [/マイラッシュ ?アドバンスト/, "My Lash Advanced"], [/リップ ?フォルミング ?ライナー/, "Lip Forming Liner"],
+    [/デューイー ?メルト/, "Dewy Melt"], [/クリニーク.*チーク ?ポップ|チーク ?ポップ/, "Cheek Pop"], [/カラーブルーム/, "Color Bloom"],
+    [/ジェントル ?スキン ?クレンザー/, "溫和潔膚乳"], [/セタフィル.*モイスチャライジング ?クリーム|モイスチャライジング ?クリーム.*セタフィル/, "長效潤膚霜"],
+    [/エスト.*ザ ?ローション/, "The Lotion"], [/アベンヌ ?ウオーター|アベンヌ ?ウォーター/, "舒護活泉水"], [/ビューティーアイズ ?エッセンスシート/, "Beauty Eyes Essence Sheet"],
+    [/オージュア/, "Aujua"], [/セリオキシル/, "Serioxyl"], [/ワンダーシールド/, "Wonder Shield"], [/アヴェダ.*パドルブラシ|パドルブラシ.*AVEDA/, "Paddle Brush"], [/エレメアカール/, "Elemea Curl"],
+    [/クロノビューティ/, "Chrono Beauty"], [/ソフトストーン/, "Soft Stone W"], [/スーパーリッチシャイン/, "Super Rich Shine"], [/オルビス.*ザ ?クレンジング ?オイル/, "The Cleansing Oil 卸妝油"], [/オルビスユー/, "ORBIS U"]
+  ];
   function withZh(p) {
     if (!p || p.twName || p.isOY || p.zhAuto) return p;
     if (p.isEx || p.isAw) {   // 達人推薦、年度熱門：日文商品名 → 「品牌＋中文類型＋色號」，日文原名放下一行
@@ -989,7 +1046,12 @@
       const se = /[A-Za-z]{3,}/.test(p.desc) ? "" : seriesWords(p.jp, p.brand).split(" ").filter(w => w && !dl.includes(w.toLowerCase())).join(" ");
       const sp = /\d|[（(]/.test(p.desc) ? [] : zhSpec(p.jp);
       z = `${p.brand} ${p.desc}${se ? " " + se : ""}${sp.length ? `（${sp.join("・")}）` : ""}`;
-    } else z = zhTitle(p.brand, p.itype, p.jp, p.country);
+    } else {
+      const sn = SERIES_NAMES.find(([re]) => re.test(p.jp || ""));   // 認得的系列：用台灣正式名稱或品牌英文名，不自己翻譯
+      if (sn) { const sp = zhSpec(p.jp), tw = /[一-鿿]/.test(sn[1]) || !p.itype || p.itype === "other" ? "" : " " + zhTypeWord(p.itype, p.jp || "");
+        z = `${p.brand} ${sn[1]}${tw}${sp.length ? `（${sp.join("・")}）` : ""}`; }
+      else z = zhTitle(p.brand, p.itype, p.jp, p.country);
+    }
     if (z) { p.name = z; p.zhAuto = true; }
     return p;
   }
@@ -1642,7 +1704,8 @@
     if (!hits.length && hard.some(t => /^[A-Za-z]/.test(t)) && hard.some(t => !/^[A-Za-z]/.test(t))) {
       hits = all.filter(p => hard.filter(t => /^[A-Za-z]/.test(t)).every(t => matchToken(p, t)));   // 品牌對到、品項沒對到：先列這個品牌的商品
     }
-    if (hard.length && soft.length) { const best = hits.filter(p => softN(p) > 0); if (best.length) hits = best; }
+    // 只留「對到最多搜尋字」的商品：用日文全名或系列名搜尋時，直接鎖定那個商品，不會把同品牌的全部列出來（2026-11-28）
+    if (soft.length) { const maxN = Math.max(0, ...hits.map(softN)); if (maxN > 0) hits = hits.filter(p => softN(p) === maxN); }
     SEARCH_NEAR = soft.length > 0 && !hits.some(p => softN(p) === soft.length);
     SEARCH_MISS = soft.filter(t => !hits.some(p => matchToken(p, t)));
     const toks = hard.concat(soft);
