@@ -725,6 +725,8 @@
 
   // 蝦皮／台灣樂天搜尋：日文片假名品牌 → 台灣搜尋得到的名稱
   const BRAND_KANA = {
+    "ミラノコレクション": "Kanebo Milano Collection", "キールズ": "Kiehl's 契爾氏", "kiehl's": "Kiehl's 契爾氏", "エヌオーガニック": "N organic", "N organic": "N organic",
+    "リファカラット": "ReFa", "プリマヴィスタ": "Primavista", "CLINIQUE": "倩碧", "オルナオーガニック": "ORNA ORGANIC", "エスハートエス": "S-HEART-S", "shearts": "S-HEART-S", "レコルト": "récolte",
     "ボビイ ブラウン": "Bobbi Brown", "ボビイブラウン": "Bobbi Brown", "マキアージュ": "心機 MAQuillAGE", "キャンメイク": "CANMAKE", "セザンヌ": "CEZANNE",
     "コスメデコルテ": "黛珂 DECORTE", "シュウ ウエムラ": "植村秀", "シュウウエムラ": "植村秀", "アテニア": "Attenir", "ファンケル": "FANCL", "オルビス": "ORBIS",
     "エリクシール": "怡麗絲爾 ELIXIR", "ハダラボ": "肌研", "肌ラボ": "肌研", "メラノCC": "Melano CC", "キュレル": "Curel 珂潤", "ミノン": "MINON",
@@ -1499,7 +1501,12 @@
     const box = document.querySelector("#detailBody [data-yt]");
     if (!box || !p || !p.id) return;
     if (!YT_REV) YT_REV = fetch("data/yt_reviews.json").then(r => r.ok ? r.json() : {}).catch(() => ({}));
-    const v = (((await YT_REV).items || {})[p.id] || {}).videos || [];
+    // 影片標題要有品牌名（英文字或日文片假名寫法）才顯示，避免自動搜尋抓到不相關的影片（例如 VT 面膜抓到三麗鷗影片）
+    const bl = String(p.brand || "").toLowerCase();
+    const bKeys = (bl.match(/[a-z0-9][a-z0-9'&.:\-]+/g) || []).filter(w => w.length >= 2)
+      .concat(Object.keys(BRAND_KANA).filter(k => String(BRAND_KANA[k]).toLowerCase() === bl || bl.includes(String(BRAND_KANA[k]).toLowerCase())).map(k => k.toLowerCase()))
+      .concat((String(p.brand || "").match(/[ァ-ヶー・]{2,}|[一-鿿]{2,}/g) || []));
+    const v = ((((await YT_REV).items || {})[p.id] || {}).videos || []).filter(x => !bKeys.length || bKeys.some(k => String(x.title || "").toLowerCase().includes(k)));
     if (!v.length) return;
     const k = n => n >= 10000 ? (n / 10000).toFixed(n >= 100000 ? 0 : 1) + " 萬" : n.toLocaleString();
     box.innerHTML = `<h3>YouTube 評測影片</h3><div class="ytrev">${v.map(x => `<a href="https://www.youtube.com/watch?v=${encodeURIComponent(x.id)}" target="_blank" rel="noopener">${x.thumb ? `<img src="${esc(x.thumb)}" alt="" loading="lazy">` : ""}<span><b>${esc(x.title)}</b><small>${esc(x.where)}・${esc(x.channel)}・${k(x.views || 0)} 次觀看</small></span></a>`).join("")}</div>`

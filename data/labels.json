@@ -284,9 +284,10 @@
  },
  "kobe-beauty-labo:10002218": {
   "brand": "BOTANIST",
-  "name": "植物性洗潤 大容量",
   "country": "日本",
-  "desc": "植物性洗潤 大容量"
+  "jpName": "ボタニカルボディースクラブ",
+  "desc": "身體磨砂膏（250g）",
+  "type": "body"
  },
  "mycosmeticbox:10000939": {
   "brand": "ReKERA",
@@ -1321,5 +1322,47 @@
  },
  "be-garden:10000160": {
   "hide": true
+ },
+ "lancome:10000136": {
+  "brand": "Lancôme 蘭蔻",
+  "country": "其他",
+  "jpName": "ジェニフィック アルティメ セラム",
+  "desc": "Génifique Ultime 精華（30mL／50mL）",
+  "type": "serum"
+ },
+ "fancylifecosme:10001249": {
+  "brand": "Kanebo Milano Collection",
+  "country": "日本",
+  "jpName": "ミラノコレクション フェースアップパウダー 2027",
+  "desc": "Face Up Powder 2027 限量蜜粉（24g）",
+  "type": "powder"
+ },
+ "rakuten24:11238480": {
+  "brand": "Primavista",
+  "country": "日本",
+  "jpName": "プリマヴィスタ ファンデブースト 皮脂くずれ防止",
+  "desc": "Fande Boost 妝前乳（25ml）",
+  "type": "primer"
+ },
+ "apr-japan:10001021": {
+  "brand": "medicube",
+  "country": "韓國",
+  "jpName": "FOREVER:CHERRY リボンチェリー 美ツヤブラシ",
+  "desc": "FOREVER:CHERRY 緞帶造型梳子",
+  "type": "scalp"
+ },
+ "ntvshop:10008341": {
+  "brand": "ReFa",
+  "country": "日本",
+  "jpName": "リファカラットレイ",
+  "desc": "CARAT RAY 滾輪美容器",
+  "type": "facial"
+ },
+ "kiehls:10000083": {
+  "brand": "Kiehl's 契爾氏",
+  "country": "其他",
+  "jpName": "キールズ DS RTN リニューイング セラム",
+  "desc": "A 醇精華 DS RTN（10／30／50mL）",
+  "type": "serum"
  }
 }
