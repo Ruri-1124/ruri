@@ -2349,30 +2349,54 @@
     }
     const ref = () => db.collection("users").doc(user.uid);
     // 收藏用 JSON 文字存（商品資料欄位很多，避免 Firestore 不收 undefined、巢狀陣列）
+    // 同步規則（2026-11-28 改）：雲端是準。每台裝置記住「上次同步時有哪些」（base），
+    //   雲端清單 ＋ 這台裝置上次同步後新加的 － 這台裝置上次同步後刪掉的 ＝ 結果；所以在手機刪掉，電腦也會跟著刪
+    const baseKey = () => "ruri-favs-base-" + user.uid;
+    const getBase = () => { try { const v = localStorage.getItem(baseKey()); return v ? JSON.parse(v) : null; } catch (e) { return null; } };
+    const setBase = ids => { try { localStorage.setItem(baseKey(), JSON.stringify(ids)); } catch (e) {} };
     function push(now) {
       if (!user || !db) return Promise.resolve();
       clearTimeout(pushTimer);
-      const go = () => ref().set({ favs: JSON.stringify(FAVS), count: Object.keys(FAVS).length, updated: firebase.firestore.FieldValue.serverTimestamp() }).catch(e => console.warn("同步收藏失敗", e));
+      const ids = Object.keys(FAVS);
+      const go = () => ref().set({ favs: JSON.stringify(FAVS), count: ids.length, updated: firebase.firestore.FieldValue.serverTimestamp() })
+        .then(() => setBase(ids)).catch(e => console.warn("同步收藏失敗", e));
       if (now) return go();
       pushTimer = setTimeout(go, 1200);
       return Promise.resolve();
     }
     window.ruriFavChanged = () => push(false);
-    async function onUser(u) {
-      user = u; paint(); remember(!!u);
-      if (!u) return;
-      try {
-        const snap = await ref().get();
-        let remote = {};
-        if (snap.exists) { try { remote = JSON.parse(snap.data().favs || "{}"); } catch (e) { remote = {}; } }
-        const before = Object.keys(FAVS).length;
-        for (const [id, p] of Object.entries(remote)) if (!FAVS[id]) FAVS[id] = p;   // 兩邊合併：這台裝置的＋帳號裡的
+    let unsub = null, first = true;
+    function applyRemote(snap) {
+      if (snap.metadata.hasPendingWrites) return;   // 自己剛寫的，不用處理
+      let remote = {};
+      if (snap.exists) { try { remote = JSON.parse(snap.data().favs || "{}"); } catch (e) { remote = {}; } }
+      const base = getBase(), local = FAVS, merged = {};
+      if (!base) Object.assign(merged, remote, local);   // 這台裝置第一次登入：兩邊合併
+      else {
+        const b = new Set(base);
+        for (const [id, p] of Object.entries(remote)) if (!(b.has(id) && !local[id])) merged[id] = p;   // 雲端的，扣掉這台剛刪的
+        for (const [id, p] of Object.entries(local)) if (!b.has(id) && !merged[id]) merged[id] = p;     // 這台剛加的
+      }
+      const key = o => Object.keys(o).sort().join("|");
+      const changedLocal = key(merged) !== key(local), changedRemote = key(merged) !== key(remote);
+      if (changedLocal) {
+        for (const id of Object.keys(FAVS)) delete FAVS[id];
+        Object.assign(FAVS, merged);
         try { localStorage.setItem("ruri-favs", JSON.stringify(FAVS)); } catch (e) {}
-        updateFavCount();
-        await push(true);
-        if (Object.keys(FAVS).length !== before) render();
+        updateFavCount(); render();
+      }
+      if (changedRemote || !snap.exists) push(true); else setBase(Object.keys(merged));
+      if (first) {
+        first = false;
         if (sessionStorage.getItem("ruri-justlogin")) { sessionStorage.removeItem("ruri-justlogin"); toast(`已登入，收藏已同步（共 ${Object.keys(FAVS).length} 件）`); track("login", { method: "google" }); }
-      } catch (e) { console.warn(e); toast("收藏同步失敗，請稍後再試"); }
+      } else if (changedLocal) toast("已從其他裝置同步我的最愛");
+    }
+    function onUser(u) {
+      user = u; paint(); remember(!!u);
+      if (unsub) { unsub(); unsub = null; }
+      if (!u) return;
+      first = true;
+      unsub = ref().onSnapshot({ includeMetadataChanges: false }, applyRemote, e => { console.warn(e); toast("收藏同步失敗，請稍後再試"); });   // 即時：別台裝置改了，這台開著也會跟著變
     }
     // 手機瀏覽器只允許「手指點下去的當下」開登入小視窗：所以 SDK 要先載好，按鈕按下去就直接開視窗（中間不能先等下載）
     function login() {
@@ -2414,7 +2438,7 @@
       if (k === "logout") { await firebase.auth().signOut(); toast("已登出，這台裝置的收藏還在"); }
       if (k === "wipe") {
         if (a.dataset.sure !== "1") { openMenu(); const w = menu.querySelector('[data-acct="wipe"]'); w.dataset.sure = "1"; w.textContent = "再按一次確定刪除（這台裝置的收藏不會刪）"; return; }
-        try { clearTimeout(pushTimer); await ref().delete(); const u = user; await firebase.auth().signOut(); toast("雲端收藏資料已刪除，並已登出"); } catch (err) { console.warn(err); toast("刪除沒有成功，請稍後再試"); }
+        try { clearTimeout(pushTimer); if (unsub) { unsub(); unsub = null; } await ref().delete(); try { localStorage.removeItem(baseKey()); } catch (e2) {} await firebase.auth().signOut(); toast("雲端收藏資料已刪除，並已登出"); } catch (err) { console.warn(err); toast("刪除沒有成功，請稍後再試"); }
       }
     });
     document.addEventListener("click", e => { if (!menu.hidden && !e.target.closest(".acct")) menu.hidden = true; });
