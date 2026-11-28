@@ -56,6 +56,19 @@
   .favbtn { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 14px; cursor: pointer; display: flex; gap: 6px; align-items: center; font-weight: 700; }
   .favbtn span { color: var(--pink); }
   .favbtn em { font-style: normal; }
+  /* 會員登入（2026-11-28，Firebase Google 登入） */
+  .acct { position: relative; flex: none; }
+  .loginbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; cursor: pointer; display: flex; gap: 6px; align-items: center; font-weight: 700; color: inherit; min-height: 38px; }
+  .loginbtn svg { width: 18px; height: 18px; }
+  .loginbtn em { font-style: normal; }
+  .loginbtn img, .loginbtn .ini { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+  .loginbtn .ini { display: grid; place-items: center; background: var(--ruri, #B05C6B); color: #fff; font-size: 13px; }
+  .acctmenu { position: absolute; right: 0; top: calc(100% + 8px); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 12px 30px rgba(60,40,40,.14); padding: 12px; width: 250px; z-index: 60; font-size: 14px; }
+  .acctmenu p { margin: 0 0 10px; color: var(--muted); line-height: 1.5; }
+  .acctmenu p b { color: var(--ink); display: block; }
+  .acctmenu button, .acctmenu a { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 9px 8px; border-radius: 8px; cursor: pointer; font: inherit; color: inherit; text-decoration: none; }
+  .acctmenu button:hover, .acctmenu a:hover { background: var(--bg); }
+  .acctmenu .danger { color: #b3261e; font-size: 13px; }
 
   /* 主選單：像購物網站一樣的商品分類列，滑鼠移上去展開品項清單 */
   .ti { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #E0303F; color: #fff; font-size: 13px; font-weight: 900; font-family: var(--font-display); }
@@ -379,6 +392,8 @@
   @media (max-width: 640px) {
     .logo small { display: none; }
     .favbtn em { display: none; }
+    .loginbtn em { display: none; }
+    .loginbtn { padding: 6px 8px; }
     .menubtn { display: block; margin-left: -8px; }
     .top { gap: 8px; }
     .logo img { width: 34px; height: 34px; } .logo b { font-size: 22px; }
@@ -587,6 +602,7 @@
   .qstep h3 { font-family: var(--font-display); font-weight: 500; font-size: 22px; margin: 0 0 12px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
   .qstep h3 small { font-family: var(--font-body); font-size: 13px; color: var(--muted); }
   @media (max-width: 640px) { .qhead { padding: 20px; } .qhead img { width: 60px; height: 60px; } .qhead h1 { font-size: 24px; } .qq { padding: 16px; } .qres { padding: 20px; } .qres h2 { font-size: 23px; } }
+  @media (max-width: 430px) { .logo .lw { display: none !important; } }   /* 手機多了登入鈕，留小鳥圖就好，讓搜尋框夠寬 */
 </style>
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -607,6 +623,8 @@
         <input id="q" type="search" placeholder="搜尋品牌或商品，例如 ReFa、卸妝油" aria-label="搜尋商品">
       </label>
       <button class="favbtn" type="button" id="favjump"><span>♥</span><em>我的最愛</em> <b id="favcount">0</b></button>
+      <div class="acct"><button class="loginbtn" type="button" id="loginbtn" aria-label="用 Google 帳號登入" aria-haspopup="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg><em>登入</em></button>
+        <div class="acctmenu" id="acctmenu" hidden></div></div>
     </div>
   </div>
   <nav class="mainnav" id="mainnav" aria-label="商品分類">
@@ -625,7 +643,7 @@
     <div class="fb" id="fb"><b>這個網站對你有幫助嗎？</b><button type="button" class="chip" data-fb="good">👍 有幫助</button><button type="button" class="chip" data-fb="bad">👎 不太好用</button></div>
     排行資料來自日本樂天市場，每天台灣時間早上 6 點左右自動更新；上榜過的商品會保留在資料庫裡。價格為日本售價，台幣以 1 日圓 ≈ 0.21 台幣估算。
     膚質與需求標籤由商品說明的關鍵字自動判斷，僅供參考。「在蝦皮搜尋」、「台灣樂天找找」會帶你到該平台的搜尋結果，台灣不一定有販售，請確認賣家與商品內容後再購買。
-    本站使用 Google Analytics 匿名統計瀏覽人數與點擊次數，不收集姓名、電話等個人資料。本站含蝦皮、樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。本站內容為商品資訊整理，不代表療效。
+    本站使用 Google Analytics 匿名統計瀏覽人數與點擊次數。用 Google 帳號登入是自由選擇的，登入後只用來同步你的收藏，詳見<a href="privacy.html">隱私權說明</a>。本站含蝦皮、樂天、Olive Young 聯盟連結，透過連結購買，本站可能獲得分潤。本站內容為商品資訊整理，不代表療效。
     <br><br><b>免責聲明</b>：本站只整理公開的排行與商品資訊，不販售任何商品，也不是任何品牌或購物平台的官方網站。商品的販售、運送、退換貨與售後服務由各購物平台與賣家負責。DOKODEMO 等日本直送商品屬於海外購物，需依台灣進口與關稅相關規定，也可能無法在台灣退換貨。購買前請確認商品的規格、電壓、成分與適用對象，使用時請依包裝標示與說明書；有疾病、懷孕、過敏體質或其他疑慮時，請先諮詢醫師或專業人員。因購買或使用第三方商品所生的問題，請洽販售平台、賣家或品牌處理。
   </div>
 </footer>
@@ -663,7 +681,7 @@
     { key: "creators", parent: "creators", label: "達人推薦", title: "達人都在推什麼", desc: "整理化妝師、YouTuber、IG 與小紅書創作者的推薦", source: "creators" },
     { key: "quiz", parent: "quiz", label: "膚質小測驗", title: "膚質小測驗", desc: "回答 5 題，看看你的膚質適合怎麼挑保養品", source: "quiz" },
     { key: "search",   parent: "search", label: "搜尋", title: "搜尋結果", desc: "日本、韓國、達人推薦的商品一起找", source: "search" },
-    { key: "fav",      parent: "fav", label: "我的最愛", title: "我的最愛", desc: "收藏的商品存在這台裝置的瀏覽器裡，商品下榜了也不會消失", source: "fav" }
+    { key: "fav",      parent: "fav", label: "我的最愛", title: "我的最愛", desc: "收藏的商品會存在這台裝置；右上角用 Google 帳號登入後會同步到你的帳號，換手機、換電腦也看得到，商品下榜了也不會消失", source: "fav" }
   ];
 
   // 適合膚質：商品名稱有寫才標，沒寫就不猜
@@ -860,7 +878,7 @@
 
   let FAVS = {};
   try { FAVS = JSON.parse(localStorage.getItem("ruri-favs") || "{}"); } catch (e) { FAVS = {}; }
-  function saveFavs() { try { localStorage.setItem("ruri-favs", JSON.stringify(FAVS)); } catch (e) {} updateFavCount(); }
+  function saveFavs() { try { localStorage.setItem("ruri-favs", JSON.stringify(FAVS)); } catch (e) {} updateFavCount(); if (window.ruriFavChanged) window.ruriFavChanged(); }
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
@@ -2292,6 +2310,108 @@
     console.error(err);
     document.getElementById("view").innerHTML = '<div class="empty" style="margin-top:24px">資料載入失敗，請稍後重新整理頁面。</div>';
   });
+</script>
+<script>
+  // =========================================================
+  // ⑨ 會員登入（2026-11-28）：Firebase Google 登入＋收藏同步到 Firestore（users/{uid}）
+  //    設定值是 Firebase 網頁應用程式的公開設定（本來就會出現在網頁上）；資料安全靠 Firestore 安全規則：每個人只能讀寫自己的 users/{uid}
+  //    SDK 不在開頁時載入：按「登入」或這台裝置之前登入過才載入，首頁速度不受影響
+  // =========================================================
+  (function () {
+    const FB_CFG = { apiKey: "AIzaSyCOzWcrNSjDFtPCcaPpUArOdebvflw_q_E", authDomain: "ruri1124-50c89.firebaseapp.com", projectId: "ruri1124-50c89",
+      storageBucket: "ruri1124-50c89.firebasestorage.app", messagingSenderId: "92045855745", appId: "1:92045855745:web:f0575c18cbf73680500400" };
+    const BASE = "https://www.gstatic.com/firebasejs/10.14.1/";
+    const btn = document.getElementById("loginbtn"), menu = document.getElementById("acctmenu");
+    let ready = null, user = null, db = null, pushTimer = null;
+    const loadJs = src => new Promise((ok, ng) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = ng; document.head.appendChild(s); });
+    function loadFb() {
+      if (!ready) ready = loadJs(BASE + "firebase-app-compat.js")
+        .then(() => Promise.all([loadJs(BASE + "firebase-auth-compat.js"), loadJs(BASE + "firebase-firestore-compat.js")]))
+        .then(() => { firebase.initializeApp(FB_CFG); db = firebase.firestore(); firebase.auth().onAuthStateChanged(onUser); return firebase; })
+        .catch(e => { ready = null; throw e; });
+      return ready;
+    }
+    const remember = v => { try { localStorage.setItem("ruri-login", v ? "1" : ""); } catch (e) {} };
+    function paint() {
+      if (user) {
+        const ini = (user.displayName || user.email || "會").trim().slice(0, 1);
+        btn.innerHTML = (user.photoURL ? `<img src="${esc(user.photoURL)}" alt="" referrerpolicy="no-referrer">` : `<span class="ini">${esc(ini)}</span>`) + `<em>會員</em>`;
+        btn.setAttribute("aria-label", "會員選單（已登入）");
+      } else {
+        btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg><em>登入</em>`;
+        btn.setAttribute("aria-label", "用 Google 帳號登入");
+      }
+    }
+    const ref = () => db.collection("users").doc(user.uid);
+    // 收藏用 JSON 文字存（商品資料欄位很多，避免 Firestore 不收 undefined、巢狀陣列）
+    function push(now) {
+      if (!user || !db) return Promise.resolve();
+      clearTimeout(pushTimer);
+      const go = () => ref().set({ favs: JSON.stringify(FAVS), count: Object.keys(FAVS).length, updated: firebase.firestore.FieldValue.serverTimestamp() }).catch(e => console.warn("同步收藏失敗", e));
+      if (now) return go();
+      pushTimer = setTimeout(go, 1200);
+      return Promise.resolve();
+    }
+    window.ruriFavChanged = () => push(false);
+    async function onUser(u) {
+      user = u; paint(); remember(!!u);
+      if (!u) return;
+      try {
+        const snap = await ref().get();
+        let remote = {};
+        if (snap.exists) { try { remote = JSON.parse(snap.data().favs || "{}"); } catch (e) { remote = {}; } }
+        const before = Object.keys(FAVS).length;
+        for (const [id, p] of Object.entries(remote)) if (!FAVS[id]) FAVS[id] = p;   // 兩邊合併：這台裝置的＋帳號裡的
+        try { localStorage.setItem("ruri-favs", JSON.stringify(FAVS)); } catch (e) {}
+        updateFavCount();
+        await push(true);
+        if (Object.keys(FAVS).length !== before) render();
+        if (sessionStorage.getItem("ruri-justlogin")) { sessionStorage.removeItem("ruri-justlogin"); toast(`已登入，收藏已同步（共 ${Object.keys(FAVS).length} 件）`); track("login", { method: "google" }); }
+      } catch (e) { console.warn(e); toast("收藏同步失敗，請稍後再試"); }
+    }
+    async function login() {
+      btn.disabled = true;
+      try {
+        await loadFb();
+        try { sessionStorage.setItem("ruri-justlogin", "1"); } catch (e) {}
+        const prov = new firebase.auth.GoogleAuthProvider();
+        prov.setCustomParameters({ prompt: "select_account" });
+        try { await firebase.auth().signInWithPopup(prov); }
+        catch (e) {
+          if (e && /popup-blocked|operation-not-supported/.test(e.code || "")) await firebase.auth().signInWithRedirect(prov);
+          else if (!(e && /popup-closed|cancelled-popup/.test(e.code || ""))) { console.warn(e); toast("登入沒有成功，請再試一次"); }
+        }
+      } catch (e) { console.warn(e); toast("登入功能載入失敗，請檢查網路後再試"); }
+      btn.disabled = false;
+    }
+    function openMenu() {
+      const name = user.displayName || "", mail = user.email || "";
+      menu.innerHTML = `<p><b>${esc(name || "已登入")}</b>${esc(mail)}</p>
+        <a href="#fav" data-acct="fav">♥ 我的最愛（${Object.keys(FAVS).length} 件，已同步）</a>
+        <a href="privacy.html">隱私權說明</a>
+        <button type="button" data-acct="logout">登出</button>
+        <button type="button" class="danger" data-acct="wipe">刪除我存在雲端的收藏資料</button>`;
+      menu.hidden = false;
+    }
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      if (!user) { login(); return; }
+      if (menu.hidden) openMenu(); else menu.hidden = true;
+    });
+    menu.addEventListener("click", async e => {
+      const a = e.target.closest("[data-acct]"); if (!a) return;
+      const k = a.dataset.acct; menu.hidden = true;
+      if (k === "logout") { await firebase.auth().signOut(); toast("已登出，這台裝置的收藏還在"); }
+      if (k === "wipe") {
+        if (a.dataset.sure !== "1") { openMenu(); const w = menu.querySelector('[data-acct="wipe"]'); w.dataset.sure = "1"; w.textContent = "再按一次確定刪除（這台裝置的收藏不會刪）"; return; }
+        try { clearTimeout(pushTimer); await ref().delete(); const u = user; await firebase.auth().signOut(); toast("雲端收藏資料已刪除，並已登出"); } catch (err) { console.warn(err); toast("刪除沒有成功，請稍後再試"); }
+      }
+    });
+    document.addEventListener("click", e => { if (!menu.hidden && !e.target.closest(".acct")) menu.hidden = true; });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") menu.hidden = true; });
+    // 這台裝置之前登入過：自動載入，恢復登入狀態
+    try { if (localStorage.getItem("ruri-login") === "1") loadFb().catch(() => {}); } catch (e) {}
+  })();
 </script>
 </body>
 </html>
