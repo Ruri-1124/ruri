@@ -2322,12 +2322,17 @@
       storageBucket: "ruri1124-50c89.firebasestorage.app", messagingSenderId: "92045855745", appId: "1:92045855745:web:f0575c18cbf73680500400" };
     const BASE = "https://www.gstatic.com/firebasejs/10.14.1/";
     const btn = document.getElementById("loginbtn"), menu = document.getElementById("acctmenu");
-    let ready = null, user = null, db = null, pushTimer = null;
+    let ready = null, loaded = false, user = null, db = null, pushTimer = null;
     const loadJs = src => new Promise((ok, ng) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = ng; document.head.appendChild(s); });
     function loadFb() {
       if (!ready) ready = loadJs(BASE + "firebase-app-compat.js")
         .then(() => Promise.all([loadJs(BASE + "firebase-auth-compat.js"), loadJs(BASE + "firebase-firestore-compat.js")]))
-        .then(() => { firebase.initializeApp(FB_CFG); db = firebase.firestore(); firebase.auth().onAuthStateChanged(onUser); return firebase; })
+        .then(() => {
+          firebase.initializeApp(FB_CFG); db = firebase.firestore(); loaded = true;
+          firebase.auth().onAuthStateChanged(onUser);
+          firebase.auth().getRedirectResult().catch(e => { console.warn(e); toast("登入沒有成功，請再試一次"); });   // 用跳轉方式登入回來時
+          return firebase;
+        })
         .catch(e => { ready = null; throw e; });
       return ready;
     }
@@ -2369,20 +2374,25 @@
         if (sessionStorage.getItem("ruri-justlogin")) { sessionStorage.removeItem("ruri-justlogin"); toast(`已登入，收藏已同步（共 ${Object.keys(FAVS).length} 件）`); track("login", { method: "google" }); }
       } catch (e) { console.warn(e); toast("收藏同步失敗，請稍後再試"); }
     }
-    async function login() {
-      btn.disabled = true;
-      try {
-        await loadFb();
-        try { sessionStorage.setItem("ruri-justlogin", "1"); } catch (e) {}
-        const prov = new firebase.auth.GoogleAuthProvider();
-        prov.setCustomParameters({ prompt: "select_account" });
-        try { await firebase.auth().signInWithPopup(prov); }
-        catch (e) {
-          if (e && /popup-blocked|operation-not-supported/.test(e.code || "")) await firebase.auth().signInWithRedirect(prov);
-          else if (!(e && /popup-closed|cancelled-popup/.test(e.code || ""))) { console.warn(e); toast("登入沒有成功，請再試一次"); }
-        }
-      } catch (e) { console.warn(e); toast("登入功能載入失敗，請檢查網路後再試"); }
-      btn.disabled = false;
+    // 手機瀏覽器只允許「手指點下去的當下」開登入小視窗：所以 SDK 要先載好，按鈕按下去就直接開視窗（中間不能先等下載）
+    function login() {
+      // IG、FB、LINE、Threads 的內建瀏覽器：Google 不允許在裡面登入
+      if (/Instagram|FBAN|FBAV|FB_IAB|Line\/|Barcelona|Threads/i.test(navigator.userAgent)) {
+        toast("App 內建的瀏覽器不能用 Google 登入，請按右上角「⋯」選「用瀏覽器開啟」再登入"); return;
+      }
+      if (!loaded) {
+        btn.disabled = true; toast("登入功能準備中…");
+        loadFb().then(() => toast("準備好了，請再按一次「登入」")).catch(() => toast("登入功能載入失敗，請檢查網路後再試")).finally(() => { btn.disabled = false; });
+        return;
+      }
+      try { sessionStorage.setItem("ruri-justlogin", "1"); } catch (e) {}
+      const prov = new firebase.auth.GoogleAuthProvider();
+      prov.setCustomParameters({ prompt: "select_account" });
+      firebase.auth().signInWithPopup(prov).catch(e => {
+        const c = (e && e.code) || "";
+        if (/popup-blocked|operation-not-supported|web-storage-unsupported/.test(c)) { remember(true); firebase.auth().signInWithRedirect(prov); }   // 先記住「登入中」，跳回網站時才會載入登入功能
+        else if (!/popup-closed|cancelled-popup/.test(c)) { console.warn(e); toast("登入沒有成功，請再試一次"); }
+      });
     }
     function openMenu() {
       const name = user.displayName || "", mail = user.email || "";
@@ -2409,8 +2419,15 @@
     });
     document.addEventListener("click", e => { if (!menu.hidden && !e.target.closest(".acct")) menu.hidden = true; });
     document.addEventListener("keydown", e => { if (e.key === "Escape") menu.hidden = true; });
-    // 這台裝置之前登入過：自動載入，恢復登入狀態
-    try { if (localStorage.getItem("ruri-login") === "1") loadFb().catch(() => {}); } catch (e) {}
+    // 這台裝置之前登入過：馬上載入，恢復登入狀態；其他人等網頁載完、閒下來再預先載入，按「登入」時才能直接開視窗
+    let was = false; try { was = localStorage.getItem("ruri-login") === "1"; } catch (e) {}
+    if (was) loadFb().catch(() => {});
+    else {
+      const pre = () => loadFb().catch(() => {});
+      const idle = () => (window.requestIdleCallback ? requestIdleCallback(pre, { timeout: 4000 }) : setTimeout(pre, 2500));
+      if (document.readyState === "complete") idle(); else addEventListener("load", idle);
+      btn.addEventListener("pointerenter", pre, { once: true }); btn.addEventListener("touchstart", pre, { once: true, passive: true });
+    }
   })();
 </script>
 </body>
